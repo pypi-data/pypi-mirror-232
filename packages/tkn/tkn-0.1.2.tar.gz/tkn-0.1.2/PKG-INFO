@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: tkn
+Version: 0.1.2
+Summary: A command-line utility for working with BPE tokenizers
+License: MIT
+Author: Grayson Chao
+Author-email: grayson.chao@gmail.com
+Requires-Python: >=3.10,<3.13
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: tiktoken (>=0.5.1,<0.6.0)
+Description-Content-Type: text/markdown
+
+# `tkn`
+
+`tkn` is a command-line utility to quickly tokenize with `tiktoken`.
+
+## Installation
+
+`pip install tkn`
+
+Example usage:
+
+```
+$ ls
+document_1.txt
+document_2.txt
+
+$ tkn document_1.txt
+[tokenized version of the data]
+
+$ tkn document_1.txt -s '\n' | wc -l
+2094 # document contains 2094 tokens
+
+$ tkn -m gpt-4 document_1.txt | tkn -m gpt-4 -d
+[the contents of document_1.txt]
+
