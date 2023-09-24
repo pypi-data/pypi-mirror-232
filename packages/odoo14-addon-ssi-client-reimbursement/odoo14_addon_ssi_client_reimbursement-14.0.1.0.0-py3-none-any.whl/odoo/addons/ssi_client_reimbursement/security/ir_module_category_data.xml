@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2022 OpenSynergy Indonesia
+     Copyright 2022 PT. Simetri Sinergi Indonesia
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
+<odoo>
+<!-- Workflow -->
+<record id="client_reimbursement_workflow_module_category" model="ir.module.category">
+    <field name="name">Client Reimbursement</field>
+    <field
+            name="parent_id"
+            ref="ssi_financial_accounting.financial_accounting_module_category"
+        />
+</record>
+
+
+<!-- Data Ownership -->
+<record
+        id="client_reimbursement_data_ownership_module_category"
+        model="ir.module.category"
+    >
+    <field name="name">Client Reimbursement</field>
+    <field
+            name="parent_id"
+            ref="ssi_financial_accounting.financial_accounting_data_ownership_module_category"
+        />
+</record>
+</odoo>
