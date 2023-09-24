@@ -1,0 +1,163 @@
+Curve:
+  color: "k"
+  line_width: 1
+  line_style: "-"
+  cap_width: 3
+  errorbars_color: "same as curve"
+  errorbars_line_width: "same as curve"
+  cap_thickness: "same as curve"
+
+Scatter:
+  face_color: "k"
+  edge_color: "none"
+  marker_size: 30
+  marker_style: "o"
+  cap_width: 3
+  errorbars_color: "same as scatter"
+  errorbars_line_width: 1
+  cap_thickness: 1
+
+Histogram:
+  number_of_bins: 30
+  face_color: "silver"
+  edge_color: "k"
+  hist_type: "stepfilled"
+  alpha: 1.0
+  line_width: 2
+  normalize: True
+  show_pdf: None
+  show_params: True
+
+Hlines:
+  colors: "k"
+  line_styles: "-"
+
+Vlines:
+  colors: "k"
+  line_styles: "solid"
+
+Figure:
+  size: [6.4, 4.8]
+  boxed_legend: False
+  ticks_are_in: True
+  log_scale_x: False
+  log_scale_y: False
+  show_grid: False
+  grid_line_style: "-"
+  grid_line_width: 0.5
+  grid_color: "grey"
+  grid_alpha: 0.5
+
+Multifigure:
+  size: [6.4, 4.8]
+  boxed_legend: False
+
+Subfigure:
+  boxed_legend: False
+  ticks_are_in: True
+  log_scale_x: False
+  log_scale_y: False
+  show_grid: False
+  grid_line_style: "-"
+  grid_line_width: 0.5
+  grid_color: "grey"
+  grid_alpha: 0.5
+
+FitFromPolynomial:
+  color: "k"
+  line_width: 1
+
+FitFromSine:
+  color: "k"
+  line_width: 1
+
+Point:
+  color: "k"
+  edge_color: "none"
+  marker_size: 30
+  marker_style: "o"
+  edge_width: 1.5
+
+FitFromPolynomial:
+  color: "r"
+  line_width: 2
+  line_style: "-"
+  res_color: "r"
+  res_line_width: 1
+  res_line_style: "--"
+
+FitFromExponential:
+  color: "r"
+  line_width: 2
+  line_style: "-"
+  res_color: "r"
+  res_line_width: 1
+  res_line_style: "--"
+
+FitFromGaussian:
+  color: "r"
+  line_width: 2
+  line_style: "-"
+  res_color: "r"
+  res_line_width: 1
+  res_line_style: "--"
+
+FitFromSine:
+  color: "r"
+  line_width: 2
+  line_style: "-"
+  res_color: "r"
+  res_line_width: 1
+  res_line_style: "--"
+
+FitFromSquareRoot:
+  color: "r"
+  line_width: 2
+  line_style: "-"
+  res_color: "r"
+  res_line_width: 1
+  res_line_style: "--"
+
+FitFromLog:
+  res_color: "r"
+  res_line_width: 2
+  res_line_style: "--"
+  color: "r"
+  line_width: 1
+  line_style: "-"
+
+FitFromFunction:
+  res_color: "r"
+  res_line_width: 2
+  res_line_style: "--"
+  color: "r"
+  line_width: 1
+  line_style: "-"
+
+Heatmap:
+  aspect_ratio: "equal"
+  origin_position: "upper"
+  color_map: "coolwarm"
+
+Contour:
+  number_of_levels: 10
+  color_map: "coolwarm"
+  show_color_bar: True
+  filled: True
+  alpha: 1.0
+
+VectorField:
+  arrow_width: 0.005
+  arrow_length_multiplier: None
+  arrow_head_width: 3
+  arrow_head_length: 5
+  arrow_head_axis_length: 4.5
+  color: "k"
+  angle_in_data_coords: False
+  number_of_arrows_x: 10
+  number_of_arrows_y: 10
+
+Text:
+  color: "k"
+  h_align: "center"
+  v_align: "baseline"
