@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/__init__.py
+src/dct.egg-info/PKG-INFO
+src/dct.egg-info/SOURCES.txt
+src/dct.egg-info/dependency_links.txt
+src/dct.egg-info/top_level.txt
