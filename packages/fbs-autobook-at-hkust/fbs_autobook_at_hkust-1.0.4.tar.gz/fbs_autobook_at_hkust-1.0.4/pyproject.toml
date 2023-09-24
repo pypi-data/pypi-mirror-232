@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "fbs-autobook-at-hkust"
+version = "1.0.4"
+description = "Auto book facilities through the HKUST FBS."
+authors = ["Poet <the_poet@ust.hk>"]
+packages = [{ include = "at_hkust" }]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+selenium = "^4.12"
+requests = "^2.31"
+retry2 = "^0.9.5"
+decorator = "^5.1.1"
+streamlit = "^1.26.0"
+streamlit-extras = "^0.3.2"
+
+[tool.poetry.group.dev.dependencies]
+types-requests = "^2.31"
+freezegun = "^1.2.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+fbs-autobook-at-hkust = 'at_hkust.main:main'
