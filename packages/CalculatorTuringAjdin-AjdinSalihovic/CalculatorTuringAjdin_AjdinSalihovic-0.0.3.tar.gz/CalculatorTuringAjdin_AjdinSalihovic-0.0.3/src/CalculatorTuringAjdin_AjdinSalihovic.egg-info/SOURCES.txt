@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/CalculatorTuringAjdin.py
+src/__init__.py
+src/CalculatorTuringAjdin_AjdinSalihovic.egg-info/PKG-INFO
+src/CalculatorTuringAjdin_AjdinSalihovic.egg-info/SOURCES.txt
+src/CalculatorTuringAjdin_AjdinSalihovic.egg-info/dependency_links.txt
+src/CalculatorTuringAjdin_AjdinSalihovic.egg-info/top_level.txt
+tests/test.py
