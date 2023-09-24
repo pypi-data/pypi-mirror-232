@@ -1,0 +1,4 @@
+aiohttp-requests>=0.2.2
+aiohttp>=3.8.4
+beautifulsoup4>=4.11.1
+pypdf>=3.4.1
