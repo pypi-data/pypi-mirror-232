@@ -1,0 +1,15 @@
+bleep-0.5.dist-info/METADATA,sha256=TdCZh0p8gI3yaFurn2WXRKtGFZrV4-xEJS_64b39bFs,3797
+bleep-0.5.dist-info/WHEEL,sha256=GpDJtGUegRLh6V1e97NWcsNF4cfxE_ks25PU7cwVYO0,129
+bleep-0.5.dist-info/license_files/LICENSE,sha256=iVOpcJ6_oX4n6haptzrTcrL6k5dSCdg-8-wLtnmloQU,11343
+bleep/gatt/characteristic.py,sha256=KJ5qvGhGxak03w_finwoH6fGzZ9odSz-HsorDkkTPj4,1493
+bleep/gatt/service.py,sha256=rFBi9WpP1pdNvMe8Uq2z4RM8t564Kx0E-tp9GvzCwTQ,1127
+bleep/gatt/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bleep/device.py,sha256=vJRxeI-gza60BWMRjqb2JuJ01t7urMFcstNHhjrXKUk,3810
+bleep/data/chars.json,sha256=53BPeVDv2tR3ncdy7WWYnyyfv0Lw_zx-4KUKMj6JsxA,18159
+bleep/data/services.json,sha256=Lvzssh6ZFEtSiT1RkO8evFujQfKDfI_dFNj6cjIwLVA,3409
+bleep/data/descriptors.json,sha256=2P-Z0T1Xht4C2m7ZuIka4exE8MCfSxVCT0Fh8Jr7Dmw,2049
+bleep/__init__.py,sha256=iwOOvGU6wxYnmtoB4p7VpGzMg5cTCafvlMWS9DpIJpQ,766
+bleep/bleep.pyi,sha256=8DCVSOdRgAHkA83MAWQ9FKw8vdTlYoAA1Bht5TsW2Yw,1429
+bleep/util.py,sha256=XaWERM8k29gUNwj4O6FmsI5dfZ26LhbXonbl4_QQrXw,4311
+bleep/bleep.abi3.so,sha256=jO3cdGqZWdUdDCeNk6w85KQk3-JoErzwPb3GWyvxPsI,9324360
+bleep-0.5.dist-info/RECORD,,
