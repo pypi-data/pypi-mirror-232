@@ -1,0 +1,3 @@
+[console_scripts]
+frrmvsm = frrmvsm.frrmvsm:main
+
