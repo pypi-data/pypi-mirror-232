@@ -1,0 +1,11 @@
+README.md
+setup.py
+octopus_up.egg-info/PKG-INFO
+octopus_up.egg-info/SOURCES.txt
+octopus_up.egg-info/dependency_links.txt
+octopus_up.egg-info/entry_points.txt
+octopus_up.egg-info/requires.txt
+octopus_up.egg-info/top_level.txt
+src/octopus_up/__init__.py
+src/octopus_up/model_downloader.py
+src/octopus_up/up.py

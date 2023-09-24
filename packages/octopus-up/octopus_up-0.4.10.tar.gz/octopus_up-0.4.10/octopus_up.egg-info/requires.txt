@@ -1,0 +1,6 @@
+octopus_agent
+requests
+docker
+tqdm
+huggingface_hub
+rich
