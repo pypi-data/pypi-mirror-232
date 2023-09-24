@@ -1,0 +1,4 @@
+Metadata-Version: 2.1
+Name: fakeopenai
+Version: 0.3
+Summary: A Fake OpenAI API based on pandora
