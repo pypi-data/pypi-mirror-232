@@ -1,0 +1,55 @@
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[project]
+name = "mplchart"
+dynamic = []
+requires-python = ">=3.8"
+description = "Classic Stock Charts in Python"
+authors = [
+    { name = "Furechan", email = "furechan@xsmail.com" },
+]
+readme = "output/README.md"
+keywords = [
+    "finance",
+    "charting",
+    "matplotlib",
+    "candlesticks",
+]
+dependencies = [
+    "matplotlib",
+    "yfinance",
+    "numpy",
+    "pandas",
+]
+classifiers = [
+    "Topic :: Office/Business :: Financial",
+    "Development Status :: 2 - Pre-Alpha",
+    "Programming Language :: Python :: 3",
+]
+version = "0.0.3"
+
+[project.urls]
+homepage = "https://github.com/furechan/mplchart"
+
+[project.license]
+file = "LICENSE.txt"
+
+[tool.pdm.version]
+source = "file"
+path = "src/mplchart/__init__.py"
+
+[tool.pytest.ini_options]
+filterwarnings = [
+    "ignore",
+    "default:::mplchart",
+]
+addopts = [
+    "-p no:cacheprovider",
+]
+testpaths = [
+    "tests",
+]
