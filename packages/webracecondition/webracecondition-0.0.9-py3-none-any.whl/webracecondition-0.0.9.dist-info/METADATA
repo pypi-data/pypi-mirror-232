@@ -1,0 +1,59 @@
+Metadata-Version: 2.1
+Name: webracecondition
+Version: 0.0.9
+Summary: Tiny package to test webraceconditions
+Home-page: https://github.com/hupe1980/webracecondition
+License: MIT
+Keywords: webracecondition,pentest,cybersecurity
+Author: hupe1980
+Requires-Python: >=3.11,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Security
+Requires-Dist: scapy (>=2.5.0,<3.0.0)
+Project-URL: Repository, https://github.com/hupe1980/webracecondition
+Description-Content-Type: text/markdown
+
+# webracecondition
+> Tiny package to test webraceconditions
+
+:warning: This is for educational purpose. Do not try on live servers without permission!
+
+## Install
+```bash
+pip install webracecondition
+```
+
+## Last-Frame-Sync Attack
+```python
+from webracecondition import Engine, Request
+
+engine = Engine("https://your-target.com")
+for i in range(20):
+    engine.add_request(Request("GET", "/demo"))
+
+for roundtrip in engine.last_frame_sync_attack():
+    print(roundtrip)
+```
+
+## Dependant-Streams Attack
+```python
+from webracecondition import Engine, Request, LongRunningChain
+
+engine = Engine("https://your-target.com")
+
+for i in range(20):
+    engine.add_request(Request("GET", "/demo")
+
+chain = LongRunningChain(Request("GET", "/long"))
+for i in range(10):
+    chain.add_request(chain.root)
+
+for roundtrip in engine.dependant_streams_attack(chain):
+    print(roundtrip)
+```
+
+## License
+[MIT](LICENSE)
