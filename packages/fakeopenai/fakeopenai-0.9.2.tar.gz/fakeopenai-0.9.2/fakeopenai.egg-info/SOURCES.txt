@@ -1,0 +1,9 @@
+README.md
+setup.py
+fakeopenai/__init__.py
+fakeopenai/api.py
+fakeopenai.egg-info/PKG-INFO
+fakeopenai.egg-info/SOURCES.txt
+fakeopenai.egg-info/dependency_links.txt
+fakeopenai.egg-info/requires.txt
+fakeopenai.egg-info/top_level.txt
