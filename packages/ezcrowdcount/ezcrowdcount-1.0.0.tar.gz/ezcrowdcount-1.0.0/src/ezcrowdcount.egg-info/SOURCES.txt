@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+requirements.txt
+setup.py
+src/ezcrowdcount/__init__.py
+src/ezcrowdcount/__main__.py
+src/ezcrowdcount/crowd_count.py
+src/ezcrowdcount/models.py
+src/ezcrowdcount/network.py
+src/ezcrowdcount/utils.py
+src/ezcrowdcount.egg-info/PKG-INFO
+src/ezcrowdcount.egg-info/SOURCES.txt
+src/ezcrowdcount.egg-info/dependency_links.txt
+src/ezcrowdcount.egg-info/entry_points.txt
+src/ezcrowdcount.egg-info/requires.txt
+src/ezcrowdcount.egg-info/top_level.txt

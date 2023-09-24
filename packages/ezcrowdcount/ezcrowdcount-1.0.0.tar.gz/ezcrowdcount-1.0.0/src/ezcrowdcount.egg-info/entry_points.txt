@@ -1,0 +1,2 @@
+[console_scripts]
+crowdcount = ezcrowdcount.__main__:main

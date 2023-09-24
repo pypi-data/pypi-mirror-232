@@ -1,0 +1,14 @@
+numpy
+opencv_python
+torch
+h5py
+googledrivedownloader
+requests
+
+[build]
+build
+twine
+
+[dev]
+black
+bumpver
