@@ -1,0 +1,9 @@
+setup.py
+autodatap/__init__.py
+autodatap/main.py
+autodatap.egg-info/PKG-INFO
+autodatap.egg-info/SOURCES.txt
+autodatap.egg-info/dependency_links.txt
+autodatap.egg-info/entry_points.txt
+autodatap.egg-info/requires.txt
+autodatap.egg-info/top_level.txt
