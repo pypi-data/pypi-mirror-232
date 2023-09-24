@@ -1,0 +1,72 @@
+Metadata-Version: 2.1
+Name: mub
+Version: 0.1.1
+Summary: A cli app to download and cache album arts from mpd.
+License: MIT
+Author: Kutu
+Author-email: the.kutu.dev@gmail.com
+Requires-Python: >=3.11,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: musicbrainzngs (>=0.7.1,<0.8.0)
+Requires-Dist: python-mpd2 (>=3.1.0,<4.0.0)
+Description-Content-Type: text/markdown
+
+# 🎵 bum
+
+[![PyPI](https://img.shields.io/pypi/v/bum.svg)](https://pypi.python.org/pypi/bum/)
+[![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE.txt)
+[![Build Status](https://travis-ci.org/dylanaraps/bum.svg?branch=master)](https://travis-ci.org/dylanaraps/bum)
+[![Donate](https://img.shields.io/badge/donate-patreon-yellow.svg)](https://www.patreon.com/dyla)
+
+`bum` is a daemon that downloads album art for songs playing in `mpd`/`mopidy` and displays them in a little window. `bum` doesn't loop on a timer, instead it waits for `mpd`/`mopidy` to send a `player` event. When it receives a `player` event it wakes up and downloads album art for the current playing track. This makes `bum` lightweight and makes it idle at `~0%` CPU usage.
+
+`bum` uses [musicbrainz](https://musicbrainz.org/) to source and download cover art, if an album is missing it's cover art you can easily create an account and fill in the data yourself. `bum` outputs a `release-id` which you can use to find the exact entry on musicbrainz.
+
+Note: `bum` is meant to be used with files that don't have embedded album art (`mopidy-spotify`).
+
+
+![showcase](http://i.imgur.com/uKomDoL.gif)
+
+
+## Dependencies
+
+- `python 3.6+`
+- `python-mpv`
+- `python-mpd2`
+- `musicbrainzngs`
+
+
+## Installation
+
+```sh
+pip3 install --user mub
+```
+
+
+## Usage
+
+```sh
+usage: mub [-h] [--size "px"] [--cache_dir "/path/to/dir"] [--version]
+
+mub - Download and display album art for mpd tracks.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --size "px"           what size to display the album art in.
+  --cache_dir "/path/to/dir"
+                        Where to store the downloaded cover art.
+  --version             Print "bum" version.
+  --port                Use a custom mpd port.
+```
+
+
+## Donate
+
+Donations will allow me to spend more time working on `bum`.
+
+If you like `bum` and want to give back in some way you can donate here:
+
+**https://patreon.com/dyla**
+
