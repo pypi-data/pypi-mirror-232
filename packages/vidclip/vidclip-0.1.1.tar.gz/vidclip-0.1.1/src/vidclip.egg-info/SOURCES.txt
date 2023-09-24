@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/vidclip/__init__.py
+src/vidclip/vidclip.py
+src/vidclip.egg-info/PKG-INFO
+src/vidclip.egg-info/SOURCES.txt
+src/vidclip.egg-info/dependency_links.txt
+src/vidclip.egg-info/entry_points.txt
+src/vidclip.egg-info/requires.txt
+src/vidclip.egg-info/top_level.txt
