@@ -1,0 +1,11 @@
+i18/__init__.py,sha256=9GymzAadAk_AK89FeSxIvD0XN5f5SCARq1zahSTE-_s,842
+i18/cli.py,sha256=kFrkYeNQ97Fq98UPbMgeQZD6AeOiI_GRUAHnSIKPPyc,3331
+i18/grammars.py,sha256=vgLRAlC7cMdWEsGrh-KbVhjxRhMSUol55CDcAY2JKsg,3111
+i18/lexer.py,sha256=JqrWMlVTCdGFFI8mMwEO87oXHtHPvU59wNU3BhFlBOU,3431
+i18/parser.py,sha256=b6f7SxeK5CV0UKYqqeL-ZiVUxdzSqnV_WLPGwJMWgrg,1310
+i18-1.0.0.dist-info/LICENSE.txt,sha256=tbuh1wOjX7XFqVWpLMotQcqMcES1N4eLlkAFG1NOCVQ,1082
+i18-1.0.0.dist-info/METADATA,sha256=Mvp0KqrrhtDWJYKsb3ua9iqW5LDYVFzUkDzuLRRZ7ns,2356
+i18-1.0.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+i18-1.0.0.dist-info/entry_points.txt,sha256=CzwdfaRKAUg0CR0k39FDJb7ZLR2jDdyEO2XTyQhkiIo,36
+i18-1.0.0.dist-info/top_level.txt,sha256=bTLnaFZmAikygpMrXUd3PaLMYlMQDinbWEAcLUr1SfA,4
+i18-1.0.0.dist-info/RECORD,,
