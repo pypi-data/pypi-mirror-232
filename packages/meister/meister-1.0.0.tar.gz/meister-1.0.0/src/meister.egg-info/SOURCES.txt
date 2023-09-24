@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/__init__.py
+src/meister.egg-info/PKG-INFO
+src/meister.egg-info/SOURCES.txt
+src/meister.egg-info/dependency_links.txt
+src/meister.egg-info/top_level.txt
