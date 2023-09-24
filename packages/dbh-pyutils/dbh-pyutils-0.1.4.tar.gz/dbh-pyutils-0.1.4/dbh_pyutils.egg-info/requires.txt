@@ -1,0 +1,4 @@
+chromadb
+pytube
+nltk
+langchain
