@@ -1,0 +1,4 @@
+PyXB-X
+bibtexparser
+matplotlib
+pint
