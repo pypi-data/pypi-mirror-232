@@ -1,0 +1,178 @@
+show_id,show_name,season,season_id,couple_name,couple_id,appearance_id,person_id_x,person_id_y
+90DF,90 Day Fiancé,1,90DF_1,Alan & Kirlyam,alan_kirlyam,alan_kirlyam_90DF_1,alan_cox,kirlyam
+90DF,90 Day Fiancé,1,90DF_1,Louis & Aya,louis_aya,louis_aya_90DF_1,louis_gattone,aya
+90DF,90 Day Fiancé,1,90DF_1,Mike & Aziza,mike_aziza,mike_aziza_90DF_1,mike_eloshway,aziza_mazhidova
+90DF,90 Day Fiancé,1,90DF_1,Russ & Paola,russ_paola,russ_paola_90DF_1,russ_mayfield,paola_blaze
+90DF,90 Day Fiancé,2,90DF_2,Brett & Daya,brett_daya,brett_daya_90DF_2,brett_otto,daya_de_arce
+90DF,90 Day Fiancé,2,90DF_2,Chelsea & Yamir,chelsea_yamir,chelsea_yamir_90DF_2,chelsea_macek,yamir_castillo
+90DF,90 Day Fiancé,2,90DF_2,Danielle & Mohamed,danielle_mohamed,danielle_mohamed_90DF_2,danielle_mullins,mohamed_jbali
+90DF,90 Day Fiancé,2,90DF_2,Danny & Amy,danny_amy,danny_amy_90DF_2,danny_frishmuth,amy
+90DF,90 Day Fiancé,2,90DF_2,Jason & Cássia,jason_cassia,jason_cassia_90DF_2,jason_hitch,cassia_tavares
+90DF,90 Day Fiancé,2,90DF_2,Justin & Evelyn,justin_evelyn,justin_evelyn_90DF_2,justin_halas,evelyn
+90DF,90 Day Fiancé,3,90DF_3,Fernando & Carolina,fernando_carolina,fernando_carolina_90DF_3,fernando_verdini,carolina
+90DF,90 Day Fiancé,3,90DF_3,Josh & Aleksandra,josh_aleksandra,josh_aleksandra_90DF_3,josh_strobel,aleksandra_iarovikova
+90DF,90 Day Fiancé,3,90DF_3,Kyle & Noon,kyle_noon,kyle_noon_90DF_3,kyle_huckabee,bajaree_noon_boonma
+90DF,90 Day Fiancé,3,90DF_3,Loren & Alexei,loren_alexei,loren_alexei_90DF_3,loren_goldstone,alexei_brovarnik
+90DF,90 Day Fiancé,3,90DF_3,Mark & Nikki,mark_nikki,mark_nikki_90DF_3,mark_shoemaker,nikki_rose
+90DF,90 Day Fiancé,3,90DF_3,Melanie & Devar,melanie_devar,melanie_devar_90DF_3,melanie_bowers,devar_walters
+90DF,90 Day Fiancé,4,90DF_4,Chantel & Pedro,chantel_pedro,chantel_pedro_90DF_4,ceair_chantel_everett,pedro_jimeno
+90DF,90 Day Fiancé,4,90DF_4,Jorge & Anfisa,jorge_anfisa,jorge_anfisa_90DF_4,jorge_nava,anfisa_arkipchenko
+90DF,90 Day Fiancé,4,90DF_4,Matt & Alla,matt_alla,matt_alla_90DF_4,matt_ryan,alla_fedoruk
+90DF,90 Day Fiancé,4,90DF_4,Narkyia & Olulowo,narkyia_olulowo,narkyia_olulowo_90DF_4,narkyia_lathan,olulowo_lowo_shodipe
+90DF,90 Day Fiancé,4,90DF_4,Nicole & Azan,nicole_azan,nicole_azan_90DF_4,nicole_nafziger,azan_tefou
+90DF,90 Day Fiancé,5,90DF_5,David & Annie,david_annie,david_annie_90DF_5,david_toborowsky,annie_suwan
+90DF,90 Day Fiancé,5,90DF_5,Elizabeth & Andrei,elizabeth_andrei,elizabeth_andrei_90DF_5,elizabeth_potthast,andrei_castravet
+90DF,90 Day Fiancé,5,90DF_5,Evelyn & David,evelyn_david,evelyn_david_90DF_5,evelyn_cormier,david_vazquez_zermeno
+90DF,90 Day Fiancé,5,90DF_5,Josh & Aika,josh_aika,josh_aika_90DF_5,josh_batterson,aika
+90DF,90 Day Fiancé,5,90DF_5,Molly & Luis,molly_luis,molly_luis_90DF_5,molly_hopkins,luis_mendez
+90DF,90 Day Fiancé,5,90DF_5,Nicole & Azan,nicole_azan,nicole_azan_90DF_5,nicole_nafziger,azan_tefou
+90DF,90 Day Fiancé,6,90DF_6,Ashley & Jay,ashley_jay,ashley_jay_90DF_6,ashley_martson,jay_smith
+90DF,90 Day Fiancé,6,90DF_6,Colt & Larissa,colt_larissa,colt_larissa_90DF_6,colt_johnson,larissa_dos_santos_lima
+90DF,90 Day Fiancé,6,90DF_6,Eric & Leida,eric_leida,eric_leida_90DF_6,eric_rosenbrook,leida_margaretha_cohen
+90DF,90 Day Fiancé,6,90DF_6,Jonathan & Fernanda,jonathan_fernanda,jonathan_fernanda_90DF_6,jonathan_rivera,fernanda_flores
+90DF,90 Day Fiancé,6,90DF_6,Kalani & Asuelu,kalani_asuelu,kalani_asuelu_90DF_6,kalani_faagata,asuelu_pulaa
+90DF,90 Day Fiancé,6,90DF_6,Steven & Olga,steven_olga,steven_olga_90DF_6,steven_frend,olga_koshimbetova
+90DF,90 Day Fiancé,7,90DF_7,Angela & Michael,angela_michael,angela_michael_90DF_7,angela_deem,michael_ilesanmi
+90DF,90 Day Fiancé,7,90DF_7,Anna & Mursel,anna_mursel,anna_mursel_90DF_7,anna_campisi,mursel_mistanoglu
+90DF,90 Day Fiancé,7,90DF_7,Blake & Jasmin,blake_jasmin,blake_jasmin_90DF_7,blake_abelard,jasmin_lahtinen
+90DF,90 Day Fiancé,7,90DF_7,Emily & Sasha,emily_sasha,emily_sasha_90DF_7,emily_larina,alexander_sasha_larin
+90DF,90 Day Fiancé,7,90DF_7,Michael & Juliana,michael_juliana,michael_juliana_90DF_7,michael_jessen,juliana_custodio
+90DF,90 Day Fiancé,7,90DF_7,Mike & Natalie,mike_natalie,mike_natalie_90DF_7,mike_youngquist,natalie_mordovtseva
+90DF,90 Day Fiancé,7,90DF_7,Robert & Anny,robert_anny,robert_anny_90DF_7,robert_springs,anny_francisco
+90DF,90 Day Fiancé,7,90DF_7,Tania & Syngin,tania_syngin,tania_syngin_90DF_7,tania_maduro,syngin_colchester
+90DF,90 Day Fiancé,8,90DF_8,Andrew & Amira,andrew_amira,andrew_amira_90DF_8,andrew_kenton,amira_lollyosa
+90DF,90 Day Fiancé,8,90DF_8,Brandon & Julia,brandon_julia,brandon_julia_90DF_8,brandon_gibbs,julia_trubkina
+90DF,90 Day Fiancé,8,90DF_8,Jovi & Yara,jovi_yara,jovi_yara_90DF_8,jovi_dufren,yara_zaya
+90DF,90 Day Fiancé,8,90DF_8,Mike & Natalie,mike_natalie,mike_natalie_90DF_8,mike_youngquist,natalie_mordovtseva
+90DF,90 Day Fiancé,8,90DF_8,Rebecca & Zied,rebecca_zied,rebecca_zied_90DF_8,rebecca_parrott,zied_hakimi
+90DF,90 Day Fiancé,8,90DF_8,Stephanie & Ryan,stephanie_ryan,stephanie_ryan_90DF_8,stephanie_davison,ryan_carr
+90DF,90 Day Fiancé,8,90DF_8,Tarik & Hazel,tarik_hazel,tarik_hazel_90DF_8,tarik_myers,hazel_cagalitan
+90DF,90 Day Fiancé,9,90DF_9,Ariela & Biniyam,ariela_biniyam,ariela_biniyam_90DF_9,ariela_weinberg,biniyam_shibre
+90DF,90 Day Fiancé,9,90DF_9,Bilal & Shaeeda,bilal_shaeeda,bilal_shaeeda_90DF_9,bilal_hazziez,shaeeda_sween
+90DF,90 Day Fiancé,9,90DF_9,Emily & Kobe,emily_kobe,emily_kobe_90DF_9,emily_bieberly,kobe_blaise
+90DF,90 Day Fiancé,9,90DF_9,Jibri & Miona,jibri_miona,jibri_miona_90DF_9,jibri_bell,miona
+90DF,90 Day Fiancé,9,90DF_9,Kara & Guillermo,kara_guillermo,kara_guillermo_90DF_9,kara_bass,guillermo_rojer
+90DF,90 Day Fiancé,9,90DF_9,Patrick & Thaís,patrick_thais,patrick_thais_90DF_9,patrick_mendes,thais_ramone
+90DF,90 Day Fiancé,9,90DF_9,Yvette & Mohamed,yvette_mohamed,yvette_mohamed_90DF_9,yvette_arellano,mohamed_abdelhamed
+B90,90 Day Fiancé: Before the 90 Days,1,B90_1,Cortney & Antonio,cortney_antonio,cortney_antonio_B90_1,cortney_reardanz,antonio_millon
+B90,90 Day Fiancé: Before the 90 Days,1,B90_1,Darcey & Jesse,darcey_jesse,darcey_jesse_B90_1,darcey_silva,jesse_meester
+B90,90 Day Fiancé: Before the 90 Days,1,B90_1,Larry & Jenny,larry_jenny,larry_jenny_B90_1,larry_passariello,jenny_torres
+B90,90 Day Fiancé: Before the 90 Days,1,B90_1,Patrick & Myriam,patrick_myriam,patrick_myriam_B90_1,patrick cornett,myriam_mana
+B90,90 Day Fiancé: Before the 90 Days,1,B90_1,Paul & Karine,paul_karine,paul_karine_B90_1,paul_staehle,karine_martins
+B90,90 Day Fiancé: Before the 90 Days,1,B90_1,Sean & Abby,sean_abby,sean_abby_B90_1,sean_hiler,abby_st_germain
+B90,90 Day Fiancé: Before the 90 Days,2,B90_2,Angela & Michael,angela_michael,angela_michael_B90_2,angela_deem,michael_ilesanmi
+B90,90 Day Fiancé: Before the 90 Days,2,B90_2,Darcey & Jesse,darcey_jesse,darcey_jesse_B90_2,darcey_silva,jesse_meester
+B90,90 Day Fiancé: Before the 90 Days,2,B90_2,Marta & Daya,marta_daya,marta_daya_B90_2,marta_maldanado,aboubakr_ziani
+B90,90 Day Fiancé: Before the 90 Days,2,B90_2,Paul & Karine,paul_karine,paul_karine_B90_2,paul_staehle,karine_martins
+B90,90 Day Fiancé: Before the 90 Days,2,B90_2,Rachel & Jon,rachel_jon,rachel_jon_B90_2,jon_walters,rachel_bear
+B90,90 Day Fiancé: Before the 90 Days,2,B90_2,Ricky & Ximena,ricky_ximena,ricky_ximena_B90_2,ricky_reyes,ximena_parra
+B90,90 Day Fiancé: Before the 90 Days,2,B90_2,Tarik & Hazel,tarik_hazel,tarik_hazel_B90_2,tarik_myers,hazel_cagalitan
+B90,90 Day Fiancé: Before the 90 Days,3,B90_3,Angela & Michael,angela_michael,angela_michael_B90_3,angela_deem,michael_ilesanmi
+B90,90 Day Fiancé: Before the 90 Days,3,B90_3,Avery & Omar,avery_omar,avery_omar_B90_3,avery_mills,omar_albakour
+B90,90 Day Fiancé: Before the 90 Days,3,B90_3,Benjamin & Akinyi,benjamin_akinyi,benjamin_akinyi_B90_3,benjamin_taylor,akinyi_obala
+B90,90 Day Fiancé: Before the 90 Days,3,B90_3,Caesar & Maria,caesar_maria,caesar_maria_B90_3,caesar_mack,maria_divine
+B90,90 Day Fiancé: Before the 90 Days,3,B90_3,Darcey & Tom,darcey_tom,darcey_tom_B90_3,darcey_silva,tom_brooks
+B90,90 Day Fiancé: Before the 90 Days,3,B90_3,Rebecca & Zied,rebecca_zied,rebecca_zied_B90_3,rebecca_parrott,zied_hakimi
+B90,90 Day Fiancé: Before the 90 Days,3,B90_3,Timothy & Jeniffer,timothy_jeniffer,timothy_jeniffer_B90_3,timothy_malcolm,jeniffer_tarazona
+B90,90 Day Fiancé: Before the 90 Days,4,B90_4,Avery & Ash,avery_ash,avery_ash_B90_4,avery_warner,ash_naeck
+B90,90 Day Fiancé: Before the 90 Days,4,B90_4,Darcey & Tom,darcey_tom,darcey_tom_B90_4,darcey_silva,tom_brooks
+B90,90 Day Fiancé: Before the 90 Days,4,B90_4,David & Lana,david_lana,david_lana_B90_4,david_murphey,svetlana
+B90,90 Day Fiancé: Before the 90 Days,4,B90_4,Ed & Rosemarie,ed_rosemarie,ed_rosemarie_B90_4,edward_allen_brown,rosemarie_vega
+B90,90 Day Fiancé: Before the 90 Days,4,B90_4,Geoffrey & Varya,geoffrey_varya,geoffrey_varya_B90_4,geoffrey_paschel,varya_malina
+B90,90 Day Fiancé: Before the 90 Days,4,B90_4,Lisa & Usman,lisa_usman,lisa_usman_B90_4,lisa_babygirl_hamme,usman_sojaboy_umar
+B90,90 Day Fiancé: Before the 90 Days,4,B90_4,Stephanie & Erika,stephanie_erika,stephanie_erika_B90_4,stephanie_matto,erika_owens
+B90,90 Day Fiancé: Before the 90 Days,4,B90_4,Yolanda & Williams,yolanda_williams,yolanda_williams_B90_4,yolanda_leak,williams
+B90,90 Day Fiancé: Before the 90 Days,5,B90_5,Ben & Mahogany,ben_mahogany,ben_mahogany_B90_5,ben_rathbun,mahogany_roca
+B90,90 Day Fiancé: Before the 90 Days,5,B90_5,Caleb & Alina,caleb_alina,caleb_alina_B90_5,caleb_greenwood,alina_kozhevnikova
+B90,90 Day Fiancé: Before the 90 Days,5,B90_5,Ella & Johnny,ella_johnny,ella_johnny_B90_5,ella_johnson,johnny_chao
+B90,90 Day Fiancé: Before the 90 Days,5,B90_5,Gino & Jasmine,gino_jasmine,gino_jasmine_B90_5,gino_palazzolo,jasmine_pineda
+B90,90 Day Fiancé: Before the 90 Days,5,B90_5,Kim & Usman,kim_usman,kim_usman_B90_5,kimberly_menzies,usman_sojaboy_umar
+B90,90 Day Fiancé: Before the 90 Days,5,B90_5,Memphis & Hamza,memphis_hamza,memphis_hamza_B90_5,memphis smith,hamza_moknii
+B90,90 Day Fiancé: Before the 90 Days,5,B90_5,Mike & Ximena,mike_ximena,mike_ximena_B90_5,mike_berk,ximena_morales
+B90,90 Day Fiancé: Before the 90 Days,6,B90_6,Amanda & Razvan,amanda_razvan,amanda_razvan_B90_6,amanda_wilhelm,razvan_ciocoi
+B90,90 Day Fiancé: Before the 90 Days,6,B90_6,Christian & Cleo,christian_cleo,christian_cleo_B90_6,christian_allgood,cleo
+B90,90 Day Fiancé: Before the 90 Days,6,B90_6,David & Sheila,david_sheila,david_sheila_B90_6,david_dangerfield,sheila_mangubat
+B90,90 Day Fiancé: Before the 90 Days,6,B90_6,Gino & Jasmine,gino_jasmine,gino_jasmine_B90_6,gino_palazzolo,jasmine_pineda
+B90,90 Day Fiancé: Before the 90 Days,6,B90_6,Meisha & Nicola,meisha_nicola,meisha_nicola_B90_6,meisha_johnson,nicola_kanaan
+B90,90 Day Fiancé: Before the 90 Days,6,B90_6,Riley & Violet,riley_violet,riley_violet_B90_6,riley_diego,violet_tuyet
+B90,90 Day Fiancé: Before the 90 Days,6,B90_6,Statler & Dempsey,statler_dempsey,statler_dempsey_B90_6,carolyn_grace_riley,dempsey_wilkinson
+B90,90 Day Fiancé: Before the 90 Days,6,B90_6,Tyray & Carmella,tyray_carmella,tyray_carmella_B90_6,tyray_mollett,carmella
+HEA,90 Day Fiancé: Happily Ever After?,1,HEA_1,Brett & Daya,brett_daya,brett_daya_HEA_1,brett_otto,daya_de_arce
+HEA,90 Day Fiancé: Happily Ever After?,1,HEA_1,Danielle & Mohamed,danielle_mohamed,danielle_mohamed_HEA_1,danielle_mullins,mohamed_jbali
+HEA,90 Day Fiancé: Happily Ever After?,1,HEA_1,Kyle & Noon,kyle_noon,kyle_noon_HEA_1,kyle_huckabee,bajaree_noon_boonma
+HEA,90 Day Fiancé: Happily Ever After?,1,HEA_1,Loren & Alexei,loren_alexei,loren_alexei_HEA_1,loren_goldstone,alexei_brovarnik
+HEA,90 Day Fiancé: Happily Ever After?,1,HEA_1,Melanie & Devar,melanie_devar,melanie_devar_HEA_1,melanie_bowers,devar_walters
+HEA,90 Day Fiancé: Happily Ever After?,1,HEA_1,Russ & Paola,russ_paola,russ_paola_HEA_1,russ_mayfield,paola_blaze
+HEA,90 Day Fiancé: Happily Ever After?,2,HEA_2,Chantel & Pedro,chantel_pedro,chantel_pedro_HEA_2,ceair_chantel_everett,pedro_jimeno
+HEA,90 Day Fiancé: Happily Ever After?,2,HEA_2,Danielle & Mohamed,danielle_mohamed,danielle_mohamed_HEA_2,danielle_mullins,mohamed_jbali
+HEA,90 Day Fiancé: Happily Ever After?,2,HEA_2,Jorge & Anfisa,jorge_anfisa,jorge_anfisa_HEA_2,jorge_nava,anfisa_arkipchenko
+HEA,90 Day Fiancé: Happily Ever After?,2,HEA_2,Loren & Alexei,loren_alexei,loren_alexei_HEA_2,loren_goldstone,alexei_brovarnik
+HEA,90 Day Fiancé: Happily Ever After?,2,HEA_2,Russ & Paola,russ_paola,russ_paola_HEA_2,russ_mayfield,paola_blaze
+HEA,90 Day Fiancé: Happily Ever After?,3,HEA_3,Chantel & Pedro,chantel_pedro,chantel_pedro_HEA_3,ceair_chantel_everett,pedro_jimeno
+HEA,90 Day Fiancé: Happily Ever After?,3,HEA_3,David & Annie,david_annie,david_annie_HEA_3,david_toborowsky,annie_suwan
+HEA,90 Day Fiancé: Happily Ever After?,3,HEA_3,Jorge & Anfisa,jorge_anfisa,jorge_anfisa_HEA_3,jorge_nava,anfisa_arkipchenko
+HEA,90 Day Fiancé: Happily Ever After?,3,HEA_3,Molly & Luis,molly_luis,molly_luis_HEA_3,molly_hopkins,luis_mendez
+HEA,90 Day Fiancé: Happily Ever After?,3,HEA_3,Nicole & Azan,nicole_azan,nicole_azan_HEA_3,nicole_nafziger,azan_tefou
+HEA,90 Day Fiancé: Happily Ever After?,3,HEA_3,Russ & Paola,russ_paola,russ_paola_HEA_3,russ_mayfield,paola_blaze
+HEA,90 Day Fiancé: Happily Ever After?,4,HEA_4,Ashley & Jay,ashley_jay,ashley_jay_HEA_4,ashley_martson,jay_smith
+HEA,90 Day Fiancé: Happily Ever After?,4,HEA_4,Chantel & Pedro,chantel_pedro,chantel_pedro_HEA_4,ceair_chantel_everett,pedro_jimeno
+HEA,90 Day Fiancé: Happily Ever After?,4,HEA_4,Colt & Larissa,colt_larissa,colt_larissa_HEA_4,colt_johnson,larissa_dos_santos_lima
+HEA,90 Day Fiancé: Happily Ever After?,4,HEA_4,Elizabeth & Andrei,elizabeth_andrei,elizabeth_andrei_HEA_4,elizabeth_potthast,andrei_castravet
+HEA,90 Day Fiancé: Happily Ever After?,4,HEA_4,Nicole & Azan,nicole_azan,nicole_azan_HEA_4,nicole_nafziger,azan_tefou
+HEA,90 Day Fiancé: Happily Ever After?,4,HEA_4,Russ & Paola,russ_paola,russ_paola_HEA_4,russ_mayfield,paola_blaze
+HEA,90 Day Fiancé: Happily Ever After?,5,HEA_5,Angela & Michael,angela_michael,angela_michael_HEA_5,angela_deem,michael_ilesanmi
+HEA,90 Day Fiancé: Happily Ever After?,5,HEA_5,Colt & Larissa,colt_larissa,colt_larissa_HEA_5,colt_johnson,larissa_dos_santos_lima
+HEA,90 Day Fiancé: Happily Ever After?,5,HEA_5,Elizabeth & Andrei,elizabeth_andrei,elizabeth_andrei_HEA_5,elizabeth_potthast,andrei_castravet
+HEA,90 Day Fiancé: Happily Ever After?,5,HEA_5,Kalani & Asuelu,kalani_asuelu,kalani_asuelu_HEA_5,kalani_faagata,asuelu_pulaa
+HEA,90 Day Fiancé: Happily Ever After?,5,HEA_5,Paul & Karine,paul_karine,paul_karine_HEA_5,paul_staehle,karine_martins
+HEA,90 Day Fiancé: Happily Ever After?,5,HEA_5,Tania & Syngin,tania_syngin,tania_syngin_HEA_5,tania_maduro,syngin_colchester
+HEA,90 Day Fiancé: Happily Ever After?,6,HEA_6,Angela & Michael,angela_michael,angela_michael_HEA_6,angela_deem,michael_ilesanmi
+HEA,90 Day Fiancé: Happily Ever After?,6,HEA_6,Brandon & Julia,brandon_julia,brandon_julia_HEA_6,brandon_gibbs,julia_trubkina
+HEA,90 Day Fiancé: Happily Ever After?,6,HEA_6,Elizabeth & Andrei,elizabeth_andrei,elizabeth_andrei_HEA_6,elizabeth_potthast,andrei_castravet
+HEA,90 Day Fiancé: Happily Ever After?,6,HEA_6,Jovi & Yara,jovi_yara,jovi_yara_HEA_6,jovi_dufren,yara_zaya
+HEA,90 Day Fiancé: Happily Ever After?,6,HEA_6,Kalani & Asuelu,kalani_asuelu,kalani_asuelu_HEA_6,kalani_faagata,asuelu_pulaa
+HEA,90 Day Fiancé: Happily Ever After?,6,HEA_6,Mike & Natalie,mike_natalie,mike_natalie_HEA_6,mike_youngquist,natalie_mordovtseva
+HEA,90 Day Fiancé: Happily Ever After?,6,HEA_6,Tiffany & Ronald,tiffany_ronald,tiffany_ronald_HEA_6,tiffany_franco,ronald_smith
+HEA,90 Day Fiancé: Happily Ever After?,7,HEA_7,Angela & Michael,angela_michael,angela_michael_HEA_7,angela_deem,michael_ilesanmi
+HEA,90 Day Fiancé: Happily Ever After?,7,HEA_7,Bilal & Shaeeda,bilal_shaeeda,bilal_shaeeda_HEA_7,bilal_hazziez,shaeeda_sween
+HEA,90 Day Fiancé: Happily Ever After?,7,HEA_7,Ed & Liz,ed_liz,ed_liz_HEA_7,edward_allen_brown,liz_woods
+HEA,90 Day Fiancé: Happily Ever After?,7,HEA_7,Elizabeth & Andrei,elizabeth_andrei,elizabeth_andrei_HEA_7,elizabeth_potthast,andrei_castravet
+HEA,90 Day Fiancé: Happily Ever After?,7,HEA_7,Jenny & Sumit,jenny_sumit,jenny_sumit_HEA_7,jenny_slatten,sumit_singh
+HEA,90 Day Fiancé: Happily Ever After?,7,HEA_7,Jovi & Yara,jovi_yara,jovi_yara_HEA_7,jovi_dufren,yara_zaya
+HEA,90 Day Fiancé: Happily Ever After?,7,HEA_7,Kim & Usman,kim_usman,kim_usman_HEA_7,kimberly_menzies,usman_sojaboy_umar
+TLR,90 Day: The Last Resort,1,TLR_1,Angela & Michael,angela_michael,angela_michael_TLR_1,angela_deem,michael_ilesanmi
+TLR,90 Day: The Last Resort,1,TLR_1,Ed & Liz,ed_liz,ed_liz_TLR_1,edward_allen_brown,liz_woods
+TLR,90 Day: The Last Resort,1,TLR_1,Jovi & Yara,jovi_yara,jovi_yara_TLR_1,jovi_dufren,yara_zaya
+TLR,90 Day: The Last Resort,1,TLR_1,Kalani & Asuelu,kalani_asuelu,kalani_asuelu_TLR_1,kalani_faagata,asuelu_pulaa
+TLR,90 Day: The Last Resort,1,TLR_1,Molly & Kelly,molly_kelly,molly_kelly_TLR_1,molly_hopkins,kelly_brown
+TOW,90 Day Fiancé: The Other Way,1,TOW_1,Corey & Evelin,corey_evelin,corey_evelin_TOW_1,corey_rathgeber,evelin_villegas
+TOW,90 Day Fiancé: The Other Way,1,TOW_1,Deavan & Jihoon,deavan_jihoon,deavan_jihoon_TOW_1,deavan_clegg,jihoon_lee
+TOW,90 Day Fiancé: The Other Way,1,TOW_1,Jenny & Sumit,jenny_sumit,jenny_sumit_TOW_1,jenny_slatten,sumit_singh
+TOW,90 Day Fiancé: The Other Way,1,TOW_1,Laura & Aladin,laura_aladin,laura_aladin_TOW_1,laura_jallali,aladin_jallali
+TOW,90 Day Fiancé: The Other Way,1,TOW_1,Paul & Karine,paul_karine,paul_karine_TOW_1,paul_staehle,karine_martins
+TOW,90 Day Fiancé: The Other Way,1,TOW_1,Tiffany & Ronald,tiffany_ronald,tiffany_ronald_TOW_1,tiffany_franco,ronald_smith
+TOW,90 Day Fiancé: The Other Way,2,TOW_2,Ariela & Biniyam,ariela_biniyam,ariela_biniyam_TOW_2,ariela_weinberg,biniyam_shibre
+TOW,90 Day Fiancé: The Other Way,2,TOW_2,Brittany & Yazan,brittany_yazan,brittany_yazan_TOW_2,brittany_banks,yazan_abu_horira
+TOW,90 Day Fiancé: The Other Way,2,TOW_2,Deavan & Jihoon,deavan_jihoon,deavan_jihoon_TOW_2,deavan_clegg,jihoon_lee
+TOW,90 Day Fiancé: The Other Way,2,TOW_2,Jenny & Sumit,jenny_sumit,jenny_sumit_TOW_2,jenny_slatten,sumit_singh
+TOW,90 Day Fiancé: The Other Way,2,TOW_2,Kenneth & Armando,kenneth_armando,kenneth_armando_TOW_2,kenneth_niedermeier,armando_rubio
+TOW,90 Day Fiancé: The Other Way,2,TOW_2,Tim & Melyza,tim_melyza,tim_melyza_TOW_2,tim_clarkson,melyza_zeta
+TOW,90 Day Fiancé: The Other Way,3,TOW_3,Ariela & Biniyam,ariela_biniyam,ariela_biniyam_TOW_3,ariela_weinberg,biniyam_shibre
+TOW,90 Day Fiancé: The Other Way,3,TOW_3,Corey & Evelin,corey_evelin,corey_evelin_TOW_3,corey_rathgeber,evelin_villegas
+TOW,90 Day Fiancé: The Other Way,3,TOW_3,Ellie & Victor,ellie_victor,ellie_victor_TOW_3,ellie_rose,victor_mclean
+TOW,90 Day Fiancé: The Other Way,3,TOW_3,Jenny & Sumit,jenny_sumit,jenny_sumit_TOW_3,jenny_slatten,sumit_singh
+TOW,90 Day Fiancé: The Other Way,3,TOW_3,Kenneth & Armando,kenneth_armando,kenneth_armando_TOW_3,kenneth_niedermeier,armando_rubio
+TOW,90 Day Fiancé: The Other Way,3,TOW_3,Steven & Alina,steven_alina,steven_alina_TOW_3,steven_johnston,alina_shaimardanova
+TOW,90 Day Fiancé: The Other Way,4,TOW_4,Daniele & Yohan,daniele_yohan,daniele_yohan_TOW_4,daniele_gates,yohan_geronimo
+TOW,90 Day Fiancé: The Other Way,4,TOW_4,Debbie & Oussama,debbie_oussama,debbie_oussama_TOW_4,debbie_aguero,oussama
+TOW,90 Day Fiancé: The Other Way,4,TOW_4,Gabe & Isabel,gabe_isabel,gabe_isabel_TOW_4,gabe_paboga,isabel_posada
+TOW,90 Day Fiancé: The Other Way,4,TOW_4,Jen & Rishi,jen_rishi,jen_rishi_TOW_4,jen_boecher,rishi_singh
+TOW,90 Day Fiancé: The Other Way,4,TOW_4,Kris & Jeymi,kris_jeymi,kris_jeymi_TOW_4,kris_foster,jeymi_noguera
+TOW,90 Day Fiancé: The Other Way,4,TOW_4,Nicole & Mahmoud,nicole_mahmoud,nicole_mahmoud_TOW_4,nicole_sherbiny,mahmoud_sherbiny
+TOW,90 Day Fiancé: The Other Way,5,TOW_5,Brandan & Mary,brandan_mary,brandan_mary_TOW_5,daniele_gates,yohan_geronimo
+TOW,90 Day Fiancé: The Other Way,5,TOW_5,Daniele & Yohan,daniele_yohan,daniele_yohan_TOW_5,daniele_gates,yohan_geronimo
+TOW,90 Day Fiancé: The Other Way,5,TOW_5,Holly & Wayne,holly_wayne,holly_wayne_TOW_5,holly_weeks,wayne_cornish
+TOW,90 Day Fiancé: The Other Way,5,TOW_5,Julio & Kirsten,julio_kirsten,julio_kirsten_TOW_5,julio_moya,kirsten_schoemaker
+TOW,90 Day Fiancé: The Other Way,5,TOW_5,Kenneth & Armando,kenneth_armando,kenneth_armando_TOW_5,kenneth_niedermeier,armando_rubio
+TOW,90 Day Fiancé: The Other Way,5,TOW_5,Kimberly & Tejaswi,kimberly_tejaswi,kimberly_tejaswi_TOW_5,kimberly_rochelle,tejaswi_tj_goswami
+TOW,90 Day Fiancé: The Other Way,5,TOW_5,Shekinah & Sarper,shekinah_sarper,shekinah_sarper_TOW_5,shekinah_garner,sarper_guven
