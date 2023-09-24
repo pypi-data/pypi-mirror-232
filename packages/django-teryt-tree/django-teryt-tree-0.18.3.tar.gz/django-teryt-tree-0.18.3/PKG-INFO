@@ -1,0 +1,117 @@
+Metadata-Version: 2.1
+Name: django-teryt-tree
+Version: 0.18.3
+Summary: Django-teryt-tree is a Django app that implements TERYT database as tree by django-mptt.
+Home-page: https://github.com/ad-m/django-teryt-tree
+Download-URL: https://github.com/ad-m/django-teryt-tree/
+Author: Adam Dobrawy
+Author-email: Adam Dobrawy <adam.dobrawy@siecobywatelska.pl>
+License: BSD 3-Clause License
+        
+        Copyright (c) 2023, Sieć Obywatelska - Watchdog Polska
+        
+        Redistribution and use in source and binary forms, with or without
+        modification, are permitted provided that the following conditions are met:
+        
+        1. Redistributions of source code must retain the above copyright notice, this
+           list of conditions and the following disclaimer.
+        
+        2. Redistributions in binary form must reproduce the above copyright notice,
+           this list of conditions and the following disclaimer in the documentation
+           and/or other materials provided with the distribution.
+        
+        3. Neither the name of the copyright holder nor the names of its
+           contributors may be used to endorse or promote products derived from
+           this software without specific prior written permission.
+        
+        THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+        AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+        IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+        DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+        FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+        DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+        SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+        CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+        OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+        OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+        
+Keywords: django-teryt-tree
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: Polish
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 3.2
+Classifier: Framework :: Django :: 4.1
+Classifier: Framework :: Django :: 4.2
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.10
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+License-File: AUTHORS.rst
+Requires-Dist: django-mptt
+Requires-Dist: django-model-utils
+Requires-Dist: django-autoslug
+Requires-Dist: tqdm
+
+=============================
+django-teryt-tree
+=============================
+
+.. image:: https://badge.fury.io/py/django-teryt-tree.png
+    :target: https://badge.fury.io/py/django-teryt-tree
+
+.. image:: https://coveralls.io/repos/ad-m/django-teryt-tree/badge.svg?branch=master&service=github
+    :target: https://coveralls.io/github/ad-m/django-teryt-tree?branch=master 
+
+Django-teryt-tree is a Django app that implements TERYT database as tree by django-mptt and flat SIMC database.
+
+Documentation
+-------------
+
+The full documentation is at https://django-teryt-tree.readthedocs.org.
+
+Quickstart
+----------
+
+Install django-teryt-tree::
+
+    pip install django-teryt-tree
+
+
+Then add to INSTALLEDA__APPS::
+
+    INSTALLED_APPS+=('teryt_tree')
+
+Then use it in a project::
+
+    import teryt_tree
+
+or::
+
+    from teryt_tree.models import JednostkaAdministracyjna
+
+To load TERC register database visit http://eteryt.stat.gov.pl/eTeryt/rejestr_teryt/udostepnianie_danych/baza_teryt/uzytkownicy_indywidualni/pobieranie/pliki_pelne.aspx?contrast=default to download valid database. Next to execute following commands::
+
+    pip install lxml
+    python manage.py load_teryt --input TERC.xml
+
+To load SIMC register download valid database. Next to execute following commands::
+
+    python manage.py load_simc --input SIMC.xml
+
+Features
+--------
+
+* Import database from official exports - TERC and SIMC database.
+* Store data as modified pre-order traversal tree for effective regional query
+* Support format of teryt.stat.gov.pl and eteryt.stat.gov.pl
+
+Cookiecutter Tools Used in Making This Package
+----------------------------------------------
+
+*  cookiecutter
+*  cookiecutter-djangopackage

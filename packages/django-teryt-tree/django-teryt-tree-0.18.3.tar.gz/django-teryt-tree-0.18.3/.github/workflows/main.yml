@@ -1,0 +1,51 @@
+name: Python package
+
+on: [push, pull_request]
+
+jobs:
+  django:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python: 
+          - '3.11'
+        django:
+          - "==4.1.*"
+          - "==4.2.*"
+        include:
+          - python: '3.10'
+            django: "==3.2.*"
+            # Python 3.11 & Django 3.2 raises deprecation warning about deprecated 'cgi' for Python 3.13
+    steps:
+    - uses: actions/checkout@v1
+    - name: Build application
+      run: make build
+      env:
+        PYTHON_VERSION: ${{ matrix.python }}
+        DJANGO_VERSION: ${{ matrix.django }}
+    - name: Lint
+      run: make lint
+    - name: Migration check
+      run: make check
+    - name: Show settings
+      run: make settings
+
+    - name: Build test
+      run: make test
+    - name: Build package
+      run: make build_pkg
+
+    - uses: actions/upload-artifact@v3
+      with:
+        name: distribution
+        path: dist
+
+  docs:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Build application
+      run: make build
+    - name: Build documentation
+      run: make docs
