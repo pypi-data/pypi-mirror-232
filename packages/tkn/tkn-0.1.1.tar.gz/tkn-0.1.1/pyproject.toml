@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "tkn"
+version = "0.1.1"
+description = "A command-line utility for working with BPE tokenizers"
+authors = ["Grayson Chao <grayson.chao@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.13"
+tiktoken = "^0.5.1"
+
+[tool.poetry.scripts]
+tkn = 'tkn.main:main'
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
