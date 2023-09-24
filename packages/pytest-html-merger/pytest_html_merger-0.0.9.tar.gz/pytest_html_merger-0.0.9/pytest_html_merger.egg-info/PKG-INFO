@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: pytest-html-merger
+Version: 0.0.9
+Summary: Pytest HTML reports merging utility
+Home-page: https://github.com/akavbathen/pytest_html_merger.git
+Author: Akav Bat Hen
+Author-email: akav.bathen@gmail.com
+Requires-Python: >=3.6.0
+
+Pytest HTML reports merging utility
