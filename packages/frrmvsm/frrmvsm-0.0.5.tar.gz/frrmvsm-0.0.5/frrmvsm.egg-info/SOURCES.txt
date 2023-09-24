@@ -1,0 +1,12 @@
+setup.py
+frrmvsm/__init__.py
+frrmvsm/add.py
+frrmvsm/divide.py
+frrmvsm/frrmvsm.py
+frrmvsm/multiply.py
+frrmvsm/subtract.py
+frrmvsm.egg-info/PKG-INFO
+frrmvsm.egg-info/SOURCES.txt
+frrmvsm.egg-info/dependency_links.txt
+frrmvsm.egg-info/entry_points.txt
+frrmvsm.egg-info/top_level.txt
