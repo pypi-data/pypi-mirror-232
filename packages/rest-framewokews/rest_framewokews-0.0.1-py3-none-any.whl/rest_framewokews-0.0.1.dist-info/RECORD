@@ -1,0 +1,13 @@
+authentication/__init__.py,sha256=21Se5ACAVK46WkN1KsbIyu179Vqrf9BUFT3dk-ZEJ4M,206
+authentication/authentication.py,sha256=ktGUj7UxQd5XCkjUISni_kZ9OjxeSwuqYwEnPIW3n4o,126
+authentication/exception.py,sha256=jjDbQaGk-Q9-kgE2hAd7HVLJA9uw9tR6UHkD2o_zY6c,540
+authentication/models.py,sha256=L7hs9-_mia0zTVGdlRDGBweObDAywsZRrJh8i59-eyI,3044
+authentication/permissions.py,sha256=krQF5SPAsHGLkgrXCaSSpiTE-9KoOF8CKna8tHuNrFo,207
+authentication/serializers.py,sha256=6uqPt6MaIYyszZJ41VuKHSM1JFn_R13ZHLjIZIqtaak,964
+authentication/settings.py,sha256=9l1kgodRsHFXQSF7NjHIqfYejqfAs-hPFcOxZ4alijg,3532
+authentication/urls.py,sha256=OD27Naeo9URRnCW0eFnO5z4y9A7tvoIaFLo5Z1GH7js,367
+authentication/views.py,sha256=mH2SUfwNcwq3p0Gp4eaIZIRvgzl_J0GEABzqGjMHYNI,4770
+rest_framewokews-0.0.1.dist-info/METADATA,sha256=MHCfLxMkg5Lt1mAcvej5dVeqElGK_WEBiSLYC6OpbMY,590
+rest_framewokews-0.0.1.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+rest_framewokews-0.0.1.dist-info/top_level.txt,sha256=VXISBSpQIrEFW1wlnq3UihPHmjYCFTAMV1PReHDUpis,15
+rest_framewokews-0.0.1.dist-info/RECORD,,

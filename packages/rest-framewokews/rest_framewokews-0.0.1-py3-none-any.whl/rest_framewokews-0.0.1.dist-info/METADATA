@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: rest-framewokews
+Version: 0.0.1
+Summary: This is the simplest module for quick work with files.
+Home-page: https://gitlab.com/Gaizin/creaetetest
+Author: yarik_g
+Author-email: example@gmail.com
+Project-URL: GitHub, https://gitlab.com/Gaizin/creaetetest
+Keywords: files authentication
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9 
+Description-Content-Type: text/markdown
+Requires-Dist: requests (>=2.25.1)
+
+TEstwsasdgag
