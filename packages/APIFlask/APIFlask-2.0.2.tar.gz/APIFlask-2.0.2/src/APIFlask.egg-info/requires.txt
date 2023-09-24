@@ -1,0 +1,14 @@
+apispec>=6
+flask-httpauth>=4
+flask-marshmallow>=0.12.0
+flask>=2
+webargs>=8.3
+
+[async]
+asgiref>=3.2
+
+[dotenv]
+python-dotenv
+
+[yaml]
+pyyaml
