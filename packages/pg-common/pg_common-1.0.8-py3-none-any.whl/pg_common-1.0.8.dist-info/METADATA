@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: pg-common
+Version: 1.0.8
+Summary: python game: common lib
+Author: baozilaji@gmail.com
+Requires-Python: >=3.5
+Requires-Dist: pycrypto (==2.6.1)
+Requires-Dist: pydantic (==1.10.11)
+
