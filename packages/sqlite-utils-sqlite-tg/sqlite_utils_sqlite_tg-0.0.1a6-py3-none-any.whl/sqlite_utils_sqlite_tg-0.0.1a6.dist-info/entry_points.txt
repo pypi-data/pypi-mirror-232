@@ -1,0 +1,2 @@
+[sqlite_utils]
+sqlite_tg = sqlite_utils_sqlite_tg

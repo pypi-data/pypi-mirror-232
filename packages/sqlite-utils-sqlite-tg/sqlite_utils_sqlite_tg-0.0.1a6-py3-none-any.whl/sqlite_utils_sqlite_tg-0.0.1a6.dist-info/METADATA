@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: sqlite-utils-sqlite-tg
+Version: 0.0.1a6
+Summary: TODO
+Author: Alex Garcia
+License: Apache-2.0
+Project-URL: Homepage, https://github.com/asg017/sqlite-tg
+Project-URL: Changelog, https://github.com/asg017/sqlite-tg/releases
+Project-URL: Issues, https://github.com/asg017/sqlite-tg/issues
+Description-Content-Type: text/markdown
+Requires-Dist: sqlite-utils
+Requires-Dist: sqlite-tg
+
+# `sqlite-utils-sqlite-tg`
+
+A `sqlite-utils` plugin that registers the `sqlite-tg` extension.
