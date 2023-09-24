@@ -1,0 +1,2 @@
+[console_scripts]
+cansina = cansina.main:__main__
