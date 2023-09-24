@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/mathmini/__init__.py
+src/mathmini/__main__.py
+src/mathmini/add.py
+src/mathmini/mathmini.py
+src/mathmini/sub.py
+src/mathmini.egg-info/PKG-INFO
+src/mathmini.egg-info/SOURCES.txt
+src/mathmini.egg-info/dependency_links.txt
+src/mathmini.egg-info/requires.txt
+src/mathmini.egg-info/top_level.txt
+tests/test_add.py
+tests/test_sub.py
