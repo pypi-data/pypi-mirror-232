@@ -1,0 +1,11 @@
+numpy
+pandas
+pandas_datareader
+ta-lib
+yfinance==0.2.28
+pykalman
+statsmodels
+matplotlib
+scikit-learn
+backtesting
+textblob
