@@ -1,0 +1,15 @@
+py2mojo/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+py2mojo/exceptions.py,sha256=4pw995W8iXS9HnudjH4xX2ACVjQtWAfeKLCsNp9QXYg,143
+py2mojo/helpers.py,sha256=Z09yZIokE2H5uN9DdUyhNcTryqEeNtIfcvS2_f91_As,4506
+py2mojo/main.py,sha256=4CS-kz_w7CAZnP1LdqP2MfmKKCEUemb6ZdP66TBUMmI,3800
+py2mojo/rules.py,sha256=NQwzUygJ1UddTNNiydpKQsS8uZwuEapHoXXQBZJJcJ4,424
+py2mojo/converters/__init__.py,sha256=fg1tsBenTH_BLtGjUxteddUDS_UjW_0M50W6c1ezK6Y,219
+py2mojo/converters/assignment.py,sha256=VqeRifLvEZ_XJag48QLnzdmUhVAPrsQQ_gli9tK1_M8,1230
+py2mojo/converters/classdef.py,sha256=L3VHmfkxbHOv9gjlqPNe6zmCeDDGIIiRwwXHonbNVrM,896
+py2mojo/converters/functiondef.py,sha256=W8JElTw3Uurj6-A-n9A9LNU5lKU5qftIAyE4cGosoI8,2945
+py2mojo-0.0.2.dist-info/LICENSE,sha256=knmomQm0Ee6NF8HiuVMRNNflgQkucnKimKQb00H0kR0,1072
+py2mojo-0.0.2.dist-info/METADATA,sha256=GCWwYDWU96C1GebxycP7EM1IpfMpzLYG_-gOTstlJaM,4300
+py2mojo-0.0.2.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+py2mojo-0.0.2.dist-info/entry_points.txt,sha256=XjT3baTm_d_v4wcvIFP-AujaK3IZ0BCV2JJVwMGBYsY,46
+py2mojo-0.0.2.dist-info/top_level.txt,sha256=mxg2GELEj13AuioeQWk3XY1rzD3fnvXks7rFturvdH8,8
+py2mojo-0.0.2.dist-info/RECORD,,
