@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+paraty_commit_jlvillada/.pre-commit-config.yaml
+paraty_commit_jlvillada/__init__.py
+paraty_commit_jlvillada/mypy.ini
+paraty_commit_jlvillada/precommit.py
+paraty_commit_jlvillada/pylintrc
+paraty_commit_jlvillada.egg-info/PKG-INFO
+paraty_commit_jlvillada.egg-info/SOURCES.txt
+paraty_commit_jlvillada.egg-info/dependency_links.txt
+paraty_commit_jlvillada.egg-info/entry_points.txt
+paraty_commit_jlvillada.egg-info/requires.txt
+paraty_commit_jlvillada.egg-info/top_level.txt
