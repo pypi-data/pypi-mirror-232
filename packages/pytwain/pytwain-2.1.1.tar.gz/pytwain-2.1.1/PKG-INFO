@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: pytwain
+Version: 2.1.1
+Summary: TWAIN API for accessing scanners, cameras, etc on Windows
+Home-page: https://github.com/denisenkom/pytwain
+Author: Mikhail Denisenko
+Author-email: denisenkom@gmail.com
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Win32 (MS Windows)
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Classifier: Natural Language :: English
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python
+Classifier: Topic :: Multimedia :: Graphics :: Capture :: Digital Camera
+Classifier: Topic :: Multimedia :: Graphics :: Capture :: Scanners
+Description-Content-Type: text/markdown
+License-File: COPYING.txt
+
+pytwain
+=======
+
+Documentation build status: ![Doc status](https://secure.travis-ci.org/denisenkom/pytds.png?branch=master)
+
+Documentation is [here](http://pytwain.readthedocs.org/).
