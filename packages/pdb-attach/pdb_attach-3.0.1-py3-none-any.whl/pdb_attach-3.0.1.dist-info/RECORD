@@ -1,0 +1,16 @@
+pdb_attach/VERSION.txt,sha256=iSvvRaGlIFv923hJMD7hMJPXcYW4STFBnDNKOLwDVnI,5
+pdb_attach/__init__.py,sha256=Dp-hT-4d6jOYT0UW_VuBWAnmnVT23776kYuBni2Ksfo,779
+pdb_attach/__init__.pyi,sha256=YGR_uAuhwQ2ukWxoh7R1_bW6S_AENL6pXKLwokS1KeM,101
+pdb_attach/__main__.py,sha256=XqD50s50Qf-emPrGc6TQGZoAH61u-aN7GuLP5y92FP8,1112
+pdb_attach/detach.py,sha256=QeRKFZZBwv-cGQnqYDtR9ZBKIf_59fo2qC8xu-sCatk,1302
+pdb_attach/detach.pyi,sha256=H7vq7tu-6mvrApeUTGWZOnrGHNFMBJmmZSi-shvqS3s,408
+pdb_attach/pdb_signal.py,sha256=jzxDTi8M6hvVZa-JvCzsso-tEdkm1TY-2gf48dQjyBw,2613
+pdb_attach/pdb_signal.pyi,sha256=lWVHhEiUyFcEWRWHXRlFlIN_uutA1vUu_nQqJcyWc6I,736
+pdb_attach/pdb_socket.py,sha256=oeQnP3YRsKQw6lzBZ798rJHFlN62JdyzxgAT44ZkIjc,10260
+pdb_attach/pdb_socket.pyi,sha256=Z6vyxjddQWgJQ3FF4vjEauijDMGT8RQkjavqJime3MA,1792
+pdb_attach/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pdb_attach-3.0.1.dist-info/LICENSE,sha256=xkwUuItxSjz8BSp5zZxfcPUHmS8a7uapj1OC4FgKIxM,1524
+pdb_attach-3.0.1.dist-info/METADATA,sha256=3JFEzt8uGngtAVADpJrI1kFIaJqoI3Xxb2FOBAUWNpk,5116
+pdb_attach-3.0.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+pdb_attach-3.0.1.dist-info/top_level.txt,sha256=fB48Lj1YraIFHWxSXxN5GTTzjCrpu9LaBsHKEaH7Kqo,11
+pdb_attach-3.0.1.dist-info/RECORD,,
