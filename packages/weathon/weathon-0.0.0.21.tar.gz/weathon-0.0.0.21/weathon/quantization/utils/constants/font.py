@@ -1,0 +1,4 @@
+
+
+FONT_FAMILY = "微软雅黑"
+FONT_SIZE = 12
