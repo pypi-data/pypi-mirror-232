@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: pytubefix
+Version: 1.0rc4
+Summary: Python 3 library for downloading YouTube Videos.
+Home-page: https://github.com/juanbindez/pytubefix
+Author: Juan Bindez
+Author-email: juanbindez780@gmail.com
+License: MIT license
+Project-URL: Bug Reports, https://github.com/juanbindez/pytubefix/issues
+Project-URL: Read the Docs, https://pytubefix.io
+Keywords: youtube,download,video,stream
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: The Unlicense (Unlicense)
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python
+Classifier: Topic :: Internet
+Classifier: Topic :: Multimedia :: Video
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Terminals
+Classifier: Topic :: Utilities
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+
+# pytubefix
+This python package is a solution to the problem with pytube regarding delays in updates
+
+
+### usage:
+
+```python
+ >>> from pytubefix import YouTube
+ >>> YouTube('https://youtu.be/2lAe1cqCOXo').streams.first().download()
+ >>> yt = YouTube('http://youtube.com/watch?v=2lAe1cqCOXo')
+ >>> yt.streams
+  ... .filter(progressive=True, file_extension='mp4')
+  ... .order_by('resolution')
+  ... .desc()
+  ... .first()
+  ... .download()
+```
+
+
