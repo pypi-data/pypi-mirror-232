@@ -1,0 +1,9 @@
+pyhmmer
+biopython
+numpy
+pyyaml
+snakemake
+pandas
+tqdm
+plotly
+python-igraph
