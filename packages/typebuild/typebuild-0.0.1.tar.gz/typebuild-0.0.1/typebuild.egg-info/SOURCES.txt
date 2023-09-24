@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+typebuild.egg-info/PKG-INFO
+typebuild.egg-info/SOURCES.txt
+typebuild.egg-info/dependency_links.txt
+typebuild.egg-info/entry_points.txt
+typebuild.egg-info/requires.txt
+typebuild.egg-info/top_level.txt
