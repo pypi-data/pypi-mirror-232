@@ -1,0 +1,11 @@
+tefas/__init__.py,sha256=uMohWasyClZcCyy3v269f8DA27ItzXYvdU8TfhIOhjQ,532
+tefas/crawler.py,sha256=9OYzPULP2D94fjosPkI3Ct4qzz4QngBtx9TgFIxYQ6k,6217
+tefas/schema.py,sha256=pr3nVzj5R13g4bpmh5Vb_ufZK6iDADRN9priH3YMYSY,4204
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_crawler.py,sha256=o68FrnBcOF4sjxBQyxCKUooXSQAGimLV80kS7203CPQ,330
+tests/test_data_schema.py,sha256=zuR03-0FYJAI2j40OjPw99XyVqu4nHl5zJmPD3KyTPc,403
+tefas_crawler-0.3.4.dist-info/LICENSE,sha256=0YyAT0R09SyEbxBA40DQIzCS2MY5OIfsyITDpEu6sgg,1068
+tefas_crawler-0.3.4.dist-info/METADATA,sha256=-150d02TdjO3TzRWCB9_fEVuapilkU_YVsD45IeZBes,5084
+tefas_crawler-0.3.4.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+tefas_crawler-0.3.4.dist-info/top_level.txt,sha256=6eVxlKI5Yp2w_e_f6BUEV0p_5RErQcUlKgMD7-FOT04,12
+tefas_crawler-0.3.4.dist-info/RECORD,,
