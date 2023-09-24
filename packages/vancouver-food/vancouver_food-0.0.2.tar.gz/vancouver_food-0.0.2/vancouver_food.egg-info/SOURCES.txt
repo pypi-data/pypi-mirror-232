@@ -1,0 +1,7 @@
+setup.py
+vancouver_food/__init__.py
+vancouver_food/vancouver_dishes.py
+vancouver_food.egg-info/PKG-INFO
+vancouver_food.egg-info/SOURCES.txt
+vancouver_food.egg-info/dependency_links.txt
+vancouver_food.egg-info/top_level.txt

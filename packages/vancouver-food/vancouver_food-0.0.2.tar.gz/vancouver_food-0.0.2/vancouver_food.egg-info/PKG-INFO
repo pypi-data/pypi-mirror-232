@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: vancouver-food
+Version: 0.0.2
+Summary: Help you choose one food in Vancouver.
+Home-page: UNKNOWN
+Author: LeviLiao
+Author-email: <dlnx38@gmail.com>
+License: UNKNOWN
+Keywords: python,vancouver,random
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+
+Yes, it is help you choose one food in Vancouver.
+
