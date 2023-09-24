@@ -1,0 +1,111 @@
+Metadata-Version: 2.1
+Name: CanLabs
+Version: 0.0.0.1
+Summary: Gestion de l'interface CAN avec Python
+Home-page: https://github.com/alexandre-meline/CanLabs
+Author: Alexandre Meline
+Author-email: alexandre.meline.dev@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Dist: Pint (==0.20.1)
+Requires-Dist: bump2version (==1.0.1)
+Requires-Dist: bumpversion (==0.6.0)
+Requires-Dist: colorama (==0.4.6)
+Requires-Dist: obd (==0.7.2)
+Requires-Dist: pandoc (==2.3)
+Requires-Dist: plumbum (==1.8.2)
+Requires-Dist: ply (==3.11)
+Requires-Dist: pyserial (==3.5)
+
+Gestion de l’Interface CAN avec Python
+======================================
+
+Ce script Python permet de gérer une interface CAN en utilisant la
+bibliothèque ``subprocess`` pour exécuter des commandes système. Il
+vérifie si l’interface CAN existe, la désactive si elle est active,
+télécharge le pilote USB2CAN si nécessaire, puis crée à nouveau
+l’interface CAN avec des paramètres spécifiques.
+
+Prérequis
+---------
+
+Avant d’exécuter ce script, assurez-vous d’avoir les éléments suivants :
+
+Assurez vous d’utiliser le modèle suivant: - [Korlan USB2CAN USB]
+(https://www.8devices.com/products/usb2can_korlan)
+
+1. Accès en tant qu’utilisateur ``root`` pour effectuer certaines
+   opérations système.
+2. Python installé sur votre système.
+3. La bibliothèque ``colorama`` installée. Vous pouvez l’installer avec
+   la commande ``pip install -r requirements.txt``.
+4. Un adaptateur CAN et le pilote USB2CAN correspondant.
+
+## Installation
+
+.. code:: bash
+
+   pip install CanLabs
+
+Utilisation (CLI)
+-----------------
+
+1. Assurez-vous que le script Python a les autorisations d’exécution :
+   ``chmod +x /utils/script.py``.
+2. Exécutez le script Python en tant qu’utilisateur ``root`` :
+   ``sudo utils/./script.py``.
+
+Exemples d’utilisation (Class)
+------------------------------
+
+Pour utiliser la classe ``CANInterfaceManager``, créez une instance de
+la classe et appelez les méthodes appropriées. Voici quelques exemples
+d’utilisation :
+
+.. code:: python
+
+   # Importez la classe CANInterfaceManager
+   from can_interface_manager import CANInterfaceManager
+
+   # Créez une instance de la classe avec le nom de l'interface CAN (par défaut : "can0")
+   can_manager = CANInterfaceManager()
+
+   # Vérifiez si l'utilisateur a les privilèges root
+   if can_manager.check_root():
+       # Si l'interface CAN existe, désactivez-la
+       can_manager.kill_can_interface()
+
+       # Vérifiez si le dossier du pilote USB2CAN est présent et le téléchargez si nécessaire
+       can_manager.download_usb2can_driver()
+
+       # Créez l'interface CAN avec des paramètres personnalisés (débit binaire et point d'échantillonnage)
+       can_manager.create_can_interface(bitrate=500000, sample_point=0.8)
+
+Configuration de l’Interface CAN
+--------------------------------
+
+Vous pouvez configurer le nom de l’interface CAN, le débit binaire
+(bitrate) et le point d’échantillonnage (sample point) en modifiant les
+paramètres appropriés dans le script.
+
+Licence
+-------
+
+Ce script est fourni sous la licence MIT. Consultez le fichier
+``LICENSE`` pour plus d’informations.
+
+--------------
+
+Ce script a été créé pour faciliter la gestion de l’interface CAN avec
+Python. Si vous rencontrez des problèmes ou souhaitez apporter des
+améliorations, n’hésitez pas à contribuer au projet.
+
+Auteur : Alexandre Meline Contributeurs:
+
+
