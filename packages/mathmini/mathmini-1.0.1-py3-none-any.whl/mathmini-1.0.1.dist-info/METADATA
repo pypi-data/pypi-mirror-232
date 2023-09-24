@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: mathmini
+Version: 1.0.1
+Summary: Sample math library containing add and sub functions
+Home-page: https://github.com/JameelKaisar/mathmini-pip
+Author: Jameel Kaisar
+Author-email: jameelkaisarkhan@gmail.com
+Project-URL: Bug Tracker, https://github.com/JameelKaisar/mathmini-pip/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Provides-Extra: test
+Requires-Dist: pytest ; extra == 'test'
+
+# mathmini-pip
+Sample math library containing add and sub functions
