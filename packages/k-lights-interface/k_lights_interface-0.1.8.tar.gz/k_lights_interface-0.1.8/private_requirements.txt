@@ -1,0 +1,2 @@
+
+git+https://x-token-auth:ATCTT3xFfGN0AMaE4thDLrZDF4P6G8cR_gaZBxrZYbbyVElGcfHoBlBgRhq5ieSjRlcEVxfQmB5L7-G1XJrMFamAnjGxkwjSay_9_fgpXZdwja-IxnX-JIQZbecri02Uy1PiNl3hyAsocACx7w0pC_H1nzDYkRaOym1U9k1vG9jh3Fc1tVV2btQ=491A4D83@bitbucket.org/riftlabs/k-protocol-py.git
