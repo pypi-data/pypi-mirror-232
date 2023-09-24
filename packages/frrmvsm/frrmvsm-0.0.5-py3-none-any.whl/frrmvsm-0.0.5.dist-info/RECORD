@@ -1,0 +1,11 @@
+frrmvsm/__init__.py,sha256=gxZgvpXxQuHAJznkuGZ5lGKT7DN_6lb7zI09JngYYY8,35
+frrmvsm/add.py,sha256=0BCx7Z3X4d3Nig1DjJ9XfbJ9Xb372Xf2d_ghyIxW-MI,33
+frrmvsm/divide.py,sha256=43Ik02mSfyGSg4w04m1BAEL7k_MpLPG9X2E9b4CI4-o,34
+frrmvsm/frrmvsm.py,sha256=U8AZqpc03ji-3P8At2VOTiIRdhaLtuZBIpWJc8hCN1U,538
+frrmvsm/multiply.py,sha256=5zaJUIp6UBxaxNVJ5UmifiIYNX03UYIQ-uddJjsaYq8,36
+frrmvsm/subtract.py,sha256=LqkVaS_AB6psAOhA2rVT0GstqMbxAAMrJ7OHcHW8RiQ,36
+frrmvsm-0.0.5.dist-info/METADATA,sha256=Ra9BKZczlRJr0NXnr3AbPNsgoE7US1q2S2XH3gpuCC8,581
+frrmvsm-0.0.5.dist-info/WHEEL,sha256=ewwEueio1C2XeHTvT17n8dZUJgOvyCWCt0WVNLClP9o,92
+frrmvsm-0.0.5.dist-info/entry_points.txt,sha256=eorqUeMXaq4u2oc-5Sr1gXKJ0WlUHui3WzT63HwNmzE,86
+frrmvsm-0.0.5.dist-info/top_level.txt,sha256=IfbiW7bkv4ylmGXYAyu5fVz5gvhzgy6v_J9CI5qGW28,8
+frrmvsm-0.0.5.dist-info/RECORD,,
