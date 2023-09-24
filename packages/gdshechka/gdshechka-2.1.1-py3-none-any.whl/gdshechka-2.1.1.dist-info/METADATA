@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: gdshechka
+Version: 2.1.1
+Summary: DOC: https://sites.google.com/view/n1c1n1/programs/gdshechka-doc
+Author: N1C1
+Requires-Python: >=3.11,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Description-Content-Type: text/markdown
+
+
