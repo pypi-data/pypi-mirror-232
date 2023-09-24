@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/__init__.py
+src/druk.egg-info/PKG-INFO
+src/druk.egg-info/SOURCES.txt
+src/druk.egg-info/dependency_links.txt
+src/druk.egg-info/top_level.txt
