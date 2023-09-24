@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: jmcwatch
+Version: 0.1.0
+Summary: Compile JMC code on save
+Author: amandin
+Author-email: amawwdin@gmail.com
+License: MIT
+Description-Content-Type: text/markdown
+License-File: license
+Requires-Dist: click
+Requires-Dist: watchdog
+
+# Compile your JMC code on save! 
+### Why?
+Thats because wingedseal CEO of JMC refused to implement that feature. And i thought, why not?
+
+![Proof](images/proof.png)
+### How?
+Just use the `jmcwatch` command while your terminal is in your jmc project. Every time you save any of your .jmc files it will run `jmc compile` automatically.
+### Contact me here
+discord: @amandin
+telegram: @amwndin
