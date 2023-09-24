@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+src/karentify/__init__.py
+src/karentify/__main__.py
+src/karentify.egg-info/PKG-INFO
+src/karentify.egg-info/SOURCES.txt
+src/karentify.egg-info/dependency_links.txt
+src/karentify.egg-info/entry_points.txt
+src/karentify.egg-info/top_level.txt
+tests/test_app.py
+tests/test_module.py

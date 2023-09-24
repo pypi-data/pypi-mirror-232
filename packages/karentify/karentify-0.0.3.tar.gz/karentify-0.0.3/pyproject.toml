@@ -1,0 +1,39 @@
+[project]
+name = "karentify"
+description = "Unleash your inner Karen"
+version = "0.0.3"
+readme = "README.md"
+
+authors = [
+    { name="Michael Lamertz", email="michael.lamertz@gmail.com" }
+]
+
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Customer Service",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Communications",
+    "Topic :: Games/Entertainment",
+    "Topic :: Games/Entertainment :: Simulation",
+    "Topic :: Text Processing",
+    "Topic :: Utilities",
+]
+
+dependencies = []
+
+[project.scripts]
+karentify = "karentify.__main__:run"
+
+[project.urls]
+homepage = "https://github.com/dickerdackel/karentify"
+bugtracker = "https://github.com/DickerDackel/karentify/issues"
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+addopts = "-rA -s --cov-report term-missing -s"
+testpaths = [
+    "tests",
+]
