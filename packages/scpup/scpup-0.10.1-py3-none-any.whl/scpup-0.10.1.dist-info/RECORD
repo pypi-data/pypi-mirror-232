@@ -1,0 +1,13 @@
+scpup/__init__.py,sha256=gYsBMsklr0oA3hCCouJwp3WAF1PG3o0YWZBy2Q8QWDQ,438
+scpup/ctrl.py,sha256=064Ypv5S0LKZg2iIorb5Z7MiVpxcQ0TWVzwLKw-chgo,14577
+scpup/group.py,sha256=vMdOI_uK_pXUU7NfxP8Hz8YXbtggk5MIh30qxFZd3EY,11182
+scpup/loader.py,sha256=6XCkV3XvZeCf5f83PYxDJRr0J8Q2wtkoR0YspKgcz2U,1539
+scpup/player.py,sha256=ii4p1EoUp6rP-c77THU5cmOkji8hg0WA8D1nY3vzrnI,9038
+scpup/services.py,sha256=GmXYaxWwtV7O_9r9PfjLsy4kcQ_8HPK2KCyoJuSFjW8,4577
+scpup/sprite.py,sha256=MkdwLGSOA1fnXcS-iLsUP6SmNEkRfyQGp5O-eIyElp8,16461
+scpup/text.py,sha256=Eho2Zxsar7X4mlmUUOf-_cmpazCeyCYl_odpeNWj7Ps,13703
+scpup/view.py,sha256=oOo8QR53Y4g22yfB-PzkSR6ka5IcGA7ikzJZ9XgCIUc,3671
+scpup-0.10.1.dist-info/METADATA,sha256=KAdyOhHzdV6sprtRH_hMPtic6gpnTf_K29y32yqAHvQ,2178
+scpup-0.10.1.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+scpup-0.10.1.dist-info/licenses/LICENSE,sha256=CZ4Rt3X0gX_7rBAOIrRF8SHSgi3nBvH_r7rKd4_JzaM,1077
+scpup-0.10.1.dist-info/RECORD,,
