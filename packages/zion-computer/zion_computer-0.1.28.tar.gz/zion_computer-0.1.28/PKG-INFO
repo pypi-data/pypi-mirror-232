@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: zion-computer
+Version: 0.1.28
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: typing-extensions >=3 ; python_version < '3.8'
+Requires-Dist: cffi
+Summary: A Self Learning, Self Replicating, Collective Intelligence Decentralized Computing Framework
+Home-Page: https://zion.computer
+Author: William Dyson <william@zion.computer>
+Author-email: Colton Pierson <colton@thousandbirds.ai>
+License: MIT
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+Project-URL: homepage, https://github.com/freedomtrain/freedomtrain
+Project-URL: documentation, https://github.com/freedomtrain/freedomtrain
+Project-URL: repository, https://github.com/freedomtrain/freedomtrain
+
+# Zion
+
+## Generating Python Client
+- maturin develop --features python
+
+## Generating Nodejs Client
+- npm run build-release
+
+
+Python patterns were implemented while referring to https://github.com/pydantic/pydantic-core/tree/main/python/pydantic_core

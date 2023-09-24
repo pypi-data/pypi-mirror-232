@@ -1,0 +1,35 @@
+[project]
+name = "zion-computer"
+repository = "https://github.com/freedomtrain/freedomtrain"
+description = "A Self Learning, Self Replicating, Collective Intelligence Decentralized Computing Framework"
+authors = [
+    {name = "Colton Pierson", email = "colton@thousandbirds.ai"}
+]
+classifiers=[
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+    "typing-extensions>=3; python_version < '3.8'",
+    "cffi"
+]
+requires-python = ">=3.9"
+
+
+[project.urls]
+homepage = "https://github.com/freedomtrain/freedomtrain"
+documentation = "https://github.com/freedomtrain/freedomtrain"
+repository = "https://github.com/freedomtrain/freedomtrain"
+
+[build-system]
+requires = ["maturin>=1.0,<2.0"]
+build-backend = "maturin"
+
+[tool.maturin]
+python-source = "package_python"
+module-name = "zion._zion"
+bindings = "pyo3"
+features = ["python"]
