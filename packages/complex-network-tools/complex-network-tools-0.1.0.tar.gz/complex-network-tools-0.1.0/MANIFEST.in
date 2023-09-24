@@ -1,0 +1,3 @@
+include README.md LICENSE
+recursive-include cnt/ *.mat
+recursive-include cnt/ *.pkl
