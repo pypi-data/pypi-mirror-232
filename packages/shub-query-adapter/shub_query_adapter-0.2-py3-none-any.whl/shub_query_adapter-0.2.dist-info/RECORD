@@ -1,0 +1,12 @@
+shub_query_adapter/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+shub_query_adapter/adapter.py,sha256=DbaKGCOcfBv79F2YxMJMvVl9KCqeHEXgjCTlkWd2W98,671
+shub_query_adapter/api_requester.py,sha256=61alZEgnh66XqlvIv6qAX8fDH73YNq0ynURyp9mpo5o,404
+shub_query_adapter/api_translator.py,sha256=QDI02vlQF51_1Xk1n0wpHX2bY9Sh7zMckxZfutuudFY,1778
+shub_query_adapter/query_builder.py,sha256=NRJTRE1CXJMNqGpPCP_kAVjytV4Y-rBz5_8TZ8Y41ks,2194
+shub_query_adapter/utils.py,sha256=EduhKjrTMI8MIGtKsno3BkkzjZB9N0wbgTZ7B5m8TyE,302
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_query_builder.py,sha256=AOd0cs-z32pXtMVxwCJ6knCxRUk7yatssXxI8dIrK8I,1119
+shub_query_adapter-0.2.dist-info/METADATA,sha256=DcGSJD-45eVEsMccgNrkrE_Qll9EPGIyDJBxlqq0Fpc,242
+shub_query_adapter-0.2.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+shub_query_adapter-0.2.dist-info/top_level.txt,sha256=tmXprYT20pBE5W_tOPN1gupN9IhRDRNJ294un1oyotQ,25
+shub_query_adapter-0.2.dist-info/RECORD,,
