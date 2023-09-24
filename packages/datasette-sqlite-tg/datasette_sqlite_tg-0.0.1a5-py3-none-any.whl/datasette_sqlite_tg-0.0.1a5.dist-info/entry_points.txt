@@ -1,0 +1,2 @@
+[datasette]
+sqlite_tg = datasette_sqlite_tg
