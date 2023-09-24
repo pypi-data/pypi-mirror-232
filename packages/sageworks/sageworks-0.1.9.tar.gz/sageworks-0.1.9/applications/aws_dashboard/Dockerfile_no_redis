@@ -1,0 +1,33 @@
+# Use Python 3.10
+FROM python:3.10.13
+
+# Install Nginx and Supervisor
+RUN apt-get update && apt-get install -y nginx supervisor
+
+# Inform Docker that the container is listening on port 8000
+EXPOSE 8000
+
+# Set the working directory
+WORKDIR /app
+
+# Install Dash, Gunicorn, and Sageworks
+RUN pip install dash gunicorn sageworks
+
+# Copy the Nginx and Supervisor configuration files
+COPY nginx.conf /etc/nginx/sites-available/default
+COPY supervisord_no_redis.conf /etc/supervisor/conf.d/supervisord.conf
+
+# Set ENV variables
+ENV SAGEWORKS_BUCKET=sageworks-bucket-not-specified
+ENV REDIS_HOST localhost
+
+# Install app-specific dependencies
+COPY requirements.txt /app/
+RUN pip install -r requirements.txt
+
+# Copy the current directory contents into the container at /app
+COPY . /app
+
+# Run supervisord
+CMD ["/usr/bin/supervisord"]
+
