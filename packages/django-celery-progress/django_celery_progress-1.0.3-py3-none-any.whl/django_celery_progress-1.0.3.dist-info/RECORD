@@ -1,0 +1,15 @@
+django_celery_progress/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_celery_progress/admin.py,sha256=VH0SF772oMiShtMARpV1fv1C94Td0pyEXZ9PFHPO_1Q,1468
+django_celery_progress/apps.py,sha256=QYpjdHUrqSoUTfo5wM52Xv4r5cpsMtB8NdNOy7dWHq4,208
+django_celery_progress/models.py,sha256=uT8WNFwwzWgRRW61TlPE_rdvF7nI6S-j9SEc-Yi91So,722
+django_celery_progress/progress.py,sha256=wh2Jx5brx-uBFxZhuq_iUEiHFbrbm7n_Qj8-yb0-KiI,105
+django_celery_progress/tasks.py,sha256=7QTOzguwV1wxkB68oYbdcF7c3X_82z3u5CbIUVmDMs8,1886
+django_celery_progress/utils.py,sha256=O1PjNwDWPD4_ov_bo-O45L7Y65RMg6tes6wMvfH9vc8,268
+django_celery_progress/views.py,sha256=Ln7bIOxL_7VW4hGwdpd5Yx0DCZ2j8paxD9pOvd9hnQk,993
+django_celery_progress/migrations/0001_initial.py,sha256=HRHiYVWSy4I66ZYG1mHa9rbgcgH3sO-86tXMT0rU48Q,975
+django_celery_progress/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_celery_progress-1.0.3.dist-info/LICENSE,sha256=7EI8xVBu6h_7_JlVw-yPhhOZlpY9hP8wal7kHtqKT_E,1074
+django_celery_progress-1.0.3.dist-info/METADATA,sha256=kQ7pqBovSZZmo1yNwIsNmsJVaeNJHgXXGKTwU0WZ6Yk,1373
+django_celery_progress-1.0.3.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+django_celery_progress-1.0.3.dist-info/top_level.txt,sha256=PBp7WVELxCQdZDmEqlWrqLXxbVGJG78VwlJC28CRgKw,23
+django_celery_progress-1.0.3.dist-info/RECORD,,
