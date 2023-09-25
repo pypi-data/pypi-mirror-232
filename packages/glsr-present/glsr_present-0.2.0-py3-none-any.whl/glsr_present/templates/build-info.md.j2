@@ -1,0 +1,11 @@
+# Build information
+
+_Built using [Pipeline {{ build_info.ci_pipeline_id }}]({{ build_info.ci_pipeline_url }}) started {{ build_info.ci_pipeline_created_at }} (UTC)_
+
+{% if reports_data %}
+## GitLab security reports
+
+{% for report_name, report_type, report_file in reports_data %}
+- [{{ report_name }}](show-report.html?type={{ report_type }}&filename={{ report_file }})
+{% endfor %}
+{% endif %}

@@ -1,0 +1,12 @@
+glsr_present/__init__.py,sha256=7iYHAKISpKVAmJIjH60wjWjx164JG2RpSfI5dw_VMdc,568
+glsr_present/__main__.py,sha256=Bswjjb8HUCQnzsAXphI-wTJRT6fXcjGEOo0aj3mj5-Y,1235
+glsr_present/commandline.py,sha256=R42bAVPMXYEfmWNJu_fHHsTdBjLWQBpeUmz2CR59q3M,9346
+glsr_present/static/report-parser-common.js,sha256=v_QojATgE3kSho6Qq0X6EzWzKNTylmdROODzqIXU9LM,24396
+glsr_present/static/report.css,sha256=GtJiuKOTpnDL_xMh0q03x7ZjO9xWSHIPUDT_1RzrJZk,1001
+glsr_present/static/show-report.html,sha256=6uxysFRK014-7SuTd3Ja9itJ8fmLyMVGuL6_IdUo3bw,1503
+glsr_present/templates/build-info.md.j2,sha256=OgQMWbNoU3CSM2ME0LzxXTUafnd_DlL-DK5bZQ5QGoo,396
+glsr_present-0.2.0.dist-info/LICENSE,sha256=LaZU96gqeh5MfXqjTs-AL_uWhoaQS8RaLexLx9pfJKc,1075
+glsr_present-0.2.0.dist-info/METADATA,sha256=0iQCUD2dE1UHtG6VtASO7-IwMdJPD-7I0U4UY8wmOzI,4163
+glsr_present-0.2.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+glsr_present-0.2.0.dist-info/top_level.txt,sha256=YeqcG2MuJPb3DQeJk8ihnzt_kEeVOYqQDDIi05a2PIY,13
+glsr_present-0.2.0.dist-info/RECORD,,
