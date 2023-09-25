@@ -1,0 +1,33 @@
+[build-system]
+requires = ["maturin>=1.2.3,<2"]
+build-backend = "maturin"
+
+[project]
+name = "mitmproxy_rs"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Rust",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Development Status :: 3 - Alpha",
+]
+
+dependencies = [
+    "mitmproxy_windows==0.3.7; os_name == 'nt'",
+    "mitmproxy_macos==0.3.7; sys_platform == 'darwin'",
+]
+
+[tool.black]
+line-length = 140
+include = '\.pyi?$'
+
+[project.entry-points.pyinstaller40]
+hook-dirs = "mitmproxy_rs._pyinstaller:hook_dirs"
+
+[tool.mypy]
+exclude = [
+    'mitmproxy_rs/_pyinstaller'
+]
