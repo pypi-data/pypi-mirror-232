@@ -1,0 +1,5 @@
+setup.py
+history_candle.egg-info/PKG-INFO
+history_candle.egg-info/SOURCES.txt
+history_candle.egg-info/dependency_links.txt
+history_candle.egg-info/top_level.txt
