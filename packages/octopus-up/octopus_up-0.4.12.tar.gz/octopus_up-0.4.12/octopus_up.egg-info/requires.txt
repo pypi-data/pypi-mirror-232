@@ -1,0 +1,4 @@
+octopus_sdk
+requests
+huggingface_hub
+rich
