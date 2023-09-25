@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: wfdemo
+Version: 0.0.2
+Summary: python for office
+Home-page: https://github.com/CoderWanFeng/publish-pypi
+Author: CoderWanFeng
+Author-email: 1957875073@qq.com
+License: Apache-2.0 license
+Project-URL: Bug Tracker, https://github.com/CoderWanFeng/publish-pypi/issues
+Project-URL: Documentation, https://www.python-office.com/
+Project-URL: Source Code, https://github.com/CoderWanFeng/publish-pypi
+Platform: any
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
