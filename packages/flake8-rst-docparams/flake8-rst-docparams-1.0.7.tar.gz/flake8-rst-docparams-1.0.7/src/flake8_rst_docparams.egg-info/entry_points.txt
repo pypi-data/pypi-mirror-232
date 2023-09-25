@@ -1,0 +1,2 @@
+[flake8.extension]
+DP = flake8_rst_docparams.check_params:CheckSource
