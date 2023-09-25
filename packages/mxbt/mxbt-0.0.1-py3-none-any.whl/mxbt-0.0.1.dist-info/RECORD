@@ -1,0 +1,12 @@
+mxbt/__init__.py,sha256=HQ4yCoK2kt2klVAjNHjR6D6_9RlMytWdIJX2ykj2yBA,129
+mxbt/api.py,sha256=piB0YiEDcQKwUrlNRY_gDYkFKfTCJkIy8sBRPxQ4j7Y,8201
+mxbt/bot.py,sha256=2bJ1hlKy0tc-tZoYyoxGFYOpEkV6pRht8Kw494BXtKQ,1275
+mxbt/callbacks.py,sha256=-woUUaxf5wESdet_gBjakzDTDUl2J6QFMZAwBORiHiU,1861
+mxbt/listener.py,sha256=bcXqjcW0GZGuIzA8objCO0u-ShBK5ZoDZtgJJKmng1I,3455
+mxbt/match.py,sha256=ambo4k1C2rygczy0XGQ-4oTRDw5E4VeRBuKyCPEyb-o,2049
+mxbt/utils.py,sha256=Y4te6UQ48LrgpTVthrV0yWx9Hz0VPdOTPfAH0LoujxU,116
+mxbt-0.0.1.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+mxbt-0.0.1.dist-info/METADATA,sha256=BfVMF9vIsU_5bZ-Y_UBmtMiejKqqURx20-xrqKdnmq8,1729
+mxbt-0.0.1.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
+mxbt-0.0.1.dist-info/top_level.txt,sha256=9uSDISCA-UcUPucbLtnIuXTDW2TNljpw8IMQMvWA7_o,5
+mxbt-0.0.1.dist-info/RECORD,,
