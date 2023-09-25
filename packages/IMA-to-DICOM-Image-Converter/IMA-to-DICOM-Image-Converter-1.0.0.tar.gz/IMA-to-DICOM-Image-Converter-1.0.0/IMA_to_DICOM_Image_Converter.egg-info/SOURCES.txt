@@ -1,0 +1,11 @@
+CHANGELOG.txt
+LICENCE.txt
+MANIFEST.in
+README.txt
+setup.py
+IMA-to-DICOM-Image-Converter/__init__.py
+IMA_to_DICOM_Image_Converter.egg-info/PKG-INFO
+IMA_to_DICOM_Image_Converter.egg-info/SOURCES.txt
+IMA_to_DICOM_Image_Converter.egg-info/dependency_links.txt
+IMA_to_DICOM_Image_Converter.egg-info/requires.txt
+IMA_to_DICOM_Image_Converter.egg-info/top_level.txt

@@ -1,0 +1,5 @@
+include IMA-to-DICOM-Image-Converter.py
+include README.txt
+include MANIFEST.in
+include LICENCE.txt
+global-include *.py *.txt *.IMA *.dcm 
