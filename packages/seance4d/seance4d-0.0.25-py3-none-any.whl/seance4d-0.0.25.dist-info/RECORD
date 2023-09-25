@@ -1,0 +1,10 @@
+seance4d/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+seance4d/config.py,sha256=_r1D4Ghd0a7_rYVYmGkW5b4oK60Gb7JKuZI_RRM8mwk,745
+seance4d/main.py,sha256=Qax08Qm6uEtd0Qv9nZpGnb6hQHsEPt7hRheRSRKGeMI,7382
+seance4d/open_ai.py,sha256=JchOT5OHMbVGyvhyWWGEvo_VyjQO9SPSOUEvCJ0OU7E,790
+seance4d/text_parser.py,sha256=pw3tf1X7y2dilCJFeYlXyiPCQSVEXwiUHxyeAErwk8g,2900
+seance4d/text_to_speech.py,sha256=brcl1LSmOz8n2-3FxYnhvEdH9RhvXZ99L5rJiJZIYtY,549
+seance4d-0.0.25.dist-info/METADATA,sha256=7dBKdbn6ePt2KMrmSytHXmGbxZQunzUGgli-4RC5wRM,945
+seance4d-0.0.25.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+seance4d-0.0.25.dist-info/top_level.txt,sha256=EQlew2OfCIqbg0IlaLJyIqNQzHE5MblZDQV8tKSjbBM,9
+seance4d-0.0.25.dist-info/RECORD,,
