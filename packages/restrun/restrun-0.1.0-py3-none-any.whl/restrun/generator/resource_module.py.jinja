@@ -1,0 +1,13 @@
+{{ auto_generated_doc_comment }}
+from restrun.core.resource import Resource
+{% for operation in resource.operations %}
+from . import {{operation.module_name}}
+{% endfor %}
+
+class {{ resource.class_name }}(
+{% for operation in resource.operations %}
+    {{ operation.module_name }}.{{ operation.class_name }},
+{% endfor %}
+    Resource
+):
+    pass

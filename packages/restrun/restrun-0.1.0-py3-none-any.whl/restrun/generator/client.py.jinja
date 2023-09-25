@@ -1,0 +1,52 @@
+{%- set client_class = restrun.client_prefix | class_name + "Client" -%}
+{{ auto_generated_doc_comment }}
+from typing import Literal
+
+from typing_extensions import override, overload
+
+from restrun.core.client import RestrunClient
+from restrun.exceptions import URLNotSupportedError
+
+{% for resource in resources %}
+from ..resources import {{ resource.module_name }}
+{% endfor %}
+{% if restrun.client_mixins | length != 0 %}
+from .mixins import (
+{% for mixin in restrun.client_mixins %}
+    {{ mixin.module_name }},
+{% endfor %}
+)
+{% endif %}
+
+
+class {{ client_class }}({{ (restrun.client_mixin_path_names + ["RestrunClient"])|join(", ") }}):
+{% if resources | length == 0 %}
+    pass
+{% elif resources | length == 1 %}
+{% set resource = resources[0] %}
+{% set urls = restrun.get_resource_urls(resource) %}
+    @override
+    def resource(self, url: {{ urls | literal }},) -> {{resource.module_name}}.{{ resource.class_name }}:
+        if url in {{ urls }}:
+            return {{resource.module_name}}.{{ resource.class_name }}(self._client)
+
+        else:
+          raise URLNotSupportedError(url)
+{% else %}
+{% for resource in resources %}
+{% set urls = restrun.get_resource_urls(resource) %}
+    @overload
+    def resource(self, url: {{ urls | literal }},) -> {{resource.module_name}}.{{ resource.class_name }}:
+        ...
+{% endfor %}
+
+    def resource(self, url):
+{% for resource in resources %}
+{% set urls = restrun.get_resource_urls(resource) %}
+        if url in {{ urls }}:
+            return {{resource.module_name}}.{{ resource.class_name }}(self._client)
+
+{% endfor %}
+
+        raise URLNotSupportedError(url)
+{% endif %}

@@ -1,0 +1,23 @@
+{%- set client_class = restrun.client_prefix | class_name + "Client" -%}
+{%- set real_client_class = restrun.client_prefix | class_name + "RealClient" -%}
+{{ auto_generated_doc_comment }}
+from typing import Self
+
+from restrun.core.client import RestrunRealClient, RequestRealClient
+
+from .client import {{ client_class }}
+{%- if restrun.real_client_mixins | length != 0 %}
+from .mixins import (
+{%- for mixin in restrun.real_client_mixins %}
+    {{ mixin.module_name }},
+{%- endfor %}
+)
+{% endif %}
+
+class {{ real_client_class }}({{ (restrun.real_client_mixin_path_names + ["RestrunRealClient", client_class])|join(", ") }}):
+    def __init__(self, client: RequestRealClient) -> None:
+        self._real_client = client
+
+    @property
+    def _client(self) -> RequestRealClient:
+        return self._real_client
