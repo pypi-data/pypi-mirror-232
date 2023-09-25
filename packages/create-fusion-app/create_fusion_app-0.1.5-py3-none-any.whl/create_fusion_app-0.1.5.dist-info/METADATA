@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: create-fusion-app
+Version: 0.1.5
+Summary: Create Fusion App creates a specifically formatted React/Redux app called a Fusion app.
+Author: Matthew Ford
+Author-email: matthew@symbiotic.love
+License: MIT
+
