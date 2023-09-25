@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: django-postgres-refresher
+Version: 1.0.0
+Summary: postgres `REFRESH MATVIEW` manager
+Keywords: django,postgres
+Classifier: Framework :: Django
+Classifier: License :: Public Domain
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Database
+Description-Content-Type: text/markdown
+
+### Installation
+```bash
+$ pip install django-postgres-refresher
+```
+
+#### `settings.py`
+```python
+INSTALLED_APPS+=['django_postgres_refresher']
+```
+
+#### `migrate`
+```bash
+$ python manage.py migrate
+```
+
+### Features
++   admin interface
++   refresh reports (`duration`,`time`) and stat (`count`,`avg_duration`,`min_duration`,`max_duration`)
+
+### Examples
+refresh matviews
+```bash
+python manage.py postgres_refresher
+```
+
+`INSERT` to `postgres_refresher_config`
+```sql
+INSERT INTO postgres_refresher_config(schemaname,matviewname,"concurrently",seconds)
+VALUES
+('schemaname','matviewname',true,600),
+('schemaname','matviewname2',true,600)
+ON CONFLICT(schemaname,matviewname) DO NOTHING;
+```
+
+
