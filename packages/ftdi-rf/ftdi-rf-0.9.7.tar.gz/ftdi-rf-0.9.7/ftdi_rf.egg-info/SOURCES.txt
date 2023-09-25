@@ -1,0 +1,13 @@
+LICENSE.txt
+MANIFEST.in
+README.rst
+setup.py
+ftdi_rf/__init__.py
+ftdi_rf/ftdi_rf.py
+ftdi_rf.egg-info/PKG-INFO
+ftdi_rf.egg-info/SOURCES.txt
+ftdi_rf.egg-info/dependency_links.txt
+ftdi_rf.egg-info/requires.txt
+ftdi_rf.egg-info/top_level.txt
+scripts/ftdi-rf_receive
+scripts/ftdi-rf_send
