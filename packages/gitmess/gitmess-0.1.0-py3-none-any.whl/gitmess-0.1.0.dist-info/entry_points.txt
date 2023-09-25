@@ -1,0 +1,3 @@
+[console_scripts]
+gm=gitmess.gitmess:fetch_git_changes
+
