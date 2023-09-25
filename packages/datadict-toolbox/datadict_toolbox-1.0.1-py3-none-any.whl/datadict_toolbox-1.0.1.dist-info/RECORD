@@ -1,0 +1,11 @@
+datadict_toolbox/__init__.py,sha256=pWoTUV79mx3W5dlWPWv9SjAwVy_rYi2U5SGEtDDIaBs,139
+datadict_toolbox/extract_from_dtsx.py,sha256=HjrKjud3FIg1FXpoajk9sShVCxKqLIhjqiH3t0axMsw,4941
+datadict_toolbox/extract_from_sql_query.py,sha256=ZMUQQ97jONTGVThj_sW14uG34S21JwVkF7UGeeeRnZ0,19587
+datadict_toolbox/extract_from_xmla.py,sha256=Qrz4a7wnJHVcGf4LEx4emV2RwOdREoAKemtlFb4eAFY,18164
+datadict_toolbox/select_gpt_deduce.py,sha256=M3n9Iv8mOKFYnHgHpQl7fR1HBLbIPU4pLnICmeupuv0,5589
+datadict_toolbox/usefull.py,sha256=HVDuFNCKGoiecGrXPuzOy0intwuHq8TubEvUIjZ3f1Q,3871
+datadict_toolbox-1.0.1.dist-info/LICENSE,sha256=BDwZ9H9yiOU_XmErNdQjoxHy5HVSQNhRuNTAU3rPHJw,1118
+datadict_toolbox-1.0.1.dist-info/METADATA,sha256=i0BCWbhzqIsmQr_NEg8Hu0iOS0ITmGpz50_n-NUb-3g,8474
+datadict_toolbox-1.0.1.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+datadict_toolbox-1.0.1.dist-info/top_level.txt,sha256=WJszSVslo7Xue70Gh1o-69pXJ7EaebqqSEH5YUvFEsE,17
+datadict_toolbox-1.0.1.dist-info/RECORD,,
