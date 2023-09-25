@@ -1,0 +1,7 @@
+mod_wsgi_van/__init__.py,sha256=k5t3cf1glriqp67GT11qgZC0o_FbQlcKxxb6D6HQmmA,49
+mod_wsgi_van/router.py,sha256=aTmTmBPbfircGK2cmJyNKrRKgEN48ey71x3T-xu7Hh4,2705
+mod_wsgi_van/server.py,sha256=pLRu3WWiEQ1FuMwD3QP7EMsIMOwggHhowGmpixddpXE,2276
+mod_wsgi_van-0.0.1.dist-info/METADATA,sha256=F7O4Reayx7JkdKaRFUn9qoq_rBbDkm0KWGE1bDw8sX4,2864
+mod_wsgi_van-0.0.1.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+mod_wsgi_van-0.0.1.dist-info/licenses/LICENSE,sha256=d_J_yGn5zBZw34x8w3GFOnzFUgj93-pfz_tCMiZ5qgw,1074
+mod_wsgi_van-0.0.1.dist-info/RECORD,,
