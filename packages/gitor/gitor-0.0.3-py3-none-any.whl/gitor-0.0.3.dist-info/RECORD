@@ -1,0 +1,10 @@
+gitor/__init__.py,sha256=q6KVdfy5nv7L0K8fxlMZqKztUjCelkByF5n8qVC6I2Q,803
+gitor/_set.py,sha256=dD_Aoh586_6RAFkChuhNFKVym_SqpTxzaUpHtX-qhTQ,286
+gitor/api.py,sha256=DzJ2u1m0DsO41xuD07327IkN5QmWHpJQiOORZbvig-Y,792
+gitor/gitrequest.py,sha256=uDtcmuuy1NhvRzHr1qbh21Ms5iFuVlO4v1xqokofFQE,1164
+gitor/repositories.py,sha256=3h4iPvBRPJhbdiSNNIraz_k_M2H0KHz1WOuG_1SHzJE,2955
+gitor-0.0.3.dist-info/LICENSE,sha256=i7hPnt2Q1zpgRrcjDeMGjXOriI5CkxmgvrKrort61xw,1084
+gitor-0.0.3.dist-info/METADATA,sha256=AbbBe8naCSKmxltep9G4bM1GtKQt_SxSkHEclEqxvSI,653
+gitor-0.0.3.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+gitor-0.0.3.dist-info/top_level.txt,sha256=JU1k94PVgC4FpxtJoCLCanKVZghACaLfIVFpTZryC2M,6
+gitor-0.0.3.dist-info/RECORD,,
