@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "Decode_Things"
+version = "0.0.1"
+description = "A package that allows to decode code."
+readme = "README.md"
+authors = [{ name = "JustWait", email = "justwaitnano@gmail.com" }]
+license = { file = "LICENSE" }
+classifiers = [
+    "Development Status :: 1 - Planning",
+    "Operating System :: OS Independent",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+]
+keywords = ["Annotation", 
+	    "Automated Annotation", 
+	    "OpenCV Annotate",
+	    "Image Annotation Tool",
+	    "Single Class Annotation",
+	    "Simple Annotation",
+	    "Annotation Python",
+	    "Dataset labelling",
+	    "Object detection",
+	    "Industrial annotation",
+	    "openannotate",
+	    "Annotation software",
+	    "Deep Learning",
+	    "Contour Analysis",
+	    "Thresholding OpenCV",
+	    "Color Segmentation",
+	    "segmentation mask",
+	    "Computer Vision",
+	    "Bounding Box Annotation",
+	    ]
+dependencies = []
+requires-python = ">=3.5"
+
+[project.urls]
+Homepage = "https://github.com/justwaitfor-me/decode_things/"
+
+[project.scripts]
