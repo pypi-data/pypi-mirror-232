@@ -1,0 +1,81 @@
+Metadata-Version: 2.1
+Name: kessel
+Version: 0.5.1
+Summary: a minimal wsgi framework
+Author: mkirc
+Author-email: m.p.kirchner@gmx.de
+Project-URL: Source Files, https://github.com/mkirc/kessel
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+License-File: LICENCE.txt
+Requires-Dist: cffi ==1.15.1
+Requires-Dist: cryptography ==41.0.3
+Requires-Dist: gunicorn ==21.2.0
+Requires-Dist: Jinja2 ==3.1.2
+Requires-Dist: MarkupSafe ==2.1.3
+Requires-Dist: packaging ==23.1
+Requires-Dist: pkg-resources ==0.0.0
+Requires-Dist: pycparser ==2.21
+Requires-Dist: PyJWT ==2.8.0
+
+# kessel
+
+## What this is
+
+Minimal dependency python wsgi-compatible web framework with the tried
+and tested fluid-container-inspired name. This is pretty crude, so I decided
+to go with 'kessel', german for 'cauldron'.
+
+### DISCLAIMER
+
+> This project is mainly a learning effort and should not be used in any
+reliability- oder security-critical context.
+
+## Features
+
+* minimal web framework, can be anything you want.
+
+* token auth with [pyJWT](https://pypi.org/project/PyJWT/)
+
+* modularisation can be achieved with [recipes](#recipes)
+
+* thread-local app context for handling `current_user`,
+`current_request`, etc.
+
+* small and readable codebase
+
+# installation
+
+```bash
+pip install kessel
+```
+
+# usage
+
+WIP
+
+see `examples/app.py` and `examples/run.py`
+
+## recipes
+
+TODO
+
+see `examples/foo/fooController.py`
+
+## Encoding & Decoding Tokens with RS256 (RSA)
+
+TODO
+
+```bash
+mkdir test-app && \
+openssl genrsa -out test-app/private.pem 2048
+```
+## Acknowledgements
+
+* obviously heavily inspired by [flask](https://github.com/pallets/flask)
+
+* class `Headers` from `headers.py` is a modified version of
+[werkzeug's](https://github.com/pallets/werkzeug)
