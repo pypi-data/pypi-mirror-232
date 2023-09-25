@@ -1,0 +1,16 @@
+fract/VERSION,sha256=EYbp9Q7ElmUwzNSHIIIqrM4T2rArMTDOb1i6VvgsO8c,8
+fract/__init__.py,sha256=PankXXvMwTjaBluF9DDX7oS2auIyHFn-MJcR-gOevaI,199
+fract/calculation_job.py,sha256=fHa93fSyazm8C2tSuoAtewSQEXTvVT5qCz5KpMLD7ls,319
+fract/colors.py,sha256=9QUH81mrB-UE4bQ_-rgAnbSZd65EsvRlD3DFGSQT_Zw,205
+fract/export_job.py,sha256=V2fnfBlfL1LaQ83NmAUxr3DPeRRgw4f5bRqusJDGlXs,104
+fract/logging.py,sha256=ekTBcZBy9DCbJ_uzw_MVfyBedi6xGDS4TJryM0WhR3M,87
+fract/mandelbrot.py,sha256=WVeRiW_jdU2FSb3Z6vBrK-pgUgeAUaTlHbKdEvhVRfw,728
+fract/mandelbrot_calculator.py,sha256=aNTg8n83hWojM1olWPAKBJm5dCjUSPUBhUGTPyoU_pA,10149
+fract/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fract/to_color.py,sha256=-GZPxEAT4WgPaQy355pqnsJuquqg6LSB7pKUdV0TE2c,82
+fract/version_func.py,sha256=rJ-YCFbXWPRJsQGN7cmdm323NZOx_60BLL7aZAIE5pA,183
+fract-1.0.0a4.dist-info/LICENSE,sha256=jXz8xZq3cMjXXQ2Hb9sj6RNKFigwHmut-OnbWc-uHOU,1073
+fract-1.0.0a4.dist-info/METADATA,sha256=jwontbuPOtwhkWscKOE4a4tm7LYeLacMyhP6k5e35wk,669
+fract-1.0.0a4.dist-info/WHEEL,sha256=5sUXSg9e4bi7lTLOHcm6QEYwO5TIF1TNbTSVFVjcJcc,92
+fract-1.0.0a4.dist-info/top_level.txt,sha256=EPDBXfSXIs7NbxhtJXtIt9UUlamg9UIHREOKJBVoyLc,6
+fract-1.0.0a4.dist-info/RECORD,,
