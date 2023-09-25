@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+wbparser/__init__.py
+wbparser/wbparser.py
+wbparser.egg-info/PKG-INFO
+wbparser.egg-info/SOURCES.txt
+wbparser.egg-info/dependency_links.txt
+wbparser.egg-info/requires.txt
+wbparser.egg-info/top_level.txt
