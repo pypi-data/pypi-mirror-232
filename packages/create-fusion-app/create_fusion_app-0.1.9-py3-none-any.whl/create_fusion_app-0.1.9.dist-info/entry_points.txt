@@ -1,0 +1,2 @@
+[console_scripts]
+fusion = create_fusion_app.main:main
