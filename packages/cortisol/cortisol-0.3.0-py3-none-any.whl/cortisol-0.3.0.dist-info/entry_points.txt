@@ -1,0 +1,3 @@
+[console_scripts]
+cortisol=cortisol.main:app
+
