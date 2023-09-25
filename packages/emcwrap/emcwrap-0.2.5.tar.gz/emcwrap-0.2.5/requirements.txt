@@ -1,0 +1,7 @@
+dime_sampler
+numpy
+scipy
+tqdm
+emcee
+pandas
+matplotlib
