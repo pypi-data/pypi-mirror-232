@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: cloudiplookup
+Version: 0.0.1
+Summary: Cloud IP Lookup is a Pure Python application and library for Python 3 to verify which cloud platform a given IP address belongs to.
+Home-page: https://github.com/rabuchaim/cloudiplookup
+Author: Ricardo Abuchaim
+Author-email: ricardoabuchaim@gmail.com
+Maintainer: Ricardo Abuchaim
+Maintainer-email: ricardoabuchaim@gmail.com
+License: MIT
+Keywords: geoip,cloudiplookup,cloud ip lookup,geoip2,geolite2,aws,azure,gcp,iprange,ip range,pure-python,purepython,pure python
+Classifier: Development Status :: 1 - Planning
+Classifier: Topic :: Internet
+Classifier: Topic :: System :: Networking
+Classifier: Topic :: System :: Networking :: Monitoring
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: System :: Monitoring
+Classifier: Topic :: System :: Networking
+Classifier: Topic :: System :: Networking :: Monitoring
+Classifier: Topic :: System :: Systems Administration
+Classifier: Topic :: Utilities
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.0
+Classifier: Programming Language :: Python :: 3.1
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Description-Content-Type: text/markdown
+
+# CloudIPLookup v1.0.0
+CloudIPLookup is a Pure Python application and library for Python 3 to verify which cloud platform a given IP address belongs to
