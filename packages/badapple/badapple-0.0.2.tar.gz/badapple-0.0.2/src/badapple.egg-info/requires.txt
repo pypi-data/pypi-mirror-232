@@ -1,0 +1,13 @@
+opencv-python
+
+[playsound]
+playsound2
+
+[pyaudio]
+pyaudio
+
+[pydub]
+pydub
+
+[simpleaudio]
+simpleaudio
