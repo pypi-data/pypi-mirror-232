@@ -1,0 +1,4 @@
+transformers
+torch
+optimum==1.13.2
+auto-gptq==0.4.2

@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: gptq_Quantizer
+Version: 1.0
+Summary: A Python package for GPTQ quantization
+Author: Kirouane Ayoub
+Author-email: ayoubkirouane3@email.com
