@@ -1,0 +1,52 @@
+name: Lint
+
+on:
+  push:
+    branches: [ main ]
+    tags:
+      - 'v*.*.*'
+    release:
+      types: [ created ]
+
+jobs:
+
+  mypy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-python@v3
+      - name: Install
+        run: |
+          pip install .
+          pip install mypy -U
+      - name: Check
+        run: mypy $(git ls-files 'twiss/*.py')
+
+  pylint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-python@v3
+      - name: Install
+        run: |
+          pip install .
+          pip install pylint -U
+      - name: Check
+        run: pylint --disable=raw-checker-failed --disable=bad-inline-option --disable=locally-disabled --disable=file-ignored --disable=suppressed-message --disable=useless-suppression --disable=deprecated-pragma --disable=use-symbolic-message-instead --disable=function-redefined --disable=no-value-for-parameter --disable=no-member --disable=redefined-builtin --disable=unused-argument --disable=invalid-name --disable=too-many-locals --disable=redefined-outer-name $(git ls-files 'twiss/*.py')
+
+
+
+
+
+
+
+
+
+
+
+
+

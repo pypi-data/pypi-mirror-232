@@ -1,0 +1,54 @@
+name: Test
+
+on:
+  push:
+    branches: [ main ]
+    tags:
+      - 'v*.*.*'
+    release:
+      types: [ created ]
+
+jobs:
+
+  doctest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-python@v3
+      - name: Install
+        run: |
+          pip install numpy
+          pip install .
+      - name: Test
+        run: python -m doctest -v $(git ls-files 'twiss/*.py')
+
+  pytest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-python@v3
+      - name: Install
+        run: |
+          pip install .
+          pip install pytest -U
+          pip install pytest-cov -U
+      - name: Test
+        run: pytest --doctest-modules --cov
+
+
+
+
+
+
+
+
+
+
+
+
+
+
