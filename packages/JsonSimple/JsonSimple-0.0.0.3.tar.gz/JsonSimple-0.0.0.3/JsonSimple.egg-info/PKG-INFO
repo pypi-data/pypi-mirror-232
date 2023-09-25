@@ -1,0 +1,54 @@
+Metadata-Version: 2.1
+Name: JsonSimple
+Version: 0.0.0.3
+Summary: Simple JSON Lib
+Home-page: https://pypi.python.org/pypi/JsonSimple
+Author: XiaoCao
+Author-email: inflowers@126.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Text Processing :: Indexing
+Classifier: Topic :: Utilities
+Classifier: Topic :: Internet
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Description-Content-Type: text/markdown
+
+### JsonSimple
+
+JsonSimple demo:
+
+```python
+from JsonSimple import JsonSimple
+
+
+js = JsonSimple('{"code":0,"data":{"total":2,"list":[{"id":1,"name":"zhang_san","0":"a"},{"id":2,"name":"li"}]}}')
+data = js.data.list._0.__0  # noqa
+print(data)
+# a
+data = js.data.list._0.name  # noqa
+print(data)
+# zhang_san
+data = js.get_value('data.list.0.0')
+print(data)
+# a
+
+js.set_value('data.list.0.50', '5455555')
+print(js)
+# {"code": 0, "data": {"total": 2, "list": [{"id": 1, "name": "zhang_san", "0": "a", "50": "5455555"}, {"id": 2, "name": "li"}]}}
+js.set_value('data.list.0.new_field.name', 'new_name')
+print(js)
+# {"code": 0, "data": {"total": 2, "list": [{"id": 1, "name": "zhang_san", "0": "a", "50": "5455555", "new_field": {"name": "new_name"}}, {"id": 2, "name": "li"}]}}
+
+```
+
+
