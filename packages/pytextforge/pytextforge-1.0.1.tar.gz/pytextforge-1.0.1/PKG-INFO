@@ -1,0 +1,170 @@
+Metadata-Version: 2.1
+Name: pytextforge
+Version: 1.0.1
+Summary: One module to generate files from a template
+Home-page: https://github.com/RobertoRojas/PyTextForge
+Author: Rojas, Roberto
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# PyTextForge
+
+This module use **[Jinja](https://jinja.palletsprojects.com/en/3.1.x/)** in order to generate files from a template, and create one CLI program to can use it in a terminal context getting the data as argument.
+
+## Install
+
+```Bash
+python -m pip install -U pytextforge;
+```
+
+## How to use
+
+These are some examples about the usage of this module. The idea is to integrate this tool with others in order to generate the document.
+
+### Simple file
+
+This example shows how to use a simple data in order to create an output.
+
+#### Template
+
+```Plain
+This is a simple example:
+
+- {{ a }}
+```
+
+#### Command
+
+```Bash
+python -m pytextforge --data "foo=This is a line" --template template.temp --output output.txt;
+```
+
+#### Output
+
+```Plain
+This is a simple example:
+
+- This is a line
+```
+
+### JSON data
+
+You can also send more complex inputs to this script using a JSON.
+
+#### Template
+
+```Plain
+This is a simple example:
+
+The list of elements is:
+
+{% for element in foo.elements %}- {{ element }}
+{% endfor %}
+```
+
+#### Command
+
+```Bash
+python -m pytextforge --json 'foo={"elements":[1,2,3,4,5]}' --template template.temp --output output.txt;
+```
+
+#### Output
+
+```Plain
+This is a simple example:
+
+The list of elements is:
+
+- 1
+- 2
+- 3
+- 4
+- 5
+
+```
+
+### Overwrite data
+
+If you provide data with the same ID more than once, the argument of the left will be overwrited. If the data is empty, that argument will be ignored. This way, you can control overwrites.
+
+#### Template
+
+```Plain
+This is a simple example:
+
+The list of elements is:
+
+{% for element in foo.elements %}- {{ element }}
+{% endfor %}
+```
+
+#### Script
+
+```Python
+import json
+import sys
+
+def main():
+    argument = int(sys.argv[1]) if len(sys.argv) > 1 else 0
+    if argument == 1:
+        print(json.dumps({
+            'elements': [0,9,8,7,6,5,4,3,2,1]
+        }))
+    else:
+        print()
+
+if __name__ == '__main__':
+    main()
+```
+
+#### Command 1
+
+```Bash
+python -m pytextforge --json 'foo={"elements":[1,2,3,4,5]}' --json "foo=$(python script.py)" --template template.temp --output output.txt;
+```
+
+#### Output 1
+
+```Plain
+This is a simple example:
+
+The list of elements is:
+
+- 1
+- 2
+- 3
+- 4
+- 5
+
+```
+#### Command 2
+
+```Bash
+python -m pytextforge --json 'foo={"elements":[1,2,3,4,5]}' --json "foo=$(python script.py 1)" --template template.temp --output output.txt
+```
+
+#### Output 2
+
+```Plain
+This is a simple example:
+
+The list of elements is:
+
+- 0
+- 9
+- 8
+- 7
+- 6
+- 5
+- 4
+- 3
+- 2
+- 1
+
+```
+
