@@ -1,0 +1,14 @@
+gmpy2.libs/libgmp-bfc87f94.so.10.5.0,sha256=3Y4rHZsxjK74-ehUbKRQaX4IciQOqumLTjiahgYgQHE,744977
+gmpy2.libs/libmpc-b4e96b6f.so.3.3.1,sha256=3aLG9sVVYRXMuJLUYCqQJrUHmwzoLULgHiD2HI1Wdj8,675801
+gmpy2.libs/libmpfr-da886a52.so.6.2.1,sha256=FBoQ_Y5C065zr5HgWxsOiukOD1ur4agkCbcCrrN7uNM,811481
+gmpy2-2.2.0a1.dist-info/top_level.txt,sha256=Sm6GYEILtBPk_gjz0sngTjx5Jmn4ebtxebdkQVOJgRQ,6
+gmpy2-2.2.0a1.dist-info/COPYING,sha256=jOtLnuWt7d5Hsx6XXB2QxzrSe2sWWh3NgMfFRetluQM,35147
+gmpy2-2.2.0a1.dist-info/WHEEL,sha256=4ZiCdXIWMxJyEClivrQv1QAHZpQh8kVYU92_ZAVwaok,152
+gmpy2-2.2.0a1.dist-info/COPYING.LESSER,sha256=2n6rt7r999OuXp8iOqW9we7ORaxWncIbOwN1ILRGR2g,7651
+gmpy2-2.2.0a1.dist-info/METADATA,sha256=UKUDwIQz97Wg5YIfo5S1v7FZRxRMwj-dYaWXqaAbiGo,3101
+gmpy2-2.2.0a1.dist-info/RECORD,,
+gmpy2/gmpy2.cpython-312-x86_64-linux-gnu.so,sha256=bqEmOVPC8av7arhb52u_rTVC-gVVsulRUKDRF8Cm1lY,3324833
+gmpy2/__init__.pxd,sha256=3p7VoE0x5rWxOB14O8pCEOClR6A33VQ-1mywaNeOflM,27
+gmpy2/__init__.py,sha256=ZyDwU83iYXXCxMP6HHdOnGwihl5AEZxHzeWKJQ1ssMM,381
+gmpy2/gmpy2.pxd,sha256=82qHB21P0I5k8RvJFfzvtmo-FySLjAn2cPB3AjleuOI,4681
+gmpy2/gmpy2.h,sha256=MhJpVgzDssf07_zOS3i-K5pMHRJvYLmzYEFLh2IiEko,19159
