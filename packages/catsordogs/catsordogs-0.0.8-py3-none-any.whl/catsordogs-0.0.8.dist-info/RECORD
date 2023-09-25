@@ -1,0 +1,14 @@
+catsordogs/__init__.py,sha256=71LLNeQoOSgSCkTsQmmXedIYm6CVnBh78dBCZaODrpY,273
+catsordogs/__main__.py,sha256=Yw2oGT1afrz2eBskzdPYL8ReB_3liApmhFkN2EbDmc4,59
+catsordogs/classify.py,sha256=4sVIrd3IdgoeBidLDbgvvXK7nYTNvtUmS9xdk_k1t8E,325
+catsordogs/logfatal.py,sha256=4H5gkCTvy09eOxV_mM0DBiks7ZKg0utWcQV_34IN9Pc,62
+catsordogs/model.h5,sha256=yFdrC2bRNbCsxHTh_CumZPneK92w57V0-vgZbnHWEjQ,44407760
+catsordogs/pickimage.py,sha256=_f60KSwDv9TvQ0SzK9xWwv61p5GdIpaBFEeYKR6JWt0,383
+catsordogs/preprocess.py,sha256=gIbHOkUvDf6qLbFI5gUrllaape4k_iy7w1AkklE2I-U,267
+catsordogs/test1.jpeg,sha256=9UZHnNtwDBkeB6WwqDNLXsP86o11BiUjh5BMEs8bQ7o,14057
+catsordogs/test2.jpeg,sha256=rSGlAV6WIFb83xkvhrSoCjTanfcbdImW2iKMD9WQMEg,3711
+catsordogs-0.0.8.dist-info/METADATA,sha256=LyCUHZ1a9EhUfW3SyWcqM51ujQae4VlZ24mVyORT2Dk,633
+catsordogs-0.0.8.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+catsordogs-0.0.8.dist-info/entry_points.txt,sha256=5gXXa-RXA-dMCj8ui9EwhO_tCNJcPtwNhobLB9Lx-ww,47
+catsordogs-0.0.8.dist-info/licenses/LICENSE,sha256=BUwYz6AyQy-T99hK-oKIpGLwnO4TF2cw0jlxCinbPYg,1071
+catsordogs-0.0.8.dist-info/RECORD,,
