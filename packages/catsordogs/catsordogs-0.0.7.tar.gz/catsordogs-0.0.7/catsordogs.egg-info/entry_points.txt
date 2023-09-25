@@ -1,0 +1,2 @@
+[console_scripts]
+catsordogs = src.__main__:main
