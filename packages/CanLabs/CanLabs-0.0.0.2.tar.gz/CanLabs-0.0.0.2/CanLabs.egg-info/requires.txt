@@ -1,0 +1,9 @@
+Pint==0.20.1
+bump2version==1.0.1
+bumpversion==0.6.0
+colorama==0.4.6
+obd==0.7.2
+pandoc==2.3
+plumbum==1.8.2
+ply==3.11
+pyserial==3.5
