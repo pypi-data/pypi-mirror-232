@@ -1,0 +1,112 @@
+Metadata-Version: 2.1
+Name: myhydra
+Version: 0.5
+Summary: This Package can be used to insert Hydra Job Status and Data Quality Metrics to Elastic Open Search
+Home-page: UNKNOWN
+Author: Prasad Dandi
+Author-email: Prasad_Dandi2@comcast.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.9
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/x-rst
+License-File: LICENSE.txt
+
+How to use 
+==========
+
+pip install myhydra
+
+Available Functions
+===================
+
+
+add_project_metadata
+-----------------------
+Arguments -
+
+project - 
+           Name of the project Ex: RTDP
+app     - 
+           Name of the application Ex: V4 Device Lookup Model
+dataset -
+           Name of the Dataset Ex: X1_Households
+jobid   -
+           JobID  Ex: Databricks JobId
+dayid   -
+           dayid being processed (Optional Parameter)
+
+post_job_status
+-----------------------
+Arguments -
+
+environment -
+              Provide environment value. It will take one of the value ['DEV', 'QA', 'STAG', 'PROD']. For any other value it throws ValueError Exception
+status      - 
+              Provide job status value. It will take one of the value ['START', 'SUCCESS', 'FAILURE']. For any other value it throws ValueError Exception
+source      - 
+              Data source value. Example: RTDP D2A
+input       - 
+              Optional Parameter
+output      - 
+             Optional Parameter
+
+add_dq_metric
+-----------------------
+Arguments -
+
+type      - 
+            "COUNT" / "DISTINCT" / "NULL"
+Name      - 
+            Name of the column + type ("Col_1_Count")
+value     - 
+            Metric value
+status    - 
+            True / False
+threshold - 
+            Optional Parameter (Value Ex: 0.5)
+percent   - 
+            Optional Parameter (Value Ex: 0.0)
+
+post_dq_metrics
+-----------------------
+Arguments -
+
+status    -
+            True / False (if all metrics status are True then True else False)
+
+
+
+Change Log
+==========
+
+Version 0.1 (2023-09-22)
+------------------------
+Initial Version 
+
+Functions - 
+           update_project_metadata, insert_hydra_job_status
+
+Version 0.2 (2023-09-23)
+------------------------
+Changes -
+          README.md and CHANGELOG.txt added
+
+Version 0.3 (2023-09-23)
+------------------------
+Changes -
+          README.md and CHANGELOG.txt updated
+
+Version 0.4 (2023-09-25)
+------------------------
+Changes -
+          README.md and CHANGELOG.txt updated
+
+Version 0.5 (2023-09-25)
+------------------------
+Changes -
+          Renamed functions to add_project_metadata and post_job_status
+          Added new functions add_dq_metric and post_dq_metrics
+
+
