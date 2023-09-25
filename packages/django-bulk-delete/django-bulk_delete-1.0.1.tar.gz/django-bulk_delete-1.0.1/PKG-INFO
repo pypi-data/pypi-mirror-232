@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: django-bulk_delete
+Version: 1.0.1
+Summary: django bulk_delete() function
+Keywords: django
+Classifier: Framework :: Django
+Classifier: License :: Public Domain
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+
+### Installation
+```bash
+$ pip install django-bulk_delete
+```
+
+### Features
+*   multiple models aggregator
+
+### Examples
+```python
+from django_bulk_delete import bulk_delete
+from apps.app.models import Model1, Model2
+
+delete_list = []
+for obj in Model1.objects.all():
+	if delete_condition:
+		delete_list+=[obj]
+for obj in Model2.objects.all():
+	if delete_condition:
+		delete_list+=[obj]
+
+bulk_delete(delete_list)
+```
+
