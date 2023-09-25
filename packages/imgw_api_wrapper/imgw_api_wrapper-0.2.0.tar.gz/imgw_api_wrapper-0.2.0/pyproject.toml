@@ -1,0 +1,20 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+[project]
+name = "imgw_api_wrapper"
+version = "0.2.0"
+authors = [
+    { name="crazyjerz", email="informatyka11111@wp.pl" },
+]
+description = "IMGW (Polish weather service) API wrapper. Do not use for commercial purposes."
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/crazyjerz/imgw_api_wrapper"
