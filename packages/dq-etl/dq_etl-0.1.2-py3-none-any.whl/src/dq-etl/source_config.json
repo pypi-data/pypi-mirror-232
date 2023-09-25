@@ -1,0 +1,11 @@
+
+{
+    "plugin_name": "MySQLPlugin",
+    "host": "localhost",
+    "port": 3306,
+    "user": "root",
+    "password": "my-secret-pw",
+    "dbname": "your_db_name",
+    "table_name": "destination_table_name"
+
+}
