@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: ninebot-ble
+Version: 0.0.6
+Summary: Ninebot scooter BLE client
+Author: ownbee
+Project-URL: homepage, https://github.com/ownbee/ninebot-ble
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: miauth ==0.9.7
+Requires-Dist: bleak
+Requires-Dist: bleak-retry-connector
+Requires-Dist: bluetooth-sensor-state-data
+Requires-Dist: bluetooth-data-tools
+Provides-Extra: dev
+Requires-Dist: black ; extra == 'dev'
+Requires-Dist: mypy ; extra == 'dev'
+
+# Ninebot Scooter BLE Python client
+
+Python client for interfacing with a Ninebot scooter using bluetooth low energy (BLE).
+
+It is primarely using the BLE UART characteristic for communication with the scooter. It is also
+using the new encrypted protocol using [miauth](https://github.com/dnandha/miauth) library. Old
+scooter firmwares might therefore not work.
+
+The projects primary objective is to support Home Assistant integration but will work for more
+use-cases as well.
+
+## Usage
+
+Installation:
+
+```
+pip install ninebot-ble
+```
+
+A command-line client for testing purposes are shipped:
+
+```
+ninebot-ble --help
+```
+
+## Troubleshoot
+
+I only have access to a Ninebot F-series scooter, if you have problems with other models, I will
+need help with debugging.
