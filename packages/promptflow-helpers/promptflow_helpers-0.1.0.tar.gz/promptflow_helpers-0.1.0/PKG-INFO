@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: promptflow-helpers
+Version: 0.1.0
+Summary: A small collection of tools for LLM app development in promptflow.
+Author: Abel Meijberg
+Author-email: ameijberg@gmail.com
+Requires-Python: >=3.9,<3.13
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: azure-cosmos (>=4.5.1,<5.0.0)
+Requires-Dist: nltk (>=3.8.1,<4.0.0)
+Requires-Dist: numpy (>=1.26.0,<2.0.0)
+Requires-Dist: openai[datalib] (>=0.28.0,<0.29.0)
+Requires-Dist: pydantic (==1.10.7)
+Requires-Dist: tiktoken (>=0.5.1,<0.6.0)
+Requires-Dist: types-urllib3 (>=1.26.25.14,<2.0.0.0)
+Description-Content-Type: text/markdown
+
+A small collection of tools for LLM app development in promptflow.
+
+Currently only for private use, so consciously no license added (https://choosealicense.com/no-permission/).
+
