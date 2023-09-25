@@ -1,0 +1,2 @@
+[console_scripts]
+cndlib = cnd_lib.cli:main
