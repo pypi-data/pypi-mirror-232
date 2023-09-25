@@ -1,0 +1,5 @@
+{{ vars.record.class|generate_import }}
+
+class {{ parent_record.service_config|class_header }}:
+    draft_cls = {{ vars.record.class|base_name }}
+    search_drafts = {{ parent_record.search_options.class|base_name }}
