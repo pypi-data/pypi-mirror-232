@@ -1,0 +1,13 @@
+dash_annotate_cv/__init__.py,sha256=t4BhI1tZhRRDFFAMAtzlYMuGvhPDlqqupmF0Y7aSml4,422
+dash_annotate_cv/annotate_image_labels.py,sha256=Qt7R1yz6_oQ9ZlwrHffm6ll-Rwx-3C2TWdpVeWevUPk,14399
+dash_annotate_cv/annotate_image_labels_controller.py,sha256=ikpYSk2H6BvLVHenK1jXAFN93QDNzlmfKHNbXd45gX4,9965
+dash_annotate_cv/annotation_storage.py,sha256=qgyWVeADYG7-eFMRNrx_eTlZDulL-w9-IAvbaUBUKeo,2510
+dash_annotate_cv/helpers.py,sha256=NGyKstI0riIXp90WaerTIQlYy38x2KeTaC6tVZWmbP8,312
+dash_annotate_cv/image_annotations.py,sha256=jr7tXsgWk3rCX8IU1wjcwzUHE7WvrKh6Rw_It9G1-YI,1422
+dash_annotate_cv/image_source.py,sha256=UNqa09jj9rHq16zBjjWclELPhcxUV8-P9QlVJlvVFQk,3788
+dash_annotate_cv/label_source.py,sha256=CIGCSXTktiIyi-3WnP6nwLk5TxwW5LjctImGNGSRFLI,2450
+dash_annotate_cv-0.1.5.dist-info/LICENSE,sha256=achokcGMFTGjqAoxexQHyQU_VvU7_azD7jm3iahCddk,1058
+dash_annotate_cv-0.1.5.dist-info/METADATA,sha256=qzcB_hcGDKEQM1CV50TPPd5oEW6vM9A5rk6Zee9iGi0,3003
+dash_annotate_cv-0.1.5.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+dash_annotate_cv-0.1.5.dist-info/top_level.txt,sha256=E6k9CkcrGnTHWfaSFpOLUEtMY0jkHpqln3DuOmf7EfI,17
+dash_annotate_cv-0.1.5.dist-info/RECORD,,
