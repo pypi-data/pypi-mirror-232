@@ -1,0 +1,13 @@
+magiccluster/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+magiccluster/base.py,sha256=k-VUChnWsItQebvq5KyWCgDN0a8Zd8HzInYY2_IfHP8,4585
+magiccluster/cli.py,sha256=wxi_XSk6mcyYDDU5ZWRpji6MjDwdFaAxM0b7QY2oChM,5999
+magiccluster/clustering.py,sha256=1E2DsYP_FKUrjvRDuw1lP1nSGIU8mCoqFPslx6lJWZM,11565
+magiccluster/magic_clustering.py,sha256=-P_GPcJc-edAorab9NiaH-mVEwmfyRXXmB9k2pHBgIY,10056
+magiccluster/main.py,sha256=9is_vlaNwdSYoLuEacvc3VzlllyF6uH4qgqR0z8pAJ4,414
+magiccluster/utils.py,sha256=eYRNtl5piDZJnlicv8wzimg7T5xL1BLT98JdMLzV0yk,34265
+magiccluster-0.0.3.dist-info/LICENSE,sha256=udgw32gr9A6xTHB7y86EQgkLZHIk5pBdgxztRHXxdKU,1067
+magiccluster-0.0.3.dist-info/METADATA,sha256=2cM4am7PAhSpfW3ACXRY2h4JPasJavtONPl93OALlXE,1842
+magiccluster-0.0.3.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+magiccluster-0.0.3.dist-info/entry_points.txt,sha256=a5SOcrDLclKUYigoZx5Gp9HPYpaG3eSljwaIw5Ota1A,57
+magiccluster-0.0.3.dist-info/top_level.txt,sha256=dubeOaDiZAEPMYS7WbcbK6vWTatk8K3Iy7KCgbNAcOo,13
+magiccluster-0.0.3.dist-info/RECORD,,
