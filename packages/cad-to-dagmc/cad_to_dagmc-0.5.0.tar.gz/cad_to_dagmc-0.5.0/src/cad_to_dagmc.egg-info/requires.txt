@@ -1,0 +1,5 @@
+trimesh
+networkx
+
+[tests]
+pytest
