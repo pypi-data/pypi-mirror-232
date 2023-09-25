@@ -1,0 +1,3 @@
+[console_scripts]
+magiccluster = magiccluster.main:main
+

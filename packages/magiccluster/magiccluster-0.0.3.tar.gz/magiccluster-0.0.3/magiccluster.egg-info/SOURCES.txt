@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.py
+magiccluster/__init__.py
+magiccluster/base.py
+magiccluster/cli.py
+magiccluster/clustering.py
+magiccluster/magic_clustering.py
+magiccluster/main.py
+magiccluster/utils.py
+magiccluster.egg-info/PKG-INFO
+magiccluster.egg-info/SOURCES.txt
+magiccluster.egg-info/dependency_links.txt
+magiccluster.egg-info/entry_points.txt
+magiccluster.egg-info/top_level.txt
