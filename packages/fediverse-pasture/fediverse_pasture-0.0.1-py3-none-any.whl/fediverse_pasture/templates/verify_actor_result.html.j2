@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Actor Verification Result</title>
+</head>
+
+<body>
+    <h1>Actor Verification Result</h1>
+
+
+    <form action="/verify" method="POST">
+        <input type="text" name="actor_uri" value="{{actor_uri}}" />
+        <input type="submit" value="Verify" />
+    </form>
+
+    <table>
+        <tr>
+            <td>Name</td>
+            <td>GET Actor</td>
+            <td>POST Inbox</td>
+        </tr>
+
+        {% for actor, value in result.items() %}
+        <tr>
+            <td>{{actor}}</td>
+            <td>{% if value["get_actor"] %} X {% endif %}</td>
+            <td>{% if value["post_inbox"] %} X {% endif %}</td>
+        </tr>
+        {% endfor %}
+
+    </table>
+
+    <pre>{{messages}}</pre>
+
+</body>
+
+</html>
