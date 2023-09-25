@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+ezmse/__init__.py
+ezmse/main.py
+ezmse.egg-info/PKG-INFO
+ezmse.egg-info/SOURCES.txt
+ezmse.egg-info/dependency_links.txt
+ezmse.egg-info/entry_points.txt
+ezmse.egg-info/top_level.txt
