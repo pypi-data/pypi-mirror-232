@@ -1,0 +1,2 @@
+[console_scripts]
+dotswitch = pydotswitcher.__main__:main
