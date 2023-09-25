@@ -1,0 +1,10 @@
+trix_editor/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+trix_editor/fields.py,sha256=TQ4KnNAkWklCNwWr4kw-6nRBM5DTOCz-9zEdhehsSh0,251
+trix_editor/urls.py,sha256=Qmimoux6zKveqJtmy9bMUKHTdueb6_GbeKypPwKof10,153
+trix_editor/views.py,sha256=odeeO8lqc7z6NBCYBtRQG5DApm8vPs1TleHSiM2Bn50,373
+trix_editor/widgets.py,sha256=RyXMHnGGSoKrcBfz_Gke8i066IrP72LZf5xX1oT4agA,3726
+django_trix_editor-0.1.dist-info/LICENSE,sha256=nSBpZn3R2nuWgPYkdE-4zzpWgMJ9HGaMa0cGXnqJigA,1101
+django_trix_editor-0.1.dist-info/METADATA,sha256=1cS4UsgaOGzYOXz1EgVMsROvg3gAcNTeGXoKwalltbU,307
+django_trix_editor-0.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+django_trix_editor-0.1.dist-info/top_level.txt,sha256=8lrj4pvf-7NFsHs2Mo4TlUFDYDnbiPfD_LV6pWbRyUI,12
+django_trix_editor-0.1.dist-info/RECORD,,
