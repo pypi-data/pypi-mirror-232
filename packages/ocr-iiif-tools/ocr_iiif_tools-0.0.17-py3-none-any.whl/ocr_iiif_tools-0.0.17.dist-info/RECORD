@@ -1,0 +1,10 @@
+ocr_iiif_tools/__init__.py,sha256=go20U3RCVaJ2N55RnX4tO5rinfUCRV0puFyrHCto8yw,23
+ocr_iiif_tools/_modidx.py,sha256=n8OeyZSMwX4RuF8xNakVqPNVWVznaGF8CW-RFGgKeVI,5487
+ocr_iiif_tools/core.py,sha256=jb8u5detZyUVQNyaKpx45vj-E20Jlcbu7XzdReEM6W0,7315
+ocr_iiif_tools/pdf.py,sha256=zOmdKWXxirVGxFB_NuBkLAunJFCZU65KNgvCGu_Mf_M,37719
+ocr_iiif_tools-0.0.17.dist-info/LICENSE,sha256=xV8xoN4VOL0uw9X8RSs2IMuD_Ss_a9yAbtGNeBWZwnw,11337
+ocr_iiif_tools-0.0.17.dist-info/METADATA,sha256=O5kavf9MzDWv-RT0AIJa2IruLfEl6whtqis5vpgiTyY,1171
+ocr_iiif_tools-0.0.17.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
+ocr_iiif_tools-0.0.17.dist-info/entry_points.txt,sha256=Bo9n8vjeM0hbvV0i2_7iYGHsEpv0C-veyIHHEalle4c,71
+ocr_iiif_tools-0.0.17.dist-info/top_level.txt,sha256=NaslClM6Ev3nTaz_S-TbnQvi1H1_uIIpTOhs8YvC3FI,15
+ocr_iiif_tools-0.0.17.dist-info/RECORD,,
