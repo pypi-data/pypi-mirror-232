@@ -1,0 +1,3 @@
+[pytest11]
+pytest-maxcov=pytest_maxcov.plugin
+
