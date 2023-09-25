@@ -1,0 +1,111 @@
+Metadata-Version: 2.1
+Name: pyxel-universal-font
+Version: 1.0.1
+Summary: An extension tool to add fonts to the public "pyxel" library.
+Home-page: https://github.com/n-koba0427/PyxelUniversalFont
+Author: naoyashi
+Author-email: n.koba0427@gmail.com
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: Japanese
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: Pillow
+Requires-Dist: pyxel
+
+# PyxelUniversalFont
+
+PyxelUniversalFontは、公開されている"pyxel"ライブラリにフォントを追加するための拡張ツールです。
+
+## 目次
+
+- [機能](#機能)
+- [インストール方法](#インストール方法)
+- [使用方法](#使用方法)
+- [サポートしているフォント](#サポートしているフォント)
+- [コマンド一覧](#コマンド一覧)
+- [更新情報](#更新情報)
+- [ライセンス](#ライセンス)
+
+## 機能
+
+- pyxelで使える追加のフォントを簡単にインストール
+- カスタムフォントの追加サポート
+- pyxelのゲームやアプリケーションでの文字表示を綺麗に、多様に
+
+## インストール方法
+
+```bash
+pip install pyxel-universal-font
+```
+
+その後、pyxelのプロジェクト内で以下のようにインポートしてください。
+
+```python
+import PyxelUniversalFont
+```
+
+## 使用方法
+
+```python
+import pyxel
+import PyxelUniversalFont as puf
+
+class App:
+    def __init__(self) -> None:
+        pyxel.init(500, 100)
+        
+        # フォントを指定
+        self.writer = puf.Writer("IPA_Gothic")
+        
+        pyxel.run(self.update, self.draw)
+        
+    def update(self):
+        pass
+    
+    def draw(self):
+        pyxel.cls(7)
+
+        # draw(x座標, y座標, テキスト, フォントサイズ, 色, 背景色)
+        self.writer.draw(0, 0, "こんにちは、世界！", 48, 0, 7)
+
+if __name__ == "__main__": 
+    App()
+```
+
+## サポートしているフォント
+
+以下は、デフォルトでサポートされているフォントです。
+
+- IPA ゴシック
+- IPA Pゴシック
+- IPA 明朝
+- IPA P明朝
+
+次のコマンドで開かれるディレクトリに、任意のフォントを追加できます。
+```bash
+puf edit
+```
+
+## コマンド一覧
+
+1. サンプルアプリケーションの起動:
+    ```bash
+    puf sample
+    ```
+2. フォント保存用ディレクトリを開く:
+    ```bash
+    puf edit
+    ```
+
+## 更新情報
+- 2023.09.25：v1.0.1が公開されました。
+
+## ライセンス
+
+MITライセンスの下で公開されています。詳細は`LICENSE`ファイルを参照してください。
