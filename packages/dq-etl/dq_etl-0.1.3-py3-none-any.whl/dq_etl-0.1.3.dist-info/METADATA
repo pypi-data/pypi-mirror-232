@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: dq-etl
+Version: 0.1.3
+Summary: ETL framework
+Author: bavid lynx
+Author-email: shivakharbanda11@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: mysql-connector-python (>=8.1.0,<9.0.0)
+Requires-Dist: pandas (==1.3.3)
+Requires-Dist: psycopg2 (>=2.9.7,<3.0.0)
+Requires-Dist: pyarrow (>=13.0.0,<14.0.0)
+Requires-Dist: python-dotenv (>=1.0.0,<2.0.0)
+Requires-Dist: sqlalchemy (>=2.0.21,<3.0.0)
+Requires-Dist: tenacity (>=8.2.3,<9.0.0)
+Requires-Dist: tqdm (>=4.66.1,<5.0.0)

@@ -1,0 +1,3 @@
+[console_scripts]
+dq=dq_etl.main:main
+
