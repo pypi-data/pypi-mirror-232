@@ -1,0 +1,9 @@
+datarecipe/__init__.py,sha256=zy0xD1WRTkHe4DLHfIYqqbbZYFsxcDlSZl9jpWXPUew,224
+datarecipe/common_tools.py,sha256=quVYQ5Aqbf6eLdNUup2dczWdt-sxSprnya3kDwCnbVQ,728
+datarecipe/mysql.py,sha256=DPAKcS5RRGKIGZedy2YY-L67qzwoW-nrW2GnNJNN1SY,2441
+datarecipe/open_ai_api.py,sha256=FHBbdIIpEF1jFLy_3eWqpQhOnIHLlQAKocwz3McckhA,2865
+datarecipe-0.0.5.dist-info/LICENSE.txt,sha256=BQEiHD9TQ7aPNGcqHkI8Nbe5OFI18_5rSutXOI7aI10,1068
+datarecipe-0.0.5.dist-info/METADATA,sha256=2qjinMtKXs56JW3Sr6OFqU5iw0hvED43OBjRFjm2w0s,3255
+datarecipe-0.0.5.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+datarecipe-0.0.5.dist-info/top_level.txt,sha256=iabSB3dWInXbMpFPfsvchS_ob8a7h2Ee5XBg8HFvNLY,11
+datarecipe-0.0.5.dist-info/RECORD,,
