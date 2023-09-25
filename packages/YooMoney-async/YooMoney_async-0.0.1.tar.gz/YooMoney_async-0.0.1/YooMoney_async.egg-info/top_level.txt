@@ -1,0 +1,6 @@
+account
+authorize
+history
+operation
+operation_details
+quickpay
