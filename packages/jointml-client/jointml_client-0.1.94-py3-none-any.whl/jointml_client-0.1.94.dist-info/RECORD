@@ -1,0 +1,7 @@
+joint_ml/__init__.py,sha256=JRQaFaYxe5Ep22o_03FDr3tCdgvrc93E24e-1lJtVm8,439
+joint_ml/_base_client.py,sha256=4Y7TlXTqsYdTSBANb3FheKDczJCe9k3G77MllhYLN4k,8491
+joint_ml/_client_abstract_methods.py,sha256=fI7crC2ZZB3X6CQPj5womAaAk7UF6Qby_AUAU8kfYjU,7036
+joint_ml/_metric.py,sha256=XjLu0tXutFwwwp3UuioUOzdEq5DPPF29-jQintN5SoI,270
+jointml_client-0.1.94.dist-info/WHEEL,sha256=vVCvjcmxuUltf8cYhJ0sJMRDLr1XsPuxEId8YDzbyCY,88
+jointml_client-0.1.94.dist-info/METADATA,sha256=SYgwATM3u7MrI9WdAxtlbBAFOWqjyyGsO40Gi12KWgQ,11198
+jointml_client-0.1.94.dist-info/RECORD,,
