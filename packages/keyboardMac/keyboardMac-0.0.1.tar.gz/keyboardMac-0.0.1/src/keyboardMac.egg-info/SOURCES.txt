@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/keyboardMac/__init__.py
+src/keyboardMac/keyboardMac.py
+src/keyboardMac.egg-info/PKG-INFO
+src/keyboardMac.egg-info/SOURCES.txt
+src/keyboardMac.egg-info/dependency_links.txt
+src/keyboardMac.egg-info/top_level.txt
