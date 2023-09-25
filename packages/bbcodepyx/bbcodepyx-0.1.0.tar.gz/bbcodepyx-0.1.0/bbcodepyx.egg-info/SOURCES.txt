@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+bbcodepyx/__init__.py
+bbcodepyx/parser.py
+bbcodepyx/renderer.py
+bbcodepyx/tags.py
+bbcodepyx.egg-info/PKG-INFO
+bbcodepyx.egg-info/SOURCES.txt
+bbcodepyx.egg-info/dependency_links.txt
+bbcodepyx.egg-info/top_level.txt
+tests/test_bbcode.py
