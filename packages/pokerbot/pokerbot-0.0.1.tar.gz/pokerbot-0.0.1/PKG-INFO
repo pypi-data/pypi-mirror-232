@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: pokerbot
+Version: 0.0.1
+Summary: ai for poker
+Project-URL: Homepage, https://github.com/dkdc-dev/pokerbot
+Project-URL: Bug Tracker, https://github.com/dkdc-dev/pokerbot/issues
+Author-email: Cody <cody@dkdc.dev>
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.11
+Requires-Dist: html2text
+Requires-Dist: ibis-framework[deltalake,duckdb,polars]
+Requires-Dist: ipython
+Requires-Dist: marvin[ddg]~=1.3.0
+Requires-Dist: openai
+Requires-Dist: pillow
+Requires-Dist: python-dotenv
+Requires-Dist: requests
+Requires-Dist: texasholdem
+Requires-Dist: toml
+Requires-Dist: typer[all]
+Description-Content-Type: text/markdown
+
+# pokerbot
+
+ai for poker
