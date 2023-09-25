@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: poetry-update-editable-plugin
+Version: 0.0.4
+Summary: A poetry plugin to automatically update all editable dependencies.
+License: MIT
+Author: Chris Brousseau
+Author-email: chris@cbrews.xyz
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: poetry (>=1.4,<2.0)
+Description-Content-Type: text/markdown
+
+# Poetry `update-editable` Plugin
+
+Has this ever happened to you?
+
+
+## Installation
+
+The recommended way to install this plugin is via poetry plugin installation method:
+
+```bash
+poetry self add poetry-update-editable-plugin
+```
+
+## Usage
+
+Install editable dependencies:
+
+```bash
+poetry update-editable
+```
+
+This will install any dpeendencies with `{ develop = true }`
+
+### Available Options
+
+* `--dry-run`: Output the operations but do not execute anything (implicitly enables --verbose).
+* `--without`: The dependency groups to ignore when exporting (multiple values allowed).
+* `--with`: The optional dependency groups to include when exporting (multiple values allowed).
+* `--only`: The only dependency groups to include when exporting (multiple values allowed).
+
