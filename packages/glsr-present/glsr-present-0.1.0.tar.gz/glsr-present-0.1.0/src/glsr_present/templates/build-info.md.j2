@@ -1,0 +1,7 @@
+# Build information
+
+## GitLab security reports
+
+{% for report_type, report_file in reports %}
+- [{{ report_type }}](show-report.html?type={{ report_type }}&filename={{ report_file }})
+{% endfor %}

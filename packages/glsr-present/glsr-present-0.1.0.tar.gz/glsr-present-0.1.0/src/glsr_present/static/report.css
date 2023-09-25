@@ -1,0 +1,78 @@
+/*
+ * report.css
+ *
+ * Styles fror the GitLab report parser page
+ *
+ * (c) 2023 Oliver Haase / Rainer Schwarzbach
+ *
+ */
+
+
+body {
+  font-family: sans-serif;
+}
+
+table {
+  /* border: 2px solid Gainsboro; */
+  border-collapse: separate;
+  border-spacing: 3px;
+}
+
+th {
+  background-color: Gainsboro;
+  padding: 0.5ex;
+}
+
+td {
+  background-color: WhiteSmoke;
+  vertical-align: top;
+  text-align: left;
+  padding: 0.5ex;
+}
+
+header table th {
+  text-align: left;
+}
+
+main table tbody tr td:last-child {
+  font-size: 80%;
+}
+
+main table tbody tr td p {
+  margin: 0.1ex;
+}
+
+main table tbody tr td details {
+  font-size: 80%;
+}
+
+main table tbody tr td details ul {
+  margin: 0.1ex;
+  padding-left: 2em;
+}
+
+/* Colors from the 12-bit rainbow pallette,
+ * see <https://iamkate.com/data/12-bit-rainbow/>
+ */
+
+.error {
+  color: #a35;
+  font-weight: bold;
+}
+
+.Critical {
+  background-color: #a35;
+}
+
+.High {
+  background-color: #c66;
+}
+
+.Medium {
+  background-color: #e94;
+}
+
+.Low, .Info {
+  background-color: #ed0;
+}
+
