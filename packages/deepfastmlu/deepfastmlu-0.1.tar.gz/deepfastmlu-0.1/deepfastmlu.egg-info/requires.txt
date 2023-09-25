@@ -1,0 +1,9 @@
+numpy
+tensorflow>=2.3.0
+scikit-learn
+pandas
+seaborn
+matplotlib
+
+[gpu]
+tensorflow-gpu>=2.3.0
