@@ -1,0 +1,10 @@
+imageio
+matplotlib_venn
+matplotlib
+numpy
+openpyxl
+optuna
+pandas
+scikit-learn
+tqdm
+sqlalchemy>=2.0.15
