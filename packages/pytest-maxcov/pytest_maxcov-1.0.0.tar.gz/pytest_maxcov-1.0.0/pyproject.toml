@@ -1,0 +1,77 @@
+[tool.poetry]
+authors = ["Jon Connell <python@figsandfudge.com>"]
+classifiers = [
+  "Framework :: Pytest",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+]
+description = "Compute the maximum coverage available through pytest with the minimum execution time cost"
+documentation = "https://github.com/masaccio/pytest-maxcov/blob/main/README.md"
+license = "MIT"
+name = "pytest-maxcov"
+packages = [{include = "pytest_maxcov", from="src"}]
+readme = "README.md"
+version = "1.0.0"
+
+[tool.poetry.plugins.pytest11]
+pytest-maxcov = "pytest_maxcov.plugin"
+
+
+[tool.poetry.dependencies]
+python = "^3.8"
+pytest = "^7.4.0"
+pytest-cov = "^4.1.0"
+coverage = "^7.2.7"
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.7.0"
+pylama = "^8.4.1"
+pytest = "^7.4.2"
+pytest-cov = "^4.1.0"
+pytest-xdist = "^3.3.1"
+pytest-console-scripts = "^1.4.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.coverage.run]
+branch = true
+
+[tool.coverage.html]
+directory = "coverage_html_report"
+
+[tool.pytest.ini_options]
+norecursedirs = "test_env/*"
+addopts = "--cov=src/pytest_maxcov --cov-report=term-missing:skip-covered --cov-report=html"
+
+[tool.tox]
+legacy_tox_ini = """
+[tox]
+isolated_build = true
+envlist = py38, py39, py310, py311
+[testenv]
+allowlist_externals = poetry
+commands_pre = poetry install --no-root --sync
+commands = poetry run -vvv pytest --import-mode importlib
+"""
+
+# linter settings
+[tool.pylama]
+linters = "pylint,mccabe,pyflakes"
+max_line_length = 100
+
+[tool.pylama.linter.pycodestyle]
+format = "pylint"
+
+[tool.pylama.linter.mccabe]
+max-complexity = 10
+
+[tool.pylama.linter.pyflakes]
+builtins = "_"
