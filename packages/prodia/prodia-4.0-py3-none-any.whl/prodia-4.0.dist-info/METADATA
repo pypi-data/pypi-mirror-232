@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: prodia
+Version: 4.0
+Summary: Package for using Prodia API
+Author: zenafey
+Author-email: zenafey@eugw.ru
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: aiohttp (>=3.8.1,<4.0.0)
+Requires-Dist: requests (>=2.27.1,<3.0.0)
