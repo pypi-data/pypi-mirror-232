@@ -1,0 +1,28 @@
+Config upload:
+{
+  "embed_config": {
+     "dbconfig": "sql-matchrecords-config.json",
+     "quantize": false
+  },
+  "dbconfig": {
+    "dialect_driver": "sqlite",
+    "host": "../../../../datautils/tests/sql-matchrecords-db.sqlite3",
+    "localfile": true,
+    "reftable": "taxpayers",
+    "embedtable": "records_embedding"
+   }
+}
+
+Search test dict:
+{
+   "compositename": "fredrick philip stephens",
+   "maidenname": null,
+   "birthday": "1959 04 01",
+   "taxid": 844323683,
+   "compositeaddress": "123 Main St, Frederick, MD" 
+}
+
+Search test string (basic and key-value):
+"fredrick philip stephens 1959 04 01 844323683 123 Main St Frederick MD"
+
+"compositename: fredrick philip stephens; birthday: 1959 04 01;   taxid: 844323683;  compositeaddress: 123 Main St, Frederick, MD" 

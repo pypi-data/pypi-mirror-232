@@ -1,0 +1,20 @@
+# 'source' string is used for original datagen data
+# 'path' string is used for other sources otherwise rise an error
+state_of_sample: Maryland
+state_plate_length: 7
+p_born_in_state: 0.462
+p_bank_in_the_us: 0.95
+source_firstname: ../../tests/firstnames_clean.csv
+source_lastname: ../../tests/lastnames_clean.csv
+source_city: ../../tests/md_cities_clean_validzip.csv
+source_streetname: ../../tests/md_common_streetnames_clean.csv
+source_zipcode: ../../tests/md_zip_codes_clean.csv
+source_age: ../../tests/md_age.csv
+form_name: irmf
+src_file_zips_ssn: ./ssn_codes_per_zip_code.csv
+number_of_cars_id: 255
+az_data_blobname: dmv_vehicle_data.csv
+az_container: pytestdata
+vehicle_data_url: 'https://raw.githubusercontent.com/paocarvajal1912/large_data_sources_paola/main/vehicle_data.csv'
+income_path: ./mid_income_range_maryland.csv
+config_path: ./az_credentials.env

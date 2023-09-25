@@ -1,0 +1,98 @@
+# Data Science Tools
+Helper functions to be used with database, Azure ML, plotting, and generic ML needs.
+
+### Introduction
+There are several categories of tools for use on data science/engineering tasks. If these become more copious and distinct codebases in the future, then we may parcel them up into different repos.
+
+
+
+## AZURE UTILS 
+Helper functions to be used to interact with Azure ML model training, etc.
+
+#### Introduction
+Interacting with Azure ML services requires navigating a fairly complex set up process. The `AzureRun` class is intended to simplify the set up while at the same time familiarizing the user with the use of Azure ML functions/classes.
+
+#### Usage
+See the [`azureutils README.md`](rsidatasciencetools/azureutils/README.md) for more details on the set up, the `AzureMLRun` class is located in the [`azureutils/azurerun.py`](./rsidatasciencetools/azureutils/azurerun.py) module.
+```
+from rsidatasciencetools.azureutils.azurerun import AzureMLRun
+
+arun = AzureMLRun('./',debug=0)
+arun.setup_run()
+print(arun.__repr__())
+
+arun.run(debug=True)
+arun.metrics()
+```
+
+## SQL UTILS 
+Helper functions to be used with SQL Alchemy / ODBC and Pandas
+
+#### Introduction
+SQL Alchemy provides a fairly usable interface. The primary tools added by this package are predefined calls using `pandas.DataFrame` SQL API and `with` context manager for opening, querying, and closing database connections as needed.
+
+#### Usage
+The additional tools are located in [`sqlutils/utils.py`](./rsidatasciencetools/sqlutils/util.py). 
+    
+- the `DbConnectGenerator` class produces an object which can be used to generate temporary database  connection using the `with` context via (the behavior within the context manager opens the DB connection, executes the query/command, and then closes the DB connection):
+```
+import sqlalchemy as sql
+from sql_utils.util_sqlalchemy import DbConnectGenerator
+
+dbMine = DbConnectGenerator(**connectionKWargs)
+with dbMine.gen_connection() as conn:
+    tbl = conn.get_table('table_name')
+    data = conn.execute_query(sql.select([tbl]))
+```
+
+- Alternatively, calls to the SQL connection object can be made directly from a `pandas` `DataFrame` object
+
+```
+import sqlalchemy as sql
+import pandas as pd
+from sql_utils.util_sqlalchemy import DbConnectGenerator, gettypes
+
+# write
+dbMine = DbConnectGenerator(**connectionKWargs)
+with dbMine.gen_connection() as conn:
+    df.to_sql(name='new_table_name', con=conn.engine, 
+            if_exists='append', # could also use: 'replace'
+            index=False, dtype=gettypes(df))
+# read
+dbMine = DbConnectGenerator(**connectionKWargs)
+with dbMine.gen_connection() as conn:
+    df = pd.read_sql('SELECT * FROM Table1 WHERE alpha=1', 
+            con=conn.engine)
+```
+
+
+## DATA UTILS
+Helper functions to be used to generate synthetic data
+
+#### Introduction
+Helper functions that assist in generating tasking, taxpayer, tax, and other synthetic records.
+
+#### Usage
+As a starting place, check out `rsidatasciencetools/datautils/datagen.py` (specifically the `Source`, `Record`, 
+and `RecordGenerator` classes) and run `python datapy.py --help` to see how the command-line interface
+operates.
+
+
+## ML UTILS
+Helper functions to be used to generate features and data labels
+
+#### Introduction
+Tools in this `mlutils` module are for use with corporate tax audit feature generation. The primary tools added by this package use the data resulting from the `pandas.DataFrame` SQL API queries (defined in the `sqlutils` package)to generate features for machine learning models.
+
+#### Usage
+The primary call in [`mlutils/corp_tax_audit_features.py`](./rsidatasciencetools/mlutils/corp_tax_audit_features.py) is `get_labeled_data_features`, which utilizes the `Duration` and `Encoder` classes to fit the queried data into usable features. These were mainly developed for use with a particular client, as so may need heavy modification to work with future clients (but the skeleton is at least there).
+
+
+## PLOT UTILS
+Helper functions to be used with matplotlib
+
+#### Introduction
+Tools in this `plotutils` module are for streamlining some common visualization workflows.
+
+#### Usage
+Forthcoming...as we develop regularly used plotting activities/functions.

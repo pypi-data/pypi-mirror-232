@@ -1,0 +1,1 @@
+../../DataScienceTools.egg-info/requires.txt

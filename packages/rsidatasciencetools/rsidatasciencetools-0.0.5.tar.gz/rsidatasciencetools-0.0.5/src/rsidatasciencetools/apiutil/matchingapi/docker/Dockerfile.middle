@@ -1,0 +1,73 @@
+# This docker image is used to host the RSI Forms
+# processing ML-based text classificaion API
+
+FROM devnextgen.azurecr.io/rsi.revx/base.ml_api:latest
+
+LABEL org.opencontainers.image.authors="Nick Roseveare <nroseveare@rsimail.com>" \
+    org.opencontainers.image.name="bazel-scann.ml_api" \
+    org.opencontainers.image.title="RSI Matching Pkgs ML API" \
+    org.opencontainers.image.description="RSI embedding packages"
+
+ARG NOTEBOOK_PORT USER2ADD
+
+WORKDIR /App
+
+EXPOSE $RSI_ML_API_PORT
+
+ENV RSI_ML_API_PORT=$RSI_ML_API_PORT
+ENV RSI_ML_API_PW=$RSI_ML_API_PW
+ENV RSI_JUPYTER_PORT=$NOTEBOOK_PORT
+ENV RSI_TRAINDATADIR=$RSI_TRAINDATADIR
+ENV RSI_ML_API_CACHE_LOC=$RSI_ML_API_CACHE_LOC
+ENV RSI_AZURE_PASSWORD=$RSI_AZURE_PASSWORD
+ENV RSI_CONFIG_PATH=/App/config
+ENV PATH=$PATH:/home/${USER2ADD}/.local/bin
+ENV PYTHONPATH=$PYTHONPATH
+
+USER root 
+
+# /root/.azureml/.discovery
+# Copy local files and install the ML API and models custom packages in the
+# python site-packages
+
+# Install bazel build system - get the singing key and then install using apt-get
+RUN apt update --fix-missing
+RUN apt install -y apt-transport-https curl gnupg
+RUN curl -fsSL https://bazel.build/bazel-release.pub.gpg | gpg --dearmor > bazel-archive-keyring.gpg
+RUN mv bazel-archive-keyring.gpg /usr/share/keyrings/
+RUN echo "deb [arch=amd64 signed-by=/usr/share/keyrings/bazel-archive-keyring.gpg] https://storage.googleapis.com/bazel-apt stable jdk1.8" | tee /etc/apt/sources.list.d/bazel.list
+RUN apt update
+RUN apt install clang-8 gcc-9
+RUN apt install bazel-3.7.0 gcc # bazel WORKSPACE and BUILD scripts won't work for other bazel versions
+RUN ln -s /usr/bin/bazel-3.7.0 /usr/bin/bazel
+
+# # change owner to ${USER2ADD}
+# RUN bash -c 'chown -R ${USER2ADD}:${USER2ADD} /App/build /home/${USER2ADD} ${RSI_ML_API_CACHE_LOC}'
+
+
+USER ${USER2ADD}
+
+RUN mkdir build; cd build
+
+# Install the google 'scann' module
+RUN git clone git@github.com:google-research/google-research.git
+RUN cd google-research/scann
+RUN cat requirements.txt | grep -v numpy > requirements.txt  # prevent upgrading from numpy==1.21 (errors otherwise)
+RUN python configure.py
+RUN CC=clang-8 bazel build -c opt --features=thin_lto --copt=-mavx --copt=-mfma --cxxopt="-std=c++17" --copt=-fsized-deallocation --copt=-w :build_pip_pkg
+RUN ./bazel-bin/build_pip_pkg
+
+# RUN pip install --force-reinstall scann-*.whl  
+# vs. above: may instead need to copy contents of unpacked wheel file to appropo site-packages directory
+RUN wheel unpack scann-*.whl
+RUN SCANN_DIR=`find . -maxdepth 1 | grep scann- | grep -v whl`
+# install into the default environment
+RUN mv $SCANN_DIR/* `python -c 'import site; print(site.getsitepackages())'  | tr -d "[]'"`/
+RUN cd /App
+
+
+CMD ["/bin/bash"]
+
+# To build and tag the docker image run:
+#   `docker build -t rsi/forms.ml_api:0.0.1 -t rsi/forms.ml_api:latest ./  `
+# inside of the directory containing this docker file 

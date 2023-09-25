@@ -1,0 +1,108 @@
+# This docker image is used to host the RSI Forms
+# processing ML-based text classificaion API
+
+FROM devnextgen.azurecr.io/rsi.revx/bazel-scann.ml_api:latest
+
+LABEL org.opencontainers.image.authors="Nick Roseveare <nroseveare@rsimail.com>" \
+    org.opencontainers.image.name="matching.ml_api" \
+    org.opencontainers.image.title="RSI Matching ML API" \
+    org.opencontainers.image.description="RSI NLP embedding tool for record matching"
+
+ARG NOTEBOOK_PORT RSI_ML_API_PORT USER2ADD MODELCONFIG
+
+WORKDIR /App
+
+EXPOSE $RSI_ML_API_PORT
+
+ENV RSI_ML_API_PORT=$RSI_ML_API_PORT
+ENV RSI_ML_API_PW=$RSI_ML_API_PW
+ENV RSI_JUPYTER_PORT=$NOTEBOOK_PORT
+ENV RSI_ML_API_CACHE_LOC=$RSI_ML_API_CACHE_LOC
+ENV RSI_AZURE_PASSWORD=$RSI_AZURE_PASSWORD
+ENV RSI_CONFIG_PATH=$RSI_CONFIG_PATH
+ENV PATH=$PATH:/home/${USER2ADD}/.local/bin
+ENV PYTHONPATH=$PYTHONPATH
+
+RUN mkdir -p ${RSI_ML_API_CACHE_LOC} /root/.azureml/.discovery
+
+# change owner to ${USER2ADD}
+RUN bash -c 'chown -R ${USER2ADD}:${USER2ADD} ${RSI_ML_API_CACHE_LOC} /root/.azureml/.discovery'
+# Copy local files and install the ML API and models custom packages in the
+# python site-packages
+
+USER ${USER2ADD}
+
+RUN bash -c 'mkdir -p config'
+
+# install requirements in advance so that changes to code don't necessitate 
+# reinstalling all packages
+COPY ./DataScienceTools.egg-info/requires.txt ./requirements.txt
+RUN bash -c 'pip install -r ./requirements.txt'
+
+COPY ./tests./*json ${RSI_CONFIG_PATH}/
+
+# requires the DataScienceTools repo
+RUN mkdir DataScienceTools
+COPY ./* ./DataScienceTools/
+COPY ./rsidatasciencetools/apiutil/matchingapi/docker/bash_aliases /App/
+COPY ./rsidatasciencetools/apiutil/matchingapi/docker/docker_build.env /App/
+COPY ./rsidatasciencetools/apiutil/matchingapi/docker/supervisord.conf /App/
+
+# force copy of sqlite3 DB for testing purposes
+COPY ./rsidatasciencetools/datautils/tests/sql-matchrecords-db.sqlite3 ./DataScienceTools/rsidatasciencetools/datautils/tests/
+
+RUN bash -c 'cd DataScienceTools; python setup.py develop; cd ..'
+RUN bash -c 'mv ./${MODELCONFIG}/*.y*ml ${RSI_CONFIG_PATH}'
+RUN bash -c 'rm -rf `find . -name __pycache__` && rm -f `find . -name rec_embed*.model` && rm -rf dockerfile* {build,run,pipeline}*.sh *.log */azure_temp*'
+RUN bash -c 'cat /App/bash_aliases >> /home/${USER2ADD}/.bash_aliases'
+# .bashrc seem to be overwritten - so coopt the .bash_aliases file to get ENV set up
+RUN bash -c 'cat /App/docker_build.env >> /home/${USER2ADD}/.bashrc && printf "export PYTHONPATH=$PYTHONPATH\nexport PATH=$PATH" >> /home/${USER2ADD}/.bashrc' 
+# && echo "source /home/${USER2ADD}/pycore/bin/activate" >> .bashrc'
+
+# RUN bash -c 'source /home/${USER2ADD}/pycore/bin/activate && python3 setup.py install develop'
+
+# change user to root to make ${USER2ADD} owner of /App/<package>.egg-info/requires.txt
+USER root
+RUN bash -c 'cat docker/docker_build.env >> ~/.bashrc'
+RUN bash -c 'chown -R ${USER2ADD}:${USER2ADD} `find /App/ -name | grep requires.txt`
+RUN bash -c 'chown -R ${USER2ADD}:${USER2ADD} ${RSI_ML_API_CACHE_LOC} /root/.azureml/.discovery /var/log/supervisord/'
+
+# change owner back to ${USER2ADD}
+USER ${USER2ADD}
+RUN bash -c 'python3 setup.py develop'
+# RUN bash -c 'export RSI_CONFIG_PATH=$RSI_CONFIG_PATH && RSI_AZURE_password=$RSI_AZURE_password && python3 formsML/mlmodels/download_model.py -d 3'
+
+# WORKDIR /App/config
+
+
+# redo the ENV variables for the non-root user
+ENV RSI_ML_API_PORT=$RSI_ML_API_PORT
+ENV RSI_ML_API_PW=$RSI_ML_API_PW
+ENV RSI_JUPYTER_PORT=$NOTEBOOK_PORT
+ENV RSI_TRAINDATADIR=$RSI_TRAINDATADIR
+ENV RSI_ML_API_CACHE_LOC=$RSI_ML_API_CACHE_LOC
+ENV RSI_AZURE_PASSWORD=$RSI_AZURE_PASSWORD
+ENV RSI_CONFIG_PATH=$RSI_CONFIG_PATH
+ENV PATH=$PATH:/home/${USER2ADD}/.local/bin
+ENV PYTHONPATH=$PYTHONPATH
+
+# RUN bash -c 'export RSI_CONFIG_PATH=${RSI_CONFIG_PATH} && export RSI_AZURE_PASSWORD=${RSI_AZURE_PASSWORD} && python3 /App/formsML/mlmodels/download_model.py -d 4'
+# WORKDIR /App
+
+RUN chmod +x ./setjupyterpasswd.sh
+RUN ./setjupyterpasswd.sh
+
+# ========================================================================
+# Run supervisord here with supervisord.config file
+# ========================================================================
+# NOTE: an additional advantage of using supervisord is that it allows for 
+# internal debugging (logs, etc.) of the processes that are attempting to 
+# be run; whereas when the CMD is just the final command, the container
+# simply fails to start 
+# ========================================================================
+CMD ["supervisord", "-c", "./supervisord.conf"]
+
+
+# To build and tag the docker image run:
+#   `docker build -t rsi/forms.ml_api:0.0.1 -t rsi/forms.ml_api:latest ./  `
+# inside of the directory containing this docker file 

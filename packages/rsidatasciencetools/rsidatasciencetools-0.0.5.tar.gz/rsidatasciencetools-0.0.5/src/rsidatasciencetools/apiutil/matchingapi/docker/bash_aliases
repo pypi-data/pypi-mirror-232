@@ -1,0 +1,7 @@
+alias ls='ls --color=auto'
+# some more ls aliases
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -lrta'
+alias cl=clear
+alias psme="ps -Afu `whoami`"

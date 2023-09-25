@@ -1,0 +1,2 @@
+taxpayertype,firstname,lastname,middlename,ethnicity,compositename,maidenname,birthday,taxid,streetno,aptno,streetname,city,zipcode,phoneno,email,compositeaddress,score
+individual,Fredrick,Stephens,Philip,Black,Fredrick Philip Stephens,,1959-04-18,844323683,511,,Us Hwy 40,Forestville,20747,2403215231,Fredrick.Stephens@Stephens.net,"511 Us Hwy 40, Forestville, MD 20747",-1.0

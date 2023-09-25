@@ -1,0 +1,7 @@
+model_name: test_model_name
+name: name_of_the_thing
+property1: propertyABC
+number: 10
+alist:
+  - element1
+  - element2

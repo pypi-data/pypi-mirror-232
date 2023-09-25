@@ -1,0 +1,8 @@
+source_firstname: firstnames_clean.csv
+source_lastname: lastnames_clean.csv
+source_city: md_cities_clean_validzip.csv
+source_streetname: md_common_streetnames_clean.csv
+source_zipcode: md_zip_codes_clean.csv
+source_age: md_age.csv
+form_name: irmf
+dbconfig: sql-matchrecords-config.json

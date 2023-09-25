@@ -1,0 +1,30 @@
+pandas==2.1.0
+numpy==1.23.5
+pymssql
+sqlalchemy==1.4.48
+sqlalchemy-utils
+pyodbc==4.0.35
+matplotlib==3.5.1
+seaborn==0.11.2
+scikit-learn==1.2.1
+daal4py; sys_platform != 'darwin'
+tensorflow == 2.13; sys_platform != 'darwin'
+tensorflow-macos == 2.13; sys_platform == 'darwin'
+pymongo==4.4.0b0
+fastapi==0.93.0
+fastapi-versioning==0.10.0
+uvicorn==0.20.0
+typing-extensions~=4.5
+pydantic==1.10.4
+click==7.1.2
+mlflow
+azureml-core
+opencensus-ext-azure==1.1.9
+inference-schema==1.5.1
+pyyaml
+joblib==1.2.0
+h5py==3.8
+python-dotenv
+pytest==7.4.0
+scann==1.2.10; sys_platform != 'darwin'
+fasttext==0.9.2; sys_platform != 'darwin'

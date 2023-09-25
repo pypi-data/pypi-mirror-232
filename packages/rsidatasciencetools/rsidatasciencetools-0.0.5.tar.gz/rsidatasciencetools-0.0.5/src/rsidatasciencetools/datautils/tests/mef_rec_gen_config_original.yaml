@@ -1,0 +1,115 @@
+# MeF Parameters and sources
+min_date_requests: '2020-1-1T00:00:00'
+max_date_requests: '2022-12-31T23:59:59'
+#Path w/r to M=mef_datagen
+source_firstname: ../tests/firstnames_clean.csv
+source_lastname: ../tests/lastnames_clean.csv
+source_city: ../tests/md_cities_clean_validzip.csv
+source_streetname: ../tests/md_common_streetnames_clean.csv
+source_zipcode: ../tests/md_zip_codes_clean.csv
+source_age: ../tests/md_age.csv
+form_name: irmf
+# Path w/r to fraud_data_generator
+src_file_zips_ssn: ../fraud_data/tests/ssn_codes_per_zip_code.csv
+
+AuthenticationHeader:
+    legit:
+        total_time_preparation_in_days:
+            mean: 10
+            std: 8
+        active_time_preparation_factor:
+            low: 0.1
+            high: 0.8
+        hour_ranges:
+            - [0, 1, 2, 3, 4, 5, 6]
+            - [7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22]
+            - [23]
+        p_hour_range:
+            - 0.05
+            - 0.92
+            - 0.03
+        p_last_ip_matches_current_ip:
+            - 0.1
+            - 0.3
+            - 0.6
+        p_change_credential:
+            - 0.05
+            - 0.75
+            - 0.2
+        p_identity_assurance:
+            - 0.1
+            - 0.2
+            - 0.5
+            - 0.2
+        p_authenticator_assurance:
+            - 0.1
+            - 0.2
+            - 0.5
+            - 0.2
+        p_federal_assurance:
+            - 0.1
+            - 0.2
+            - 0.5
+            - 0.2
+        p_payment_decline:
+            - 0.01
+            - 0.2
+            - 0.7
+            - 0.09
+
+        
+    fraud:
+        total_time_preparation_in_days:
+            mean: 2
+            std: 1
+        active_time_preparation_factor:
+            low: 0.6
+            high: 0.9
+        hour_ranges:
+            - [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23]
+        p_hour_range:
+            - [1]
+        p_last_ip_matches_current_ip:
+            - 0.1
+            - 0.8
+            - 0.1
+        p_change_credential:
+            - 0.05
+            - 0.2
+            - 0.75
+        p_identity_assurance:
+            - 0.1
+            - 0.6
+            - 0.25
+            - 0.05
+        p_authenticator_assurance:
+            - 0.1
+            - 0.6
+            - 0.25
+            - 0.05
+        p_federal_assurance:
+            - 0.1
+            - 0.6
+            - 0.25
+            - 0.05
+        p_payment_decline:
+            - 0.01
+            - 0.45
+            - 0.45
+            - 0.09
+
+
+ReturnHeader:
+    legit:
+        state_of_sample: MD
+        p_born_in_state: 0.462
+        
+    fraud:
+        state_of_sample: #None
+        p_born_in_state: #None
+
+FinancialTransactions:
+    legit:
+        p_bank_account_in_us: 0.973
+    fraud:
+        p_bank_account_in_us: 0.75

@@ -1,0 +1,23 @@
+py -m venv venv
+venv\Scripts\activate
+py -m pip install --upgrade pip
+py -m pip install --upgrade build
+py -m build
+py -m pip install --upgrade twine
+py -m twine upload --repository testpypi dist/*
+py -m build
+py -m twine upload --repository testpypi dist/*
+py -m twine upload --repository pypi dist/*
+py -m build
+py -m twine upload --repository testpypi dist/*
+py -m twine upload --repository pypi dist/*
+python setup.py sdist bdist_wheel
+pip install setuptools wheel
+python setup.py sdist bdist_wheel
+py -m twine upload --repository testpypi dist/*
+py -m twine upload --repository pypi dist/*
+py -m build
+py -m twine upload --repository testpypi dist/*
+py -m twine upload --repository pypi dist/*
+doskey /history
+doskey /history > history.txt

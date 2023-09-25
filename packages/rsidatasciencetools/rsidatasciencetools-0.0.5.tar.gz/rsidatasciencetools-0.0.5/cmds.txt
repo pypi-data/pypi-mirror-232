@@ -1,0 +1,41 @@
+(venv) C:\code\rsidstools>doskey /history
+py -m venv venv
+venv\Scripts\activate
+py -m pip install --upgrade pip
+py -m pip install --upgrade build
+py -m build
+py -m pip install --upgrade twine
+py -m twine upload --repository testpypi dist/*
+py -m build
+py -m twine upload --repository testpypi dist/*
+py -m twine upload --repository pypi dist/*
+py -m build
+py -m twine upload --repository testpypi dist/*
+py -m twine upload --repository pypi dist/*
+python setup.py sdist bdist_wheel
+pip install setuptools wheel
+python setup.py sdist bdist_wheel
+py -m twine upload --repository testpypi dist/*
+py -m twine upload --repository pypi dist/*
+py -m build
+py -m twine upload --repository testpypi dist/*
+py -m twine upload --repository pypi dist/*
+doskey /history
+
+
+
+(venv) C:\code\test-pip>doskey /history
+c:/code/test-pip/venv/Scripts/activate.bat
+pip install rsidatasciencetools
+python test.py
+pip uninstall rsidatasciencetools
+pip install rsidatasciencetools==0.0.3
+python test.py
+pip install rsidatasciencetools
+pip uninstall rsidatasciencetools
+pip install rsidatasciencetools
+pip uninstall rsidatasciencetools
+pip install rsidatasciencetools==0.0.4
+python test.py
+doskey /history
+

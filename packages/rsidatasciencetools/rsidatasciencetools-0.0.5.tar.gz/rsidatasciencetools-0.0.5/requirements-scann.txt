@@ -1,0 +1,13 @@
+pandas==1.4.3
+numpy==1.21.1
+sqlalchemy==1.4.48
+sqlalchemy-utils
+pyodbc==4.0.35
+matplotlib==3.5.1
+seaborn==0.11.2
+scikit-learn==1.2.1
+daal4py; sys_platform != 'darwin'
+tensorflow == 2.11; sys_platform != 'darwin'
+tensorflow-macos == 2.11; sys_platform == 'darwin'
+joblib==1.2.0
+h5py==3.8
