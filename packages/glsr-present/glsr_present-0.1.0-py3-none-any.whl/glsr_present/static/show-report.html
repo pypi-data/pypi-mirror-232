@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!--
+
+# show-report.html
+
+(c) 2023 Oliver Haase / Rainer Schwarzbach
+
+Visualize a GitLab report through report-parser-common.js
+
+The report type and default file name are determined
+by the query parameter "type".
+
+Supported reports:
+
+type               | default filename
+-------------------|-----------------------------------
+container-scanning | gl-container-scanning-report.json
+sast               | gl-sast-report.json
+secret-detection   | gl-secret-detection-report.json
+
+So, to visualize the SAST report stored in gl-sast-report.json,
+you would link this file as show-report.html?type=sast
+
+The report file name can be overriden by specifying an extra "filename" parameter.
+
+Required files in the same directory:
+
+* report-parser-common.js (the scripts generating the page)
+* report.css (stylesheet)
+* the report files (gl-*-rport.json)
+* optionally: build-info.json
+  (a JSON file defining an object containing the properties
+   ci_pipeline_id, ci_pipeline_url, ci_project_url and ci_commit_sha
+   derived frm the likewise-named CI variables from the pipeline that generated the reports)
+   
+  -->
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preliminary title</title>
+    <link rel="stylesheet" href="report.css">
+    <script src="report-parser-common.js"></script>
+  </head>
+
+  <body onload="visualizeReport();">
+    <header>
+    </header>
+    <main>
+    </main>
+  </body>
+
+</html>

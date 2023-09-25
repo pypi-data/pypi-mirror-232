@@ -1,0 +1,13 @@
+glsr_present/__init__.py,sha256=SSm5K7FRktorRD1BG5WHB6oZR47DYRXxYwvz3bQYCec,568
+glsr_present/__main__.py,sha256=Bswjjb8HUCQnzsAXphI-wTJRT6fXcjGEOo0aj3mj5-Y,1235
+glsr_present/commandline.py,sha256=5uJmsl-SnEeuKtZWOpBB72QoLiBZl2ALEIUjGIHOV68,5969
+glsr_present/commons.py,sha256=BKauVfJ3VSVsx9zBdL3b8ipgSS1eMF2_eT2PJhUaqf8,609
+glsr_present/static/report-parser-common.js,sha256=v_QojATgE3kSho6Qq0X6EzWzKNTylmdROODzqIXU9LM,24396
+glsr_present/static/report.css,sha256=GtJiuKOTpnDL_xMh0q03x7ZjO9xWSHIPUDT_1RzrJZk,1001
+glsr_present/static/show-report.html,sha256=6uxysFRK014-7SuTd3Ja9itJ8fmLyMVGuL6_IdUo3bw,1503
+glsr_present/templates/build-info.md.j2,sha256=U0NerEjADpu0aA61b3asqiS6qQjybGSQWd6JNodsn74,198
+glsr_present-0.1.0.dist-info/LICENSE,sha256=LaZU96gqeh5MfXqjTs-AL_uWhoaQS8RaLexLx9pfJKc,1075
+glsr_present-0.1.0.dist-info/METADATA,sha256=UJT1HiI3i9Mf1k-7yGkQu_2rj5HQNbL7nqPs7rwQgRQ,3248
+glsr_present-0.1.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+glsr_present-0.1.0.dist-info/top_level.txt,sha256=YeqcG2MuJPb3DQeJk8ihnzt_kEeVOYqQDDIi05a2PIY,13
+glsr_present-0.1.0.dist-info/RECORD,,
