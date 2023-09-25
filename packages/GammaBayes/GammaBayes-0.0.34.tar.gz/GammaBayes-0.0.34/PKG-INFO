@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: GammaBayes
+Version: 0.0.34
+Summary: A user-friendly Bayesian inference library
+Home-page: https://github.com/lpin0002/GammaBayes
+Author: Liam Pinchbeck
+Author-email: Liam.Pinchbeck@monash.edu
+License: MIT
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Unix
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
