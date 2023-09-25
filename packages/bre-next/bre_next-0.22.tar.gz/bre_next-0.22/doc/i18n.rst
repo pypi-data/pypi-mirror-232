@@ -1,0 +1,74 @@
+i18n
+====
+
+Bre is a pure-Python module. It has strings that need to be
+translatable, in particular the labels. Bre needs to be integrated
+into a Django web application.  The web application knows the
+language, Bre does not.
+
+In traditional gettext (which Python's gettext module supports) the
+language is indicated in the environment as the ``LANGUAGE``
+variable. Translation is performed immediately as a string marked up
+with ``_`` is executed. This won't work for Bre, as the language isn't
+in the environment and is only known by Django.
+
+So, ``Bre`` exposes a :func:`bre.translate` function which takes a Bre
+message id and a language code and returns a translation. The Django
+code should use this for the labels marked up as translatable in
+Bre. You can get the Django language code with
+``django.utils.translations.get_language``.
+
+
+Maintaining the message catalog
+-------------------------------
+
+You need to mark up any translatable text using the ``bre.i18n._``
+function, like this:
+
+.. code-block:: python
+
+  from bre.i18n import _
+
+  _('some_message_id')
+
+Note that ``_`` in ``bre.i18n`` does no translation; it only exists to
+mark up things that can be extracted for translation.
+
+We use pybabel_ for translations. To create the message catalog
+(``pot`` file) extract it from the source code:
+
+.. code-block:: console
+
+  pybabel extract . --output-file=bre/locales/messages.pot --no-location
+
+We now can use this to create message catalogs for locales, here for
+the ``nl`` locale:
+
+.. code-block:: console
+
+  pybabel init -l nl -i bre/locales/messages.pot -d bre/locales
+
+We now have a ``messages.po`` file we can translate in
+``bre/locales/nl/LC_MESSAGES/messages.po``.
+
+Once you are done with translations, you need to compile them into
+``.mo`` files:
+
+.. code-block:: console
+
+  pybabel compile -d bre/locales/
+
+You should check in the resulting ``.po`` and ``.mo`` files.
+
+.. _pybabel: http://babel.pocoo.org
+
+If you added new translatable messageids and updated your ``pot`` file
+with the ``extract`` command, you now need to update the ``.po`` files
+so you can add the translations:
+
+.. code-block:: console
+
+   pybabel update -d bre/locales -i bre/locales/messages.pot
+
+You need to recompile with ``compile`` again once translations have
+been made.
