@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: test-base-package
+Version: 0.0.5
+Summary: python 自动化测试基础包
+Home-page: https://www.baidu.com
+Author: 自动化测试基础包
+Author-email: tianjincn@163.com
+Requires-Python: >=3.5.0
+License-File: LICENSE
+Requires-Dist: allure-pytest (==2.13.2)
+Requires-Dist: playwright (==1.37.0)
+Requires-Dist: pytest-base-url (==2.0.0)
+Requires-Dist: pytest-playwright (==0.4.2)
+
