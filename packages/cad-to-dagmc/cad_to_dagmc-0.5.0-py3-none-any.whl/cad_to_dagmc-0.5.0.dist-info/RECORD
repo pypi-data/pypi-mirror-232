@@ -1,0 +1,11 @@
+_version.py,sha256=3YxISZVp_DgBHizWP4UzbUATbJ2-kn6oz3xEF0uxyCg,274
+cad_to_dagmc/__init__.py,sha256=pI6sOn4nbEiZClP53g2UJSNgE8tkm9wz-hA_JLwUkLk,638
+cad_to_dagmc/brep_part_finder.py,sha256=Se5IYTbPvmYOU28C-Sx2xYrn6ZRVXWicNjra1lVyWxw,999
+cad_to_dagmc/brep_to_h5m.py,sha256=AXm8AF68rD6iSNpLcSyGwCPTUyXC1yoLH47Q4hmUZFc,4266
+cad_to_dagmc/core.py,sha256=Sd2ITQfg2pEcRjpUGZgysGJNdiXrk9En953ItqgAH7o,5584
+cad_to_dagmc/vertices_to_h5m.py,sha256=AUi8ddOl5pv1riH7rZY4r4L1GsgoPUO_NZ4S2sxwPJQ,8550
+cad_to_dagmc-0.5.0.dist-info/LICENSE,sha256=B8kznH_777JVNZ3HOKDc4Tj24F7wJ68ledaNYeL9sCw,1070
+cad_to_dagmc-0.5.0.dist-info/METADATA,sha256=oj692qzyRJyYR13BfyZyaoJ4Ue1QMKvbRs6U2osQ19U,4838
+cad_to_dagmc-0.5.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+cad_to_dagmc-0.5.0.dist-info/top_level.txt,sha256=zTi8C64SEBsE5WOtPovnxhOzt-E6Oc5nC3RW6M_5aEA,22
+cad_to_dagmc-0.5.0.dist-info/RECORD,,
