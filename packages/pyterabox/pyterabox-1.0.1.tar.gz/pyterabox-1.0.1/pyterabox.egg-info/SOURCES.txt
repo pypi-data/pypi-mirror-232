@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+pyterabox/__init__.py
+pyterabox/version.py
+pyterabox.egg-info/PKG-INFO
+pyterabox.egg-info/SOURCES.txt
+pyterabox.egg-info/dependency_links.txt
+pyterabox.egg-info/requires.txt
+pyterabox.egg-info/top_level.txt
+pyterabox.egg-info/zip-safe
