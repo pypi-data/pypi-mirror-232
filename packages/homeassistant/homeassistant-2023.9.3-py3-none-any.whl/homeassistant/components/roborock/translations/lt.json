@@ -1,0 +1,86 @@
+{
+    "entity": {
+        "binary_sensor": {
+            "mop_attached": {
+                "name": "Pritvirtinta \u0161luost\u0117"
+            },
+            "mop_drying_status": {
+                "name": "\u0160luost\u0117s d\u017eiovinimas"
+            },
+            "water_box_attached": {
+                "name": "Pridedama vandens d\u0117\u017e\u0117"
+            },
+            "water_shortage": {
+                "name": "Vandens tr\u016bkumas"
+            }
+        },
+        "select": {
+            "mop_intensity": {
+                "state": {
+                    "off": "I\u0161jungta"
+                }
+            }
+        },
+        "sensor": {
+            "clean_percent": {
+                "name": "Valymo eiga"
+            },
+            "dock_error": {
+                "name": "Doko klaida",
+                "state": {
+                    "dirty_tank_latch_open": "Ne\u0161varus bako fiksatorius atidarytas",
+                    "duct_blockage": "Kanalo u\u017esikim\u0161imas",
+                    "no_dustbin": "Jokios \u0161iuk\u0161liad\u0117\u017e\u0117s",
+                    "ok": "Gerai",
+                    "waste_water_tank_full": "Pilnas nuotek\u0173 bakas",
+                    "water_empty": "Vanduo tu\u0161\u010dias"
+                }
+            },
+            "last_clean_end": {
+                "name": "Baigiasi paskutinis valymas"
+            },
+            "last_clean_start": {
+                "name": "Prasideda paskutinis valymas"
+            },
+            "mop_drying_remaining_time": {
+                "name": "Lik\u0119s \u0161luost\u0117s d\u017eiovinimo laikas"
+            }
+        },
+        "switch": {
+            "off_peak_switch": {
+                "name": "\u012ekrovimas ne piko metu"
+            }
+        },
+        "time": {
+            "dnd_end_time": {
+                "name": "Netrukdyti pabaiga"
+            },
+            "dnd_start_time": {
+                "name": "Prad\u0117kite netrukdyti"
+            },
+            "off_peak_end": {
+                "name": "Ne piko pabaiga"
+            },
+            "off_peak_end_time": {
+                "name": "Ne piko pabaiga"
+            },
+            "off_peak_start": {
+                "name": "Prad\u017eia ne piko metu"
+            },
+            "off_peak_start_time": {
+                "name": "Prad\u017eia ne piko metu"
+            }
+        },
+        "vacuum": {
+            "roborock": {
+                "state_attributes": {
+                    "fan_speed": {
+                        "state": {
+                            "off": "I\u0161jungta"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

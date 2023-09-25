@@ -1,0 +1,16 @@
+{
+    "services": {
+        "set_location": {
+            "fields": {
+                "elevation": {
+                    "description": "J\u016bs\u0173 vietos auk\u0161tis."
+                }
+            }
+        }
+    },
+    "system_health": {
+        "info": {
+            "user": "Vartotojas"
+        }
+    }
+}

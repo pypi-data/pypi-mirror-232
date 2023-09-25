@@ -1,0 +1,29 @@
+{
+    "issues": {
+        "device_config_file_changed": {
+            "fix_flow": {
+                "abort": {
+                    "cannot_connect": "Nepavyksta prisijungti prie {device_name}. Bandykite dar kart\u0105 v\u0117liau, kai \u012fsitikinsite, kad j\u016bs\u0173 Z-Wave tinklas veikia ir prijungtas prie Home Assistant."
+                },
+                "step": {
+                    "confirm": {
+                        "description": "\u201eZ-Wave JS\u201c atranda daug \u012frenginio metaduomen\u0173, apklausdamas \u012frengin\u012f. Ta\u010diau dalis informacijos turi b\u016bti \u012fkelta i\u0161 konfig\u016bracijos failo. Dalis \u0161ios informacijos \u012fvertinama tik vien\u0105 kart\u0105, pokalbio su \u012frenginiu metu. \n\n Kai \u012frenginio konfig\u016bracijos failas atnaujinamas, \u0161i informacija gali b\u016bti pasenusi ir \u012frengin\u012f reikia dar kart\u0105 apklausti, kad b\u016bt\u0173 priimti pakeitimai. \n\n Tai n\u0117ra b\u016btina operacija, o \u012frenginio funkcionalumas bus paveiktas pakartotinio pokalbio metu, ta\u010diau, kai jis bus baigtas, galite pasteb\u0117ti \u012frenginio patobulinimus. \n\n Jei norite t\u0119sti, spustel\u0117kite toliau pateikt\u0105 PATEIKTI. Pakartotinis pokalbis vyks fone.",
+                        "title": "Pakeistas \u201eZ-Wave\u201c \u012frenginio konfig\u016bracijos failas: {device_name}"
+                    }
+                }
+            },
+            "title": "Pakeistas \u201eZ-Wave\u201c \u012frenginio konfig\u016bracijos failas: {device_name}"
+        },
+        "dry_fan_presets_deprecation": {
+            "fix_flow": {
+                "step": {
+                    "confirm": {
+                        "description": "Savo objekte naudojate i\u0161 anksto nustatytus sausojo arba ventiliatoriaus re\u017eimus \"{entity_id}\".\n\nI\u0161 anksto nustatyti sauso ir ventiliatoriaus re\u017eimai nebenaudojami ir bus pa\u0161alinti. Atnaujinkite savo automatik\u0105, kad vietoj to naudotum\u0117te atitinkamus sauso ir ventiliatoriaus **\u0160VOK re\u017eimus**.\n\nSpustel\u0117kite PATEIKTI \u017eemiau, kai rankiniu b\u016bdu i\u0161spr\u0119site \u0161i\u0105 problem\u0105.",
+                        "title": "I\u0161 anksto nustatyti d\u017eiovinimo ir ventiliatoriaus re\u017eimai bus pa\u0161alinti: {entity_id}"
+                    }
+                }
+            },
+            "title": "I\u0161 anksto nustatyti d\u017eiovinimo ir ventiliatoriaus re\u017eimai bus pa\u0161alinti: {entity_id}"
+        }
+    }
+}

@@ -1,0 +1,45 @@
+{
+    "entity": {
+        "sensor": {
+            "detection_distance": {
+                "name": "Aptikimo atstumas"
+            },
+            "moving_target_energy": {
+                "name": "Judanti tikslin\u0117 energija"
+            },
+            "static_energy_gate_0": {
+                "name": "Statin\u0117s energijos vartai 0"
+            },
+            "static_energy_gate_1": {
+                "name": "Statin\u0117s energijos vartai 1"
+            },
+            "static_energy_gate_2": {
+                "name": "Statin\u0117s energijos vartai 2"
+            },
+            "static_energy_gate_3": {
+                "name": "Statin\u0117s energijos vartai 3"
+            },
+            "static_energy_gate_4": {
+                "name": "Statin\u0117s energijos vartai 4"
+            },
+            "static_energy_gate_5": {
+                "name": "Statin\u0117s energijos vartai 5"
+            },
+            "static_energy_gate_6": {
+                "name": "Statin\u0117s energijos vartai 6"
+            },
+            "static_energy_gate_7": {
+                "name": "Statin\u0117s energijos vartai 7"
+            },
+            "static_energy_gate_8": {
+                "name": "Statin\u0117s energijos vartai 8"
+            },
+            "static_target_distance": {
+                "name": "Statinis taikinio atstumas"
+            },
+            "static_target_energy": {
+                "name": "Statin\u0117 tikslin\u0117 energija"
+            }
+        }
+    }
+}

@@ -1,0 +1,43 @@
+{
+    "config": {
+        "error": {
+            "incorrect_api_key": "Neveljaven API klju\u010d za izbrani ra\u010dun"
+        }
+    },
+    "entity": {
+        "select": {
+            "light": {
+                "state": {
+                    "off": "Izklopljeno",
+                    "on": "Vklopljeno"
+                }
+            }
+        },
+        "sensor": {
+            "climate_react_low": {
+                "state_attributes": {
+                    "mode": {
+                        "name": "Na\u010din"
+                    }
+                }
+            },
+            "smart_type": {
+                "state": {
+                    "temperature": "Temperatura"
+                }
+            }
+        }
+    },
+    "services": {
+        "full_state": {
+            "fields": {
+                "fan_mode": {
+                    "name": "Prezra\u010devanje"
+                },
+                "swing_mode": {
+                    "name": "Na\u010din nihanja"
+                }
+            }
+        }
+    }
+}

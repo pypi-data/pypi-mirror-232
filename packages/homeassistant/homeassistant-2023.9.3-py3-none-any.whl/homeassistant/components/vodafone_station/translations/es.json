@@ -1,0 +1,82 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "El servicio ya est\u00e1 configurado",
+            "cannot_connect": "No se pudo conectar",
+            "invalid_auth": "Autenticaci\u00f3n no v\u00e1lida",
+            "reauth_successful": "La autenticaci\u00f3n se volvi\u00f3 a realizar correctamente",
+            "unknown": "Error inesperado"
+        },
+        "error": {
+            "cannot_connect": "No se pudo conectar",
+            "invalid_auth": "Autenticaci\u00f3n no v\u00e1lida",
+            "unknown": "Error inesperado"
+        },
+        "flow_title": "{host}",
+        "step": {
+            "reauth_confirm": {
+                "data": {
+                    "password": "Contrase\u00f1a"
+                },
+                "description": "Por favor, introduce la contrase\u00f1a correcta para el host: {host}"
+            },
+            "user": {
+                "data": {
+                    "host": "Host",
+                    "password": "Contrase\u00f1a",
+                    "ssl": "Utiliza un certificado SSL",
+                    "username": "Nombre de usuario"
+                }
+            }
+        }
+    },
+    "entity": {
+        "sensor": {
+            "active_connection": {
+                "name": "Conexi\u00f3n activa",
+                "state": {
+                    "dsl": "xDSL",
+                    "fiber": "Fibra",
+                    "internet_key": "Clave de Internet",
+                    "unknown": "Desconocido"
+                }
+            },
+            "down_stream": {
+                "name": "Tasa de descarga WAN"
+            },
+            "external_ip_key": {
+                "name": "Direcci\u00f3n clave de Internet WAN"
+            },
+            "external_ipv4": {
+                "name": "Direcci\u00f3n IPv4 WAN"
+            },
+            "external_ipv6": {
+                "name": "Direcci\u00f3n IPv6 WAN"
+            },
+            "fw_version": {
+                "name": "Versi\u00f3n del firmware"
+            },
+            "phone_num1": {
+                "name": "N\u00famero de tel\u00e9fono (1)"
+            },
+            "phone_num2": {
+                "name": "N\u00famero de tel\u00e9fono (2)"
+            },
+            "sys_cpu_usage": {
+                "name": "Uso de CPU"
+            },
+            "sys_memory_usage": {
+                "name": "Uso de memoria"
+            },
+            "sys_reboot_cause": {
+                "name": "Causa del reinicio"
+            },
+            "sys_uptime": {
+                "name": "Tiempo de funcionamiento"
+            },
+            "up_stream": {
+                "name": "Tasa de subida WAN"
+            }
+        }
+    }
+}
