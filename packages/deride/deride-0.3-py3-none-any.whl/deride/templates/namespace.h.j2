@@ -1,0 +1,16 @@
+{% if namespace.name %}
+namespace {{ namespace.name }} {
+{% endif %}
+{% for n in namespace.namespaces %}
+{% set namespace = n %}
+{% include 'namespace.h.j2' %}
+{% endfor %}
+{% for class in namespace.classes %}
+{% include 'class.h.j2' +%}
+{% endfor %}
+{% if namespace.functions %}
+{% include 'functions.h.j2' +%}
+{% endif %}
+{% if namespace.name %}
+} // namespace {{ namespace.name }}
+{% endif %}

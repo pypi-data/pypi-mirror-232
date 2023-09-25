@@ -1,0 +1,18 @@
+/*
+ * Automatically generated with:
+ *
+ *   {{ config.cmdline }}
+ */
+
+#include "{{ context.input_header }}"
+
+#include <functional>
+#include <unordered_map>
+#include <vector>
+{% if config.mock_using_qt_signals %}
+#include <QObject>
+{% endif %}
+
+{% for namespace in namespaces %}
+{% include 'namespace.h.j2' %}
+{% endfor %}

@@ -1,0 +1,83 @@
+{% set private_class = class.pimpl.var_type %}
+{% set pdecl = class.pimpl.class_ptr_name %}
+{% set latest_instance = class.concatenate("latest", "instance") %}
+{% set mock_for = class.concatenate("mock", "for") %}
+
+class {{ class.mock_name }};
+
+class {{ private_class }} {
+public:
+    {{ private_class }}(int ownership);
+    virtual ~{{ private_class }}();
+
+    {% for m in class.methods %}
+    {% if m.has_return_value() %}
+    {% set setter_name = m.concatenate("set", m.unique_name, "result") %}
+    {% set setter_var = m.concatenate(m.unique_name, "result") %}
+    {{ "static " if m.is_static }}void {{ setter_name }}({{ m.ret_type.spelling }} result) {
+        m_{{ setter_var}} = {{'&' if m.ret_type.needs_pointer}}result;
+    }
+    {% endif %}
+    {% if m.is_qt_signal %}
+    {% set emitter_name = m.concatenate("emit", m.unique_name) %}
+    void {{ emitter_name }}({{ m.arg_line }}) {
+        Q_EMIT {{ pdecl }}->{{ m.unique_name }}({{ m.arg_names }});
+    }
+
+    {% endif %}
+    {% endfor %}
+    {% for m in class.methods %}
+    {% if not m.is_qt_signal %}
+    {% set method_hook = m.concatenate('on', m.unique_name, 'called') %}
+    {{ "static " if m.is_static }}void {{method_hook}}({{m.callback_hook_type}} callback) {
+        {{m.callback_hook_name}} = callback;
+    }
+    {% endif %}
+    {% endfor %}
+
+    /* Reset all static variables to their default value and disconnect all
+     * static callbacks */
+    static void reset();
+
+protected:
+    friend class {{ class.name }};
+    int m_ownership;
+
+    {{ class.name}} *{{ pdecl }};
+    {% for m in class.constructors + class.methods %}
+      {% for v in m.get_needed_member_variables() %}
+    {{ "static " if m.is_static }}{{ v.type_name }} {{ "*" if v.needs_pointer}}{{ v.var_name }};
+      {% endfor %}
+    {% endfor %}
+};
+
+class {{ class.mock_name }}: public {{ private_class }} {
+public:
+    enum Ownership {
+        OwnedByClient = 0,
+        OwnedByMock,
+    };
+    {{ class.mock_name }}(Ownership ownership = OwnedByClient);
+    virtual ~{{ class.mock_name }}();
+
+    static {{ class.mock_name }} *{{ latest_instance }}();
+    static {{ class.mock_name }} *{{ mock_for }}(const {{ class.name }} *mockedObject);
+
+
+    {% for m in class.constructors %}
+    static void onConstructorCalled(std::function<void({{ m.arg_types }})> callback) {
+        m_{{ m.unique_name }}Cb = callback;
+    }
+    {% endfor %}
+
+
+private:
+    static {{ class.mock_name }} *firstUnlinkedInstance();
+    static {{ class.mock_name }} *ensureMockClass();
+
+private:
+    friend class {{ class.name }};
+    static std::vector<{{ class.mock_name }}*> m_instances;
+    static std::unordered_map<{{ class.name }}*, {{ class.mock_name }}*>
+        m_instanceMap;
+};

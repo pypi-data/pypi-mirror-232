@@ -1,0 +1,150 @@
+{% set private_class = class.pimpl.var_type %}
+{% set pdecl = class.pimpl.class_ptr_name %}
+{% set pimpl = class.pimpl.var_name %}
+{% set latest_instance = class.concatenate("latest", "instance") %}
+{% set mock_for = class.concatenate("mock", "for") %}
+{# TODO: ensure there are no naming conflicts for mock_var #}
+{% set mock_var = "mock" %}
+{% for namespace in class.namespaces %}
+namespace {{ namespace }} {
+{% endfor %}
+
+std::vector<{{ class.mock_name }} *> {{ class.mock_name }}::m_instances;
+std::unordered_map<{{ class.name }}*, {{ class.mock_name }}*>
+    {{ class.mock_name }}::m_instanceMap;
+{% for m in class.methods if m.is_static %}
+  {% for v in m.get_needed_member_variables() %}
+{{ v.type_name }} {{ private_class }}::{{ v.var_name }};
+  {% endfor %}
+{% endfor %}
+
+{{ private_class }}::{{ private_class }}(int ownership):
+    m_ownership(ownership),
+    {{ pdecl }}(nullptr)
+{
+}
+
+{{ private_class }}::~{{ private_class }}()
+{
+}
+
+void {{ private_class }}::reset()
+{
+    {% for m in class.methods if m.is_static %}
+    {{m.callback_hook_name}} = {};
+    {% endfor %}
+    {% for m in class.constructors + class.methods if m.is_static %}
+      {% for v in m.get_needed_member_variables() %}
+    {{ v.var_name }} = {{ v.reset_value }};
+      {% endfor %}
+    {% endfor %}
+}
+
+{{ class.mock_name }}::{{ class.mock_name }}(Ownership ownership):
+    {{ private_class }}(ownership)
+{
+    m_instances.push_back(this);
+}
+
+{{ class.mock_name }}::~{{ class.mock_name }}()
+{
+    auto i = std::remove(m_instances.begin(), m_instances.end(), this);
+    m_instances.erase(i, m_instances.end());
+}
+
+{{ class.mock_name }} *{{ class.mock_name }}::{{ latest_instance }}()
+{
+    const auto i =
+        std::find_if(m_instances.rbegin(), m_instances.rend(),
+                     [](const {{ class.mock_name }} *p) {
+        return p->{{ pdecl }} != nullptr;
+    });
+    return i != m_instances.rend() ? *i : nullptr;
+}
+
+{{ class.mock_name }} *{{ class.mock_name }}::{{ mock_for }}(
+    const {{ class.name }} *mockedObject)
+{
+    const auto i =
+        m_instanceMap.find(const_cast<{{ class.name }}*>(mockedObject));
+    return i != m_instanceMap.end() ? i->second : nullptr;
+}
+
+{{ class.mock_name }} *{{ class.mock_name }}::firstUnlinkedInstance()
+{
+    const auto i =
+        std::find_if(m_instances.begin(), m_instances.end(),
+                     [](const {{ class.mock_name }} *p) {
+        return p->{{ pdecl }} == nullptr;
+    });
+    return i != m_instances.end() ? *i : nullptr;
+}
+
+{{ class.mock_name }} *{{ class.mock_name }}::ensureMockClass() {
+    {{ class.mock_name }} *existing = firstUnlinkedInstance();
+    return existing ? existing : new {{ class.mock_name }}(OwnedByMock);
+}
+
+    {% for m in class.constructors %}
+    {% set needed_member = m.get_needed_member_variables(definition=True)[0] %}
+    {% set base_classes = m.parent.base_classes %}
+{{ needed_member.type_name }} {{ private_class }}::{{ needed_member.var_name }};
+
+{{ class.name }}::{{ class.name }}({{ m.arg_line }}){% if base_classes %}:{% endif +%}
+        {% for bc in base_classes %}
+        {# TODO: handle constructor mandatory arguments #}
+        {{ bc.name }}(){% if not loop.last %},{% endif +%}
+        {% endfor %}
+{
+    {% if m.node.is_move_constructor() %}
+    {{ class.mock_name }} *{{ mock_var }} = {{ class.mock_name }}::{{ mock_for }}(&{{ m.args[0].name }});
+    {% else %}
+    {{ class.mock_name }} *{{ mock_var }} = {{ class.mock_name }}::ensureMockClass();
+    {% endif %}
+    {{ mock_var }}->{{ pdecl }} = this;
+    {{ class.mock_name }}::m_instanceMap[this] = {{ mock_var }};
+    if ({{ private_class }}::m_{{ m.unique_name }}Cb) {
+        {{ private_class }}::m_{{ m.unique_name }}Cb({{ m.arg_names }});
+    }
+}
+    {% endfor %}
+
+    {% for m in class.destructors %}
+
+{{ class.name }}::~{{ class.name }}() {
+    auto i = {{ class.mock_name }}::m_instanceMap.find(this);
+    if (i == {{ class.mock_name }}::m_instanceMap.end()) return;
+
+    const {{ class.mock_name }} *{{ pimpl }} = i->second;
+    {{ class.mock_name }}::m_instanceMap.erase(i);
+
+    if (static_cast<{{ class.mock_name }}::Ownership>({{ pimpl }}->m_ownership) == {{ class.mock_name }}::OwnedByMock) {
+        delete {{ pimpl }};
+    }
+}
+    {% endfor %}
+    {% for m in class.methods if not m.is_qt_signal %}
+
+    {% set const = 'const ' if m.node.is_const_method() else '' %}
+    {% set method_called = m.concatenate(m.unique_name, "called") %}
+    {% set accessor = (mock_var + '->') if not m.is_static else (private_class + '::') %}
+{{ m.ret_type.spelling }} {{ class.name }}::{{ m.name }}({{ m.arg_line }}) {{ const }}{
+    {% if not m.is_static %}
+    {{ const }}{{ class.mock_name }} *{{ mock_var }} = {{ class.mock_name }}::{{ mock_for }}(this);
+    {% endif %}
+    {% if config.mock_using_callbacks %}
+    if ({{ accessor }}m_{{ m.unique_name }}Cb) {
+        return {{ accessor }}m_{{ m.unique_name }}Cb({{ m.arg_names }});
+    }
+    {% elif config.mock_using_qt_signals %}
+    Q_EMIT {{mock_var }}->{{ method_called }}({{ m.arg_names }});
+    {% endif %}
+    {% if m.has_return_value() %}
+    return {{ "*" if m.ret_type.needs_pointer}}{{ accessor }}m_{{ m.unique_name }}Result;
+    {% endif %}
+}
+    {% endfor %}
+
+{% for namespace in class.namespaces %}
+} // namespace
+{% endfor %}

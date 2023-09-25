@@ -1,0 +1,16 @@
+{% if namespace.name %}
+namespace {{ namespace.name }} {
+{% endif %}
+{% for n in namespace.namespaces %}
+{% set namespace = n %}
+{% include 'namespace.cpp.j2' %}
+{% endfor %}
+{% for class in namespace.classes %}
+{% include 'class.cpp.j2' +%}
+{% endfor %}
+{% if namespace.functions %}
+{% include 'functions.cpp.j2' +%}
+{% endif %}
+{% if namespace.name %}
+} // namespace {{ namespace.name }}
+{% endif %}

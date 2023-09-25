@@ -1,0 +1,17 @@
+deride/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+deride/__main__.py,sha256=xqRCO1s8s8Yxk9hT3xh8arwE04Lr-gml_3whGF2MlVU,23680
+deride/includes.py,sha256=BMz05SO_dRe0DoEP6KmpGhOB1tR95JD2B9OKdTDyjlg,899
+deride/templates/class.cpp.j2,sha256=7xW6oJwj5kglyJdo926atEVtpTCot94Jd9TeZGGNRYw,5259
+deride/templates/class.h.j2,sha256=p8woV2JBbNTKXVE85RZDVAIMB17giKJLbLMOP1Ka--s,2704
+deride/templates/functions.cpp.j2,sha256=_EhjAGDGAGHqy_YYv5ossaXCdwvpsZxfccMdfWuSpxU,876
+deride/templates/functions.h.j2,sha256=_fL33omk_xIjUSg6MxGRbirEizAKqItKnI0ZCrWiscU,1184
+deride/templates/mock_cpp.cpp.j2,sha256=M4UyOlYL1qMd1QcQ-0K4uAq_Tev7eIOrsTodr-6HWzM,158
+deride/templates/mock_cpp.h.j2,sha256=TBidzJ4RAGIYt-fTFUUuTqMnhxJRgPTYsaqWyFGIUKw,322
+deride/templates/namespace.cpp.j2,sha256=UdjIZD9madSVHc46JqMrfe6FSzKQ0VKI3jKvxG_5CK0,402
+deride/templates/namespace.h.j2,sha256=DUM3Gu6ghc0yWHsljsvQ3iJiqOE6qsU_VqIUZWJ2wRQ,396
+deride-0.3.dist-info/LICENSE,sha256=dOq3oIHUwR95K12sHVpo4fjTVuG3EhBexln_Uw4AxaM,1083
+deride-0.3.dist-info/METADATA,sha256=MFmn0H3Vv8nB7Q2PRsc8QPXNZBuGGgAgYm-Nl8wwKjU,6596
+deride-0.3.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+deride-0.3.dist-info/entry_points.txt,sha256=rQsCfH-WwaY-6ARiHJn9XBpA5dxGroDtQwbMYYe8ZZo,48
+deride-0.3.dist-info/top_level.txt,sha256=PDaRXsxW1tBckMHroEDYs8vFpB0NbBVeSMJKuMPCFoY,7
+deride-0.3.dist-info/RECORD,,

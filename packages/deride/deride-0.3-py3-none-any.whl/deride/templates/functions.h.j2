@@ -1,0 +1,34 @@
+{% set mocker = config.standalone_function_mocker %}
+
+class {{ mocker }} {
+public:
+    {{ mocker }}();
+    virtual ~{{ mocker }}();
+    static {{ mocker }} *instance();
+    {% for f in namespace.functions %}
+
+    {% set hook = f.concatenate('on', f.fix_case(f.unique_name), 'called') %}
+    void {{ hook }}(std::function<{{ f.ret_type.spelling }}({{f.arg_types}})> callback) {
+        m_{{ f.unique_name }}Cb = callback;
+    }
+    {% if f.has_return_value() %}
+    {% set setter_name = f.concatenate("set", f.fix_case(f.unique_name), "result") %}
+    {% set setter_var = f.concatenate(f.unique_name, "result") %}
+    void {{ setter_name }}({{ f.ret_type.spelling }} result) {
+        m_{{ setter_var}} = result;
+    }
+    {% endif %}
+    {% endfor %}
+
+protected:
+    static {{ mocker }} *s_instance;
+    {% for f in namespace.functions %}
+
+    friend {{ f.ret_type.spelling }} {{ f.name }}({{ f.arg_types }});
+    std::function<{{ f.ret_type.spelling }}({{ f.arg_types }})> m_{{ f.unique_name }}Cb;
+    {% if f.has_return_value() %}
+    {% set setter_var = f.concatenate(f.unique_name, "result") %}
+    {{ f.ret_type.spelling }} m_{{ setter_var}};
+    {% endif %}
+    {% endfor %}
+};

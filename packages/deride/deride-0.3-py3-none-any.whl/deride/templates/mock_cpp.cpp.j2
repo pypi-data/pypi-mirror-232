@@ -1,0 +1,8 @@
+#include "{{ context.basename }}.h"
+
+#include <algorithm>
+#include <cassert>
+
+{% for namespace in namespaces %}
+{% include 'namespace.cpp.j2' %}
+{% endfor %}

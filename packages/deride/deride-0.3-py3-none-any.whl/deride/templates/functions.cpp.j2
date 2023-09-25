@@ -1,0 +1,31 @@
+{% set mocker = config.standalone_function_mocker %}
+
+{{ mocker }} *{{ mocker }}::s_instance = nullptr;
+
+{{ mocker }}::{{mocker}}() {
+    assert(s_instance == nullptr);
+    s_instance = this;
+}
+
+{{ mocker }}::~{{mocker}}() {
+    s_instance = nullptr;
+}
+
+{{ mocker }} *{{ mocker }}::instance() {
+    return s_instance;
+}
+{% for f in namespace.functions %}
+{# TODO: ensure there are no naming conflicts for mock_var #}
+{% set mock_var = "mock" %}
+
+{{ f.ret_type.spelling }} {{ f.name }}({{ f.arg_line }}) {
+    {{ mocker }} *{{ mock_var }} = {{ mocker }}::instance();
+    if ({{ mock_var }}->m_{{ f.unique_name }}Cb) {
+        return {{ mock_var }}->m_{{ f.unique_name }}Cb({{ f.arg_names }});
+    }
+    {% if f.has_return_value() %}
+    {% set setter_var = f.concatenate(f.unique_name, "result") %}
+    return {{ mock_var }}->m_{{ setter_var }};
+    {% endif %}
+}
+{% endfor %}

@@ -1,0 +1,185 @@
+Metadata-Version: 2.1
+Name: deride
+Version: 0.3
+Summary: A generator of mock classes for C/C++ unit testing
+Home-page: https://gitlab.com/mardy/deride
+Author: Alberto Mardegan
+Author-email: info@mardy.it
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Framework :: Pytest
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: C
+Classifier: Programming Language :: C++
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Code Generators
+Classifier: Topic :: Software Development :: Testing :: Unit
+Classifier: Topic :: Utilities
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: Jinja2
+Requires-Dist: clang
+
+[![pipeline status](https://gitlab.com/mardy/deride/badges/master/pipeline.svg)](https://gitlab.com/mardy/deride/-/commits/master)
+[![coverage report](https://gitlab.com/mardy/deride/badges/master/coverage.svg)](https://gitlab.com/mardy/deride/-/commits/master)
+
+# Deride
+
+Deride (pronounced /de'ride/) is a tool which produces a mock for a C/C++ file:
+it analyses the input `.h` header file using [clang](http://clang.org/) and
+generates a new `.cpp` file containing the implementation of the mock object
+and a `.h` header file which can be used to interface with the mock object.
+
+For each method in the input class Deride generates a method in the mock
+controller which can be used to install a callback to be invoked whenever the
+original method is invoked.
+
+**NOTE**: Deride is still a work-in-progress, has not been tested but on a
+handful of files, and is likely to crash on non-trivial input (in any case,
+should encounter such issues, please [file a
+bug](https://gitlab.com/mardy/deride/-/issues)). It may be that the generated
+files are not usable as-is, but need manual editing.
+
+## Example usage
+
+```sh
+deride --pattern MyClass my_class.h
+```
+
+This will generate two files, `mock_my_class.h` and `mock_my_class.cpp`, which
+you should link to your unit tests instead of the real MyClass implementation:
+these files will provide a mock implementation of MyClass which you can control
+and inspect in your tests.
+
+For example, if `horse.h` contains this class:
+
+```cpp
+class HorsePrivate;
+class Horse {
+public:
+    Horse(const std::string &name);
+    Horse(Horse &&other);
+    virtual ~Horse();
+
+    std::string name() const;
+
+    void jump();
+    float jumpHeight() const;
+
+    void setColor(const std::string &colorName);
+    std::string color() const;
+
+private:
+    HorsePrivate *d_ptr;
+};
+```
+
+once Deride has run it will have created `mock_horse.h` containing a
+`MockHorse` object having these methods:
+
+```cpp
+class MockHorse {
+    // ...
+    static void onConstructorCalled(std::function<void(const std::string &)> callback);
+    static void onConstructorCalled(std::function<void(Animals::Horse &&)> callback);
+
+    void setNameResult(std::string result):
+    void setJumpHeightResult(float result);
+    void setColorResult(std::string result);
+
+    void onNameCalled(std::function<std::string()> callback);
+    void onJumpCalled(std::function<void()> callback);
+    void onJumpHeightCalled(std::function<float()> callback);
+    void onSetColorCalled(std::function<void(const std::string &)> callback);
+    void onColorCalled(std::function<std::string()> callback);
+
+    // ...
+};
+```
+
+That is, for each method returning a value Deride generates a method called
+`set<method>Result()` which allows you to inject the desired result. In
+addition to that, you can register a callback to be invoked every time that a
+method is called. This allows you both to monitor how many times a method is
+called (and with what params) and to provide its implementation; please note
+that if you use the callback mechanism than the return value from the callback
+will be used as the function's return value, instead of the one set via
+`set<method>Result()`).
+
+
+### Creating a mock object
+
+So, how do you get a mock object? There are a couple of ways, and which one you
+use depends on the way that the target objects are instantiated:
+
+1. If you expect only an instance of the object to get instantiated, then you
+   can safely create the mock object on the stack as soon as your test starts:
+
+   ```cpp
+   MockHorse mock;
+   mock.onConstructorCalled([](const std::string &name) {
+       // This code is executed when the tested code creates a Horse
+       std::cout << "A horse has been created: " << name;
+   });
+   mock.onNameCalled([]() { ... });
+   ```
+
+2. If the test code creates several instances of the Horse class (well, you can
+   do it even for a single one, but this method is especially useful when there
+   are many of them), you can create a mock object for a given Horse instance
+   by calling the `mockFor()` method:
+
+   ```cpp
+   run_my_test_code();
+   // somehow, you get a handle to a `Horse*` in the variable `horse`. Then you
+   // can do:
+   MockHorse *mock = MockHorse::mockFor(horse);
+   mock->onNameCalled([]() { ... });
+   ```
+
+3. And if you don't even have a way to retrieve a handle for the `Horse`
+   objects, you can call the `latestInstance()` method:
+
+   ```cpp
+   run_my_test_code();
+   // Get a mock for the latest (newest) instance of the Horse class created
+   MockHorse *mock = MockHorse::latestInstance();
+   mock->onNameCalled([]() { ... });
+   ```
+
+4. Using a combination of the first solution and the previous one, it's
+   possible to handle more complex cases (see
+   `examples/many-mocks/test_program.cpp` for a full example):
+
+   ```cpp
+   Mock *mockTom;
+   Mock *mockDick;
+   Mock *mockHarry;
+
+   Animals::MockHorse::onConstructorCalled([&](const std::string &name) {
+       std::cout << "Horse instantiated: " << name << std::endl;
+       if (name == "Tom") {
+           mockTom = Mock::latestInstance();
+       } else if (name == "Dick") {
+           mockDick = Mock::latestInstance();
+       } else if (name == "Harry") {
+           mockHarry = Mock::latestInstance();
+       }
+   });
+   ```
+
+
+### Mocking C libraries
+
+Deride can also mock plain C libraries, but for convenience the generated mock
+will still be a C++ object, so that one can use lambda functions to register
+the monitoring callbacks.
+
+A single `Mock` file will be generated, containing the `on<method>Called()`
+registration functions and (for functions returning a value) the
+`set<method>Return()` setters.
+
+The small project under `examples/lmdb/` shows how to generate and use a mock
+object for the C [lmdb](http://www.lmdb.tech/doc/) library.
