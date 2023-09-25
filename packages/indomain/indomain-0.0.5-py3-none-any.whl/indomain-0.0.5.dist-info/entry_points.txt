@@ -1,0 +1,2 @@
+[console_scripts]
+dalm = dalm.cli:cli
