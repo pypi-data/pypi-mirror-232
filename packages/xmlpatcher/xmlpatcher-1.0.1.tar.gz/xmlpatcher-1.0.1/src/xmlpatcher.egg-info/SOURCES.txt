@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+src/xmlpatcher/__init__.py
+src/xmlpatcher/transformation.py
+src/xmlpatcher/xml_document.py
+src/xmlpatcher.egg-info/PKG-INFO
+src/xmlpatcher.egg-info/SOURCES.txt
+src/xmlpatcher.egg-info/dependency_links.txt
+src/xmlpatcher.egg-info/requires.txt
+src/xmlpatcher.egg-info/top_level.txt
+src/xmlpatcher/patches/__init__.py
+src/xmlpatcher/patches/add_child.py
+src/xmlpatcher/patches/patch.py
+src/xmlpatcher/patches/remove.py
+src/xmlpatcher/patches/set_value.py
