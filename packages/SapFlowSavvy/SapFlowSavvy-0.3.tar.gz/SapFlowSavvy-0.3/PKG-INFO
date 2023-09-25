@@ -1,0 +1,87 @@
+Metadata-Version: 2.1
+Name: SapFlowSavvy
+Version: 0.3
+Summary: Toolkit de automatização para SAP Gui
+Home-page: https://github.com/Neitan96/SAPFlowSavvy
+Author: Nathan Almeida
+Author-email: neitan96@outlook.com
+License: GPLv3
+Keywords: sap sapgui sapscript
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: win32com
+Requires-Dist: pywinauto
+Requires-Dist: pymsgbox
+
+# SAPFlowSavvy - Toolkit de automatizaÃ§Ã£o para SAP Gui
+
+![GitHub](https://img.shields.io/github/license/Neitan96/SAPFlowSavvy)
+![Static Badge](https://img.shields.io/badge/version-developing-blue)
+![GitHub last commit](https://img.shields.io/github/last-commit/Neitan96/SAPFlowSavvy)
+[![Python](https://img.shields.io/badge/python-3.9.6%2B-blue)](https://www.python.org/downloads/release/python-396/)
+[![VBA](https://img.shields.io/badge/VBA-Excel-green)](https://docs.microsoft.com/en-us/office/vba/api/overview/excel)
+
+Este repositÃ³rio Ã© uma coleÃ§Ã£o de APIs desenvolvidas em *Python* e *VBA* projetadas para simplificar e acelerar a criaÃ§Ã£o de automaÃ§Ãµes no SAP GUI. O SAP GUI Ã© uma ferramenta poderosa para interagir com sistemas SAP, mas sua automaÃ§Ã£o muitas vezes requer cÃ³digos extensos e complexos. Essa APIs tÃªm como objetivo resolver esse problema, fornecendo funcionalidades prÃ©-fabricadas que permite que vocÃª automatize tarefas SAP de forma eficiente e sem a necessidade de codificaÃ§Ã£o extensiva.
+
+## Autor - **Nathan Almeida** (Neitan96):
+
+[![GitHub](https://img.shields.io/badge/GitHub-Profile-black?style=flat&logo=github)](https://github.com/Neitan96)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue?style=flat&logo=linkedin)](https://www.linkedin.com/in/neitan96/)
+[![Instagram](https://img.shields.io/badge/Instagram-Profile-orange?style=flat&logo=instagram)](https://www.instagram.com/neitan96/)
+
+## Principais caracterÃ­sticas
+
+- (*Em andamento*) Constantes de **TCodes** comuns do SAP para uso rÃ¡pido.
+- **Multi-linguagem**: DisponÃ­vel para *Python* e para *VBA*(com algumas limitaÃ§Ãµes).
+- **Classes Wrapper**(Embrulho) da API do Sap Gui para facilitar o code-complete.
+- Classes Wrapper **documentadas em portuguÃªs** dispensando a consulta constante na documentaÃ§Ã£o oficial do SAP.
+- (*Em andamento*) **FunÃ§Ãµes customizadas** nas classes Wrapper para auxiliar no dia a dia.
+- (*Em andamento*) **Scripts complexos prÃ©-programados**, como:
+  - ***Armazenamento de credenciais:*** Faz o armazenamento das credenciais do SAP para o usuÃ¡rio nÃ£o precisar ficar logando manualmente, Ã³timo para scripts autÃ´nomos.
+  - ***Login no SAP:*** Faz o login no SAP Verificando todas as possibilidades, login e senha errados, caixas pos login(tentativas de logins, multi-login, copyrigth, timeout), caso nÃ£o tenha sessÃ£o aberta.
+
+## Exemplos
+
+#### **Python:**
+```python
+sap_gui = SapGui()
+session = sap_gui.GetSessionLoged()
+```
+
+#### **VBA:**
+```vbs
+' TODO
+```
+
+## Melhorias futuras
+* DocumentaÃ§Ãµes e tutoriais
+* Fluxograma do componentes SAP Gui
+* Registro de execuÃ§Ã£o e erros
+* FunÃ§Ãµes para lidar com GridView
+  * SelecÃ£o, alteraÃ§Ã£o e criaÃ§Ã£o de layouts
+  * Possibilidade de exportar GridView que nÃ£o tem a opÃ§Ã£o de exportar
+  * Varredura e busca de valores em GridView
+  * Carregamento rÃ¡pido da GridView completa
+  * FunÃ§Ãµes de filtros
+  * Formulas para GridView, como soma, mÃ©dia e etc.
+* FunÃ§Ãµes para pop-ups comuns:
+  * SeleÃ§Ã£o mÃºltipla.
+  * BotÃµes comuns: limpar, executar, cancelar e etc.
+* FunÃ§Ãµes extras:
+  * VerificaÃ§Ã£o de timeout
+* FunÃ§Ãµes de telas padrÃµes do SAP
+  * Migo
+  * /SCWM/PACK
+  * ...
+* FunÃ§Ã£o CastTo na classe base
+
+## Links Ãºteis SAP
+
+- [SAP GUI Scripting API - Pdf](https://help.sap.com/doc/9215986e54174174854b0af6bb14305a/760.01/en-US/sap_gui_scripting_api_761.pdf)
+- [SAP GUI Scripting API - Web](https://help.sap.com/docs/sap_gui_for_windows/b47d018c3b9b45e897faf66a6c0885a8/babdf65f4d0a4bd8b40f5ff132cb12fa.html)
+- [TCodes do SAP](https://www.sap-tcodes.org/)
+- [SAP Datasheet](https://www.sapdatasheet.org/)
+
+## Aviso Legal
+
+Este projeto nÃ£o Ã© afiliado, endossado ou mantido pela SAP SE. SAP Ã© uma marca registrada da SAP SE em vÃ¡rios paÃ­ses.

@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.py
+PySavvyApi/SapGuiApiWrapper.py
+PySavvyApi/SapTCodes.py
+PySavvyApi/SavvyMain.py
+PySavvyApi/__init__.py
+SapFlowSavvy.egg-info/PKG-INFO
+SapFlowSavvy.egg-info/SOURCES.txt
+SapFlowSavvy.egg-info/dependency_links.txt
+SapFlowSavvy.egg-info/requires.txt
+SapFlowSavvy.egg-info/top_level.txt
+VbaAPI/VBASapGuiHelper.vbs
+docs/Index.md
+docs/SapGuiScript.md
