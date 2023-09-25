@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: scriptman
+Version: 0.0.0.1
+Summary: Script Manager assists with managing python scripts.
+Author: Nelson Ombuya
+Author-email: nelson.ombuya@zohomail.com
+Keywords: python,scripts,etl,selenium
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+Requires-Dist: attrs
+Requires-Dist: certifi
+Requires-Dist: cffi
+Requires-Dist: charset-normalizer
+Requires-Dist: colorama
+Requires-Dist: exception-group
+Requires-Dist: greenlet
+Requires-Dist: h11
+Requires-Dist: idna
+Requires-Dist: numpy
+Requires-Dist: outcome
+Requires-Dist: packaging
+Requires-Dist: pandas
+Requires-Dist: pycparser
+Requires-Dist: pyodbc
+Requires-Dist: PySocks
+Requires-Dist: python-dateutil
+Requires-Dist: python-dotenv
+Requires-Dist: pytz
+Requires-Dist: requests
+Requires-Dist: selenium
+Requires-Dist: six
+Requires-Dist: sniffio
+Requires-Dist: sortedcontainers
+Requires-Dist: tqdm
+Requires-Dist: trio
+Requires-Dist: trio-websocket
+Requires-Dist: typing-extensions
+Requires-Dist: tzdata
+Requires-Dist: urllib3
+Requires-Dist: webdriver-manager
+Requires-Dist: wsproto
+
