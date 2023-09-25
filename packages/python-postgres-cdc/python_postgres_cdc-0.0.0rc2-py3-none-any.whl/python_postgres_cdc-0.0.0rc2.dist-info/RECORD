@@ -1,0 +1,13 @@
+pypgcdc/__init__.py,sha256=Hy-MODN2wBYZiCPamRSOCnCzu11tXRqGO9iy8DDtIb4,2140
+pypgcdc/__main__.py,sha256=J67FhiYMS66TnLG1sRqPkWHg6p1RZzNKnHphOX-FdT4,2085
+pypgcdc/decoders.py,sha256=1Tj4jkWsHBMawxHrBMEVlwFSw0pF2T7sILzNyK8vqm4,17417
+pypgcdc/models.py,sha256=A0AZpBJ7qDZZxBmZwB4AyJPWd45mxMt1Xr2TQDtJqWI,1680
+pypgcdc/reader.py,sha256=fJTvAGE7doJ8BNWCUL_lFnIpgqfflzZilVWm9gsrJWI,16937
+pypgcdc/stores.py,sha256=1yvJNlZWuxD7lxee_96HzppCEbPMMXY01zNDUye2gZg,6281
+pypgcdc/utils.py,sha256=nDBbFU_9wyidR08DVPJMDJpOqpPrlFOJoL77wAu_nyo,3458
+python_postgres_cdc-0.0.0rc2.dist-info/LICENSE,sha256=FL3iRhiAMn6Qlh4reacmmoVYS50FVZkMKp-1iJKCVU4,1109
+python_postgres_cdc-0.0.0rc2.dist-info/METADATA,sha256=Tf5Zc7FY0BaJOmer-VmAuUkF1RHr08-H7kw0i3gpIFg,5103
+python_postgres_cdc-0.0.0rc2.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+python_postgres_cdc-0.0.0rc2.dist-info/entry_points.txt,sha256=zI99oiUXQwUubizz20CgmON6WjDKSy4gUV8IOd-ua6A,50
+python_postgres_cdc-0.0.0rc2.dist-info/top_level.txt,sha256=zGwNYs_Mc8C557gGRhOnZ4io-3ec8zyRbzo2jdEHhCc,8
+python_postgres_cdc-0.0.0rc2.dist-info/RECORD,,
