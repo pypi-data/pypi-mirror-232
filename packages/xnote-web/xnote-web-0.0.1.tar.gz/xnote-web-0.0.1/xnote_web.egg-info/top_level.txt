@@ -1,0 +1,8 @@
+config
+core
+handlers
+lib
+static
+tests
+xnote
+xutils
