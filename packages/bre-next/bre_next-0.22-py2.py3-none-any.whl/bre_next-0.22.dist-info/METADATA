@@ -1,0 +1,102 @@
+Metadata-Version: 2.1
+Name: bre-next
+Version: 0.22
+Summary: Business Rules Engine Core
+Author: ISPnext B.V.
+Author-email: support@ispnext.com
+License: Private
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: lxml
+Requires-Dist: Click
+Requires-Dist: requests
+Requires-Dist: Babel
+Provides-Extra: coverage
+Requires-Dist: pytest-cov ; extra == 'coverage'
+Provides-Extra: dev
+Requires-Dist: pre-commit ; extra == 'dev'
+Requires-Dist: pdbpp ; extra == 'dev'
+Requires-Dist: black ; extra == 'dev'
+Requires-Dist: isort ; extra == 'dev'
+Requires-Dist: flake8 ; extra == 'dev'
+Provides-Extra: docs
+Requires-Dist: sphinx ; extra == 'docs'
+Provides-Extra: pycodestyle
+Requires-Dist: flake8 ; extra == 'pycodestyle'
+Provides-Extra: release
+Requires-Dist: zest.releaser ; extra == 'release'
+Provides-Extra: tests
+Requires-Dist: pytest ; extra == 'tests'
+Requires-Dist: tox ; extra == 'tests'
+Requires-Dist: isort ; extra == 'tests'
+Requires-Dist: black ; extra == 'tests'
+
+=====================
+BUSINESS RULES ENGINE
+=====================
+
+The Business Rules Engine is a separate application before ISP-Invoice.
+
+The application is created to enrich and/or transform data in the XML via
+customer specific business rules, right before importing in ISP-Invoice
+
+It can also be used without ISP-SmartScan to enrich XMLs from ie. IDT,
+InvoiceSharing and other EDI-sources.
+
+Getting started
+===============
+
+Setting up the development environment takes some steps, which are outlined
+below.
+
+### Installing dependencies
+---------------------------
+
+Ensure you have a virtualenv created and activated in the root-directory
+- virtualenv --python=python3 env
+- source env/bin/activate
+
+Install the dev dependencies with **
+- pip install -e ".[tests,pycodestyle,docs,dev,release]"
+
+** Installing on Mac needs the quotes, where Windows/Linux might not.
+Details: https://zsh.sourceforge.io/Guide/zshguide05.html#l137
+
+Run unit-tests
+==============
+
+Ensure you have a virtualenv created and activated in the root-directory
+Simply run Pytest
+- pytest
+
+
+Code coverage
+=============
+
+To view how many code has been covered during tests we use Coverage
+
+Ensure you have a virtualenv created and activated in the root-directory
+Run coverage
+- coverage run --source bre -m py.test
+Or to export to HTML
+- coverage html -d coverage_html
+
+
+Command line tool
+=================
+
+To start the BRE-tool via command line use the following command
+- bretool URL-TO-INFO-API
+Example:
+- bretool http://localhost:8000/bre/api/info
+
+Optional;y add debug-information in log-file;
+- bretool http://localhost:8000/bre/api/info --loglevel=DEBUG
+
+Optionally use a different log-file
+- bretool http://localhost:8000/bre/api/info --logfile=PATH_TO_FILE

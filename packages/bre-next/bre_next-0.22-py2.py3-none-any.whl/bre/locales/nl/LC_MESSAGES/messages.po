@@ -1,0 +1,506 @@
+# Dutch translations for PROJECT.
+# Copyright (C) 2017 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2023-08-21 14:51+0200\n"
+"PO-Revision-Date: 2017-07-27 10:44+0200\n"
+"Last-Translator: \n"
+"Language: nl\n"
+"Language-Team: nl <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+msgid "set"
+msgstr "zet"
+
+msgid "delete"
+msgstr "verwijder"
+
+msgid "strip"
+msgstr "strip"
+
+msgid "string_left_string"
+msgstr "str. links"
+
+msgid "string_left_integer"
+msgstr "str. links (element)"
+
+msgid "string_right_string"
+msgstr "str. rechts"
+
+msgid "string_right_integer"
+msgstr "str. rechts (element)"
+
+msgid "string_leftback_string"
+msgstr "str. linksachter"
+
+msgid "string_leftback_integer"
+msgstr "str. linksachter (element)"
+
+msgid "string_rightback_string"
+msgstr "str. rechtachter"
+
+msgid "string_rightback_integer"
+msgstr "str. rechtachter (element)"
+
+msgid "prefix"
+msgstr "prefix"
+
+msgid "postfix"
+msgstr "postfix"
+
+msgid "absolute"
+msgstr "Absoluut"
+
+msgid "negative"
+msgstr "Negatief"
+
+msgid "equals"
+msgstr "is gelijk aan"
+
+msgid "equals_insensitive"
+msgstr "is gelijk aan (insensitive)"
+
+msgid "not_equals"
+msgstr "is niet gelijk aan"
+
+msgid "not_equals_insensitive"
+msgstr "is niet gelijk aan (insensitive)"
+
+msgid "empty"
+msgstr "is leeg"
+
+msgid "is_not_empty"
+msgstr "is niet leeg"
+
+msgid "starts_with"
+msgstr "begint met"
+
+msgid "starts_with_insensitive"
+msgstr "begint met (insensitive)"
+
+msgid "starts_not_with"
+msgstr "begint niet met"
+
+msgid "starts_not_with_insensitive"
+msgstr "begint niet met (insensitive)"
+
+msgid "ends_with"
+msgstr "eindigt met"
+
+msgid "ends_with_insensitive"
+msgstr "eindigt met (insensitive)"
+
+msgid "ends_not_with"
+msgstr "eindigt niet met"
+
+msgid "ends_not_with_insensitive"
+msgstr "eindigt niet met (insensitive)"
+
+msgid "contains"
+msgstr "bevat"
+
+msgid "contains_insensitive"
+msgstr "bevat (insensitive)"
+
+msgid "not_contains"
+msgstr "bevat niet"
+
+msgid "not_contains_insensitive"
+msgstr "bevat niet (insensitive)"
+
+msgid "match_regex"
+msgstr "match via regex"
+
+msgid "not_match_regex"
+msgstr "geen match via regex"
+
+msgid "greater_than"
+msgstr "groter dan"
+
+msgid "smaller_than"
+msgstr "kleiner dan"
+
+msgid "true"
+msgstr "true"
+
+msgid "false"
+msgstr "false"
+
+msgid "base_country"
+msgstr "Basisland"
+
+msgid "posting_date"
+msgstr "Boekingsdatum"
+
+msgid "business_area"
+msgstr "Business area"
+
+msgid "company_code"
+msgstr "Bedrijfscode"
+
+msgid "credit_limit"
+msgstr "Kredietbeperking"
+
+msgid "document_text"
+msgstr "Koptekst"
+
+msgid "header_text_01"
+msgstr "Omschrijving 1 (factuurkop)"
+
+msgid "header_text_02"
+msgstr "Omschrijving 2 (factuurkop)"
+
+msgid "header_text_03"
+msgstr "Omschrijving 3 (factuurkop)"
+
+msgid "invoice_type"
+msgstr "Factuurtype"
+
+msgid "vendor_invoice_date"
+msgstr "Factuurdatum"
+
+msgid "vendor_invoice_number"
+msgstr "Factuurnummer"
+
+msgid "debit_credit"
+msgstr "Debet/credit"
+
+msgid "Debit"
+msgstr "Debet"
+
+msgid "Credit"
+msgstr "Credit"
+
+msgid "blocked_amount"
+msgstr "Geblokeerd bedrag / G-rekening"
+
+msgid "structured_statement"
+msgstr "Betalings kenmerk"
+
+msgid "payment_id"
+msgstr "Betalings ID"
+
+msgid "reviewer"
+msgstr "Controleur"
+
+msgid "routing_code"
+msgstr "Routeercode"
+
+msgid "tax_date"
+msgstr "Belasting datum"
+
+msgid "invoice_amount"
+msgstr "Factuurbedrag"
+
+msgid "currency_code"
+msgstr "Valuta"
+
+msgid "header_userarea01"
+msgstr "Header UserArea 01"
+
+msgid "header_userarea02"
+msgstr "Header UserArea 02"
+
+msgid "header_userarea03"
+msgstr "Header UserArea 03"
+
+msgid "header_userarea04"
+msgstr "Header UserArea 04"
+
+msgid "header_userarea05"
+msgstr "Header UserArea 05"
+
+msgid "header_userarea06"
+msgstr "Header UserArea 06"
+
+msgid "header_userarea07"
+msgstr "Header UserArea 07"
+
+msgid "header_userarea08"
+msgstr "Header UserArea 08"
+
+msgid "header_userarea09"
+msgstr "Header UserArea 09"
+
+msgid "header_userarea10"
+msgstr "Header UserArea 10"
+
+msgid "assignment"
+msgstr "Toewijzing"
+
+msgid "order_number"
+msgstr "Bestelnummer"
+
+msgid "order_order_number"
+msgstr "Bestelnummer (voor codeerregels)"
+
+msgid "po_lookup"
+msgstr "PO. lookup"
+
+msgid "po_lookups_po_lookup"
+msgstr "PO. lookup (voor codeerregels)"
+
+msgid "customerparty_department"
+msgstr "Ontvangende partij vestiging"
+
+msgid "customerparty_gln"
+msgstr "Ontvangende partij GLN (OY)"
+
+msgid "customerparty_name"
+msgstr "Ontvangende partij naam"
+
+msgid "customerparty_number"
+msgstr "Ontvangende partij nummer"
+
+msgid "customerparty_taxid"
+msgstr "Ontvangende partij BTW-nummer"
+
+msgid "customerparty_address"
+msgstr "Ontvangende partij adres"
+
+msgid "customerparty_bankaccount"
+msgstr "Ontvangende partij bankrekening"
+
+msgid "customerparty_coc"
+msgstr "Ontvangende partij KvK"
+
+msgid "customerparty_city"
+msgstr "Ontvangende partij plaats"
+
+msgid "customerparty_country"
+msgstr "Ontvangende partij land"
+
+msgid "customerparty_postal"
+msgstr "Ontvangende partij postcode"
+
+msgid "customerparty_telephone"
+msgstr "Ontvangende partij telefoon"
+
+msgid "customerparty_contactdesc"
+msgstr "Ontvangende partij contact-omschrijving"
+
+msgid "initiating_party_gln"
+msgstr "Versturende partij GLN (PR)"
+
+msgid "initiating_party_name"
+msgstr "Initiërende party naam"
+
+msgid "shiptoparty_gln"
+msgstr "Tussenliggende partij GLN (ST)"
+
+msgid "vendor_department"
+msgstr "Leverancier adfdeling"
+
+msgid "vendor_gln"
+msgstr "Leverancier GLN (VN)"
+
+msgid "vendor_name"
+msgstr "Leveranciersnaam"
+
+msgid "vendor_number"
+msgstr "Leveranciersnummer"
+
+msgid "vendor_vat_id"
+msgstr "Leverancier BTW-nummer"
+
+msgid "vendor_address"
+msgstr "Leverancier adres"
+
+msgid "vendor_bank_account"
+msgstr "Leveranciers bankrekening"
+
+msgid "vendor_coc"
+msgstr "Leverancier kamer van koophandel"
+
+msgid "vendor_city"
+msgstr "Leverancier plaats"
+
+msgid "vendor_country"
+msgstr "Leverancier land"
+
+msgid "vendor_postal"
+msgstr "Leverancier postcode"
+
+msgid "vendor_telephone"
+msgstr "Leverancier telefoonnummer"
+
+msgid "vendor_contactdesc"
+msgstr "Leverancier contact"
+
+msgid "tax_amount"
+msgstr "BTW bedrag"
+
+msgid "tax_percent"
+msgstr "BTW percentage"
+
+msgid "tax_shifted"
+msgstr "BTW verlegd"
+
+msgid "amount_1"
+msgstr "Vrij bedrag veld 1"
+
+msgid "amount_2"
+msgstr "Vrij bedrag veld 2"
+
+msgid "amount_3"
+msgstr "Vrij bedrag veld 3"
+
+msgid "date_1"
+msgstr "Vrij datum veld 1"
+
+msgid "date_2"
+msgstr "Vrij datum veld 2"
+
+msgid "date_3"
+msgstr "Vrij datum veld 3"
+
+msgid "generic_1"
+msgstr "Vrij generiek veld 1"
+
+msgid "generic_2"
+msgstr "Vrij generiek veld 2"
+
+msgid "generic_3"
+msgstr "Vrij generiek veld 3"
+
+msgid "freightcosts"
+msgstr "Vrachtkosten"
+
+msgid "ordercosts"
+msgstr "Bestelkosten"
+
+msgid "packagingcosts"
+msgstr "Verpakkingskosten"
+
+msgid "additional_coding"
+msgstr "Additioneel coderen"
+
+msgid "target_group"
+msgstr "Target group"
+
+msgid "scan_operator"
+msgstr "Scanoperator"
+
+msgid "scan_source"
+msgstr "Scanbron"
+
+msgid "mail_company_code"
+msgstr "Email bedrijfscode"
+
+msgid "from_address"
+msgstr "Email-adres (van)"
+
+msgid "mail_date"
+msgstr "Email datum"
+
+msgid "mail_subject"
+msgstr "Email onderwerp"
+
+msgid "to_address"
+msgstr "Email-adres (naar)"
+
+msgid "Line ArticleNumber"
+msgstr ""
+
+msgid "Line description"
+msgstr ""
+
+msgid "Line InternalArticleNumber"
+msgstr ""
+
+msgid "Line ItemAmount"
+msgstr "Factuurbedrag"
+
+msgid "Line Quantity"
+msgstr ""
+
+msgid "Line ItemUnit"
+msgstr ""
+
+msgid "Line Number"
+msgstr "Bestelnummer"
+
+msgid "Line Note"
+msgstr ""
+
+msgid "Line OrderLineNumber"
+msgstr "Bestelnummer"
+
+msgid "Line OrderNumber"
+msgstr "Bestelnummer"
+
+msgid "Line TotalAmount"
+msgstr ""
+
+msgid "line_userarea01"
+msgstr "Line UserArea 01"
+
+msgid "line_userarea02"
+msgstr "Line UserArea 02"
+
+msgid "line_userarea03"
+msgstr "Line UserArea 03"
+
+msgid "line_userarea04"
+msgstr "Line UserArea 04"
+
+msgid "line_userarea05"
+msgstr "Line UserArea 05"
+
+msgid "line_userarea06"
+msgstr "Line UserArea 06"
+
+msgid "line_userarea07"
+msgstr "Line UserArea 07"
+
+msgid "line_userarea08"
+msgstr "Line UserArea 08"
+
+msgid "line_userarea09"
+msgstr "Line UserArea 09"
+
+msgid "line_userarea10"
+msgstr "Line UserArea 10"
+
+msgid "Linecoding Amount"
+msgstr ""
+
+msgid "Linecoding Asset"
+msgstr ""
+
+msgid "Linecoding Costcenter"
+msgstr ""
+
+msgid "Linecoding Description"
+msgstr ""
+
+msgid "Linecoding Generalledger"
+msgstr ""
+
+msgid "Linecoding Project"
+msgstr ""
+
+msgid "Linecoding Taxcode"
+msgstr ""
+
+msgid "extension_000000_amount"
+msgstr ""
+
+msgid "extension_000000_description"
+msgstr ""
+
+msgid "custom_str0"
+msgstr ""
+
+msgid "custom_bool0"
+msgstr ""
+
