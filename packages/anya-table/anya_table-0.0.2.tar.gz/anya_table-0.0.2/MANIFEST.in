@@ -1,0 +1,11 @@
+include anya_table/anya_table.min.js
+include anya_table/anya_table.min.js.map
+include anya_table/async-*.js
+include anya_table/async-*.js.map
+include anya_table/*-shared.js
+include anya_table/*-shared.js.map
+include anya_table/metadata.json
+include anya_table/package-info.json
+include README.md
+include LICENSE
+include package.json

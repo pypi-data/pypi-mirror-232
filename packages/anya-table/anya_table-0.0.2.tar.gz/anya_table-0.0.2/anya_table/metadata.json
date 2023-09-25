@@ -1,0 +1,1086 @@
+{
+  "src/lib/components/AnyaTable.react.js": {
+    "description": "An Ant Design Table component\nSee https://ant.design/components/table",
+    "displayName": "AnyaTable",
+    "methods": [],
+    "props": {
+      "id": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The ID used to identify this component"
+      },
+      "className": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "object"
+            }
+          ]
+        },
+        "required": false,
+        "description": "CSS classes to be added to the component"
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "Inline CSS style"
+      },
+      "columns": {
+        "type": {
+          "name": "arrayOf",
+          "value": {
+            "name": "exact",
+            "value": {
+              "title": {
+                "name": "union",
+                "value": [
+                  {
+                    "name": "func"
+                  },
+                  {
+                    "name": "node"
+                  },
+                  {
+                    "name": "string"
+                  }
+                ],
+                "required": true
+              },
+              "dataIndex": {
+                "name": "string",
+                "required": true
+              },
+              "group": {
+                "name": "union",
+                "value": [
+                  {
+                    "name": "string"
+                  },
+                  {
+                    "name": "arrayOf",
+                    "value": {
+                      "name": "string"
+                    }
+                  }
+                ],
+                "required": false
+              },
+              "renderOptions": {
+                "name": "exact",
+                "value": {
+                  "renderType": {
+                    "name": "enum",
+                    "value": [
+                      {
+                        "value": "'icon'",
+                        "computed": false
+                      },
+                      {
+                        "value": "'link'",
+                        "computed": false
+                      },
+                      {
+                        "value": "'checkbox'",
+                        "computed": false
+                      },
+                      {
+                        "value": "'checkboxgroup'",
+                        "computed": false
+                      },
+                      {
+                        "value": "'tag'",
+                        "computed": false
+                      },
+                      {
+                        "value": "'tags'",
+                        "computed": false
+                      },
+                      {
+                        "value": "'radiogroup'",
+                        "computed": false
+                      }
+                    ],
+                    "required": false
+                  }
+                },
+                "required": false
+              },
+              "key": {
+                "name": "string",
+                "required": false
+              },
+              "colSpan": {
+                "name": "number",
+                "required": false
+              },
+              "rowSpan": {
+                "name": "object",
+                "required": false
+              },
+              "colSpanRow": {
+                "name": "object",
+                "required": false
+              },
+              "className": {
+                "name": "string",
+                "required": false
+              },
+              "fixed": {
+                "name": "enum",
+                "value": [
+                  {
+                    "value": "'left'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'right'",
+                    "computed": false
+                  }
+                ],
+                "required": false
+              },
+              "align": {
+                "name": "enum",
+                "value": [
+                  {
+                    "value": "'left'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'center'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'right'",
+                    "computed": false
+                  }
+                ],
+                "required": false
+              },
+              "width": {
+                "name": "union",
+                "value": [
+                  {
+                    "name": "number"
+                  },
+                  {
+                    "name": "string"
+                  }
+                ],
+                "required": false
+              },
+              "hidden": {
+                "name": "bool",
+                "required": false
+              },
+              "filters": {
+                "name": "array",
+                "required": false
+              },
+              "search": {
+                "name": "bool",
+                "required": false
+              },
+              "filterResetToDefaultFilteredValue": {
+                "name": "bool",
+                "required": false
+              },
+              "rotated": {
+                "name": "bool",
+                "required": false
+              },
+              "ellipsis": {
+                "name": "any",
+                "required": false
+              },
+              "sorter": {
+                "name": "any",
+                "required": false
+              },
+              "render": {
+                "name": "any",
+                "required": false
+              },
+              "onCell": {
+                "name": "any",
+                "required": false
+              }
+            }
+          }
+        },
+        "required": false,
+        "description": "Columns"
+      },
+      "data": {
+        "type": {
+          "name": "arrayOf",
+          "value": {
+            "name": "objectOf",
+            "value": {
+              "name": "union",
+              "value": [
+                {
+                  "name": "arrayOf",
+                  "value": {
+                    "name": "any"
+                  }
+                },
+                {
+                  "name": "node"
+                },
+                {
+                  "name": "string"
+                },
+                {
+                  "name": "number"
+                },
+                {
+                  "name": "exact",
+                  "value": {
+                    "content": {
+                      "name": "union",
+                      "value": [
+                        {
+                          "name": "number"
+                        },
+                        {
+                          "name": "string"
+                        }
+                      ],
+                      "required": false
+                    },
+                    "className": {
+                      "name": "string",
+                      "required": false
+                    }
+                  }
+                },
+                {
+                  "name": "exact",
+                  "value": {
+                    "id": {
+                      "name": "union",
+                      "value": [
+                        {
+                          "name": "string"
+                        },
+                        {
+                          "name": "object"
+                        }
+                      ],
+                      "required": false
+                    },
+                    "style": {
+                      "name": "object",
+                      "required": false
+                    },
+                    "icon": {
+                      "name": "string",
+                      "required": false
+                    },
+                    "className": {
+                      "name": "string",
+                      "required": false
+                    }
+                  }
+                },
+                {
+                  "name": "exact",
+                  "value": {
+                    "content": {
+                      "name": "union",
+                      "value": [
+                        {
+                          "name": "number"
+                        },
+                        {
+                          "name": "string"
+                        }
+                      ],
+                      "required": false
+                    },
+                    "href": {
+                      "name": "string",
+                      "required": false
+                    },
+                    "disabled": {
+                      "name": "bool",
+                      "required": false
+                    },
+                    "target": {
+                      "name": "string",
+                      "required": false
+                    }
+                  }
+                },
+                {
+                  "name": "exact",
+                  "value": {
+                    "content": {
+                      "name": "union",
+                      "value": [
+                        {
+                          "name": "number"
+                        },
+                        {
+                          "name": "string"
+                        },
+                        {
+                          "name": "node"
+                        }
+                      ],
+                      "required": false
+                    },
+                    "checked": {
+                      "name": "bool",
+                      "required": false
+                    },
+                    "id": {
+                      "name": "string",
+                      "required": false
+                    },
+                    "disabled": {
+                      "name": "bool",
+                      "required": false
+                    },
+                    "labelMode": {
+                      "name": "enum",
+                      "value": [
+                        {
+                          "value": "'regular'",
+                          "computed": false
+                        },
+                        {
+                          "value": "'button'",
+                          "computed": false
+                        },
+                        {
+                          "value": "'icon'",
+                          "computed": false
+                        }
+                      ],
+                      "required": false
+                    },
+                    "className": {
+                      "name": "string",
+                      "required": false
+                    },
+                    "icon": {
+                      "name": "exact",
+                      "value": {
+                        "style": {
+                          "name": "object",
+                          "required": false
+                        }
+                      },
+                      "required": false
+                    }
+                  }
+                },
+                {
+                  "name": "exact",
+                  "value": {
+                    "id": {
+                      "name": "string",
+                      "required": false
+                    },
+                    "options": {
+                      "name": "arrayOf",
+                      "value": {
+                        "name": "union",
+                        "value": [
+                          {
+                            "name": "string"
+                          },
+                          {
+                            "name": "number"
+                          },
+                          {
+                            "name": "exact",
+                            "value": {
+                              "label": {
+                                "name": "node",
+                                "required": false
+                              },
+                              "value": {
+                                "name": "union",
+                                "value": [
+                                  {
+                                    "name": "string"
+                                  },
+                                  {
+                                    "name": "number"
+                                  }
+                                ],
+                                "required": false
+                              },
+                              "disabled": {
+                                "name": "bool",
+                                "required": false
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      "required": false
+                    },
+                    "value": {
+                      "name": "union",
+                      "value": [
+                        {
+                          "name": "string"
+                        },
+                        {
+                          "name": "number"
+                        }
+                      ],
+                      "required": false
+                    },
+                    "disabled": {
+                      "name": "bool",
+                      "required": false
+                    }
+                  }
+                },
+                {
+                  "name": "exact",
+                  "value": {
+                    "id": {
+                      "name": "string",
+                      "required": false
+                    },
+                    "options": {
+                      "name": "arrayOf",
+                      "value": {
+                        "name": "union",
+                        "value": [
+                          {
+                            "name": "string"
+                          },
+                          {
+                            "name": "number"
+                          },
+                          {
+                            "name": "exact",
+                            "value": {
+                              "label": {
+                                "name": "node",
+                                "required": false
+                              },
+                              "value": {
+                                "name": "union",
+                                "value": [
+                                  {
+                                    "name": "string"
+                                  },
+                                  {
+                                    "name": "number"
+                                  }
+                                ],
+                                "required": false
+                              },
+                              "disabled": {
+                                "name": "bool",
+                                "required": false
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      "required": false
+                    },
+                    "value": {
+                      "name": "arrayOf",
+                      "value": {
+                        "name": "union",
+                        "value": [
+                          {
+                            "name": "string"
+                          },
+                          {
+                            "name": "number"
+                          }
+                        ]
+                      },
+                      "required": false
+                    },
+                    "disabled": {
+                      "name": "bool",
+                      "required": false
+                    },
+                    "labelMode": {
+                      "name": "enum",
+                      "value": [
+                        {
+                          "value": "'regular'",
+                          "computed": false
+                        },
+                        {
+                          "value": "'button'",
+                          "computed": false
+                        }
+                      ],
+                      "required": false
+                    },
+                    "className": {
+                      "name": "string",
+                      "required": false
+                    }
+                  }
+                },
+                {
+                  "name": "exact",
+                  "value": {
+                    "content": {
+                      "name": "union",
+                      "value": [
+                        {
+                          "name": "number"
+                        },
+                        {
+                          "name": "string"
+                        },
+                        {
+                          "name": "node"
+                        }
+                      ],
+                      "required": false
+                    },
+                    "color": {
+                      "name": "string",
+                      "required": false
+                    },
+                    "href": {
+                      "name": "string",
+                      "required": false
+                    },
+                    "style": {
+                      "name": "object",
+                      "required": false
+                    },
+                    "bordered": {
+                      "name": "bool",
+                      "required": false
+                    },
+                    "fullwidth": {
+                      "name": "bool",
+                      "required": false
+                    }
+                  }
+                },
+                {
+                  "name": "arrayOf",
+                  "value": {
+                    "name": "exact",
+                    "value": {
+                      "content": {
+                        "name": "union",
+                        "value": [
+                          {
+                            "name": "number"
+                          },
+                          {
+                            "name": "string"
+                          },
+                          {
+                            "name": "node"
+                          }
+                        ],
+                        "required": false
+                      },
+                      "color": {
+                        "name": "string",
+                        "required": false
+                      },
+                      "href": {
+                        "name": "string",
+                        "required": false
+                      },
+                      "style": {
+                        "name": "object",
+                        "required": false
+                      },
+                      "bordered": {
+                        "name": "bool",
+                        "required": false
+                      },
+                      "fullwidth": {
+                        "name": "bool",
+                        "required": false
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "required": false,
+        "description": "Column data"
+      },
+      "bordered": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Bordered"
+      },
+      "maxHeight": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "Set max height"
+      },
+      "maxWidth": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "Set max width"
+      },
+      "size": {
+        "type": {
+          "name": "enum",
+          "value": [
+            {
+              "value": "'small'",
+              "computed": false
+            },
+            {
+              "value": "'default'",
+              "computed": false
+            },
+            {
+              "value": "'large'",
+              "computed": false
+            }
+          ]
+        },
+        "required": false,
+        "description": "Size",
+        "defaultValue": {
+          "value": "'small'",
+          "computed": false
+        }
+      },
+      "pagination": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "exact",
+              "value": {
+                "position": {
+                  "name": "enum",
+                  "value": [
+                    {
+                      "value": "'topLeft'",
+                      "computed": false
+                    },
+                    {
+                      "value": "'topCenter'",
+                      "computed": false
+                    },
+                    {
+                      "value": "'topRight'",
+                      "computed": false
+                    },
+                    {
+                      "value": "'bottomLeft'",
+                      "computed": false
+                    },
+                    {
+                      "value": "'bottomCenter'",
+                      "computed": false
+                    },
+                    {
+                      "value": "'bottomRight'",
+                      "computed": false
+                    }
+                  ],
+                  "required": false
+                },
+                "pageSize": {
+                  "name": "number",
+                  "required": false
+                },
+                "current": {
+                  "name": "number",
+                  "required": false
+                },
+                "showSizeChanger": {
+                  "name": "bool",
+                  "required": false
+                },
+                "pageSizeOptions": {
+                  "name": "arrayOf",
+                  "value": {
+                    "name": "number"
+                  },
+                  "required": false
+                },
+                "showTotal": {
+                  "name": "bool",
+                  "required": false
+                },
+                "showQuickJumper": {
+                  "name": "bool",
+                  "required": false
+                },
+                "showTotalPrefix": {
+                  "name": "string",
+                  "required": false
+                },
+                "showTotalSuffix": {
+                  "name": "string",
+                  "required": false
+                },
+                "hideOnSinglePage": {
+                  "name": "bool",
+                  "required": false
+                },
+                "simple": {
+                  "name": "bool",
+                  "required": false
+                },
+                "disabled": {
+                  "name": "bool",
+                  "required": false
+                },
+                "size": {
+                  "name": "enum",
+                  "value": [
+                    {
+                      "value": "'default'",
+                      "computed": false
+                    },
+                    {
+                      "value": "'small'",
+                      "computed": false
+                    }
+                  ],
+                  "required": false
+                },
+                "total": {
+                  "name": "number",
+                  "required": false
+                }
+              }
+            },
+            {
+              "name": "bool"
+            },
+            {
+              "name": "object"
+            }
+          ]
+        },
+        "required": false,
+        "description": "Config of pagination. You can ref table pagination config or full pagination document, hide it by setting it to false",
+        "defaultValue": {
+          "value": "{\n    defaultPageSize: 20,\n    hideOnSinglePage: true,\n    showSizeChanger: false,\n}",
+          "computed": false
+        }
+      },
+      "cellUpdateOptimize": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Whether to allow cell content rendering",
+        "defaultValue": {
+          "value": "true",
+          "computed": false
+        }
+      },
+      "selectedValues": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "array"
+            },
+            {
+              "name": "object"
+            },
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": "Selected values",
+        "defaultValue": {
+          "value": "[]",
+          "computed": false
+        }
+      },
+      "setProps": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Dash-assigned callback that should be called to report property changes\nto Dash, to make them available for callbacks."
+      },
+      "loading_state": {
+        "type": {
+          "name": "shape",
+          "value": {
+            "is_loading": {
+              "name": "bool",
+              "description": "Determines if the component is loading or not",
+              "required": false
+            },
+            "prop_name": {
+              "name": "string",
+              "description": "Holds which property is loading",
+              "required": false
+            },
+            "component_name": {
+              "name": "string",
+              "description": "Holds the name of the component that is loading",
+              "required": false
+            }
+          }
+        },
+        "required": false,
+        "description": "Loading state"
+      }
+    }
+  },
+  "src/lib/components/AnyaTheme.react.js": {
+    "description": "An Ant Design ConfigProvider\nSee https://ant.design/docs/react/customize-theme",
+    "displayName": "AnyaTheme",
+    "methods": [],
+    "props": {
+      "children": {
+        "type": {
+          "name": "node"
+        },
+        "required": false,
+        "description": "Child components inside the space"
+      },
+      "colorPrimary": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Primary color",
+        "defaultValue": {
+          "value": "'#6366f1'",
+          "computed": false
+        }
+      },
+      "colorSuccess": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Success color",
+        "defaultValue": {
+          "value": "'#13c2b7'",
+          "computed": false
+        }
+      },
+      "colorWarning": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Warning color",
+        "defaultValue": {
+          "value": "'#faad14'",
+          "computed": false
+        }
+      },
+      "colorInfo": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Info color",
+        "defaultValue": {
+          "value": "'#6366f1'",
+          "computed": false
+        }
+      },
+      "colorTextBase": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Text color",
+        "defaultValue": {
+          "value": "'#424245'",
+          "computed": false
+        }
+      },
+      "colorBgLayout": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Layout background color",
+        "defaultValue": {
+          "value": "'#f0f2f5'",
+          "computed": false
+        }
+      },
+      "colorBgContainer": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Container background color",
+        "defaultValue": {
+          "value": "'#ffffff'",
+          "computed": false
+        }
+      },
+      "fontSize": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "Font size",
+        "defaultValue": {
+          "value": "12",
+          "computed": false
+        }
+      },
+      "fontFamily": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Font family",
+        "defaultValue": {
+          "value": "\"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'\"",
+          "computed": false
+        }
+      },
+      "wireframe": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Wireframe",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      }
+    }
+  },
+  "src/lib/components/AnyaTitle.react.js": {
+    "description": "An Ant Design Title component\nSee https://ant.design/components/typography",
+    "displayName": "AnyaTitle",
+    "methods": [],
+    "props": {
+      "children": {
+        "type": {
+          "name": "node"
+        },
+        "required": false,
+        "description": "Child components inside the layout"
+      },
+      "id": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The ID used to identify this component"
+      },
+      "className": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "CSS classes to be added to the component"
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "Inline CSS style"
+      },
+      "level": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "Sets the level of the title. Possible values are integers between 1 and 5, corresponding to h1 to h5.\nDefault is 1.",
+        "defaultValue": {
+          "value": "1",
+          "computed": false
+        }
+      },
+      "strikethrough": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Sets whether to render the content with strikethrough mode."
+      },
+      "strong": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Sets whether the content should be bold."
+      },
+      "italic": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Sets whether the content should be italic."
+      },
+      "underline": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Sets whether to add underline."
+      },
+      "type": {
+        "type": {
+          "name": "enum",
+          "value": [
+            {
+              "value": "'secondary'",
+              "computed": false
+            },
+            {
+              "value": "'success'",
+              "computed": false
+            },
+            {
+              "value": "'warning'",
+              "computed": false
+            },
+            {
+              "value": "'danger'",
+              "computed": false
+            }
+          ]
+        },
+        "required": false,
+        "description": "Sets the text status type for rendering. Possible options are 'secondary', 'success', 'warning', and 'danger'. Default is no status."
+      }
+    }
+  }
+}
