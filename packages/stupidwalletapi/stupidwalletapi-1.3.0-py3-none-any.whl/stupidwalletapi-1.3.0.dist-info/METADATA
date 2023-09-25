@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: stupidwalletapi
+Version: 1.3.0
+Summary: Python API for @stupidwallet_bot
+Project-URL: Homepage, https://github.com/penggrin12/stupidwalletapi
+Project-URL: Penggrin (author), https://t.me/penggrin
+Project-URL: MipohTG, https://t.me/y9mphbhh
+Project-URL: theNcore aka Nefit9087, https://t.me/thencore_new
+Author-email: Penggrin <miner.sidor@gmail.com>, MIPOHBOPOHIH <voroninmiron07@gmail.com>, "theNcore (aka Nefrit9087)" <l4499313@gmail.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Requires-Dist: httpx
+Description-Content-Type: text/markdown
+
+*Stupid Wallet API*
+
+Данный репозиторий создан для API @stupidwallet_bot
+
+Документация находится в "wiki"
+
+Для установки на iOS установите git и bash, 
+а затем инициализируйте "bash iosinstall.sh".
+
+пример использования в директории tests.
