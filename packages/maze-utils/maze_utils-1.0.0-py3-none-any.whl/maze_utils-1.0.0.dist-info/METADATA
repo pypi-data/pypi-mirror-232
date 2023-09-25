@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: maze-utils
+Version: 1.0.0
+Summary: A maze generator and solution generator
+Author: Robert C. Powel
+Author-email: robertcpowel@gmail.com
+License: MIT
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: scipy
+Provides-Extra: testing
+Requires-Dist: pytest ; extra == 'testing'
+Requires-Dist: black ; extra == 'testing'
+Requires-Dist: flake8 ; extra == 'testing'
+
+# maze_utils
+maze_utils
