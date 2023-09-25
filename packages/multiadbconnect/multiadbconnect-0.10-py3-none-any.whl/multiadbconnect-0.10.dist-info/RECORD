@@ -1,0 +1,9 @@
+multiadbconnect/README.MD,sha256=YvyA2hLEc24fkwXK7ATFfVmBlwKz-Fq5DGFQt9Wr3io,7312
+multiadbconnect/__init__.py,sha256=mgIBAvoxOuMW9dmUha-BwAQjmOkiCV_tRuO6ChVu3y0,15401
+multiadbconnect/requirements.txt,sha256=hMknK1WYfcF6_NW0t9n1q6wqx5nCMZblrnyY5h_Og0s,89
+multiadbconnect/thirdparty.json,sha256=H9gFTBdc7bg9SrupT5FzTnMBXREz1PnWYnzkkxugukc,56277
+multiadbconnect-0.10.dist-info/LICENSE.rst,sha256=57krgYrI6h5a_2WXQgGcjWo8PExV4ONSi1SPUj9Jk1g,1148
+multiadbconnect-0.10.dist-info/METADATA,sha256=XtsDywXUJg89PbLL6UqvmdZsnYk89A5jFRJQBu0Tr8o,8193
+multiadbconnect-0.10.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+multiadbconnect-0.10.dist-info/top_level.txt,sha256=u4q0vNmyOkNQ0Qm1YugnVGtSdfCS10tYgAv6_iRri-0,16
+multiadbconnect-0.10.dist-info/RECORD,,
