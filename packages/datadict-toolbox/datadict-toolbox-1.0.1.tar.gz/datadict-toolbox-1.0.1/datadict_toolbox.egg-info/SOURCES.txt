@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+datadict_toolbox/__init__.py
+datadict_toolbox/extract_from_dtsx.py
+datadict_toolbox/extract_from_sql_query.py
+datadict_toolbox/extract_from_xmla.py
+datadict_toolbox/select_gpt_deduce.py
+datadict_toolbox/usefull.py
+datadict_toolbox.egg-info/PKG-INFO
+datadict_toolbox.egg-info/SOURCES.txt
+datadict_toolbox.egg-info/dependency_links.txt
+datadict_toolbox.egg-info/requires.txt
+datadict_toolbox.egg-info/top_level.txt
