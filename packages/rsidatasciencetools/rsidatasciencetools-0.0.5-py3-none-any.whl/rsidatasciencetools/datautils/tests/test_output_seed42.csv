@@ -1,0 +1,11 @@
+taxpayertype,firstname,lastname,middlename,ethnicity,compositename,maidenname,birthday,taxid,streetno,aptno,streetname,city,zipcode,state,phoneno,email,compositeaddress
+individual,Fredrick,Stephens,Philip,Black,Fredrick Philip Stephens,,1959-04-18,844323683,511,,Us Hwy 40,Forestville,20747,MD,2403215231,Fredrick.Stephens@Stephens.net,"511 Us Hwy 40, Forestville, MD 20747"
+individual,Regina,Colson,Ben,White,Regina Ben Colson,Stuart,1968-02-22,786703760,4509,85.0,Market St,Edgewater,21037,MD,4439356073,Regina.Colson@msn.com,"4509 Market St #85, Edgewater, MD 21037"
+individual,Michael,Perry,Kevin,White,Michael Kevin Perry,,1976-02-07,49299110,5677,,Pine St,Bethesda,20894,MD,3017521875,Perry.9102@gmail.com,"5677 Pine St, Bethesda, MD 20894"
+individual,Carlos,Rosario,Gilberto,Asian,Carlos Gilberto Rosario,,1992-08-22,342137016,436,,Pennsylvania Ave,Pikesville,21282,MD,3015986791,Rosario.970@hotmail.com,"436 Pennsylvania Ave, Pikesville, MD 21282"
+individual,Van,Gardner,Victor,Asian,Van Victor Gardner,,1970-06-10,519278468,3124,,Park Ave,Baltimore,21215,MD,3014764227,Van.Gardner@protonmail.net,"3124 Park Ave, Baltimore, MD 21215"
+individual,Benjamin,Ellis,Martin,White,Benjamin Martin Ellis,,1970-12-25,663675024,9590,,Walnut St,Towson,21204,MD,2408305474,Benjamin.Ellis@hotmail.com,"9590 Walnut St, Towson, MD 21204"
+individual,Jose,Petty,Rodney,Asian,Jose Rodney Petty,,2001-03-19,963428909,7868,,Charles St,Edgewood,21040,MD,4107758928,Jose.Petty@Petty.net,"7868 Charles St, Edgewood, MD 21040"
+individual,George,Patel,Eric,Asian,George Eric Patel,,1967-11-12,706026713,95,,3rd St,Hagerstown,21749,MD,4101349063,Patel_1966@protonmail.net,"95 3rd St, Hagerstown, MD 21749"
+individual,Edward,Farrell,Tim,White,Edward Tim Farrell,,1908-12-06,229035695,826,,Oak St,Church Hill,21623,MD,4106352673,Edward.Farrell@Farrell.net,"826 Oak St, Church Hill, MD 21623"
+individual,Eugene,Cummings,Luis,TwoOrMoreRaces,Eugene Luis Cummings,,1955-09-22,282038232,121,,Charles St,Cumberland,21505,MD,3015293427,Eugene.Cummings@Cummings.net,"121 Charles St, Cumberland, MD 21505"

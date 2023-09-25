@@ -1,0 +1,116 @@
+# This docker image is used as the base setup for the hosting of 
+# the RSI Forms processing ML-based text classificaion API
+
+# if using debian image, must install python
+FROM alpine
+# FROM ubuntu:20.04
+# FROM debian:12
+# FROM python:3.9
+
+LABEL org.opencontainers.image.authors="Nick Roseveare <nroseveare@rsimail.com>" \
+    org.opencontainers.image.name="base.ml_api" \
+    org.opencontainers.image.title="RSI ML API - base image" \
+    org.opencontainers.image.description="Base image containing necessary packages/prerequisites"
+
+USER root
+SHELL ["/bin/bash", "-c"]
+
+ENV LANG=C.UTF-8 LC_ALL=C.UTF-8 TZ='America/Denver' DEBIAN_FRONTEND=noninteractive
+
+RUN apt-get update --fix-missing && apt-get upgrade -y 
+RUN apt-get install -y apt-utils
+RUN apt-get install -y wget bzip2 ca-certificates \
+    grep sed dpkg curl sudo unzip less htop screen man \
+    unixodbc-dev sqlite gpg-agent\
+    libglib2.0-0 libxext6 libsm6 libxrender1 \
+    git subversion build-essential sudo cron vim jq
+    # libgl1 \
+    #sysvinit-utils
+
+
+# apt-get install intel-opencl-icd intel-level-zero-gpu level-zero intel-media-va-driver-non-free libmfx1 libigc-dev intel-igc-cm libigdfcl-dev libigfxcmrt-dev level-zero-dev
+
+ARG NOTEBOOK_PORT USER2ADD
+
+# Expose the supervisord control page and jupyter notebook ports
+EXPOSE 9001 $NOTEBOOK_PORT
+
+# Create the app user
+RUN bash -c 'useradd -s /bin/bash -p p@ssw0rd --create-home ${USER2ADD} && mkdir -p /App /home/${USER2ADD}/.local/bin /home/${USER2ADD}/notebooks /home/${USER2ADD}/${RSI_MPL_CONFIGDIR} /home/${USER2ADD}/${RSI_AZURE_CONFIGDIR}'
+RUN bash -c 'usermod -a -G sudo ${USER2ADD}'
+
+# Copy local requirements only to preserve docker image layering 
+COPY ./rsidatasciencetools/apiutil/matchingapi/docker/bash_aliases /home/${USER2ADD}/.bash_aliases
+COPY ./rsidatasciencetools/apiutil/matchingapi/docker/bash_aliases /root/.bashrc
+
+RUN mkdir -p /var/log/supervisord/ /root/.azureml
+
+COPY ./DataScienceTools.egg-info/requires.txt /home/${USER2ADD}/requirements.txt
+RUN bash -c 'chown -R ${USER2ADD}:${USER2ADD} /App /home/${USER2ADD} /root/.azureml'
+RUN echo 'export "PATH=/home/${USER2ADD}/conda/bin:\$PATH" > /etc/profile.d/conda.sh'
+
+
+USER ${USER2ADD}
+
+ENV PY_INSTALL_PATH /home/${USER2ADD}/conda
+ENV PATH /home/${USER2ADD}/conda/bin:/usr/local/bin:/opt/conda/bin:$PATH
+ENV PYTHONPATH ${PY_INSTALL_PATH}:/usr/local/:/opt/conda/
+# Alternative way to install python and related tools - install locally for more robust behavior
+#RUN echo 'export "PATH=/opt/conda/bin:\$PATH" > ~/.bashrc' && \
+RUN wget --quiet https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda.sh && \
+    /bin/bash ~/miniconda.sh -b -p ${PY_INSTALL_PATH} && \
+    rm ~/miniconda.sh
+
+# Install base modules needed for running the API module
+# Use no-cache-dir to keep Docker image as small as possible
+# when installing python modules
+RUN conda install pip
+RUN conda update conda
+RUN pip install --no-cache-dir --upgrade pip
+RUN conda install pydantic python=3.9
+
+# optionally set up a virtual env for isolating the python modules installed
+# RUN pip install virtualenv
+# RUN virtualenv ~/pycore
+# RUN pip install supervisor ipython jupyter
+# RUN source ~/pycore/bin/activate
+
+# Install requirements, supervisord, and tools
+RUN bash -c 'pip install --upgrade setuptools'
+RUN bash -c 'pip install pip==22.3 numpy==1.21 tensorflow~=2.11.0 pytest pytest-cov wheel'
+RUN bash -c 'pip install git+https://github.com/pybind/pybind11.git#egg=pybind11'
+RUN bash -c 'pip install ipython jupyter supervisor matplotlib'
+RUN bash -c 'pip install --no-cache-dir -r ~/requirements.txt'
+
+
+USER root
+
+# Add Tini and verify - process manager to prevent zombie processes
+ENV TINI_VERSION v0.19.0
+ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /tini
+ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini.asc /tini.asc
+RUN gpg --batch --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 595E85A6B1B4779EA4DAAEC70B588DFF0527A9B7 \
+ && gpg --batch --verify /tini.asc /tini
+RUN chgrp -R ${RASA_USER} /app /tini /home/${USER2ADD}
+RUN chmod +x /tini
+RUN chmod -R 770 /app
+
+ENTRYPOINT ["/tini", "--"]
+
+
+USER ${USER2ADD}
+
+ENV HOME=/home/${USER2ADD}
+
+ENV TERM xterm
+ENV TESTIT "this"
+
+SHELL ["/bin/bash", "-c"]
+
+# Run your program under Tini
+CMD ["/bin/bash"]
+
+# Uploading:
+# docker login --username $DOCKERHUB_USERNAME --password $DOCKERHUB_PASSWORD
+# docker build -f dockerfile.base -t rsi/rsi.revx/base.ml_api:latest .
+# docker push rsi/rsi.revx/base.ml_api:latest

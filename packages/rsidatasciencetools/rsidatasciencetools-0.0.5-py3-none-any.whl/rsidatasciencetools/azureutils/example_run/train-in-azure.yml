@@ -1,0 +1,31 @@
+name: train-on-amlcompute
+model_name: sklearn-ridge-regr-diabetes
+mlflow_model_type: sklearn
+env_name: sklearn-pandas-x
+image: mcr.microsoft.com/azureml/openmpi4.1.0-cuda11.6-cudnn8-ubuntu20.04
+service_name: predict-diabetes
+local:
+- train-in-azure.yml
+- example_imports
+- ../../../rsidatasciencetools
+exclude:
+- example_run
+dependencies:
+- python==3.9.7
+- scikit-learn
+- pandas
+- numpy
+- matplotlib
+- packaging
+- pip
+- pip:
+  - mlflow
+  - azureml
+  - azureml-core
+  - azureml-defaults
+  - azureml-contrib-services
+  - azureml-contrib-dataset
+  - azureml-mlflow
+  - inference-schema
+  - sqlalchemy
+  - pymssql

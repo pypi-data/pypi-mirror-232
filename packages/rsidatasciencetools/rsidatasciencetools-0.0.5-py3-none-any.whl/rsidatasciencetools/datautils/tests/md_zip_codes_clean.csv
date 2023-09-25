@@ -1,0 +1,624 @@
+ZIPCode,Type,CommonCities,County,AreaCodes
+20588,Unique,"['Dhs', 'Camp Springs', 'Cheltenham', 'Columbia']",Howard County,410
+20601,Standard,['Waldorf'],Charles County,240; 301
+20602,Standard,"['Waldorf', 'Saint Charles']",Charles County,240; 301
+20603,Standard,"['Waldorf', 'Saint Charles']",Charles County,240; 301
+20604,Po_box,"['Waldorf', 'Saint Charles']",Charles County,240
+20606,Standard,['Abell'],St. Mary's County,301
+20607,Standard,['Accokeek'],Prince George's County,301
+20608,Standard,"['Aquasco', 'Eagle Harbor']",Prince George's County,240
+20609,Standard,['Avenue'],St. Mary's County,301
+20610,Po_box,['Barstow'],Calvert County,410
+20611,Standard,['Bel Alton'],Charles County,240; 301
+20612,Po_box,['Benedict'],Charles County,240
+20613,Standard,['Brandywine'],Prince George's County,240; 301
+20615,Standard,"['Broomes Island', 'Broomes Is']",Calvert County,410
+20616,Standard,['Bryans Road'],Charles County,301
+20617,Standard,['Bryantown'],Charles County,240
+20618,Standard,['Bushwood'],St. Mary's County,301
+20619,Standard,['California'],St. Mary's County,301
+20620,Standard,['Callaway'],St. Mary's County,301; 240
+20621,Standard,"['Chaptico', 'Maddox']",St. Mary's County,301
+20622,Standard,"['Charlotte Hall', 'Charlott Hall']",Charles County,240
+20623,Standard,['Cheltenham'],Prince George's County,240; 301
+20624,Standard,['Clements'],St. Mary's County,240
+20625,Po_box,['Cobb Island'],Charles County,240
+20626,Standard,['Coltons Point'],St. Mary's County,240
+20627,Po_box,['Compton'],St. Mary's County,240
+20628,Standard,['Dameron'],St. Mary's County,240
+20629,Po_box,['Dowell'],Calvert County,410
+20630,Standard,['Drayden'],St. Mary's County,301
+20632,Standard,['Faulkner'],Charles County,240
+20634,Standard,['Great Mills'],St. Mary's County,240; 301
+20635,Po_box,"['Helen', ""St Mary's County""]",240,
+20636,Standard,['Hollywood'],St. Mary's County,301
+20637,Standard,['Hughesville'],Charles County,240; 301
+20639,Standard,['Huntingtown'],Calvert County,410; 443
+20640,Standard,"['Indian Head', 'Pisgah']",Charles County,240; 301
+20643,Po_box,['Ironsides'],Charles County,240
+20645,Standard,"['Issue', 'Swan Point']",Charles County,240; 301
+20646,Standard,"['La Plata', 'Dentsville']",Charles County,240; 301
+20650,Standard,['Leonardtown'],St. Mary's County,240; 301
+20653,Standard,"['Lexington Park', 'Lexington Pk']",St. Mary's County,240; 301
+20656,Standard,['Loveville'],St. Mary's County,301
+20657,Standard,['Lusby'],Calvert County,410
+20658,Standard,"['Marbury', 'Rison']",Charles County,240
+20659,Standard,"['Mechanicsville', 'Mechanicsvlle']",St. Mary's County,240; 301
+20660,Po_box,['Morganza'],St. Mary's County,240
+20661,Po_box,"['Mount Victoria', 'Mt Victoria']",Charles County,240
+20662,Standard,['Nanjemoy'],Charles County,240; 301
+20664,Standard,['Newburg'],Charles County,301; 240
+20667,Standard,['Park Hall'],St. Mary's County,240
+20670,Standard,"['Patuxent River', 'Patuxent Rvr']",St. Mary's County,240; 301
+20674,Standard,['Piney Point'],St. Mary's County,301
+20675,Standard,['Pomfret'],Charles County,301
+20676,Standard,['Port Republic'],Calvert County,443; 410
+20677,Standard,['Port Tobacco'],Charles County,240; 301
+20678,Standard,"['Prince Frederick', 'Dares Beach', 'Prnc Frederck']",Calvert County,410; 443
+20680,Standard,['Ridge'],St. Mary's County,240; 301
+20682,Po_box,['Rock Point'],Charles County,240
+20684,Standard,['Saint Inigoes'],St. Mary's County,240
+20685,Standard,['Saint Leonard'],Calvert County,410
+20686,Po_box,"['Saint Marys City', 'Saint Marys', 'St Marys City']",St. Mary's County,240
+20687,Standard,['Scotland'],St. Mary's County,240
+20688,Standard,"['Solomons', 'Dowell']",Calvert County,410; 443; 667
+20689,Standard,['Sunderland'],Calvert County,410
+20690,Standard,['Tall Timbers'],St. Mary's County,240; 301
+20692,Standard,['Valley Lee'],St. Mary's County,301
+20693,Standard,['Welcome'],Charles County,240
+20695,Standard,['White Plains'],Charles County,301
+20697,Unique,"['Southern Md Facility', 'Sthrn Md Fac']",Prince George's County,240
+20701,Standard,"['Annapolis Junction', 'Annapolis Jct']",Howard County,410; 443
+20703,Po_box,"['Lanham', 'Lanham Seabrook']",Prince George's County,240
+20704,Po_box,['Beltsville'],Prince George's County,240
+20705,Standard,"['Beltsville', 'Calverton']",Prince George's County,240; 301; 410
+20706,Standard,"['Lanham', 'Glenarden', 'Lanham Seabrook', 'Seabrook']",Prince George's County,240; 301
+20707,Standard,['Laurel'],Prince George's County,240; 301; 410; 443
+20708,Standard,"['Laurel', 'Montpelier']",Prince George's County,240; 301; 410; 443
+20709,Po_box,"['Laurel', 'Montpelier']",Prince George's County,240
+20710,Standard,['Bladensburg'],Prince George's County,240; 301
+20711,Standard,['Lothian'],Anne Arundel County,240; 301
+20712,Standard,['Mount Rainier'],Prince George's County,301; 240
+20714,Standard,"['North Beach', 'Holland Point', 'Rose Haven']",Calvert County,301; 410; 443
+20715,Standard,['Bowie'],Prince George's County,301; 240
+20716,Standard,"['Bowie', 'Mitchellville']",Prince George's County,301
+20717,Po_box,"['Bowie', 'Mitchellville']",Prince George's County,240
+20718,Po_box,['Bowie'],Prince George's County,240
+20719,Po_box,['Bowie'],Prince George's County,240
+20720,Standard,['Bowie'],Prince George's County,240; 301
+20721,Standard,"['Bowie', 'Mitchellville']",Prince George's County,301
+20722,Standard,"['Brentwood', 'Colmar Manor', 'Cottage City', 'North Brentwood']",Prince George's County,240; 301
+20723,Standard,"['Laurel', 'Scaggsville']",Howard County,240; 301; 410; 443
+20724,Standard,"['Laurel', 'Maryland City', 'Russett']",Anne Arundel County,240; 301; 410; 443
+20725,Po_box,['Laurel'],Prince George's County,240
+20726,Po_box,['Laurel'],Prince George's County,240
+20731,Po_box,"['Capitol Heights', 'Capitol Hgts']",Prince George's County,240
+20732,Standard,"['Chesapeake Beach', 'Chesapeak Bch']",Calvert County,410
+20733,Standard,['Churchton'],Anne Arundel County,410
+20735,Standard,['Clinton'],Prince George's County,301; 240
+20736,Standard,['Owings'],Calvert County,410
+20737,Standard,"['Riverdale', 'Riverdale Park', 'Riverdale Pk']",Prince George's County,240; 301
+20738,Po_box,['Riverdale'],Prince George's County,240
+20740,Standard,"['College Park', 'Berwyn Heights', 'Berwyn Hts']",Prince George's County,301; 240
+20741,Po_box,['College Park'],Prince George's County,240
+20742,Unique,['College Park'],Prince George's County,240
+20743,Standard,"['Capitol Heights', 'Capitol Hgts', 'Fairmount Heights', 'Fairmount']",Prince George's County,240; 301
+20744,Standard,"['Fort Washington', 'Ft Washington']",Prince George's County,240; 301
+20745,Standard,"['Oxon Hill', 'Forest Heights', 'Forest Hts']",Prince George's County,301; 240
+20746,Standard,"['Suitland', 'Camp Springs', 'Hillcrest Heights']",Prince George's County,301; 240
+20747,Standard,"['District Heights', 'District Hts', 'Forestville']",Prince George's County,240; 301
+20748,Standard,"['Temple Hills', 'Camp Springs', 'Hillcrest Heights']",Prince George's County,240; 301
+20749,Po_box,"['Fort Washington', 'Ft Washington']",Prince George's County,240
+20750,Po_box,['Oxon Hill'],Prince George's County,240
+20751,Standard,['Deale'],Anne Arundel County,410
+20752,Po_box,['Suitland'],Prince George's County,240
+20753,Po_box,"['District Heights', 'District Hts']",Prince George's County,240
+20754,Standard,['Dunkirk Calvert County'],,
+20755,Standard,"['Fort George G Meade', 'Fort Meade']",Anne Arundel County,410
+20757,Po_box,['Temple Hills'],Prince George's County,240
+20758,Standard,['Friendship'],Anne Arundel County,410
+20759,Standard,['Fulton'],Howard County,410
+20762,Standard,"['Andrews Air Force Base', 'Andrews Afb', 'Jb Andrews']",Prince George's County,240; 301
+20763,Standard,['Savage'],Howard County,410; 443
+20764,Standard,['Shady Side'],Anne Arundel County,410
+20765,Po_box,['Galesville'],Anne Arundel County,410
+20768,Po_box,['Greenbelt'],Prince George's County,240
+20769,Standard,['Glenn Dale'],Prince George's County,240; 301
+20770,Standard,['Greenbelt'],Prince George's County,240; 301
+20771,Unique,['Greenbelt'],Prince George's County,240
+20772,Standard,"['Upper Marlboro', 'Uppr Marlboro']",Prince George's County,240; 301
+20773,Po_box,"['Upper Marlboro', 'Uppr Marlboro']",Prince George's County,240
+20774,Standard,"['Upper Marlboro', 'Glenarden', 'Kettering', 'Largo', 'Springdale']",Prince George's County,240; 301
+20775,Po_box,"['Upper Marlboro', 'Uppr Marlboro']",Prince George's County,240
+20776,Standard,['Harwood'],Anne Arundel County,410
+20777,Standard,['Highland'],Howard County,240
+20778,Standard,['West River'],Anne Arundel County,410; 443
+20779,Standard,"['Tracys Landing', 'Tracys Lndg']",Anne Arundel County,410
+20781,Standard,['Hyattsville'],Prince George's County,240; 301
+20782,Standard,"['Hyattsville', 'Chillum', 'University Pa', 'University Park']",Prince George's County,240; 301
+20783,Standard,"['Hyattsville', 'Adelphi']",Prince George's County,301
+20784,Standard,"['Hyattsville', 'Cheverly', 'Landover Hills']",Prince George's County,301
+20785,Standard,"['Hyattsville', 'Cheverly', 'Landover', 'North Englewood']",Prince George's County,240; 301
+20787,Po_box,"['Hyattsville', 'Langley Park']",Prince George's County,240
+20788,Po_box,"['Hyattsville', 'W Hyattsville']",Prince George's County,240
+20790,Unique,"['Capitol Heights', 'Capitol Hgts']",Prince George's County,240
+20791,Po_box,"['Capitol Heights', 'Capitol Hgts']",Prince George's County,240
+20792,Po_box,"['Upper Marlboro', 'Largo', 'Uppr Marlboro']",Prince George's County,240
+20794,Standard,['Jessup'],Howard County,410; 443
+20797,Unique,"['Southern Md Facility', 'Sthrn Md Fac']",Prince George's County,240
+20799,Unique,"['Capitol Heights', 'Capitol Hgts']",Prince George's County,240
+20810,Unique,['Bethesda'],Montgomery County,240
+20811,Unique,['Bethesda'],Montgomery County,240
+20812,Standard,['Glen Echo'],Montgomery County,240; 301
+20813,Po_box,['Bethesda'],Montgomery County,240
+20814,Standard,['Bethesda'],Montgomery County,301; 240
+20815,Standard,"['Chevy Chase', 'Bethesda', 'Chevy Chase Village', 'Chevy Chs...']",Montgomery County,240; 301
+20816,Standard,['Bethesda'],Montgomery County,301; 240
+20817,Standard,"['Bethesda', 'Westlake']",Montgomery County,240; 301
+20818,Standard,['Cabin John'],Montgomery County,301; 240
+20824,Po_box,['Bethesda'],Montgomery County,240
+20825,Po_box,"['Chevy Chase', 'Bethesda']",Montgomery County,240
+20827,Po_box,"['Bethesda', 'W Bethesda', 'Westlake']",Montgomery County,240
+20830,Po_box,['Olney'],Montgomery County,240
+20832,Standard,['Olney'],Montgomery County,240
+20833,Standard,['Brookeville Montgomery County'],,
+20837,Standard,['Poolesville'],Montgomery County,240; 301
+20838,Standard,['Barnesville'],Montgomery County,240
+20839,Standard,['Beallsville'],Montgomery County,240
+20841,Standard,['Boyds'],Montgomery County,240
+20842,Standard,['Dickerson Montgomery County'],,
+20847,Po_box,['Rockville'],Montgomery County,240
+20848,Po_box,['Rockville'],Montgomery County,240
+20849,Po_box,['Rockville'],Montgomery County,240
+20850,Standard,"['Rockville', 'Potomac']",Montgomery County,240; 301
+20851,Standard,['Rockville'],Montgomery County,240; 301
+20852,Standard,"['Rockville', 'North Bethesda']",Montgomery County,240; 301
+20853,Standard,['Rockville'],Montgomery County,240; 301
+20854,Standard,"['Potomac', 'Rockville']",Montgomery County,301
+20855,Standard,"['Derwood', 'Rockville']",Montgomery County,240; 301
+20857,Unique,['Rockville'],Montgomery County,240
+20859,Po_box,"['Potomac', 'Rockville']",Montgomery County,240
+20860,Standard,['Sandy Spring'],Montgomery County,240; 301
+20861,Standard,['Ashton'],Montgomery County,240; 301
+20862,Standard,['Brinklow'],Montgomery County,240; 301
+20866,Standard,['Burtonsville'],Montgomery County,301
+20868,Standard,['Spencerville'],Montgomery County,301
+20871,Standard,"['Clarksburg', 'Hyattstown']",Montgomery County,301; 240
+20872,Standard,['Damascus'],Montgomery County,240; 301
+20874,Standard,"['Germantown', 'Darnestown']",Montgomery County,240
+20875,Po_box,['Germantown'],Montgomery County,240
+20876,Standard,['Germantown'],Montgomery County,240
+20877,Standard,"['Gaithersburg', 'Montgomery Village']",Montgomery County,301; 240
+20878,Standard,"['Gaithersburg', 'Darnestown', 'North Potomac']",Montgomery County,240; 301
+20879,Standard,"['Gaithersburg', 'Montgomery Village']",Montgomery County,240; 301
+20880,Po_box,['Washington Grove'],Montgomery County,240
+20882,Standard,"['Gaithersburg', 'Brookeville', 'Laytonsville']",Montgomery County,240
+20883,Po_box,['Gaithersburg'],Montgomery County,240
+20884,Po_box,['Gaithersburg'],Montgomery County,240
+20885,Po_box,['Gaithersburg'],Montgomery County,240
+20886,Standard,"['Montgomery Village', 'Gaithersburg']",Montgomery County,240; 301
+20889,Unique,['Bethesda'],Montgomery County,240
+20891,Po_box,['Kensington'],Montgomery County,240
+20892,Unique,['Bethesda'],Montgomery County,240
+20894,Unique,['Bethesda'],Montgomery County,240
+20895,Standard,['Kensington'],Montgomery County,301; 240
+20896,Po_box,['Garrett Park'],Montgomery County,240
+20897,Unique,['Suburb Maryland Fac'],Montgomery County,240
+20898,Po_box,['Gaithersburg'],Montgomery County,240
+20899,Unique,['Gaithersburg'],Montgomery County,240
+20901,Standard,"['Silver Spring', 'Takoma Park']",Montgomery County,240; 301
+20902,Standard,"['Silver Spring', 'Wheaton']",Montgomery County,240; 301
+20903,Standard,['Silver Spring'],Montgomery County,301
+20904,Standard,"['Silver Spring', 'Colesville']",Montgomery County,301
+20905,Standard,"['Silver Spring', 'Colesville', 'Sandy Spring']",Montgomery County,301
+20906,Standard,"['Silver Spring', 'Aspen Hill']",Montgomery County,301; 240
+20907,Po_box,['Silver Spring'],Montgomery County,240
+20908,Po_box,['Silver Spring'],Montgomery County,240
+20910,Standard,['Silver Spring'],Montgomery County,240; 301
+20911,Po_box,['Silver Spring'],Montgomery County,240
+20912,Standard,"['Takoma Park', 'Silver Spring']",Montgomery County,240; 301
+20913,Po_box,"['Takoma Park', 'Silver Spring']",Montgomery County,240
+20914,Po_box,"['Silver Spring', 'Colesville']",Montgomery County,240
+20915,Po_box,"['Silver Spring', 'Wheaton']",Montgomery County,240
+20916,Po_box,"['Silver Spring', 'Aspen Hill']",Montgomery County,240
+20918,Po_box,['Silver Spring'],Montgomery County,240
+20993,Unique,['Silver Spring'],Montgomery County,240
+20997,Unique,['Silver Spring'],Montgomery County,240
+21001,Standard,['Aberdeen'],Harford County,410; 443; 667
+21005,Standard,"['Aberdeen Proving Ground', 'Aber Prov Grd']",Harford County,443; 667
+21009,Standard,['Abingdon'],Harford County,410
+21010,Standard,"['Gunpowder', 'Aber Prov Grd', 'Aberdeen Proving Ground']",Harford County,410
+21012,Standard,['Arnold'],Anne Arundel County,410
+21013,Standard,['Baldwin'],Baltimore County,
+21014,Standard,['Bel Air'],Harford County,410; 443
+21015,Standard,['Bel Air'],Harford County,410; 443
+21017,Standard,['Belcamp'],Harford County,410
+21018,Po_box,['Benson'],Harford County,410
+21020,Po_box,['Boring'],Baltimore County,410
+21022,Po_box,"['Brooklandville', 'Brooklandvl']",Baltimore County,410
+21023,Po_box,['Butler'],Baltimore County,410
+21027,Po_box,['Chase'],Baltimore County,410
+21028,Standard,['Churchville'],Harford County,410; 443
+21029,Standard,['Clarksville'],Howard County,240
+21030,Standard,"['Cockeysville', 'Cockysvil', 'Hunt Valley']",Baltimore County,410; 443
+21031,Standard,['Hunt Valley'],Baltimore County,443; 410
+21032,Standard,['Crownsville'],Anne Arundel County,410
+21034,Standard,['Darlington'],Harford County,410; 443
+21035,Standard,['Davidsonville'],Anne Arundel County,410
+21036,Standard,['Dayton'],Howard County,240
+21037,Standard,['Edgewater'],Anne Arundel County,301; 410
+21040,Standard,['Edgewood'],Harford County,410; 443
+21041,Po_box,['Ellicott City'],Howard County,410
+21042,Standard,['Ellicott City'],Howard County,410; 443
+21043,Standard,"['Ellicott City', 'Daniels', 'Ilchester', 'Oella']",Howard County,410; 443
+21044,Standard,['Columbia'],Howard County,240; 301; 410; 443
+21045,Standard,['Columbia'],Howard County,240; 301; 410; 443
+21046,Standard,['Columbia'],Howard County,301; 410; 443; 240
+21047,Standard,['Fallston'],Harford County,410; 443
+21048,Standard,"['Finksburg', 'Patapsco']",Carroll County,443
+21050,Standard,['Forest Hill'],Harford County,410
+21051,Standard,['Fork'],Baltimore County,410; 443
+21052,Po_box,['Fort Howard'],Baltimore County,410
+21053,Standard,['Freeland'],Baltimore County,410
+21054,Standard,['Gambrills'],Anne Arundel County,240
+21056,Po_box,['Gibson Island'],Anne Arundel County,410
+21057,Standard,['Glen Arm'],Baltimore County,410
+21060,Standard,['Glen Burnie'],Anne Arundel County,443; 410
+21061,Standard,['Glen Burnie'],Anne Arundel County,410; 443
+21062,Unique,['Glen Burnie'],Anne Arundel County,410
+21065,Unique,"['Hunt Valley', 'Cockys Ht Vly']",Baltimore County,410
+21071,Po_box,['Glyndon'],Baltimore County,410; 443
+21074,Standard,"['Hampstead', 'Greenmount']",Carroll County,410; 443
+21075,Standard,['Elkridge'],Howard County,240; 443; 410
+21076,Standard,['Hanover'],Anne Arundel County,443
+21077,Standard,['Harmans'],Anne Arundel County,443
+21078,Standard,"['Havre De Grace', 'Havre De Grace']",Harford County,667; 410; 443
+21082,Standard,['Hydes'],Baltimore County,410
+21084,Standard,['Jarrettsville'],Harford County,410; 443
+21085,Standard,['Joppa'],Harford County,443
+21087,Standard,"['Kingsville', 'Bradshaw']",Baltimore County,
+21088,Po_box,"['Lineboro', 'Manchester']",Carroll County,410
+21090,Standard,"['Linthicum Heights', 'Linthicum', 'Linthicum Hts']",Anne Arundel County,443; 410
+21092,Po_box,['Long Green'],Baltimore County,410
+21093,Standard,"['Lutherville Timonium', 'Lutherville', 'Luthvle Timon', 'Timonium']",Baltimore County,410
+21094,Po_box,"['Lutherville Timonium', 'Lutherville', 'Luthvle Timon', 'Timonium']",Baltimore County,410
+21098,Unique,"['Hanover', 'Household Bank']",Anne Arundel County,410
+21102,Standard,"['Manchester', 'Lineboro', 'Millers']",Carroll County,410; 443
+21104,Standard,"['Marriottsville', 'Henryton', 'Marriottsvl', 'Woodstock Carroll County']",,
+21105,Po_box,['Maryland Line'],Baltimore County,410
+21106,Po_box,['Mayo'],Anne Arundel County,410
+21108,Standard,['Millersville'],Anne Arundel County,410; 443
+21111,Standard,"['Monkton', 'Hereford']",Baltimore County,
+21113,Standard,['Odenton'],Anne Arundel County,240; 301; 410; 443
+21114,Standard,['Crofton'],Anne Arundel County,240; 410; 443; 667
+21117,Standard,"['Owings Mills', 'Garrison']",Baltimore County,410
+21120,Standard,"['Parkton', 'Bentley Spgs', 'Bentley Springs']",Baltimore County,410; 443
+21122,Standard,"['Pasadena', 'Lake Shore', 'Riviera Beach']",Anne Arundel County,410; 443
+21123,Po_box,"['Pasadena', 'Lake Shore', 'Riviera Beach']",Anne Arundel County,410
+21128,Standard,['Perry Hall'],Baltimore County,410
+21130,Po_box,['Perryman'],Harford County,410
+21131,Standard,"['Phoenix', 'Jacksonville']",Baltimore County,410
+21132,Standard,['Pylesville'],Harford County,410
+21133,Standard,"['Randallstown', 'Mcdonogh Run']",Baltimore County,410; 443
+21136,Standard,"['Reisterstown', 'Glyndon']",Baltimore County,410; 443
+21139,Po_box,['Riderwood'],Baltimore County,410
+21140,Standard,['Riva'],Anne Arundel County,301; 410
+21144,Standard,['Severn'],Anne Arundel County,410; 443
+21146,Standard,['Severna Park'],Anne Arundel County,410; 443
+21150,Po_box,['Simpsonville'],Howard County,410
+21152,Standard,"['Sparks Glencoe', 'Glencoe', 'Sparks', 'Sparks Glenco']",Baltimore County,410; 443
+21153,Po_box,['Stevenson'],Baltimore County,410
+21154,Standard,['Street'],Harford County,410
+21155,Standard,"['Upperco', 'Fowbelsburg']",Baltimore County,
+21156,Standard,['Upper Falls'],Baltimore County,410
+21157,Standard,['Westminster'],Carroll County,410; 443
+21158,Standard,['Westminster'],Carroll County,410; 443
+21160,Standard,"['Whiteford', 'Cardiff']",Harford County,410; 443
+21161,Standard,['White Hall Harford County'],,
+21162,Standard,['White Marsh'],Baltimore County,443; 410
+21163,Standard,"['Woodstock', 'Granite']",Howard County,
+21201,Standard,['Baltimore'],Baltimore City,410; 443; 667; 301
+21202,Standard,"['Baltimore', 'East Case']",Baltimore City,301; 443; 410; 667
+21203,Po_box,['Baltimore'],Baltimore City,410
+21204,Standard,"['Towson', 'Baltimore', 'Eudowood', 'Loch Raven', 'Ruxton']",Baltimore County,410; 443; 667
+21205,Standard,['Baltimore'],Baltimore City,410; 443
+21206,Standard,"['Baltimore', 'Raspeburg']",Baltimore City,410; 443
+21207,Standard,"['Gwynn Oak', 'Baltimore', 'Pikesville', 'Woodlawn']",Baltimore County,667; 410; 443
+21208,Standard,"['Pikesville', 'Baltimore']",Baltimore County,410; 443; 667
+21209,Standard,"['Baltimore', 'Mount Washington', 'Mt Washington']",Baltimore County,410
+21210,Standard,"['Baltimore', 'Roland Park']",Baltimore City,443; 410
+21211,Standard,['Baltimore'],Baltimore City,410; 443
+21212,Standard,"['Baltimore', 'Govans']",Baltimore City,410; 443; 667
+21213,Standard,"['Baltimore', 'Clifton']",Baltimore City,410; 443
+21214,Standard,['Baltimore'],Baltimore City,443; 410
+21215,Standard,"['Baltimore', 'Arlington']",Baltimore City,410
+21216,Standard,['Baltimore'],Baltimore City,410
+21217,Standard,"['Baltimore', 'Druid']",Baltimore City,410; 443
+21218,Standard,['Baltimore'],Baltimore City,443; 410
+21219,Standard,"['Sparrows Point', 'Baltimore', 'Edgemere', 'Sparrows Pt']",Baltimore County,410; 443
+21220,Standard,"['Middle River', 'Baltimore']",Baltimore County,410; 443
+21221,Standard,"['Essex', 'Baltimore']",Baltimore County,410; 443
+21222,Standard,"['Dundalk', 'Baltimore']",Baltimore County,410; 443
+21223,Standard,"['Baltimore', 'Franklin']",Baltimore City,667; 410
+21224,Standard,"['Baltimore', 'Highlandtown']",Baltimore City,410
+21225,Standard,"['Brooklyn', 'Baltimore', 'Brooklyn Park']",Baltimore City,410; 443
+21226,Standard,"['Curtis Bay', 'Baltimore', 'Carvel Beach', 'Chestnut Hill C...']",Anne Arundel County,410; 443
+21227,Standard,"['Halethorpe', 'Arbutus', 'Baltimore', 'Lansdowne']",Baltimore County,240; 443; 410
+21228,Standard,"['Catonsville', 'Baltimore']",Baltimore County,410; 443
+21229,Standard,"['Baltimore', 'Carroll']",Baltimore City,410
+21230,Standard,['Baltimore'],Baltimore City,410; 667
+21231,Standard,['Baltimore'],Baltimore City,410; 443; 667
+21233,Standard,['Baltimore'],Baltimore City,410; 667; 301; 443
+21234,Standard,"['Parkville', 'Baltimore']",Baltimore County,410; 443
+21235,Unique,['Baltimore'],Baltimore City,410
+21236,Standard,"['Nottingham', 'Baltimore']",Baltimore County,410
+21237,Standard,"['Rosedale', 'Baltimore']",Baltimore County,410
+21239,Standard,"['Baltimore', 'Idlewylde', 'Loch Hill', 'Northwood']",Baltimore City,443; 410
+21240,Standard,"['Baltimore', 'Millersville']",Anne Arundel County,240; 410; 443
+21241,Unique,['Baltimore'],Baltimore City,410
+21244,Standard,"['Windsor Mill', 'Baltimore']",Baltimore County,410
+21250,Unique,['Baltimore'],Baltimore County,410
+21251,Unique,['Baltimore'],Baltimore City,410
+21252,Unique,"['Towson', 'Baltimore']",Baltimore County,410
+21260,Standard,['Baltimore'],Baltimore City,410
+21261,Standard,"['Baltimore', 'Essex']",Baltimore City,410
+21263,Unique,['Baltimore'],Baltimore City,410
+21264,Unique,['Baltimore'],Baltimore City,410
+21265,Unique,['Baltimore'],Baltimore City,410
+21268,Unique,['Baltimore'],Baltimore City,410
+21270,Po_box,['Baltimore'],Baltimore City,410
+21273,Unique,['Baltimore'],Baltimore City,410
+21274,Unique,['Baltimore'],Baltimore City,410
+21275,Unique,['Baltimore'],Baltimore City,410
+21278,Unique,['Baltimore'],Baltimore City,410
+21279,Unique,['Baltimore'],Baltimore City,410
+21280,Unique,['Baltimore'],Baltimore City,410
+21281,Po_box,['Baltimore'],Baltimore City,410
+21282,Po_box,"['Pikesville', 'Baltimore']",Baltimore City,410
+21283,Unique,"['Baltimore', 'Shared Firm Zip Code']",Baltimore City,410
+21284,Po_box,"['Towson', 'Baltimore', 'Loch Raven']",Baltimore City,410
+21285,Po_box,"['Towson', 'Baltimore']",Baltimore City,410
+21286,Standard,"['Towson', 'Baltimore', 'Loch Raven']",Baltimore County,667
+410; 443,,['nan'],,
+21287,Standard,['Baltimore'],Baltimore City,410
+21288,Unique,['Baltimore'],Baltimore City,410
+21289,Unique,['Baltimore'],Baltimore City,410
+21290,Unique,['Baltimore'],Baltimore City,410
+21297,Po_box,['Baltimore'],Baltimore City,410
+21298,Unique,['Baltimore'],Baltimore City,410
+21401,Standard,"['Annapolis', 'Cape Saint Claire', 'Cpe St Claire']",Anne Arundel County,410; 443; 301
+21402,Standard,"['Annapolis', 'North Severn Village', 'Naval Academy']",Anne Arundel County,410; 443
+21403,Standard,"['Annapolis', 'Highland Bch']",Anne Arundel County,301; 410; 443
+21404,Po_box,['Annapolis'],Anne Arundel County,410
+21405,Standard,"['Annapolis', 'Sherwood Forest', 'Sherwood Frst']",Anne Arundel County,301; 410; 443
+21409,Standard,['Annapolis'],Anne Arundel County,443
+21411,Unique,['Annapolis'],Anne Arundel County,410
+21412,Standard,['Annapolis'],Anne Arundel County,410
+21501,Po_box,['Cumberland'],Allegany County,240
+21502,Standard,"['Cumberland', 'Cresaptown', 'Lavale']",Allegany County,240; 301
+21503,Po_box,['Cumberland'],Allegany County,240
+21504,Po_box,"['Cumberland', 'Lavale']",Allegany County,240
+21505,Po_box,"['Cumberland', 'Cresaptown']",Allegany County,240
+21520,Standard,"['Accident', 'Garrett County']",301,
+21521,Standard,['Barton Allegany County'],,
+21522,Standard,"['Bittinger', 'Garrett County']",301,
+21523,Standard,"['Bloomington', 'Garrett County']",240,
+21524,Po_box,['Corriganville'],Allegany County,240
+21528,Po_box,['Eckhart Mines'],Allegany County,240
+21529,Po_box,['Ellerslie'],Allegany County,240
+21530,Standard,['Flintstone'],Allegany County,240
+21531,Standard,"['Friendsville', 'Garrett County']",301,
+21532,Standard,['Frostburg'],Allegany County,240; 301
+21536,Standard,"['Grantsville', 'Jennings', 'Garrett County']",240; 301,
+21538,Standard,"['Kitzmiller', 'Shallmar', 'Garrett County']",301,
+21539,Standard,['Lonaconing'],Allegany County,301
+21540,Standard,"['Luke', 'Westernport']",Allegany County,301
+21541,Standard,"['Mc Henry', 'Sang Run', 'Garrett County']",301,
+21542,Po_box,['Midland'],Allegany County,240
+21543,Po_box,['Midlothian'],Allegany County,240
+21545,Standard,['Mount Savage'],Allegany County,301
+21550,Standard,"['Oakland', 'Crellin', 'Deer Park', 'Hutton', 'Loch Lyn Heights', 'Garrett County']",240; 301,
+21555,Standard,['Oldtown'],Allegany County,301
+21556,Po_box,['Pinto'],Allegany County,240
+21557,Standard,['Rawlings'],Allegany County,240
+21560,Po_box,"['Spring Gap', 'Mineral County']",240,
+21561,Standard,"['Swanton', 'Garrett County']",301,
+21562,Standard,"['Westernport', 'Mccoole']",Allegany County,301; 240
+21601,Standard,['Easton'],Talbot County,410; 443
+21606,Unique,"['Easton', 'First Fulfillment & Mgr Co']",Talbot County,410
+21607,Standard,['Barclay'],Queen Anne's County,410
+21609,Po_box,['Bethlehem'],Caroline County,410
+21610,Standard,['Betterton'],Kent County,410
+21612,Standard,['Bozman'],Talbot County,410
+21613,Standard,['Cambridge'],Dorchester County,410; 443
+21617,Standard,['Centreville'],Queen Anne's County,410; 443
+21619,Standard,['Chester'],Queen Anne's County,410
+21620,Standard,['Chestertown'],Kent County,410; 443
+21622,Standard,['Church Creek'],Dorchester County,410
+21623,Standard,['Church Hill'],Queen Anne's County,410
+21624,Po_box,['Claiborne'],Talbot County,410
+21625,Standard,['Cordova'],Talbot County,410
+21626,Standard,['Crapo'],Dorchester County,410
+21627,Standard,['Crocheron'],Dorchester County,410
+21628,Po_box,['Crumpton'],Queen Anne's County,410
+21629,Standard,['Denton'],Caroline County,410; 443
+21631,Standard,"['East New Market', 'E New Market']",Dorchester County,410
+21632,Standard,['Federalsburg'],Caroline County,410; 443
+21634,Standard,['Fishing Creek'],Dorchester County,410
+21635,Standard,"['Galena', 'Golts']",Kent County,410
+21636,Standard,['Goldsboro'],Caroline County,410
+21638,Standard,['Grasonville'],Queen Anne's County,410
+21639,Standard,['Greensboro'],Caroline County,410
+21640,Standard,['Henderson'],Caroline County,410
+21641,Po_box,['Hillsboro'],Caroline County,410
+21643,Standard,['Hurlock'],Dorchester County,410
+21644,Standard,['Ingleside'],Queen Anne's County,410
+21645,Standard,['Kennedyville'],Kent County,410
+21647,Standard,['Mcdaniel'],Talbot County,410
+21648,Standard,['Madison'],Dorchester County,410
+21649,Standard,['Marydel'],Caroline County,410
+21650,Standard,['Massey'],Kent County,410
+21651,Standard,['Millington'],Kent County,410
+21652,Po_box,['Neavitt'],Talbot County,410
+21653,Po_box,['Newcomb'],Talbot County,410
+21654,Standard,['Oxford'],Talbot County,410
+21655,Standard,['Preston'],Caroline County,410
+21656,Po_box,"['Price', 'Church Hill']",Queen Anne's County,410
+21657,Standard,['Queen Anne'],Queen Anne's County,410
+21658,Standard,['Queenstown'],Queen Anne's County,410; 443
+21659,Standard,"['Rhodesdale', 'Brookview', 'Eldorado', 'Galestown']",Dorchester County,410; 443
+21660,Standard,['Ridgely'],Caroline County,410
+21661,Standard,['Rock Hall'],Kent County,410
+21662,Standard,['Royal Oak'],Talbot County,410
+21663,Standard,"['Saint Michaels', 'St Michaels']",Talbot County,410
+21664,Po_box,['Secretary'],Dorchester County,410
+21665,Standard,['Sherwood'],Talbot County,410
+21666,Standard,['Stevensville'],Queen Anne's County,410; 443
+21667,Standard,['Still Pond'],Kent County,410
+21668,Standard,['Sudlersville'],Queen Anne's County,410
+21669,Po_box,"['Taylors Island', 'Taylors Is']",Dorchester County,410
+21670,Po_box,['Templeville'],Caroline County,410
+21671,Standard,['Tilghman'],Talbot County,410
+21672,Standard,['Toddville'],Dorchester County,410
+21673,Standard,['Trappe'],Talbot County,410; 443
+21675,Standard,['Wingate'],Dorchester County,410
+21676,Standard,['Wittman'],Talbot County,410
+21677,Standard,['Woolford'],Dorchester County,410
+21678,Standard,"['Worton', 'Lynch']",Kent County,410
+21679,Standard,['Wye Mills'],Talbot County,410
+21681,Unique,['Ridgely'],Caroline County,410
+21682,Unique,['Ridgely'],Caroline County,410
+21683,Unique,['Ridgely'],Caroline County,410
+21684,Unique,['Ridgely'],Caroline County,410
+21685,Unique,['Ridgely'],Caroline County,410
+21686,Unique,['Ridgely'],Caroline County,410
+21687,Unique,['Ridgely'],Caroline County,410
+21688,Unique,['Ridgely'],Caroline County,410
+21690,Unique,['Chestertown'],Kent County,410
+21701,Standard,"['Frederick', 'Lewistown']",Frederick County,240; 301
+21702,Standard,"['Frederick', 'Fort Detrick']",Frederick County,240; 301
+21703,Standard,['Frederick'],Frederick County,301; 240
+21704,Standard,"['Frederick', 'Urbana']",Frederick County,301; 240
+21705,Po_box,['Frederick'],Frederick County,240
+21709,Unique,['Frederick'],Frederick County,240
+21710,Standard,"['Adamstown', 'Doubs']",Frederick County,240; 301
+21711,Standard,['Big Pool'],Washington County,240
+21713,Standard,['Boonsboro'],Washington County,240
+21714,Po_box,"['Braddock Heights', 'Braddock Hts']",Frederick County,240
+21715,Po_box,['Brownsville'],Washington County,240
+21716,Standard,['Brunswick'],Frederick County,301
+21717,Po_box,['Buckeystown'],Frederick County,240
+21718,Standard,['Burkittsville'],Frederick County,240
+21719,Standard,"['Cascade', 'Fort Ritchie', 'Highfield']",Washington County,240; 301
+21720,Po_box,['Cavetown'],Washington County,240
+21721,Po_box,['Chewsville'],Washington County,240
+21722,Standard,"['Clear Spring', 'Big Spring']",Washington County,301
+21723,Standard,['Cooksville'],Howard County,410
+21727,Standard,['Emmitsburg'],Frederick County,240; 301
+21733,Standard,"['Fairplay', 'St James']",Washington County,240
+21734,Po_box,['Funkstown'],Washington County,240
+21737,Standard,['Glenelg'],Howard County,410
+21738,Standard,['Glenwood'],Howard County,410; 443
+21740,Standard,['Hagerstown'],Washington County,240; 301
+21741,Po_box,['Hagerstown'],Washington County,240
+21742,Standard,['Hagerstown'],Washington County,240; 301
+21746,Unique,['Hagerstown'],Washington County,240
+21747,Po_box,['Hagerstown'],Washington County,240
+21748,Unique,['Hagerstown'],Washington County,240
+21749,Unique,['Hagerstown'],Washington County,240
+21750,Standard,['Hancock'],Washington County,240; 301
+21754,Standard,['Ijamsville'],Frederick County,240
+21755,Standard,['Jefferson'],Frederick County,240
+21756,Standard,['Keedysville'],Washington County,301
+21757,Standard,"['Keymar', 'Detour']",Middleburg Frederick County,
+21758,Standard,"['Knoxville', 'Brunswick']",Frederick County,301
+21759,Po_box,['Ladiesburg'],Frederick County,240
+21762,Po_box,['Libertytown'],Frederick County,240
+21765,Po_box,['Lisbon'],Howard County,410
+21766,Standard,"['Little Orleans', 'Ltl Orleans']",Allegany County,240
+21767,Standard,['Maugansville'],Washington County,240
+21769,Standard,['Middletown'],Frederick County,240; 301
+21770,Standard,['Monrovia'],Frederick County,240; 301
+21771,Standard,['Mount Airy'],Frederick County,240; 301
+21773,Standard,['Myersville'],Frederick County,240; 301
+21774,Standard,['New Market'],Frederick County,301
+21775,Po_box,['New Midway'],Frederick County,240
+21776,Standard,['New Windsor'],Carroll County,410; 443
+21777,Standard,"['Point Of Rocks', 'Pt Of Rocks']",Frederick County,240
+21778,Standard,['Rocky Ridge'],Frederick County,240
+21779,Standard,"['Rohrersville', 'Gapland']",Washington County,240
+21780,Standard,['Sabillasville'],Frederick County,240
+21781,Po_box,['Saint James'],Washington County,240
+21782,Standard,['Sharpsburg'],Washington County,240
+21783,Standard,['Smithsburg'],Washington County,240; 301
+21784,Standard,"['Sykesville', 'Eldersburg', 'Gaither']",Carroll County,410; 443
+21787,Standard,['Taneytown'],Carroll County,410; 443
+21788,Standard,"['Thurmont', 'Graceham']",Frederick County,240; 301
+21790,Standard,['Tuscarora'],Frederick County,240
+21791,Standard,"['Union Bridge', 'Linwood']",Carroll County,410; 443
+21792,Po_box,['Unionville'],Frederick County,240
+21793,Standard,['Walkersville'],Frederick County,301
+21794,Standard,['West Friendship'],Howard County,410
+21795,Standard,['Williamsport'],Washington County,240; 301
+21797,Standard,['Woodbine'],Howard County,
+21798,Standard,['Woodsboro'],Frederick County,240
+21801,Standard,['Salisbury'],Wicomico County,443; 410; 667
+21802,Po_box,['Salisbury'],Wicomico County,410
+21803,Po_box,['Salisbury'],Wicomico County,410
+21804,Standard,['Salisbury'],Wicomico County,410; 667; 443
+21810,Po_box,['Allen'],Wicomico County,410
+21811,Standard,"['Berlin', 'Ocean Pines']",Worcester County,410; 443
+21813,Standard,['Bishopville'],Worcester County,410; 443
+21814,Standard,['Bivalve'],Wicomico County,410
+21817,Standard,['Crisfield'],Somerset County,410; 443
+21821,Standard,"['Deal Island', 'Chance', 'Dames Quarter', 'Wenona']",Somerset County,410
+21822,Standard,['Eden Somerset County'],,
+21824,Standard,['Ewell'],Somerset County,410
+21826,Standard,['Fruitland'],Wicomico County,410
+21829,Standard,['Girdletree'],Worcester County,410
+21830,Standard,['Hebron'],Wicomico County,410; 443
+21835,Standard,['Linkwood'],Dorchester County,410; 443
+21836,Po_box,['Manokin'],Somerset County,410
+21837,Standard,"['Mardela Springs', 'Mardela', 'Mardela Spgs']",Wicomico County,410; 443
+21838,Standard,"['Marion Station', 'Marion', 'Marion Sta']",Somerset County,410
+21840,Standard,['Nanticoke'],Wicomico County,410; 443
+21841,Standard,['Newark'],Worcester County,410
+21842,Standard,['Ocean City'],Worcester County,410; 443
+21843,Po_box,['Ocean City'],Worcester County,410
+21849,Standard,['Parsonsburg'],Wicomico County,410
+21850,Standard,['Pittsville'],Wicomico County,410
+21851,Standard,['Pocomoke City'],Worcester County,410; 443
+21852,Po_box,['Powellville'],Wicomico County,410
+21853,Standard,['Princess Anne'],Somerset County,410; 443
+21856,Standard,['Quantico'],Wicomico County,410
+21857,Po_box,['Rehobeth'],Somerset County,410
+21861,Po_box,['Sharptown'],Wicomico County,410
+21862,Standard,['Showell'],Worcester County,410
+21863,Standard,['Snow Hill'],Worcester County,410; 443
+21864,Standard,['Stockton'],Worcester County,410
+21865,Standard,['Tyaskin'],Wicomico County,410
+21866,Po_box,['Tylerton'],Somerset County,410
+21867,Po_box,"['Upper Fairmount', 'Fairmount', 'Upper Fairmt', 'Upper Hill']",Somerset County,410
+21869,Standard,['Vienna'],Dorchester County,410
+21871,Standard,['Westover'],Somerset County,410
+21872,Standard,['Whaleyville'],Worcester County,410
+21874,Standard,['Willards'],Wicomico County,410; 443
+21875,Standard,['Delmar'],Wicomico County,410; 443
+21890,Unique,['Westover'],Somerset County,410
+21901,Standard,['North East'],Cecil County,410; 443
+21902,Po_box,['Perry Point'],Cecil County,410
+21903,Standard,['Perryville'],Cecil County,410; 443
+21904,Standard,"['Port Deposit', 'Bainbridge']",Cecil County,410; 443
+21911,Standard,['Rising Sun'],Cecil County,410
+21912,Standard,['Warwick'],Cecil County,410
+21913,Po_box,['Cecilton'],Cecil County,410
+21914,Po_box,['Charlestown'],Cecil County,410
+21915,Standard,"['Chesapeake City', 'Chesapeake Cy']",Cecil County,443; 410
+21916,Po_box,['Childs'],Cecil County,410
+21917,Standard,['Colora'],Cecil County,410
+21918,Standard,['Conowingo'],Cecil County,410
+21919,Standard,['Earleville'],Cecil County,410
+21920,Po_box,['Elk Mills'],Cecil County,410
+21921,Standard,['Elkton'],Cecil County,410; 443
+21922,Po_box,['Elkton'],Cecil County,410
+21930,Po_box,['Georgetown'],Cecil County,410

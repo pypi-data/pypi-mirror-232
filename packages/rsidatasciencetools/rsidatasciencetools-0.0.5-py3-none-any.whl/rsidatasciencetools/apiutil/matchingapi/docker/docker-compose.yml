@@ -1,0 +1,9 @@
+version: "3.7"
+
+services:
+  ml_api:
+    env_file: docker_build.env
+    image: rsi.revx/matching.ml_api
+    build:
+      context: ../../../../
+      dockerfile: rsidatasciencetools/apiutil/matchingapi/docker/Dockerfile.final

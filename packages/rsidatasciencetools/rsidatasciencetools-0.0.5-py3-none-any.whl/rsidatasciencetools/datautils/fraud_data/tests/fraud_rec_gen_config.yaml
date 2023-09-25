@@ -1,0 +1,12 @@
+state_of_sample: Maryland
+p_born_in_state: 0.462
+source_firstname: ../../tests/firstnames_clean.csv
+source_lastname: ../../tests/lastnames_clean.csv
+source_city: ../../tests/md_cities_clean_validzip.csv
+source_streetname: ../../tests/md_common_streetnames_clean.csv
+source_zipcode: ../../tests/md_zip_codes_clean.csv
+source_age: ../../tests/md_age.csv
+form_name: irmf
+start_date_requests: 12-31-2010
+end_date_requests: 12-31-2022
+src_file_zips_ssn: ../../fraud_data/tests/ssn_codes_per_zip_code.csv

@@ -1,0 +1,13 @@
+version: "3.7"
+
+services:
+  # This "base" docker image should only need to be created once
+  base_ml:
+    env_file: docker_build.env
+    image: rsi.revx/base.ml_api
+    build:
+      context: ../../../../
+      dockerfile: rsidatasciencetools/apiutil/matchingapi/docker/Dockerfile.base
+      args:
+        NOTEBOOK_PORT: 8888
+        USER2ADD: apiuser

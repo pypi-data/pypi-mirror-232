@@ -1,0 +1,10 @@
+source_firstname: ../../tests/firstnames_clean.csv
+source_lastname: ../../tests/lastnames_clean.csv
+source_user_tenure: user_tenure.csv
+source_user_roles: user_roles.csv
+number_of_users: 100
+number_of_tasks: 250
+avg_num_touches_per_task: 1.25
+avg_days_to_start_task: 10
+agency_start: 2014-01-01
+dbconfig: sql-taskmetrics-config.json

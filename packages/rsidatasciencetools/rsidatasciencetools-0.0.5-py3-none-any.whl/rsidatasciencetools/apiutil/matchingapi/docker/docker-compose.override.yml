@@ -1,0 +1,18 @@
+version: "3.7"
+
+services:
+  ml_api:
+    environment:      
+      - RSI_ML_API_PW=ml@piu53rs
+      - RSI_AZURE_PASSWORD=
+    container_name: matching_api
+    build:
+      args:
+        NOTEBOOK_PORT: 8888
+        RSI_ML_API_PORT: 8000
+        USER2ADD: apiuser
+        MODELCONFIG: DataScienceTools/rsidatasciencetools/apiutil/matchingapi/tests
+    ports:
+      - "8898:8888"
+      - "9001:9001"
+      - "8000:8000"

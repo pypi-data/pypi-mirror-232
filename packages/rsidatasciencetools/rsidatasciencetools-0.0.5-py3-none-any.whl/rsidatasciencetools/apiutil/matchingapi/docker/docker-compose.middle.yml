@@ -1,0 +1,13 @@
+version: "3.7"
+
+services:
+  # This "base" docker image should only need to be created once
+  middle_image_ml:
+    env_file: docker_build.env
+    image: rsi.revx/bazel-scann.ml_api
+    build:
+      context: ../../../../
+      dockerfile: rsidatasciencetools/apiutil/matchingapi/docker/Dockerfile.middle
+      args:
+        NOTEBOOK_PORT: 8888
+        USER2ADD: apiuser

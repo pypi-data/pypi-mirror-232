@@ -1,0 +1,32 @@
+version: "3.7"
+
+services:
+  base_ml:
+    env_file: docker_build.env
+    image: rsi.revx/base.ml_api
+    container_name: base.ml
+    args:
+      NOTEBOOK_PORT: 8888
+      USER2ADD: apiuser
+  ml_api:
+    env_file: docker_build.env
+    image: rsi.revx.<repository>/<image_name>
+    container_name: <container_name>
+    build:
+      context: .
+      args:
+        NOTEBOOK_PORT: 8888
+        ML_API_PORT: 8000
+        TRAINDATADIR: /home/apiuser/train_data
+        USER2ADD: apiuser
+    # networks:
+    #   - ng-internal-network
+    ports:
+      - "8888:8898"
+      - "9001:9001"
+      - "8000:8000"
+
+# networks:
+#   ng-internal-network:
+#     driver: bridge
+#     name: ng-internal-network

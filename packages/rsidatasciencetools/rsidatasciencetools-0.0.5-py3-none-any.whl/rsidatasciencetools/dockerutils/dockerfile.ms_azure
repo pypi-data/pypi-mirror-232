@@ -1,0 +1,92 @@
+# This docker image is used as the base setup for the hosting of 
+# the RSI Forms processing ML-based text classificaion API
+
+# if using debian image, must install python
+FROM mcr.microsoft.com/azureml/openmpi3.1.2-cuda10.2-cudnn8-ubuntu18.04 
+# FROM python:3.9
+
+LABEL org.opencontainers.image.authors="Nick Roseveare <nroseveare@rsimail.com>" \
+    org.opencontainers.image.name="base_for_<image_name>" \
+    org.opencontainers.image.title="<TITLE> - base image" \
+    org.opencontainers.image.description="Base image containing necessary packages/prerequisites"
+
+USER root
+SHELL ["/bin/bash", "-c"]
+
+ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
+
+RUN apt-get update --fix-missing && apt-get upgrade -y && \
+    apt-get install -y wget bzip2 ca-certificates \
+    grep sed dpkg curl unzip less htop screen \
+    man \
+    libglib2.0-0 libxext6 libsm6 libxrender1 \
+    git subversion build-essential systemctl sudo cron vim jq
+
+ARG NOTEBOOK_PORT USER2ADD
+
+# Expose the supervisord control page and jupyter notebook ports
+EXPOSE 9001 $NOTEBOOK_PORT
+
+# Create the app user
+RUN bash -c 'useradd -s /bin/bash -p p@ssw0rd --create-home ${USER2ADD} && mkdir -p /App /home/${USER2ADD}/.local/bin /home/${USER2ADD}/notebooks /home/${USER2ADD}/.config/matplotlib'
+RUN bash -c 'usermod -a -G sudo ${USER2ADD}'
+
+# Copy local requirements only to preserve docker image layering 
+COPY ./bash_aliases /home/${USER2ADD}/.bash_aliases
+COPY ./bash_aliases /root/.bashrc
+COPY ./requirements.txt /home/${USER2ADD}/
+
+RUN mkdir -p /var/log/supervisord/
+
+RUN bash -c 'chown -R ${USER2ADD}:${USER2ADD} /App /home/${USER2ADD}' 
+ENV PY_INSTALL_PATH /home/${USER2ADD}/conda
+ENV PATH /home/${USER2ADD}/conda/bin:/usr/local/bin:/opt/conda/bin:$PATH
+ENV PYTHONPATH ${PY_INSTALL_PATH}:/usr/local/:/opt/conda/
+RUN echo 'export "PATH=/home/${USER2ADD}/conda/bin:\$PATH" > /etc/profile.d/conda.sh'
+
+USER ${USER2ADD}
+
+# # Alternative way to install python and related tools - install locally for more robust behavior
+# #RUN echo 'export "PATH=/opt/conda/bin:\$PATH" > ~/.bashrc' && \
+# RUN wget --quiet https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda.sh && \
+#     /bin/bash ~/miniconda.sh -b -p ${PY_INSTALL_PATH} && \
+#     rm ~/miniconda.sh
+
+# Install base modules needed for running the API module
+# Use no-cache-dir to keep Docker image as small as possible
+# when installing python modules
+RUN pip install --no-cache-dir --upgrade pip
+
+# optionally set up a virtual env for isolating the python modules installed
+# RUN pip install virtualenv
+# RUN virtualenv ~/pycore
+# RUN pip install supervisor ipython jupyter
+# RUN source ~/pycore/bin/activate
+
+# Install requirements, supervisord, and tools
+# RUN bash -c 'source ~/pycore/bin/activate && pip install --no-cache-dir -r ~/requirements.txt && pip install ipython jupyter supervisor matplotlib && pip install --upgrade setuptools'
+RUN bash -c 'conda install python=3.9'
+RUN bash -c 'pip install --upgrade setuptools'
+RUN bash -c 'pip install pip==22.1'
+RUN bash -c 'pip install ipython jupyter supervisor matplotlib'
+RUN bash -c 'pip install --no-cache-dir -r ~/requirements.txt'
+
+USER root
+
+# Add Tini and verify - process manager to prevent zombie processes
+ENV TINI_VERSION v0.19.0
+ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /tini
+ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini.asc /tini.asc
+RUN gpg --batch --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 595E85A6B1B4779EA4DAAEC70B588DFF0527A9B7 \
+ && gpg --batch --verify /tini.asc /tini
+RUN chmod +x /tini
+ENTRYPOINT ["/tini", "--"]
+
+ENV TERM xterm
+ENV TESTIT "this"
+
+SHELL ["/bin/bash", "-c"]
+
+# Run your program under Tini
+CMD ["/bin/bash"]
+

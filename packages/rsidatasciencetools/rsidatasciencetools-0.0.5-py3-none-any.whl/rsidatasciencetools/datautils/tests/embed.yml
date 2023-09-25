@@ -1,0 +1,14 @@
+dbconfig: sql-matchrecords-config.json
+embedding_model: rec_embed_id_name_dob
+embed_dim: 100
+minn: 3
+char_ngrams_only: True
+merge_fields:
+  - compositename
+  - maidenname
+  - birthday
+  - taxid
+  - compositeaddress
+quantize: False
+scann_num_neighbors: 10
+scann_distance_measure: "dot_product"

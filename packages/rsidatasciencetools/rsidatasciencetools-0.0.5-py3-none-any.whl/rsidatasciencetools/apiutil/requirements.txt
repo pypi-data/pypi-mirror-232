@@ -1,0 +1,5 @@
+uvicorn
+pandas
+numpy
+fastapi
+pyodbc==4.0.28

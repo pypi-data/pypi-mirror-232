@@ -1,0 +1,13 @@
+dbconfig: sql-matchrecords-config.json
+vocab_file: rec_data_vocab.txt
+transformer_model_name: rec_transformer
+tokenizer_model_name: rec_data_token_converter
+minn: 2
+maxn: 3
+char_ngrams_only: True
+merge_fields:
+  - compositename
+  - maidenname
+  - birthday
+  - taxid
+  - compositeaddress

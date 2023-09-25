@@ -1,0 +1,17 @@
+
+corp_tax_data:
+  gross_income:
+    - loc: 10000
+    - scale: 5000
+    - distb_type: normal
+  taxable_income:
+    - loc: 10000
+    - scale: 5000
+    - distb_type: normal
+  deduction_list:
+    - deduc_types:
+      - deduc_1: 
+        - prob: 0.2
+        - loc: 2000
+        - scale: 100
+

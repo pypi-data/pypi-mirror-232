@@ -1,0 +1,58 @@
+# This docker image is used to host the RSI Forms
+# processing ML-based text classificaion API
+
+FROM rsi.revx/base_azure.ml_api
+
+LABEL org.opencontainers.image.authors="Nick Roseveare <nroseveare@rsimail.com>" \
+    org.opencontainers.image.name="rsi.revx.forms/forms_ml_api" \
+    org.opencontainers.image.title="RSI Forms ML API" \
+    org.opencontainers.image.description="RSI form processing NLP tool for fields classification"
+
+ARG NOTEBOOK_PORT ML_API_PORT TRAINDATADIR USER2ADD
+
+WORKDIR /App
+
+EXPOSE $ML_API_PORT
+
+ENV RSI_ML_API_PORT=$ML_API_PORT
+ENV RSI_ML_API_PW=$ML_API_PW
+ENV RSI_JUPYTER_PORT=$NOTEBOOK_PORT
+ENV RSI_TRAINDATADIR=$TRAINDATADIR
+ENV RSI_API_INCOMING_FILE_CACHE=$RSI_API_INCOMING_FILE_CACHE
+ENV RSI_ML_MODEL_CACHE=$RSI_ML_MODEL_CACHE
+ENV PATH=$PATH:/home/${USER2ADD}/.local/bin
+ENV PYTHONPATH=$PYTHONPATH
+
+# change owner to ${USER2ADD}
+RUN mkdir -p ${RSI_API_INCOMING_FILE_CACHE} ${RSI_ML_MODEL_CACHE}
+RUN bash -c 'chown -R ${USER2ADD}:${USER2ADD} /App /home/${USER2ADD} ${RSI_API_INCOMING_FILE_CACHE} ${RSI_ML_MODEL_CACHE} /root/.azureml'
+
+# Copy local files and install the ML API and models custom packages in the 
+# python site-packages
+USER ${USER2ADD}
+COPY ./ ./
+
+RUN bash -c 'chown -R ${USER2ADD}:${USER2ADD} /App /home/${USER2ADD} ${RSI_API_INCOMING_FILE_CACHE} ${RSI_ML_MODEL_CACHE}  /root/.azureml'
+
+COPY ./requirements.txt ./requirements.txt
+RUN bash -c 'pip install -r ./requirements.txt'
+
+RUN bash -c 'rm -rf `find . -name __pycache__` && rm -f `find . -name *.toprocess.json | grep -v tests` && rm -f `find . -name model.*.pkl | grep -v tests` && rm -f dockerfile* {build,run,pipeline}*.sh *.log *.yml'
+RUN bash -c 'mv bash_aliases /home/${USER2ADD}/.bash_aliases'
+# .bashrc seem to be overwritten - so coopt the .bash_aliases file to get ENV set up
+RUN bash -c 'cat docker_build.env >> /home/${USER2ADD}/.bashrc && printf "export PYTHONPATH=$PYTHONPATH\nexport PATH=$PATH" >> /home/${USER2ADD}/.bashrc' 
+# && echo "source /home/${USER2ADD}/pycore/bin/activate" >> .bashrc'
+
+# RUN bash -c 'source /home/${USER2ADD}/pycore/bin/activate && python3 setup.py install develop'
+RUN bash -c 'python3 setup.py install develop'
+RUN ./setjupyterpasswd.sh
+USER root
+RUN bash -c 'cat docker_build.env >> ~/.bashrc'
+
+# Run supervisord here with supervisord.config file
+CMD ["supervisord", "-c", "./supervisord.conf"]
+
+
+# To build and tag the docker image run:
+#   `docker build -t rsi.revx.<repository>/<image_name>:<version_number> -t rsi.revx.<repository>/<image_name>:latest ./  `
+# inside of the directory containing this docker file 
