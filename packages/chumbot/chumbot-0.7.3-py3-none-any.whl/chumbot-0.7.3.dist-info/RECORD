@@ -1,0 +1,12 @@
+chumbot/__init__.py,sha256=-1IAGHvLqpgPQnA7ryIjdat8-BT0BQu2XTQeq-zHIBg,53
+chumbot/backend/chumshell.py,sha256=d4iiSnHwO638KaLIJgyJblc4c56XIKjgatcKHqebE5E,2187
+chumbot/backend/client.py,sha256=zW_V5gFG5q7oKapvd76h_p_c6fU-WLuUXBrpYfmJ1Ek,11361
+chumbot/backend/clips.py,sha256=kNtm0UW7ES-K0UISrx2-W5KDdE3fKDX-l6CyF7xE73E,967
+chumbot/backend/constants.py,sha256=ZMcyAEbZUidDnkBuYRJouXl_s5UjlVMtmJb_xrdASAg,492
+chumbot/cli.py,sha256=rVtX5ZgEoNBlcOnK0giYkQmgX6Dq9pP-fFYforVTO14,1647
+chumbot/client_interface.py,sha256=Hlb9e5vNB7HI85jayx8ilYGHTDvRFj8xyCDRwN00kQ0,2469
+chumbot-0.7.3.dist-info/LICENSE,sha256=YJCJc7QrVWYynegi6UiT4KifLwut2HcmNHLgoO8uhK8,11342
+chumbot-0.7.3.dist-info/METADATA,sha256=9BZkSOBwqzjeXG14xtr6kYVz9PnnuiyoPsmtFB70ceE,3532
+chumbot-0.7.3.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+chumbot-0.7.3.dist-info/entry_points.txt,sha256=eGrHEwqt-4RhvN0RJCw7dMVBmuSD0_O-O0B1sEvATKQ,43
+chumbot-0.7.3.dist-info/RECORD,,
