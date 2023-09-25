@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "glsr-present"
+dynamic = ["version"]
+description = "GitLab Security Reports - Presenter"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {file = "LICENSE"}
+keywords = ["gitlab-ci", "security", "reports", "visualization"]
+authors = [
+  {name = "Rainer Schwarzbach", email = "undisclosed@example.com"},
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3 :: Only",
+  "Topic :: Utilities",
+]
+
+dependencies = [
+  "Jinja2>=3.1.2",
+]
+
+[project.urls]
+Homepage = "https://gitlab.com/blackstream-x/glsr-present"
+Documentation = "https://blackstream-x.gitlab.io/glsr-present"
+CI = "https://gitlab.com/blackstream-x/glsr-present/-/pipelines"
+"Bug Tracker" = "https://gitlab.com/blackstream-x/glsr-present/-/issues"
+Repository = "https://gitlab.com/blackstream-x/glsr-present.git"
+
+[tool.setuptools.dynamic]
+version = {attr = "glsr_present.__version__"}
+
+[tool.setuptools.package-data]
+"glsr_present.static" = ["*.*"]
+"glsr_present.templates" = ["*.*"]
