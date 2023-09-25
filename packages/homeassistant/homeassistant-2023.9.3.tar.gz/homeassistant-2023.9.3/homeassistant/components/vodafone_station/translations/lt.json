@@ -1,0 +1,62 @@
+{
+    "config": {
+        "flow_title": "{host}",
+        "step": {
+            "reauth_confirm": {
+                "data": {
+                    "password": "Slapta\u017eodis"
+                },
+                "description": "\u012eveskite teising\u0105 pagrindinio kompiuterio slapta\u017eod\u012f: {host}"
+            }
+        }
+    },
+    "entity": {
+        "sensor": {
+            "active_connection": {
+                "name": "Aktyvus ry\u0161ys",
+                "state": {
+                    "dsl": "xDSL",
+                    "fiber": "Pluo\u0161tas",
+                    "internet_key": "Interneto raktas",
+                    "unknown": "Ne\u017einomas"
+                }
+            },
+            "down_stream": {
+                "name": "WAN atsisiuntimo greitis"
+            },
+            "external_ip_key": {
+                "name": "WAN interneto rakto adresas"
+            },
+            "external_ipv4": {
+                "name": "WAN IPv4 adresas"
+            },
+            "external_ipv6": {
+                "name": "WAN IPv6 adresas"
+            },
+            "fw_version": {
+                "name": "Programin\u0117s \u012frangos versija"
+            },
+            "phone_num1": {
+                "name": "Telefono numeris (1)"
+            },
+            "phone_num2": {
+                "name": "Telefono numeris (2)"
+            },
+            "sys_cpu_usage": {
+                "name": "Procesoriaus naudojimas"
+            },
+            "sys_memory_usage": {
+                "name": "Atminties naudojimas"
+            },
+            "sys_reboot_cause": {
+                "name": "Perkrovimo prie\u017eastis"
+            },
+            "sys_uptime": {
+                "name": "Veiklos laikas"
+            },
+            "up_stream": {
+                "name": "WAN \u012fk\u0117limo greitis"
+            }
+        }
+    }
+}

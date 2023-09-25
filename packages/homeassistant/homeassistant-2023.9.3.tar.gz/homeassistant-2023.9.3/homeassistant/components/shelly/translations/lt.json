@@ -1,0 +1,32 @@
+{
+    "entity": {
+        "event": {
+            "input": {
+                "state_attributes": {
+                    "event_type": {
+                        "state": {
+                            "btn_down": "Mygtukas \u017eemyn",
+                            "btn_up": "Mygtukas auk\u0161tyn",
+                            "double_push": "Dvigubas paspaudimas",
+                            "long_push": "Ilgas paspaudimas",
+                            "single_push": "Vienkartinis paspaudimas",
+                            "triple_push": "Trigubas paspaudimas"
+                        }
+                    }
+                }
+            }
+        },
+        "sensor": {
+            "valve_status": {
+                "state": {
+                    "checking": "Tikrinama",
+                    "closed": "U\u017edaryta",
+                    "closing": "U\u017edaroma",
+                    "failure": "Nes\u0117km\u0117",
+                    "opened": "Atidaryta",
+                    "opening": "Atidaroma"
+                }
+            }
+        }
+    }
+}

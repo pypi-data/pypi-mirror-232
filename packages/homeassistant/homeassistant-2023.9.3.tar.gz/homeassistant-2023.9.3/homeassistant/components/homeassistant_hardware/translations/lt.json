@@ -1,0 +1,27 @@
+{
+    "silabs_multiprotocol_hardware": {
+        "options": {
+            "abort": {
+                "addon_already_running": "Nepavyko paleisti priedo {addon_name} nes jis jau veikia."
+            },
+            "step": {
+                "configure_flasher_addon": {
+                    "title": "Prasid\u0117jo \u201eSilicon Labs Flasher\u201c priedo diegimas"
+                },
+                "install_flasher_addon": {
+                    "title": "Prasid\u0117jo \u201eSilicon Labs Flasher\u201c priedo diegimas"
+                },
+                "start_flasher_addon": {
+                    "description": "Dabar \u012fdiegiama \u201eZigbee\u201c programin\u0117 \u012franga. Tai u\u017etruks kelias minutes.",
+                    "title": "Diegiama programin\u0117 \u012franga"
+                },
+                "uninstall_addon": {
+                    "data": {
+                        "disable_multi_pan": "I\u0161jungti keli\u0173 protokol\u0173 palaikym\u0105"
+                    },
+                    "description": "I\u0161jungus keli\u0173 protokol\u0173 palaikym\u0105, j\u016bs\u0173 {hardware_name} radijas bus gr\u0105\u017eintas atgal \u012f tik Zigbee programin\u0119-aparatin\u0119 \u012frang\u0105 ir bus i\u0161jungtas gij\u0173 palaikymas, kur\u012f teikia {hardware_name}. J\u016bs\u0173 \"Thread\" \u012frenginiai ir toliau veiks tik tuo atveju, jei netoliese turite kit\u0105 \"Thread\" kra\u0161tin\u0117s mar\u0161rutizatori\u0173.\n\n\"Zigbee\" programin\u0117s \u012frangos \u012fdiegimas ir atsargin\u0117s kopijos atk\u016brimas u\u017etruks kelias minutes."
+                }
+            }
+        }
+    }
+}

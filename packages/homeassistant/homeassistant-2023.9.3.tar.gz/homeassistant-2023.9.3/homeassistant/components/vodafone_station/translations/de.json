@@ -1,0 +1,82 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Der Dienst ist bereits konfiguriert",
+            "cannot_connect": "Verbindung fehlgeschlagen",
+            "invalid_auth": "Ung\u00fcltige Authentifizierung",
+            "reauth_successful": "Die erneute Authentifizierung war erfolgreich",
+            "unknown": "Unerwarteter Fehler"
+        },
+        "error": {
+            "cannot_connect": "Verbindung fehlgeschlagen",
+            "invalid_auth": "Ung\u00fcltige Authentifizierung",
+            "unknown": "Unerwarteter Fehler"
+        },
+        "flow_title": "{host}",
+        "step": {
+            "reauth_confirm": {
+                "data": {
+                    "password": "Passwort"
+                },
+                "description": "Bitte gib das richtige Passwort f\u00fcr den Host ein: {host}"
+            },
+            "user": {
+                "data": {
+                    "host": "Host",
+                    "password": "Passwort",
+                    "ssl": "Verwendet ein SSL-Zertifikat",
+                    "username": "Benutzername"
+                }
+            }
+        }
+    },
+    "entity": {
+        "sensor": {
+            "active_connection": {
+                "name": "Aktive Verbindung",
+                "state": {
+                    "dsl": "xDSL",
+                    "fiber": "Fiber",
+                    "internet_key": "Internetschl\u00fcssel",
+                    "unknown": "Unbekannt"
+                }
+            },
+            "down_stream": {
+                "name": "WAN-Downloadrate"
+            },
+            "external_ip_key": {
+                "name": "WAN-Internet-Schl\u00fcsseladresse"
+            },
+            "external_ipv4": {
+                "name": "WAN-IPv4-Adresse"
+            },
+            "external_ipv6": {
+                "name": "WAN-IPv6-Adresse"
+            },
+            "fw_version": {
+                "name": "Firmware-Version"
+            },
+            "phone_num1": {
+                "name": "Telefonnummer (1)"
+            },
+            "phone_num2": {
+                "name": "Telefonnummer (2)"
+            },
+            "sys_cpu_usage": {
+                "name": "CPU-Auslastung"
+            },
+            "sys_memory_usage": {
+                "name": "Speicherauslastung"
+            },
+            "sys_reboot_cause": {
+                "name": "Ursache des Neustarts"
+            },
+            "sys_uptime": {
+                "name": "Betriebszeit"
+            },
+            "up_stream": {
+                "name": "WAN-Upload-Rate"
+            }
+        }
+    }
+}

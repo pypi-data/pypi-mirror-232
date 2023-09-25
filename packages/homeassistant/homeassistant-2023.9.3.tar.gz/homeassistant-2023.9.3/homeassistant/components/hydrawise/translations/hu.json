@@ -1,0 +1,8 @@
+{
+    "issues": {
+        "deprecated_yaml_import_issue": {
+            "description": "A Hydrawise YAML haszn\u00e1lat\u00e1val t\u00f6rt\u00e9n\u0151 konfigur\u00e1l\u00e1sa elt\u00e1vol\u00edt\u00e1sra ker\u00fcl, de {error_type} hiba t\u00f6rt\u00e9nt a YAML konfigur\u00e1ci\u00f3 import\u00e1l\u00e1sakor.\n\nGy\u0151z\u0151dj\u00f6n meg r\u00f3la, hogy a Hydrawise kapcsolat m\u0171k\u00f6dik, \u00e9s ind\u00edtsa \u00fajra a Home Assistantot, hogy \u00fajra megpr\u00f3b\u00e1lja, vagy t\u00e1vol\u00edtsa el a Hydrawise YAML konfigur\u00e1ci\u00f3t a configuration.yaml f\u00e1jlb\u00f3l, \u00e9s folytassa az [integr\u00e1ci\u00f3 be\u00e1ll\u00edt\u00e1sa]({url}) manu\u00e1lisan.",
+            "title": "A Hydrawise YAML konfigur\u00e1ci\u00f3 import\u00e1l\u00e1sa nem siker\u00fclt"
+        }
+    }
+}

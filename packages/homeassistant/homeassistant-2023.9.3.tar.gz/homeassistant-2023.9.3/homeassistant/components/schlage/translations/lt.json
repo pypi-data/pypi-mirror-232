@@ -1,0 +1,9 @@
+{
+    "entity": {
+        "binary_sensor": {
+            "keypad_disabled": {
+                "name": "Klaviat\u016bra i\u0161jungta"
+            }
+        }
+    }
+}

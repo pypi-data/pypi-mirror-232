@@ -1,0 +1,28 @@
+{
+    "services": {
+        "process": {
+            "fields": {
+                "language": {
+                    "name": "Bahasa"
+                },
+                "text": {
+                    "description": "Input teks yang ditranskripsi.",
+                    "name": "Teks"
+                }
+            }
+        },
+        "reload": {
+            "description": "Muat ulang konfigurasi intent",
+            "fields": {
+                "agent_id": {
+                    "description": "Agen percakapan untuk dimuat ulang."
+                },
+                "language": {
+                    "name": "Bahasa"
+                }
+            },
+            "name": "Muat Ulang"
+        }
+    },
+    "title": "Percakapan"
+}
