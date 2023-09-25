@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: huscy-project
+Version: 0.6.1a26
+Summary: integration project for huscy apps
+Author: Stefan Bunde
+Author-email: stefanbunde+git@posteo.de
+Provides-Extra: testing
