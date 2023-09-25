@@ -1,0 +1,15 @@
+PyxelUniversalFont/__init__.py,sha256=9bGyE-fVFGEoKFlHoV3LlGK6xTARuMXPXmcjEcH3Ya4,76
+PyxelUniversalFont/command.py,sha256=K8vpauA8ZAuCn6NO0LXsGHVJtOzBhv-VGK3Fd6oxm_I,581
+PyxelUniversalFont/root.py,sha256=9q06-GMRMedCj8vBSlM77ggB2FhBehbzIkby5Cdv3ig,1804
+PyxelUniversalFont/sample_app.py,sha256=BrTxp032P13uSIBXPbrcwMyKTKObeiLgC907OyIiJM8,860
+PyxelUniversalFont/utils.py,sha256=WsLjml9-G7cMepDK5nLTWQzj4jxRKcGKmzJ4MHi9mJo,1245
+PyxelUniversalFont/fonts/IPA_Gothic.ttf,sha256=UDr0qLhNEHm44uNY3H96f7jLeh8hLzXq72eC2_x1pV4,6235344
+PyxelUniversalFont/fonts/IPA_Mincho.ttf,sha256=q5I4cLnqBHF5wU-nju3o05V7a_7SZXclO18I91wQKjQ,8046712
+PyxelUniversalFont/fonts/IPA_PGothic.ttf,sha256=pj9hU4QeVuyd8bMaVNmNP0HYqqHD2N8wozUCKW9bgGg,6235712
+PyxelUniversalFont/fonts/IPA_PMincho.ttf,sha256=dcL9C28_KyxWqVt6wiNgNKBOC4NgX_ttFJtty7z7Bvs,8046048
+pyxel_universal_font-1.0.0.dist-info/LICENSE,sha256=3_09V8sbf5TnPr9Jn59Lq6h8s8yqhtmfoGWUFyWfgwA,1062
+pyxel_universal_font-1.0.0.dist-info/METADATA,sha256=Tb1ycZF1poQXjCDn_aMuI04o7xGaauGJBhxgFWo1pr4,2801
+pyxel_universal_font-1.0.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+pyxel_universal_font-1.0.0.dist-info/entry_points.txt,sha256=6tT4UxkETUB-lhQN88Jvlqq_4qxhg6zNs5XPZVETEq0,67
+pyxel_universal_font-1.0.0.dist-info/top_level.txt,sha256=C_-KGhwH3sVqxWOgSM8xeLBW4tY7ienGkn3DSNXeqE8,19
+pyxel_universal_font-1.0.0.dist-info/RECORD,,
