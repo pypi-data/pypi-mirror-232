@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: tbm13_utils
+Version: 1.0
+Summary: Utils made for personal use
+Author-email: TBM13 <mateo.trueba@gmail.com>
+Project-URL: Homepage, https://github.com/TBM13/tbm13-utils
+Project-URL: Bug Tracker, https://github.com/TBM13/tbm13-utils/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Utilities
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# TBM13 Utils
+
+Python utils made for personal use on my projects.
