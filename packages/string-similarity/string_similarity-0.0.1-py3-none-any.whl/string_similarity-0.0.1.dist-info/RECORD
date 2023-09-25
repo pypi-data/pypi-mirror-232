@@ -1,0 +1,11 @@
+string_similarity/__init__.py,sha256=AohJJfE0zSdw0gT5IK2xa7ieZOEgq9XPgEyOs_PrA00,48
+string_similarity/example.py,sha256=MFxT2Uo9oqIiEFkjnsR7kNbVbvLeFEP5g8UaCxZST0k,234
+string_similarity/string_similarity.py,sha256=EMbuh8UG5ZQV-v0TMye418tTXCzHuzc3mLEkaW1legM,2282
+string_similarity/extensions/string_extension.py,sha256=Fr_9wVs3wLEK3sCv6wXitYmZlm2vpoTuL-F-_SjGn8g,331
+string_similarity/models/best_match.py,sha256=rc4p3fKUnutTQ1ccx1nmpcfROPFsuwA0mA194ENXr78,313
+string_similarity/models/rating.py,sha256=k8Zecy1PwZo8a3n0SZY_lC4ZZRpmrDq7xyMuLaygFE0,221
+string_similarity-0.0.1.dist-info/LICENSE,sha256=02yGK2ZaubFr4Krf45J0JL7CV0G3VhNOqyxHLLMbGto,1089
+string_similarity-0.0.1.dist-info/METADATA,sha256=wGcHuN_ZkLutKYYuZNgjsyL-LMI-xbrRwYoXSIQXALo,4706
+string_similarity-0.0.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+string_similarity-0.0.1.dist-info/top_level.txt,sha256=6V2Zvfnv_GajWolSkFNx-jNtToBZaBkyPKbwSptqSxk,18
+string_similarity-0.0.1.dist-info/RECORD,,
