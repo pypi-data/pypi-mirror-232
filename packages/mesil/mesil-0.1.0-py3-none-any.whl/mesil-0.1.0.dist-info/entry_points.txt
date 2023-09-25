@@ -1,0 +1,3 @@
+[console_scripts]
+mesil=mesil.cli:app
+
