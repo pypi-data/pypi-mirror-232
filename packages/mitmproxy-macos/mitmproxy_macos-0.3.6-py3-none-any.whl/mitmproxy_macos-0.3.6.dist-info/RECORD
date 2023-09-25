@@ -1,0 +1,8 @@
+mitmproxy_macos/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mitmproxy_macos/macos-certificate-truster.app/Contents/Info.plist,sha256=xMt4v9fvXmu66CElVbkPvCHd6nY0jT0ZWVCRmd9g8jA,957
+mitmproxy_macos/macos-certificate-truster.app/Contents/Resources/mitmproxy.icns,sha256=E5rSIoq3prXFOkgmt1GC19aLw36NWjkIZ4SfOCG_Isg,154566
+mitmproxy_macos/Mitmproxy Redirector.app.tar,sha256=EWX3tiPolCoR5ocpIrbtJ_JA5bd7mR5jsM2f4Cx59R0,6793216
+mitmproxy_macos/macos-certificate-truster.app/Contents/MacOS/macos-certificate-truster,sha256=qV2UZ2wNxvBQwozUF6OD5gay5AfAh_blsq54uemLl4k,453744
+mitmproxy_macos-0.3.6.dist-info/METADATA,sha256=ajsnSEiHpeSi1au_jlgdIJZNBVeOuyQ1c3zVmOzvnlc,517
+mitmproxy_macos-0.3.6.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+mitmproxy_macos-0.3.6.dist-info/RECORD,,
