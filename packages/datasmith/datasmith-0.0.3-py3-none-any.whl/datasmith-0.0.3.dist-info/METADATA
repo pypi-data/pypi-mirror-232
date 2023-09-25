@@ -1,0 +1,162 @@
+Metadata-Version: 2.1
+Name: datasmith
+Version: 0.0.3
+Summary: A brief description of your package
+Home-page: https://github.com/project-typebuild/typebuild
+Author: iRanadheer
+Author-email: neneranadheer@gmail.com
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: aiohttp ==3.8.5
+Requires-Dist: aiosignal ==1.3.1
+Requires-Dist: altair ==5.1.1
+Requires-Dist: async-timeout ==4.0.3
+Requires-Dist: attrs ==23.1.0
+Requires-Dist: beautifulsoup4 ==4.12.2
+Requires-Dist: blinker ==1.6.2
+Requires-Dist: cachetools ==5.3.1
+Requires-Dist: certifi ==2023.7.22
+Requires-Dist: chardet ==5.2.0
+Requires-Dist: charset-normalizer ==3.2.0
+Requires-Dist: click ==8.1.7
+Requires-Dist: contourpy ==1.1.1
+Requires-Dist: cycler ==0.11.0
+Requires-Dist: extra-streamlit-components ==0.1.60
+Requires-Dist: Faker ==19.6.2
+Requires-Dist: favicon ==0.7.0
+Requires-Dist: fonttools ==4.42.1
+Requires-Dist: frozenlist ==1.4.0
+Requires-Dist: gitdb ==4.0.10
+Requires-Dist: GitPython ==3.1.37
+Requires-Dist: htbuilder ==0.6.2
+Requires-Dist: hydralit-components ==1.0.10
+Requires-Dist: idna ==3.4
+Requires-Dist: importlib-metadata ==6.8.0
+Requires-Dist: Jinja2 ==3.1.2
+Requires-Dist: jsonschema ==4.19.1
+Requires-Dist: jsonschema-specifications ==2023.7.1
+Requires-Dist: kiwisolver ==1.4.5
+Requires-Dist: lxml ==4.9.3
+Requires-Dist: Markdown ==3.4.4
+Requires-Dist: markdown-it-py ==3.0.0
+Requires-Dist: markdownlit ==0.0.7
+Requires-Dist: MarkupSafe ==2.1.3
+Requires-Dist: matplotlib ==3.8.0
+Requires-Dist: mdurl ==0.1.2
+Requires-Dist: more-itertools ==10.1.0
+Requires-Dist: multidict ==6.0.4
+Requires-Dist: numpy ==1.26.0
+Requires-Dist: openai ==0.28.0
+Requires-Dist: packaging ==23.1
+Requires-Dist: pandas ==2.1.1
+Requires-Dist: Pillow ==9.5.0
+Requires-Dist: protobuf ==4.24.3
+Requires-Dist: pyarrow ==13.0.0
+Requires-Dist: pydeck ==0.8.1b0
+Requires-Dist: Pygments ==2.16.1
+Requires-Dist: pymdown-extensions ==10.3
+Requires-Dist: pyparsing ==3.1.1
+Requires-Dist: python-dateutil ==2.8.2
+Requires-Dist: pytz ==2023.3.post1
+Requires-Dist: PyYAML ==6.0.1
+Requires-Dist: referencing ==0.30.2
+Requires-Dist: requests ==2.31.0
+Requires-Dist: rich ==13.5.3
+Requires-Dist: rpds-py ==0.10.3
+Requires-Dist: six ==1.16.0
+Requires-Dist: smmap ==5.0.1
+Requires-Dist: soupsieve ==2.5
+Requires-Dist: st-annotated-text ==4.0.1
+Requires-Dist: streamlit ==1.27.0
+Requires-Dist: streamlit-ace ==0.1.1
+Requires-Dist: streamlit-camera-input-live ==0.2.0
+Requires-Dist: streamlit-card ==0.0.61
+Requires-Dist: streamlit-embedcode ==0.1.2
+Requires-Dist: streamlit-extras ==0.3.2
+Requires-Dist: streamlit-faker ==0.0.2
+Requires-Dist: streamlit-image-coordinates ==0.1.6
+Requires-Dist: streamlit-keyup ==0.2.0
+Requires-Dist: streamlit-option-menu ==0.3.6
+Requires-Dist: streamlit-toggle-switch ==1.0.2
+Requires-Dist: streamlit-vertical-slider ==1.0.2
+Requires-Dist: tenacity ==8.2.3
+Requires-Dist: toml ==0.10.2
+Requires-Dist: toolz ==0.12.0
+Requires-Dist: tornado ==6.3.3
+Requires-Dist: tqdm ==4.66.1
+Requires-Dist: typing-extensions ==4.8.0
+Requires-Dist: tzdata ==2023.3
+Requires-Dist: tzlocal ==5.0.1
+Requires-Dist: urllib3 ==2.0.5
+Requires-Dist: validators ==0.22.0
+Requires-Dist: yarl ==1.9.2
+Requires-Dist: zipp ==3.17.0
+
+# TypeBuild
+
+TypeBuild is a powerful Python package that empowers domain experts to develop their own frontend with just natural language input. This tool is designed to help users perform data analysis and visualization with tabular data (csv, xlsx, .db, .sqlite, .parquet). It also allows users to upload and interact with text documents for summarization, classification, and Q&A.
+
+TypeBuild leverages the power of OpenAI's GPT models, but also provides the flexibility for users to upload their own llm function. Users can create projects and new views using the chat feature in the tool.
+
+## Installation
+
+You can install TypeBuild using pip:
+
+```bash
+pip install typebuild
+```
+
+After installation, you can run the command 'typebuild' from your command line to launch the Streamlit app.
+
+## Features
+
+- **Data Analysis and Visualization**: Analyze and visualize tabular data from various formats including csv, xlsx, .db, .sqlite, .parquet.
+- **Document Interaction**: Upload and interact with text documents for tasks such as summarization, classification, and Q&A.
+- **Customizable AI Models**: Use OpenAI's GPT models or upload your own llm function.
+- **Project Creation**: Create and manage projects using the chat feature in the tool.
+
+## Usage
+
+After installing the package, you can launch the Streamlit app by running:
+
+```bash
+typebuild
+```
+
+This will open a new browser window where you can start creating projects, uploading data, and interacting with your documents.
+
+## Contributing
+
+We welcome contributions to TypeBuild. Please see our [Contributing Guide](CONTRIBUTING.md) for more details.
+
+## License
+
+Shield: [![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa]
+
+This work is licensed under a
+[Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License][cc-by-nc-sa].
+
+[![CC BY-NC-SA 4.0][cc-by-nc-sa-image]][cc-by-nc-sa]
+
+[cc-by-nc-sa]: http://creativecommons.org/licenses/by-nc-sa/4.0/
+[cc-by-nc-sa-image]: https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png
+[cc-by-nc-sa-shield]: https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg
+
+## Support
+
+If you encounter any issues or have any questions about TypeBuild, please open an issue on our [GitHub page](https://github.com/project-typebuild/typebuild).
+
+## Acknowledgements
+
+We would like to thank the OpenAI team for their GPT models which have been instrumental in the development of TypeBuild.
+
+
