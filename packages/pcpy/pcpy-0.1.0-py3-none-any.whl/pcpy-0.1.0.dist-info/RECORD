@@ -1,0 +1,11 @@
+pcpy/__init__.py,sha256=iePdKqCjTJjDS3h1islUtC9S45oLBaivqlE6HF1sk_4,83
+pcpy/catalog.json,sha256=_bbZLxPcl1K5j77I7NQAAFq7aeZF-ebrGvQpCHBnhdQ,872232
+pcpy/constants.py,sha256=2IruKd_juGWSmwTRhWe-9KH_stF-9uFdhgUw0hjyJgQ,4887
+pcpy/operation.py,sha256=XzYYWGQm3kUCkE4VsHnear21BDc4l5DSujmCN2NSUpI,10857
+pcpy/pcset.py,sha256=QksmaOoCTAc3XINuHCXl_foz0UDcSNwSaaMi1f1j8CE,21966
+pcpy/query.py,sha256=pxscwGMzdjxPOm4fbOSXI2nVTNV5RZPNwbFE6SAyBKA,15590
+pcpy/relation.py,sha256=3pVPs1Z94aXm2ggr9cZ9ISIYJowQXrcP28RHGhjq5kM,14467
+pcpy-0.1.0.dist-info/LICENSE.md,sha256=RXOlxsVFxnYA76bGqxLeV1LO-VKxFYB5wqDQG72NYIA,1082
+pcpy-0.1.0.dist-info/METADATA,sha256=aG8-CLOAP-DITdaRsb58A7HMh25tP3n_eM__cRpDmSU,1380
+pcpy-0.1.0.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+pcpy-0.1.0.dist-info/RECORD,,
