@@ -1,0 +1,9 @@
+README.md
+setup.py
+flask_taskx.egg-info/PKG-INFO
+flask_taskx.egg-info/SOURCES.txt
+flask_taskx.egg-info/dependency_links.txt
+flask_taskx.egg-info/entry_points.txt
+flask_taskx.egg-info/not-zip-safe
+flask_taskx.egg-info/requires.txt
+flask_taskx.egg-info/top_level.txt

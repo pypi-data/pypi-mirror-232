@@ -1,0 +1,3 @@
+[console_scripts]
+taskx = flask_taskx:cli
+

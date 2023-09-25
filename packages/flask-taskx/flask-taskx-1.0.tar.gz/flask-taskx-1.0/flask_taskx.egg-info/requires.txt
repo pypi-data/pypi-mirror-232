@@ -1,0 +1,4 @@
+Flask
+apscheduler
+peewee
+Click==7.0
