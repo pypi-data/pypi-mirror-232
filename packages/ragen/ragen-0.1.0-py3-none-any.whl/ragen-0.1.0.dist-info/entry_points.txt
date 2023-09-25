@@ -1,0 +1,2 @@
+[console_scripts]
+ragen = ragen.cmd:main
