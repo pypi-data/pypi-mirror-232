@@ -1,0 +1,14 @@
+LICENSE.rst
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+multiadbconnect/README.MD
+multiadbconnect/__init__.py
+multiadbconnect/requirements.txt
+multiadbconnect/thirdparty.json
+multiadbconnect.egg-info/PKG-INFO
+multiadbconnect.egg-info/SOURCES.txt
+multiadbconnect.egg-info/dependency_links.txt
+multiadbconnect.egg-info/requires.txt
+multiadbconnect.egg-info/top_level.txt

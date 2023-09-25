@@ -1,0 +1,3 @@
+include multiadbconnect/requirements.txt
+include multiadbconnect/thirdparty.json
+include multiadbconnect/README.MD
