@@ -1,0 +1,37 @@
+[build-system]
+requires = ["poetry"]
+build-backend = "poetry.masonry.api"
+
+[tool.poetry]
+name = "zenkai"
+version = "0.0.1"
+description = "A framework for flexibly developing beyond bakcpropagation."
+homepage = "https://github.com/yourusername/your-repository"
+repository = "https://github.com/short-greg/zenkai"
+documentation = "https://zenkai.readthedocs.com"
+authors = ["Greg Short <gshort@example.com>"]
+license = "LICENSE"
+readme = "README.md"
+packages = [
+    {include="zenkai"},
+    {include="zenkai/tansaku"},
+    {include="zenkai/utils"},
+    {include="zenkai/kikai"}
+]
+
+
+[tool.poetry.dependencies]
+python = ">=3.8,<4.0"
+numpy = ">=1"
+pandas = ">=1,<2"
+scikit-learn = ">=1.0.0"
+# torch = {version = ">=2,<3"}
+tqdm = ">=4.0"
+scipy = ">=1.5,<2.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6"
+flake8 = "^3"
+isort = "^5"
+black = "^21"
+blacken-docs = "^1"
