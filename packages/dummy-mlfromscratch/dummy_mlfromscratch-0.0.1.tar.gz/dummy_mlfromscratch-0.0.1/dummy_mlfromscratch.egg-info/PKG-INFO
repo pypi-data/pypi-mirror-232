@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: dummy-mlfromscratch
+Version: 0.0.1
+Summary: Implementation of different machine learning methods.
+Home-page: https://github.com/imanousar/ML-from-Scratch
+Author: Giannis Manousaridis
+Author-email: giannismanu97@gmail.com
+Requires-Python: >=3.7

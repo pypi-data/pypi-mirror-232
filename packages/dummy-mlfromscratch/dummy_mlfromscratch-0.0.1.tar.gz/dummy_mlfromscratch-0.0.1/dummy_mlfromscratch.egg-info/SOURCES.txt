@@ -1,0 +1,7 @@
+README.md
+setup.py
+dummy_mlfromscratch.egg-info/PKG-INFO
+dummy_mlfromscratch.egg-info/SOURCES.txt
+dummy_mlfromscratch.egg-info/dependency_links.txt
+dummy_mlfromscratch.egg-info/requires.txt
+dummy_mlfromscratch.egg-info/top_level.txt
