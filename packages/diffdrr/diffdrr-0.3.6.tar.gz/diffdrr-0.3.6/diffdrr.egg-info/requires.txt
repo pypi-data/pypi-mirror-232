@@ -1,0 +1,15 @@
+pydicom
+matplotlib
+seaborn
+tqdm
+imageio
+fastcore
+pyvista[all]
+torch
+
+[dev]
+nbdev
+black
+flake8
+ipykernel
+ipywidgets
