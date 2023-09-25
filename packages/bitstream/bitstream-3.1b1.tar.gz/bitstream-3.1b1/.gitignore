@@ -1,0 +1,12 @@
+benchmark
+setup.cfg
+*~
+*.bak
+*.pyc
+*.c
+*.so
+*.rst
+*.pdf
+*.egg-info
+/build
+/dist
