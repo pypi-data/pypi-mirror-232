@@ -1,0 +1,2 @@
+[pytest11]
+collect_info_plugin = pytest_collect_interface_info_plugin
