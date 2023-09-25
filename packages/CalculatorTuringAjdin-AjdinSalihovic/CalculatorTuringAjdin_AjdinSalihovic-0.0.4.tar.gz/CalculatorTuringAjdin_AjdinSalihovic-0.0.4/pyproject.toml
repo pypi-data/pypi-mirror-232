@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "CalculatorTuringAjdin_AjdinSalihovic"
+version = "0.0.4"
+authors = [
+    {name = "Ajdin Salihovic", email = "ajdin-salihovic@outlook.com"},
+]
+description = "Python calculator for Turing college"
+readme = "README.md"
+license = {text = "MIT"}
