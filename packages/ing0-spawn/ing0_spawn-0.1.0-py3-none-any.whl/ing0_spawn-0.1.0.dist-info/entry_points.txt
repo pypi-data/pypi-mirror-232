@@ -1,0 +1,3 @@
+[console_scripts]
+ing0=ing0:main
+
