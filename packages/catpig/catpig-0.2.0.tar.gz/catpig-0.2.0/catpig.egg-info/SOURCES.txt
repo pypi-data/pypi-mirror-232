@@ -1,0 +1,8 @@
+README.md
+setup.py
+catpig/__init__.py
+catpig/catpig.py
+catpig.egg-info/PKG-INFO
+catpig.egg-info/SOURCES.txt
+catpig.egg-info/dependency_links.txt
+catpig.egg-info/top_level.txt
