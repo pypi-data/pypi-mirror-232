@@ -1,0 +1,5 @@
+blessed>=1.17.7
+prefixed>=0.3.2
+
+[:python_version < "3.2"]
+backports.functools-lru-cache
