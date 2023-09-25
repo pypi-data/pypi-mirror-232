@@ -1,0 +1,10 @@
+dvuploader/__init__.py,sha256=tddPNhT9ZjEdPEgkPU8T6syDUwxp4-tYq8PwXa_l2hs,58
+dvuploader/checksum.py,sha256=d9yUSpKh2MdthUid9PsBM3sCN18pO5vK3cydEJYczgc,2140
+dvuploader/chunkstream.py,sha256=uEENscOnb00AQ8tZk-2EMYJCe0HevQKOn2Lf5xeFiXI,1295
+dvuploader/directupload.py,sha256=8yoUvJnmVG22W7CdWeYvVQX3LkTurSFd98wVoUre0Uk,9827
+dvuploader/dvuploader.py,sha256=-69sLSWU5P8vmMx2ZU6c30bxwJ9n5ygHoZLfWN3Kyxs,5247
+dvuploader/file.py,sha256=Fbxrx9qF0QLU4RwHHoiqP-CpaXsr__nQoGjx9YVvn0c,998
+dvuploader-0.1.0.dist-info/LICENSE,sha256=I1yQsUyJbRKjBgaiY8wOFwRpBiimgCqNeIfrCRYEI7U,1066
+dvuploader-0.1.0.dist-info/METADATA,sha256=0m3sfKWKSjECDVfTqC659_q3aT7PtvYxEVcQISh2hMY,2369
+dvuploader-0.1.0.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+dvuploader-0.1.0.dist-info/RECORD,,
