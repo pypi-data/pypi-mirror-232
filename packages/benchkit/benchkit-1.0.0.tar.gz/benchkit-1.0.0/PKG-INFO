@@ -1,0 +1,127 @@
+Metadata-Version: 2.1
+Name: benchkit
+Version: 1.0.0
+Summary: Your End to End ML workbench.
+Author: BenchAI
+Requires-Python: >=3.9,<3.13
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: absl-py (>=2.0.0,<3.0.0)
+Requires-Dist: accelerate (>=0.23.0,<0.24.0)
+Requires-Dist: cachetools (>=5.3.1,<6.0.0)
+Requires-Dist: certifi (>=2023.7.22,<2024.0.0)
+Requires-Dist: charset-normalizer (>=3.2.0,<4.0.0)
+Requires-Dist: colorama (>=0.4.6,<0.5.0)
+Requires-Dist: contourpy (>=1.1.1,<2.0.0)
+Requires-Dist: cycler (>=0.11.0,<0.12.0)
+Requires-Dist: filelock (>=3.12.4,<4.0.0)
+Requires-Dist: fonttools (>=4.42.1,<5.0.0)
+Requires-Dist: google-auth (==2.22.0)
+Requires-Dist: google-auth-oauthlib (==1.0.0)
+Requires-Dist: grpcio (>=1.58.0,<2.0.0)
+Requires-Dist: idna (>=3.4,<4.0)
+Requires-Dist: jinja2 (>=3.1.2,<4.0.0)
+Requires-Dist: kiwisolver (>=1.4.5,<2.0.0)
+Requires-Dist: markdown (>=3.4.4,<4.0.0)
+Requires-Dist: markupsafe (>=2.1.3,<3.0.0)
+Requires-Dist: matplotlib (>=3.8.0,<4.0.0)
+Requires-Dist: mpmath (>=1.3.0,<2.0.0)
+Requires-Dist: networkx (>=3.1,<4.0)
+Requires-Dist: numpy (>=1.26.0,<2.0.0)
+Requires-Dist: oauthlib (>=3.2.2,<4.0.0)
+Requires-Dist: packaging (>=23.1,<24.0)
+Requires-Dist: pandas (>=2.1.1,<3.0.0)
+Requires-Dist: pillow (>=10.0.1,<11.0.0)
+Requires-Dist: protobuf (>=4.24.3,<5.0.0)
+Requires-Dist: psutil (>=5.9.5,<6.0.0)
+Requires-Dist: pyasn1 (>=0.5.0,<0.6.0)
+Requires-Dist: pyasn1-modules (>=0.3.0,<0.4.0)
+Requires-Dist: pyparsing (>=3.1.1,<4.0.0)
+Requires-Dist: python-dateutil (>=2.8.2,<3.0.0)
+Requires-Dist: python-dotenv (>=1.0.0,<2.0.0)
+Requires-Dist: pytz (>=2023.3.post1,<2024.0)
+Requires-Dist: pyyaml (>=6.0.1,<7.0.0)
+Requires-Dist: requests (>=2.31.0,<3.0.0)
+Requires-Dist: requests-oauthlib (>=1.3.1,<2.0.0)
+Requires-Dist: rsa (>=4.9,<5.0)
+Requires-Dist: six (>=1.16.0,<2.0.0)
+Requires-Dist: sympy (>=1.12,<2.0)
+Requires-Dist: tabulate (>=0.9.0,<0.10.0)
+Requires-Dist: tensorboard (>=2.14.0,<3.0.0)
+Requires-Dist: tensorboard-data-server (>=0.7.1,<0.8.0)
+Requires-Dist: torch (>=2.0.1,<3.0.0)
+Requires-Dist: torchaudio (>=2.0.2,<3.0.0)
+Requires-Dist: torchvision (>=0.15.2,<0.16.0)
+Requires-Dist: tqdm (>=4.66.1,<5.0.0)
+Requires-Dist: typing-extensions (>=4.8.0,<5.0.0)
+Requires-Dist: tzdata (>=2023.3,<2024.0)
+Requires-Dist: urllib3 (==1.26.16)
+Requires-Dist: websocket-client (==1.6.1)
+Requires-Dist: werkzeug (==2.3.6)
+Description-Content-Type: text/markdown
+
+[![](https://bench-ai.com/static/media/bench.f0b00cb77f69869f37586406c4ff9ebe.svg)](https://bench-ai.com/)
+
+---
+
+[![](https://dcbadge.vercel.app/api/server/24BCstk4re)](https://discord.gg/24BCstk4re) [![](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/company/bench-ai)
+
+# _benchkit_
+
+Welcome to `benchkit`! We are an End-To-End Free Machine Learning Model management platform.
+
+We allow users to:
+
+1. Train and deploy their models on the cloud with a fully managed infrastructure (no more cuda headaches 🙃)
+2. Track their model runs
+3. Graph Model Accuracy, and outputs
+
+## Docs
+
+- Check out the docs [here](https://docs.bench-ai.com/)
+
+## Website
+
+- Check out the site [here](https://bench-ai.com/)
+
+## How it works
+
+`benchkit` works in sync with the Bench AI site, and is completely free.
+
+### 1) Create a repo on Bench AI
+
+[![](https://sofadocsbucket.s3.us-west-2.amazonaws.com/assets/readme/create_project.png)](https://bench-ai.com/)
+
+### 2) (Optional) Migrate your Data
+
+[![](https://sofadocsbucket.s3.us-west-2.amazonaws.com/assets/readme/data_upload.gif)](https://bench-ai.com/)
+
+### 3) Migrate your code
+
+[![](https://sofadocsbucket.s3.us-west-2.amazonaws.com/assets/readme/code_migration.gif)](https://bench-ai.com/)
+
+### 4) Start Experiments
+
+[![](https://sofadocsbucket.s3.us-west-2.amazonaws.com/assets/readme/train_sess.png)](https://bench-ai.com/)
+
+### 5) Monitor Your Models
+
+#### Model Runs
+
+[![](https://sofadocsbucket.s3.us-west-2.amazonaws.com/assets/readme/experiments.png)](https://bench-ai.com/)
+
+#### Model Logs
+
+[![](https://sofadocsbucket.s3.us-west-2.amazonaws.com/assets/readme/logs.png)](https://bench-ai.com/)
+
+## Contribute
+
+`benchkit` is completely open source, and we could always use the help! You can make
+changes to the repo, or can request for features on the Bench AI Site!
+
+### How to Contribute
+
+Check out this contribution [guide](https://github.com/bench-ai/benchkit/blob/main/CONTRIBUTING.md)
+
