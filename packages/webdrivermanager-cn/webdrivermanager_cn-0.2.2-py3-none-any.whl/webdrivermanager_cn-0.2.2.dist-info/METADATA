@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: webdrivermanager-cn
+Version: 0.2.2
+Summary: UNKNOWN
+Home-page: https://gitee.com/Joker_JH/webdrivermanagercn
+Author-email: eternallyyf@163.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.7
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: packaging
+
+UNKNOWN
+
