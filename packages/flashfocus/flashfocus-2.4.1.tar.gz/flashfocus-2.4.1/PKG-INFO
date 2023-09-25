@@ -1,0 +1,159 @@
+Metadata-Version: 2.1
+Name: flashfocus
+Version: 2.4.1
+Summary: Simple focus animations for tiling window managers.
+Author-email: Fenner Macrae <fmacrae.dev@gmail.com>
+License: Copyright (c) 2018 Fenner Macrae
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+        
+Keywords: xorg,x11,flash,focus,i3,sway,wlroots,bspwm,awesomewm,herbsluftwm
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Development Status :: 6 - Mature
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Desktop Environment :: Window Managers
+Classifier: Topic :: Desktop Environment
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: xcffib<1.0,>=0.6.0
+Requires-Dist: click<9.0,>=6.7
+Requires-Dist: cffi<2.0,>=1.11
+Requires-Dist: xpybutil<1.0,>=0.0.6
+Requires-Dist: marshmallow<4.0,>=2.15
+Requires-Dist: pyyaml>=5.1
+Requires-Dist: i3ipc<3.0,>=2.1.1
+Provides-Extra: dev
+Requires-Dist: bump2version<2.0,>=1.0; extra == "dev"
+Requires-Dist: factory-boy<4.0,>=3.0; extra == "dev"
+Requires-Dist: pre-commit<4.0,>=3.4; extra == "dev"
+Requires-Dist: pytest<8.0,>=7.4; extra == "dev"
+Requires-Dist: pytest-cov<5.0,>=4.1; extra == "dev"
+Requires-Dist: pytest-factoryboy<3.0,>=2.1; extra == "dev"
+Requires-Dist: pytest-lazy-fixture<1.0,>=0.6; extra == "dev"
+Requires-Dist: pytest-mock<4.0,>=3.7; extra == "dev"
+Requires-Dist: types-factory-boy; extra == "dev"
+Requires-Dist: types-pytest-lazy-fixture; extra == "dev"
+Requires-Dist: types-pyyaml; extra == "dev"
+
+# flashfocus
+
+Simple focus animations for tiling window managers.
+
+![Demo gif](demo/demo.gif)
+
+<br>
+
+Compatible with sway as well as all X based window managers (i3, bspwm, awesome-wm, xmonad...).
+
+
+Flashfocus is currently pretty stable and I don't have any major features in
+the works, however the project is still actively maintained and feature
+requests are always welcome :)
+
+## Installation
+
+For X based window managers, an active window compositor is required for the effects of flashfocus
+to be noticeable. If you don't have one setup already, I recommend
+[picom](https://github.com/yshui/picom).
+
+### Arch
+
+Install from the Arch User Repository: `flashfocus`
+
+### Ubuntu/Debian
+
+```
+sudo apt-get install libxcb-render0-dev libffi-dev python-dev python-cffi
+pip install flashfocus
+```
+
+### Fedora
+
+```
+dnf install libffi-devel python-devel python-cffi
+pip install flashfocus
+```
+
+### openSUSE
+Flashfocus is in the official repository of openSUSE Tumbleweed.
+openSUSE Leap users can install it from the [X11:Utilities](https://build.opensuse.org/package/show/X11%3AUtilities/flashfocus) devel project:
+
+```
+zypper ar obs://X11:Utilities x11util
+zypper ref
+zypper in flashfocus
+```
+
+### Nix / NixOS
+
+Declaratively in `/etc/nixos/configuration.nix`
+
+```
+environment.systemPackages = with pkgs; [
+  flashfocus
+];
+```
+
+Ad hoc
+
+```
+nix-env -iA nixpkgs.flashfocus
+```
+
+## Quickstart
+
+#### Picom setup
+
+The following must be present in your picom config file:
+
+```
+detect-client-opacity = true;
+```
+
+If you use i3, the following is also required for flashfocus to work with tabbed containers:
+
+```
+opacity-rule = [
+  "0:_NET_WM_STATE@:32a *= '_NET_WM_STATE_HIDDEN'"
+];
+```
+
+#### Running flashfocus
+
+Flashfocus should be added to your startup programs. E.g for i3 place the
+following in your config:
+
+```
+exec_always --no-startup-id flashfocus
+```
+
+The `flash_window` script can be used to flash the current window on key-press. E.g if you'd like to bind to mod+n in i3:
+
+```
+bindsym $mod+n exec --no-startup-id flash_window
+```
+
+## Configuration
+
+Flashfocus can be configured via its config file or with command line parameters. Some features, such as window-specific flash customization, are only available through the config file.
+
+The config file is searched for in the following locations:
+1. $XDG_CONFIG_HOME/flashfocus/flashfocus.yml
+2. ~/.config/flashfocus/flashfocus.yml
+3. ~/.flashfocus.yml
+
+When flashfocus is first run it creates a default config file in 1. or 2. Documentation of all configuration options is present in the config file.
+
+See the [wiki](https://github.com/fennerm/flashfocus/wiki) for some extra docs.
