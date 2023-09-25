@@ -1,0 +1,9 @@
+poetry_update_editable/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+poetry_update_editable/command.py,sha256=x_zpbjjIiBXIp881QlHvMR-77UHDuXGM7sOwtRzfgUI,1251
+poetry_update_editable/plugin.py,sha256=XqWpyS4aoAOBHL8jBcSpEgU34cXWptFCtKs2rhygkdE,492
+poetry_update_editable/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+poetry_update_editable_plugin-0.0.4.dist-info/LICENSE,sha256=59xghB1FmOefW3EIzsPKrobynuMYeL-5HBX71o_FezA,1063
+poetry_update_editable_plugin-0.0.4.dist-info/METADATA,sha256=GkgTGDvS9EG5EqdVlfB_j624jQa2m_3k_BGDTQ8Pbm0,1340
+poetry_update_editable_plugin-0.0.4.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+poetry_update_editable_plugin-0.0.4.dist-info/entry_points.txt,sha256=dh8X9gPJULYYWvPxOAp70qFwQlUAxxjuzYuTwDGASDI,96
+poetry_update_editable_plugin-0.0.4.dist-info/RECORD,,
