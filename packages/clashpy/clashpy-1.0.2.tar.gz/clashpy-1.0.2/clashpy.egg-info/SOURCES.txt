@@ -1,0 +1,12 @@
+README.md
+setup.py
+clashpy/__init__.py
+clashpy/clan.py
+clashpy/connect.py
+clashpy/league.py
+clashpy/player.py
+clashpy.egg-info/PKG-INFO
+clashpy.egg-info/SOURCES.txt
+clashpy.egg-info/dependency_links.txt
+clashpy.egg-info/requires.txt
+clashpy.egg-info/top_level.txt
