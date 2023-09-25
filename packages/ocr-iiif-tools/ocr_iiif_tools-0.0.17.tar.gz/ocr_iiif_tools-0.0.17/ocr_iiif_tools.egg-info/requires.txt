@@ -1,0 +1,6 @@
+reportlab==3.6.9
+requests
+tqdm
+beautifulsoup4
+
+[dev]
