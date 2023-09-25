@@ -1,0 +1,89 @@
+import sys
+import os
+from create_fusion_app.modules.name_validation import is_snake_case_with_dashes
+from create_fusion_app.modules.create_react_app import create_react_app
+from create_fusion_app.modules.setup_redux import setup_redux
+from create_fusion_app.modules.create_data_dir import create_data_dir
+from create_fusion_app.modules.modify_manifest import modify_manifest_json
+from create_fusion_app.modules.modify_index_css import modify_index_css
+from create_fusion_app.modules.modify_index_html import modify_index_html
+from create_fusion_app.modules.modify_react_project import modify_react_project
+from create_fusion_app.modules.modify_readme import modify_readme
+from create_fusion_app.modules.move_files import move_up_and_remove_redundant_dir
+from create_fusion_app.modules.run_command import run_command
+
+# Main function to create the project
+def create_project():
+    while True:
+        # Check if a directory argument is provided
+        if len(sys.argv) < 2:
+            project_path = input("Enter the project directory path: ")
+        else:
+            project_path = sys.argv[1]
+
+        if os.path.exists(project_path):
+            break
+        else:
+            print("Directory does not exist. Please provide a valid directory path.")
+
+    # Ensure the project path ends with a trailing slash
+    project_path = os.path.join(project_path, "")
+
+    while True:
+        # Prompt the user for a snake_case_with_dashes project name
+        project_name = input("Enter a project name (project-name): ")
+        if not is_snake_case_with_dashes(project_name):
+            print("Invalid project name. Please use the format 'project-name'.")
+            continue
+
+        # Replace underscores with dashes in the project name
+        project_name = project_name.replace("_", "-")
+
+        # Combine the project path and project name to get the full project directory
+        project_dir = os.path.join(project_path, project_name)
+
+        # Check if the directory already exists
+        if os.path.exists(project_dir):
+            print("Project directory already exists. Please choose a different name.")
+        else:
+            break
+
+    # Create the directory with the project name
+    os.makedirs(project_dir)
+
+    # Change directory to the project's root
+    os.chdir(project_dir)
+
+    # Create the React app using CRA
+    create_react_app(project_name)
+
+    # Set up Redux files
+    setup_redux(project_name)
+
+    # Create 'data' directory and 'data.json' file within 'src'
+    create_data_dir(project_name)
+
+    # Modify manifest.json
+    modify_manifest_json(project_name)
+
+    # Modify the index.html
+    modify_index_html(project_name)
+
+    # Modify index.css
+    modify_index_css(project_name)
+
+    # Modify the README
+    modify_readme(project_name)
+
+    # Refactor the React app into a Fusion app
+    modify_react_project(project_name)
+
+    # Move all files and directories up one level and remove the redundant directory
+    move_up_and_remove_redundant_dir(project_name)
+
+    # Ensure proper Fusion formatting
+    run_command("npm run lint-and-format", cwd=project_dir)
+
+if __name__ == "__main__":
+    create_project()
+    print("Project initialization complete.")
