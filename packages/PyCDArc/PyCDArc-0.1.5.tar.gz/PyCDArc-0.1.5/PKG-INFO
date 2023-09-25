@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: PyCDArc
+Version: 0.1.5
+Summary: Python implementation of CDA
+Home-page: https://github.com/EliaMenoni/PyCDA
+Author: Elia Menoni
+Author-email: eliamenoni@emenoni.eu
+License: Proprietary
+Keywords: CDA,ClinicalDocumentArchitecture,Health
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Programming Language :: Python :: 3.10
+License-File: LICENSE
+
+# PyCDA
+Python CDA module
+
+## WIP

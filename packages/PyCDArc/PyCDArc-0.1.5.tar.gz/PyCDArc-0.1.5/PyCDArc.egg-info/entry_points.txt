@@ -1,0 +1,2 @@
+[console_scripts]
+PyCDArc = PyCDArc.run:run
