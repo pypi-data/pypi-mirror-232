@@ -1,0 +1,10 @@
+Change Log
+===========
+
+0.0.0.1 (24/09/2023)
+-------------------
+- added details for deployment
+
+0.0.1 (24/09/2023)
+-------------------
+- added useage and examples
