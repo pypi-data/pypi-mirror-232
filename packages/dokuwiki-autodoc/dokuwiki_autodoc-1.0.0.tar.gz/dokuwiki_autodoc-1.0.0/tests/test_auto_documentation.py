@@ -1,0 +1,143 @@
+from dokuwiki_autodoc.autodoc import AutoDocumentation, QkitDocumentationBuilder
+from time import time
+import pytest
+import os
+
+USERNAME = "user"
+PASSWD = "password"
+
+TEMPLATE_TEXT_ONLY = r"""
+====== {[ sample_name ]} ======
+
+===== Information =====
+Condition: {[ condition ]}
+
+===== Results =====
+Result: {[ result ]}
+"""
+
+TEMPLATE_WITH_IMAGE = TEMPLATE_TEXT_ONLY + """
+
+Image:
+{{ {[image_id]}?200 }}
+"""
+
+@pytest.fixture
+def autodoc(mocker, monkeypatch) -> AutoDocumentation:
+    """
+    Construct the mocked auto documentation object.
+
+    Assert the calls in the test cases, see https://docs.python.org/3/library/unittest.mock.html#patch-object
+    """
+    # Step 1: Mock DokuWiki API to prevent outbound calls
+    mocker.patch("dokuwiki.DokuWiki.send")
+    monkeypatch.setattr('builtins.input', lambda prompt: USERNAME)
+    monkeypatch.setattr('getpass.getpass', lambda prompt: PASSWD)
+    doc = AutoDocumentation("https://host").with_templates()
+
+    # Step 2: Patch all calls.
+    mocker.patch("dokuwiki.DokuWiki.send", side_effect=Exception('Uncaptured API call!'))
+    mocker.patch.object(doc.wiki.pages, "get", return_value="") # Pages do not exist
+    mocker.patch.object(doc.wiki.pages, "set") # But can be created, no problems.
+    mocker.patch.object(doc.wiki.pages, "append") # Appending works too.
+    mocker.patch.object(doc.wiki.medias, "add") # Medias can be created as well
+
+    return doc
+
+def test_certifi_path(mocker, monkeypatch):
+    mocker.patch("dokuwiki.DokuWiki.send")
+    monkeypatch.setattr('builtins.input', lambda prompt: USERNAME)
+    monkeypatch.setattr('getpass.getpass', lambda prompt: PASSWD)
+    doc = AutoDocumentation("https://host", use_certifi=True)
+
+def test_report_generation(autodoc):
+    data = {'sample_name': "Test Sample", 'condition': "good", 'result': "Fine"}
+    autodoc.generate_report('sample:test:report', data, TEMPLATE_TEXT_ONLY)
+
+def test_doku_filter(autodoc):
+    data = {'all': {'sample_name': "Test Sample", 'condition': {'left': 'good', 'right': 'ok'}, 'result': "Fine"}}
+    autodoc.generate_report('sample:test:report', data, "{[all | dict2doku]}")
+    autodoc.wiki.pages.get.assert_called_once_with('sample:test:report')
+    autodoc.wiki.pages.set.assert_called_once_with('sample:test:report',
+                                                   '  * sample_name: Test Sample\n  * result: Fine\n\n==== condition ====\n  * left: good\n  * right: ok\n\n',
+                                                   sum='Automatic Report Generation.')
+
+def test_image_upload(autodoc):
+    id = 'sample:test:images:unique_id.png'
+    autodoc.upload_image(id, 'tests/example.png')
+    autodoc.wiki.medias.add.assert_called_once()
+
+def test_full_report(autodoc):
+    id = 'sample:test:images:unique_id.png'
+    autodoc.upload_image(id, 'tests/example.png')
+
+    data = {'sample_name': "Test Sample", 'condition': "good", 'result': "Fine", 'image_id': id}
+    autodoc.generate_report('sample:test:image_report', data, TEMPLATE_WITH_IMAGE)
+
+def test_link_formating():
+    link = "some:link"
+    text = "some alt text"
+    assert AutoDocumentation.format_link(link) == "[[some:link]]"
+    assert AutoDocumentation.format_link(link, text) == "[[some:link|some alt text]]"
+
+def test_table_append(autodoc):
+
+    columns = ['name', 'date', 'link']
+    now = time()
+    data = ['Test', now, AutoDocumentation.format_link("https://example.com", "Example")]
+    autodoc.append_table('sample:test:table', columns, data)
+    autodoc.wiki.pages.get.assert_called_once_with('sample:test:table')
+    autodoc.wiki.pages.append.assert_called_once_with('sample:test:table', f'\n\n^ name ^ date ^ link ^\n| Test | {now} | [[https://example.com|Example]] |\n',
+                                                       minor=True)
+
+QKIT_TEMPLATE = """
+{% extends "doc_base.txt.liquid" %}
+{% block title %} My Title {% endblock %}
+{% block content %}
+More content
+{% endblock%}
+"""
+
+@pytest.fixture
+def qkit_fix(mocker):
+    import qkit
+    qkit.cfg['datadir'] = os.path.abspath("./tests/test_data/")
+    qkit.cfg['logdir'] = os.path.abspath("./tests/qkit-log/")
+    qkit.start()
+    qkit.fid.update_file_db()
+
+def test_qkit_measurement_documentation(autodoc, qkit_fix):
+    with QkitDocumentationBuilder(autodoc, 'sample:test:qkit', 'RZDWVZ') as builder:
+        builder.upload_images()
+        builder.generate_report(QKIT_TEMPLATE)
+        builder.generate_table_entry(["Type", "Comment"], lambda data: [
+            data.measurement['measurement_type'], 
+            "Look! A comment!"
+        ])
+    autodoc.wiki.pages.set.assert_called_once_with('sample:test:qkit:RZDWVZ',
+                                                   open("./tests/expected-report-RZDWVZ.txt").read(),
+                                                   sum='Automatic Report Generation.')
+
+def test_qkit_measurement_without_uuid(autodoc, qkit_fix):
+    with QkitDocumentationBuilder(autodoc, 'sample:test:qkit') as builder:
+        builder.upload_images()
+        builder.generate_report(QKIT_TEMPLATE)
+        builder.generate_table_entry(["Type", "Comment"], lambda data: [
+            data.measurement['measurement_type'], 
+            "Look! A comment!"
+        ])
+    autodoc.wiki.pages.set.assert_called_once_with('sample:test:qkit:RZDWVZ',
+                                                   open("./tests/expected-report-RZDWVZ.txt").read(),
+                                                   sum='Automatic Report Generation.')
+    
+def test_qkit_properties(autodoc, qkit_fix):
+    with QkitDocumentationBuilder(autodoc, 'sample:test:qkit', UUID='S0Z69N') as builder:
+        builder.upload_images()
+        builder.generate_report(QKIT_TEMPLATE)
+        builder.generate_table_entry(["Type", "Comment"], lambda data: [
+            data.measurement['measurement_type'], 
+            "Look! A comment!"
+        ])
+    autodoc.wiki.pages.set.assert_called_once_with('sample:test:qkit:S0Z69N',
+                                                   open("./tests/expected-report-S0Z69N.txt").read(),
+                                                   sum='Automatic Report Generation.')
