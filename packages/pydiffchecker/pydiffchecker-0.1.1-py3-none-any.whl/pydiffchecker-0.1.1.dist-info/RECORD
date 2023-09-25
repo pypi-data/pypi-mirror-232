@@ -1,0 +1,12 @@
+pydiffchecker/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pydiffchecker/cli.py,sha256=qeAwj4Fcoy5cN-wOLZ-GsCdzvBKbFKrHff3NdvQKvL8,859
+pydiffchecker/git_version.py,sha256=gdiV6J8gto-dUC7QOQ7OhPZjI-ta4kem89Rf9bX3L38,722
+pydiffchecker/helper.py,sha256=-2FrS2Tu6SEE7avLsOBXos83xSlW967dl4P9D86PnGw,1291
+pydiffchecker/line_shift_checker.py,sha256=sOvW1yyRK-yugjzU2Zl7z0pUgxQ-6wnIWgOhSqZ8qdU,3802
+pydiffchecker/version.py,sha256=0PyO7dUrMp_cx3Vrt2arFrbSVdpflzw02KxVSMr9IKs,229
+pydiffchecker-0.1.1.dist-info/LICENSE.md,sha256=ADUqsZhl4juwq34PRTMiBqumpm11s_PMli_dZQjWPqQ,34260
+pydiffchecker-0.1.1.dist-info/METADATA,sha256=PwIX5ngtjCbPg9wbGLUFpIHz2pnKq4D8TSuHmmeIqwo,3248
+pydiffchecker-0.1.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+pydiffchecker-0.1.1.dist-info/entry_points.txt,sha256=SvuebjootNvFFdcs9D8zm9WVak_nwDxtWsMS2OLpEIY,58
+pydiffchecker-0.1.1.dist-info/top_level.txt,sha256=4HzBa1Wpg-Ew0kp48PhRwziS4eJ9W9uNmL2C5G6JfLA,14
+pydiffchecker-0.1.1.dist-info/RECORD,,
