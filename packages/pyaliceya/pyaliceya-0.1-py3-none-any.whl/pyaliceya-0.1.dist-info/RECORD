@@ -1,0 +1,10 @@
+pyAlice/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyAlice/base.py,sha256=hd4rlDDQxUEqmUQBxzYR2UC5_glsTJOTsrCN9X6d8ME,5245
+pyAlice/functions.py,sha256=PF6ZHLUS8etpUeLlwBvhrlyDlu1k-SblT8tv4uhuizM,1572
+pyAlice/key_word.py,sha256=iNxi3eUyxZjfpmOI6t-CoPcl68wiFLKHZnJN7spFoGA,1196
+pyAlice/py_alice.py,sha256=laSFf0SRhtfFvY4Hg6YxOe9DI8G2URUkrZXjTIC5AHk,5228
+pyAlice/simulation.py,sha256=XKkZVHn1cGuSqQfmShmx8sk4lZuOGEMCu1LIo1NZ2kw,2030
+pyaliceya-0.1.dist-info/METADATA,sha256=Kbewo-o657IPNECtmPFttNmidm0cihlipGPE-iFGQ08,499
+pyaliceya-0.1.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+pyaliceya-0.1.dist-info/top_level.txt,sha256=PZSik6EWlIHBGhC6WL_aH10iWTo2_cKRAUxWNRwCvpk,8
+pyaliceya-0.1.dist-info/RECORD,,
