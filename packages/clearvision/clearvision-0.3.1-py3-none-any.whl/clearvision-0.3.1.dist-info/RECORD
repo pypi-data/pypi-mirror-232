@@ -1,0 +1,13 @@
+clearvision/__init__.py,sha256=cBIezgj0--2swX1iCHUKroOhdhuKY847powtAqM9vq4,1196
+clearvision/__main__.py,sha256=pzhv0mbdbzg4yH3viogIJ5bm6hXWCgkNryLWXPbuf9s,1587
+clearvision/cleaning.py,sha256=ezUCMFMnrYBeQ5XwPiuIDX4NcBTDcvmHgdcDU0e7CUQ,444
+clearvision/detection.py,sha256=qBCrQLVHzIsKmHpl0jeS54De4U69CGGetlrj6RjFVVE,4373
+clearvision/ocr.py,sha256=UiNKVEXpo4R85EiHPjgLNKPQop_QOftqEJ5wRq8nB10,2024
+clearvision/imageproc/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+clearvision/imageproc/toolkit.py,sha256=Sg8hk4_8sLANWZEUlxXjn_w9_5Q2ejCG9bWfwM94xCY,9223
+clearvision/models/frozen_east_text_detection.pb,sha256=m0hvPD7ud7TIzJGoOJLDcCbMp9Kbeb87k3cszS21hFQ,96662756
+clearvision-0.3.1.dist-info/LICENSE.txt,sha256=WCz2BIqykB8ybzkcHTOAy95JJNseiPnkuzkMn7AxcT4,1079
+clearvision-0.3.1.dist-info/METADATA,sha256=dDxTBROGT0QKZcRDuA8stXuWzHAG-cizAe7uwGD2obI,2958
+clearvision-0.3.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+clearvision-0.3.1.dist-info/top_level.txt,sha256=LoKyFeZM74Siyi-WaEQilpfLEcjuI-DEO04KXaXnVMA,12
+clearvision-0.3.1.dist-info/RECORD,,
