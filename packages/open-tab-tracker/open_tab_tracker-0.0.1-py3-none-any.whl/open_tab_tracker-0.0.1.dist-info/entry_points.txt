@@ -1,0 +1,3 @@
+[console_scripts]
+open-tab-tracker = open_tab_tracker:run
+ott = open_tab_tracker:run
