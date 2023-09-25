@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunk_deathbeds_jupyterlab_font_dejavu_sans_mono=self.webpackChunk_deathbeds_jupyterlab_font_dejavu_sans_mono||[]).push([[404],{404:(e,a,s)=>{s.r(a),s.d(a,{default:()=>_});const _=s.p+"89a6c77b704b6bad15a78e3650d2ffbb.woff2"}}]);
+//# sourceMappingURL=404.26cd234f4833e8998db0.js.map?v=26cd234f4833e8998db0
