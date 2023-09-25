@@ -1,0 +1,7 @@
+flake8
+imapclient
+isort
+jedi
+pyenchant
+pygments
+yapf
