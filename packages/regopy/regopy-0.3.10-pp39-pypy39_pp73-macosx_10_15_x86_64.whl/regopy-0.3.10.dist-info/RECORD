@@ -1,0 +1,12 @@
+regopy/_regopy.pypy39-pp73-darwin.so,sha256=DF0HgZP49C5Onpd1SAR9zX_llABoCVNjHwiH0cnoMt4,17350912
+regopy/__init__.py,sha256=40zRXACklhUaJjJFPOXTeQX0OIQ8SgLH90zju1dd67I,1432
+regopy/interpreter.py,sha256=wVuoJ1Rt_BfmxPtZCedsaF3SLfUgmNlYUIqfXuGIly8,11776
+regopy/node.py,sha256=KGSPd9I9xyfClLmnFqiFGga_DbPhuGPYrGv2VJButg4,8167
+regopy/output.py,sha256=-AJrAet37ureHKkDasq66XXQu4CXpCGGYDNPtE4tPac,2578
+regopy/.dylibs/libstdc++.6.dylib,sha256=9eBujjIqKFfCRZVrB44AErbISFn11ieqMJ8BsyGwz-k,3628848
+regopy/.dylibs/libatomic.1.dylib,sha256=NGK5VqGCW6nM2PJEvFMFucrSr0460B1r2l4011JjWyQ,93856
+regopy/.dylibs/libgcc_s.1.1.dylib,sha256=TbMjc-a2BKzZqU9mzfPyd9x91eNbHak69Ei6GZHhmrM,147472
+regopy-0.3.10.dist-info/RECORD,,
+regopy-0.3.10.dist-info/WHEEL,sha256=zZGWwpBGkH2tbhdU0PpD5Dq8y9I3E-C20yGWU7niyaQ,117
+regopy-0.3.10.dist-info/top_level.txt,sha256=i6OxiWeKwNaGc-SJQjFbDdGLG5kbOPYbOmFKORQ-ZmI,7
+regopy-0.3.10.dist-info/METADATA,sha256=eadPlDaic8LYmGQzgGYvQSe3JemHIGHO-5EO3x3GM3U,7879
