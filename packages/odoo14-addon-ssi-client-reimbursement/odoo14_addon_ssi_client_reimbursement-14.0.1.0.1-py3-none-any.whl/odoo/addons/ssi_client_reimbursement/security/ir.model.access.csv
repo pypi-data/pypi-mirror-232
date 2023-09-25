@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_client_reimbursement_type_configurator,client_reimbursement_type - configurator,model_client_reimbursement_type,client_reimbursement_type_group,1,1,1,1
+access_client_reimbursement_type_all,client_reimbursement_type - all user,model_client_reimbursement_type,,1,0,0,0
+access_client_reimbursement_all,client_reimbursement - all,model_client_reimbursement,,1,0,0,0
+access_client_reimbursement_viewer,client_reimbursement - viewer,model_client_reimbursement,client_reimbursement_viewer_group,1,0,0,0
+access_client_reimbursement_user,client_reimbursement - user,model_client_reimbursement,client_reimbursement_user_group,1,1,1,1
+access_client_reimbursement_detail_all,client_reimbursement_detail - all,model_client_reimbursement_detail,,1,0,0,0
+access_client_reimbursement_detail_viewer,client_reimbursement_detail - viewer,model_client_reimbursement_detail,client_reimbursement_viewer_group,1,0,0,0
+access_client_reimbursement_detail_user,client_reimbursement_detail - user,model_client_reimbursement_detail,client_reimbursement_user_group,1,1,1,1

@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2023 OpenSynergy Indonesia
+     Copyright 2023 PT. Simetri Sinergi Indonesia
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record id="client_reimbursement_view_tree" model="ir.ui.view">
+        <field name="name">client_reimbursement - Tree</field>
+        <field name="model">client_reimbursement</field>
+        <field name="mode">primary</field>
+        <field
+            name="inherit_id"
+            ref="ssi_transaction_mixin.mixin_transaction_view_tree"
+        />
+        <field name="arch" type="xml">
+            <data>
+                <xpath expr="//field[@name='user_id']" position="after">
+                    <field name="partner_id" widget="many2one_avatar" />
+                    <field name="contact_partner_id" widget="many2one_avatar" />
+                    <field name="currency_id" optional="hide" />
+                    <field name="date" />
+                    <field name="date_due" />
+                    <field name="amount_total" string="Total" sum="Total" />
+                    <field
+                        name="amount_realized"
+                        string="Realized"
+                        sum="Total Realized"
+                    />
+                    <field
+                        name="amount_residual"
+                        string="Residual"
+                        sum="Total Residual"
+                    />
+                </xpath>
+            </data>
+        </field>
+    </record>
+
+    <record id="client_reimbursement_view_search" model="ir.ui.view">
+        <field name="name">client_reimbursement - Search</field>
+        <field name="model">client_reimbursement</field>
+        <field
+            name="inherit_id"
+            ref="ssi_transaction_mixin.mixin_transaction_view_search"
+        />
+        <field name="mode">primary</field>
+        <field name="arch" type="xml">
+            <data>
+                <xpath expr="//field[@name='user_id']" position="after">
+                    <field name="partner_id" />
+                    <field name="contact_partner_id" />
+                    <field name="type_id" />
+                    <field name="currency_id" />
+                    <field name="date" />
+                    <field name="date_due" />
+                </xpath>
+                <xpath expr="//group[@name='group_by']" position="inside">
+                    <filter
+                        name="grp_partner"
+                        string="Partner"
+                        context="{'group_by':'partner_id'}"
+                    />
+                    <filter
+                        name="grp_contact"
+                        string="Contact"
+                        context="{'group_by':'contact_partner_id'}"
+                    />
+                    <filter
+                        name="grp_type"
+                        string="Type"
+                        context="{'group_by':'type_id'}"
+                    />
+                    <filter
+                        name="grp_currency"
+                        string="Currency"
+                        context="{'group_by':'currency_id'}"
+                    />
+                </xpath>
+            </data>
+        </field>
+    </record>
+
+    <record id="client_reimbursement_view_form" model="ir.ui.view">
+        <field name="name">client_reimbursement - Form</field>
+        <field name="model">client_reimbursement</field>
+        <field name="mode">primary</field>
+        <field
+            name="inherit_id"
+            ref="ssi_transaction_mixin.mixin_transaction_view_form"
+        />
+        <field name="arch" type="xml">
+            <data>
+                <xpath expr="//field[@name='user_id']" position="after">
+                    <field name="partner_id" widget="many2one_avatar" />
+                    <field
+                        name="allowed_contact_ids"
+                        widget="many2many_tags"
+                        invisible="1"
+                    />
+                    <field
+                        name="contact_partner_id"
+                        widget="many2one_avatar"
+                        domain="[('id','in',allowed_contact_ids)]"
+                    />
+                </xpath>
+                <xpath expr="//group[@name='header_right']" position="inside">
+                    <field name="type_id" />
+                    <field name="date" />
+                    <field name="duration_id" />
+                    <field name="date_due" />
+                    <field name="company_currency_id" invisible="1" />
+                    <field
+                        name="allowed_currency_ids"
+                        invisible="1"
+                        widget="many2many_tags"
+                    />
+                    <field
+                        name="currency_id"
+                        domain="[('id', 'in', allowed_currency_ids)]"
+                    />
+                    <field
+                        name="allowed_product_ids"
+                        invisible="1"
+                        widget="many2many_tags"
+                    />
+                    <field name="analytic_account_id" />
+                </xpath>
+                <xpath expr="//page[1]" position="before">
+                    <page name="detail" string="Detail">
+                        <button
+                            name="action_import_move_line"
+                            type="object"
+                            string="Import"
+                            class="oe_highlight"
+                            icon="fa-download"
+                            attrs="{'invisible':[('state','!=','draft')]}"
+                        />
+                        <field name="detail_ids">
+                            <tree editable="top">
+                                <field name="pricelist_id" invisible="1" />
+                                <field name="source_move_line_id" />
+                                <field
+                                    name="source_partner_id"
+                                    widget="many2one_avatar"
+                                />
+                                <field name="source_date" />
+                                <field
+                                    name="product_id"
+                                    domain="[('id', 'in', parent.allowed_product_ids)]"
+                                />
+                                <field name="currency_id" invisible="1" />
+                                <field name="name" />
+                                <field name="usage_id" />
+                                <field name="account_id" />
+                                <field name="analytic_account_id" />
+                                <field name="uom_quantity" string="Qty." />
+                                <field
+                                    name="allowed_uom_ids"
+                                    widget="many2many_tags"
+                                    invisible="1"
+                                />
+                                <field
+                                    name="uom_id"
+                                    domain="[('id','in',allowed_uom_ids)]"
+                                />
+                                <field name="price_unit" />
+                                <field name="price_subtotal" string="Subtotal" />
+                            </tree>
+                        </field>
+                        <group name="per_diem_1" colspan="4" col="2">
+                            <group name="per_diem_1_1" colspan="1" col="2">
+                                <field name="amount_total" />
+                            </group>
+                            <group name="per_diem_1_2" colspan="1" col="2">
+                                <field name="amount_realized" />
+                                <field name="amount_residual" />
+                            </group>
+                        </group>
+                    </page>
+                    <page name="accounting" string="Accounting">
+                        <group name="accounting_1" colspan="4" col="2">
+                            <group name="accounting_1_1" colspan="1" col="2">
+                                <field name="journal_id" />
+                                <field name="account_id" />
+                            </group>
+                            <group name="accounting_1_2" colspan="1" col="2">
+                                <field name="move_id" />
+                                <field name="move_line_id" />
+                                <field name="realized" />
+                            </group>
+                        </group>
+                    </page>
+                </xpath>
+            </data>
+        </field>
+    </record>
+
+    <record id="client_reimbursement_action" model="ir.actions.act_window">
+        <field name="name">Client Reimbursements</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">client_reimbursement</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+        id="client_reimbursement_menu"
+        name="Client Reimbursements"
+        parent="ssi_financial_accounting.menu_account_receivable"
+        action="client_reimbursement_action"
+        groups="client_reimbursement_viewer_group"
+    />
+</odoo>
