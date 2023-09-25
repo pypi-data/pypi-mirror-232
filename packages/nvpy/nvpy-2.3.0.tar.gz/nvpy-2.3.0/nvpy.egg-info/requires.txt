@@ -1,0 +1,14 @@
+Markdown
+docutils
+simplenote>=2.1.4
+
+[dev]
+coverage
+mock
+mypy
+pdoc3
+types-Markdown
+types-certifi
+types-docutils
+types-mock
+yapf
