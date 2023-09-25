@@ -1,0 +1,6 @@
+{
+  "tests/test_chart.py::test_journal_with_starting_balance": true,
+  "tests/test_book.py::test_after_close_entries": true,
+  "tests/test_cli.py::test_n_commands": true,
+  "tests/test_cli.py::test_few_commands": true
+}
