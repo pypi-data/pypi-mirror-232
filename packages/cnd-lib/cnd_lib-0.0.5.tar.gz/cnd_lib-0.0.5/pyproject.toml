@@ -1,0 +1,28 @@
+[project]
+name = "cnd_lib"
+authors = [
+  { name="Denis Fabien <denis@changendevops.com>" },
+]
+description = "Manage your lib more easily"
+readme = "README.md"
+requires-python = ">=3.9"
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dynamic = ["version", "dependencies"]
+
+[tool.hatch.metadata.hooks.requirements_txt]
+files = ["requirements.txt"]
+
+[tool.hatch.version]
+path = "src/cnd_lib/__version__.py"
+
+[build-system]
+requires = ["hatchling", "hatch-requirements-txt"]
+build-backend = "hatchling.build"
+
+[project.scripts]
+cndlib = "cnd_lib.cli:main"

@@ -1,0 +1,7 @@
+requests
+cndprint
+argparse
+hatch
+pyyaml
+hatch-requirements-txt
+twine

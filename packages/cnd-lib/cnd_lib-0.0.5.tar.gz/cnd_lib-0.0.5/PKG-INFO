@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: cnd_lib
+Version: 0.0.5
+Summary: Manage your lib more easily
+Author: Denis Fabien <denis@changendevops.com>
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Requires-Dist: argparse
+Requires-Dist: cndprint
+Requires-Dist: hatch
+Requires-Dist: hatch-requirements-txt
+Requires-Dist: pyyaml
+Requires-Dist: requests
+Requires-Dist: twine
