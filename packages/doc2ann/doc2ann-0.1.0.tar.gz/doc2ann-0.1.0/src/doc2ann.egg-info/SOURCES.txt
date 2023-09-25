@@ -1,0 +1,16 @@
+LICENSE
+pyproject.toml
+readme.md
+src/__init__.py
+src/doc2ann.py
+src/fix_docstring.py
+src/runner.py
+src/doc2ann.egg-info/PKG-INFO
+src/doc2ann.egg-info/SOURCES.txt
+src/doc2ann.egg-info/dependency_links.txt
+src/doc2ann.egg-info/entry_points.txt
+src/doc2ann.egg-info/requires.txt
+src/doc2ann.egg-info/top_level.txt
+src/test/__init__.py
+src/test/test_doc2ann.py
+src/test/fixtures/hi.py

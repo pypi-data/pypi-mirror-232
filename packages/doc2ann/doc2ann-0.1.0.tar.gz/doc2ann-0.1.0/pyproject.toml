@@ -1,0 +1,30 @@
+[project]
+name = "doc2ann"
+version = "0.1.0"
+authors = [{ name = "Ava Silver", email = "ava@avasilver.dev" }]
+description = "Tool to translate docstring types to annotations."
+readme = "readme.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Topic :: Software Development",
+]
+dependencies = ["docstring_parser", "refactor"]
+
+[project.optional-dependencies]
+dev = ["pre-commit", "pytest", "mypy", "flake8", "black", "build", "twine"]
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project.scripts]
+doc2ann = "doc2ann:main"
+
+[tool.distutils.bdist_wheel]
+universal = true
