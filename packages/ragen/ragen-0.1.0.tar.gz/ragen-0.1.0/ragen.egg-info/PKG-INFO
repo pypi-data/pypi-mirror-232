@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: ragen
+Version: 0.1.0
+Summary: Retrieval Augmented Generation.
+Author-email: Keming <kemingy94@gmail.com>
+Project-URL: Homepage, https://github.com/kemingy/ragen
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: openai
+Requires-Dist: torch
+Requires-Dist: transformers
+Requires-Dist: sentence-transformers
+Provides-Extra: dev
+Requires-Dist: ruff; extra == "dev"
+Requires-Dist: black; extra == "dev"
+
+# ragen
+
+Retrieval Augmented Generation.

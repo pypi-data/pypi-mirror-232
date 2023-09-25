@@ -1,0 +1,3 @@
+# ragen
+
+Retrieval Augmented Generation.

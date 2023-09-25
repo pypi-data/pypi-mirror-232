@@ -1,0 +1,9 @@
+numpy
+openai
+torch
+transformers
+sentence-transformers
+
+[dev]
+ruff
+black
