@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+SpacemanX/SpacemanX.py
+SpacemanX/__init__.py
+SpacemanX.egg-info/PKG-INFO
+SpacemanX.egg-info/SOURCES.txt
+SpacemanX.egg-info/dependency_links.txt
+SpacemanX.egg-info/top_level.txt
