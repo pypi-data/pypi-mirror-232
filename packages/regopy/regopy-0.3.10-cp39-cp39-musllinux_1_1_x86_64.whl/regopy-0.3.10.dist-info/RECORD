@@ -1,0 +1,11 @@
+regopy/interpreter.py,sha256=wVuoJ1Rt_BfmxPtZCedsaF3SLfUgmNlYUIqfXuGIly8,11776
+regopy/__init__.py,sha256=40zRXACklhUaJjJFPOXTeQX0OIQ8SgLH90zju1dd67I,1432
+regopy/_regopy.cpython-39-x86_64-linux-gnu.so,sha256=hNya7IznmMnlrqdQTf5oBVchwasw4ydYXxexHYuHWf8,15719657
+regopy/output.py,sha256=-AJrAet37ureHKkDasq66XXQu4CXpCGGYDNPtE4tPac,2578
+regopy/node.py,sha256=KGSPd9I9xyfClLmnFqiFGga_DbPhuGPYrGv2VJButg4,8167
+regopy.libs/libstdc++-a9383cce.so.6.0.28,sha256=Wy9UCdwS1rwI9GU5e7qE61S0AkRqqwti1q_adWSs-Rk,2447393
+regopy.libs/libgcc_s-a04fdf82.so.1,sha256=YxqJNaesQMhDswHEQpXsiLnVvMBBbYO6KYMDZFPWKSM,81257
+regopy-0.3.10.dist-info/top_level.txt,sha256=i6OxiWeKwNaGc-SJQjFbDdGLG5kbOPYbOmFKORQ-ZmI,7
+regopy-0.3.10.dist-info/WHEEL,sha256=Hp3KPZqrQYshC_LJJaFzC6y1haTh2q7vm4PrdofEPO4,111
+regopy-0.3.10.dist-info/METADATA,sha256=eadPlDaic8LYmGQzgGYvQSe3JemHIGHO-5EO3x3GM3U,7879
+regopy-0.3.10.dist-info/RECORD,,
