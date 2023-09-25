@@ -1,0 +1,3 @@
+[console_scripts]
+chatter = ai_chatter.scripts:main
+howto = ai_chatter.scripts:howto
