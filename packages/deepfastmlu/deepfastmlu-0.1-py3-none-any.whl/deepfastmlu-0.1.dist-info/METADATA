@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: deepfastmlu
+Version: 0.1
+Summary: Machine learning utilities to help speed up your prototyping process.
+Home-page: https://github.com/fabprezja/deep-fast-machine-learning-utils
+Author: Fabi Prezja
+Author-email: faprezja@fairn.fi
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.7
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: tensorflow (>=2.3.0)
+Requires-Dist: scikit-learn
+Requires-Dist: pandas
+Requires-Dist: seaborn
+Requires-Dist: matplotlib
+Provides-Extra: gpu
+Requires-Dist: tensorflow-gpu (>=2.3.0) ; extra == 'gpu'
+
+UNKNOWN
+
