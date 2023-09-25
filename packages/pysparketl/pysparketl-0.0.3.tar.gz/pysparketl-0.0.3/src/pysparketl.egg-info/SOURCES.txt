@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/pysparketl/__init__.py
+src/pysparketl/dataframes.py
+src/pysparketl.egg-info/PKG-INFO
+src/pysparketl.egg-info/SOURCES.txt
+src/pysparketl.egg-info/dependency_links.txt
+src/pysparketl.egg-info/top_level.txt
