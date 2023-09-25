@@ -1,0 +1,13 @@
+LICENSE.txt
+README.in.md
+README.md
+setup.py
+pandoc_purl/__init__.py
+pandoc_purl/main.py
+pandoc_purl/purl.py
+pandoc_purl.egg-info/PKG-INFO
+pandoc_purl.egg-info/SOURCES.txt
+pandoc_purl.egg-info/dependency_links.txt
+pandoc_purl.egg-info/entry_points.txt
+pandoc_purl.egg-info/requires.txt
+pandoc_purl.egg-info/top_level.txt

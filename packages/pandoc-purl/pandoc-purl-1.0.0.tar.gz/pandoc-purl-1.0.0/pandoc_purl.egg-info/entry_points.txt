@@ -1,0 +1,2 @@
+[console_scripts]
+pandoc-purl = pandoc_purl.main:main
