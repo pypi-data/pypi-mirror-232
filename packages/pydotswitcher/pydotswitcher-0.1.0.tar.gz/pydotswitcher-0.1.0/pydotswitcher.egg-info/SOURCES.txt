@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+pydotswitcher/__init__.py
+pydotswitcher/__main__.py
+pydotswitcher/copy.py
+pydotswitcher/switch.py
+pydotswitcher/vars.py
+pydotswitcher.egg-info/PKG-INFO
+pydotswitcher.egg-info/SOURCES.txt
+pydotswitcher.egg-info/dependency_links.txt
+pydotswitcher.egg-info/entry_points.txt
+pydotswitcher.egg-info/top_level.txt
