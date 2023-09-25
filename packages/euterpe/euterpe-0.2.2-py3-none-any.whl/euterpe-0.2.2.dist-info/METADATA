@@ -1,0 +1,65 @@
+Metadata-Version: 2.1
+Name: euterpe
+Version: 0.2.2
+Summary: 
+Author: Brice Santus
+Author-email: brice.santus@proton.me
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: fastapi (>=0.103.1,<0.104.0)
+Requires-Dist: mfrc522 (>=0.0.7,<0.0.8)
+Requires-Dist: spidev (>=3.6,<4.0)
+Requires-Dist: spotipy (>=2.23.0,<3.0.0)
+Requires-Dist: sqlalchemy (>=2.0.20,<3.0.0)
+Requires-Dist: typer[all] (>=0.9.0,<0.10.0)
+Requires-Dist: uvicorn (>=0.23.2,<0.24.0)
+Description-Content-Type: text/markdown
+
+# Euterpe API
+
+[![CI](https://github.com/Azraeht/euterpe/actions/workflows/ci.yml/badge.svg)](https://github.com/Azraeht/euterpe/actions/workflows/ci.yml)
+
+Euterpe is a random and useless but fun project which aims to provide a simple NFC reader  triggering Spotify songs.
+
+
+# Setup
+
+## Spotify
+
+* Create an `Euterpe` app on [Spotify](https://developer.spotify.com/)
+* Get spotify `CLIENT_ID` and `CLIENT_SECRET`
+
+## Configure Raspberry
+
+### Prerequisites
+
+You must:
+- Have a Raspberry Pi setup and configured to be accessible through ssh under `raspberry` with a sudoer user
+- A RC522 card connected on the Raspberry
+- Ensure it's connected to a speaker
+
+### RC522 setup
+
+Here is a wiring plan of the RC522 card on your Raspberry
+![Alt text](.assets/Raspberry-wiring-RC522.png)
+### Install Raspotify
+
+* Installation
+```
+> cd ansible
+> ansible-playbook -i inventory/realm euterpe.yml --diff
+```
+
+# Run it!
+
+* Start the API
+```
+> uvicorn euterpe.api:app --reload
+```
+* Run the server
+```
+> python euterpe/cli.py server run
+```
+
