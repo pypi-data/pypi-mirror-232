@@ -1,0 +1,2 @@
+[console_scripts]
+p2r = paper2remarkable.__main__:main
