@@ -1,0 +1,8 @@
+setup.py
+create_fusion_app/__init__.py
+create_fusion_app/main.py
+create_fusion_app.egg-info/PKG-INFO
+create_fusion_app.egg-info/SOURCES.txt
+create_fusion_app.egg-info/dependency_links.txt
+create_fusion_app.egg-info/entry_points.txt
+create_fusion_app.egg-info/top_level.txt
