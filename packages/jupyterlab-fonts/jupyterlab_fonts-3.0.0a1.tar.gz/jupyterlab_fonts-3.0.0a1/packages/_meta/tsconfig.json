@@ -1,0 +1,25 @@
+{
+  "extends": "../../tsconfigbase",
+  "compilerOptions": {
+    "outDir": "lib",
+    "rootDir": "src"
+  },
+  "include": ["src/**/*"],
+  "references": [
+    {
+      "path": "../jupyterlab-font-anonymous-pro"
+    },
+    {
+      "path": "../jupyterlab-font-atkinson-hyperlegible"
+    },
+    {
+      "path": "../jupyterlab-fonts"
+    },
+    {
+      "path": "../jupyterlab-font-dejavu-sans-mono"
+    },
+    {
+      "path": "../jupyterlab-font-fira-code"
+    }
+  ]
+}

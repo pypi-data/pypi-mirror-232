@@ -1,0 +1,194 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: ["*"]
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  PIP_DISABLE_PIP_VERSION_CHECK: 1
+  PYTHONIOENCODING: utf-8
+  PYTHONUNBUFFERED: 1
+  MAMBA_NO_BANNER: 1
+  # ours
+  CACHE_EPOCH: 3
+  ATEST_RETRIES: 3
+
+defaults:
+  run:
+    shell: bash -l {0}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+
+      - name: install (conda)
+        uses: conda-incubator/setup-miniconda@v2
+        with:
+          miniforge-variant: Mambaforge
+          environment-file: .github/locks/lock_linux-64.conda.lock
+          use-mamba: true
+
+      - name: preflight
+        run: doit lock:preflight
+
+      - name: setup (python)
+        run: doit lock:install:build_linux-64_lab4.0
+
+      - name: cache (node)
+        uses: actions/cache@v3
+        id: cache-node-modules
+        with:
+          path: |-
+            **/node_modules
+            build/.cache/yarn
+          key: |
+            ${{ env.CACHE_EPOCH }}-ubuntu-node-modules-${{ hashFiles('yarn.lock') }}
+
+      - name: setup (js)
+        run: doit js-root:setup
+
+      - name: build
+        run: doit build || doit list
+
+      - name: build (retry)
+        run: doit build
+
+      - name: dist
+        run: doit dist
+
+      - name: upload (dist)
+        uses: actions/upload-artifact@v3
+        with:
+          name: jupyterlab-fonts-${{ github.run_number }}-dist
+          path: ./dist
+
+      - name: upload (preflight)
+        uses: actions/upload-artifact@v3
+        with:
+          name: jupyterlab-fonts-${{ github.run_number }}-lock-preflight
+          path: ./build/locks
+
+      - name: Rename uncached conda packages
+        run: mv "${CONDA_PKGS_DIR}" "${CONDA_PKGS_DIR}_do_not_cache"
+
+
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+
+      - name: install (conda)
+        uses: conda-incubator/setup-miniconda@v2
+        with:
+          miniforge-variant: Mambaforge
+          environment-file: .github/locks/lock_linux-64.conda.lock
+          use-mamba: true
+
+      - name: preflight
+        run: doit lock:preflight
+
+      - name: setup (python)
+        run: doit lock:install:build_linux-64_lab4.0
+
+      - name: cache (node)
+        uses: actions/cache@v3
+        id: cache-node-modules
+        with:
+          path: |-
+            **/node_modules
+            build/.cache/yarn
+          key: |
+            ${{ env.CACHE_EPOCH }}-ubuntu-node-modules-${{ hashFiles('yarn.lock') }}
+
+      - name: setup (js)
+        run: doit js-root:setup
+
+      - name: lint
+        run: doit lint
+
+      - name: Rename uncached conda packages
+        run: mv "${CONDA_PKGS_DIR}" "${CONDA_PKGS_DIR}_do_not_cache"
+
+  test:
+    needs: [build, lint]
+    name: test ${{ matrix.os }} ${{ matrix.lab-version }}
+    runs-on: ${{ matrix.os }}-latest
+    env:
+      TESTING_IN_CI: '1'
+      JLF_LAB: ${{ matrix.lab-version }}
+
+    strategy:
+      fail-fast: false
+      matrix:
+        os: ['ubuntu', 'macos', 'windows']
+        lab-version: ['lab3.5', 'lab4.0']
+        include:
+          - os: ubuntu
+            subdir: linux-64
+          - os: macos
+            subdir: osx-64
+          - os: windows
+            subdir: win-64
+
+    steps:
+      - name: configure line endings
+        run: git config --global core.autocrlf false
+
+      - name: checkout
+        uses: actions/checkout@v3
+
+      - name: install (conda)
+        uses: conda-incubator/setup-miniconda@v2
+        with:
+          miniforge-variant: Mambaforge
+          environment-file: .github/locks/lock_${{ matrix.subdir }}.conda.lock
+          use-mamba: true
+
+      - name: download (preflight)
+        uses: actions/download-artifact@v3
+        with:
+          name: jupyterlab-fonts-${{ github.run_number }}-lock-preflight
+          path: ./build/locks
+
+      - name: download (dist)
+        uses: actions/download-artifact@v3
+        with:
+          name: jupyterlab-fonts-${{ github.run_number }}-dist
+          path: ./dist
+
+      - name: test (pytest)
+        run: doit dt:test:pytest || doit list
+
+      - name: test (pytest, retry)
+        run: doit dt:test:pytest
+
+      - name: test (robot)
+        run: doit dt:atest:a_1
+
+      - name: test (robot, retry 1)
+        run: doit dt:atest:a_2
+
+      - name: test (robot, retry 2)
+        run: doit dt:atest:a_3
+
+      - name: upload (reports)
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: |
+            jupyterlab-fonts-${{ github.run_number }}-reports-${{ runner.os }}-f${{ matrix.lab-version }}
+          path: ./build/reports
+
+      - name: Rename uncached conda packages
+        run: mv "${CONDA_PKGS_DIR}" "${CONDA_PKGS_DIR}_do_not_cache"
