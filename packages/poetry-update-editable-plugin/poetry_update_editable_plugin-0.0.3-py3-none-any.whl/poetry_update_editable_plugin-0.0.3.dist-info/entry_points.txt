@@ -1,0 +1,3 @@
+[poetry.plugin]
+update-editable=poetry_update_editable.plugin:UpdateEditablePlugin
+
