@@ -1,0 +1,77 @@
+# fastapi_kit
+
+
+### 认证
+
+```python
+from fastapi import FastAPI
+from fastapi_kit.auth import register_auth
+
+app = FastAPI(...)
+
+register_auth(app)
+```
+
+完成以上操作，即可在`request`中拿到`user`
+
+
+### 异常
+
+内置异常：
+
+- `ExistException`对于已经存在的异常
+- `NoPermissionException`对于无权限操作的异常
+- `NotFoundException`对于不存在的异常
+- `OverLimitException`对于超出限制的异常
+
+对于自定义的业务报错，可以继承`CustomException`直接在业务处抛错。
+
+注意：自定义异常类，需要使用`app.add_exception_handler`来注册。
+
+```python
+from fastapi_kit.exception import error_exception_handler
+app.add_exception_handler(自定义异常类, error_exception_handler)
+```
+
+### 权限
+
+直接在路由定义处设置权限
+
+```python
+from fastapi import APIRouter, Request
+from fastapi_kit.permission import permission
+
+router = APIRouter()
+@router.post('/subscribe')
+@permission('bidding_subscribe_create')
+async def subscribe(request: Request):
+    """ 创建用户订阅器 """
+```
+
+### 通用schema返回
+
+对于正常的数据返回，使用`RestfulResponse`
+
+对于具有翻页的数据返回，使用`RestfulPageResponse`
+
+- `RestfulResponse`
+
+```python
+from fastapi_kit.schema import RestfulResponse
+@router.post('/subscribe', response_model=RestfulResponse[对象的schema])
+async def subscribe(request):
+    """ 创建用户订阅器 """
+
+    return dict(data=对象)
+```
+
+
+- `RestfulPageResponse`(常用于列表)
+
+```python
+from fastapi_kit.schema import RestfulPageResponse
+@router.get('/subscribe', response_model=RestfulPageResponse[List[对象的schema]])
+async def subscribe(request):
+    """ 获取用户订阅器 """
+    return RestfulPageResponse(data=对象)
+```

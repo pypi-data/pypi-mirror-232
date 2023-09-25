@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "fastapi-kit"
+version = "0.1.4"
+description = ""
+authors = ["miclon <jcnd@163.com>"]
+readme = "README.md"
+packages = [
+    { include = 'fastapi_kit', from = 'src'}
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+fastapi = "*"
+usepy = "*"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
