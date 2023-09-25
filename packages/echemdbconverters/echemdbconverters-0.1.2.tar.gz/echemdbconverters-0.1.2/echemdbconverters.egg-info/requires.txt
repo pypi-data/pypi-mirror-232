@@ -1,0 +1,4 @@
+clevercsv
+click<9,>=8
+frictionless<6,>=5
+pandas

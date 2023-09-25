@@ -1,0 +1,17 @@
+LICENSE
+README.md
+setup.py
+echemdbconverters/__init__.py
+echemdbconverters/csvloader.py
+echemdbconverters/ec_unit_package_adapter.py
+echemdbconverters/eclab_adapter.py
+echemdbconverters/eclabloader.py
+echemdbconverters/entrypoint.py
+echemdbconverters.egg-info/PKG-INFO
+echemdbconverters.egg-info/SOURCES.txt
+echemdbconverters.egg-info/dependency_links.txt
+echemdbconverters.egg-info/entry_points.txt
+echemdbconverters.egg-info/requires.txt
+echemdbconverters.egg-info/top_level.txt
+echemdbconverters/test/__init__.py
+echemdbconverters/test/cli.py
