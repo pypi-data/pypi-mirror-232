@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "mspy-doc-builder"
+version = "0.1.0"
+description = "misspy document builder."
+authors = ["sonyakun"]
+readme = "README.md"
+packages = [{include = "mspy_doc_builder"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+cleo = "^2.0.1"
+
+[tool.poetry.scripts]
+mspy = "mspy_doc_builder.application:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
