@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: poetry-update-editable-plugin
+Version: 0.0.1
+Summary: A poetry plugin to automatically update all editable dependencies.
+License: MIT
+Author: Chris Brousseau
+Author-email: chris@cbrews.xyz
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: poetry (>=1.4,<2.0)
+Description-Content-Type: text/markdown
+
+# Poetry `update-editable` Plugin
+
+Has this ever happened to you?
+
