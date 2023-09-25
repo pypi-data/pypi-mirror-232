@@ -1,0 +1,16 @@
+loupiotes/__init__.py,sha256=fkNmGc9cLD7C_0bWNwQ6smHCFPgbCk0hE2OFbABcifs,373
+loupiotes/intensity.py,sha256=skeVOh4FWEXkCXigPWo7Eu7Or8F2zwxenSqeC8Gju0o,21300
+loupiotes/solar_coordinates.py,sha256=1os2-q1aOQESjp2trO5fBoCoqQDdN5bwsI_T3To2Jxc,970
+loupiotes/spots/__init__.py,sha256=YQNTsEtE6oUS2HxyPtIxoqH80ZVnQLh2iWtXsBvN7Yk,108
+loupiotes/spots/collection.py,sha256=bqKChyIWSUZcnk01HoKrDrrRn9gInZ1VkiIeRA1hoY4,43590
+loupiotes/spots/generator.py,sha256=O3xQlYUztPVby6n9XRQ8qRf__GbiwW29p8V_FU6-w58,3455
+loupiotes/spots/multi_channel.py,sha256=SA5jlnluo1gpNGWAYLkXCKGlWhpWrx_oQOsX9yQCj-Q,19521
+loupiotes/spots/spotmodel.py,sha256=yT_TAukwlcNPy4eCgN2yUIY0bTBX6ANQWMds0pSUM7s,60119
+loupiotes/tables/__init__.py,sha256=QHd-EsfB-owHE-qVcpA5dj9Un0e_0tsf8iWTrWB22XI,22
+loupiotes/tables/sing_2010_kepler.fit,sha256=bjfOQbApWn4_RmuONzr8YKrN3-Y4pDJPy-vEKh8V2wQ,737280
+loupiotes/tables/tables.py,sha256=LmtEid_Hee2hd1qP9pS8_CkLSO_0KQlvUGYabpCPkb0,635
+loupiotes-1.0.dist-info/LICENSE,sha256=8wSyT0mkK7Af2pbuoqqVsbtIvPvQe4PY0rSd6XDq9H0,21782
+loupiotes-1.0.dist-info/METADATA,sha256=j0tRYaG24bY_t5_Ay2gD0fPtDzScOxl2TXBstTZTqKY,28436
+loupiotes-1.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+loupiotes-1.0.dist-info/top_level.txt,sha256=h2wfTph3gpba6Y8vnRwMUnEssbdgcLT9tV9s75yUjtI,10
+loupiotes-1.0.dist-info/RECORD,,
