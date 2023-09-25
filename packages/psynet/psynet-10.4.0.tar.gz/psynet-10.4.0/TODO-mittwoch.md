@@ -1,0 +1,2 @@
+- appnope package
+- Python 3.8 removal Dallinger
