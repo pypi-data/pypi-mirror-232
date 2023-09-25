@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools", "wheel", "setuptools-git-versioning"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ppcdis-protobuf"
+version = "0.0.2"
+description = "NOTE: this is NOT the upstream ppcdis, this is m8's branch that uses protobuf persistence"
+readme = "README.md"
+license = {file = "LICENSE.md"}
+authors = [
+  {name = "Seeky"},
+]
+maintainers = [
+  {name = "em-eight"}
+]
+dynamic = ["dependencies"]
+requires-python=">=3.8"
+
+[tool.setuptools-git-versioning]
+enabled = true
