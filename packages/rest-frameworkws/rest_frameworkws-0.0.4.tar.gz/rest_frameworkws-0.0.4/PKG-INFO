@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: rest_frameworkws
+Version: 0.0.4
+Summary: This is the simplest module for quick work with files.
+Home-page: https://gitlab.com/Gaizin/creaetetest
+Author: yarik_g
+Author-email: example@gmail.com
+Project-URL: GitHub, https://gitlab.com/Gaizin/creaetetest
+Keywords: files rest_frameworkws
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9 
+Description-Content-Type: text/markdown
+
+TEstwsasdgag
