@@ -1,0 +1,16 @@
+entelequia/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+entelequia/flask/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+entelequia/flask/entelequia.py,sha256=V7V0mTKFG8cRoD5pL9G20GOFJFJdMMcq4ixDKRo-noY,1387
+entelequia/modules/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+entelequia/modules/time/__init__.py,sha256=sA79yxe_BWpHoXR1z6VHVfhfoJwbjwedlX1lxdvz2rc,272
+entelequia/modules/time/interface.py,sha256=5AlK646o5ADA8zbrNSO1MH_3t7dDnPouS39R_6XWKv0,163
+entelequia/modules/time/system.py,sha256=dYzATfDqVnY4YW30ZZcbXR400LI_vDsQbFRCZzjZvw0,348
+entelequia/system/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+entelequia/system/implementation.py,sha256=iOvv4IBxyo6xe92vobzqk5Bbz8uANDF6On5PFaFKmlk,2471
+entelequia/system/module.py,sha256=rj2cBI6hNjri76I3hxzaTJwg6cL7Bt1BCLJi-sPzsfg,321
+entelequia/system/system.py,sha256=l4krLZusztthXQYWV04Fj6vtTeGNA96ydUwPH0BsHdg,63
+entelequia/system/system_interface.py,sha256=MuzfzCXEG0vSINwgkibZOQ_FtDoJT0Z4K7uJP_SDA2Y,163
+entelequia-0.1.1.dist-info/LICENSE.md,sha256=QaLcVeDVwRWFEHJwqDk_r_XOicw3I2gPzsjU40uQVLg,1084
+entelequia-0.1.1.dist-info/METADATA,sha256=s5ApNTkf01KU-pCp1ufEiavf4TSxeiN_ijlJVng-kHw,2511
+entelequia-0.1.1.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+entelequia-0.1.1.dist-info/RECORD,,
