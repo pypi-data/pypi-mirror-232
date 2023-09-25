@@ -1,0 +1,15 @@
+eQTac/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+eQTac/control_FDR.py,sha256=8m8vVGmlf8QCOTncV18mSSV1e7GAG2xlZiDMGQoTEDg,1941
+eQTac/eQTac_correlation.py,sha256=H7sPaDtSY5DT9zqEM_rs8ECksVKUZGfGXgZHtH2Zb3c,4420
+eQTac/eQTac_permutation.py,sha256=3mNPsjlzwJXW1mCwXVgNI_mATqqqGCM_Vkr72n0UC0E,2272
+eQTac/filter_bkg.py,sha256=aCFhktVaj8WrqQp1HVytAYJrZOsLoBMq0oSZJ5L1ym4,2697
+eQTac/generate_PRE.py,sha256=xnZUEsc9nKViXSrw15_gwjojxBC6JoeeWzLMaWGW_F8,4744
+eQTac/generate_mut_fa.py,sha256=U6VJi0rKKajdr_R1y62GOt_9OGVrobFQja6-Jgn-Zo0,2594
+eQTac/generate_snp_dict.py,sha256=UggtMNELL6-T_FQhfHhIpgtJSlBLjbpJLnxCV38NaPg,910
+eQTac/geno2score.py,sha256=AA4QKBKbKlUC08pZXxS-z8ak8eDnw_3iUL1LudR4790,4022
+eQTac/get_nullseq.py,sha256=l0Fh6e60SwAVmecXEKL5mPuqwXqUDjroL2Vacefn0As,2500
+eQTac-1.0.12.dist-info/LICENSE,sha256=aVX03Q_LN6dYUxYgA0QOi6IOSKY7EQmPSXt7v4DjkAo,1511
+eQTac-1.0.12.dist-info/METADATA,sha256=2waCGCCYgK4NlwAZfE9gOy-8Ouc7k6qadu0e7cMYsm4,6363
+eQTac-1.0.12.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+eQTac-1.0.12.dist-info/top_level.txt,sha256=DOJHDFi57foB2B5VLjPNkGMpDP52zy6fhFJ0WqvieWY,6
+eQTac-1.0.12.dist-info/RECORD,,
