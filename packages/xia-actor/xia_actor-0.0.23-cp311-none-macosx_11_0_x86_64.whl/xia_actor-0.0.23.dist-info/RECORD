@@ -1,0 +1,14 @@
+xia_actor/__init__.py,sha256=DW9avvygXLU3Y0uq4tt71EWuIrFHE3T3NDWWOzvFcDA,615
+xia_actor/actor.cpython-311-darwin.so,sha256=n6VBO8LmVAUrKN8sKpD6gA2u1as_m_tPgQVWIj1BvPo,424984
+xia_actor/job.cpython-311-darwin.so,sha256=cvdKOlRZWiF98gd7PhlHUk1Qla_o4nxbGunl7M1iSkM,373336
+xia_actor/jobs/__init__.py,sha256=z-mGgUbHlWGcXz7L86s8fgVZ8PRq-2lP-VDlBloGk6w,389
+xia_actor/jobs/campaign_owner.cpython-311-darwin.so,sha256=8p6ERf62dx53L3KlYyb4WYAwD3c5yvhQ5V7CEwdP2XU,306128
+xia_actor/jobs/mission_owner.cpython-311-darwin.so,sha256=SD0l2qEKzWuuWxwaiMyi1cn3JKissrxUrLshNO8_Y_k,306232
+xia_actor/jobs/mission_reviewer.cpython-311-darwin.so,sha256=lLOc1a6RqHYFLvEdW8JzJSWiY7cyJef3Gk1HJaPrb4I,357088
+xia_actor/jobs/mission_worker.cpython-311-darwin.so,sha256=2gDPQsm2gnFDYoyozUonMRGhy0ns5oAs_3zKtyMHALQ,373816
+xia_actor/jobs/target_reviewer.cpython-311-darwin.so,sha256=y8GAvr3BS_CuomjsOOlTQJoTvG9arlUVS9H7khSWyLs,288792
+xia_actor-0.0.23.dist-info/LICENSE.txt,sha256=acfisNP7eGyC12wEJebDnGs-4E_4-FYjTwMe5NB_owk,156
+xia_actor-0.0.23.dist-info/METADATA,sha256=qGSl0nLGtkTk0VjA5XpNnwhTrg-tIwtFh3plPRLsr-Y,409
+xia_actor-0.0.23.dist-info/WHEEL,sha256=h6AHtO7cSDs0NqJlOU-pxFlAjKPuMapTPklGT2yNXZQ,109
+xia_actor-0.0.23.dist-info/top_level.txt,sha256=-UXLzmsgIuEIUSHRbR6XD-ix4NwhjldjVlG3xjJVuyg,10
+xia_actor-0.0.23.dist-info/RECORD,,
