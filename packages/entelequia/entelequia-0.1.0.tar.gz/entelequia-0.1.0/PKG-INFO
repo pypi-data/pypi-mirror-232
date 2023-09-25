@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: entelequia
+Version: 0.1.0
+Summary: An architecture to organize your software as a set of loose-coupled systems, where each can be easily accessed and has a well-defined responsibility. (Python Port from https://github.com/ba-st/Kepler)
+Home-page: https://github.com/EzequielPuerta/entelequia
+License: MIT
+Author: Armando Ezequiel Puerta
+Author-email: armando.ezequiel.puerta@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Software Development
+Requires-Dist: attrs (==23.1.0)
+Project-URL: Documentation, https://github.com/EzequielPuerta/entelequia
+Project-URL: Repository, https://github.com/EzequielPuerta/entelequia
+Description-Content-Type: text/markdown
+
+# Entelequia
+
