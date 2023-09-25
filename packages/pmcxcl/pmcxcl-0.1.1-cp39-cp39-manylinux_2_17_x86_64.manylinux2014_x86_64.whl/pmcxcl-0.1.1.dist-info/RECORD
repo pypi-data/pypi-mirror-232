@@ -1,0 +1,8 @@
+_pmcxcl.cpython-39-x86_64-linux-gnu.so,sha256=Xsdl905WoqY2AcE2jdqyvvmdPNeD5cIsjCr6rRz_U58,2820609
+pmcxcl.libs/libOpenCL-f806d0e1.so.1.0.0,sha256=8oAw-SbjjBUhOgUQ0R9xPFjBNwrm-7aAt-h9mdSSY0M,135601
+pmcxcl/__init__.py,sha256=UkQPULfhTBJmbhfykiLXeD35OItsKKmx9tUeivxKaAY,2074
+pmcxcl/bench.py,sha256=sFe2MprqqAx7HdUB_wgz8wMc6SsQcJrERrUe6fa5BdM,1691
+pmcxcl-0.1.1.dist-info/top_level.txt,sha256=3-gVHSwlcrGhE7o2MkqTEMT52F8ryBxG6m9vPdb3Pu8,15
+pmcxcl-0.1.1.dist-info/WHEEL,sha256=_BMdtp3IQ4NF7VFMKD4lD9Cik0H3WhEP1vtG22VwXhU,148
+pmcxcl-0.1.1.dist-info/METADATA,sha256=TyUT8VyopUdaDe7FajEQ3Prh15hnHiLFWN4sMK8S4Mw,8611
+pmcxcl-0.1.1.dist-info/RECORD,,
