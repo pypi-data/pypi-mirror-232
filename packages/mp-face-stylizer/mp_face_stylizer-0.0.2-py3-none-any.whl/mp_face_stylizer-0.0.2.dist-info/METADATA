@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: mp-face-stylizer
+Version: 0.0.2
+Summary: A cli program of face stylizer based on MediaPipe
+Project-URL: Homepage, https://github.com/vra/mp-face-stylizer
+Project-URL: Bug Tracker, https://github.com/vra/mp-face-stylizer/issues
+Author-email: Yunfeng Wang <wyf.brz@gmail.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Requires-Dist: mediapipe
+Requires-Dist: numpy
+Requires-Dist: opencv-python
+Requires-Dist: tqdm
+Provides-Extra: lint
+Requires-Dist: black; extra == 'lint'
+Requires-Dist: ruff; extra == 'lint'
+Provides-Extra: test
+Requires-Dist: pytest; extra == 'test'
+Description-Content-Type: text/markdown
+
+# mp-face-stylizer
+Python Face Stylizer Program based on MediaPipe
+
+## How to run
+Installing:
+```
+pip install mp-face-stylizer
+```
+
+Test with image:
+```bash
+mp_face_stylizer img -i /path/to/img -m /path/to/face_stylizer.task -o output.jpg
+```
+
+Test with video:
+```bash
+mp_face_stylizer video -i /path/to/video -m /path/to/face_stylizer.task -o output.mp4
+```
+
+Test with camera:
+```bash
+mp_face_stylizer camera -m /path/to/face_stylizer.task
+```
+
+## TODO
+* [ ]. add model auto download pipeline
+* [ ]. speedup running fps
++ [x]. show fps
