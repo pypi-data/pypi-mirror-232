@@ -1,0 +1,10 @@
+LICENSE.txt
+README.md
+setup.py
+gurobipy-stubs/__init__.pyi
+gurobipy-stubs/gurobipy.pyi
+gurobipy_stubs.egg-info/PKG-INFO
+gurobipy_stubs.egg-info/SOURCES.txt
+gurobipy_stubs.egg-info/dependency_links.txt
+gurobipy_stubs.egg-info/requires.txt
+gurobipy_stubs.egg-info/top_level.txt
