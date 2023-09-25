@@ -1,0 +1,15 @@
+termii/__init__.py,sha256=QrazO3OzoZ-8wE8Syxxm2wiTxhzGEJPc6nyzoLapHkQ,86
+termii/auth.py,sha256=MySBc8sE2rOpNEXDe4uFHeMnwgrwDkPZxRV27WvTZ_Y,2067
+termii/campaign.py,sha256=RFtaRno5hlOLLyE-BSOzSAz92pMl8aAvDJt24Ns5lHI,3135
+termii/messaging.py,sha256=irycR_zJOn4fWn8belH7ZUvSSmVdBVIh--heTVLZWr0,7245
+termii/utils.py,sha256=vRvpgV2FqJ7fC7cT2BiLf6lF9g93xRBiFEjKZO20Ut8,1189
+termii/endpoints/__Init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+termii/endpoints/campaign.py,sha256=-DdmBtWNYX4rJ7ujgXrgcm2GehQshpryUlfi0tFT0iE,348
+termii/endpoints/messaging.py,sha256=ueCqcT-anOQcW-MEOSfg6CLG5lzStt4Vy_MfddTF_iA,352
+termii/schemas/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+termii/schemas/messaging.py,sha256=C8xpCwMmn6Ef2cfZi9EBKzJlXI2Q3hRSbZINBQpNC0Q,209
+termii/schemas/shared.py,sha256=V-azQQKT3A685fXOkvCbWwyOr1BDVMMXWPaWXu_2RN8,298
+termii_py-0.0.6.dist-info/METADATA,sha256=RFLykInoqltokUhM-KwqF6oGWl-F2ZbFazWdoFD3QVA,637
+termii_py-0.0.6.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+termii_py-0.0.6.dist-info/licenses/LICENSE,sha256=HGplWl1C5v-gDzS2xJ2F7Ktivrw-19FXb5PGpPKnHMc,1068
+termii_py-0.0.6.dist-info/RECORD,,
