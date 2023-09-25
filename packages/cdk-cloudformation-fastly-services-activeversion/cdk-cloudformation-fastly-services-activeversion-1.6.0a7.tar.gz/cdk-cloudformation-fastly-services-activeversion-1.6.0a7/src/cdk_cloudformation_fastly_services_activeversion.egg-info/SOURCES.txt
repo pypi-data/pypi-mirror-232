@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+src/cdk_cloudformation_fastly_services_activeversion/__init__.py
+src/cdk_cloudformation_fastly_services_activeversion/py.typed
+src/cdk_cloudformation_fastly_services_activeversion.egg-info/PKG-INFO
+src/cdk_cloudformation_fastly_services_activeversion.egg-info/SOURCES.txt
+src/cdk_cloudformation_fastly_services_activeversion.egg-info/dependency_links.txt
+src/cdk_cloudformation_fastly_services_activeversion.egg-info/requires.txt
+src/cdk_cloudformation_fastly_services_activeversion.egg-info/top_level.txt
+src/cdk_cloudformation_fastly_services_activeversion/_jsii/__init__.py
+src/cdk_cloudformation_fastly_services_activeversion/_jsii/fastly-services-activeversion@1.6.0-alpha.7.jsii.tgz
