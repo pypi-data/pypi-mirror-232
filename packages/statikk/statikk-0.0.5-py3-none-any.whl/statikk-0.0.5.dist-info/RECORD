@@ -1,0 +1,10 @@
+statikk/__init__.py,sha256=pH5i4Fj1tbXLqLtTVIdoojiplZssQn0nnud8-HXodRE,577
+statikk/conditions.py,sha256=KqJliI0Qevb78y8r71HKHjtl1ViU1juFLu0nK7dRU_Q,2208
+statikk/engine.py,sha256=e4tZiGz8US1Wyzp6QGkbO_GmNn4XAc7DcsQTzyM8HiI,19169
+statikk/expressions.py,sha256=mow3K-RBrc5kayS1-wwj0sYo1r1ZXCY_wSSYp69SPV8,12041
+statikk/models.py,sha256=UR5laWSdEFZtWy5gUCSd18fsJkHWolomWEtfayXtFsE,4858
+statikk-0.0.5.dist-info/LICENSE.txt,sha256=uSH_2Hpb2Bigy5_HhBliN2fZbBU64G3ERM5zzhKPUEE,1078
+statikk-0.0.5.dist-info/METADATA,sha256=bxJl7wqh9dQa0I5gCI_gBVG7Q5rD6NSeK4a7Tl9G4Fo,3284
+statikk-0.0.5.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+statikk-0.0.5.dist-info/top_level.txt,sha256=etKmBbjzIlLpSefXoiOfhWGEgvqUEALaFwCjFDBD9YI,8
+statikk-0.0.5.dist-info/RECORD,,
