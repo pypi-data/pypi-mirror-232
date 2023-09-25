@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: restrun
+Version: 0.1.0
+Summary: 
+Author: yassun7010
+Author-email: yassun7010@outlook.com
+Requires-Python: >=3.11,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: authlib (>=1.2.1,<2.0.0)
+Requires-Dist: black (>=23.9.1,<24.0.0)
+Requires-Dist: datamodel-code-generator[http] (>=0.21.4,<0.22.0)
+Requires-Dist: httpx (>=0.25.0,<0.26.0)
+Requires-Dist: isort (>=5.12.0,<6.0.0)
+Requires-Dist: jinja2 (>=3.1.2,<4.0.0)
+Requires-Dist: openapi-pydantic (>=0.3.2,<0.4.0)
+Requires-Dist: prompt-toolkit (>=3.0.39,<4.0.0)
+Requires-Dist: pydantic (>=2.2.1,<3.0.0)
+Requires-Dist: pyhumps (>=3.8.0,<4.0.0)
+Requires-Dist: pyyaml (>=6.0.1,<7.0.0)
+Requires-Dist: rich-argparse (>=1.3.0,<2.0.0)
+Requires-Dist: ruff (>=0.0.286,<0.0.287)
+Requires-Dist: typer[all] (>=0.9.0,<0.10.0)
+Description-Content-Type: text/markdown
+
+# RESTRUN
+
+<!-- --8<-- [start:badges] -->
+
+[![docs](https://github.com/yassun7010/restrun/actions/workflows/publish-mkdocs.yml/badge.svg)](https://yassun7010.github.io/restrun/)
+[![test](https://github.com/yassun7010/restrun/actions/workflows/test-suite.yml/badge.svg)](https://github.com/yassun7010/restrun/actions)
+
+<!-- --8<-- [end:badges] -->
+
+RESTRUN is `REST(full api) + RUN(ner)` generator for Python.
+
+- [Documentation](https://yassun7010.github.io/restrun/)
+- [Examples](https://github.com/yassun7010/restrun/tree/main/examples)
+

@@ -1,0 +1,62 @@
+{%- set client_class = restrun.client_prefix | class_name + "Client" -%}
+{%- set mock_client_class = restrun.client_prefix | class_name + "MockClient" -%}
+{{ auto_generated_doc_comment }}
+from typing import Literal, Self, overload
+
+from typing_extensions import override
+
+from restrun.core.client import RestrunMockClient
+from restrun.exceptions import RestrunError
+
+{% for resource in resources %}
+{% for operation_info in resource.operations -%}
+from ..resources.{{ resource.module_name }} import {{ operation_info.module_name }}
+{% endfor %}
+{% endfor %}
+from .client import {{ client_class }}
+{%- if restrun.client_mixins | length != 0 %}
+from .mixins import (
+{%- for mixin in restrun.client_mixins %}
+    {{ mixin.module_name }},
+{%- endfor %}
+)
+{% endif %}
+
+
+class {{ mock_client_class }}({{ (restrun.mock_client_mixin_path_names + ["RestrunMockClient", client_class])|join(", ") }}):
+{% if not resources.is_empty %}
+    pass
+{% endif %}
+{% for method, operation_infos in resources.operation_infos_map.items() %}
+{% if operation_infos | length == 0 %}
+{% elif operation_infos | length == 1 %}
+{% set operation_info = operation_infos[0] %}
+    @override
+    def inject_{{ method | lower }}_response(
+        self,
+        url: {{ restrun.get_operation_urls(operation_info) | literal }},
+        *,
+        response: {{ operation_info.module_name }}.{{ operation_info.class_name }}ResponseBody | RestrunError,
+    ) -> "Self":
+        self._client.inject_{{ method | lower }}_response(url, response)
+
+        return self
+{% else %}
+{% for operation_info in operation_infos %}
+    @overload
+    def inject_{{ method | lower }}_response(
+        self,
+        url: {{ restrun.get_operation_urls(operation_info) | literal }},
+        *,
+        response: {{ operation_info.module_name }}.{{ operation_info.class_name }}ResponseBody | RestrunError,
+    ) -> "Self":
+        ...
+{% endfor %}
+
+    @override
+    def inject_{{ method | lower }}_response(self, url, *, response) -> "Self":
+        self._client.inject_{{ method | lower }}_response(url, response)
+
+        return self
+{% endif %}
+{% endfor %}

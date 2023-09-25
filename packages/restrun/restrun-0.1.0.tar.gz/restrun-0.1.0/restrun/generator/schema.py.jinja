@@ -1,0 +1,71 @@
+{%- macro generate_schema(schema_name, schema) -%}
+{% if schema.is_literal_type %}
+{{ schema_name }} = {{ schema.data_type.data_type.value }}
+{%- if schema.title_and_description %}
+"""
+{{ schema.title_and_description | wordwrap }}
+"""
+{% endif %}
+
+{% elif schema.type == "custom_str" %}
+{{ schema_name }} = str
+{%- if schema.title_and_description %}
+"""
+{{ schema.title_and_description | wordwrap }}
+"""
+{% endif %}
+
+{% elif schema.type == "literal_union" %}
+{{ schema_name }} = {{ schema.data_type }}
+{%- if schema.title_and_description %}
+"""
+{{ schema.title_and_description | wordwrap }}
+"""
+{% endif %}
+
+{% elif schema.type == "array" %}
+{% if schema.data_type.data_type.need_item_data_type_def %}
+{%- set item_schema_name = schema_name + "Item" -%}
+{{ generate_schema(item_schema_name, schema.array_item_schema) }}
+{{ schema_name }} = list[{{ item_schema_name }}]
+{% else %}
+{{ schema_name }} = {{ schema.data_type }}
+{% endif %}
+{%- if schema.title_and_description %}
+"""
+{{ schema.title_and_description | wordwrap }}
+"""
+{% endif %}
+
+{% elif schema.type == "object" %}
+{% set object = schema.data_type %}
+class {{ schema_name }}(typing_extensions.TypedDict):
+{%- if object.title_and_description %}
+    """
+    {{ object.title_and_description | wordwrap | indent(4) }}
+    """
+
+{% endif %}
+{% for name, property in object.properties.items() %}
+    {{ name }}: {% if not property.required -%}typing.NotRequired[{% endif %}{{ property.data_type }}{% if not property.required %}]{% endif %}
+{%- if property.title_and_description %}
+    """
+    {{ property.title_and_description | wordwrap | indent(4) }}
+    """
+
+{% endif %}
+{% endfor %}
+
+{% elif schema.type == "ref" %}
+{{ schema_name }} = {{ schema.data_type }}
+
+{% endif %}
+{%- endmacro -%}
+
+{#- start auto generation -#}
+{{ auto_generated_doc_comment }}
+{%- for import_module in schema.import_field_types %}
+{{ import_module }}
+{% endfor %}
+
+{{ generate_schema(schema.type_name, schema) }}
