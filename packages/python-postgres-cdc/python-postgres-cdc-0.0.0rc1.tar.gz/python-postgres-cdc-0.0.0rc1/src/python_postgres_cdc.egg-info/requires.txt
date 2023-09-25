@@ -1,0 +1,9 @@
+psycopg2-binary>=2.8.0
+pydantic>=1.10.0
+
+[dev]
+black
+pip-tools
+pytest
+build
+twine
