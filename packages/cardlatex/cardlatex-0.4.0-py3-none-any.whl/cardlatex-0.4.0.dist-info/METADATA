@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: cardlatex
+Version: 0.4.0
+Home-page: 
+Author: Stan Noordman
+Author-email: snorthman1@gmail.com
+License-File: LICENSE
+Requires-Dist: click
+Requires-Dist: openpyxl
+Requires-Dist: pandas
+Requires-Dist: wand
+Requires-Dist: pikepdf
+Provides-Extra: dev
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: coverage ; extra == 'dev'
+Requires-Dist: flake8 ; extra == 'dev'
+

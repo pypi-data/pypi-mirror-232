@@ -1,0 +1,13 @@
+cardlatex/__init__.py,sha256=sAA3y7bp7BLPuEsuumsfSQaO63PslbdmyJQ2rkepc7E,185
+cardlatex/__main__.py,sha256=QYPl5eIJa0z1IPDgIF-90pIc1zCG_bLgS_UXUiSWMx0,2317
+cardlatex/__version__.py,sha256=NLz2y04spAo9hkDBgrxcVBhjKElO7Jf_NlVw_P6fGxc,19
+cardlatex/config.py,sha256=EWM6xw2OvMkCx3HtDQB0y4LBo_WZyXw0yzaVvWDHkg0,4340
+cardlatex/image.py,sha256=ZqZpdfsc-t7e3ohPG4Qi8a0RO316tTVYvwedRYRzKwM,3151
+cardlatex/pdf.py,sha256=2U6lu80l6ERhj2ld-X8vdQuR5gtyyMQ43mcA2PXeVbk,3012
+cardlatex/tex.py,sha256=sn8du_kn8Nn5UNm60R3D_eMxccM9N1oP694aU9jfRg4,10598
+cardlatex-0.4.0.dist-info/LICENSE,sha256=I21QLjJ1CoR8ahfBLQ734-KrBU6JnVBXHnyWhXGGcxk,1091
+cardlatex-0.4.0.dist-info/METADATA,sha256=AD8xQ7defMjYb236X4G44a_FgS877q2Y7y8i1GKp1O8,411
+cardlatex-0.4.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+cardlatex-0.4.0.dist-info/entry_points.txt,sha256=bu2PjDiMgGCyhO8jQDbJsqQnagL8KyHWXeHzssOtj-4,55
+cardlatex-0.4.0.dist-info/top_level.txt,sha256=RYCt8C2wlQw5MHj_fSfZ2lWlTKpkH3GBOQH49NNkhJE,10
+cardlatex-0.4.0.dist-info/RECORD,,
