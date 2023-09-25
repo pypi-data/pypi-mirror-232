@@ -1,0 +1,2 @@
+[console_scripts]
+mp_face_stylizer = mp_face_stylizer.main:cli
