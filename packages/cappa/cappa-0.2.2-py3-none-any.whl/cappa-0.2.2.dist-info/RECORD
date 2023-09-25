@@ -1,0 +1,15 @@
+cappa/__init__.py,sha256=imeQwyido6maOJE97gFU7Ifq1jf1sUxCX9hZve-vET0,330
+cappa/annotation.py,sha256=b9srU5AFNJuPYXJ_jTrx-N72kLcuuQnEs0v3Ry14jJw,4633
+cappa/arg.py,sha256=zGCu5iCaHXncDkWPU3-A2eVN_g-m_gFGLZghjVlCBc0,7994
+cappa/argparse.py,sha256=TBGUS1u69RQNM7ZYpRqUp7KvRgC_04u_r2jTimKEcFM,8448
+cappa/base.py,sha256=kt0zXrAJt_j9RHNQJNnLW5qdZJhwd8J0reyVnpAdNX4,4133
+cappa/class_inspect.py,sha256=-VetPvMLz3-BZ-EsXeMM_VEOEur15P8mntZ2Agu_Fg8,4381
+cappa/command.py,sha256=PrWwwlNnph9Dms6gCk0aWdTqWXw2IN2sd8hZ-48x0Rc,7475
+cappa/invoke.py,sha256=Z2usMxNmSBI40YojGdJdiF7V0KydBrRbj3GWri6jrk0,4864
+cappa/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cappa/subcommand.py,sha256=dNTPaPhr8omIzkX7SunfHKy3t2oolzxsRAUZmh9quYE,2576
+cappa/typing.py,sha256=hCQYCJmPXvBOqug3LUkYgkd0S9m0TtHUPk-6Wggl3vc,1839
+cappa-0.2.2.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+cappa-0.2.2.dist-info/WHEEL,sha256=vxFmldFsRN_Hx10GDvsdv1wroKq8r5Lzvjp6GZ4OO8c,88
+cappa-0.2.2.dist-info/METADATA,sha256=QBFXRqU2gv0s7Uj_ui4cnKCYwaXsZIW4UnpCpeDJOKA,8546
+cappa-0.2.2.dist-info/RECORD,,
