@@ -1,0 +1,64 @@
+[tool.poetry]
+name = "poetry-update-editable-plugin"
+version = "0.0.1"
+description = "A poetry plugin to automatically update all editable dependencies."
+authors = ["Chris Brousseau <chris@cbrews.xyz>"]
+license = "MIT"
+readme = "README.md"
+packages = [
+  {include = "poetry_update_editable"}
+]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+poetry = "^1.4"
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.9.1"
+ruff = "^0.0.291"
+mypy = "^1.5.1"
+pytest = "^7.4.2"
+pytest-cov = "^4.1.0"
+pre-commit = "^3.4.0"
+
+[tool.poetry.plugins."poetry.plugin"]
+update-editable = "poetry_update_editable.plugin:UpdateEditablePlugin"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.isort]
+profile = "black"
+
+[tool.ruff]
+line-length = 88
+select = [
+  "E",   # pycodestyle errors
+  "W",   # pycodestyle warnings
+  "F",   # pyflakes
+  "Q",   # pyflakes quotes
+  "B",   # bugbear
+  "UP",  # pyupgrade
+  "N",   # PEP-8 naming
+  "I",   # isort
+  "PLC", # pylint conventions
+  "PLE", # pylint conventions
+  "PLW", # pylint conventions
+  "RUF",  
+]
+
+[tool.mypy]
+python_version = "3.11"
+
+explicit_package_bases = true
+warn_unused_configs = true
+warn_redundant_casts = true
+
+strict_optional = true
+check_untyped_defs = true
+disallow_untyped_defs = true
+
+[[tool.mypy.overrides]]
+module = "tests.*"
+disallow_untyped_defs = false
