@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: scriptman
+Version: 0.0.0.6
+Summary: Script Manager assists with managing python scripts.
+Author: Nelson Ombuya
+Author-email: nelson.ombuya@zohomail.com
+Keywords: python,scripts,etl,selenium
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+Requires-Dist: tqdm
+Requires-Dist: pyodbc
+Requires-Dist: pandas
+Requires-Dist: selenium
+Requires-Dist: requests
+Requires-Dist: webdriver_manager
