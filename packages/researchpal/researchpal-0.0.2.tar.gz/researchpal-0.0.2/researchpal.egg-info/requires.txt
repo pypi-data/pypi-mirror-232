@@ -1,0 +1,9 @@
+arxiv
+beautifulsoup4
+openai
+python-dotenv
+Requests
+setuptools
+setuptools
+termcolor
+tiktoken

@@ -1,0 +1,7 @@
+README.md
+setup.py
+researchpal.egg-info/PKG-INFO
+researchpal.egg-info/SOURCES.txt
+researchpal.egg-info/dependency_links.txt
+researchpal.egg-info/requires.txt
+researchpal.egg-info/top_level.txt
