@@ -1,0 +1,6 @@
+GDAL
+pyproj
+shapely
+pandas
+geopandas
+vgis_utils
