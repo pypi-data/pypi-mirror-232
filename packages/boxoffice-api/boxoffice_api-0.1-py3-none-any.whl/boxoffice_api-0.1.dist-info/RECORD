@@ -1,0 +1,8 @@
+boxoffice_api/__init__.py,sha256=mVB443XXegAFZpsrsl7odPYjm7lOmoOUwwErMczVAiI,37
+boxoffice_api/boxoffice_app.py,sha256=l7eQrTQa1PyInUqN08qcNXg5XeAlmgG8FyZ5-XOMKyE,19303
+boxoffice_api/validator.py,sha256=sYZuB8nD0v-mMjBSWLlxrn0ybwP4rMtgatDtIcKmSR0,3819
+boxoffice_api-0.1.dist-info/LICENSE.md,sha256=kD8e24thf2OlVRNMRyJcAjiQVVYpm_0ulTH9c8j-LJc,1071
+boxoffice_api-0.1.dist-info/METADATA,sha256=VQY-wZzHVYADIodnwrIjObZB72MyTAD6R9bWQ6zSOrM,4690
+boxoffice_api-0.1.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+boxoffice_api-0.1.dist-info/top_level.txt,sha256=02JzHVxiRhMa2Y-npA8_OkLZFOG2s5bbp054vUYMRrA,14
+boxoffice_api-0.1.dist-info/RECORD,,
