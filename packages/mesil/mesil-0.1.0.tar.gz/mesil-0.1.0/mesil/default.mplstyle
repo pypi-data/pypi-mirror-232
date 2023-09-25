@@ -1,0 +1,19 @@
+font.family: Arial
+
+figure.figsize: 11, 8.5 
+
+# Text sizes
+axes.labelsize: 26
+xtick.labelsize: 24
+ytick.labelsize: 24
+legend.fontsize: 22
+
+# Spacing
+axes.labelpad: 15
+
+# Line widths
+axes.linewidth: 1.5
+lines.linewidth: 3
+
+# Color
+axes.prop_cycle: cycler(color=["black", "red", "blue", "gray"])
