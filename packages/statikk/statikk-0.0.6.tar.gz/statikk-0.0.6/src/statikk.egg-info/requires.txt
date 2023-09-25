@@ -1,0 +1,11 @@
+pydantic==2.3.0
+boto3==1.28.43
+
+[:python_version < "3.8"]
+importlib-metadata
+
+[testing]
+setuptools
+pytest
+pytest-cov
+moto[dynamodb]
