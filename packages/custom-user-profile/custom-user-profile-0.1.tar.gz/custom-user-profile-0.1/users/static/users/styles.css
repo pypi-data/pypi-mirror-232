@@ -1,0 +1,30 @@
+
+/* form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2;
+} */
+/* .form-control {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+} */
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.card {
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 20px;
+    margin-top: 20px;
+}
+/* .container {
+    padding: auto;
+    margin: auto;
+} */
