@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "formgen"
+version = "0.1.0"
+description = "Python library for generating, transforming, and analyzing temporal gestalt units."
+authors = ["Yota Kobayashi <yota@programsounds.net>"]
+readme = "README.md"
+license = "MIT"
+homepage = ""  # Sphinx document on GitHub Pages (TODO)
+repository = "https://github.com/programsounds/pcpy"
+
+[tool.poetry.dependencies]
+python = ">=3.9, <3.13"
+pcpy = "^0.1.0"
+numpy = "^1.26.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
