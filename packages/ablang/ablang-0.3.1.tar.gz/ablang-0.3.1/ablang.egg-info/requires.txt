@@ -1,0 +1,5 @@
+requests
+torch>=1.6
+numpy
+pandas
+numba
