@@ -1,0 +1,7 @@
+setup.py
+TanesShortcuts/TanesShortcuts.py
+TanesShortcuts/__init__.py
+TanesShortcuts.py.egg-info/PKG-INFO
+TanesShortcuts.py.egg-info/SOURCES.txt
+TanesShortcuts.py.egg-info/dependency_links.txt
+TanesShortcuts.py.egg-info/top_level.txt
