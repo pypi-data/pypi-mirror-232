@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: botanix
+Version: 0.3.5
+Home-page: https://github.com/aliostad/botanix
+Author: Ali Kheyrollahi
+Author-email: aliostad@gmail.com
+License: MIT
+Keywords: Telegram bot
+License-File: LICENSE

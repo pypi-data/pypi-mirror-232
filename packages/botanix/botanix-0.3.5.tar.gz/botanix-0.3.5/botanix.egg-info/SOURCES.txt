@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+botanix/__init__.py
+botanix/conversion_helper.py
+botanix/handling.py
+botanix.egg-info/PKG-INFO
+botanix.egg-info/SOURCES.txt
+botanix.egg-info/dependency_links.txt
+botanix.egg-info/requires.txt
+botanix.egg-info/top_level.txt
