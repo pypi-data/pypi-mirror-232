@@ -1,0 +1,2 @@
+[console_scripts]
+ninebot-ble = ninebot_ble.__main__:entrypoint

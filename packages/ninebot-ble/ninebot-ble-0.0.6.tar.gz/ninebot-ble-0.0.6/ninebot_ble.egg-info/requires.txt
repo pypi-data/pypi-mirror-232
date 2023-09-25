@@ -1,0 +1,9 @@
+miauth==0.9.7
+bleak
+bleak-retry-connector
+bluetooth-sensor-state-data
+bluetooth-data-tools
+
+[dev]
+black
+mypy
