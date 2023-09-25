@@ -1,0 +1,13 @@
+cardlatex/__init__.py,sha256=sAA3y7bp7BLPuEsuumsfSQaO63PslbdmyJQ2rkepc7E,185
+cardlatex/__main__.py,sha256=fnl2Jh93ns8FMXQavxJfbsN9J5mrmMHGAi1PbyU_PpM,2584
+cardlatex/__version__.py,sha256=L2Offsg-6m5gCNnCgevSz7hv6G-kIe1QidASLbohFtk,19
+cardlatex/config.py,sha256=EWM6xw2OvMkCx3HtDQB0y4LBo_WZyXw0yzaVvWDHkg0,4340
+cardlatex/image.py,sha256=ZqZpdfsc-t7e3ohPG4Qi8a0RO316tTVYvwedRYRzKwM,3151
+cardlatex/pdf.py,sha256=2U6lu80l6ERhj2ld-X8vdQuR5gtyyMQ43mcA2PXeVbk,3012
+cardlatex/tex.py,sha256=8v6FTPZXeTqwZjnX2XADohN2grpn4cCR4sQf1uTlzaY,11783
+cardlatex-0.4.1.dist-info/LICENSE,sha256=I21QLjJ1CoR8ahfBLQ734-KrBU6JnVBXHnyWhXGGcxk,1091
+cardlatex-0.4.1.dist-info/METADATA,sha256=bkFWdtk8tNKaxaOJKxXGGYwBJHRFBexr6yu2pA6Rxq4,577
+cardlatex-0.4.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+cardlatex-0.4.1.dist-info/entry_points.txt,sha256=bu2PjDiMgGCyhO8jQDbJsqQnagL8KyHWXeHzssOtj-4,55
+cardlatex-0.4.1.dist-info/top_level.txt,sha256=RYCt8C2wlQw5MHj_fSfZ2lWlTKpkH3GBOQH49NNkhJE,10
+cardlatex-0.4.1.dist-info/RECORD,,
