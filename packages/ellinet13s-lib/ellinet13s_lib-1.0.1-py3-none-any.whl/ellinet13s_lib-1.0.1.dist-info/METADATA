@@ -1,0 +1,5 @@
+Metadata-Version: 2.1
+Name: ellinet13s-lib
+Version: 1.0.1
+Requires-Dist: timestructossystempfilesubprocessurllib.request
+
