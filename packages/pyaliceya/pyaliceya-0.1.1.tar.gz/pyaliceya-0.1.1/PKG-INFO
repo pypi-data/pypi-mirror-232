@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: pyaliceya
+Version: 0.1.1
+Summary: lib for yandex alice demo
+Home-page: https://github.com/sergey200519/pyAlice
+Author: oboroksergey
+Author-email: oborok05@bk.ru
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# pyAlice
+
+pyAlice - модуль для упрощения работы с яндекс алисой
