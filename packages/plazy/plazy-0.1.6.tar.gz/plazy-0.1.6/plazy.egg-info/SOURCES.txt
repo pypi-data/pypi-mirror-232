@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+plazy/__init__.py
+plazy/coding.py
+plazy/data.py
+plazy/file.py
+plazy/singleton.py
+plazy/timer.py
+plazy.egg-info/PKG-INFO
+plazy.egg-info/SOURCES.txt
+plazy.egg-info/dependency_links.txt
+plazy.egg-info/top_level.txt
