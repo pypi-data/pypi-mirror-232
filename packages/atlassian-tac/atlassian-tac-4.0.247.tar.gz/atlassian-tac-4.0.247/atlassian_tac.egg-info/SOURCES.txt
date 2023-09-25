@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+atlassian_tac.egg-info/PKG-INFO
+atlassian_tac.egg-info/SOURCES.txt
+atlassian_tac.egg-info/dependency_links.txt
+atlassian_tac.egg-info/requires.txt
+atlassian_tac.egg-info/top_level.txt
+tictactoe/__init__.py
+tictactoe/egtb.py
+tictactoe/py.typed
