@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: uploadoss
+Version: 0.1
+Author: Binghe
+Requires-Dist: oss2
+Requires-Dist: pandas
+Requires-Dist: pymysql
+Requires-Dist: configparser
+
