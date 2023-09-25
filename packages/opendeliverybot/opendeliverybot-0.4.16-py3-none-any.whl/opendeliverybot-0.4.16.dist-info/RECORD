@@ -1,0 +1,16 @@
+opendeliverybot/__main__.py,sha256=t531j5vOP_u8mexw7QOYWmGOmdePTdO_hvfnImprj6A,1687
+opendeliverybot/api.py,sha256=1bA5DPjRGHW4jyamKmQFhYIlls36L0AWwstkKJo8QBA,3032
+opendeliverybot/bot.py,sha256=VLXx9veAx2OUk4jjmuPyIQF6RQHUFOFX0IbZw6_9dmM,20519
+opendeliverybot/bot.py.old,sha256=ryc_HMHP6bMBTNmljN4CZW9RxTqXx1jOzYxTqFK7Yxs,5917
+opendeliverybot/config/settings.conf,sha256=9J0ChJJnQpQz8O5bkAzLukXK0ysqXC1pBSIz3vuagBc,38
+opendeliverybot/console_ui.py,sha256=gFMS5nwAAcvEEyOdVlnJ1bMadpOjER9c9VgFWHMV14Y,13954
+opendeliverybot/data/data.json,sha256=psOn9QAa5-tWznLM1l60UHyOx-diLqBRRpidaX813IY,518
+opendeliverybot/frontend/styles.css,sha256=4Vl55-P2X_iolDja-NNw9hu2AMe8XkPXdDHOazMi80w,1838
+opendeliverybot/logs/analytics.csv,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+opendeliverybot/logs/players.log,sha256=AsZhZ2qBjV0odxLCr_l3g3nmxob-U-8c4zgyqEIamf8,1329
+opendeliverybot/test-console.py,sha256=PZX06RowPsiTtNiZNtP7cTIF_6YW2sdPzdEgrpCBIVs,6153
+opendeliverybot/web_ui.py,sha256=bc--5Bcvdc_jcvH7dMSHIxxWp53b052lb8XFH7hQFUM,10292
+opendeliverybot-0.4.16.dist-info/LICENSE,sha256=PGDAhuniCYAOecoaeqq_CZIsmuL-LqlXHyBD4fy42eI,1068
+opendeliverybot-0.4.16.dist-info/METADATA,sha256=H_cDBze_HiUm_agce_vJAqWV8cK0PUclc4FLYDFK4eo,7272
+opendeliverybot-0.4.16.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+opendeliverybot-0.4.16.dist-info/RECORD,,
