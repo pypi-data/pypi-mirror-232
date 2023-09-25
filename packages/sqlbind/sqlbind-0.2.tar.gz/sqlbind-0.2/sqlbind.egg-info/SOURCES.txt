@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+sqlbind/__init__.py
+sqlbind/py.typed
+sqlbind.egg-info/PKG-INFO
+sqlbind.egg-info/SOURCES.txt
+sqlbind.egg-info/dependency_links.txt
+sqlbind.egg-info/top_level.txt
+tests/test_sqlbind.py
+tests/test_sqlite3.py
