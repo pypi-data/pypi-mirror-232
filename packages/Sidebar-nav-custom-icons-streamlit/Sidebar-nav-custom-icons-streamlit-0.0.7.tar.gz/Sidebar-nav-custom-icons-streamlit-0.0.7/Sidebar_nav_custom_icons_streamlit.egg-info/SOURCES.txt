@@ -1,0 +1,10 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+Sidebar_nav_custom_icons_streamlit.egg-info/PKG-INFO
+Sidebar_nav_custom_icons_streamlit.egg-info/SOURCES.txt
+Sidebar_nav_custom_icons_streamlit.egg-info/dependency_links.txt
+Sidebar_nav_custom_icons_streamlit.egg-info/requires.txt
+Sidebar_nav_custom_icons_streamlit.egg-info/top_level.txt
+custom_sidebar_icons/__init__.py
