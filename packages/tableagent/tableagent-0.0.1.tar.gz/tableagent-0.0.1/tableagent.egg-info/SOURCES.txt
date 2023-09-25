@@ -1,0 +1,8 @@
+README.md
+setup.py
+tableagent/__init__.py
+tableagent.egg-info/PKG-INFO
+tableagent.egg-info/SOURCES.txt
+tableagent.egg-info/dependency_links.txt
+tableagent.egg-info/not-zip-safe
+tableagent.egg-info/top_level.txt
