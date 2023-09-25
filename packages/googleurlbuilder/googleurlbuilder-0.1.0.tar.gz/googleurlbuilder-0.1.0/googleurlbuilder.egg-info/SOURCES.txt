@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+googleurlbuilder/__init__.py
+googleurlbuilder/filters.py
+googleurlbuilder/operators.py
+googleurlbuilder/parameters.py
+googleurlbuilder/tld.py
+googleurlbuilder.egg-info/PKG-INFO
+googleurlbuilder.egg-info/SOURCES.txt
+googleurlbuilder.egg-info/dependency_links.txt
+googleurlbuilder.egg-info/top_level.txt

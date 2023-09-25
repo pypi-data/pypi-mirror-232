@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "googleurlbuilder"
+description = "Simple pure Python Google URL generator based on google(.com) advanced search."
+readme = "README.md"
+version = "0.1.0"
+requires-python = ">=3.9"
+license = { file = "LICENSE" }
+authors = [
+  {name = "alexandrerbb" } 
+]
+keywords = ["google", "url", "generator", "generate", "link"]
+
+[project.urls]
+"Homepage" = "https://alexandrerbb.github.io/Google-URL-Builder/"
+"Source" = "https://github.com/alexandrerbb/Google-URL-Builder"
