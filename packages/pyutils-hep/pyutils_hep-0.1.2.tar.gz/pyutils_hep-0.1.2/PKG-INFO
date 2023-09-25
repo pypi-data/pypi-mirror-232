@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: pyutils_hep
+Version: 0.1.2
+Summary: A package with useful python tools
+Home-page: https://github.com/tianluyuan/pyutils
+Author: Tianlu Yuan
+Author-email: tyuan@icecube.wisc.edu
+License: MIT
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy>=1.17
+Requires-Dist: scipy
+Provides-Extra: plotting
+Requires-Dist: matplotlib; extra == "plotting"
+
+Personal and external python modules and scripts
