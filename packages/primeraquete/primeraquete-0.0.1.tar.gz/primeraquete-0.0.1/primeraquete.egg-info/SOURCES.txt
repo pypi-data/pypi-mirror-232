@@ -1,0 +1,7 @@
+LICENSE
+README.md
+setup.py
+primeraquete.egg-info/PKG-INFO
+primeraquete.egg-info/SOURCES.txt
+primeraquete.egg-info/dependency_links.txt
+primeraquete.egg-info/top_level.txt
