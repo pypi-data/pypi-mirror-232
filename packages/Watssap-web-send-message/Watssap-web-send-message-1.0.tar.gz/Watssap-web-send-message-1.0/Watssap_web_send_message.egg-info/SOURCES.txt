@@ -1,0 +1,9 @@
+README.md
+license.txt
+setup.py
+Watssap_web_send_message.egg-info/PKG-INFO
+Watssap_web_send_message.egg-info/SOURCES.txt
+Watssap_web_send_message.egg-info/dependency_links.txt
+Watssap_web_send_message.egg-info/top_level.txt
+watssap_auto_dev/__init__.py
+watssap_auto_dev/teste_whatsapp.py

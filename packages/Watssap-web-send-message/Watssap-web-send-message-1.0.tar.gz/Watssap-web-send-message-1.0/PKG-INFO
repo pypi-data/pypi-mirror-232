@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: Watssap-web-send-message
+Version: 1.0
+Summary: Este pacote fornece o basico para wattsap
+Author: Auto_Dev
+Author-email: ramonma31@gmail.com
+Keywords: wattssap,mensagem,enviar,api wattssap
+License-File: license.txt
+
+# Wattssap send message Pro Lite
+
+Criado por Auto Dev uma biblioteca basica de envio de mensagens para o wattssap para finalidade de bots de grupo simples e facil de mexer.
+
+* pip install watssap_auto_dev
