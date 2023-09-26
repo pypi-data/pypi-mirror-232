@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "podio-python"
+version = "0.1.6"
+description = "API wrapper for Podio written in Python"
+authors = ["Juan Carlos Rios <juankrios15@gmail.com>"]
+license = "MIT"
+homepage = "https://github.com/GearPlug/podio-python"
+readme = "README.md"
+packages = [{include = "podio"}]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+requests = "^2.26.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
