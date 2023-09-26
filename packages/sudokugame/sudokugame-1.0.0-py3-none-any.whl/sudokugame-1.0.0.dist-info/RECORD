@@ -1,0 +1,12 @@
+sudoku/__init__.py,sha256=ZAIh-5ldbCAO7CQ1L9RNXr_ZJL8icGjRRe_Pc4eVUV0,91
+sudoku/checker.py,sha256=MfoND9MJFQfLN_99wligfRbk9Y4xoqSN67sj8vGWzwY,92
+sudoku/generator.py,sha256=BU79IzLR0wOE5G0d722UIL9YdvBOwZ7xXbJLmsIWEYo,101
+sudoku/solver.py,sha256=juldJ0kofStsz8ONGTNkOGGela98E9OM27zbdaZkbuw,423
+sudoku/sudokuGenerator.py,sha256=JyurapyYAiyuQof4z62moE3gevllJ3QeHPNljstDKUo,3452
+sudoku/sudokuSolver.py,sha256=065yhMKY436YAvQFONHJn3OUPTfBp8zhP8jgYNpHRaw,1127
+sudoku/validtyCheck.py,sha256=t8En_LtlrHZwK-7Z4J9i7YpJLk6KB_fGY8Ib4vSpVWM,1025
+sudokugame-1.0.0.dist-info/LICENSE,sha256=ZCHHjBRWmg2-cyK58KEiQOT9fLEWwL9hiRaVtXmqLTI,1085
+sudokugame-1.0.0.dist-info/METADATA,sha256=9xNQyi6cL-mvR7Aj3LEncuhOOQC8hlr7Bv9IPAjJ9HM,807
+sudokugame-1.0.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+sudokugame-1.0.0.dist-info/top_level.txt,sha256=oesxezkn8Y-hC-ccYuDx18c6qk9Uem2x-ttoOEVggOQ,7
+sudokugame-1.0.0.dist-info/RECORD,,
