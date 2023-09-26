@@ -1,0 +1,22 @@
+from functools import cached_property
+
+class {{ vars.ext|class_header }}:
+    {% if not published_service.skip %}
+
+    @cached_property
+    def {{ published_service.ext_name }}(self):
+        {{ published_service_config.class|generate_import(alias='PublishedServiceConfig') }}
+        {{ published_service.class|generate_import(alias='PublishedService') }}
+
+        return PublishedService(
+            config=PublishedServiceConfig(
+                proxied_drafts_config=self.{{ ext.ext_service_name }}.config,
+                {% if published_service_config.additional_args %}
+                    {{ published_service_config.additional_args|generate_list }}
+                {% endif %}
+            ),
+            {% if published_service.additional_args %}
+                {{ published_service.additional_args|generate_list }}
+            {% endif %}
+        )
+    {% endif %}
