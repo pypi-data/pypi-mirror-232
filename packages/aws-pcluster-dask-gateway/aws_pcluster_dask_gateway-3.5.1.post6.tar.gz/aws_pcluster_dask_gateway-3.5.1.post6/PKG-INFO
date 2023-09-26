@@ -1,0 +1,64 @@
+Metadata-Version: 2.1
+Name: aws_pcluster_dask_gateway
+Version: 3.5.1.post6
+Summary: A helper function to configure Dask Gateway to play nice with AWS PCluster
+Home-page: https://github.com/dabble-of-devops-bioanalyze/aws_pcluster_helpers
+Author: Jillian Rowe
+Author-email: jillian@dabbleofdevops.com
+License: Apache Software License 2.0
+Keywords: aws_pcluster_dask_gateway
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6
+License-File: LICENSE
+Requires-Dist: dask-gateway-server[local]
+Requires-Dist: dask-gateway-server[jobqueue]
+Requires-Dist: datasize
+Requires-Dist: humanize
+Requires-Dist: aws-pcluster-helpers>=3.5
+Requires-Dist: typer
+
+=========================
+aws_pcluster_dask_gateway
+=========================
+
+.. image:: https://img.shields.io/pypi/v/aws_pcluster_dask_gateway.svg
+        :target: https://pypi.python.org/pypi/aws_pcluster_dask_gateway
+
+
+A helper function to configure Dask Gateway to play nice with AWS PCluster
+
+
+* Free software: Apache Software License 2.0
+* Documentation: https://aws-pcluster-dask-gateway.readthedocs.io.
+
+
+Features
+--------
+
+* Automatically parses parallelcluster's config files to generate a dask-gateway template. 
+* Uses the jupyterhub-kubernetes profiles to list CPU/GPU
+
+Credits
+-------
+
+This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
+
+.. _Cookiecutter: https://github.com/audreyr/cookiecutter
+.. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
+
+
+=======
+History
+=======
+
+0.1.0 (2022-06-24)
+------------------
+
+* First release on PyPI.
