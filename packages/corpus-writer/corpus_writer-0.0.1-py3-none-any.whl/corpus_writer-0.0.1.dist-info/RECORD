@@ -1,0 +1,7 @@
+corpus_writer/__init__.py,sha256=PtigXNPn0ochTPuznjotZwdzk1tV0DbAWXUY7ef5nv4,146
+corpus_writer/dumper.py,sha256=xT6dceDkRyGnM7FEWLo_mXG6tcqXWdo_2YL7XdG1Gjs,437
+corpus_writer/logger.py,sha256=uMROr4kjUEC8gJypJ_m8hT1KewRixR7NZMwOReIVFCA,1364
+corpus_writer/writer.py,sha256=xDnqXKwT4hdvTUjqG15h55B5E_bc4MnNOtFARvy7BFQ,2639
+corpus_writer-0.0.1.dist-info/METADATA,sha256=iRemOkjW35VzGP6DUP-GSzbtvhInvRVaIDZGxKDlKDE,1305
+corpus_writer-0.0.1.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+corpus_writer-0.0.1.dist-info/RECORD,,
