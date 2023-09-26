@@ -1,0 +1,14 @@
+"CI/CD":
+  - all:
+      - ".github/workflows/**"
+
+"Maintenance":
+  - all:
+      - ".github/**"
+      - "!.github/workflows/**"
+
+"docs":
+  - any:
+      - "docs/**"
+      - "examples/**"
+      - "README.rst"
