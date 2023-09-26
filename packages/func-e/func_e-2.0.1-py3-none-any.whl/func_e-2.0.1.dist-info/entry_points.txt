@@ -1,0 +1,3 @@
+[console_scripts]
+FUNC-E = func_e.cmd:func_e
+FUNC-E-terms = func_e.cmd:getTerms

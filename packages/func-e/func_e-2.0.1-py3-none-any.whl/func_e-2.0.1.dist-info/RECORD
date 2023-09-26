@@ -1,0 +1,16 @@
+func_e/FUNC_E.py,sha256=F9-9swPiNNtxv4FIkMJlPMO37FhudRtRuTst2uxB0xk,29785
+func_e/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+func_e/cmd.py,sha256=OueAj2eHjw6Ht4_TVgX2sG3OucIgA68suGlPrivfIOE,9123
+func_e/vocabs/GO.py,sha256=-Z4pDBmbc78i8kFw3hrZkEKBSor5dLHWbWuawee5NEM,1140
+func_e/vocabs/IPR.py,sha256=Epz9bh4trEG1KSHPtcVaD6HUFVO0I_qFJKnVegul3dg,572
+func_e/vocabs/KEGG.py,sha256=2BgEaB-SngdNBlxvrxZPCGtDV3H5MB61BZH4-mqyUsQ,1697
+func_e/vocabs/Pfam.py,sha256=hkHZ3CoIw7kKW6sld2DJoBqb_Oo298AX4U5RLf9vcVE,573
+func_e/vocabs/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+func_e/vocabs/all.py,sha256=PCWFyO93uslZhXCVaHLxVAQ3kd2jDe_Hur4PR711em4,524
+test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+func_e-2.0.1.dist-info/LICENSE.txt,sha256=jOtLnuWt7d5Hsx6XXB2QxzrSe2sWWh3NgMfFRetluQM,35147
+func_e-2.0.1.dist-info/METADATA,sha256=N5JMuUnsUL2162nlF0T-wTi5dG4_aJ9yC922WHSHOX8,860
+func_e-2.0.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+func_e-2.0.1.dist-info/entry_points.txt,sha256=uv88-YNKjjVcnbtgZIeZNSy0vXMsYr0LL6mWKt9YW14,80
+func_e-2.0.1.dist-info/top_level.txt,sha256=0FAuHB0i-trQAW_srpw25ssSP_g7G-Rytbv8pRPA4Z8,12
+func_e-2.0.1.dist-info/RECORD,,
