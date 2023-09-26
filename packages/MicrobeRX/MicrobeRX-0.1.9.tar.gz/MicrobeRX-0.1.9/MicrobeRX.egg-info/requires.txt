@@ -1,0 +1,15 @@
+importlib-resources
+datamol
+distinctipy
+kaleido
+mols2grid
+pandas
+plotly
+PubChemPy
+pyopenms
+rdkit
+rxnmapper
+scikit-learn
+scipy
+seaborn
+tqdm
