@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: xgrow
+Version: 20230925
+Summary: Xgrow in pythonic form
+Author: Constantine Evans et al (this version)
+Author-email: const@costi.eu
+Requires-Dist: pyyaml
+Requires-Dist: typing_extensions
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: matplotlib
