@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+src/hidden_outlier_generation.egg-info/PKG-INFO
+src/hidden_outlier_generation.egg-info/SOURCES.txt
+src/hidden_outlier_generation.egg-info/dependency_links.txt
+src/hidden_outlier_generation.egg-info/requires.txt
+src/hidden_outlier_generation.egg-info/top_level.txt
+src/hog_bisect/__init__.py
+src/hog_bisect/bisect.py
+src/hog_bisect/origin_method.py
+src/hog_bisect/outlier_detection_method.py
+src/hog_bisect/outlier_result_type.py
+src/hog_bisect/utils.py
+tests/test_bisect.py
+tests/test_utils.py
