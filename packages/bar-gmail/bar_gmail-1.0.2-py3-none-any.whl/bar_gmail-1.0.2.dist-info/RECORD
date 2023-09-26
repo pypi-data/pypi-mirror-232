@@ -1,0 +1,11 @@
+bar_gmail/__init__.py,sha256=B3H1QVGfxPVq8zWY-4glj-eX0GFFsk3Ed_gtfCj5Dp8,3220
+bar_gmail/app.py,sha256=WVlNIXcfIB_0-ZSXMmhL3aana32QaBDgUGP942ZE6vA,3759
+bar_gmail/client_secrets.json,sha256=wrD4vBXqEYc2QnhLhHMqU5IDxpZHWjhRVGBfWz4heq8,398
+bar_gmail/gmail.py,sha256=fbsSErosKObrtww0dyKmeCMkrzJ8aR5cGLs1RwR8i2Y,3683
+bar_gmail/gmail_icon.svg,sha256=3hKd_5OcNBvmu1YXZXGclTYvAh25NuiKdFV2LmiH-wU,419
+bar_gmail/printer.py,sha256=Y459o-EZhUd87ClhtTL8N_c6Ic8fYeCERjUhm7WZDCM,1367
+bar_gmail-1.0.2.dist-info/LICENSE,sha256=dOh7J9uKhx5I3ldjyQ16EHrRsYQTuVj5C71Ahq7MrzI,1107
+bar_gmail-1.0.2.dist-info/METADATA,sha256=iatMLaisbv-kyEB3YTLZqPigsi6WAa8kIgNZDeC5c_0,3057
+bar_gmail-1.0.2.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+bar_gmail-1.0.2.dist-info/entry_points.txt,sha256=r-3gfJVrODVBfcaDNt-vZLH3RPW0KlEXa_KyjF-LNbU,43
+bar_gmail-1.0.2.dist-info/RECORD,,
