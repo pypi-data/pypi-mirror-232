@@ -1,0 +1,11 @@
+dynamodb/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dynamodb/base.py,sha256=ryR4RCaZcYEQbtjDBVemWQACaddksqdKJwK6skCnQrY,871
+dynamodb/dynamodb.py,sha256=HyNhBAiW6iXNFn3NwzE2mJWPkEJET4UamLPeiu94Q7I,2495
+talkytimes/__init__.py,sha256=04_wL4OkYvoJFrepZ2Ht0YDQuDWt9bKKYde2Vzgu02U,53
+talkytimes/base.py,sha256=XWlZPkk97sKeR7YAn_sJ-xLWcjwR6EBELXaRB5xklac,3631
+talkytimes/talkytimes.py,sha256=sO6GdCG5SS0fX-TRdPm77Ptl2mnxMAeE_waIf0tdQZQ,1674
+talkytimes_package-0.3.49.dist-info/LICENSE,sha256=etwDNN4u-66E6PELoaSdcxEbDvqOfgDqKGIy4jpYyOg,1100
+talkytimes_package-0.3.49.dist-info/METADATA,sha256=AkP2VP6W5y_BIqYvMeVeV5sJ30MceLomDkuW6w6YjAg,371
+talkytimes_package-0.3.49.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+talkytimes_package-0.3.49.dist-info/top_level.txt,sha256=SFz1qwwbBto2k5HY5h0ZGzy8FJaHGtRV2IfjyugR8h4,20
+talkytimes_package-0.3.49.dist-info/RECORD,,
