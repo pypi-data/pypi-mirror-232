@@ -1,0 +1,48 @@
+[build-system]
+requires = [
+	"setuptools>=60",
+        "setuptools-scm>=7.1",
+	"wheel",
+	"twine",
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lindh-jsonobject"
+dynamic = ["version"]
+authors = [
+        { name="Johan Egneblad", email="johan@egneblad.se" },
+]
+description = "Dynamic and static layer JSON serialization and deserializion of python objects"
+readme = "README.rst"
+license = {file = "LICENSE"}
+requires-python = ">=3.7.1"
+dependencies = [ ]
+classifiers = [
+	"Development Status :: 6 - Mature",
+        "Programming Language :: Python :: 3",
+        "Operating System :: OS Independent",
+	"Topic :: File Formats :: JSON",
+]
+
+[project.optional-dependencies]
+test = [
+	"pytest-pep8",
+	"pytest-flakes",
+	"rstcheck",
+	"pytest-cov",
+]
+
+
+[project.urls]
+"Homepage" = "https://github.com/eblade/jsonobject"
+"Bug Tracker" = "https://github.com/eblade/eblade/jsonobject"
+"Repository" = "https://github.com/eblade/jsonobject"
+
+[tool.setuptools_scm]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]

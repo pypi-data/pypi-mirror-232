@@ -1,0 +1,54 @@
+{
+  "cars": [
+    {
+      "brand": "Volvo",
+      "model": "V70",
+      "rating": "good",
+      "wheels": [
+        {
+          "diameter": 1.0
+        },
+        {
+          "diameter": 1.0
+        },
+        {
+          "diameter": 1.0
+        },
+        {
+          "diameter": 1.0
+        }
+      ]
+    },
+    {
+      "brand": "Fiat",
+      "model": "Uno",
+      "rating": "bad",
+      "wheels": [
+        {
+          "diameter": 0.5
+        },
+        {
+          "diameter": 0.5
+        },
+        {
+          "diameter": 0.5
+        },
+        {
+          "diameter": 0.5
+        }
+      ]
+    }
+  ],
+  "drivers": [
+    {
+      "name": "Palle Kuling",
+      "car_brand": "Volvo",
+      "car_model": "V70"
+    },
+    {
+      "name": "Chrille Keps",
+      "car_brand": "Fiat",
+      "car_model": "Uno"
+    }
+  ]
+}
