@@ -1,0 +1,12 @@
+flatpack/__init__.py,sha256=Upcevwpxx1s_2GNwgybp4NWh17TEK8hiFjsPu1ydGH4,112
+flatpack/datasets.py,sha256=w3nw-sgdIEOIyErU_H7rhoPXjynxuVfKEuc_8zI7eNI,549
+flatpack/instructions.py,sha256=298P4VcURGmABR9DoWpe2FpYh8elgnpN72qVAfthbZU,729
+flatpack/main.py,sha256=G8Ea4nb2abg9dEjqK_e41zgfMSgaz7XZGZ_o2_YGTFM,4667
+flatpack/models.py,sha256=cfIXJRjEKI-mZqxANwXBamfwYrS_sLKbuB4vIhlDMHg,3016
+flatpack/parsers.py,sha256=AASAhw27N6nZ4dmim7yXQsAzPNPbImxy8ZzEhMure3c,4326
+flatpack-0.4.4.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+flatpack-0.4.4.dist-info/METADATA,sha256=j3v_u_eo6Eh8I0vrkcFVIL2mR9qp39Qe1azSPuvoHjc,341
+flatpack-0.4.4.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+flatpack-0.4.4.dist-info/entry_points.txt,sha256=0asITzYYCS1X7tbrKBLGUUWazB4ujYaDxb67k3Ut9-k,48
+flatpack-0.4.4.dist-info/top_level.txt,sha256=5d_SUkbl0vYf89psXbpjYYe9ip-MRuMlQmsVu77kgBs,9
+flatpack-0.4.4.dist-info/RECORD,,
