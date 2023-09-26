@@ -1,0 +1,14 @@
+adafruit_boardtest/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+adafruit_boardtest/boardtest_gpio.py,sha256=m_seKAzAFCzynMNF-xNSQBUpREifcCwzwrMFxW6zS9c,3502
+adafruit_boardtest/boardtest_i2c.py,sha256=6RxGPbx3IxwLafB6saLgbqaaLCMPkV14p-sPolZ0MTE,5354
+adafruit_boardtest/boardtest_led.py,sha256=nnJuaueTz2Veu0TsuVPfo416b_Oy7RgCMHOMwBy8Rwg,3289
+adafruit_boardtest/boardtest_sd.py,sha256=-rIcGdPYHej69_YenZcGh46wOCmWnaYR6GzKCxJtw0A,4743
+adafruit_boardtest/boardtest_sd_cd.py,sha256=4nQpcVq5haSGPeAJkFVWmukTikoBqUqnNSha7Ab_a8c,2473
+adafruit_boardtest/boardtest_spi.py,sha256=-mujMAz4_7dwzKb28TbPPTXiVl1YP4U6BIGlstn1JqY,6673
+adafruit_boardtest/boardtest_uart.py,sha256=DwrbXXuR3iqT3vvfkOdVW7_45CWF3EXUhXIIfDF21FY,3024
+adafruit_boardtest/boardtest_voltage_monitor.py,sha256=qJ4fm8Z9jY6LRTAoTs1xIdPGq74VWLqPy9BTfBfHrqs,2740
+adafruit_circuitpython_boardtest-1.2.19.dist-info/LICENSE,sha256=6sJLn0B1zFVwh9tkq9MKDz4atIlqnDK-UNGhxg8xaQQ,1102
+adafruit_circuitpython_boardtest-1.2.19.dist-info/METADATA,sha256=VFwbifUbJdcS2H9mz6NbZE-1vAU5iBmsMblthqaeTPE,5072
+adafruit_circuitpython_boardtest-1.2.19.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+adafruit_circuitpython_boardtest-1.2.19.dist-info/top_level.txt,sha256=6VAeIGYLnFF9Xd9JQpo0BQ9r2bo7tbiNYLWQqeOlN0M,19
+adafruit_circuitpython_boardtest-1.2.19.dist-info/RECORD,,
