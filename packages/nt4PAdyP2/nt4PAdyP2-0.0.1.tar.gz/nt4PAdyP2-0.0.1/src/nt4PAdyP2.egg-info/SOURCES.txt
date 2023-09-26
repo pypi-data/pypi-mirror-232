@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/nt4PAdyP/__init__.py
+src/nt4PAdyP/add.py
+src/nt4PAdyP2.egg-info/PKG-INFO
+src/nt4PAdyP2.egg-info/SOURCES.txt
+src/nt4PAdyP2.egg-info/dependency_links.txt
+src/nt4PAdyP2.egg-info/requires.txt
+src/nt4PAdyP2.egg-info/top_level.txt
