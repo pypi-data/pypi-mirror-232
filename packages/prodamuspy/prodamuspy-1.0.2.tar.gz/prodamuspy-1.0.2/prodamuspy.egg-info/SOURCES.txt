@@ -1,0 +1,10 @@
+LICENSE.md
+MANIFEST.in
+README.md
+setup.py
+prodamuspy/__init__.py
+prodamuspy/extension.py
+prodamuspy.egg-info/PKG-INFO
+prodamuspy.egg-info/SOURCES.txt
+prodamuspy.egg-info/dependency_links.txt
+prodamuspy.egg-info/top_level.txt
