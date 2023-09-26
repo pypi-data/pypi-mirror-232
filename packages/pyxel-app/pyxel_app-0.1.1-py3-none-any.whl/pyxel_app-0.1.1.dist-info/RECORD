@@ -1,0 +1,13 @@
+PyxelApp/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+PyxelApp/pyxel_app.py,sha256=a3e4W8uDgtUjMlN4UUQ63P7KLegW8YRqi1A4aznz4xE,1213
+PyxelApp/template/entry.py,sha256=uzWP7wJlzsVTImiy-CJM8lcNNrTvRh7RPBzKw3igJts,67
+PyxelApp/template/pkg/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+PyxelApp/template/pkg/app.py,sha256=CgehN0yzIFn10kQXRRfdweN-eCveqqueLU2xUtbpwkw,744
+PyxelApp/template/pkg/utils.py,sha256=k-5JRpPD561w6FrrT7zFdB8hKiATFZpeMiyofFwW_w8,184
+PyxelApp/template/pkg/data/img.pyxres,sha256=yOE3pXJ7dIhvtltkSegwBZiEohPwcEI6T_yXXuye-Zk,256
+pyxel_app-0.1.1.dist-info/LICENSE,sha256=10t62GTQlMFvYzwhxJCc6Co9ABirs1191NSDI3OFOTk,1072
+pyxel_app-0.1.1.dist-info/METADATA,sha256=aTIUL9dU5vKl8imrNIqW7sJvtAmq6vWVKy_T9ErhqkE,2527
+pyxel_app-0.1.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+pyxel_app-0.1.1.dist-info/entry_points.txt,sha256=lVcf4fjgR7dmao9-XgoZrwNRN-2SZ20Ujy4Wx3G_0-E,59
+pyxel_app-0.1.1.dist-info/top_level.txt,sha256=vdPJH4FjvEWUmKqOeosvGOr1L0m8syJj9qwTNsEbma4,9
+pyxel_app-0.1.1.dist-info/RECORD,,
