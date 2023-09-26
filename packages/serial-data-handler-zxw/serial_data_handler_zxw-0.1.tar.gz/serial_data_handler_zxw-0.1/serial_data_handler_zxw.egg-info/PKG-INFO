@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: serial-data-handler-zxw
+Version: 0.1
+Summary: A simple library to handle time gaps in data , especially in AI 
+ 人工智能中处理时间数据断层的工具包
+Home-page: UNKNOWN
+Author: xuewei zhang
+Author-email: jingmu_predict@qq.com
+License: UNKNOWN
+Description: # process serial data for AI training
+        # 人工智能训练中,对于时间断层数据的处理工具包
+        
+        - 根据断点,分配数据集,保证训练数据的连续性
+        - allocate data set according to breakpoints, to ensure the continuity of training data
+        
+        ## code demo
+        
+        ```python
+        # Attention:
+        # 传入的数据必须指定时间列(或其他顺序列)
+        # You must specify the time column (or other sequential column) of the incoming data
+        # 传入的数据必须已按顺序排列好
+        # The incoming data must be sorted in order
+        
+        import pandas as pd
+        
+        
+        csv_path = "/Volumes/time_serial_data.csv"
+        data = pd.read_csv(csv_path)
+        
+        # specific the time column named '收盘时间' , 
+        # and set the gap is 2 minutes , 
+        # it means that if the gap between two adjacent data > 2 minutes, it will be considered as a breakpoint
+        x = SplitTimeSerialData(data, column_timestamp='收盘时间', gap=timedelta(minutes=2))
+        print(x.断点)
+        
+        
+        train_test_data = x.数据划分_避开断点(input长度=100, output长度=100, step=1)
+        print(len(train_test_data))
+        ```
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
