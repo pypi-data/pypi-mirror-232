@@ -1,0 +1,64 @@
+Metadata-Version: 2.1
+Name: sec-parser
+Version: 0.8.0.post6
+Summary: A robust and efficient parser for SEC filings, designed to extract and analyze financial data with ease.
+Author: Alphanome.AI
+Author-email: info@alphanome.ai
+Requires-Python: >=3.9, !=2.7.*, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, !=3.5.*, !=3.6.*, !=3.7.*, !=3.8.*
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: beautifulsoup4 (>=4.12.2,<5.0.0)
+Requires-Dist: cssutils (>=2.7.1,<3.0.0)
+Requires-Dist: frozendict (>=2.3.8,<3.0.0)
+Requires-Dist: httpx (>=0.24.1,<0.25.0)
+Requires-Dist: lxml (>=4.9.3,<5.0.0)
+Description-Content-Type: text/markdown
+
+# sec-parser
+
+<a href="https://project-types.github.io/#federation">
+  <img src="https://img.shields.io/badge/project%20type-federation-brightgreen" alt="Federation Badge"/>
+</a>
+
+
+## Overview
+
+The `sec-parser` project simplifies the process of extracting meaningful information from SEC EDGAR HTML documents. It organizes the document's source code into a list or tree of elements that correspond to the visual structure of the document. This includes distinct elements for section titles, paragraphs, and tables, making the data easier to analyze and understand. 
+
+This tool is especially beneficial for Artificial Intelligence (AI) and Large Language Models (LLM) applications. It significantly improves the efficiency of data extraction and analysis in these fields.
+
+[**View Demo**](https://sec-parser-output-visualizer.app.alphanome.dev/)
+
+## Installation
+
+You can install `sec-parser` using pip:
+
+```bash
+pip install sec-parser
+```
+
+## Usage
+
+```python
+import sec_parser as sp
+
+tree = sp.parse_latest("10-K", ticker="AAPL")
+
+# Show the general structure of the tree
+print(tree.render())
+```
+Console output:
+```
+RootSectionElement: PART I — FINANCIAL INFORMATION
+├── TitleElement: Item 1. Financial Statements
+│   ├── TitleElement: CONDENSED CONSOLIDATED STATEMENTS OF OPERATIONS (U...
+│   │   ├── TextElement: (In millions, except number of shares which are re...
+│   │   ├── TableElement: ...
+│   ...
+```
+
+# License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
