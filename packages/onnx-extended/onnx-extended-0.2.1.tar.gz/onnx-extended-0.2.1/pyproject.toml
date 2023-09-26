@@ -1,0 +1,142 @@
+[project]
+authors = [{name="Xavier Dupré", email="xavier.dupre@gmail.com"}]
+classifiers = [
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: C",
+    "Programming Language :: Python",
+    "Topic :: Software Development",
+    "Topic :: Scientific/Engineering",
+    "Development Status :: 5 - Production/Stable",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX",
+    "Operating System :: Unix",
+    "Operating System :: MacOS",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+]
+dependencies = ["numpy", "onnx>=1.14.0", "scipy"]
+description = "Extends the list of supported operators in onnx reference implementation and onnxruntime, or implements faster versions in C++."
+keywords = ["onnx", "onnxruntime", "CUDA", "openmp", "cmake", "cython", "pybind11"]
+license = {file = "LICENSE.txt"}
+name = "onnx-extended"
+readme = "README.rst"
+requires-python = ">=3.9"
+version = "0.2.1"
+
+[project.urls]
+homepage = "https://sdpython.github.io/doc/dev/onnx-extended/"
+documentation = "https://sdpython.github.io/doc/dev/onnx-extended/"
+repository = "https://github.com/sdpython/onnx-extended/dev/"
+changelog = "https://github.com/sdpython/onnx-extended/dev/CHANGELOGS.rst"
+
+[project.optional-dependencies]
+dev = [
+    "autopep8",
+    "black",
+    "clang-format",
+    "cmakelang",
+    "coverage",
+    "cython",
+    "cython-lint",
+    "flake8",
+    "furo",
+    "isort",
+    "joblib",
+    "lightgbm",
+    "matplotlib",
+    "ml-dtypes",
+    "onnx-array-api",
+    "onnxmltools",
+    "onnxruntime",
+    "pandas",
+    "psutil",
+    "pytest",
+    "pytest-cov",
+    "ruff",
+    "scikit-learn",
+    "skl2onnx>=1.14.1",
+    "sphinx",
+    "sphinx-gallery",
+    "sphinx-issues",
+    "tqdm",
+    "wheel",
+    "xgboost",
+]
+
+[build-system]
+requires = [
+    "abi3audit; sys_platform == 'linux'",
+    "auditwheel-symbols; sys_platform == 'linux'",
+    "Cython",
+    "cmake",
+    "numpy",
+    "onnx",
+    "pybind11",
+    "scipy",
+    "setuptools",
+    "wheel",
+]
+
+[tool.rstcheck]
+report_level = "INFO"
+ignore_directives = [
+    "autoclass",
+    "autofunction",
+    "gdot",
+    "ifconfig",
+    "image-sg",
+    "runpython",
+]
+ignore_roles = ["epkg", "pr"]
+ignore_messages = "Duplicate implicit target name: \"setup.py\""
+
+[tool.setuptools.packages.find]
+namespaces = false
+
+[tool.setuptools.package-data]
+"*" = ["*.cc", "*.cpp", "*.cu", "*.cuh", "*.dll", "*.dylib", "*.h", "*.hpp", "*.pyd", "*.so*"]
+
+[tool.cibuildwheel]
+build = "*"
+manylinux-x86_64-image = "manylinux2014"
+
+[tool.cibuildwheel.linux]
+archs = ["x86_64"]
+build = "cp*"
+skip = "cp36-* cp37-* cp38-* cp39-* cp312-* pypy* *musllinux*"
+manylinux-x86_64-image = "manylinux2014"
+before-build = "pip install auditwheel-symbols abi3audit"
+build-verbosity = 1
+repair-wheel-command = "auditwheel-symbols --manylinux 2014 {wheel} ; abi3audit {wheel} ; auditwheel repair -w {dest_dir} {wheel} || exit 0"
+# repair-wheel-command = "auditwheel-symbols --manylinux 2014 {wheel} || exit 0"
+
+[tool.cibuildwheel.macos]
+archs = ["x86_64"]
+build = "cp*"
+skip = "cp36-* cp37-* cp38-* cp39-* cp312-* pypy* pp*"
+
+[tool.cibuildwheel.windows]
+archs = ["AMD64"]
+build = "cp*"
+skip = "cp36-* cp37-* cp38-* cp39-* cp312-* pypy*"
+
+[tool.cython-lint]
+max-line-length = 88
+
+[tool.ruff]
+exclude = [".eggs", ".git", "build", "dist"]
+line-length = 88
+
+[tool.ruff.mccabe]
+max-complexity = 10
+
+[tool.ruff.per-file-ignores]
+"onnx_extended/helper/__init__.py" = ["F401"]
+"onnx_extended/reference/__init__.py" = ["F401"]
+"onnx_extended/tools/graph/__init__.py" = ["F401"]
+"onnx_extended/tools/js_profile.py" = ["F821"]
+"onnx_extended/tools/run_onnx_main.py" = ["E731"]
