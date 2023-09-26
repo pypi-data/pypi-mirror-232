@@ -1,0 +1,13 @@
+madoc/__init__.py,sha256=mFFUUCx5TqyW1TTFRrWDhXXVMJDMRxXWrkHanVtp9oY,22
+madoc/documentation.madoc.html,sha256=JCbQ2tzBifoGsa85W1zZFm6tu5fir3asiioomR68nLM,5481
+madoc/loader.py,sha256=DeRK5JGo8hhApZgYeduOxZ9WU2A1HIVYeAABZ_7e1ls,496
+madoc/main.py,sha256=CBYd1dMAo3wGVgtyheRUde99BxFeHrh4MA62axWxU9E,1719
+madoc/templates/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+madoc/templates/madoc/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+madoc/templates/madoc/render.html,sha256=p37aeqVQCzjt7glzC6KGnRKB-WHjWuT19D9RJHuNWxA,5519
+madoc-1.0.8.dist-info/LICENSE.md,sha256=zWoPbm3cT3SYIMdQF3U7AwV_ufYK3T8xoYa4szXKu1A,1070
+madoc-1.0.8.dist-info/METADATA,sha256=Vh79yVu1BsCI-OwSdcUKnMtXugS82HBS4IO5PSVhgs0,1103
+madoc-1.0.8.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+madoc-1.0.8.dist-info/entry_points.txt,sha256=BGgRdEEGBpIgubAQn9BfDyt4qQz8NpGTk4OE7RrS14E,42
+madoc-1.0.8.dist-info/top_level.txt,sha256=xN-fnTwpZ2GOxBrOCWMu802O7YECttiJqlxTAcZ7CFQ,6
+madoc-1.0.8.dist-info/RECORD,,
