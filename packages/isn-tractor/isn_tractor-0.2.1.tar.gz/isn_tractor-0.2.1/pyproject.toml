@@ -1,0 +1,62 @@
+[tool.poetry]
+name = "isn-tractor"
+version = "0.2.1"
+description = "Interactome based Individual Specific Networks"
+authors = ["Giada Lalli <giada.lalli@kuleuven.be>",
+           "Zuqi Li <zuqi.li@kuleuven.be>",
+           "Federico Melograna <federico.melograna@kuleuven.be>",
+           "VIB Bioinformatics Core Facility <bits@vib.be>"]
+readme = "README.md"
+license = "MIT"
+packages = [{include = "isn_tractor"}]
+repository = "https://github.com/GiadaLalli/ISN-tractor"
+
+[tool.poetry.dependencies]
+python = ">=3.8,<3.12"
+pandas = "^1.5.2"
+numpy = "^1.24.1"
+scipy = "^1.10.0"
+scikit-learn = "^1.2.0"
+torch = "^2.0.1"
+sympy = "^1.12"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.1.0"
+pylint = "^2.15.10"
+pytest = "^7.2.0"
+mypy = "^1.0.1"
+pytest-cov = "^4.0.0"
+
+
+[tool.poetry.group.benchmark.dependencies]
+pytest-benchmark = "^4.0.0"
+pyperf = "^2.6.0"
+
+
+[tool.poetry.group.visualization.dependencies]
+networkx = "^3.1"
+
+
+[[tool.poetry.source]]
+name = "PyPI"
+priority = "default"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.mypy]
+ignore_missing_imports = true
+
+
+[tool.pylint]
+generated-members = "t.tensor,t.matmul,t.arange,t.corrcoef,t.cat,t.argsort,t.zeros,t.device,t.square,t.from_numpy,t.mean,t.stack,t.max,t.sum,t.pow,t.sqrt,t.outer,t.flatten,t.float32,t.transpose,t.reshape"
+
+
+[tool.pytest.ini_options]
+markers = [
+    "benchmark: marks tests as benchmarks (deselect with '-m \"not benchmark\"')"
+]
