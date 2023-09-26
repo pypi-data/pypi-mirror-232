@@ -1,0 +1,10 @@
+start/__init__.py,sha256=MqgZpmxqciYKkE8j65c7pUa9vjAnSpCJQnlIZnxZXMA,10415
+start/logger.py,sha256=yPLJ9q7tjlNAF1Og0A8oXjDzA7L8laFnqWEY18cJZl8,1130
+start/manager.py,sha256=5IYe3jQ8wu53sj_9xKeWytbyazruCop-y522mzlwOJ8,16309
+start/template.py,sha256=-lLzELUEMbzTImnx4YNBzVyRM3W2oMoGbcUOGGjBsSE,3246
+start_manager-0.4.6.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+start_manager-0.4.6.dist-info/METADATA,sha256=9kZMKVzQ7FNrVVQzEjrHazOO_n3CKBenTFUbzWIwfU8,8357
+start_manager-0.4.6.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+start_manager-0.4.6.dist-info/entry_points.txt,sha256=CW97eBq2rHQRAzaWnR2PkfmWyojT0bFs2gmnAZiiSqg,37
+start_manager-0.4.6.dist-info/top_level.txt,sha256=RiEN3cZnFMPY0iZxFRDPhCF3QhQBbFCMcqgzoFNw9rU,6
+start_manager-0.4.6.dist-info/RECORD,,
