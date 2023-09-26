@@ -1,0 +1,142 @@
+
+from setuptools import setup, find_packages
+setup(
+    name="CanLabs",
+    version="0.1.1.24",
+    description="Gestion de l'interface CAN avec Python",
+    long_description='''CanLabs
+=======
+
+Ce projet permet de créer et gérer une interface CAN simplement.
+
+Tester avec
+-----------
+
+-  `Korlan USB2CAN <https://www.8devices.com/products/usb2can_korlan>`__
+-  `Kernel USB2CAN Module <https://github.com/8devices/usb2can>`__
+
+Installation
+------------
+
+Install CanLabs with pypi:
+
+.. code:: bash
+
+     pip install CanLabs
+
+Install from source:
+
+.. code:: bash
+
+     git clone https://github.com/alexandre-meline/CanLabs.git
+     chmod +x canlabs
+     canlabs -h 
+
+Gestion de l’Interface CAN avec la Classe CANInterfaceManager
+-------------------------------------------------------------
+
+La classe ``CANInterfaceManager`` permet de gérer l’interface CAN en
+utilisant Usb2Can.
+
+Elle offre des fonctionnalités pour supprimer le pilote USB2CAN, le
+télécharger, le construire, charger les modules du pilote USB2CAN, et
+créer l’interface CAN avec des paramètres personnalisables.
+
+Prérequis Usb2Can
+-----------------
+
+Avant d’utiliser la classe ``CANInterfaceManager``, assurez-vous d’avoir
+les éléments suivants :
+
+La classe utilise la classe ``Usb2Can``, pour en savoir plus
+`ici <https://github.com/alexandre-meline/CanLabs/blob/master/canlabs/devices/README.md>`__.
+
+-  Assurez vous d’utiliser le modèle suivant: `Korlan
+   USB2CAN <https://www.8devices.com/products/usb2can_korlan>`__
+-  Accès en tant qu’utilisateur ``root`` pour effectuer certaines
+   opérations système.
+-  Un adaptateur CAN USB2CAN connecté en USB.
+
+Utilisation de la classe ``CANInterfaceManager`` avec USB2CAN
+-------------------------------------------------------------
+
+1. Importez la classe ``CANInterfaceManager`` depuis le module où vous
+   souhaitez l’utiliser.
+2. Créez une instance de la classe en spécifiant les paramètres de
+   l’interface CAN, tels que le nom de l’interface, le débit binaire
+   (bitrate), et le point d’échantillonnage (sample point).
+3. Utilisez les méthodes de la classe pour gérer l’interface CAN en
+   fonction de vos besoins.
+
+Voici un exemple d’utilisation de la classe ``CANInterfaceManager`` :
+
+.. code:: python
+
+   from canlabs.can_interface_manager import CANInterfaceManager
+
+   # Initialze CANInterfaceManager
+   can_interface_manager = CANInterfaceManager(can_interface_name="can0")
+   # Create CAN interface
+   can_interface_manager.create_usb2can_interface()
+
+Fonctionnalités à venir
+~~~~~~~~~~~~~~~~~~~~~~~
+
+-  Récuperer tous les défaults DTC
+-  Surveillance en temps réel
+-  Analyse des trames CAN
+-  Journalisation des données
+-  Filtrage des messages
+-  Support pour différents adaptateurs CAN
+-  Intégration système de persistance de donnée (GoogleSheet, BDD, etc)
+-  Notification d’événements
+-  Support multiplateforme
+
+Fonctionnalités pentest à venir
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+-  Attaques par injection de trames
+-  Détection d’anomalies
+-  Attaques par déni de service
+-  Attaques par rejeu
+-  Attaques par usurpation d’identité
+-  Tests d’authentification
+-  Tests de chiffrement
+-  Tests de conformité aux normes
+-  Tests de sécurité des mises à jour
+-  Tests de sécurité des DTC
+
+Contribuer
+----------
+
+Pour contribuer au développement de ce projet, veuillez consulter notre
+guide de contribution `ici <CONTRIBUTING.md>`__.
+
+License
+-------
+
+Ce script est fourni sous la licence MIT. Consultez le fichier
+`MIT <LICENSE>`__ pour plus d’informations.
+
+Authors
+-------
+
+-  [@alexandre-meline](https://github.com/alexandre-meline)
+''',
+    author="Alexandre Meline",
+    author_email="alexandre.meline.dev@gmail.com",
+    url="https://github.com/alexandre-meline/CanLabs",
+    packages=find_packages(),
+    install_requires='''''',
+    classifiers=[
+        "Development Status :: 4 - Beta",
+        "Intended Audience :: Developers",
+        "License :: OSI Approved :: MIT License",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3 :: Only",
+        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.11"
+    ],
+)
