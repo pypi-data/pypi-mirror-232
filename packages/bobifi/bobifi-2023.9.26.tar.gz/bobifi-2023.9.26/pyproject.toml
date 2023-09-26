@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "bobifi"
+version = "2023.9.26"
+description = "BoB Metadata Keys and URLs"
+authors = ["Jakob Schlyter <jakob@kirei.se>"]
+license = "BSD-2-Clause"
+repository = "https://github.com/bobcat-ticketing/python-bobifi'"
+readme = "README.md"
+include = ["bobifi/data/*.json"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.7.0"
+isort = "^5.12.0"
+pytest-isort = "^3.1.0"
+pytest-black = "^0.3.12"
+pytest = "^7.4.0"
+cryptojwt = "^1.8.3"
+pylama = "^8.4.1"
+httpx = "^0.24.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.isort]
+profile = "black"
+
+[tool.pylama.linter.pycodestyle]
+max_line_length = 120
+
+[tool.pylama.linter.mccabe]
+complexity = 40
