@@ -1,0 +1,7 @@
+numpy
+colorama
+scipy
+statistics
+cryptography
+forex_python
+requests
