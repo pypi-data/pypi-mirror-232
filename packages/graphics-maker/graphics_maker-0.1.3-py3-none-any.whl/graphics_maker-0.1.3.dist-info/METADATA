@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: graphics-maker
+Version: 0.1.3
+Summary: simple graphics animation video generator
+Home-page: https://github.com/DavidOberholzer/graphics-maker
+Author: David Oberholzer
+Author-email: davidobework@gmail.com
+Project-URL: Bug Tracker, https://github.com/DavidOberholzer/graphics-maker/-/issues
+Project-URL: repository, https://github.com/DavidOberholzer/graphics-maker
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: gizeh ==0.1.11
+Requires-Dist: moviepy ==1.0.3
+
+# Graphics Maker (Python)
+
+# What
+
+This is a simple python package that provides a way to generate flat design animation videos.
+It allows for simple shapes and transitions of location, rotation and scale.
+
+# Why
+
+I was tired of building animations with other tools and getting choppy/unsatisfactory results. I'm also too cheap and lazy to pay for an expensive tool, and then have to learn all the intricacies. So I just made this for myself.
+
+# Examples
+
+Example programs using the lib are in `examples/`. Feel free to run it locally and generate the videos!
