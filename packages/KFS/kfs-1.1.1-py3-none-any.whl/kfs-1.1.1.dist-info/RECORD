@@ -1,0 +1,14 @@
+KFS/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+KFS/config.py,sha256=COw4CTUBj-My5kRvmmhDWJ4eIqLLh3pEHZqksC8eTe4,3172
+KFS/convert_to_SI.py,sha256=2zosIQAYl9kI_6FDOspiW6xG7XxO5G3snCL3eh9-eN0,1805
+KFS/dropbox.py,sha256=rIGHi0WZW-lu0Y8o5RZ2pundFsKpkpwUYjGTufRJdk0,3986
+KFS/exceptions.py,sha256=lb6ZrJrMnKMZB3_dQUGHCIYT0YfRl70mqWDgAzz9nQg,178
+KFS/fstr.py,sha256=-BNY10Gb422EcNgs-txgyGwGTWN3ZZWz9r4dXaessc4,7461
+KFS/licence.md,sha256=H_2NMLa6xjoW8DKQTC19PichVjVc61mbcp7mVrsxBAg,1061
+KFS/log.py,sha256=5hXJ8kC6RGwh1TvgvoCuUzzpjxGqyd7lQXQkNlTjY3A,17189
+KFS/math.py,sha256=3uscBm5fW5aUA22hFcX5Hu-lIqWydjGOGPVwdvo0cQA,418
+KFS/media.py,sha256=9qVu3i0xVOWlRV2fsC-fVRD1gpsmFnh-WRAyYz8Oyvw,12514
+KFS/sleep.py,sha256=LlPmXVbqlXTNGMz-FK6Y4lGmtHRjFV2v_OPVdE5mkt4,1874
+kfs-1.1.1.dist-info/METADATA,sha256=2-i9Xi10oZphwJTfbGdWYEmHwi0NU2S4rTPdjAEFOC8,1560
+kfs-1.1.1.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+kfs-1.1.1.dist-info/RECORD,,
