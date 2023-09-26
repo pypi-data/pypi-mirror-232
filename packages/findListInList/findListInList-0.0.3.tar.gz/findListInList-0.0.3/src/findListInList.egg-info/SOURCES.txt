@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+src/findListInList.egg-info/PKG-INFO
+src/findListInList.egg-info/SOURCES.txt
+src/findListInList.egg-info/dependency_links.txt
+src/findListInList.egg-info/top_level.txt
+src/findlist/__init__.py
+src/findlist/finder.py

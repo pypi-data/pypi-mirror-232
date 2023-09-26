@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: findListInList
+Version: 0.0.3
+Summary: A libray that tells you the poition of a list in another list.
+Author-email: BlackWhiteDuke <nemoliu2010@gmail.com>
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# This library finds the position of a list in another list.
+
+# For example: ["a", "b", "c"] is at the 2nd position in ["z", "a", "b", "c"].
+
+# To use: find(list1, list_where_you_want_to_find_the_pos_of_1st_list)

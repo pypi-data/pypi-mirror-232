@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "findListInList"
+version = "0.0.3"
+authors = [
+  { name="BlackWhiteDuke", email="nemoliu2010@gmail.com" },
+]
+description = "A libray that tells you the poition of a list in another list."
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
