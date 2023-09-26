@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aws_cost_optimization"
+version = "0.5.0"
+authors = [
+  { name="dheeraj.banodha", email="dheeraj.banodha@impetus.com" },
+]
+description = "Provides AWS cost recommendations"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "boto3",
+    "pytz"
+]
+
+[tool.setuptools.packages.find]
+where = ["."]  # list of folders that contain the packages (["."] by default)
+include = ["aws_cost_optimization"]  # package names should match these glob patterns (["*"] by default)
+exclude = ["tests"]  # exclude packages matching these glob patterns (empty by default)
+namespaces = false
+
+#[project.urls]
+#"Homepage" = ""
+#"Bug Tracker" = ""
