@@ -1,0 +1,16 @@
+wagtail_reoako/__init__.py,sha256=FltldH7hombmfxbzA8SOhT7-cVEw0btNBmH0BCoBo5o,85
+wagtail_reoako/apps.py,sha256=Xxctj3qwJl-eOM73Z7Ofh9Bg1-a5lbYHFL_Fk7Y8KJo,137
+wagtail_reoako/reoako_client.py,sha256=I3YqkpcRE8MU5sL143NO3w7Zk3BcHDAkagBrT4YDK5E,1361
+wagtail_reoako/urls.py,sha256=c1VLCRWmbXf_5hwTUH-71ta5zh_c4_HmB-9vwdhJ5DA,378
+wagtail_reoako/views.py,sha256=6hel_6m1Ck8H3SJV3CVUw85Uw6lxvKdnwRMcQMgXwZE,1468
+wagtail_reoako/wagtail_hooks.py,sha256=ttSX2yA0RFQmbnQ25ouy60vocuN9pEJIM8IKSFfWoXc,2642
+wagtail_reoako/static/wagtail_reoako/js/reoako.js,sha256=81X1mU_BrTNQXn645rplhr6iRBz2NGtRev437IVVxjw,6914
+wagtail_reoako/templates/wagtail_reoako/_ajax_results.html,sha256=UeJrzbBU9Hl_cp0f0Y0D4Km5OTsM4XtqXjdSuLCnOc0,503
+wagtail_reoako/templates/wagtail_reoako/_results.html,sha256=tKEdxo-mSk9Lq4Hlv9nq9KxjwN5GNo4Niw58UB3Ew1Y,1733
+wagtail_reoako/templates/wagtail_reoako/reoako.html,sha256=OojBkw6m014nzrwwCL0QOM7U0t_G4Og46uUr4rQ-RVc,340
+wagtail_reoako/templates/wagtail_reoako/reoako_icon.svg,sha256=CEjasI-A_rELpyGObQTispMSHQvV5QiZT8Gl6G-HQyU,651
+wagtail_reoako-2.0.0.dist-info/LICENSE,sha256=ogYeUaQsu8WBn8G7-zSEslZR5OgUxvItbJAgWH-oF5Q,117
+wagtail_reoako-2.0.0.dist-info/METADATA,sha256=JbZzMmULMEYvEwoYOC3C5wEFDwoVVgKt775pCGSDsvU,2329
+wagtail_reoako-2.0.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+wagtail_reoako-2.0.0.dist-info/top_level.txt,sha256=SgMBpEWTOK1ziyUxLhsP9Kfco0uGcmUDE7-nkenDSuM,15
+wagtail_reoako-2.0.0.dist-info/RECORD,,

@@ -1,0 +1,46 @@
+{% load i18n %}
+{% load l10n %}
+{% load wagtailadmin_tags %}
+
+<table class="listing full-width chooser">
+    <col style='min-width: 25%' />
+    <col style='min-width: 12%' />
+    <col />
+
+    <thead>
+       <tr class="table-headers">
+            <th>{% trans 'Term' %}</th>
+            <th>{% trans 'Function' %}</th>
+            <th>{% trans 'Definition' %}</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% if results %}
+            {% for result in results %}
+                {% for translation in result.translations %}
+                    <tr data-page-title="{{ page.get_admin_display_title }}">
+                        <td class='title'>
+                            <div class="title-wrapper">
+                                <a
+                                    class="reoako-choose-word"
+                                    href="#{{ translation.slug }}"
+                                    data-reoako-id="{{ translation.slug }}"
+                                    data-reoako-headword="{{ result.headword }}"
+                                    data-reoako-translation="{{ translation.mi }}"
+                                >
+                                    <strong>{{ translation.mi }}</strong>
+                                    <br />
+                                    <em>{{ result.headword }}</em>
+                                </a>
+                            </div>
+                        </td>
+                        <td>{{ result.function }}</td>
+                        <td>{{ result.definition }}</td>
+                    </tr>
+                {% endfor %}
+            {% endfor %}
+        {% else %}
+            {% block no_results %}{% endblock %}
+        {% endif %}
+    </tbody>
+</table>
