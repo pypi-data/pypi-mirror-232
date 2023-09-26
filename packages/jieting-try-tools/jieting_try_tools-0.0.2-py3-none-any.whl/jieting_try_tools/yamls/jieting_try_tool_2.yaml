@@ -1,0 +1,13 @@
+jieting-try.jieting_try_tools.tools.jieting_try_tool_2.jieting_try_tool_2_function:
+  description: This is jieting second tool
+  function: jieting_try_tool_2_function
+  inputs:
+    connection:
+      type:
+      - CustomConnection
+    input_text:
+      type:
+      - string
+  module: jieting-try.jieting_try_tools.tools.jieting_try_tool_2
+  name: Jieting Second Tool
+  type: python

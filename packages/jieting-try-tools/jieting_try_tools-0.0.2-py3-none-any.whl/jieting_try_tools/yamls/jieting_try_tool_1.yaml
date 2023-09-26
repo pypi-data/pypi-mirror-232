@@ -1,0 +1,13 @@
+jieting_try_tools.tools.jieting_try_tool_1.jieting_try_tool_1_function:
+  function: jieting_try_tool_1_function
+  inputs:
+    connection:
+      type:
+      - CustomConnection
+    input_text:
+      type:
+      - string
+  module: jieting_try_tools.tools.jieting_try_tool_1
+  name: Jieting First Tool
+  description: This is jieting first tool
+  type: python
