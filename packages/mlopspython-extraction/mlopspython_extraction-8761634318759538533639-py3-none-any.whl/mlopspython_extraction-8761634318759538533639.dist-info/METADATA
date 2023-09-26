@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: mlopspython-extraction
+Version: 8761634318759538533639
+Summary: Extraction package for MLOpsPython project
+Home-page: https://github.com/guillaume-chervet/MLOpsPython
+Author: Guillaume Chervet
+Author-email: guillaume.chervet@gmail.com
+Platform: POSIX
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.8
+Requires-Dist: pymupdf ===1.23.3
+Requires-Dist: pymupdfb ==1.23.3 ; python_version >= "3.8"
+
+Extraction package for MLOpsPython project
