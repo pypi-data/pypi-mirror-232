@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: sh40-celx
+Version: 0.1.0
+Summary: A TUI framework built for hypermedia.
+Project-URL: Documentation, https://github.com/shade40/celx#readme
+Project-URL: Issues, https://github.com/shade40/celx/issues
+Project-URL: Source, https://github.com/shade40/celx
+Author-email: bczsalba <bczsalba@gmail.com>
+License-Expression: MIT
+License-File: LICENSE
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Terminals
+Classifier: Topic :: Text Processing :: Markup
+Classifier: Typing :: Typed
+Requires-Python: >=3.8
+Requires-Dist: requests
+Requires-Dist: sh40-celadon
+Description-Content-Type: text/markdown
+
+# celx
+A TUI framework built for hypermedia.
