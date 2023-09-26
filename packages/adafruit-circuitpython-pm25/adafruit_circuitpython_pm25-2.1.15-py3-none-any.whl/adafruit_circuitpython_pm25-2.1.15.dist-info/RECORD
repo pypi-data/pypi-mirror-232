@@ -1,0 +1,8 @@
+adafruit_pm25/__init__.py,sha256=YaERpEVx232RFnEgWoSabBP991fWYw7m9VqiNlKiNQQ,3646
+adafruit_pm25/i2c.py,sha256=QQ_S_q-uIo69NSbw3xMKiAnFElQVv9sZheYe73Z_fIQ,3289
+adafruit_pm25/uart.py,sha256=lkrgmdGmAd0-kz9WU04-5LLYN3kiRMCczdy3erFItQk,2920
+adafruit_circuitpython_pm25-2.1.15.dist-info/LICENSE,sha256=HWV2JibkiQxCZZwySscS2vSf30prJsc9scPUhEUqL0s,1098
+adafruit_circuitpython_pm25-2.1.15.dist-info/METADATA,sha256=43WbRK1P9oTYB9Kz6Ckzfz2ZtkVns8sTNo3ULtXKTBU,3557
+adafruit_circuitpython_pm25-2.1.15.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+adafruit_circuitpython_pm25-2.1.15.dist-info/top_level.txt,sha256=f2neha2kLOGeWtYAbKdi3i0Mwo6AbcMmjPlN8UYaFXY,14
+adafruit_circuitpython_pm25-2.1.15.dist-info/RECORD,,
