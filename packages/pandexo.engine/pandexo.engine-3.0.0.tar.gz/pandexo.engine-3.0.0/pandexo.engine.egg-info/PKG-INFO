@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: pandexo.engine
+Version: 3.0.0
+Home-page: https://github.com/natashabatalha/PandExo
+Author: Natasha Batalha at NASA Ames
+Author-email: natasha.e.batalha@nasa.gov
+License: GPL
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering :: Astronomy
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+License-File: LICENSE
