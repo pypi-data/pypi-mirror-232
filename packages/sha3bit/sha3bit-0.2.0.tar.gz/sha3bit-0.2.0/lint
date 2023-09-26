@@ -1,0 +1,12 @@
+#!/bin/bash
+
+set -e
+
+echo "Running 'black'"
+black .
+
+echo "Running 'ruff'"
+ruff --fix .
+
+echo "Running 'mypy'"
+mypy --install-types --non-interactive  sha3bit
