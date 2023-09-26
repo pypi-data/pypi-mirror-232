@@ -1,0 +1,18 @@
+Metadata-Version: 1.2
+Name: fso-sdd-demo
+Version: 0.0.7
+Summary: A serializer of popular differential privacy frameworks         (OpenDP, Smartnoise-SQL) for remote execution.
+Home-page: https://https://gitlab.renkulab.io/dscc/sdd-poc-client
+Author: FSO DSCC
+Author-email: pauline.maury-laribiere@bfs.admin.ch
+License: MIT
+Download-URL: https://gitlab.renkulab.io/dscc/sdd-poc-client/-/releases/V_0.0.7/evidences/38.json
+Description: UNKNOWN
+Keywords: opendp,smartnoise-sql,logger,ast
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.8, <4
