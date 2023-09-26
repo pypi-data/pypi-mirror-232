@@ -1,0 +1,2 @@
+[console_scripts]
+tykeagent = tyke.agent.autoinstrumentation.tyke_instrument:run
