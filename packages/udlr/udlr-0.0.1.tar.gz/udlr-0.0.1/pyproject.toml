@@ -1,0 +1,37 @@
+[build-system]
+requires = ["cython","setuptools>=61","numpy>=1.19.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "udlr"
+
+description = "A C++ Sparse Matrix Library"
+readme = "README.md"
+authors = [
+    { name = "Joschka Roffe", email = "joschka@roffe.eu" }
+]
+license = { file = "LICENSE" }
+
+classifiers = [
+    "Development Status :: 4 - Beta",
+]
+requires-python = ">=3.8"
+dependencies = [
+    "numpy>=1.24.0",
+    "scipy>=1.9.3",
+]
+version = "0.0.1"
+
+[tool.setuptools.packages.find]
+where = ["src_python"]  
+include = ["udlr","udlr.*"]
+
+[tool.cibuildwheel]
+build = "cp3*"
+skip = ["*-musllinux*"]
+
+[tool.cibuildwheel.macos]
+archs = ["x86_64", "arm64"]
+
+
+
