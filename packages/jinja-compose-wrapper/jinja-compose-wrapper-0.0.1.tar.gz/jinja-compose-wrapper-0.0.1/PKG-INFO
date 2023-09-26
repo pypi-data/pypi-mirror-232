@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: jinja-compose-wrapper
+Version: 0.0.1
+Summary: Docker compose to the next level with Jinja2 templating
+Author: Sidney Trzepacz
+Author-email: <lafakeslimshady@gmail.com>
+Keywords: python,docker,compose,jinja2,template,templating
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+License-File: LICENSE
+
+Docker compose to the next level with Jinja2 templating
