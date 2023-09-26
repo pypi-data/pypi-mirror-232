@@ -1,0 +1,9 @@
+edx_recommendations/__init__.py,sha256=Z38Ne41ncqmXEoB11ZzB6oPhFk5MTcN6MQ0F7Ks8Kgk,84
+edx_recommendations/apps.py,sha256=xPzp1pXR1wZagkWuBLEhL8HVvYJrRErITtaoR5lQ73M,1164
+edx_recommendations/toggles.py,sha256=u-BrnbcRDVtyw7peVnbTuTBiJjdvuop8mhT8P-DAsmc,1448
+edx_recommendations-1.0.5.dist-info/LICENSE.txt,sha256=QTW2QN7q3XszgUAXm9Dzgtu5LXYKbR1SGnqMa7ufEuY,35139
+edx_recommendations-1.0.5.dist-info/METADATA,sha256=3AiZB2pEPYBIi8ZibpsWJR_-z4kZPVkbSzl-JEQZS5I,6737
+edx_recommendations-1.0.5.dist-info/WHEEL,sha256=iYlv5fX357PQyRT2o6tw1bN-YcKFFHKqB_LwHO5wP-g,110
+edx_recommendations-1.0.5.dist-info/entry_points.txt,sha256=OaNF6p0SlUlTo6uCyxLms86r8mbDiH0GobSn8iONKKY,88
+edx_recommendations-1.0.5.dist-info/top_level.txt,sha256=VhaQeTj9pkOQ04ApT63totJwQaJiwn2PLQMUZ4-2o60,20
+edx_recommendations-1.0.5.dist-info/RECORD,,
