@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+fastjws/__init__.py
+fastjws/jws.py
+fastjws.egg-info/PKG-INFO
+fastjws.egg-info/SOURCES.txt
+fastjws.egg-info/dependency_links.txt
+fastjws.egg-info/requires.txt
+fastjws.egg-info/top_level.txt
