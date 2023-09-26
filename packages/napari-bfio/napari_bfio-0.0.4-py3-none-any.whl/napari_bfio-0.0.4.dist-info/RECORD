@@ -1,0 +1,13 @@
+napari_bfio/__init__.py,sha256=Lc2iMMMMo9OQrQQAHBWF01Zd5ZpEXCA51NAK-3VUdp0,206
+napari_bfio/_reader.py,sha256=rd3SsiodDIDCdetMR-qpR-ed7zfuFY-o9jqLi1KNmmw,4875
+napari_bfio/_writer.py,sha256=T4xRp9Wp3BD-djNLHd47EFSclkkx7XZU92Lw3X0Myac,1879
+napari_bfio/napari.yaml,sha256=vh_ay9YPK2-wQlTxCHGQWFzpQEFkoo4qnhhDGZ-LltM,4056
+napari_bfio/_tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+napari_bfio/_tests/test_reader.py,sha256=plgA36RNvXCUXyBe_dJwq7gFp_BbIGq9Fz-EhmGLAXQ,372
+napari_bfio/_tests/test_writer.py,sha256=MBWdBdFrGY9eOLuhhrqQkgz8q8tIATPh-g6ZxmnSUmI,120
+napari_bfio-0.0.4.dist-info/LICENSE,sha256=Fg4kOwqZrHdNpYuaPay-zI5aNJNXmBfi8ev4u0eytdo,1064
+napari_bfio-0.0.4.dist-info/METADATA,sha256=y8d-K8hYJS4H0TIy-VIbQ9zzYKclZE8yyJYY0rmQv2U,4207
+napari_bfio-0.0.4.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+napari_bfio-0.0.4.dist-info/entry_points.txt,sha256=qkcu8JUvT6EmVhW3EADeyrdz2woQu2s2T6JfubGu818,56
+napari_bfio-0.0.4.dist-info/top_level.txt,sha256=09YF_jna4WglwJr4iOesGUxsPvj7T98IKOVqdc0vSgQ,12
+napari_bfio-0.0.4.dist-info/RECORD,,
