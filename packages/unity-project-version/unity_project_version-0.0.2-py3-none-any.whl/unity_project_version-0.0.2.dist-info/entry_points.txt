@@ -1,0 +1,3 @@
+[console_scripts]
+unityprjver=bootloader.unity.cli.unityprjver:run
+

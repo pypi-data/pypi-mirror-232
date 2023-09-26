@@ -1,0 +1,14 @@
+CHANGELOG.md,sha256=31fXA1cOfTe2HqvKqHAtsqqESUe77LmHwDfiL3gRoQQ,329
+bootloader/__init__.py,sha256=jT5LZVL2mTU1k-WoNu4XLm9OWu0UYPI1Hq_fumgHM6g,859
+bootloader/unity/__init__.py,sha256=jT5LZVL2mTU1k-WoNu4XLm9OWu0UYPI1Hq_fumgHM6g,859
+bootloader/unity/cli/__init__.py,sha256=jT5LZVL2mTU1k-WoNu4XLm9OWu0UYPI1Hq_fumgHM6g,859
+bootloader/unity/cli/unityprjver.py,sha256=YtBTj-1s2Gl47xHFnEkhLTwJC4iMLJnFX1cjWnWDDLg,5951
+bootloader/unity/model/__init__.py,sha256=jT5LZVL2mTU1k-WoNu4XLm9OWu0UYPI1Hq_fumgHM6g,859
+bootloader/unity/model/apple_version.py,sha256=wiFL_-GPRGZb7t5ojnxgD3Or0fiWknvaxvJoVS7ViiA,6537
+bootloader/unity/utils/__init__.py,sha256=jT5LZVL2mTU1k-WoNu4XLm9OWu0UYPI1Hq_fumgHM6g,859
+bootloader/unity/utils/project_version.py,sha256=_PuyYVVUsKFRI7iK4GddPJ_uSTm2nspDIbwl7bJ1nRE,5041
+unity_project_version-0.0.2.dist-info/LICENSE,sha256=uekfoVOv1SqqJAeHJXWX8mdu6rH3Y1q6ACxhSLXT2Q4,1067
+unity_project_version-0.0.2.dist-info/WHEEL,sha256=vVCvjcmxuUltf8cYhJ0sJMRDLr1XsPuxEId8YDzbyCY,88
+unity_project_version-0.0.2.dist-info/entry_points.txt,sha256=FEOYsFnRyB2yqSvcj_vj3UnMt3t1a4H9PQ-jGv5lr7A,68
+unity_project_version-0.0.2.dist-info/METADATA,sha256=NTJ9Tpnj9hh-DprkCIy3fz_CXlGZNzUVPLfw-3crB7M,1196
+unity_project_version-0.0.2.dist-info/RECORD,,
