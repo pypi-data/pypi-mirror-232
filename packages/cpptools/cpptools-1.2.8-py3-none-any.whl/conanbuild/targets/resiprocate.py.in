@@ -1,0 +1,212 @@
+from conans import ConanFile, tools, AutoToolsBuildEnvironment,MSBuild
+import os
+import platform
+import shutil
+
+def copytree(src,dst):
+    dirs = os.listdir(src)
+    print(dirs)
+    for dir in dirs:
+        from_dir = os.path.join(src,dir)
+        to_dir = os.path.join(dst,dir)
+        if os.path.isdir(from_dir):
+            if not os.path.exists(to_dir):
+                os.mkdir(to_dir)
+            copytree(from_dir,to_dir)
+        elif os.path.isfile(from_dir):
+            shutil.copy(from_dir,to_dir)
+
+class resiprocateConan(ConanFile):
+    name = "resiprocate"
+    version = "@version@"
+    settings = "os", "arch", "compiler", "build_type"
+    options = {"shared": [True, False]}
+    default_options = "shared=False"
+    exports_sources = "*"
+    url = "https://www.resiprocate.org"
+    build_requires = "libressl/3.3.3@1602/stable"
+
+    def source(self):
+        tools.download('https://artifactory.gz.cvte.cn/artifactory/binaries/1602/3rd/resiprocate-1.10.2.tar.gz', 'resip.tar.gz')
+        tools.download('https://artifactory.gz.cvte.cn/artifactory/binaries/1602/3rd/resiprocate-contrib-1.10.2.tar.gz', 'contrib.tar.gz')
+        tools.untargz("resip.tar.gz")
+        tools.untargz('contrib.tar.gz')
+        self.run('mv resiprocate-1.10.2/* .')
+        self.run('rm resip.tar.gz')
+        self.run('rm contrib.tar.gz')
+        self.run('rm -fr resiprocate-1.10.2')
+
+        self.patch()
+
+    def configure(self):
+        del self.settings.compiler.libcxx
+
+    def build_requirements(self):
+        if(self.settings.os == "Android"):
+            self.build_requires("libcares/1.15.0@1602/stable")
+
+    def patchSSL(self):
+        tools.replace_in_file('reflow/dtls_wrapper/DtlsFactory.cxx', '#include <openssl/e_os2.h>', '//#include <openssl/e_os2.h>')
+        tools.replace_in_file('reflow/dtls_wrapper/DtlsSocket.hxx', '#include <openssl/e_os2.h>', '//#include <openssl/e_os2.h>')
+        tools.replace_in_file('resip/stack/ssl/DtlsTransport.cxx', '#include <openssl/e_os2.h>', '//#include <openssl/e_os2.h>')
+        tools.replace_in_file('resip/stack/ssl/WinSecurity.cxx', '#include <openssl/e_os2.h>', '//#include <openssl/e_os2.h>')
+        tools.replace_in_file('rutil/Random.cxx', '#  include <openssl/e_os2.h>', '//#include <openssl/e_os2.h>')
+        tools.replace_in_file('rutil/ssl/OpenSSLInit.cxx', '#include <openssl/e_os2.h>', '//#include <openssl/e_os2.h>')
+        tools.replace_in_file('Makefile.in','@USE_SSL_TRUE@am__append_3 = reTurn', '# @USE_SSL_TRUE@am__append_3 = reTurn')
+
+        
+    def patch(self):
+        self.patchSSL()
+        self.run(f'git clone git@gitlab.gz.cvte.cn:1602/conan/resiprocate.git @git_ref@ {self.source_folder}/patch')
+        with tools.chdir(f'{self.source_folder}/patch'):
+            @checkout@
+            copytree(f'{self.source_folder}/patch/patch/resip/', f'{self.source_folder}/resip/')
+    
+    def buildAndroid(self):
+        android_ndk = tools.unix_path(os.environ.get('ANDROID_NDK_HOME'))
+        tools.replace_in_file('build/configure-android.sh', '${HOME}/android/android-ndk-r7', android_ndk)
+        tools.replace_in_file('build/configure-android.sh', '4.4.3', '%s'%self.settings.compiler.version)
+        tools.replace_in_file('build/configure-android.sh', 'ANDROID_VERSION=8', 'ANDROID_VERSION=%s'%self.settings.os.api_level)
+        tools.replace_in_file('build/configure-android.sh', 'PREFIX=/', 'PREFIX=%s'%tools.unix_path(self.package_folder))
+        tools.replace_in_file('build/configure-android.sh', '-x86', '-x86_64', strict=False)
+        
+
+        arch = str(self.settings.arch)
+        if self.settings.compiler == "gcc":
+            if (arch == 'armv8'):
+                tools.replace_in_file('build/configure-android.sh', 'arm-linux-androideabi', 'aarch64-linux-android', strict=False)
+                tools.replace_in_file('build/configure-android.sh', 'arch-arm', 'arch-arm64')
+                tools.replace_in_file('build/configure-android.sh', 'gnu-libstdc++/libs/armeabi/include',
+                                      "gnu-libstdc++/%s/libs/arm64-v8a/include -I%s/include -I%s/include -I`pwd`/contrib/asio -I`pwd`/contrib/cajun/include"%(self.settings.compiler.version, tools.unix_path(self.deps_cpp_info['libressl'].rootpath), tools.unix_path(self.deps_cpp_info['libcares'].rootpath)))
+                tools.replace_in_file('build/configure-android.sh', 'gnu-libstdc++/include', 'gnu-libstdc++/%s/include'%self.settings.compiler.version)
+                tools.replace_in_file('build/configure-android.sh', '-L${ANDROID_STL}/gnu-libstdc++/lib',
+                                      '-L${ANDROID_STL}/gnu-libstdc++/%s/libs/arm64-v8a -L%s/lib -lcares'%(self.settings.compiler.version, tools.unix_path(self.deps_cpp_info['libcares'].rootpath)))
+            elif(arch == 'armv7'):
+                tools.replace_in_file('build/configure-android.sh', 'gnu-libstdc++/libs/armeabi/include', 
+                                      "gnu-libstdc++/%s/libs/armeabi-v7a/include -I%s/include -I%s/include -I`pwd`/contrib/asio -I`pwd`/contrib/cajun/include"%(self.settings.compiler.version, tools.unix_path(self.deps_cpp_info['libressl'].rootpath), tools.unix_path(self.deps_cpp_info['libcares'].rootpath)))
+                tools.replace_in_file('build/configure-android.sh', 'gnu-libstdc++/include', 'gnu-libstdc++/%s/include'%self.settings.compiler.version)
+                tools.replace_in_file('build/configure-android.sh', '-L${ANDROID_STL}/gnu-libstdc++/lib', 
+                                      '-L${ANDROID_STL}/gnu-libstdc++/%s/libs/armeabi-v7a -L%s/lib -lcares'%(self.settings.compiler.version, tools.unix_path(self.deps_cpp_info['libcares'].rootpath)))
+        if self.settings.compiler == "clang":
+            platform_dir = 'linux-x86'
+            if platform.system() == 'Darwin':
+                platform_dir = 'darwin-x86'
+            elif platform.system() == 'Windows':
+                platform_dir = 'windows-x86'
+            tools.replace_in_file('build/configure-android.sh', '${ANDROID_NDK}/toolchains/arm-linux-androideabi-${CROSS_VERSION}/prebuilt/linux-x86', '${ANDROID_NDK}/toolchains/llvm/prebuilt/%s'%platform_dir)
+            tools.replace_in_file('build/configure-android.sh', '${ANDROID_NDK}/platforms/${ANDROID_VERSION_S}/arch-arm', '${TOOLCHAIN_ROOT}/sysroot')
+            tools.replace_in_file('build/configure-android.sh', '${TOOLCHAIN_ROOT}/bin/${CROSS_COMPILE}', '${TOOLCHAIN_ROOT}/bin/${CROSS_COMPILE}${ANDROID_VERSION}')
+            tools.replace_in_file('build/configure-android.sh', '-gcc', '-clang')
+            tools.replace_in_file('build/configure-android.sh', '-g++', '-clang++')
+            tools.replace_in_file('build/configure-android.sh', 'export AS=${TOOLCHAIN_PREFIX}-as', 'export AS=$CC')
+            tools.replace_in_file('build/configure-android.sh', 'export CPP=${TOOLCHAIN_PREFIX}-cpp', '')
+            tools.replace_in_file('build/configure-android.sh', 'export AR=${TOOLCHAIN_PREFIX}-ar', 'export AR=${TOOLCHAIN_ROOT}/bin/llvm-ar')
+            tools.replace_in_file('build/configure-android.sh', 'export LD=${TOOLCHAIN_PREFIX}-ld', 'export LD=${TOOLCHAIN_ROOT}/bin/ld')
+            tools.replace_in_file('build/configure-android.sh', 'export RANLIB=${TOOLCHAIN_PREFIX}-ranlib', 'export RANLIB=${TOOLCHAIN_ROOT}/bin/llvm-ranlib')
+            tools.replace_in_file('build/configure-android.sh', '${CFLAGS} --sysroot=${SYSROOT}', '${CFLAGS} --sysroot=${SYSROOT} -fPIC')
+            
+            if arch == 'armv8':
+                tools.replace_in_file('build/configure-android.sh', 'arm-linux-androideabi', 'aarch64-linux-android', strict=False)
+                tools.replace_in_file('build/configure-android.sh', '-I${ANDROID_STL}/gnu-libstdc++/include -I${ANDROID_STL}/gnu-libstdc++/libs/armeabi/include',
+                                      "-I%s/include -I%s/include -I`pwd`/contrib/asio -I`pwd`/contrib/cajun/include"%(tools.unix_path(self.deps_cpp_info['libressl'].rootpath), tools.unix_path(self.deps_cpp_info['libcares'].rootpath)))
+                tools.replace_in_file('build/configure-android.sh', '-L${ANDROID_STL}/gnu-libstdc++/lib',
+                                      '-L${ANDROID_STL}/llvm-libc++/libs/arm64-v8a -L%s/lib -lcares'%(tools.unix_path(self.deps_cpp_info['libcares'].rootpath)))
+            elif arch == 'armv7':
+                tools.replace_in_file('build/configure-android.sh', 'arm-linux-androideabi', 'armv7a-linux-androideabi', strict=False)
+                tools.replace_in_file('build/configure-android.sh', '-I${ANDROID_STL}/gnu-libstdc++/include -I${ANDROID_STL}/gnu-libstdc++/libs/armeabi/include',
+                                      "-I%s/include -I%s/include -I`pwd`/contrib/asio -I`pwd`/contrib/cajun/include"%(tools.unix_path(self.deps_cpp_info['libressl'].rootpath), tools.unix_path(self.deps_cpp_info['libcares'].rootpath)))
+                tools.replace_in_file('build/configure-android.sh', '-L${ANDROID_STL}/gnu-libstdc++/lib',
+                                      '-L${ANDROID_STL}/llvm-libc++/libs/armeabi-v7a -L%s/lib -lcares'%(tools.unix_path(self.deps_cpp_info['libcares'].rootpath)))
+                
+
+        tools.replace_in_file('build/configure-android.sh', './configure --host=${CROSS_COMPILE} --with-sysroot=${SYSROOT} --prefix=${PREFIX} "$@"', './configure --host=${CROSS_COMPILE} --enable-ipv6 --enable-android --with-c-ares --with-ssl --enable-dtls  --disable-shared --with-sysroot=${SYSROOT} --prefix=${PREFIX} "$@"')
+       
+        self.run('chmod +x ./build/configure-android.sh',win_bash=platform.system()=="Windows") 
+        self.run('chmod +x ./configure',win_bash=platform.system()=="Windows")
+        self.run('sh ./build/configure-android.sh',win_bash=platform.system()=="Windows")
+        self.run('make',win_bash=platform.system()=="Windows")
+        self.run('make install',win_bash=platform.system()=="Windows")
+
+    def buildWin(self):
+        with tools.vcvars(self.settings, filter_known_paths=False):
+            tools.replace_in_file("resip/stack/resiprocate_14_0.vcxproj", "<PropertyGroup Label=\"Globals\">", '<PropertyGroup Label=\"Globals\">\r\n<WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>\r\n')
+            tools.replace_in_file("resip/dum/dum_14_0.vcxproj", "<PropertyGroup Label=\"Globals\">", '<PropertyGroup Label=\"Globals\">\r\n<WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>\r\n')
+            tools.replace_in_file("rutil/rutil_14_0.vcxproj", "<PropertyGroup Label=\"Globals\">", '<PropertyGroup Label=\"Globals\">\r\n<WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>\r\n')
+            tools.replace_in_file("contrib/db/build_windows/db_static_14_0.vcxproj", "<PropertyGroup Label=\"Globals\">", '<PropertyGroup Label=\"Globals\">\r\n<WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>\r\n')
+            tools.replace_in_file("contrib/pcre/pcre_14_0.vcxproj", "<PropertyGroup Label=\"Globals\">", '<PropertyGroup Label=\"Globals\">\r\n<WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>\r\n')
+            tools.replace_in_file("repro/repro_14_0.vcxproj", "<PropertyGroup Label=\"Globals\">", '<PropertyGroup Label=\"Globals\">\r\n<WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>\r\n')
+            tools.replace_in_file("rutil/dns/ares/ares_14_0.vcxproj", "<PropertyGroup Label=\"Globals\">", '<PropertyGroup Label=\"Globals\">\r\n<WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>\r\n')
+            tools.replace_in_file("repro/reprolib_14_0.vcxproj", "<PropertyGroup Label=\"Globals\">", '<PropertyGroup Label=\"Globals\">\r\n<WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>\r\n')
+            tools.replace_in_file("contrib/popt/popt_14_0.vcxproj", "<PropertyGroup Label=\"Globals\">", '<PropertyGroup Label=\"Globals\">\r\n<WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>\r\n')
+            tools.replace_in_file("repro/reprocmd/reprocmd_14_0.vcxproj", "<PropertyGroup Label=\"Globals\">", '<PropertyGroup Label=\"Globals\">\r\n<WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>\r\n')
+            tools.replace_in_file("contrib/GeoIP/GeoIP_14_0.vcxproj", "<PropertyGroup Label=\"Globals\">", '<PropertyGroup Label=\"Globals\">\r\n<WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>\r\n')
+            tools.replace_in_file("repro/accountingconsumers/queuetostream_14_0.vcxproj", "<PropertyGroup Label=\"Globals\">", '<PropertyGroup Label=\"Globals\">\r\n<WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>\r\n')
+            tools.replace_in_file("resip/rend/rend_14_0.vcxproj", "<PropertyGroup Label=\"Globals\">", '<PropertyGroup Label=\"Globals\">\r\n<WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>\r\n')
+            tools.replace_in_file('rutil/rutil_14_0.vcxproj', 'ares_12_0.vcxproj', 'ares_14_0.vcxproj')
+
+            builder = MSBuild(self)
+            builder.build_env.include_paths.append("%s/include"%self.deps_cpp_info['libressl'].rootpath)
+            btype = "SSL-%s"%self.settings.build_type
+            builder.build('reSIProcate_14_0.sln',  build_type=btype, targets=['ares', 'rutil', 'resiprocate', 'dum'], platforms={"x86":"Win32"})
+
+    def buildiOS(self):
+        builder = AutoToolsBuildEnvironment(self)
+        arch = str(self.settings.arch)
+        if (arch == 'armv8'):
+            arch = 'arm64'
+        elif (arch == 'x86'):
+            arch = 'i386'
+        
+        make_args = ['OS=ios', 'ARCH=%s'%arch, 'SDK_MIN=%s'%str(self.settings.os.version)]
+
+        builder.make(args=make_args)
+
+    def buildUnix(self):
+        self.run("autoreconf -i -f")
+        tools.replace_in_file('Makefile.in','@USE_SSL_TRUE@am__append_3 = reTurn', '# @USE_SSL_TRUE@am__append_3 = reTurn')
+        builder = AutoToolsBuildEnvironment(self)
+        cfgargs =['--disable-shared', '--with-pic', '--with-ssl', '--enable-dtls', '--enable-ipv6']
+        
+        self.run("chmod +x configure")
+        cfgargs.append("--prefix=%s"%self.package_folder)
+        builder.configure(args=cfgargs)
+        builder.make(args=["install"])     
+
+    def build(self):
+        if(self.settings.os == "Windows"):
+            self.buildWin()
+        elif(self.settings.os == "Android"):
+            self.buildAndroid()
+        #elif(self.settings.os == "iOS"):
+        #    self.buildiOS()
+        else:
+            self.buildUnix()
+
+    def package(self):
+        self.copy("rutil/*.hxx", "%s/include/rutil/"%self.package_folder, keep_path=False)
+        self.copy("rutil/*.h", "%s/include/rutil/"%self.package_folder, keep_path=False)
+        self.copy("rutil/dns/*.hxx", "%s/include/rutil/dns/"%self.package_folder, keep_path=False)
+        self.copy("rutil/ssl/*.hxx", "%s/include/rutil/ssl/"%self.package_folder, keep_path=False)
+        self.copy("rutil/stun/*.hxx", "%s/include/rutil/stun/"%self.package_folder, keep_path=False)
+        self.copy("rutil/wince/*.hxx", "%s/include/rutil/wince/"%self.package_folder, keep_path=False)
+        self.copy("resip/stack/*.hxx", "%s/include/resip/stack"%self.package_folder, keep_path=False)
+        self.copy("resip/stack/ssl/*.hxx", "%s/include/resip/stack/ssl/"%self.package_folder, keep_path=False)
+        self.copy("resip/dum/*.hxx", "%s/include/resip/dum/"%self.package_folder, keep_path=False)
+        self.copy("resip/dum/ssl/*.hxx", "%s/include/resip/dum/ssl/"%self.package_folder, keep_path=False)
+        if (self.settings.os == "Windows"):
+            if(self.settings.arch == "x86"):
+                arch = "Win32"
+            else:
+                arch = "x64"
+            self.copy("%s/%s/*.lib"%(arch, self.settings.build_type), "%s/lib/"%self.package_folder, keep_path=False)
+            self.copy("%s/SSL-%s/*.lib"%(arch, self.settings.build_type), "%s/lib/"%self.package_folder, keep_path=False)
+        else:
+            self.copy("libresiprocate.a", "%s/lib/"%self.package_folder, keep_path=False)
+
+    def package_info(self):
+        if(self.settings.os == "Windows"):
+            self.cpp_info.libs = ['dum','resiprocate', 'rutil', 'ares']
+        elif(self.settings.os == "Android"):
+            self.cpp_info.libs = ['dum', 'resip', 'rutil']
+        else:
+            self.cpp_info.libs = ['dum', 'resip', 'rutil', 'resipares']

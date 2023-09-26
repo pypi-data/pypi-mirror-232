@@ -1,0 +1,25 @@
+from conans import ConanFile, CMake, tools
+
+class SentryConan(ConanFile):
+    name = "Sentry"
+    version = "@version@" 
+    url = "git@gitlab.gz.cvte.cn:1602/3rd/sentry-native.git"
+    description = "Official Sentry SDK for C/C++"
+    settings = "os", "compiler", "build_type", "arch"
+    options = {"shared": [True, False]}
+    default_options = {"shared": True}
+    generators = "cmake"
+
+    def source(self):
+        self.run("git clone git@gitlab.gz.cvte.cn:1602/3rd/sentry-native.git @git_ref@ .")
+
+    def build(self):
+        cmake = CMake(self)
+        cmake_options = ['-DSENTRY_BUILD_EXAMPLES=OFF', '-DSENTRY_BUILD_TESTS=OFF', '-DSENTRY_BUILD_STATIC=OFF']
+        cmake.configure(cmake_options)
+        cmake.build()
+        cmake.install()
+
+    def package_info(self):
+        self.cpp_info.libs = ["sentry"]
+
