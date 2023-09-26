@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: corpus-writer
+Version: 0.0.1
+Summary: Boilerplate Python Code
+Home-page: https://mv3.dev
+Author: Marcelino G. Veloso III
+Author-email: contact@mv3.dev
+Requires-Python: >=3.11,<4.0
+Classifier: Development Status :: 4 - Beta
+Classifier: Framework :: Pytest
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Typing :: Typed
+Requires-Dist: citation-utils (>=0.4.10,<0.5.0)
+Requires-Dist: environs (>=9.5.0,<10.0.0)
+Requires-Dist: python-frontmatter (>=1.0.0,<2.0.0)
+Requires-Dist: statute-utils (>=0.6.8,<0.7.0)
+Project-URL: Documentation, https://justmars.github.io/corpus-writer
+Project-URL: Repository, https://github.com/justmars/corpus-writer
+Description-Content-Type: text/markdown
+
+# corpus-writer
+
+![Github CI](https://github.com/justmars/corpus-writer/actions/workflows/main.yml/badge.svg)
+
+With a pre-existing markdown file in frontmatter format from a decisions directory, update the `DecisionFile`
+to reflect discovered statutes and citations.
+
+The _decisions_ / _statutes_ directories needs to be configured via an `.env` file, see `just dumpenv` for an example.
+
+## Development
+
+See [documentation](https://justmars.github.io/corpus-writer).
+
+1. Run `poetry install`
+2. Run `poetry shell`
+3. Run `pytest`
+
