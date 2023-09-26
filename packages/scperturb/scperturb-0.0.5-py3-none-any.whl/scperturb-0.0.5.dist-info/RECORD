@@ -1,0 +1,9 @@
+scperturb/__init__.py,sha256=nRLAt1CRLN8vpQyEQiSbWDg-640W3G54BKdJqnQsGQc,176
+scperturb/edistance.py,sha256=Xh-Nan_30CzQmYmCKlTBeGXqjtYL58cHxJun895O9gI,10475
+scperturb/etest.py,sha256=_BY8Dysrw6xtHsmG532VX1DLLJDFa3lK2NRsNt7YIk0,7228
+scperturb/utils.py,sha256=yqvRGorE7QaCvURV17R2KR5ZvORdkOMMLpCjjMWoKXQ,1650
+scperturb-0.0.5.dist-info/LICENSE,sha256=TlW-a_xjAL_BGeihb-dvwH4ZFb5QIDy_4cSuaZfxifs,1070
+scperturb-0.0.5.dist-info/METADATA,sha256=tEhk9rihwFe3V8O7NyC5S2D8SM-SmzlbtoWwAfAEuNg,1485
+scperturb-0.0.5.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+scperturb-0.0.5.dist-info/top_level.txt,sha256=D_L5zdNyh9w6k29dZB0rZ-K4l4KMgXK43olRpGweXbI,10
+scperturb-0.0.5.dist-info/RECORD,,
