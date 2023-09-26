@@ -1,0 +1,4 @@
+include *.yaml
+include *.lua
+include license
+graft AEFM/deployer/datasets
