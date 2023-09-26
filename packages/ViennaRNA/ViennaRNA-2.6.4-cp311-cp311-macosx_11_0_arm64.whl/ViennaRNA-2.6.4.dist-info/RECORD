@@ -1,0 +1,10 @@
+ViennaRNA-2.6.4.dist-info/RECORD,,
+ViennaRNA-2.6.4.dist-info/AUTHORS,sha256=DskXDG6sfymwT7AVAf_cepdR2Z_DcdE81Ixs3111P_Y,371
+ViennaRNA-2.6.4.dist-info/WHEEL,sha256=eaDTbMedWofVq8IZjew9qeAkoA5Sw2MOU2ppdIRr1Jg,110
+ViennaRNA-2.6.4.dist-info/COPYING,sha256=d3bM5MYVXrqC6mvLXBCPJbn7D2BGZEIb_W2pSTACjYw,771
+ViennaRNA-2.6.4.dist-info/top_level.txt,sha256=EBUnBP2NPCAwmre7kRt0EqZUTs4GeVV-hizvTHL0lmY,14
+ViennaRNA-2.6.4.dist-info/METADATA,sha256=cIyrY2CEbmw-c00JfPFUZ7AWpOEaZGuX-za-Mly3n-o,13390
+ViennaRNA/__init__.py,sha256=swxPJ_Hot3Rh9-E07x_jTObV8DzH-w-fmCcmlHHOaFQ,264
+RNA/_RNA.cpython-311-darwin.so,sha256=2mm6A6QKtbl9T7culLY1wMX13Bvh53DvhVCCsqbjqbc,9904983
+RNA/__init__.py,sha256=_Gu3t3EkuyvQNVK5TbBYuREz7vX2Sw6Ggv_15AFaqFg,1737
+RNA/RNA.py,sha256=2wPPKvipPdEMk1EGOIRwhkUhVn5aTLHRTAv6VS_DKlI,494147
