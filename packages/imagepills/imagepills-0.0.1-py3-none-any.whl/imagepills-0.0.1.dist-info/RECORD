@@ -1,0 +1,12 @@
+imagepills/__init__.py,sha256=SGBSqWLB9dTFety8tmrATWoz4tcO_hFShGcm01ir5us,50
+imagepills/base.py,sha256=yCIwjKPljZ67Pe-0UxUxVz8EhaVkP6iSdFvqzDWJazk,2358
+imagepills/entrypoint.py,sha256=8GczcIaTfTFm7SZPTq5U2DzpiK5RCnG2iezCcJMXbGk,496
+imagepills/imagepills.py,sha256=dNty2XdK7T7ko8NTqr3RpZR-XVJkbXXc9FbTjFVqn4g,354
+imagepills/pills.py,sha256=TNhfzKTmB3GvM04J7NrK5gQQFhCHW_8FOFwfvzJkvOs,9476
+imagepills/utils.py,sha256=cHvT_li4VZdDzLH8gNJOELsub3tEbEYk00G91djMGmY,1607
+imagepills-0.0.1.dist-info/LICENSE,sha256=eziRpu41t9BSGhHL_H970UbYvoHwA7TP_MBc43b6de8,1071
+imagepills-0.0.1.dist-info/METADATA,sha256=TsioySFIT6ayEl8_x85THkmk5lmEc94uSY3VhWiNPtA,3007
+imagepills-0.0.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+imagepills-0.0.1.dist-info/entry_points.txt,sha256=KHFWkxoCb2bSRG3CspzaD9xmFAGhlZBmSlH4UpqPT9o,152
+imagepills-0.0.1.dist-info/top_level.txt,sha256=1xlaBNa2Ji8uJ4AyZGaWbv1ETcphubdN1p4isoEOTLQ,11
+imagepills-0.0.1.dist-info/RECORD,,
