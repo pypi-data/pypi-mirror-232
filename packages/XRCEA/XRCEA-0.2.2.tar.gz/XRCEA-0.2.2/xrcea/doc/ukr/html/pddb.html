@@ -1,0 +1,286 @@
+
+<!DOCTYPE html>
+
+<html lang="uk-UA">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>База даних порошкової дифракції &#8212; XRCEA 0.2 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/nature.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/translations.js"></script>
+    <link rel="index" title="Індекс" href="genindex.html" />
+    <link rel="search" title="Пошук" href="search.html" />
+    <link rel="prev" title="Базові функції" href="core.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Навігація</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Загальний індекс"
+             accesskey="I">індекс</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >модулі</a> |</li>
+        <li class="right" >
+          <a href="core.html" title="Базові функції"
+             accesskey="P">попередній</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">XRCEA 0.2 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">База даних порошкової дифракції</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-pddb">
+<span id="id1"></span><h1>База даних порошкової дифракції<a class="headerlink" href="#module-pddb" title="Permalink to this heading">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="pddb.introduce">
+<span class="sig-prename descclassname"><span class="pre">pddb.</span></span><span class="sig-name descname"><span class="pre">introduce</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pddb.introduce" title="Постійне посилання на це визначення">¶</a></dt>
+<dd><p>Entry point. Declares menu items.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pddb.terminate">
+<span class="sig-prename descclassname"><span class="pre">pddb.</span></span><span class="sig-name descname"><span class="pre">terminate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pddb.terminate" title="Постійне посилання на це визначення">¶</a></dt>
+<dd><p>unloader</p>
+</dd></dl>
+
+<section id="module-pddb.pddb">
+<span id="id2"></span><h2>Базові функції<a class="headerlink" href="#module-pddb.pddb" title="Permalink to this heading">¶</a></h2>
+<p>db interface</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="pddb.pddb.Database">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pddb.pddb.</span></span><span class="sig-name descname"><span class="pre">Database</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pddb.pddb.Database" title="Постійне посилання на це визначення">¶</a></dt>
+<dd><p>Powder diffraction database class</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметри<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>path</strong> (<em>string</em>) – Path to database.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="pddb.pddb.Database.execute">
+<span class="sig-name descname"><span class="pre">execute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">command</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">commit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pddb.pddb.Database.execute" title="Постійне посилання на це визначення">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Параметри<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>command</strong> (<em>string</em>) – SQL command</p></li>
+<li><p><strong>commit</strong> (<em>boolean</em>) – Whether to commit results.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Тип повернення<span class="colon">:</span></dt>
+<dd class="field-even"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pddb.pddb.Database.select_bruqa">
+<span class="sig-name descname"><span class="pre">select_bruqa</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">req</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pddb.pddb.Database.select_bruqa" title="Постійне посилання на це визначення">¶</a></dt>
+<dd><p>Select bruto equation</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметри<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>req</strong> (<em>string</em>) – Request</p>
+</dd>
+<dt class="field-even">Повертає<span class="colon">:</span></dt>
+<dd class="field-even"><p>list of cards</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pddb.pddb.Database.select_bruto">
+<span class="sig-name descname"><span class="pre">select_bruto</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">req</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pddb.pddb.Database.select_bruto" title="Постійне посилання на це визначення">¶</a></dt>
+<dd><p>Select bruto equation</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметри<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>req</strong> (<em>string</em>) – Request</p>
+</dd>
+<dt class="field-even">Повертає<span class="colon">:</span></dt>
+<dd class="field-even"><p>list of cards</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pddb.pddb.Database.select_cards">
+<span class="sig-name descname"><span class="pre">select_cards</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">req</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pddb.pddb.Database.select_cards" title="Постійне посилання на це визначення">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Параметри<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>req</strong> (<em>string</em>) – Query to select cards</p>
+</dd>
+<dt class="field-even">Повертає<span class="colon">:</span></dt>
+<dd class="field-even"><p>List of cards.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pddb.pddb.Database.select_reflex">
+<span class="sig-name descname"><span class="pre">select_reflex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">req</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pddb.pddb.Database.select_reflex" title="Постійне посилання на це визначення">¶</a></dt>
+<dd><p>Select by reflex</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметри<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>req</strong> (<em>string</em>) – Request</p>
+</dd>
+<dt class="field-even">Повертає<span class="colon">:</span></dt>
+<dd class="field-even"><p>list of cards</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pddb.pddb.formula_markup">
+<span class="sig-prename descclassname"><span class="pre">pddb.pddb.</span></span><span class="sig-name descname"><span class="pre">formula_markup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fstr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wiki</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pddb.pddb.formula_markup" title="Постійне посилання на це визначення">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Параметри<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fstr</strong> (<em>string</em>) – formula string</p></li>
+<li><p><strong>wiki</strong> (<em>boolean</em>) – print wiki (deprecated)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Повертає<span class="colon">:</span></dt>
+<dd class="field-even"><p>formula</p>
+</dd>
+<dt class="field-odd">Тип повернення<span class="colon">:</span></dt>
+<dd class="field-odd"><p>string</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pddb.pddb.switch_number">
+<span class="sig-prename descclassname"><span class="pre">pddb.pddb.</span></span><span class="sig-name descname"><span class="pre">switch_number</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">number</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pddb.pddb.switch_number" title="Постійне посилання на це визначення">¶</a></dt>
+<dd><p>Adds defis to number.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметри<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>number</strong> (<em>integer</em>) – number in database</p>
+</dd>
+<dt class="field-even">Тип повернення<span class="colon">:</span></dt>
+<dd class="field-even"><p>string</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-pddb.browser">
+<span id="id3"></span><h2>ГІК<a class="headerlink" href="#module-pddb.browser" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="pddb.browser.Browser">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pddb.browser.</span></span><span class="sig-name descname"><span class="pre">Browser</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">db</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pddb.browser.Browser" title="Постійне посилання на це визначення">¶</a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="pddb.browser.Browser.add_colored">
+<span class="sig-name descname"><span class="pre">add_colored</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pddb.browser.Browser.add_colored" title="Постійне посилання на це визначення">¶</a></dt>
+<dd><p>Add a card to colored</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pddb.browser.Browser.search">
+<span class="sig-name descname"><span class="pre">search</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pddb.browser.Browser.search" title="Постійне посилання на це визначення">¶</a></dt>
+<dd><p>Run search</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">База даних порошкової дифракції</a><ul>
+<li><a class="reference internal" href="#pddb.introduce"><code class="docutils literal notranslate"><span class="pre">introduce()</span></code></a></li>
+<li><a class="reference internal" href="#pddb.terminate"><code class="docutils literal notranslate"><span class="pre">terminate()</span></code></a></li>
+<li><a class="reference internal" href="#module-pddb.pddb">Базові функції</a><ul>
+<li><a class="reference internal" href="#pddb.pddb.Database"><code class="docutils literal notranslate"><span class="pre">Database</span></code></a><ul>
+<li><a class="reference internal" href="#pddb.pddb.Database.execute"><code class="docutils literal notranslate"><span class="pre">Database.execute()</span></code></a></li>
+<li><a class="reference internal" href="#pddb.pddb.Database.select_bruqa"><code class="docutils literal notranslate"><span class="pre">Database.select_bruqa()</span></code></a></li>
+<li><a class="reference internal" href="#pddb.pddb.Database.select_bruto"><code class="docutils literal notranslate"><span class="pre">Database.select_bruto()</span></code></a></li>
+<li><a class="reference internal" href="#pddb.pddb.Database.select_cards"><code class="docutils literal notranslate"><span class="pre">Database.select_cards()</span></code></a></li>
+<li><a class="reference internal" href="#pddb.pddb.Database.select_reflex"><code class="docutils literal notranslate"><span class="pre">Database.select_reflex()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#pddb.pddb.formula_markup"><code class="docutils literal notranslate"><span class="pre">formula_markup()</span></code></a></li>
+<li><a class="reference internal" href="#pddb.pddb.switch_number"><code class="docutils literal notranslate"><span class="pre">switch_number()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-pddb.browser">ГІК</a><ul>
+<li><a class="reference internal" href="#pddb.browser.Browser"><code class="docutils literal notranslate"><span class="pre">Browser</span></code></a><ul>
+<li><a class="reference internal" href="#pddb.browser.Browser.add_colored"><code class="docutils literal notranslate"><span class="pre">Browser.add_colored()</span></code></a></li>
+<li><a class="reference internal" href="#pddb.browser.Browser.search"><code class="docutils literal notranslate"><span class="pre">Browser.search()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Попередній розділ</h4>
+    <p class="topless"><a href="core.html"
+                          title="Попередній розділ">Базові функції</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>Ця сторінка</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/pddb.rst.txt"
+            rel="nofollow">Відобразити вихідний текст</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Швидкий пошук</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Вперед" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Навігація</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Загальний індекс"
+             >індекс</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >модулі</a> |</li>
+        <li class="right" >
+          <a href="core.html" title="Базові функції"
+             >попередній</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">XRCEA 0.2 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">База даних порошкової дифракції</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019-2020, Сергій Лисовенко.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    </div>
+  </body>
+</html>
