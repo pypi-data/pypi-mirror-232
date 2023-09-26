@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: fastjws
+Version: 1.0.1
+Summary: This library will help you use JWT authentication in FastAPI!
+Home-page: https://github.com/Eugenekochetov02/fastjws
+Author: EugeneKo
+Author-email: eugene.kochetov02@gmail.com
+Keywords: example python
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: fastapi (>=0.103.1)
+Requires-Dist: python-jose (>=3.3.0)
+
+# FastJWS
+
+This library will help you use JWT authentication in FastAPI!
+
+
+![Typing SVG](https://readme-typing-svg.herokuapp.com?color=%2336BCF7&lines=pip+install+fastjwt)
+if
+![Typing SVG](https://readme-typing-svg.herokuapp.com?color=%2336BCF7&lines=poetry+add+fastjwt)
