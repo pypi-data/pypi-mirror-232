@@ -1,0 +1,339 @@
+
+<!DOCTYPE html>
+
+<html lang="uk-UA">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Базові функції &#8212; XRCEA 0.2 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/nature.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/translations.js"></script>
+    <link rel="index" title="Індекс" href="genindex.html" />
+    <link rel="search" title="Пошук" href="search.html" />
+    <link rel="next" title="База даних порошкової дифракції" href="pddb.html" />
+    <link rel="prev" title="Специфікація формату XRD" href="xrd_spec.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Навігація</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Загальний індекс"
+             accesskey="I">індекс</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >модулі</a> |</li>
+        <li class="right" >
+          <a href="pddb.html" title="База даних порошкової дифракції"
+             accesskey="N">наступний</a> |</li>
+        <li class="right" >
+          <a href="xrd_spec.html" title="Специфікація формату XRD"
+             accesskey="P">попередній</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">XRCEA 0.2 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Базові функції</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-core">
+<span id="id1"></span><h1>Базові функції<a class="headerlink" href="#module-core" title="Permalink to this heading">¶</a></h1>
+<span class="target" id="module-core.idata"></span><p>Input data</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="core.idata.XrayData">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">core.idata.</span></span><span class="sig-name descname"><span class="pre">XrayData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.idata.XrayData" title="Постійне посилання на це визначення">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Параметри<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>fname</strong> (<em>string</em>) – Path to file with X-ray diffraction data.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="core.idata.XrayData.abstraction2plot">
+<span class="sig-name descname"><span class="pre">abstraction2plot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">abstr</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.idata.XrayData.abstraction2plot" title="Постійне посилання на це визначення">¶</a></dt>
+<dd><dl class="field-list simple">
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="core.idata.XrayData.corr_intens">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">corr_intens</span></span><a class="headerlink" href="#core.idata.XrayData.corr_intens" title="Постійне посилання на це визначення">¶</a></dt>
+<dd><p>correct intensity</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="core.idata.XrayData.display">
+<span class="sig-name descname"><span class="pre">display</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#core.idata.XrayData.display" title="Постійне посилання на це визначення">¶</a></dt>
+<dd><p>Display X-ray data as plot.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="core.idata.XrayData.from_obj">
+<span class="sig-name descname"><span class="pre">from_obj</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xrd</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.idata.XrayData.from_obj" title="Постійне посилання на це визначення">¶</a></dt>
+<dd><p>Get X-ray data from dict</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="core.idata.XrayData.get_obj">
+<span class="sig-name descname"><span class="pre">get_obj</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#core.idata.XrayData.get_obj" title="Постійне посилання на це визначення">¶</a></dt>
+<dd><p>Convets X-ray data into object.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="core.idata.XrayData.open">
+<span class="sig-name descname"><span class="pre">open</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fname</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.idata.XrayData.open" title="Постійне посилання на це визначення">¶</a></dt>
+<dd><p>Open file with X-ray data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметри<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>fname</strong> (<em>string</em>) – Path to file with X-ray data.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="core.idata.XrayData.open_xrd">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">open_xrd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fname</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.idata.XrayData.open_xrd" title="Постійне посилання на це визначення">¶</a></dt>
+<dd><p>Open xrd or dat file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметри<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>fname</strong> (<em>string</em>) – Path to xrd or dat file.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="core.idata.XrayData.rev_intens">
+<span class="sig-name descname"><span class="pre">rev_intens</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Icor</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.idata.XrayData.rev_intens" title="Постійне посилання на це визначення">¶</a></dt>
+<dd><p>reverse correct intensity</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="core.idata.ask_about_sample">
+<span class="sig-prename descclassname"><span class="pre">core.idata.</span></span><span class="sig-name descname"><span class="pre">ask_about_sample</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sdict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.idata.ask_about_sample" title="Постійне посилання на це визначення">¶</a></dt>
+<dd><p>Ask some details about the sample</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="core.idata.introduce_input">
+<span class="sig-prename descclassname"><span class="pre">core.idata.</span></span><span class="sig-name descname"><span class="pre">introduce_input</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#core.idata.introduce_input" title="Постійне посилання на це визначення">¶</a></dt>
+<dd><p>Introduce input</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="core.idata.open_xrd">
+<span class="sig-prename descclassname"><span class="pre">core.idata.</span></span><span class="sig-name descname"><span class="pre">open_xrd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fname</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.idata.open_xrd" title="Постійне посилання на це визначення">¶</a></dt>
+<dd><p>Open X-ray data file.</p>
+</dd></dl>
+
+<span class="target" id="module-core.project"></span><p>Operate with project file</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="core.project.vi_Project">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">core.project.</span></span><span class="sig-name descname"><span class="pre">vi_Project</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">project</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.project.vi_Project" title="Постійне посилання на це визначення">¶</a></dt>
+<dd></dd></dl>
+
+<section id="module-core.vi">
+<span id="id2"></span><h2>Візуалізація<a class="headerlink" href="#module-core.vi" title="Permalink to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="core.vi.ask_question">
+<span class="sig-prename descclassname"><span class="pre">core.vi.</span></span><span class="sig-name descname"><span class="pre">ask_question</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">title</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">question</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.vi.ask_question" title="Постійне посилання на це визначення">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Параметри<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>title</strong> (<em>string</em>) – Title of the window.</p></li>
+<li><p><strong>question</strong> (<em>string</em>) – A simple question.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="core.vi.copy_to_clipboard">
+<span class="sig-prename descclassname"><span class="pre">core.vi.</span></span><span class="sig-name descname"><span class="pre">copy_to_clipboard</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.vi.copy_to_clipboard" title="Постійне посилання на це визначення">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Параметри<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>text</strong> (<em>string</em>) – Text to copy into clipboard.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="core.vi.gui_exit">
+<span class="sig-prename descclassname"><span class="pre">core.vi.</span></span><span class="sig-name descname"><span class="pre">gui_exit</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#core.vi.gui_exit" title="Постійне посилання на це визначення">¶</a></dt>
+<dd><p>Quit the GUI.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="core.vi.input_dialog">
+<span class="sig-prename descclassname"><span class="pre">core.vi.</span></span><span class="sig-name descname"><span class="pre">input_dialog</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">title</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">question</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fields</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.vi.input_dialog" title="Постійне посилання на це визначення">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Параметри<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>title</strong> (<em>string</em>) – Title of the window.</p></li>
+<li><p><strong>question</strong> (<em>string</em><em> or </em><em>None</em>) – Question to ask.</p></li>
+<li><p><strong>fields</strong> (<em>list</em>) – List of tuples (name, value, [optional]).</p></li>
+<li><p><strong>parent</strong> (<em>NoneType</em>) – Not used.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="core.vi.print_error">
+<span class="sig-prename descclassname"><span class="pre">core.vi.</span></span><span class="sig-name descname"><span class="pre">print_error</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">title</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">info</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.vi.print_error" title="Постійне посилання на це визначення">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Параметри<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>title</strong> (<em>string</em>) – Title of the window.</p></li>
+<li><p><strong>info</strong> (<em>string</em>) – Information about error.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="core.vi.print_information">
+<span class="sig-prename descclassname"><span class="pre">core.vi.</span></span><span class="sig-name descname"><span class="pre">print_information</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">title</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">info</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.vi.print_information" title="Постійне посилання на це визначення">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Параметри<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>title</strong> (<em>string</em>) – Title of the window.</p></li>
+<li><p><strong>info</strong> (<em>string</em>) – Information itself.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="core.vi.print_status">
+<span class="sig-prename descclassname"><span class="pre">core.vi.</span></span><span class="sig-name descname"><span class="pre">print_status</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">status</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.vi.print_status" title="Постійне посилання на це визначення">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Параметри<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>status</strong> (<em>string</em>) – Status to print into statusbar.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="core.vi.register_dialog">
+<span class="sig-prename descclassname"><span class="pre">core.vi.</span></span><span class="sig-name descname"><span class="pre">register_dialog</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dlg</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.vi.register_dialog" title="Постійне посилання на це визначення">¶</a></dt>
+<dd><p>Send a dlg function to execution queue, which should be executed
+in GUI thread.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметри<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>dlg</strong> (<em>callable</em>) – Some function, which gets no parameters.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Базові функції</a><ul>
+<li><a class="reference internal" href="#core.idata.XrayData"><code class="docutils literal notranslate"><span class="pre">XrayData</span></code></a><ul>
+<li><a class="reference internal" href="#core.idata.XrayData.abstraction2plot"><code class="docutils literal notranslate"><span class="pre">XrayData.abstraction2plot()</span></code></a></li>
+<li><a class="reference internal" href="#core.idata.XrayData.corr_intens"><code class="docutils literal notranslate"><span class="pre">XrayData.corr_intens</span></code></a></li>
+<li><a class="reference internal" href="#core.idata.XrayData.display"><code class="docutils literal notranslate"><span class="pre">XrayData.display()</span></code></a></li>
+<li><a class="reference internal" href="#core.idata.XrayData.from_obj"><code class="docutils literal notranslate"><span class="pre">XrayData.from_obj()</span></code></a></li>
+<li><a class="reference internal" href="#core.idata.XrayData.get_obj"><code class="docutils literal notranslate"><span class="pre">XrayData.get_obj()</span></code></a></li>
+<li><a class="reference internal" href="#core.idata.XrayData.open"><code class="docutils literal notranslate"><span class="pre">XrayData.open()</span></code></a></li>
+<li><a class="reference internal" href="#core.idata.XrayData.open_xrd"><code class="docutils literal notranslate"><span class="pre">XrayData.open_xrd()</span></code></a></li>
+<li><a class="reference internal" href="#core.idata.XrayData.rev_intens"><code class="docutils literal notranslate"><span class="pre">XrayData.rev_intens()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#core.idata.ask_about_sample"><code class="docutils literal notranslate"><span class="pre">ask_about_sample()</span></code></a></li>
+<li><a class="reference internal" href="#core.idata.introduce_input"><code class="docutils literal notranslate"><span class="pre">introduce_input()</span></code></a></li>
+<li><a class="reference internal" href="#core.idata.open_xrd"><code class="docutils literal notranslate"><span class="pre">open_xrd()</span></code></a></li>
+<li><a class="reference internal" href="#core.project.vi_Project"><code class="docutils literal notranslate"><span class="pre">vi_Project</span></code></a></li>
+<li><a class="reference internal" href="#module-core.vi">Візуалізація</a><ul>
+<li><a class="reference internal" href="#core.vi.ask_question"><code class="docutils literal notranslate"><span class="pre">ask_question()</span></code></a></li>
+<li><a class="reference internal" href="#core.vi.copy_to_clipboard"><code class="docutils literal notranslate"><span class="pre">copy_to_clipboard()</span></code></a></li>
+<li><a class="reference internal" href="#core.vi.gui_exit"><code class="docutils literal notranslate"><span class="pre">gui_exit()</span></code></a></li>
+<li><a class="reference internal" href="#core.vi.input_dialog"><code class="docutils literal notranslate"><span class="pre">input_dialog()</span></code></a></li>
+<li><a class="reference internal" href="#core.vi.print_error"><code class="docutils literal notranslate"><span class="pre">print_error()</span></code></a></li>
+<li><a class="reference internal" href="#core.vi.print_information"><code class="docutils literal notranslate"><span class="pre">print_information()</span></code></a></li>
+<li><a class="reference internal" href="#core.vi.print_status"><code class="docutils literal notranslate"><span class="pre">print_status()</span></code></a></li>
+<li><a class="reference internal" href="#core.vi.register_dialog"><code class="docutils literal notranslate"><span class="pre">register_dialog()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Попередній розділ</h4>
+    <p class="topless"><a href="xrd_spec.html"
+                          title="Попередній розділ">Специфікація формату XRD</a></p>
+  </div>
+  <div>
+    <h4>Наступна тема</h4>
+    <p class="topless"><a href="pddb.html"
+                          title="наступний розділ">База даних порошкової дифракції</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>Ця сторінка</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/core.rst.txt"
+            rel="nofollow">Відобразити вихідний текст</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Швидкий пошук</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Вперед" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Навігація</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Загальний індекс"
+             >індекс</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >модулі</a> |</li>
+        <li class="right" >
+          <a href="pddb.html" title="База даних порошкової дифракції"
+             >наступний</a> |</li>
+        <li class="right" >
+          <a href="xrd_spec.html" title="Специфікація формату XRD"
+             >попередній</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">XRCEA 0.2 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Базові функції</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019-2020, Сергій Лисовенко.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    </div>
+  </body>
+</html>
