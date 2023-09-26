@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+pptx_ea_font/__init__.py
+pptx_ea_font.egg-info/PKG-INFO
+pptx_ea_font.egg-info/SOURCES.txt
+pptx_ea_font.egg-info/dependency_links.txt
+pptx_ea_font.egg-info/requires.txt
+pptx_ea_font.egg-info/top_level.txt

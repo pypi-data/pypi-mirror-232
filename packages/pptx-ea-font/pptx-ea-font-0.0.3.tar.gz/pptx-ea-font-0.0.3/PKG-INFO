@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: pptx-ea-font
+Version: 0.0.3
+Summary: Set east asia font in pptx correctly.
+Home-page: https://github.com/AndersonBY/pptx-ea-font
+Author: MakerBi
+Author-email: andersonby@163.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
