@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: tokreate
+Version: 0.1.0
+Summary: Paper QA backend
+Author-email: Luca Soldaini <lucas@allenai.org>
+License: Apache-2.0
+Project-URL: Homepage, https://github.com/soldni/tokreate
+Classifier: Development Status :: 3 - Alpha
+Classifier: Typing :: Typed
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: pyllms==0.3.0
+Requires-Dist: pysbd==0.3.4
+Requires-Dist: jinja2
+Requires-Dist: boto3
+Requires-Dist: numpy
+Requires-Dist: watchtower
+Requires-Dist: logging_json==0.4.0
+Provides-Extra: dev
+Requires-Dist: black>=22.6.0; extra == "dev"
+Requires-Dist: isort>=5.10.1; extra == "dev"
+Requires-Dist: mypy>=0.971; extra == "dev"
+Requires-Dist: pytest>=5.2; extra == "dev"
+Requires-Dist: ipython>=8.4.0; extra == "dev"
+Requires-Dist: autopep8>=1.7.0; extra == "dev"
+Requires-Dist: flake8>=5.0; extra == "dev"
+Requires-Dist: ipdb>=0.13.0; extra == "dev"
+Requires-Dist: flake8-pyi>=22.8.1; extra == "dev"
+Requires-Dist: Flake8-pyproject>=1.1.0; extra == "dev"
+
+<h1 align="center">Tokreate</h1>
+
+<p align="center">
+    <img alt="Tokreate official logo" src="docs/res/tokreation_1x.png" width="50%">
+</p>
+
+A library to create tokens using LLMs.
