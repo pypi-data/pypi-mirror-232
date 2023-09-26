@@ -1,0 +1,11 @@
+numpy
+
+[reproduce_astat]
+numpy~=1.24.3
+scipy~=1.11.1
+matplotlib~=3.7.1
+pandas~=2.0.2
+seaborn~=0.12.2
+big-O~=0.11.0
+pycurl~=7.45.2
+p-tqdm~=1.4.0
