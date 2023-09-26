@@ -1,0 +1,2 @@
+[console_scripts]
+pyxel_app = PyxelApp.pyxel_app:pyxel_app
