@@ -1,0 +1,12 @@
+kornia_moons/__init__.py,sha256=XHypfHSPdgXFKmOdoewn7czU670gt8InhHhzlP5j_aA,22
+kornia_moons/_modidx.py,sha256=TUgPMZBRisj0RvU56JC1qAhl7yNRmcz15bDq34Im1bo,7973
+kornia_moons/_nbdev.py,sha256=tib1400erW5IWxk8ZIIh3nB_OBzH5LvTCqBggZFcJVk,1358
+kornia_moons/feature.py,sha256=ql2N0Dznd68PW9JRol_ErNP4QIdcNFtjP_fswfJBNgk,8614
+kornia_moons/line.py,sha256=xKUAaGV1DG9aWz43-lbaMOGm7Qh4e6j7_MPYw8map_4,1301
+kornia_moons/viz.py,sha256=hnUQLgRP9xk7pUkVTs9UGi933WlNuW4YDLb6oQHHfuc,19274
+kornia_moons-0.2.8.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+kornia_moons-0.2.8.dist-info/METADATA,sha256=dsErvoBjoy7nLgDexeGSl5pBPw45rIQ5UCAvcv3zxH8,2240
+kornia_moons-0.2.8.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+kornia_moons-0.2.8.dist-info/entry_points.txt,sha256=eZSS46dqCAfyAGXEEjZ7Vf8VSpJpD-5wnXV7mFFOHw4,46
+kornia_moons-0.2.8.dist-info/top_level.txt,sha256=tQkbtbzvuRGoIFIbh7ZHP9otMxzlBJGDF3r_2_GGWNw,13
+kornia_moons-0.2.8.dist-info/RECORD,,
