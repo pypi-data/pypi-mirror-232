@@ -1,0 +1,83 @@
+Metadata-Version: 2.1
+Name: DustyGlow
+Version: 0.0.1
+Summary: DustyGlow is a standalone python library with Fortran legacy routines for absorption (attenuation) and python scripts for remission of dust in the IR. IMPORTANT: It uses the optically thin limit.
+Home-page: https://github.com/neutrinomuon/DustyGlow
+Author: Jean Gomes
+Author-email: antineutrinomuon@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Fortran
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+# DustyGlow - Absorption (Attenuation) and Reemission of Dust Particles
+
+**Authors:** Jean Gomes, Catarina Lobo  
+**Student:** André Pinheiro
+
+**Contact:**  
+- Jean Gomes: [antineutrinomuon@gmail.com](mailto:antineutrinomuon@gmail.com), [jean@astro.up.pt](mailto:jean@astro.up.pt)
+
+last stable version: 0.0.1
+
+## About
+DustyGlow is a software program designed for absorption (ATTENUATION) and reemission analysis. This README file provides essential information about the project.
+
+## Contributors
+
+- Jean Gomes (Software Developer, Advisor): Jean is primarily responsible for
+  the software development and implementation of DustyGlow. He provided
+  guidance and served as an advisor throughout the project.
+
+- Catarina Lobo (Co-Advisor): Catarina provided valuable assistance during the
+  project. She also help guided in the selection of the sample. She co-advised
+  the project, offering insights and expertise.
+
+- André Pinheiro (MSc Student): André contributed to the project as a Master's
+  student. He actively participated in the research and test of the code
+  DustyGlow.
+
+![Barnard 68](figures/Barnard-68.jpeg)
+Barnard 68 is a molecular cloud, dark absorption nebula or Bok globule.
+
+<table>
+
+<tr><td align='center'><img width=50 src="https://github.com/neutrinomuon/PyDust/blob/main/figures/logs.jpg?raw=true"></td><td>LOGS</td></tr>
+
+<tr><td>19/12/2022</td>
+<td>J.G. changed nomenclature from Remission to Reemission. All directories and routines were affected</td></tr>
+
+<tr><td>18/11/2022</td>
+<td>A.P. added photometric and output directories to PyDust</td></tr>
+
+
+<tr><td>24/10/2022</td>
+<td>J.G. added new format for LOGs added. Verification and change of directory structure</td></tr>
+
+<tr><td>16/10/2021</td>
+<td>J.G. uploaded the routines concerning absorption in the UV/Optical. Try to plot them as a function of wavelength from 91 to 15000 Angstroms to see the different behavior of extinction laws.</td></tr>
+
+<tr><td>15/01/2022</td>
+<td>J.G. uploaded correction for the reddening laws. We can use as well to compare the extinction package, but it is limited to a few extinction laws.<p>
+
+J.G. added a directory called Literature. Please feel free to include papers of interest.
+</td></tr>
+
+<tr><td>14/01/2022</td>
+<td>J.G. uploaded the recorded video from our joint meeting on 13/01/2022. The purpose of this meeting was to have a first grasp of the PyDust.py module.</td></tr>
+
+<tr><td>12/01/2022</td>
+<td>J.G. uploaded the PyDust module written in Python.</td></tr>
+
+<tr><td>05/06/2023</td>
+<td>J.G. modified the PyDust module in order to implement optimisation</td></tr>
+
+<tr><td>25/09/2023</td> <td>J.G. modified the name PyDust to DustyGlow, since
+there was during this year a registration of the PyDust package on the PyPI
+library, which is not related to astronomy.</td></tr>
+
+<tr><td>25/09/2023</td> <td>J.G. registered the name DustyGlow in the PyPI
+platform.</td></tr>
+
+</table>

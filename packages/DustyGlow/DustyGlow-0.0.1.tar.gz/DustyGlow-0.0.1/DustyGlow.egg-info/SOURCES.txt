@@ -1,0 +1,10 @@
+LICENSE.txt
+README.md
+setup.py
+version.txt
+DustyGlow.egg-info/PKG-INFO
+DustyGlow.egg-info/SOURCES.txt
+DustyGlow.egg-info/dependency_links.txt
+DustyGlow.egg-info/requires.txt
+DustyGlow.egg-info/top_level.txt
+src/python/__init__.py
