@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: aiopyami
+Version: 0.1.2
+Summary: An asynchronous Asterisk AMI Client for Python
+Home-page: https://github.com/Zahgrom34/aiopyami
+Author: Zahcoder34
+Author-email: Zakhriw@gmail.com
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Framework :: AsyncIO
+Classifier: Topic :: Communications :: Telephony
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+License-File: LICENSE
