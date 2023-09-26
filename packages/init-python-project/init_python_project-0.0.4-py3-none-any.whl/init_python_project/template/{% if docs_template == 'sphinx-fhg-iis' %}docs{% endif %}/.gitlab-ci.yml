@@ -1,0 +1,27 @@
+variables:
+  PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
+
+cache:
+  paths:
+    - .cache/pip # cache the pip cache
+
+workflow:
+  rules: # Pipeline only runs for schedules jobs and pushes to the repository
+    - if: '$CI_PIPELINE_SOURCE == "schedule"'
+      when: always
+    - if: '$CI_PIPELINE_SOURCE == "push"'
+      when: always
+    - if: '$CI_PIPELINE_SOURCE == "web"'
+      when: always
+    - when: never
+
+include: .gitlab/docs.yml
+
+pages:
+  needs: ["docs"]
+  artifacts:
+    paths:
+      - public
+  script:
+    - mv build/docs public
+    - ls public

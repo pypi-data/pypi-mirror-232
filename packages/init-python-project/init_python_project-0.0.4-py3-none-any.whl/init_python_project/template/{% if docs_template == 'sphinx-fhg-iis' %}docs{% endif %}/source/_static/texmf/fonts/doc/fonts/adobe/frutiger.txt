@@ -1,0 +1,55 @@
+============================================================
+
+             Adobe Frutiger Font Pack for LaTeX
+   
+============================================================
+                                                  2004-08-08
+                                              Walter Schmidt
+                                         w.a.schmidt@gmx.net
+
+Loading of the macro package frutiger.sty, i.e.
+
+  \usepackage{frutiger}
+
+makes LaTeX use Adobe Frutiger as the default sans serif
+font family.
+
+
+Optional Scaling:
+
+The Frutiger fonts appear larger than many others, when used
+with the same nominal size.  The macro package provides an
+option to scale them, in order to make blending with other
+fonts easier.  For instance,
+
+  \usepackage[scaled=0.90]{frutiger}
+
+will scale the Frutiger fonts down to 90% of their nominal
+size.  When the value is omitted, a default scale of 0.95 is
+assumed:
+
+  \usepackage[scaled]{frutiger}
+
+
+
+NFSS classification:
+
+family  series shape(s) FontName
+------------------------------------------------------------
+pfr     l      n, it    Frutiger-Light, Frutiger-LightItalic
+pfr     m      n, it    Frutiger-Roman, Frutiger-Italic
+pfr     b      n, it    Frutiger-Bold, Frutiger-BoldItalic
+pfr     eb     n, it    Frutiger-Black,Frutiger-BlackItalic
+pfr     ub     n        Frutiger-UltraBlack
+pfr     lc     n        Frutiger-LightCn
+pfr     mc     n        Frutiger-Cn
+pfr     bc     n        Frutiger-BoldCn
+pfr     ebc    n        Frutiger-BlackCn
+pfr     ubc    n        Frutiger-ExtraBlackCn
+
+Available encodings:  OT1 (obsolete), T1 (European), TS1
+(text companion).  The text companion fonts include only the
+glyphs of the ISO-Adobe character set.
+
+
+== finis

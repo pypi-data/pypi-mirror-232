@@ -1,0 +1,1 @@
+gitdir: ../../.git/modules/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}

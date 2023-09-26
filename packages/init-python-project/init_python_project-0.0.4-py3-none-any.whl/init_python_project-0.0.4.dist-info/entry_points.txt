@@ -1,0 +1,2 @@
+[console_scripts]
+init-python-project = init_python_project.cli:app

@@ -1,0 +1,35 @@
+%% file `frutiger.sty'
+%% Copyright (c) 2003--2004 Walter Schmidt
+%%
+\ProvidesPackage{frutiger}[2004/08/08 Frutiger font as default sans (WaS)]
+\RequirePackage{keyval}
+\define@key{Pfr}{scaled}[.95]{%
+  \def\pfr@Scale{#1}}
+\def\ProcessOptionsWithKV#1{%
+  \let\@tempc\relax
+  \let\Pfr@tempa\@empty
+  \@for\CurrentOption:=\@classoptionslist\do{%
+    \@ifundefined{KV@#1@\CurrentOption}%
+    {}%
+    {%
+      \edef\Pfr@tempa{\Pfr@tempa,\CurrentOption,}%
+      \@expandtwoargs\@removeelement\CurrentOption
+        \@unusedoptionlist\@unusedoptionlist
+    }%
+  }%
+  \edef\Pfr@tempa{%
+    \noexpand\setkeys{#1}{%
+      \Pfr@tempa\@ptionlist{\@currname.\@currext}%
+    }%
+  }%
+  \Pfr@tempa
+  \let\CurrentOption\@empty
+}
+\ProcessOptionsWithKV{Pfr}
+\AtEndOfPackage{%
+  \let\@unprocessedoptions\relax
+}
+\renewcommand{\sfdefault}{pfr}
+\endinput
+%%
+%% End of file `frutiger.sty'.

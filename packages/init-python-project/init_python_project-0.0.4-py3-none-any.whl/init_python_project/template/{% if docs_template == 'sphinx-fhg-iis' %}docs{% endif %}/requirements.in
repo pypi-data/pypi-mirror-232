@@ -1,0 +1,10 @@
+sphinx
+pydata-sphinx-theme
+sphinx-design
+sphinx_tabs
+sphinx-copybutton
+sphinxcontrib-bibtex
+breathe
+sphinxcontrib-mermaid
+myst_parser
+
