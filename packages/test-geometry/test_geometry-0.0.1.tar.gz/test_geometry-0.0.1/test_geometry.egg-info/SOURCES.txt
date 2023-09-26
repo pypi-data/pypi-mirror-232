@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+test_geometry/__init__.py
+test_geometry/planimetry.py
+test_geometry/stereometry.py
+test_geometry.egg-info/PKG-INFO
+test_geometry.egg-info/SOURCES.txt
+test_geometry.egg-info/dependency_links.txt
+test_geometry.egg-info/top_level.txt
