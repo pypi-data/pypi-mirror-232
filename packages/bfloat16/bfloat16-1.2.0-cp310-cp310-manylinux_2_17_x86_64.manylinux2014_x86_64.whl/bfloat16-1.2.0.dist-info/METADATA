@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: bfloat16
+Version: 1.2.0
+Summary: Numpy bfloat16 package
+Home-page: https://github.com/GreenWaves-Technologies/bfloat16
+Download-URL: https://github.com/GreenWaves-Technologies/bfloat16/archive/refs/tags/1.0.tar.gz
+Author: GreenWaves Technologies
+Author-email: GreenWaves Technologies <support@greenwaves-technologies.com>
+Project-URL: Homepage, https://github.com/GreenWaves-Technologies/bfloat16
+Project-URL: Bug Tracker, https://github.com/GreenWaves-Technologies/bfloat16/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires: numpy
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+# Numpy bfloat16
+
+This package is a port and enhancement of the TensorFlow bfloat package to normal numpy. It adds a bfloat16 dtype that supports most common numpy operations.
+
