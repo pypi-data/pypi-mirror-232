@@ -1,0 +1,73 @@
+Python library for tracking and forecasting precipitation.
+
+## Download package
+```bash
+git clone https://github.com/hydrotrack-project/hydrotrack/
+```
+
+## Instalation
+Create a Python env using Anaconda3, Miniconda, Mamba, or etc.
+```bash
+conda create -n hydrotrack python=3.11.4
+conda activate hydrotrack
+```
+
+Install package from local file
+```bash
+cd hydrotrack
+pip3 install -r requirements.txt
+```
+or just type:
+```bash
+pip3 install hydrotrack
+```
+
+## Example of usage
+```python 
+import hydrotrack
+
+# Create name_list of parameters
+name_list = {}
+name_list['input_path'] = 'data_sample/' # Input data
+name_list['output_path'] = 'output/' # Output data
+name_list['thresholds'] = [20,30,40] # in dbz
+name_list['min_cluster_size'] = [10,5,3] # in number of points per cluster
+name_list['mean_dbz'] = True # Using Marshall-Palmer formula to convert dbz to mm/h and calculate statistics
+name_list['min_overlap'] = 10 # in percentage
+name_list['operator'] = '>=' # '>=', '<=' or '=='
+name_list['timestamp_pattern'] = '%Y%m%d_%H%M%S.nc'
+name_list['delta_time'] = 12 # in minutes
+name_list['delta_tolerance'] = 0 # times
+name_list['delta_skip'] = 0 # times
+name_list['edge_limit'] = 'left' # 'None', 'right', 'left' or 'bottom' or 'top'
+name_list['x_dim'] = 241
+name_list['y_dim'] = 241
+name_list['lon_min'] = -62.1475
+name_list['lon_max'] = -57.8461
+name_list['lat_min'] = -5.3048
+name_list['lat_max'] = -0.9912
+name_list['n_jobs'] = -1 # -1 all cores
+
+# Set read data fucntion
+import xarray as xr
+def read_function(path):
+	data = xr.open_dataarray(path).data
+	return data
+
+# Run extrack features
+hydrotrack.extract_features(name_list, read_function)
+# Run spatial operations
+hydrotrack.spatial_operations(name_list, read_function)
+# Run trajectory linking
+hydrotrack.trajectory_linking(name_list)
+# Run vector methods
+hydrotrack.vector_methods(name_list, read_function, previous_times=2, 
+                          merge=True, tempavg=True, icor=True, optflow=True, opt_mtd='lucas-kanade')
+# Geo transform features to Geofile
+hydrotrack.geotransform(name_list, geometries=True, clusters=True,
+                        vector_field=True, trajectories=True, comp_lvl=9, geo_format='GPKG')
+```
+
+
+## Support
+For support, email helvecio.neto@inpe.br, alan.calheiros@inpe.br
