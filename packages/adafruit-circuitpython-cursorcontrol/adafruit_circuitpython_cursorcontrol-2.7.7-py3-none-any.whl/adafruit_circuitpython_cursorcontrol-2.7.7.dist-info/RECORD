@@ -1,0 +1,8 @@
+adafruit_cursorcontrol/__init__.py,sha256=vFJ07D6iQ5FqrvYeXfsMlTMKmupwsa9hFtoNlR4rGKk,435
+adafruit_cursorcontrol/cursorcontrol.py,sha256=vAVJQ1SeAtgi2XiOIip_plAVBGyqfeSlU5jhTi7ksLY,7874
+adafruit_cursorcontrol/cursorcontrol_cursormanager.py,sha256=ng6ivtzLi9p649lLW9shzSBhCRv-vIDdhulxqed3o10,11830
+adafruit_circuitpython_cursorcontrol-2.7.7.dist-info/LICENSE,sha256=weMu1j2iPl1GPp5G3JzU6u2ggcX_zXu1dpDs6Hc_Ys4,1103
+adafruit_circuitpython_cursorcontrol-2.7.7.dist-info/METADATA,sha256=_-qLT28NbJd5fG5eUVT3sLtivMGj1X1ue_WPeef914w,3482
+adafruit_circuitpython_cursorcontrol-2.7.7.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+adafruit_circuitpython_cursorcontrol-2.7.7.dist-info/top_level.txt,sha256=BcLDtz_Cku45EdelBnqt88fyOBhJkuo9UzEea5W1cc4,23
+adafruit_circuitpython_cursorcontrol-2.7.7.dist-info/RECORD,,
