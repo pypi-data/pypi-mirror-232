@@ -1,0 +1,2 @@
+[console_scripts]
+vtjp = vasttrafik.__main__:main
