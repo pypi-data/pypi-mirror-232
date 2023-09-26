@@ -1,0 +1,17 @@
+tshistory_xl/ZTSHISTORY.xlam,sha256=BE-BIis6_zfgvnKpOh4v6UOgLw6C0QbTw93C2eUq5GI,25356
+tshistory_xl/__init__.py,sha256=x2pOclYRECzfJMAd4sw67W_FEUEXKPUoISgurYPhSRg,22
+tshistory_xl/api.py,sha256=Lc_pHZbnGHwFNESxqMiYpxxyfYO7k_b1zyi7kURWjwM,1226
+tshistory_xl/blueprint.py,sha256=b2lRJfggXaY4fBzmSQIU27RDlpBWWG9YLu-oZAySVms,2436
+tshistory_xl/cli.py,sha256=V7F0Sb8ErNguc1Ep7iFiWXCy16HVk1_56SkBdEjnw_0,3002
+tshistory_xl/codecs.py,sha256=fufJRMSVjKVq3xaa3JV1WXPJko5kALBUMjiv58n0Nqw,4399
+tshistory_xl/excel_connect.py,sha256=0HRivjN-FMtDsUqTjV3qsYx0dbAgf2KWGCki-m-yf7c,29399
+tshistory_xl/funcs.py,sha256=x9IJgdrWRrWj3NKk868YlfRPkf1W6gw8oiepSarbQNw,825
+tshistory_xl/http.py,sha256=HgDY1j7dPCQVb6dRub2hSS8ThZoFfrvEgeoLTvTfBuQ,3502
+tshistory_xl/http_custom.py,sha256=0aSAPhPPhS5Q5FEfPe_tfx-HVGPuT_IsmTqNjhAzKFU,1497
+tshistory_xl/testutil.py,sha256=lr038Fh-shRBeX8XHQnRyv4Dd13FXpuOCAbE2gExrGo,558
+tshistory_xl/tsio.py,sha256=XAgaQ4U0WNGgmFNQa2dmkDJlnWSaXfmbkj6MdfIi3k4,2971
+tshistory_xl-0.7.1.dist-info/METADATA,sha256=mwVTWXVxfS6V_1VeAfYgb-gMRR6xgL6bao2Ue439Es0,9826
+tshistory_xl-0.7.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+tshistory_xl-0.7.1.dist-info/entry_points.txt,sha256=0EEveSVCNOZZgAiwPnxGgjyz-CAK9AM6ITzXnMatr58,203
+tshistory_xl-0.7.1.dist-info/top_level.txt,sha256=S-q1thjjr8yJmgwv5Q5HKtX1q9ovTfW6_Pi_4_bXRZE,13
+tshistory_xl-0.7.1.dist-info/RECORD,,
