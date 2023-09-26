@@ -1,0 +1,14 @@
+napari_generic_simulator/Illumination.py,sha256=nHZv9TXrCpm1YiD-ifcnnjgLr-3OenqzspVfpSi7FIs,7640
+napari_generic_simulator/__init__.py,sha256=17MeJPK4BRyAUJWi6zLYDf4Pvj8MUnNm3Du7NAYVYbk,224
+napari_generic_simulator/_version.py,sha256=Vx0AoK76Okge20HOXnTbzQWG2fASGO_6i0xE_iMSyw8,274
+napari_generic_simulator/_widget.py,sha256=Uh2w-TbQw5f4N-xtJwMXVlLJDNrIPA_jfQMNaSCM9EM,27734
+napari_generic_simulator/baseSIMulator.py,sha256=mmXbpIMvUUP0_peUkm3emUcLGNSG_tF3fxJ7EvK00eU,23973
+napari_generic_simulator/napari.yaml,sha256=aI5Md-sSW8TFGc1tqI7UcDOBuO3pnz4ZGBAnGdzDVB0,622
+napari_generic_simulator/_tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+napari_generic_simulator/_tests/test_widget.py,sha256=YlvLi8dfkkElTpiimoqpxTkThyYLskrqwLVtzRPj54I,332
+napari_generic_SIMulator-0.1.2.dist-info/LICENSE,sha256=YUt803Pvt9yLlJpGxWZOqrv46XrjW8M6DJIajdcZWVU,1495
+napari_generic_SIMulator-0.1.2.dist-info/METADATA,sha256=-H_TeFuibr49mdtgXv6pc0RWgKf-Mh9dkoZ3zE9jnbA,8065
+napari_generic_SIMulator-0.1.2.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+napari_generic_SIMulator-0.1.2.dist-info/entry_points.txt,sha256=iuSSzMisd8gz_N1aanV0GcQdlbnn_8_mjsEtvoX5XCw,82
+napari_generic_SIMulator-0.1.2.dist-info/top_level.txt,sha256=Ad2uRdtZlDQEAfjBsJialNfInpRrQoqp1y8TIZK4jlw,25
+napari_generic_SIMulator-0.1.2.dist-info/RECORD,,
