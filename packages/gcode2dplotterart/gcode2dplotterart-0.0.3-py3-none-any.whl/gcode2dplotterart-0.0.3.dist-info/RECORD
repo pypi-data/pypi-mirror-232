@@ -1,0 +1,12 @@
+gcode2dplotterart/Image.py,sha256=PeVlP7Hbev0dOVUPGiplkYkhPOIl_xUBMa9m6nZYJDk,4420
+gcode2dplotterart/Instructions.py,sha256=2GcPfRAXgOWyXx_N8uMLFy7q5N9FH4pphvWbp1fePvI,5851
+gcode2dplotterart/Plotter.py,sha256=s9ElvUzSZOqfxlvftjWEalg7Pm4dR7YwtTht1gBBVys,437
+gcode2dplotterart/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gcode2dplotterart/image_algorithms.py,sha256=ZlIRYbfv7bc7T-gm4pm2hHG-wHOnVDF4x43T-FYhwQQ,1636
+gcode2dplotterart/main.py,sha256=Cxc3vQCPA3FDF8aStkeuEemxgF8gbknf7KVhL1A4oEg,1256
+gcode2dplotterart/math_algorithms.py,sha256=lSxZ-dh1bK6iUu6wQ3bQsV0OUXLVktQ5pKIbX83ayNM,4680
+gcode2dplotterart/utils.py,sha256=qECzoxqdAmSfyNAuGA5l7pygnKhesjfdlc7CJNSJovg,99
+gcode2dplotterart-0.0.3.dist-info/METADATA,sha256=uS646_O6WKupxTTEllpp8uPzkVW2RdueiGSXNlKIa4U,815
+gcode2dplotterart-0.0.3.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+gcode2dplotterart-0.0.3.dist-info/licenses/LICENSE,sha256=JIaYIzE3d5CRrc27qFhd7IiFCKr6KThMHvFfXPxZiUs,1072
+gcode2dplotterart-0.0.3.dist-info/RECORD,,
