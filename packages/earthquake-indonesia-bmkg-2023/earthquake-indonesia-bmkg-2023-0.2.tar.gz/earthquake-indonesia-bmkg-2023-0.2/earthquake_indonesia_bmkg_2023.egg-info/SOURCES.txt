@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+earthquake_indonesia_bmkg_2023.egg-info/PKG-INFO
+earthquake_indonesia_bmkg_2023.egg-info/SOURCES.txt
+earthquake_indonesia_bmkg_2023.egg-info/dependency_links.txt
+earthquake_indonesia_bmkg_2023.egg-info/top_level.txt
+recentearthquake/__init__.py
