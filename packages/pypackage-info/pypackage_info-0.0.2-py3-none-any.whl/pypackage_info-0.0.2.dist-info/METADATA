@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: pypackage-info
+Version: 0.0.2
+Summary: A very simple tool. Can output the name, version, last modified time, and location of the installed module in the current environment in a tabular form at the terminal.
+Home-page: https://github.com/PCCAG/pypackages-info
+Author: PCCAG
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# pypackages-info
+A simple tool. Can output the name, version, last modified time, and location of the installed module in the current environment in a tabular form at the terminal.
+
+
+```bash
+pip insatll .
+pypackage-info
+python -m pypackage-info
+```
+
+![1695647724716](https://github.com/PCCAG/pypackages-info/blob/master/image/readme/1695647724716.png?raw=true)
