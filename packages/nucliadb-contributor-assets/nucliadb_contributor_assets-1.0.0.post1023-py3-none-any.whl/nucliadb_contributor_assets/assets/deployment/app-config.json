@@ -1,0 +1,12 @@
+{
+  "version": "fafa3077af75930552a0d1756ef4f4ca39cf5dca",
+  "production": true,
+  "backend": {
+    "app": "contributor",
+    "apiPath": "/api",
+    "siteKey": "",
+    "sentry_environment": "prod",
+    "sentry_url": "https://76bfd6392db6450a8f3174877b9bac9d@o393980.ingest.sentry.io/5425081",
+    "sentry_backend": "https://nuclia.cloud/api"
+  }
+}
