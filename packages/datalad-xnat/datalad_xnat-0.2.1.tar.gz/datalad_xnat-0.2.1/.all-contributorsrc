@@ -1,0 +1,146 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "mih",
+      "name": "Michael Hanke",
+      "avatar_url": "https://avatars.githubusercontent.com/u/136479?v=4",
+      "profile": "http://psychoinformatics.de",
+      "contributions": [
+        "code",
+        "bug",
+        "doc",
+        "ideas",
+        "maintenance"
+      ]
+    },
+    {
+      "login": "loj",
+      "name": "Laura Waite",
+      "avatar_url": "https://avatars.githubusercontent.com/u/15157717?v=4",
+      "profile": "https://github.com/loj",
+      "contributions": [
+        "code",
+        "bug",
+        "ideas",
+        "maintenance"
+      ]
+    },
+    {
+      "login": "adswa",
+      "name": "Adina Wagner",
+      "avatar_url": "https://avatars.githubusercontent.com/u/29738718?v=4",
+      "profile": "http://www.adina-wagner.com",
+      "contributions": [
+        "code",
+        "bug",
+        "doc",
+        "ideas",
+        "maintenance"
+      ]
+    },
+    {
+      "login": "jwodder",
+      "name": "John T. Wodder II",
+      "avatar_url": "https://avatars.githubusercontent.com/u/98207?v=4",
+      "profile": "https://github.com/jwodder",
+      "contributions": [
+        "code",
+        "ideas",
+        "maintenance"
+      ]
+    },
+    {
+      "login": "yarikoptic",
+      "name": "Yaroslav Halchenko",
+      "avatar_url": "https://avatars.githubusercontent.com/u/39889?v=4",
+      "profile": "http://www.onerussian.com",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "JanviRaina",
+      "name": "Janvi Raina",
+      "avatar_url": "https://avatars.githubusercontent.com/u/50794649?v=4",
+      "profile": "https://github.com/JanviRaina",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "jsheunis",
+      "name": "Stephan Heunis",
+      "avatar_url": "https://avatars.githubusercontent.com/u/10141237?v=4",
+      "profile": "https://jsheunis.github.io/",
+      "contributions": [
+        "infra",
+        "design",
+        "mentoring"
+      ]
+    },
+    {
+      "login": "tsankeuodelfa",
+      "name": "tsankeuodelfa",
+      "avatar_url": "https://avatars.githubusercontent.com/u/83062549?v=4",
+      "profile": "https://github.com/tsankeuodelfa",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "mslw",
+      "name": "Michał Szczepanik",
+      "avatar_url": "https://avatars.githubusercontent.com/u/11985212?v=4",
+      "profile": "https://github.com/mslw",
+      "contributions": [
+        "doc",
+        "code"
+      ]
+    },
+    {
+      "login": "bpoldrack",
+      "name": "Benjamin Poldrack",
+      "avatar_url": "https://avatars.githubusercontent.com/u/10498301?v=4",
+      "profile": "https://github.com/bpoldrack",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "aqw",
+      "name": "Alex Waite",
+      "avatar_url": "https://avatars.githubusercontent.com/u/765557?v=4",
+      "profile": "https://github.com/aqw",
+      "contributions": [
+        "question",
+        "doc",
+        "tutorial"
+      ]
+    },
+    {
+      "login": "oportoles",
+      "name": "oportoles",
+      "avatar_url": "https://avatars.githubusercontent.com/u/89771034?v=4",
+      "profile": "https://github.com/oportoles",
+      "contributions": [
+        "userTesting",
+        "doc",
+        "bug",
+        "tutorial"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "datalad-xnat",
+  "projectOwner": "datalad",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true,
+  "commitType": "docs",
+  "commitConvention": "angular"
+}

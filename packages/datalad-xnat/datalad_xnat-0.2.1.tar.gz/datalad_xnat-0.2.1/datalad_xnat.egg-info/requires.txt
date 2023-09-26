@@ -1,0 +1,11 @@
+datalad>=0.18.0
+requests
+
+[devel]
+coverage
+pytest
+pytest-cov
+
+[devel-utils]
+pytest-xdist
+scriv
