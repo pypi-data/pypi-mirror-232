@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: izulu
+Version: 0.0.1
+Summary: An exceptional library
+Author-email: Dima Burmistrov <pyctrl.dev@gmail.com>
+Project-URL: Homepage, https://gitlab.com/pyctrl/izulu
+Project-URL: Bug Tracker, https://gitlab.com/pyctrl/izulu/-/issues
+Keywords: exception,error,izulu
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+
+izulu
+=====
+
+*"An exceptional library"*
+
+
+Contributing
+------------
+
+Contact me through `Issues <https://gitlab.com/pyctrl/izulu/-/issues>`__.
+
+
+Versioning
+----------
+
+We use `SemVer <http://semver.org/>`__ for versioning. For the versions
+available, see the `tags on this
+repository <https://gitlab.com/pyctrl/izulu/-/tags>`__.
+
+
+Authors
+-------
+
+-  **Dima Burmistrov** - *Initial work* -
+   `pyctrl <https://gitlab.com/pyctrl/>`__
+
+*Special thanks to* `Eugene Frolov <https://github.com/phantomii/>`__ *for inspiration.*
+
+
+License
+-------
+
+This project is licensed under the MIT/X11 License - see the
+`LICENSE <https://gitlab.com/pyctrl/izulu/-/blob/main/LICENSE>`__ file for details
