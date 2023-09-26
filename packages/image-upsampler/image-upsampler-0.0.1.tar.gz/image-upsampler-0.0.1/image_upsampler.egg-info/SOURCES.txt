@@ -1,0 +1,7 @@
+README.md
+setup.py
+image_upsampler.egg-info/PKG-INFO
+image_upsampler.egg-info/SOURCES.txt
+image_upsampler.egg-info/dependency_links.txt
+image_upsampler.egg-info/requires.txt
+image_upsampler.egg-info/top_level.txt
