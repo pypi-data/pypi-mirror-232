@@ -1,0 +1,19 @@
+name: zshgpt
+summary: Power up your zsh with gpt
+description: Power up your zsh with gpt.
+version: git
+grade: stable
+confinement: devmode
+base: core20
+architectures:
+  - build-on: [arm64, armhf, amd64]
+
+apps:
+  zshgpt:
+    command: bin/zshgpt
+    plugs: [home, network, network-bind, removable-media]
+
+parts:
+  zshgpt:
+    plugin: python
+    python-packages: [zshgpt]
