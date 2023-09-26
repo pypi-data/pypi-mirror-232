@@ -1,0 +1,65 @@
+Metadata-Version: 2.1
+Name: custom-user-profile
+Version: 1.0.0
+Summary: A django app to create and use custom user profiles
+Home-page: https://github.com/Anjaan-g/custom-user-profile
+Author: Sagar Gaire
+Author-email: anjaangaire@gmail.com
+License: BSD-3-Clause
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 4.2
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Custom User Profile
+
+[![Upload to PyPi](https://github.com/Anjaan-g/custom-user-profile/actions/workflows/python-publish.yml/badge.svg?branch=main)](https://github.com/Anjaan-g/custom-user-profile/actions/workflows/python-publish.yml)
+
+Custom User Profile is a django app to create custom user model with the ability to register
+new users with custom forms and rich stylings.
+
+Detailed documentation is in the 'docs' directory.
+
+## Quick Start
+
+1. Add 'users' to your INSTALLED_APPS setting like this:
+
+```python
+INSTALLED_APPS = [
+    ...,
+    'users',
+]
+```
+
+2. Modify the AUTH_USER_MODEL setting in your settings.
+
+```python
+AUTH_USER_MODEL = 'users.CustomUser'
+```
+
+3. Include the users URLconf in your project urls.py like this:
+
+```python
+urlpatterns=[
+    ...,
+    path('users/', include('users.urls')),
+]
+```
+
+4. Run `python manage.py migrate` to create the users models.
+5. Start the development server and visit `http://127.0.0.1:8000/admin/` to create a user. (You'll need the admin app enabled)
+6. Visit http://127.0.0.1:8000/users/register to register new users.

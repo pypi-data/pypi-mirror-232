@@ -1,0 +1,16 @@
+{% comment %} {% extends "base.html" %}  {% endcomment %}
+{% load static %} 
+
+{%block styles %}
+<link rel="stylesheet" href="{% static 'users/styles.css' %}" />
+{% endblock styles %} 
+
+{% block title %}
+    <title>User View</title>
+{% endblock title %} 
+
+{% block content %}
+    <div class="container">
+        <h3>Users View</h3>
+    </div>
+{% endblock content %}
