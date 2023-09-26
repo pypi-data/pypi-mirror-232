@@ -1,0 +1,7 @@
+setup.cfg
+setup.py
+erbrdc/__init__.py
+erbrdc.egg-info/PKG-INFO
+erbrdc.egg-info/SOURCES.txt
+erbrdc.egg-info/dependency_links.txt
+erbrdc.egg-info/top_level.txt
