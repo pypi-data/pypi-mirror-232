@@ -1,0 +1,16 @@
+adafruit_azureiot/__init__.py,sha256=tFkVmp0-BTioHhbJ1Y8e7E5Wtu7n_ObklmulvZzQjJ8,1408
+adafruit_azureiot/base64.py,sha256=cTL8Yugkw_0Gnk59XCXEKLxKFkasv_aR8Pe1U32p7bc,1900
+adafruit_azureiot/constants.py,sha256=2_Cwg2knF5i4kRkWb-GTW3IVMBVSP-P0C40Vfl4hEao,818
+adafruit_azureiot/device_registration.py,sha256=zJIF8-y9JWwpt0NRmizJDN38PHRiwq89CpMl2CZQs70,6890
+adafruit_azureiot/hmac.py,sha256=9EP2uNSCueU1F5dx5uTuNZofEj65dLzX6r_DwS0Uau8,17823
+adafruit_azureiot/iot_error.py,sha256=1yWSErTJGBW_5S9PKzfgP4GGX6CLDz336GLasuAKN1o,556
+adafruit_azureiot/iot_mqtt.py,sha256=XkQkeE-WdYMIy4z6AQRzmlrxzD7JXGKVfS3-Rj9JnpU,17276
+adafruit_azureiot/iotcentral_device.py,sha256=4FXtaXMKedBP1Kug1Msh-Cwou5IPZys7cs5lCHB49VA,8969
+adafruit_azureiot/iothub_device.py,sha256=aISX3_fxyw7idRmCMH3Jbrjp6hTnlyyICSl0tAsesdg,15222
+adafruit_azureiot/keys.py,sha256=VabENHYuRxkTkI4cBsZgSTp1tujPmtbiCkLWFntemvI,776
+adafruit_azureiot/quote.py,sha256=fnc9vS6iBvB-Z_qTW4jVwyfNybyk5uCwwvUyMXbCd8o,3921
+adafruit_circuitpython_azureiot-2.5.16.dist-info/LICENSE,sha256=HBn438oRdqUddPrSoqRR3n8HyNYc3FKlxaYx6l2uL40,1130
+adafruit_circuitpython_azureiot-2.5.16.dist-info/METADATA,sha256=F_m5kZBNL8SbDT-Tj4OJXRs7UllhjyDcXoQxUoU8Bw0,12944
+adafruit_circuitpython_azureiot-2.5.16.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+adafruit_circuitpython_azureiot-2.5.16.dist-info/top_level.txt,sha256=qoGq2xKdyajssslokqbFT-bqy6IceDOXJM5RoD2O308,18
+adafruit_circuitpython_azureiot-2.5.16.dist-info/RECORD,,
