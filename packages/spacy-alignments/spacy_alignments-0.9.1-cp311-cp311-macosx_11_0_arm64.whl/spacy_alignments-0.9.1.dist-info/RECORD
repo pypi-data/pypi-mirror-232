@@ -1,0 +1,10 @@
+spacy_alignments-0.9.1.dist-info/RECORD,,
+spacy_alignments-0.9.1.dist-info/LICENSE,sha256=Ks1niL9-d6cyrlODBOyO5VSTyjaNr9_XEX9bHxNvBrc,1082
+spacy_alignments-0.9.1.dist-info/WHEEL,sha256=eaDTbMedWofVq8IZjew9qeAkoA5Sw2MOU2ppdIRr1Jg,110
+spacy_alignments-0.9.1.dist-info/top_level.txt,sha256=qGdr9BT8MwPOuMq8U5FMAfdlh5zV4jexbsW7Hvui75U,17
+spacy_alignments-0.9.1.dist-info/METADATA,sha256=2BJQB9Ra9rKNUQlltKgtCov34ou4S40ax91gmu_2fOw,2658
+spacy_alignments/__init__.py,sha256=Goq4CPgbmC145Ogy6XMdj5PuB3LlW-1gMBSPpZnHJcA,368
+spacy_alignments/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+spacy_alignments/tokenizations.cpython-311-darwin.so,sha256=iFklzIY3f7dnlEkAsTXGegKAiCvZAWaoD2E2i359Dsk,898934
+spacy_alignments/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+spacy_alignments/tests/test_main.py,sha256=RDglMvqMM_LokFO1Mb37o1GSRCVBWXjU5yty4SZckWw,2269
