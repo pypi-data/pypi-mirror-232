@@ -1,0 +1,2 @@
+[console_scripts]
+utcs-ssh = utcs_ssh:cli
