@@ -1,0 +1,3 @@
+core-main-app==2.5.*
+core-oaipmh-common-app==2.5.*
+xml-utils==1.21.*
