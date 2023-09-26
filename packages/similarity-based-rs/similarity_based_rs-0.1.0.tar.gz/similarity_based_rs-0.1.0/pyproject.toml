@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "similarity-based-rs"
+version = "0.1.0"
+description = "An out-of-the-box recommendation system based on item similarity."
+authors = ["MikeXydas <mikexydas@gmail.com>"]
+readme = "README.md"
+packages = [{include = "similarity_based_rs"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+pandas = "^2.0.2"
+numpy = "^1.24.3"
+pydantic = "^2.3.0"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.2"
+mkdocs = "^1.5.3"
+tox = "^4.11.3"
+mkdocs-material = "^9.4.1"
+mkdocstrings = {extras = ["python"], version = "^0.23.0"}
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
