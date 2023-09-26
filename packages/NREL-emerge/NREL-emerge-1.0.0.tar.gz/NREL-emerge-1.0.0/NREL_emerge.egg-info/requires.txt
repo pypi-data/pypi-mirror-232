@@ -1,0 +1,16 @@
+OpenDSSDirect.py
+pyyaml
+pydantic
+networkx
+pandas
+tinydb
+matplotlib
+dash
+click
+uvicorn[standard]
+pytest
+fastapi
+jinja2
+json5
+polars
+pyarrow
