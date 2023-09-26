@@ -1,0 +1,14 @@
+aws_cost_optimization/__init__.py,sha256=_j1pgTqJmJRHS7lPLXXZzfW0K2ejQHW3pnNHUxFwUtA,7499
+aws_cost_optimization/_cloudwatch_costing.py,sha256=kDS0TL7QeS9Mrh4DG2lKw9cV8Tf0mhj4eHDH6In7Eh4,1464
+aws_cost_optimization/_ec2_costing.py,sha256=BUDBVMR-8EzJw_9ssp9Er_vgfC0XXsU52xOKfF1XzEs,13804
+aws_cost_optimization/_elb_costing.py,sha256=Gl-7nkt7vfQryYXFJZewAhRuNnZWpZnaCkKp8q6GUeI,2425
+aws_cost_optimization/_kms_costing.py,sha256=rzyESlm0YsH2qMAqRN1GQUZw8OiYmvBiCgrkIhVrpIM,1264
+aws_cost_optimization/_rds_costing.py,sha256=eOh-0AGYBmivPdFBjXseC_hXWIboje0tGvRn9BtRNLY,9053
+aws_cost_optimization/_ri_recommendations.py,sha256=aFcuawLOOgLXjW0l6HqClkjISLAMI2rVqmfqQXg_Ti0,5032
+aws_cost_optimization/_savings_plan.py,sha256=6W4nLqZCXQhdSpwPBUsL0j7cJCeKE-HKSwwh8MSTxMU,5113
+aws_cost_optimization/utils.py,sha256=mAtHTgPSlroCTIMHOHbovVf0rUFyJt3Cj23g72xC7lI,6183
+aws_cost_optimization-0.5.0.dist-info/LICENCE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aws_cost_optimization-0.5.0.dist-info/METADATA,sha256=ktuCXE5udfuVCg3LChfcnGUPHxyAW9pbkhZQRdOxsGI,479
+aws_cost_optimization-0.5.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+aws_cost_optimization-0.5.0.dist-info/top_level.txt,sha256=wz2V-VIOdlzoAoFS6lcaZ7lDSzNr4ktOfahJdmV6NA4,22
+aws_cost_optimization-0.5.0.dist-info/RECORD,,
