@@ -1,0 +1,104 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "spei"
+dynamic = ["version"]
+authors = [{ name = "Martin Vonk", email = "vonk.mart@gmail.com" }]
+description = "A simple Python package to calculate drought indices for time series such as the SPI, SPEI and SGI."
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.8"
+dependencies = ["numpy", "scipy", "matplotlib", "pandas"]
+classifiers = [
+        'Programming Language :: Python :: 3 :: Only',
+        'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: 3.9',
+        'Programming Language :: Python :: 3.10',
+        'Programming Language :: Python :: 3.11',
+        'Programming Language :: Python :: 3.12',
+        'Topic :: Scientific/Engineering :: Hydrology',
+        'Intended Audience :: Science/Research',
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+        "Typing :: Typed",
+]
+
+[project.urls]
+homepage = "https://github.com/martinvonk/spei"
+repository = "https://github.com/martinvonk/spei"
+
+[project.optional-dependencies]
+linting = ["flake8", "ruff"]
+formatting = ["black[jupyter]", "isort"]
+typing = ["mypy", "pandas-stubs"]
+pytesting = ["pytest>=7", "pytest-cov", "pytest-sugar"]
+coveraging = ["coverage"]
+dev = ["spei[linting,formatting,typing,pytesting,coveraging]"]
+
+[tool.setuptools.dynamic]
+version = { attr = "spei._version.__version__" }
+
+[tool.black]
+line-length = 88
+
+[tool.isort]
+profile = "black"
+
+[tool.mypy]
+mypy_path = "src"
+
+[[tool.mypy.overrides]]
+module = ['matplotlib.*', 'scipy.stats.*']
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 88
+
+[tool.tox]
+legacy_tox_ini = """
+    [tox]
+    requires = tox>=4
+    env_list = format, type, lint, py38, py39, py310, py311, py312
+
+    [testenv]
+    description = run unit tests
+    extras = pytesting
+    commands =
+            pytest tests
+
+    [testenv:format]
+    description = run formatters
+    basepython = python3.9
+    extras = formatting
+    commands =
+            black src --check --verbose
+            isort src --check
+
+    [testenv:type]
+    description = run type checks
+    basepython = python3.9
+    extras = typing
+    commands =
+            mypy src
+
+    [testenv:lint]
+    description = run linters
+    basepython = python3.9
+    extras = linting
+    commands =
+            flake8 src --max-line-length=88 --ignore=E203,W503,W504
+            ruff check src
+
+    [testenv:coverage]
+    description = get coverage report xml
+    basepython = 3.9
+    extras = coveraging,pytesting
+    commands =
+            coverage run -m pytest tests
+            coverage xml
+"""
