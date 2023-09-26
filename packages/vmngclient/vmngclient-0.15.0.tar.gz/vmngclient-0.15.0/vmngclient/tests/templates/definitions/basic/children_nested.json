@@ -1,0 +1,73 @@
+{
+    "user": {
+        "vipObjectType": "tree",
+        "vipPrimaryKey": [
+            "name"
+        ],
+        "vipType": "constant",
+        "vipValue": [
+            {
+                "list": {
+                    "password": {
+                        "vipObjectType": "object",
+                        "vipType": "constant",
+                        "vipValue": "pass"
+                    }
+                },
+                "name": {
+                    "vipObjectType": "object",
+                    "vipType": "constant",
+                    "vipValue": "user1"
+                },
+                "pubkey-chain": {
+                    "vipObjectType": "tree",
+                    "vipPrimaryKey": [
+                        "key-string"
+                    ],
+                    "vipType": "constant",
+                    "vipValue": [
+                        {
+                            "key-string": {
+                                "vipObjectType": "object",
+                                "vipType": "constant",
+                                "vipValue": "*****"
+                            },
+                            "type": {
+                                "RSA": {
+                                    "key-type": {
+                                        "vipObjectType": "object",
+                                        "vipType": "constant",
+                                        "vipValue": "RSA"
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "list": {
+                    "password": {
+                        "vipObjectType": "object",
+                        "vipType": "constant",
+                        "vipValue": "pass"
+                    }
+                },
+                "name": {
+                    "vipObjectType": "object",
+                    "vipType": "constant",
+                    "vipValue": "user2"
+                },
+                "pubkey-chain": {
+                    "vipObjectType": "tree",
+                    "vipPrimaryKey": [
+                        "key-string"
+                    ],
+                    "vipType": "ignore",
+                    "vipValue": [
+                    ]
+                }
+            }
+        ]
+    }
+}
