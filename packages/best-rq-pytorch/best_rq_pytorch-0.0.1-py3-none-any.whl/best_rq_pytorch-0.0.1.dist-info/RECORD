@@ -1,0 +1,12 @@
+best_rq_pytorch/__init__.py,sha256=nCACa6j5ZXjOedomDU5z1GHXoUw3_lC7Mo31hZvdnY0,334
+best_rq_pytorch/attend.py,sha256=NFXkgkJ1JAqTcG5f64sv2UkN-s5OjpoX9XdcCgJI1Ec,4925
+best_rq_pytorch/best_rq.py,sha256=-Ig56ISnWxwNcU8sANwZ5TeBy07NVMfWExN89h3LfXY,5598
+best_rq_pytorch/conformer.py,sha256=3qkavCA6yLUsOYtJDnQxSHIJeqBu1qjspPNJiZhrCnY,11777
+best_rq_pytorch/data.py,sha256=x_ah1kpZ8sC1CUiaaV9dNXdWtKQJ_54t39beWxejaZE,5206
+best_rq_pytorch/optimizer.py,sha256=1_LU53xu2fkmGvshH1oDYXmT52GUblodPnBTavi727I,964
+best_rq_pytorch/trainer.py,sha256=GqoJlmW6t1cbEj0jLFmnZ4PkDr0diFkm_m3Cs-7nkw4,9214
+best_rq_pytorch-0.0.1.dist-info/LICENSE,sha256=sFGH8LQHXEXX0tzQfDkX_Ff64GT5_LR-L5JX-fGNT5I,1069
+best_rq_pytorch-0.0.1.dist-info/METADATA,sha256=zU9glJvwO-UjwGx3A3L5okSGW2cnesNn-4ZZXP92Lxw,856
+best_rq_pytorch-0.0.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+best_rq_pytorch-0.0.1.dist-info/top_level.txt,sha256=g6sIMIpP35-0GRpm1uCijpCaPOQXE6AOkQQ82kEOC08,16
+best_rq_pytorch-0.0.1.dist-info/RECORD,,
