@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: basininflow
+Version: 0.1.0
+Requires-Dist: dask
+Requires-Dist: netcdf4
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: psutil
+Requires-Dist: pyarrow
+Requires-Dist: pytest
+Requires-Dist: xarray
+
