@@ -1,0 +1,2 @@
+[console_scripts]
+alto-tools = alto_tools.alto_tools:main
