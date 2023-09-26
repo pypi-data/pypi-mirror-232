@@ -1,0 +1,98 @@
+Metadata-Version: 2.1
+Name: coordinates-label-photos
+Version: 1.0.6
+Summary: Insert GPS coordinates into pictures EXIF, based on an external track and interpolating timestamp-Plus a few goodies.
+Author-email: Alexandre Masselot <alexandre.masselot@gmail.com>
+Project-URL: Homepage, https://github.com/terra-submersa/coordinates-label-photos
+Project-URL: Bug Tracker, https://github.com/terra-submersa/coordinates-label-photos/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: Pillow>=9.1.0
+Requires-Dist: tqdm==4.64.0
+Requires-Dist: geopy==2.2.0
+Requires-Dist: gpxpy==1.5.0
+Requires-Dist: pandas==1.4.3
+Requires-Dist: piexif==1.1.3
+Requires-Dist: pyproj==3.6.0
+
+# Coordinates label photos
+
+**The problem we are trying to solve:** On the one hand, we have a photos with unlabeled GPS data, but only a timestamp.
+In the other hand, we have a GPS track, with coordinates and timestamp. 
+This situation is originally caused by the fact that pictures are taken underwater but we can position a GPS above the water.
+Our purpose is to interpolate the GPS position from the track, with the photo timestamp and insert the information in the EXIF photo metadata.
+
+## Installation 
+
+    pip install coordinates-label-photos
+
+## Run
+To label all images from `/path/to/images-directory/*` with the GPX track points from `path/to/your.gpx` or LLH (Reach RS 2) format:
+
+    coordinates-label-photos --coords=/path/to/your.gpx --images=/path/to/images-directory
+
+Try `coordinates-label-photos --help` to see how to save image locations in a separate file, output reports, set accuracy and more.
+
+## Other Utils
+
+A few side tools may come handy in some situations
+
+### Removing GPS information from pictures
+
+    coordinates-clear-photos --images=/path/to/images-directory
+
+
+### Selecting the closest images to a point list
+
+During acquisition, excessive number of pictures can be taken (when strolling outside of the perimeter or moving not fast enough).
+If we provide a list of positions where the images should have been taken, we can select only the closest images to each of those position.
+
+    select-closest-photos \
+         --coords=/path/to/perfect-positions.csv  \
+         --images=/source/image/directory \
+         --dest=/selected/image/directory \
+         --report=/path/to/report.png
+
+### Comparing GPX tracks
+
+Compare various coords tracks, from .gpx, .llh, .pos (useful to plot the same track from different GPS):
+
+    plot-coords-tracks --gpx="gps A:/path/to/a.gpx"  --gpx="gps B:/path/to/b.gpx" --output=/path/to/plot.jpeg
+
+### Extracting photos coordinates to a GPX file
+
+From a directory containing images (with GPS locations), create a GPX file:
+
+    images-to-gpx --output=/path/to/a.gpx  --images=/path/to/images-directory
+
+### License 
+MIT
+
+## Development
+
+### Setup
+
+    python3 -m venv venv
+    source venv/bin/activate
+    pip install -r requirements.txt
+
+### Testing
+
+    pytest
+
+### PIPy deployment
+
+Increase the version in `setup.cfg`.
+### Github release.
+
+Juste create a new release on github and let the action flow.
+
+####  dev laptop release
+
+    rm dist/*
+    python3.11 -m build
+    python3.11 -m twine upload dist/*
