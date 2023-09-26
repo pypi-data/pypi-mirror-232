@@ -1,0 +1,7 @@
+README.md
+setup.py
+src/a_pip_structure.egg-info/PKG-INFO
+src/a_pip_structure.egg-info/SOURCES.txt
+src/a_pip_structure.egg-info/dependency_links.txt
+src/a_pip_structure.egg-info/requires.txt
+src/a_pip_structure.egg-info/top_level.txt
