@@ -1,0 +1,12 @@
+tree_sitter_builder/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tree_sitter_builder/__main__.py,sha256=dWcCWNppwnpC8gKPXfVjwfFniX_5KO5GdH_Q4ae_iKw,3672
+tree_sitter_builder/lib/__init__.py,sha256=Hfg3Qj_KMQKRuMRh0WwyrCCRQv1HBgIQaZKzcjzTDDk,52
+tree_sitter_builder/lib/dir.py,sha256=Kwk9teGISoD__F1Hw-3jFk01CaAVl0bNkuU3Q9XIreQ,552
+tree_sitter_builder/lib/main.py,sha256=v9H7i-XGvvNreIyQ3Jewe57qUO6W409cUq9adY9_Lrg,517
+tree_sitter_builder/logging.conf.yml,sha256=Rllt-wdjHx4nHFGb4ahfO4B-Lniqk9Xyt9OWRZ6wgdE,340
+tree_sitter_builder/subr/__init__.py,sha256=ZL_IppyKGvwQTgBTh91bPyiOkMrGTKmh2NsQuKIz8iU,25
+tree_sitter_builder/subr/git.py,sha256=3XmKe4YayD_9zN96PbRugg9NgfD9v62BSd-pEDBkHhc,1057
+tree_sitter_builder-0.1.0.dist-info/METADATA,sha256=ZpdlGHZ83Yis4gGTbQUMvq0qTGX8cxir1gUTB_fNt2M,1643
+tree_sitter_builder-0.1.0.dist-info/WHEEL,sha256=Zb28QaM1gQi8f4VCBhsUklF61CTlNYfs9YAZn-TOGFk,88
+tree_sitter_builder-0.1.0.dist-info/entry_points.txt,sha256=Awq4vHiiy8KYk8ZlADf8n8ffn8TieWfW_U2mcdM4jJs,73
+tree_sitter_builder-0.1.0.dist-info/RECORD,,
