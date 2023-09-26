@@ -1,0 +1,12 @@
+draversal.py,sha256=rhOWn9lLCVa_HHfoo6nq2OiEyqEnCtMHtFDtt1MfJdw,58930
+draversal/__init__.py,sha256=rhOWn9lLCVa_HHfoo6nq2OiEyqEnCtMHtFDtt1MfJdw,58930
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_draversal.py,sha256=9oXwF9GUopuJbG9OErfNo_T4R7pAz-TzRjkYkm-CuMs,9998
+tests/test_draversal_current_item.py,sha256=tN-oeGlMTqsVKIfI48MC8ZScqin9L_049C-JljulNDw,4749
+tests/test_draversal_inverted.py,sha256=BdvmRIK69c0nlU2Cg2lf2Lr2ciXUIhrFKTO9rf4Bqg8,5401
+tests/test_draversal_new_context.py,sha256=p6q7BuX4qemszrCpECC23evnGHDuZ-e5jmkHZSKr3RM,2943
+draversal-0.1.1.dist-info/LICENSE,sha256=ZBHmTC-HdAuurKgVd14p3qRQZc1BJ50DIVJxiME84K0,1092
+draversal-0.1.1.dist-info/METADATA,sha256=RyVjUk6rEyEQTK-KgnYWIywWzc73c3Tt9LcbtQgjuaI,682
+draversal-0.1.1.dist-info/WHEEL,sha256=5sUXSg9e4bi7lTLOHcm6QEYwO5TIF1TNbTSVFVjcJcc,92
+draversal-0.1.1.dist-info/top_level.txt,sha256=cGv3g2bPtdjrpPtJtl3Pj_w88lsWm4r59y58TEu1p7A,16
+draversal-0.1.1.dist-info/RECORD,,
