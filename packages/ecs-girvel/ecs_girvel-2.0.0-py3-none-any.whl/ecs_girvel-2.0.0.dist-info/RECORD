@@ -1,0 +1,12 @@
+ecs/__init__.py,sha256=s5tlwJ1BvLFDj47d265DWWbIFKR-4VTeKP6iWIcJTqo,749
+ecs/dynamic_entity.py,sha256=M2pYVuKoRmjkcvfyapK67Ym_pBMeRpNS3yqqq-bzCmQ,556
+ecs/entity.py,sha256=EL9GRmjLYFhEKayKwP2FLMtb-mQ3vhUQc9105_jL4C4,1896
+ecs/essentials.py,sha256=yAbCGt0-h0edzpOFsmezrXKHRhgHSfz6aT56wkP5v3M,2825
+ecs/formatting.py,sha256=eAKjf-9yqA2XQNU1GhoBn8UMssV07qggyAayxiFnZoE,523
+ecs/metasystem.py,sha256=QY6tytb9M3EklPyRU-2Hfe1RkDBkomNhger5ro3St-4,2213
+ecs/static_entity.py,sha256=U4IP60ojFoZwlDqdGIbTUJ6xlEJ_frOUlHFF9Kyo-Ko,1712
+ecs/system.py,sha256=sd2JE563f_77JmSEJBhV9KQaiz4pqbjmUzlt86wdCfo,1387
+ecs_girvel-2.0.0.dist-info/METADATA,sha256=MrgzeZ9T_aMhNi64GrsEeqdU-v6yybCF-QveaOOSwCk,2124
+ecs_girvel-2.0.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+ecs_girvel-2.0.0.dist-info/top_level.txt,sha256=eMOjMZotpPGDKgFV0mVkb-D-6HFOstJIvilfwedo4Rc,4
+ecs_girvel-2.0.0.dist-info/RECORD,,
