@@ -1,0 +1,12 @@
+kami_gsuite/__init__.py,sha256=zYMKry7U1Zn3sVpYBZZTYQFCw9qsHXBUQ67-D7z_fXY,263
+kami_gsuite/constants.py,sha256=zfUBEskR66TN4y-Ti-efqCGWri1jorDMMOLomBVXM9A,116
+kami_gsuite/gsuite.py,sha256=QSaoo1Q9s-FK_aA12_FtcreY8FFreQ3_Bb_xn3fxEA4,1752
+kami_gsuite/kami_gdrive/__init__.py,sha256=fWs2kspNIH8UCI3rvwr0AurGkAFJdaHUFcVgms_XDy8,101
+kami_gsuite/kami_gdrive/gdrive.py,sha256=wWvAT3_qtsRRjP-e0aTToXkutjjO9vFlp-O80MvOICo,9656
+kami_gsuite/kami_gsheet/__init__.py,sha256=Lo0OdMAL6_C6zFuS1yN_opQhnKT-OM4dbgJbOKbOw68,101
+kami_gsuite/kami_gsheet/gsheet.py,sha256=4poWtpewEJy8R53MhxE-OnQcI3hW0AytFaXGMm7MId4,2516
+kami_gsuite/prompts/prompts,sha256=wB7U0cE5e33yms2n3aNV8idvwZvs1ncQFwIaDUrLLtg,7997
+kami_gsuite-0.1.0.dist-info/LICENSE,sha256=_-UaDHvTMgvbQiCe1cducgSkvEgTI67NHjbcBk980W0,35144
+kami_gsuite-0.1.0.dist-info/METADATA,sha256=2rqjEB2rCm38hoP-ICDY3lvH-CdKo_3Hq7s1X9_7sMs,6515
+kami_gsuite-0.1.0.dist-info/WHEEL,sha256=Zb28QaM1gQi8f4VCBhsUklF61CTlNYfs9YAZn-TOGFk,88
+kami_gsuite-0.1.0.dist-info/RECORD,,
