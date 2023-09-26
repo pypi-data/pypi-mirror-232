@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyxel_app.py
+setup.py
+pyxel_app.egg-info/PKG-INFO
+pyxel_app.egg-info/SOURCES.txt
+pyxel_app.egg-info/dependency_links.txt
+pyxel_app.egg-info/entry_points.txt
+pyxel_app.egg-info/requires.txt
+pyxel_app.egg-info/top_level.txt
+template/__init__.py
+template/entry.py
+template/pkg/__init__.py
+template/pkg/app.py
+template/pkg/utils.py
