@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: awsume-1password-plugin
+Version: 1.2.1
+Summary: Automates awsume MFA entry via 1Password CLI.
+Home-page: https://github.com/xeger/awsume-1password-plugin
+Author: Tony Spataro
+Author-email: pypi@tracker.xeger.net
+License-File: LICENSE
+
