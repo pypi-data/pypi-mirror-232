@@ -1,0 +1,8 @@
+pyodide_lock/__init__.py,sha256=MUtEylXt64ITFenYNBSBkioA1-N5Ki2XShxx6Q3wBWI,65
+pyodide_lock/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyodide_lock/spec.py,sha256=UaogirLi8SH1O-6XauGgg9hreQ3WpGELP_wuSq8-bY0,3011
+pyodide_lock/utils.py,sha256=FeCI-8-3fkth68jpCyQ_7P18vaWBnOEXK_6pQ0yy7gQ,592
+pyodide_lock-0.1.0a2.dist-info/METADATA,sha256=ZarbsCJ44c-2ieq1_8pGfyCclQC1L-811A0Nguri3ls,1840
+pyodide_lock-0.1.0a2.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+pyodide_lock-0.1.0a2.dist-info/licenses/LICENSE,sha256=6ZNtxzDBEmnO-cngek2ilQoXq97emgclvEQLYOZJ1s0,1500
+pyodide_lock-0.1.0a2.dist-info/RECORD,,
