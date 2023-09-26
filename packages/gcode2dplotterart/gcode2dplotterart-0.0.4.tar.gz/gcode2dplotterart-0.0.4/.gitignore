@@ -1,0 +1,5 @@
+dist/
+gcode2dplotterart-venv
+.env
+*.pyc
+output/
