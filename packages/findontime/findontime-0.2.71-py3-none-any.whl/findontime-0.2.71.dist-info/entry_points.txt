@@ -1,0 +1,3 @@
+[console_scripts]
+findontime=findontime.__main__:main
+

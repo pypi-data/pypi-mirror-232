@@ -1,0 +1,17 @@
+findontime/__init__.py,sha256=gc73HHDKapd4FJuwMkuVzgCPcXHBUxUTlJ4nwV0E04o,24
+findontime/__main__.py,sha256=cwi71z3yLl0Z6sdoOjnCp7f44KnoeqYiCsXf-ZCJzC0,315
+findontime/configs.py,sha256=bNllnZNrVdMRd2eWZJstDnLXp8rpdSAlWTCzaE4zglY,2471
+findontime/connectors.py,sha256=uSlVXpGgL1wTmWmxQmAAsD0zCCcDi4i-zuJy7wZd0dc,9288
+findontime/drones.py,sha256=kDGhb6VfeE_gsznb6X3HT-ygTOnxUnpwizbWWnPq9e0,3646
+findontime/insaflu_uploads.py,sha256=evlrxBJGxdLP13O3h3p8wgduAcgzE-gl0gF1dJCWcbU,16682
+findontime/manager.py,sha256=emfhb8lYE055ldU2XUiK2T09XFYkCEQsuYPbMyXw0bE,9741
+findontime/plot_utils.py,sha256=ftIuvV4mBQhhuPCn8nIyonRXllO_6NMlBuZdtIn7Ml4,4822
+findontime/plotting_from_all_reports.py,sha256=V8XW8OaGyqo4BTG0Sns0Be4KMYMgFQhnBIWwcpOmzkM,9902
+findontime/records.py,sha256=3cmsr1GHd9_4-4q3mNddlkVQCXHbcIATeo0Y_AQM2Nk,3447
+findontime/tables_post.py,sha256=cw2uUNf76K3LjGinhiqa1Rj_VjW9RAj2XXERDVA-pg4,3444
+findontime/upload_utils.py,sha256=-ouEh8WEXn4bPqDE7N3FitqwdcSzgaOhbYSKjCy6zJg,21603
+findontime-0.2.71.dist-info/LICENSE,sha256=_5zrkHa3LDEv_m48zCxBpzgdOoy9GsXm6G3SqQIQ8xQ,31904
+findontime-0.2.71.dist-info/METADATA,sha256=54LnpH6so2spRs7ycZouUulwf_PKeIOk73AiFMRvPqA,13274
+findontime-0.2.71.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+findontime-0.2.71.dist-info/entry_points.txt,sha256=ArNDrhPyJxUNrVxy8KZEd3C-zd0yXdI4rpljaE1sZew,55
+findontime-0.2.71.dist-info/RECORD,,
