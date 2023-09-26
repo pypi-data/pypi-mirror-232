@@ -1,0 +1,59 @@
+name: Publish
+
+on:
+  push:
+    branches:
+      - "main"
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    environment:
+      name: release
+      url: https://pypi.org/p/tsenum
+    permissions:
+      # IMPORTANT: required for trusted publishing
+      # See https://github.com/marketplace/actions/pypi-publish#usage
+      id-token: write
+      # Needed for create release
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: '3.11'
+
+      - name: Install hatch
+        run: pip install hatch
+
+      - name: Run checks
+        run: hatch run dev:style .
+
+      - name: Run tests
+        run: hatch run dev:test
+
+      - name: Build
+        run: hatch build
+
+      - name: Get version nubmer
+        id: vars
+        run: echo "version=$(hatch version)" >> $GITHUB_OUTPUT
+
+      - name: Create release on GitHub
+        uses: softprops/action-gh-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          body: ""
+          tag_name: "${{ steps.vars.outputs.version }}"
+          name: "Release v${{ steps.vars.outputs.version }}"
+          draft: false
+          prerelease: false
+          files: |
+            dist/tsenum-${{ steps.vars.outputs.version }}-py3-none-any.whl
+
+      - name: Publish package distributions to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1

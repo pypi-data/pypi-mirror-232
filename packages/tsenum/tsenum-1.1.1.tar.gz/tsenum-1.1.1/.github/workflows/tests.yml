@@ -1,0 +1,37 @@
+name: Tests
+
+on:
+  push:
+    branches-ignore:
+      - "main"
+    tags:
+      - "!**" 
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        version:
+          - "3.7"
+          - "3.8"
+          - "3.9"
+          - "3.10"
+          - "3.11"
+          - "latest"
+    container: "docker.io/library/python:${{ matrix.version }}"
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install hatch
+        run: pip install hatch
+
+      - name: Run checks
+        run: hatch run dev:style .
+
+      - name: Run tests
+        run: hatch run dev:test
+
+      - name: Build
+        run: hatch build
