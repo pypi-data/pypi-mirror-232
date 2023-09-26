@@ -1,0 +1,82 @@
+[
+    {
+      "name": "API_KEY",
+      "value": "hkW0KoeXn7AluEx68bg7WHx6tHizrWtr4kr91uj4ocrXcTM4cou1Ivaxygkjs8Oz",
+      "slotSetting": false
+    },
+    {
+      "name": "DEBUG",
+      "value": "true",
+      "slotSetting": false
+    },
+    {
+      "name": "DOCKER_ENABLE_CI",
+      "value": "true",
+      "slotSetting": false
+    },
+    {
+      "name": "DOCKER_REGISTRY_SERVER_PASSWORD",
+      "value": "UIq9EgjcpSNpOYLU7dEfgfRvY+pWsHBSXDTLx84ZXq+ACRD/Aruu",
+      "slotSetting": false
+    },
+    {
+      "name": "DOCKER_REGISTRY_SERVER_URL",
+      "value": "https://cprinfomedia20230615144656.azurecr.io",
+      "slotSetting": false
+    },
+    {
+      "name": "DOCKER_REGISTRY_SERVER_USERNAME",
+      "value": "cprinfomedia20230615144656",
+      "slotSetting": false
+    },
+    {
+      "name": "HOST",
+      "value": "0.0.0.0",
+      "slotSetting": false
+    },
+    {
+      "name": "HOST_TYPES",
+      "value": "https://compensar-sinconvivencia.infomediaservice.online/typedocuments",
+      "slotSetting": false
+    },
+    {
+      "name": "MAX_REQUEST_TIME",
+      "value": "3",
+      "slotSetting": false
+    },
+    {
+      "name": "MONGO_INITDB_ROOT_PASSWORD",
+      "value": "pass",
+      "slotSetting": false
+    },
+    {
+      "name": "MONGO_INITDB_ROOT_USERNAME",
+      "value": "root",
+      "slotSetting": false
+    },
+    {
+      "name": "MONGO_URI",
+      "value": "mongodb://cpr-mongodb-dev:Eo3DNzZY2HYKaaYlqHQPLivpMzuul6ziSW5e8OEKpZV8e8MGLYkUVkbH3G6jcaUEMqSfwu9TXmNSACDbkxXsYQ==@cpr-mongodb-dev.mongo.cosmos.azure.com:10255/?ssl=true&replicaSet=globaldb&retrywrites=false&maxIdleTimeMS=120000&appName=@cpr-mongodb-dev@",
+      "slotSetting": false
+    },
+    {
+      "name": "PORT",
+      "value": "4000",
+      "slotSetting": false
+    },
+    {
+      "name": "TYPES_DOCUMENT",
+      "value": "https://compensar-sinconvivencia.infomediaservice.online/typedocuments/api/v2",
+      "slotSetting": false
+    },
+    {
+      "name": "TZ",
+      "value": "America/Bogota",
+      "slotSetting": false
+    },
+    {
+      "name": "WEBSITE_HTTPLOGGING_RETENTION_DAYS",
+      "value": "7",
+      "slotSetting": false
+    }
+  ]
