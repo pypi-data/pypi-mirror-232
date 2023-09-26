@@ -1,0 +1,82 @@
+CHANGES
+=======
+
+v1.1.1.rc0
+----------
+
+* added apcoa-flow lane\_id\_mapping and location\_id
+
+v1.1.0
+------
+
+* payment\_deadline\_hours must be greater 0
+
+v1.1.0rc3
+---------
+
+* removed valid window
+
+v1.1.0rc2
+---------
+
+* test case fix
+* added interval + valid window for otp setting
+
+v1.1.0rc1
+---------
+
+* added test cases for new settings
+* added settings for certificate and otp
+
+v1.0.2
+------
+
+* intercom number nullable if not enabled
+
+v1.0.1
+------
+
+* changes in support setting
+
+v1.0.0
+------
+
+* parking areas: default cost entries requires shortterm gates
+
+v0.0.1rc4
+---------
+
+* parksettings must have gates specified (again) changed comments for gate types
+* renamed GateType enums
+
+v0.0.1rc3
+---------
+
+* Parksettings with null gates allowed
+
+v0.0.1rc2
+---------
+
+* fixes and full test coverage
+* validation for shortterm gates
+* changes in parking areas, parksettings and GarageSettings
+
+v0.0.1rc1
+---------
+
+* marked gate\_control/day\_mode as unscoped
+
+v0.0.1rc0
+---------
+
+* push package on pypi
+
+v0.0.0rc5
+---------
+
+* Wrapped settings models in class for custom documentation of str/dict type settings
+
+v0.0.0rc4
+---------
+
+* marked string as regex
