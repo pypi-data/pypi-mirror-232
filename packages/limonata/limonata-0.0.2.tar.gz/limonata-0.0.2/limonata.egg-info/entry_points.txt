@@ -1,0 +1,2 @@
+[nbdev]
+limonata = limonata._modidx:d
