@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: not-my-ip
+Version: 0.0.4
+Summary: A CLI tool to generate a random IP address that is not your own
+Author: Samuel Gunter
+Author-email: sgunter@utexas.edu
+Description-Content-Type: text/markdown
+
+# Not My IP!
+
+Get an IP address that both isn't yours and isn't in a reserved range.
+
+```
+Usage: not-my-ip [OPTIONS]
+
+Options:
+  --actually-yes-my-ip  Actually return my IP
+  --allow-reserved      Allow reserved IP addresses
+  --help                Show this message and exit.
+```
