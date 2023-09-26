@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    {% include "head_common.html.j2" %}
+    {%- for type, path in feeds.items() %}
+    <link href="{{path}}" type="application/{{type}}+xml" rel="alternate" title="Sitewide {{type}} feed" />
+    {%- endfor %}
+</head>
+
+<body>
+    <header>
+        {% with author_name=blog_posts[0].author %}
+        {% include "navbar.html.j2" %}
+        {% endwith %}
+    </header>
+
+    <main>
+        {%- for blog_post in blog_posts %}
+        <article>
+            <h2><a href="/{{ blog_post.relative_path }}">{{ blog_post.title }}</a></h2>
+            <p>
+                {{ blog_post.description }}
+            </p>
+            {% include "article_datetimes.html.j2" %}
+        </article>
+        {%- endfor %}
+    </main>
+    {% with author_name=blog_posts[0].author %}
+    {% include "footer.html.j2" %}
+    {% endwith %}
+</body>
+
+</html>
