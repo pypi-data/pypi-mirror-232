@@ -1,0 +1,2 @@
+[console_scripts]
+pycribbage = pycribbage.__main__:main

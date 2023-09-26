@@ -1,0 +1,15 @@
+pycribbage/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pycribbage/__main__.py,sha256=Zwd17dExe4S5EL1-lCAk5wCq1eZdedkYV8AdTaxxeB4,4605
+pycribbage/cribbage_game.py,sha256=AR8dgDJOAm6Q3ipG1132Zp0dcoWOeg2vjJ0-M3e4Gb4,22213
+pycribbage/cribbage_tools.py,sha256=_euuCrl4bGblnO5ZDLfE2Gpc0itsXPlhooWmUFvGOlE,5067
+pycribbage/deck_tools.py,sha256=ukU22TRKizpNRqfIC0zDqkdDQvCX0-OPZ7DtVyna9gc,4176
+pycribbage/discard_methods.py,sha256=veXm7QdU9CCcgpyf4U6rRVMtjdfZEdcn--2qqyjdKqU,5022
+pycribbage/player.py,sha256=f1HKg8HZi0IdeAz6ybYOlF6NWldqo_M6egp71eyGKBA,4493
+pycribbage/scorer.py,sha256=N-LUgnAUSsBt1lSiAfhUd9KReBBrc6iA_tajTyxikmc,9645
+pycribbage/the_play_methods.py,sha256=mKZC5ZJSYVFqiBukndkUfgTKiBOIpcINS-sPINMIUkA,5350
+pycribbage-1.0.0.dist-info/LICENSE,sha256=N7ZKrA2oB5MFQS0Bh1E3j5RNaEP051X_BDAM1A1fX5o,1086
+pycribbage-1.0.0.dist-info/METADATA,sha256=z3t7yGnSM2ur1Ij2_Xs9ri0bmzLTBaqsYWLdDwLDNNU,4301
+pycribbage-1.0.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+pycribbage-1.0.0.dist-info/entry_points.txt,sha256=b4zOrAIUPrichNNp5xv6szP4_aDXYd8k09171dXRbPM,56
+pycribbage-1.0.0.dist-info/top_level.txt,sha256=pxTwEHmn5fVXoc6jTIPxT3Eel3VuxhHh72xPO9aD06U,11
+pycribbage-1.0.0.dist-info/RECORD,,
