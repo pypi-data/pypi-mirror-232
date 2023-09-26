@@ -1,0 +1,60 @@
+Metadata-Version: 2.1
+Name: pycoilgen_data
+Version: 0.0.3
+Summary: Extra data for pyCoilGen, the Open source Magnetic Resonance Coil Generator.
+Keywords: MRI,Magnetic Resonance Imaging,NMR,Nuclear Resonance Imaging,Target Field,Gradient Field,Physics,Coil
+Author-email: Kevin Meyer <kevin@kmz.co.za>, Philipp Amrein <none@noreply.com>
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Healthcare Industry
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Scientific/Engineering
+Requires-Dist: pycoilgen
+Project-URL: Bug tracker, https://github.com/kev-m/pyCoilGen/issues
+Project-URL: Changelog, https://github.com/kev-m/pyCoilGen/blob/master/CHANGELOG.md
+Project-URL: Code of Conduct, https://github.com/me/spam/blob/master/CODE_OF_CONDUCT.md
+Project-URL: Contributing, https://github.com/kev-m/pyCoilGen/blob/master/CONTRIBUTING.md
+Project-URL: Documentation, https://pycoilgen.readthedocs.io/
+Project-URL: Home, https://github.com/kev-m/pyCoilGen
+Project-URL: Source, https://github.com/kev-m/pyCoilGen
+
+# pyCoilGen Data
+
+[pyCoilGen](https://github.com/kev-m/pyCoilGen) is an application for generating gradient field coil layouts within the MRI/NMR environment. 
+
+The tool is based on a boundary element method and creates interconnected, non-overlapping wire-tracks on 3D support structures.
+
+This package provides optional extra data for **pyCoilGen** that provides coil mesh surface `.stl` files, pre-calculated target fields and solutions.
+
+For detailed documentation, refer to the [pyCoilGen Documentation](https://pycoilgen.readthedocs.io/).
+
+## Installation
+
+Install **pyCoilGen** using pip:
+```bash
+$ pip install pycoilgen
+```
+
+Install this **pyCoilGen Data** using pip:
+```bash
+$ pip install pycoilgen_data
+```
+
+## License
+
+See [`LICENSE.txt`](https://github.com/kev-m/pyCoilGen/blob/master/LICENSE.txt) for more information.
+
+
