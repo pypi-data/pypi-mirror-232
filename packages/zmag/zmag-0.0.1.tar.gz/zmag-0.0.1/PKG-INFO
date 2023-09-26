@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: zmag
+Version: 0.0.1
+Summary: .
+Author-Email: hlop3z <23062270+hlop3z@users.noreply.github.com>
+License: MIT
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+
+# zmag
+ZeroMQ + Strawberry
