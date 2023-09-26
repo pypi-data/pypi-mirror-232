@@ -1,0 +1,36 @@
+# ENHSP Wrapper
+
+This is a simple wrapper for the ENHSP planner. For most use cases of ENHSP in Python, you should look at [unified-planning](https://github.com/aiplan4eu/unified-planning) instead. This package does not automatically stay updated with the latest version of ENHSP. The version of ENHSP used in this package is 20-0.10.0 (this number may not even be correct if I forget to update it!), and is likely out-dated when you read this file.
+
+If, for some reason, unified-planning does not work for you, then you may find this ENHSP wrapper useful. Unlike unified-planning, this wrapper does not try to parse the problem before passing it onto ENHSP. This is likely only useful if you are using a PDDL syntax that ENHSP supports, but unified-planning does not.
+
+## Installation
+
+Run
+```sh
+pip install enhsp-wrapper
+```
+to install the package. This will include the ENHSP jar files this package depends on, which in turn depend on Java 17. It may not work if you do not have Java 17 installed.
+
+## Example Usage
+
+```py
+from enhsp_wrapper.enhsp import ENHSP, PlanningStatus
+
+# pass ENHSP its command line arguments
+planner = ENHSP('-s gbfs -h hadd -timeout 10')
+
+# pass in the domain and problem PDDL files
+result = planner.solve('d.pddl', 'p.pddl')
+
+assert result.status == PlanningStatus.SUCCESS
+print('\n'.join(result.plan))
+```
+
+## Contribute
+
+To contribute to this project, install [poetry](https://python-poetry.org/docs/), clone the repository, then run
+```sh
+peotry shell
+poetry install
+```
