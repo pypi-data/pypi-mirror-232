@@ -1,0 +1,54 @@
+import enum
+
+
+class GrantType(enum.StrEnum):
+    """인증 방식"""
+
+    CLIENT_CREDENTIALS = "client_credentials"
+    AUTHORIZATION_CODE = "authorization_code"
+
+
+class Token:
+    """토큰 정보"""
+
+    def __init__(
+        self,
+        access_token,
+        expires_in,
+        token_type,
+        scope,
+        refresh_token=None,
+        id_token=None,
+    ):
+        # 토큰 정보
+        self.access_token = access_token
+        self.refresh_token = refresh_token
+        self.expires_in = expires_in
+        self.token_type = token_type
+        self.scope = scope
+        self.id_token = id_token
+
+
+class Resource:
+    """리소스"""
+
+    def __init__(self, sub, millie_id=None, additional_info=None):
+        self.sub = sub
+        # 사용자 정보
+        self.millie_id = millie_id
+        self.additional_info = additional_info
+
+
+class Connect:
+    """사용자 연동"""
+
+    def __init__(self, is_connected):
+        self.is_connected = is_connected
+
+    class Validate:
+        """사용자 연동 전 유효성 검사"""
+
+        def __init__(self, is_valid, expires_in, validate_key):
+            self.is_valid = is_valid
+            self.expires_in = expires_in
+            self.validate_key = validate_key
