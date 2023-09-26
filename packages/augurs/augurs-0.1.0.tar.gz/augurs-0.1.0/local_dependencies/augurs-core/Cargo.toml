@@ -1,0 +1,19 @@
+[package]
+name = "augurs-core"
+version= "0.1.0"
+authors= [
+  "Ben Sully <ben.sully@grafana.com",
+]
+documentation= "https://docs.rs/crate/augurs"
+license= "MIT OR Apache-2.0"
+edition= "2021"
+keywords= [
+  "analysis",
+  "forecasting",
+  "time-series",
+]
+description = "Core data structures and traits for the augurs time series library."
+resolver = "2"
+
+[dependencies]
+serde = { version = "1.0.166", optional = true, features = ["derive"] }

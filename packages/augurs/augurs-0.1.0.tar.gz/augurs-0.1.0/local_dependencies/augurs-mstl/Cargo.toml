@@ -1,0 +1,32 @@
+[package]
+name = "augurs-mstl"
+version= "0.1.0"
+authors= [
+  "Ben Sully <ben.sully@grafana.com",
+]
+documentation= "https://docs.rs/crate/augurs"
+license= "MIT OR Apache-2.0"
+edition= "2021"
+keywords= [
+  "analysis",
+  "forecasting",
+  "time-series",
+]
+description = "Multiple Seasonal-Trend decomposition with LOESS (MSTL) using the augurs time series library."
+resolver = "2"
+
+[dependencies]
+augurs-core.path = "../augurs-core"
+stlrs = "0.3.0"
+distrs = "0.2.1"
+serde = { version = "1.0.166", features = ["derive","derive"] , optional = true }
+thiserror = "1.0.40"
+tracing = "0.1.37"
+
+[[bench]]
+name = "vic_elec"
+harness = false
+
+[[bench]]
+name = "vic_elec_iai"
+harness = false

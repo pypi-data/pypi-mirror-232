@@ -1,0 +1,29 @@
+[package]
+name = "pyaugurs"
+version= "0.1.0"
+authors= [
+  "Ben Sully <ben.sully@grafana.com",
+]
+documentation= "https://docs.rs/crate/augurs"
+license= "MIT OR Apache-2.0"
+edition= "2021"
+keywords= [
+  "analysis",
+  "forecasting",
+  "time-series",
+]
+description = "Python bindings for the augurs time series library."
+resolver = "2"
+
+[lib]
+name = "augurs"
+crate-type = ["cdylib"]
+
+[dependencies]
+augurs-core.path = "local_dependencies/augurs-core"
+augurs-ets = { features = ["mstl"] , path = "local_dependencies/augurs-ets" }
+augurs-mstl.path = "local_dependencies/augurs-mstl"
+numpy = "0.19.0"
+pyo3 = { version = "0.19.1", features = ["extension-module"] }
+pyo3-log = "0.8.2"
+tracing = { version = "0.1.37", features = ["log-always"] }
