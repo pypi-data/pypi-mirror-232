@@ -1,0 +1,6 @@
+cvproc-0.1.0.dist-info/METADATA,sha256=I0jVNsiaVz2ThtBlnIUhGsNAVdqY-qWBtPkpDCuSw3w,255
+cvproc-0.1.0.dist-info/WHEEL,sha256=wRjJmEXgvqK7eV109Z2UdiOzNuvAQopLQegnhEV016s,105
+cvproc/__init__.py,sha256=_I0kL57UaVpfj2-HAzJyi5vcWrcfAslrilcnL2cpL4g,33
+cvproc/cvproc.pyi,sha256=F5QCpOaPyz9FrCKf78z_TKo7IqPFBGmWGyNFSvSwBFo,112
+cvproc/cvproc.cpython-311-darwin.so,sha256=B25vB33554Ofn3EoAv-BA2AqxXSXvinffj35V0P2zxs,1741384
+cvproc-0.1.0.dist-info/RECORD,,
