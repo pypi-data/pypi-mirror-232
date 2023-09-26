@@ -1,0 +1,9 @@
+adafruit_bme280/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+adafruit_bme280/advanced.py,sha256=uh2GGLQ1jg8C_QRXPyrW2KsFKz22vc2-gC4DL5V0b7Q,11703
+adafruit_bme280/basic.py,sha256=LlIu0_wN_l2k6qTqibmmU8Ic-OEjKqAqUYc4j3pCGPg,14656
+adafruit_bme280/protocol.py,sha256=vxs1U5Rte4VcxPPCCoMJabzQ3ALIazThY7ZGRs9n8vE,2139
+adafruit_circuitpython_bme280-2.6.23.dist-info/LICENSE,sha256=yKGuo99e5AKLdA3pC0hqdgn9R1-BE4x_LM9S8dwi_OA,1098
+adafruit_circuitpython_bme280-2.6.23.dist-info/METADATA,sha256=Ta4Ih_kzON9RbNuT8rSdwNjZRk1jqhDd4OwrnTQqAFo,5359
+adafruit_circuitpython_bme280-2.6.23.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+adafruit_circuitpython_bme280-2.6.23.dist-info/top_level.txt,sha256=2XFbbAUsTPoW1SeonB6Dot6G1zEg8FxAPQcIIqNSdGc,16
+adafruit_circuitpython_bme280-2.6.23.dist-info/RECORD,,
