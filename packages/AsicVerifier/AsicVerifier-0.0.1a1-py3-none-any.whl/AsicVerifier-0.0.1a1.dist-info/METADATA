@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: AsicVerifier
+Version: 0.0.1a1
+Summary: Asic Verifier for X-Road (SaaS)
+Home-page: https://github.com/pipinfitriadi/asicverifier
+Author: Pipin Fitriadi
+Author-email: pipinfitriadi@gmail.com
+Maintainer: Pipin Fitriadi
+Maintainer-email: pipinfitriadi@gmail.com
+License: AGPL-3.0-only
+Project-URL: Repository, https://github.com/pipinfitriadi/asicverifier
+Project-URL: Docker, https://hub.docker.com/r/pipinfitriadi/asicverifier
+Keywords: X-Road,security server
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Programming Language :: Java
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Operating System :: OS Independent
+Classifier: Framework :: FastAPI
+Classifier: Topic :: File Formats :: JSON
+Classifier: Topic :: Internet :: WWW/HTTP :: HTTP Servers
+Classifier: Topic :: Text Processing
+Classifier: Topic :: Utilities
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+<!--
+This file is part of AsicVerifier and is released under
+the AGPL-3.0-only License: https://opensource.org/license/agpl-v3/
+-->
+
+# AsicVerifier
+
+[![Docker Image Size (tag)](https://img.shields.io/docker/image-size/pipinfitriadi/asicverifier/latest?logo=Docker)](https://hub.docker.com/r/pipinfitriadi/asicverifier)
+
+Asic Verifier for X-Road (SaaS)
