@@ -1,0 +1,10 @@
+
+[release]
+build
+twine
+
+[test]
+pytest-pep8
+pytest-flakes
+rstcheck
+pytest-cov

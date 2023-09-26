@@ -1,0 +1,15 @@
+.pyc
+__pycache__
+.~*
+~*
+*~
+*.sw?
+.cache
+*.egg-info
+Pipfile.lock
+.pytest_cache
+.coverage
+htmlcov
+build/
+dist/
+venv/
