@@ -1,0 +1,15 @@
+__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+backend_shim.py,sha256=ftcEJ8ZHQyDKQNKCBoPbg-uZLYBu4nI6JZWUBLemhRc,625
+ol_openedx_course_structure_api/__init__.py,sha256=1-E5J-j3oCm0VgbgaCKSSOZUQBPryVoV4zM5g-fy-Ws,148
+ol_openedx_course_structure_api/app.py,sha256=tldEKs8wcSITJirV1TDy6ImmyOc65gjVKHjkgHYlZpc,967
+ol_openedx_course_structure_api/urls.py,sha256=nBfyuoicrIbteiX09jxVZHmy5MwX51QBnkpZgs0C4Bw,336
+ol_openedx_course_structure_api/views.py,sha256=L9hh6ZPutFBCcxr0-pXZFfkUXsP0MDXtF8ggATLX1HM,2911
+ol_openedx_course_structure_api/settings/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ol_openedx_course_structure_api/settings/common.py,sha256=5M_r_zwsyUeIhu3xqFdyCBvFQhCTiu1lnDYrsK1PDnc,183
+ol_openedx_course_structure_api/settings/production.py,sha256=7JyoWVYQhNe2RJFGUEtaGpHk9sGHTPXXdedgPq6o0Bw,174
+ol_openedx_course_structure_api-0.1.0.dist-info/METADATA,sha256=FQLghR9tdGWpa_jiiYiY7aXotTmgKHn7tniCiEXRAIw,251
+ol_openedx_course_structure_api-0.1.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+ol_openedx_course_structure_api-0.1.0.dist-info/entry_points.txt,sha256=X_N59elCqR7VuelIX7FcXQMNP2MkRUX9jpy2skuJK6Y,111
+ol_openedx_course_structure_api-0.1.0.dist-info/namespace_packages.txt,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+ol_openedx_course_structure_api-0.1.0.dist-info/top_level.txt,sha256=4TURvSz6uVCntFY7Uom7U9pDbsv4oEQbKnGc_vWDGAc,33
+ol_openedx_course_structure_api-0.1.0.dist-info/RECORD,,
