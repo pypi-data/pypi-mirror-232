@@ -1,0 +1,15 @@
+sampledbapi/__init__.py,sha256=TmDk33HN3elz4HxcwChB6fOX1dkm0hFXq84J_5tx3Ew,294
+sampledbapi/actions.py,sha256=DF7YDJbjM8I2-GYk7LCE0YfRhhwSnlaLoHV_gURm99c,1137
+sampledbapi/actiontypes.py,sha256=XGFkYBHJxQUajqlG1_pVn7jSqRnCsMFGzQKPsgPWa9c,1004
+sampledbapi/comm.py,sha256=OPbMZXWYUKC6MSRiJMcWla1awOm8R5Kz8fl_pD15sXs,2514
+sampledbapi/instruments.py,sha256=XP2l3UDTTy-Wj2cqCFdsDCiz3KyUQHzxWPMq02bg9cI,9951
+sampledbapi/locations.py,sha256=27kCa0oc96C-zoCa5zPKbfsuKiXkVNPHn0onV4RMqhw,1091
+sampledbapi/locationtypes.py,sha256=KU5eUNSFH3tUAcOkedJ_wYXZZQoubT5p2_tigm8dC1Q,1076
+sampledbapi/objects.py,sha256=iQYjZRG95qO9kmxUthYW3B2bWhP3wSrExFIW_rJVCtE,19109
+sampledbapi/users.py,sha256=OvoaM2-6McqmzPpd4Pn4-1PNvsuiRBGp2bsH9-m1KJY,1092
+sampledbapi/utils.py,sha256=YMPWfyK-aQWsWtIewnqHwTxaZefUV-RuAAf_yBceQ6E,3017
+sampledbapi-0.6.3.dist-info/LICENSE,sha256=37DoG8mHz1t0ANhmZSaVArOe0LHaeGp6uFsUIiz735g,1067
+sampledbapi-0.6.3.dist-info/METADATA,sha256=6nIDVECjQ2IX4LeQlsf2ZNpIwwV6v_dIxNI6QchV7ew,5192
+sampledbapi-0.6.3.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+sampledbapi-0.6.3.dist-info/top_level.txt,sha256=ZfvJfyVXSFAaiOQRIjJg36z1pG00l1-dckHFZyMuoG4,12
+sampledbapi-0.6.3.dist-info/RECORD,,
