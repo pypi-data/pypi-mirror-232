@@ -1,0 +1,8 @@
+[console_scripts]
+format=manage:run_format
+format:imports=manage:run_format_imports
+lint=manage:run_lint
+test=manage:run_test
+test:cov=manage:run_test_cov
+test:cov:html=manage:run_test_cov_html
+
