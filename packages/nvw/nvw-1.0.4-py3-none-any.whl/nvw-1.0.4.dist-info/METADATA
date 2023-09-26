@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: nvw
+Version: 1.0.4
+Summary: 
+Author: Atsushi Nemoto
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: Django (>=4.1,<5.0)
+Requires-Dist: Jinja2 (>=3.1.2,<4.0.0)
+Requires-Dist: Markdown (>=3.4.1,<4.0.0)
+Requires-Dist: channels (>=3.0.5,<4.0.0)
+Requires-Dist: djangorestframework (>=3.13.1,<4.0.0)
+Requires-Dist: grpcio (>=1.48.1,<2.0.0)
+Requires-Dist: protobuf (>=4.24.3,<5.0.0)
