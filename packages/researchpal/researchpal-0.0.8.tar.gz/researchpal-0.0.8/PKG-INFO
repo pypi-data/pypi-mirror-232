@@ -1,0 +1,68 @@
+Metadata-Version: 2.1
+Name: researchpal
+Version: 0.0.8
+Summary: Python library for generating literature review
+Home-page: UNKNOWN
+Author: Veracious.ai
+Author-email: info@researchpal.co
+License: MIT
+Description: ![ResearchPal](https://simp4.jpg.church/1ResearchPal166a286b95af90f7.md.png)
+        ## researchpal: A Python Library for Automated Literature Review Generation
+        
+        ## What is it?
+        researchpal is a Python library that automates the process of generating academic literature reviews based on a research question. It utilizes external data sources to fetch research papers, synthesizes the findings, and generates a concise literature review. This library is particularly useful for researchers and students looking to streamline the literature review process.
+        
+        ## Features:
+        * Fetches research papers from Springer and Arxiv.
+        * Synthesizes research findings into a coherent literature review.
+        * Extracts citations and generates a references list.
+        * Supports both short and long literature reviews.
+        
+        ## Prerequisites:
+        Before using researchpal, ensure you have the following prerequisites:
+        
+        * Python 3.8 installed on your system.
+        * An API key for OpenAI (required for certain functionalities).
+        
+        ## Installation:
+        To install researchpal, you can use pip: 
+        
+        > pip install researchpal
+        
+        ## Usage:
+        Here's a basic example of how to use researchpal in your Python script: from researchpal import literature_review
+        
+        > from researchpal import generate_literature_review\
+        \
+        > research_question = *"your_query"* \
+        > openai_key = *"your_openai_api_key"* \
+        > length (by default) = *"short"*  # can be "short" or "long"\
+        \
+        > literature_review.generate_literature_review(research_question, openai_key, length)
+        
+        generate_literature_review(research_question, openai_key, length)
+        
+        ## Options:
+        * research_question: Your research question.
+        * openai_key: Your OpenAI API key.
+        * length: The length of the literature review ("short" or "long," default is "short").
+        
+        ## License:
+        This project is licensed under the MIT License.
+        
+        ## Support and Feedback:
+        For support or feedback, please contact us at info@researchpal.co
+        
+        ## Acknowledgments:
+        This library makes use of research papers from Springer and Arxiv, and it requires an OpenAI API key for certain functionality.
+Keywords: researchpal,literature review,generate literature review,python literature
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Unix
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
