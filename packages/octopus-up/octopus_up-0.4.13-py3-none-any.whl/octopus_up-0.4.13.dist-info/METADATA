@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: octopus-up
+Version: 0.4.13
+Summary: Open source code interpreter agent for LLM
+Home-page: https://github.com/dbpunk-labs/octopus
+Author: imotai
+Author-email: wangtaize@dbpunk.com
+Description-Content-Type: text/markdown
+Requires-Dist: octopus-sdk
+Requires-Dist: requests
+Requires-Dist: huggingface-hub
+Requires-Dist: rich
+
+octopus setup tool
