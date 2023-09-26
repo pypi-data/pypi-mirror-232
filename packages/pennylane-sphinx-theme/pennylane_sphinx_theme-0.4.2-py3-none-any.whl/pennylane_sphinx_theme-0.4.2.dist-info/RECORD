@@ -1,0 +1,14 @@
+pennylane_sphinx_theme/__init__.py,sha256=aloShzGWx36P427pj3HZxG3up-pm66iGdmTfAxwCGZ0,1331
+pennylane_sphinx_theme/_version.py,sha256=EkgBgaU8ORikNrJr8Lg4oOQG-XS8FL1Z7fngB7owaP0,182
+pennylane_sphinx_theme/footer.py,sha256=m25yj190xAhc_naemRXXdMc_rjN7ejQAZPCfI-sbhi0,5449
+pennylane_sphinx_theme/layout.html,sha256=pzP15VPwssaxkJLh5AxfMsdPcaIMo7nuSXWejGfiqfA,295
+pennylane_sphinx_theme/navbar.py,sha256=AwOHsX9Oz5uzXOZ9WFeZ6k0ArB5U4IR3ygflRLG1_HY,2534
+pennylane_sphinx_theme/theme.conf,sha256=pgxwca1jQxyKct2M1qCMdUfVoMo91imY5cU0fdYQo6o,2757
+pennylane_sphinx_theme/static/favicon.ico,sha256=hqBY6RaRwr1u7CsKW75mNcvkUxZ3PwDx2dUjIZnL2rU,15406
+pennylane_sphinx_theme/static/pennylane.svg,sha256=mAg5_cb5bbNT0AIkGHxACLtsqFRzH7kz_LZKFGUvioo,6894
+pennylane_sphinx_theme-0.4.2.dist-info/LICENSE,sha256=F2qvAe0Rd9b0obmaKy0Wd8BrI78Co5DMGCOLJe56co0,11357
+pennylane_sphinx_theme-0.4.2.dist-info/METADATA,sha256=QiLI2QEQLYqwJdXC1qQ-D9eJe0d4xECWA54NxgW9JyE,4107
+pennylane_sphinx_theme-0.4.2.dist-info/WHEEL,sha256=00yskusixUoUt5ob_CiUp6LsnN5lqzTJpoqOFg_FVIc,92
+pennylane_sphinx_theme-0.4.2.dist-info/entry_points.txt,sha256=de5gQAW7QsjWlO1zKXQnGpXSQjUxIGcdzn_QUh6dnhU,57
+pennylane_sphinx_theme-0.4.2.dist-info/top_level.txt,sha256=eEAgBAHkFDPG1n7nHXbeb_oen12aiKPiQknlTdBu5ak,23
+pennylane_sphinx_theme-0.4.2.dist-info/RECORD,,
