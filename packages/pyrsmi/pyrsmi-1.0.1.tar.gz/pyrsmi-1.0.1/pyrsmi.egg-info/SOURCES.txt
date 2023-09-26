@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+./README.md
+./.pytest_cache/README.md
+./examples/README.md
+pyrsmi/__init__.py
+pyrsmi/_version.py
+pyrsmi/rocml.py
+pyrsmi.egg-info/PKG-INFO
+pyrsmi.egg-info/SOURCES.txt
+pyrsmi.egg-info/dependency_links.txt
+pyrsmi.egg-info/top_level.txt
