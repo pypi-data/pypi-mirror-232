@@ -1,0 +1,9 @@
+adafruit_pcf8591/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+adafruit_pcf8591/analog_in.py,sha256=VsxFeGE8uSPq4Q6lFYMz9zE2arOUWN2mV_Akp8Ruy5w,3248
+adafruit_pcf8591/analog_out.py,sha256=Bamndpan07l3YgVfefwZ_8Q9wAK_ydmx0axwY3yQgzg,2875
+adafruit_pcf8591/pcf8591.py,sha256=IZe9Yra7USIldJWNERvF2-s_g_ua1xHJhJqRiFkJOkQ,4347
+adafruit_circuitpython_pcf8591-1.0.17.dist-info/LICENSE,sha256=lL6CpRSFW8FPg_7Uk25HW3Ie6YBGNLf4Ja6oU0sYvg0,1104
+adafruit_circuitpython_pcf8591-1.0.17.dist-info/METADATA,sha256=O441k5oGWT7K3HK-GbrGyiyLlGd7CbRSF0e0l9Pn7jw,4552
+adafruit_circuitpython_pcf8591-1.0.17.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+adafruit_circuitpython_pcf8591-1.0.17.dist-info/top_level.txt,sha256=6HK6Fo009XZQ-tk88ZNgw3_PaPUGo2Dq-EHs4RTZVKg,17
+adafruit_circuitpython_pcf8591-1.0.17.dist-info/RECORD,,
