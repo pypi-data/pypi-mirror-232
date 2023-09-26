@@ -1,0 +1,11 @@
+mvmt/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mvmt/algebra.py,sha256=abDz-FLuXGFh24F-rCKxAXVexRXa5A_FSlmKIQbM0n0,6889
+mvmt/parser.out,sha256=vk6ExAq6j_P_lkLac9kMrXnt_nSO1F6TKR_e6Cj2c3s,11313
+mvmt/parsetab.py,sha256=YflohRJ3DNKmNKdNWVdQ51yfaIYeJlYBiXvAzYhfXGc,2349
+mvmt/syntax.py,sha256=CZNv1wyw0sgmcjWe2xgwU5888l__pPXy-aXw3FPbbag,2903
+mvmt/tableau.py,sha256=ulbL2y9mZrqGSvoH9sYAoCxq_Wqt7gBv31iVSrtbex4,43153
+mvmt/utils.py,sha256=x0M2IRErUUATEnliBrNUi2G2bJ0ojzuKHDkRH17ZJRc,1456
+mvmt-0.0.1.dist-info/METADATA,sha256=ob42G4Vc5Ig4x_tWcxhjdTBq9XQnAE-1ztPvlP9_W24,6386
+mvmt-0.0.1.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+mvmt-0.0.1.dist-info/licenses/LICENSE,sha256=1jpZZiqP4-NYVRtzkwL2kBePEVID5iTiJpvcDuoPzDg,1068
+mvmt-0.0.1.dist-info/RECORD,,
