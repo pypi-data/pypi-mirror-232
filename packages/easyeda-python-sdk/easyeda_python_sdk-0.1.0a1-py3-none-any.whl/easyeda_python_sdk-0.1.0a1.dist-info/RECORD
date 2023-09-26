@@ -1,0 +1,10 @@
+easyeda/__init__.py,sha256=BKItW9lBlV7o4DuFQinSdDXzFoRf9FOc43h6qpcyPu8,162
+easyeda/core/__init__.py,sha256=yekZWR91TjhRpWv1my4oe-FqoXVW5zh3KGvRDzYDRRg,329
+easyeda/core/canvas.py,sha256=UlzI3jMn2cMfj4C2kyDrAsDNB0lxLEecsmJt7RgwIxY,2650
+easyeda/core/geometry.py,sha256=zOMhBCxsOGvl1RCif7uuXDHUAcAHNY_IHwG1qFwJzk0,1965
+easyeda/core/layers.py,sha256=MNW3j8aHAZLWLbL_sJ6J9QkYhxhEY_Hhavh6tWo9dAM,5928
+easyeda/core/pcb.py,sha256=qCRH_UTNhmD3sF5750ZR0MSP9NSfDLiM0wUTAvIHetU,3870
+easyeda_python_sdk-0.1.0a1.dist-info/LICENSE,sha256=NPkdOoHjxlnIVFb7jfV1OT3SpPsxYNl4kPAlPKajRUQ,1069
+easyeda_python_sdk-0.1.0a1.dist-info/WHEEL,sha256=vxFmldFsRN_Hx10GDvsdv1wroKq8r5Lzvjp6GZ4OO8c,88
+easyeda_python_sdk-0.1.0a1.dist-info/METADATA,sha256=paKs-1EQs-ncTldXtri3uQgOERxNZStjRI3e_joB8Ws,1105
+easyeda_python_sdk-0.1.0a1.dist-info/RECORD,,
