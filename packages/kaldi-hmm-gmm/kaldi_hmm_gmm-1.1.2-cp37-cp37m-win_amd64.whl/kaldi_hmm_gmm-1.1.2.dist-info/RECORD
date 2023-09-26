@@ -1,0 +1,15 @@
+_kaldi_hmm_gmm.cp37-win_amd64.pyd,sha256=lPnMB0ltswSAyzOgh8A3VmoQySuKlftNo376aMG1z90,2507776
+kaldi-hgmm-gmm-kaldi-native-io-core.lib,sha256=4q4cJNr92hLoKTzi2hBc6BRWjW9VWOYcJ6NGxPl95Qs,5002312
+kaldi-hmm-gmm-core.lib,sha256=oq02ecD4dd2n09jBgC4uJJVBxu9_rdLOS429ez6o6Kg,21724616
+kaldi-hmm-gmm-fst.lib,sha256=fSk2uPEneiQDKe7s8238PnbmnSNxi7KSpK8o46VLfmg,11189430
+kaldi-hmm-gmm-kaldi-fst-core.lib,sha256=v0UtKIpV_DeNmOv7bCtNxjAJzHJ73bm9TIBDEaR1saE,3600062
+kaldi_hmm_gmm/__init__.py,sha256=Li5pqbEG7W-YJO6pi73x4ZedA2M-rFIVUgKmeYT-98Y,1425
+kaldi_hmm_gmm/cluster_utils.py,sha256=K6h4I_wy8x4q_GQ9lQTmjiWzdLgvWGSXhmpTH1JPoNI,850
+kaldi_hmm_gmm/hmm_topo_utils.py,sha256=iRM0QweKw6LMiLeGpsqgkN06CphS8jKU4VZQHJJNsn4,1889
+kaldi_hmm_gmm/lib/kaldi-hmm-gmm-fst.lib,sha256=fSk2uPEneiQDKe7s8238PnbmnSNxi7KSpK8o46VLfmg,11189430
+kaldi_hmm_gmm/lib/kaldi-hmm-gmm-kaldi-fst-core.lib,sha256=v0UtKIpV_DeNmOv7bCtNxjAJzHJ73bm9TIBDEaR1saE,3600062
+kaldi_hmm_gmm-1.1.2.dist-info/LICENSE,sha256=jfClcNbFUkJ_A39ojeA1MTvJ1caVOPB4_H-ABviJeF4,11939
+kaldi_hmm_gmm-1.1.2.dist-info/METADATA,sha256=J0BbrWa1YXhf2eUanfbRta12amjQkvTNY85kxJAuV2U,801
+kaldi_hmm_gmm-1.1.2.dist-info/WHEEL,sha256=XjgoyucPba5KIJKeQEOuBejIax_ghuoOXGkTW4ghWp8,101
+kaldi_hmm_gmm-1.1.2.dist-info/top_level.txt,sha256=lQo-UoCbzqqekUnmlg41aMvbEl5LxGL2SlB7tWZss0k,29
+kaldi_hmm_gmm-1.1.2.dist-info/RECORD,,
