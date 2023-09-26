@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "poetry-plugin-configurable-venv-location"
+version = "0.1.0"
+description = "Poetry plugin that adds support for configuring venv location."
+authors = ["Blair Azzopardi <blairuk@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "poetry_plugin_configurable_venv_location"}]
+repository = "https://github.com/bsdz/poetry-plugin-configurable-venv-location"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+poetry = "^1.2"
+
+[tool.poetry.plugins."poetry.plugin"]
+configurable-venv-location-plugin = "poetry_plugin_configurable_venv_location.plugin:ConfigurableVenvLocationPlugin"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
