@@ -1,0 +1,11 @@
+zshgpt/__about__.py,sha256=-HFTfTrIFPo3vguEHPBriqRMsFIrKkN0fqIQYKuoyZ8,274
+zshgpt/__init__.py,sha256=VhWzdPeBo8HMaB9BJxYk9Y0_aFm7ZOELiYbByttDt3k,109
+zshgpt/__main__.py,sha256=gXkoJhDsyVP-TYVATz2QHp-qPIWhHzUZv4CPmURr8VE,206
+zshgpt/cli/__init__.py,sha256=HzyvSBM086bVZtJT3TurDh1jOL3F2QiwziLTQ7H6hbI,853
+zshgpt/cli/messages.py,sha256=B2FQCPF3OqP_DPeh2930UKMPKo1EckTE1pbeccUdVzs,2219
+zshgpt-1.0.1.dist-info/METADATA,sha256=XWvL93Ual0KmK1NOSZxFigHOTJFhQK-Y-IA5dwbIE8c,3993
+zshgpt-1.0.1.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+zshgpt-1.0.1.dist-info/entry_points.txt,sha256=9U0qoEXxBiDhL0nY5doqGGQu9zz0QKQXr-D_2VIyNbU,45
+zshgpt-1.0.1.dist-info/licenses/LICENSE,sha256=0oua7CW715TySI9TM5b7nmBSRwC2PjCDS1N6QNK_GBQ,1080
+zshgpt-1.0.1.dist-info/licenses/LICENSE.txt,sha256=b93uaLpHyKruR7r5kbFBXOowAgAhJNDKdyTZT6OTr_0,1101
+zshgpt-1.0.1.dist-info/RECORD,,
