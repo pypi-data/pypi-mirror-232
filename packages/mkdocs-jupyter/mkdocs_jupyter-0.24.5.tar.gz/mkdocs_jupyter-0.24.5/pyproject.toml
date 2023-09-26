@@ -1,0 +1,110 @@
+[project]
+name = "mkdocs-jupyter"
+description = "Use Jupyter in mkdocs websites"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { "text" = "Apache-2.0" }
+keywords = ["mkdocs", "jupyter", "jupyterlab", "notebooks", "documentation"]
+authors = [{ name = "Daniel Rodriguez", email = "daniel@danielfrg.com" }]
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+]
+dependencies = [
+  "nbconvert>=7.2.9,<8",
+  "mkdocs>=1.4.0,<2",
+  "mkdocs-material>9.0.0",
+  "jupytext>1.13.8,<2",
+  "Pygments>2.12.0",
+  "ipykernel<7.0.0,>6.0.0",
+]
+dynamic = ["version"]
+
+[tool.rye]
+managed = true
+dev-dependencies = [
+  # Testing
+  "coverage[toml]",
+  "pymdown-extensions",
+  "pytest",
+  "pytest-cov",
+  # Linting
+  "black",
+  "flake8",
+  "isort",
+  "pip-tools",
+  "ruff",
+  # Utils
+  "jupyterlab",
+]
+
+[project.entry-points."mkdocs.plugins"]
+mkdocs-jupyter = "mkdocs_jupyter.plugin:Plugin"
+
+[tool.hatch.build]
+artifacts = ["src/mkdocs_jupyter/**"]
+exclude = [".github", "docs"]
+
+[tool.hatch.version]
+path = "src/mkdocs_jupyter/__about__.py"
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = [
+  "-s",
+  "-vv",
+  "--strict-config",
+  "--strict-markers",
+  "--ignore=dist",
+  "--ignore=site-packages",
+  # "--strict-markers",
+  "--cov=mkdocs_jupyter",
+  "--cov-report=term",
+  "--cov-config=pyproject.toml",
+]
+markers = [
+  "pkg: marks tests as Packaging tests",
+  "adsapi: mark test that require connection to the API",
+]
+xfail_strict = true
+filterwarnings = ["ignore::DeprecationWarning"]
+
+[tool.coverage.run]
+branch = true
+parallel = true
+omit = ["tests/*"]
+
+[tool.coverage.report]
+exclude_lines = ["no cov", "if __name__ == .__main__.:", "if TYPE_CHECKING:"]
+
+[tool.ruff]
+select = [
+  "E", # pycodestyle errors
+  "W", # pycodestyle warnings
+  "F", # pyflakes
+  # "I",  # isort
+  "B", # flake8-bugbear
+]
+
+[tool.isort]
+profile = "black"
+
+[tool.mypy]
+strict = true
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project.urls]
+Documentation = "https://github.com/danielfrg/mkdocs-jupyter#readme"
+Issues = "https://github.com/danielfrg/mkdocs-jupyter/issues"
+Source = "https://github.com/danielfrg/mkdocs-jupyter"
