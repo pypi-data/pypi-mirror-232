@@ -1,0 +1,10 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.py
+src/ddi_transformations.egg-info/PKG-INFO
+src/ddi_transformations.egg-info/SOURCES.txt
+src/ddi_transformations.egg-info/dependency_links.txt
+src/ddi_transformations.egg-info/not-zip-safe
+src/ddi_transformations.egg-info/requires.txt
+src/ddi_transformations.egg-info/top_level.txt
