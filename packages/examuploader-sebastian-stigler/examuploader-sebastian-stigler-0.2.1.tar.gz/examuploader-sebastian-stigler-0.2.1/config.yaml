@@ -1,0 +1,6 @@
+courses:
+  - name: python101
+    students:
+      - heinz
+      - python101-*
+upload_path: ./upload

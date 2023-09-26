@@ -1,0 +1,10 @@
+fastapi[all]==0.103.1
+pydantic-settings-yaml
+
+[:python_version < "3.8"]
+importlib-metadata
+
+[testing]
+setuptools
+pytest
+pytest-cov
