@@ -1,0 +1,112 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "watchful"
+dynamic = ["version"]
+description = "Watchful API for Interacting with Watchful Environment"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.8"
+authors = [
+    { name = "Watchful", email = "engineering@watchful.io" },
+    { name = "Inc." },
+]
+keywords = [
+    "watchful",
+]
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+]
+dependencies = [
+    "chardet>=5.1.0",
+    "psutil>=5.9.2",
+    "requests>=2.23.0",
+]
+
+[project.optional-dependencies]
+enrich = [
+    "flair>=0.11.3",
+    "spacy>=3.4.1",
+    "spacytextblob>=4.0.0",
+]
+
+[project.urls]
+"Bug Tracker" = "https://github.com/Watchfulio/watchful-py/issues"
+Homepage = "https://github.com/Watchfulio/watchful-py"
+
+[tool.hatch.version]
+path = "src/watchful/__about__.py"
+
+[tool.hatch.build.targets.wheel]
+packages = [
+    "src/watchful",
+]
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "/",
+    "src",
+]
+
+[tool.hatch.envs.default]
+# CircleCI doesn't have a dynamic way of specifying paths
+# to be cached, so rather than just using the result of
+# `hatch env find`, we specify a static path and cache it.
+type = "virtual"
+path = ".hatch-env"
+dependencies = [
+    "black",
+    "mypy",
+    "nose-py3",
+    "pytest",
+    "responses",
+    "ruff",
+    "types-psutil",
+    "types-requests",
+]
+
+[tool.hatch.envs.default.scripts]
+test = [
+    "PYTHONPATH=src:$PYTHONPATH nosetests -s --with-coverage --cover-erase --cover-package=watchful --cover-html tests --cover-min-percentage=60",
+]
+check = [
+    "black --check --diff --config pyproject.toml src tests",
+    "ruff check src tests",
+    "mypy src",  # We do not need to type check tests
+]
+
+[tool.mpypy]
+allow_redefinition = false
+allow_untyped_globals = false
+check_untyped_defs = true
+disallow_any_unimported = true
+disallow_any_expr = true
+disallow_any_explicit = true
+disallow_any_generics = true
+disallow_subclassing_any = true
+disallow_any_decorated = true
+disallow_untyped_calls = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+disallow_untyped_decorators = true
+strict = true
+strict_optional = true
+strict_equality = true
+
+[[tool.mypy.overrides]]
+module = [
+    "flair",
+    "spacytextblob",
+]
+ignore_missing_imports = true
+
+[tool.black]
+line-length = 80
+target-version = ['py310', 'py39', 'py38']
+include = '\.py$'
+exclude = '\.ipynb$'  # Exclude notebooks as they are mostly experimental, to
+    # explicitly include where needed.
