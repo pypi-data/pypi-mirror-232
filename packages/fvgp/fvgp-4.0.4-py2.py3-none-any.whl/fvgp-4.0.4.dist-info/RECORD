@@ -1,0 +1,16 @@
+fvgp/__init__.py,sha256=gjfdOieVMAiVolujngAxhAySZU-G93EYHjSyTD_J5yM,311
+fvgp/_version.py,sha256=G7muooVewlvgdmujtOysKrZunyOHELkNkbxYLHaX3ck,497
+fvgp/deep_kernel_network.py,sha256=eLxXRMXGLN_jR3s4sWVVMPUvtRyaejt3OyVq5QqdnaY,1435
+fvgp/fvgp.py,sha256=5s9MabKzXyHAYI4Y3YE0YmPOKcldjwxQXZ8ULwgYryo,22471
+fvgp/gp.py,sha256=qxi5ACWg3mlIlV_dm6SuzevwBW0j8ggr2_AIMUNrGZM,116614
+fvgp/gp2Scale.py,sha256=NoKME6LlzmxKFZbYnYo9OJ_cFKOKI2gV_zxt-Lx7WIg,27112
+fvgp/mcmc.py,sha256=83TnNKm-LrX5hyjGPPwS-JN_s5wSVPEK9RTRj8sXUDk,7202
+fvgp/sparse_matrix.py,sha256=R4CVzY3PTtcBvOwxjvetuhxGuCNCRG5DkkmnVCDDgeA,4283
+fvgp-4.0.4.dist-info/AUTHORS.rst,sha256=x8jdtzE0OxsyWJ51YFPvt6o673CYGzo-jE1eDug9b4Q,148
+fvgp-4.0.4.dist-info/COPYING,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+fvgp-4.0.4.dist-info/LICENSE,sha256=tMWRXBiUdCmaHYwVqISiAsoJfsJD1ylcQz7zI3eq1Mk,1629
+fvgp-4.0.4.dist-info/METADATA,sha256=srFbLxDjSxrArHFyaStZ4-natP89gbvbdO5o1uyGeZg,2985
+fvgp-4.0.4.dist-info/WHEEL,sha256=iYlv5fX357PQyRT2o6tw1bN-YcKFFHKqB_LwHO5wP-g,110
+fvgp-4.0.4.dist-info/entry_points.txt,sha256=FGzxRmLD-YxlaWrYQRmPesy_pqFhQEBUXDuEey_55f8,39
+fvgp-4.0.4.dist-info/top_level.txt,sha256=V_lmgRZnKWNMoTsqAv7ngP2dSF3qh2xYnRKfc6UZIMw,5
+fvgp-4.0.4.dist-info/RECORD,,
