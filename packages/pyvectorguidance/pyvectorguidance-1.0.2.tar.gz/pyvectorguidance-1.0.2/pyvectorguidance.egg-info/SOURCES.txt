@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+pyvectorguidance/VectorGuidance.py
+pyvectorguidance/__init__.py
+pyvectorguidance.egg-info/PKG-INFO
+pyvectorguidance.egg-info/SOURCES.txt
+pyvectorguidance.egg-info/dependency_links.txt
+pyvectorguidance.egg-info/requires.txt
+pyvectorguidance.egg-info/top_level.txt
