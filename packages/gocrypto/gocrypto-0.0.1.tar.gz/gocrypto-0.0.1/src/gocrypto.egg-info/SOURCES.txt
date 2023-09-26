@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/gocrypto/__init__.py
+src/gocrypto/build.py
+src/gocrypto/go.py
+src/gocrypto/gocrypto.py
+src/gocrypto.egg-info/PKG-INFO
+src/gocrypto.egg-info/SOURCES.txt
+src/gocrypto.egg-info/dependency_links.txt
+src/gocrypto.egg-info/top_level.txt
