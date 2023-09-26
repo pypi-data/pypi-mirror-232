@@ -1,0 +1,7 @@
+requests
+flaml
+rdkit-pypi
+mordred
+PyTDC
+shap
+eosce
