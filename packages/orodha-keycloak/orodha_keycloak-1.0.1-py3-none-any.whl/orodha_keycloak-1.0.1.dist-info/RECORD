@@ -1,0 +1,10 @@
+orodha_keycloak/__init__.py,sha256=KPLyUV4lc5FU7CflzDPL15p7KbIgd-NU9HH74jplW_k,45
+orodha_keycloak/connection.py,sha256=TJz_0HPG-N_hgN8ZTGeukmTh59YtDL_JnGvxXpsrheI,5557
+orodha_keycloak/connections/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+orodha_keycloak/connections/admin.py,sha256=NImm_dmbYfNp2JkhvKA7kszGE1rpNpE24xDcfOcqg5k,1830
+orodha_keycloak/connections/client.py,sha256=ZqAw2dVmvx7XuLAXzdMOB-QlRCfnY7mro-ujnj0iO9g,1174
+orodha_keycloak/connections/exceptions.py,sha256=BqEnId7Z8SnOjFyOeHQ442QC1p33Y3uXDb_gGypPFnM,646
+orodha_keycloak-1.0.1.dist-info/METADATA,sha256=u3z_zQ6DeH0r6BBzZGEGUfxXFysgdOAxh4Bndk000-4,3262
+orodha_keycloak-1.0.1.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+orodha_keycloak-1.0.1.dist-info/licenses/LICENSE,sha256=S9t-MQX-2uL68DntbG5jsp_e_7TojdjAORLuYT0vVIU,1095
+orodha_keycloak-1.0.1.dist-info/RECORD,,
