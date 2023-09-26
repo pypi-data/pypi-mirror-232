@@ -1,0 +1,2 @@
+class MalformedResponseError(Exception):
+    pass
