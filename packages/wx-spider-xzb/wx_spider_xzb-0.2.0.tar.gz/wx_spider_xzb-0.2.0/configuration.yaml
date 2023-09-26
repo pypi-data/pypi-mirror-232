@@ -1,0 +1,31 @@
+# 需要抓取公众号的__biz参数
+fackid_name:
+  "MzA5MTcxMTU0OQ==": "莆田交警"
+#  "MzAxNjAyOTY0NQ==": "荔城交警"
+#  "MzA5Mzk5MzkxNg==": "MzA5Mzk5MzkxNg=="
+#  "MjM5OTI2MjQwNw==": "MjM5OTI2MjQwNw=="
+#  "MzA4NTY5ODYwOA==": "MzA4NTY5ODYwOA=="
+count: 10
+limit: 2
+# 个人微信号登陆后获取的uin
+uin: "MzEyMTQ3NDE0OQ%3D%3D"
+token: "557113136"
+cookie: "appmsglist_action_3941532532=card; bizuin=3941532532; data_bizuin=3941532532; data_ticket=6ZBOwzoC5/id1vbCnAzS2MM/Bwq7nH7UnmBYLcjv+jcCDuhQ3ss2S5RPZ09gJdnZ; rand_info=CAESINbx8c40vLW1RXTP9zjvTEqzdyzDTrjBKodiX1UDuhNs; slave_bizuin=3941532532; slave_sid=TmFtbVRzT3Y5emJRSWVaZEF5blgzV2wwUmRPYnY5ZTU0NXNDeGxER0RLV2pHU0MzNXFmZW1BVDVTRk9KZUZSQlA3YUhBTm1IM1lneFkwVTFLcHZxRk1vWEc0cW5ES0xtTHQzbjljdkdCeGpidERtTEdnOWNkVDd6V20zaWc0MjV3UmROWEo2N0pVQ2FlOFZ2; slave_user=gh_7c58875d1485; _clsk=h6i0uj|1695437374038|3|1|mp.weixin.qq.com/weheat-agent/payload/record; mm_lang=zh_CN; ua_id=qDdhQmKL5Rdpp6zLAAAAAGD7f0rGHNJUK0tzpM9dVYQ=; xid=c821d88f4d13cd17e11bc5387a759e6c; _clck=3941532532|1|ff9|0; uuid=0c98b14d1553ff50b5e2990b333b9795; pgv_pvid=1693918264; lskey=00010000652c5c87ddba0af04357774983e03ce38bf166445d337b524adbddd709cfa86baf12df8d5ad2198f; luin=o2598514867; ptcz=098f28005be103c849e7f879d7f81094789d8db49ebb9093c4e96fe475c5d01f; iip=0; pac_uid=1_2598514867; wxuin=66180440528786; RK=GA+wz1h1uF"
+agent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36 NetType/WIFI MicroMessenger/6.8.0(0x16080000) MacWechat/3.8.1(0x13080111) XWEB/30626"
+#key: "a9ffeedd3a97adb4324f17ca2dba007fa00c311bd727e74d0fdd1ab3684ee73ae1a2ed10761ff64a89988bf9bd73db83f7f9c7e8105153c814ad720fc13eb1e10ff292fa2f376c49244eb06773c9b1a24a502476644d73bbb30bef0a4693d9ee1f996bf21fe4d99428359ab3d406cdb956c9f73f617dd36e108bd3bf47c7d1da"
+openai_key: "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"
+
+excludes:
+  - "扫一扫"
+  - "视频小程序赞"
+  - "知道了"
+  - "取消允许"
+  - "微信号"
+  - "功能介绍"
+  - "关注"
+  - "咨询"
+  - "发表于"
+  - "收录于合集"
+permits:
+  - "施工"
+  - "交通管制"
