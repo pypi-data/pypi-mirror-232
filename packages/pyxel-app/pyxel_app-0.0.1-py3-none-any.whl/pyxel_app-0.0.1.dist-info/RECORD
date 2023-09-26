@@ -1,0 +1,12 @@
+pyxel_app.py,sha256=4PurILTAUhGZ9mqqeP0uPVSmfXnz-PJhefKG5cvpxuM,1120
+template/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+template/entry.py,sha256=uzWP7wJlzsVTImiy-CJM8lcNNrTvRh7RPBzKw3igJts,67
+template/pkg/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+template/pkg/app.py,sha256=CgehN0yzIFn10kQXRRfdweN-eCveqqueLU2xUtbpwkw,744
+template/pkg/utils.py,sha256=k-5JRpPD561w6FrrT7zFdB8hKiATFZpeMiyofFwW_w8,184
+pyxel_app-0.0.1.dist-info/LICENSE,sha256=10t62GTQlMFvYzwhxJCc6Co9ABirs1191NSDI3OFOTk,1072
+pyxel_app-0.0.1.dist-info/METADATA,sha256=YN4DjrGlb9ev5POrGS9YyyeYlqmMCNvtzsMWgEBF_7I,1961
+pyxel_app-0.0.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+pyxel_app-0.0.1.dist-info/entry_points.txt,sha256=9qpA_L1S0g-I3brXL79M9qYP2CpxVpER5DLSoS0PLKs,50
+pyxel_app-0.0.1.dist-info/top_level.txt,sha256=a1URksAD6YJEl6dT7zufyLa8XxgIIUAqnt2BjUzNheo,19
+pyxel_app-0.0.1.dist-info/RECORD,,
