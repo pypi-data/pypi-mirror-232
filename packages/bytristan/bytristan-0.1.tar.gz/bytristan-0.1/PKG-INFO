@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: bytristan
+Version: 0.1
+Summary: A module for enforcing Tristan comments
+Author: tristandev
+Description-Content-Type: text/markdown
+
+# Tristan Module
+This module enforces the use of special Tristan comments in Python code.
