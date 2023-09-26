@@ -1,0 +1,3 @@
+[poetry.plugin]
+configurable-venv-location-plugin=poetry_plugin_configurable_venv_location.plugin:ConfigurableVenvLocationPlugin
+
