@@ -1,0 +1,17 @@
+napari_tomodl/__init__.py,sha256=fr36e6fkbEUGu2Id7QjQbJ0h6JVwdteInJeedO-O724,275
+napari_tomodl/_reconstruction_widget.py,sha256=qJG0t8dmcn2sVfrEj_BZa-Rs2dq0eooO4YpHsH6QTP4,11437
+napari_tomodl/napari.yaml,sha256=lAqwKqMc3sE3CO7xst-Wi7SWdm_bpBD2tY8dfpUOdQY,357
+napari_tomodl/widget_settings.py,sha256=6Q-hrcM_PEq-3LxFDAcWhuPd5w6bA8x8scB-qb2FkaE,8523
+napari_tomodl/_tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+napari_tomodl/processors/OPTProcessor.py,sha256=UFpSqfTClyxKCwuRC3CczQG3pG8dmjgSL1kzUu-CQC0,11914
+napari_tomodl/processors/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+napari_tomodl/processors/alternating.py,sha256=sqHQb8y-0F69MV-jCQSjCXV-k8b7j26xyxyNiffGeUY,21696
+napari_tomodl/processors/modl.py,sha256=6Ov7nIX9JQ3baKoaeu6Ghn4CM2Wn42LYGY2zK2bkCoI,12878
+napari_tomodl/processors/unet.py,sha256=h5lSlGa79G-ytT0-hhnfdIZoa-29MNWe8SpXIvm2MIc,5099
+napari_tomodl/workshop/segmentation.py,sha256=ObjkUkU_byfyLDM0EfL2FWiwFcAI3FcZWg6L3ovBoDE,117
+napari_tomodl-0.1.8.dist-info/LICENSE,sha256=vrlnGPiaiATRSGUR9myT_lGP7-fDdpem2I3jCK8UJDc,1089
+napari_tomodl-0.1.8.dist-info/METADATA,sha256=YatOEGZuXL6rCRnpEanC4TECBSWJKyXvYmlrI7tgUng,5975
+napari_tomodl-0.1.8.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+napari_tomodl-0.1.8.dist-info/entry_points.txt,sha256=3QlrJRAbocPw0aRpSmHOm7E-T-gM0xmPMJ2uVeKMV40,60
+napari_tomodl-0.1.8.dist-info/top_level.txt,sha256=526zcV84oJ_cyoaQ1OqIX_NSp1feAm1vzRMnDbjqL50,14
+napari_tomodl-0.1.8.dist-info/RECORD,,
