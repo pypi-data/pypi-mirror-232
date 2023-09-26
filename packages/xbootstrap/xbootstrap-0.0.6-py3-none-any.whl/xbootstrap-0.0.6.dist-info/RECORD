@@ -1,0 +1,9 @@
+xbootstrap/__init__.py,sha256=6jSR2rrfxe7yr-b_Q9QmOTIJoectGTl7u8IKfMu0_xk,138
+xbootstrap/_version.py,sha256=eTfty1NzsVmOPGe1YbYcZVAO_8J5vZclvVClvMO94aU,497
+xbootstrap/core.py,sha256=55IcV_1z5UVTu4fKnVXwvgz3PkHVj-nS5fo448a_UDQ,15727
+xbootstrap/tests/test_core.py,sha256=BkY4pignOb3joU25TxOfRdQBY2aOyjtk24On8LfxX2c,8112
+xbootstrap-0.0.6.dist-info/LICENSE,sha256=3NfLTi3dfsAMpqQt9114zUvvcIv3BTCD4OgnbDX3GMo,1070
+xbootstrap-0.0.6.dist-info/METADATA,sha256=xkkGtZ-z-1AiNJJWfk_mexBaXnDzoPZ1o2BYYED6-Ik,4045
+xbootstrap-0.0.6.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+xbootstrap-0.0.6.dist-info/top_level.txt,sha256=dzbK12atxDBE4vHQbgrJazYlCKmjwXp4aqEWKr5abeI,11
+xbootstrap-0.0.6.dist-info/RECORD,,
