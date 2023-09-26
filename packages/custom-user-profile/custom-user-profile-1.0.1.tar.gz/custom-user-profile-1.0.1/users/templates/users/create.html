@@ -1,0 +1,28 @@
+{% comment %} {% extends "base.html" %}  {% endcomment %}
+{% load static %} 
+{% load crispy_forms_tags %} 
+{%block styles %}
+<link rel="stylesheet" href="{% static 'users/styles.css' %}" />
+{% endblock styles %} 
+{% block title %}
+<title>Create User</title>
+
+{% endblock title %} 
+{% block content %}
+
+<div class="container">
+    <div class="card d-flex flex-column justify-center align-items-center">
+
+        <form method="post" class="d-flex flex-column ">
+            {% csrf_token %}
+            {%crispy form%} 
+        
+            {% comment %} <button class="btn btn-primary btn-wide" type="submit" > Sign Up </button> {% endcomment %}
+	    </form>
+        <div class="col-md-6 card-body d-flex flex-row start-0 text-left gap-20">
+            <p>Already have an account?</p>
+            <a href="{% url 'user_login' %}"> Login</a>
+        </div>
+    </div>
+</div>
+{% endblock content %}
