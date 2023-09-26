@@ -1,0 +1,3 @@
+[console_scripts]
+sfti-send = sfti_net.send:main
+sfti-watch = sfti_net.watch:main
