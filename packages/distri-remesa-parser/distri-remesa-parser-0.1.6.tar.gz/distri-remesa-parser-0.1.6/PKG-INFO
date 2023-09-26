@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: distri-remesa-parser
+Version: 0.1.6
+Summary: A python library to parser payment order files with related invoices sended by the spanish "Distribuidoras" to the "Comercializadoras
+Home-page: https://github.com/Som-Energia/distri-remesa-parser
+Author: oriolpiera
+Author-email: oriol.piera@somenergia.coop
+License: GNU General Public License v3 or later (GPLv3+)
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+[![Build Status](https://travis-ci.org/Som-Energia/distri-remesa-parser.svg?branch=master)](https://travis-ci.org/Som-Energia/distri-remesa-parser)
+[![codecov](https://codecov.io/gh/Som-Energia/distri-remesa-parser/branch/master/graph/badge.svg)](https://codecov.io/gh/Som-Energia/distri-remesa-parser)
+
+# distri-remesa-parser
+Python module to parser payment order files with related invoices sended by the spanish "Distribuidoras" to the "Comercializadoras"

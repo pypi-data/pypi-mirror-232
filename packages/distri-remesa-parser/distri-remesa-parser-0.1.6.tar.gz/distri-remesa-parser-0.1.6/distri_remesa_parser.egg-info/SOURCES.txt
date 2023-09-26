@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+distri_remesa_parser.egg-info/PKG-INFO
+distri_remesa_parser.egg-info/SOURCES.txt
+distri_remesa_parser.egg-info/dependency_links.txt
+distri_remesa_parser.egg-info/not-zip-safe
+distri_remesa_parser.egg-info/top_level.txt
+distriremesaparser/__init__.py
+distriremesaparser/csvparser.py
+distriremesaparser/xlsparser.py
