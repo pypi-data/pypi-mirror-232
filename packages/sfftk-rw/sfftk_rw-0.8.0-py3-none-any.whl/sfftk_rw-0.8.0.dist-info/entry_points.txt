@@ -1,0 +1,2 @@
+[console_scripts]
+sff = sfftkrw.sffrw:main
