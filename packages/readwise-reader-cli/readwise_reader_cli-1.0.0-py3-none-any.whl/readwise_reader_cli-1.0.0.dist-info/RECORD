@@ -1,0 +1,17 @@
+readercli/__init__.py,sha256=PNbfS8u-Xri1l4dOho584UzqHHNaQk_ysgz3_FFFgyM,48
+readercli/__main__.py,sha256=YY_DCTsGMKMncwzf7yUAXMwCKSQwjKpnV_m_bW9Kq9w,451
+readercli/api.py,sha256=PW9REP0CODMkHHTbBhfqv_-iuMoOiXSsCNCV1Sg3_1Y,6773
+readercli/commands.py,sha256=s73-iM8BXsOqOLQfVcnHQw8E3lAUNSFYHkF4Fyu-zTk,6258
+readercli/constants.py,sha256=rZwOSFxKRrGSTmrbqbU2AN4HH_PROLEf7GQMfzzRG3M,398
+readercli/data.py,sha256=GS_vrw94UOkBReco7OGYp7yqYbGTHGID2MUav73pS3g,2703
+readercli/layout.py,sha256=P8akb4xo2XffDMXkeqyFHKUgB_vOt2yB5IfEVQb6N6A,9654
+readercli/models.py,sha256=Knz3TWrSwFyu7X6AqMjlZndF-8GrXJWF6BXZH-AMHDU,2289
+readercli/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+readercli/utils.py,sha256=SVlg67bLfvoaBFmLC36wuYSc2lAQVIC1bHh6NtJPMvU,3265
+readercli/reading_list/__init__.py,sha256=MH4DB5aPRgkmsX4JlTLPYme8NwadzjLDkVA_F-nBiZY,77
+readercli/reading_list/extractors.py,sha256=ZUAqupCPJeasZ6KyBZBbsEt0M4JIzoWsitt1g0nRpEA,2634
+readwise_reader_cli-1.0.0.dist-info/entry_points.txt,sha256=cpDa4ScER2iIdNmm0-8dQ9R8jnPho7sRoxd6B_4O4NI,47
+readwise_reader_cli-1.0.0.dist-info/LICENSE,sha256=Tr1j_hvvaW_No0dEvkD1VV_a5d1ycAqRYuVPBtzSH28,1065
+readwise_reader_cli-1.0.0.dist-info/WHEEL,sha256=EZbGkh7Ie4PoZfRQ8I0ZuP9VklN_TvcZ6DSE5Uar4z4,81
+readwise_reader_cli-1.0.0.dist-info/METADATA,sha256=iG16Q7BPkEBGx0-P-3QczxFkl8AHnevCuewzaIxzmcU,7910
+readwise_reader_cli-1.0.0.dist-info/RECORD,,
