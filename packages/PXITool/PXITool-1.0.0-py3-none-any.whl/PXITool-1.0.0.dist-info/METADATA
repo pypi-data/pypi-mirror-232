@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: PXITool
+Version: 1.0.0
+Summary: Library to cotroll PXI-System
+Home-page: UNKNOWN
+Author: Elias Alizadeh Saboor && Andreas Gschwentner
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: h5py
+Requires-Dist: nidaqmx
+Requires-Dist: nidmm
+Requires-Dist: niswitch
+Requires-Dist: numpy
+
+UNKNOWN
+
