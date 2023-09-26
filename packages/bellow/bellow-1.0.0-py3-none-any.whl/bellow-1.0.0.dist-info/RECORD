@@ -1,0 +1,15 @@
+bellow/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bellow/__version__.py,sha256=IqbiUm27nh95mfGH0S66B4ehgHz_noUGt-wNgghPDGc,19
+bellow/device_metadata.py,sha256=KYML4umvXQhhSrxvQSXQofWzk92KbWsjh4LL8eu3ttM,1295
+bellow/main.py,sha256=ioSK9uSW2NuqGluWvrO2OATUYAP90gvjRMhSGEM4qNI,9492
+bellow/soundeffects.py,sha256=TsJgUqtA37S7f3Sl0lPYHzFHXPp8wWHsiLZiAY8iM7s,1180
+bellow/audio/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bellow/audio/dump.ogg,sha256=g5hyhAlfmWCOa2Rp5goM_kFaRe0kV-54x0kdgZUiKAQ,13729
+bellow/audio/micoff.ogg,sha256=bRL9H-dz9RrGkk_71z8vCFzv5smci-F8_husJix99bQ,14663
+bellow/audio/micon.ogg,sha256=pA2-BP0EeuNUDLOh4bNSBK0bmIuKPPt5bUATz-1p2hc,14591
+bellow-1.0.0.dist-info/LICENSE.txt,sha256=5RTR3kWrXShAkl2DEjGxC_BVkAZLpziCmF2xhWdtCws,1072
+bellow-1.0.0.dist-info/METADATA,sha256=HfubtmeXXgsAVoZliL7yGDae7Rg9ac9a1XQ9Xtl6JAE,8059
+bellow-1.0.0.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+bellow-1.0.0.dist-info/entry_points.txt,sha256=9JAFhWcHbuG2Tyt2EkGb_poVlncMZpplLmweOEk_69k,44
+bellow-1.0.0.dist-info/top_level.txt,sha256=w-kQgtuKbZBhcjrYxgu1DdEVlEeeDMHvWlZ_NKZt7lI,7
+bellow-1.0.0.dist-info/RECORD,,
