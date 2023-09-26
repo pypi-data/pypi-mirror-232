@@ -1,0 +1,8 @@
+{"operation": "download", "transfer": ["basic"], "objects": [ {"oid": "ad567130b7978363f5119791b775d0e1f84c24c143868c39d5aaaf4dd488ebab", "size": 172282368}  ]}
+import json
+
+# some JSON:
+x =  '{"operation": "download", "transfer": ["basic"], "objects": [ {"oid": "ad567130b7978363f5119791b775d0e1f84c24c143868c39d5aaaf4dd488ebab", "size": 172282368}  ]}'
+
+# parse x:
+y = json.loads(x)
