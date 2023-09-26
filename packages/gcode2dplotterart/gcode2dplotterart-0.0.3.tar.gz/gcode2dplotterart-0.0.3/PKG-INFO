@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: gcode2dplotterart
+Version: 0.0.3
+Summary: GCode Abstraction for creating 2D Plotter Art
+Project-URL: Homepage, https://github.com/TravisBumgarner/2d-plotter-art-gcode
+Project-URL: Bug Tracker, https://github.com/TravisBumgarner/2d-plotter-art-gcode/issues
+Author-email: Travis Bumgarner <travis@sillysideprojects.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.0
+Description-Content-Type: text/markdown
+
+# 2d-plotter-art-gcode
+
+## Deploy to PyPi
+
+1. Build `python -m build`
+2. Deploy `python3 -m twine upload --repository testpypi dist/*`
+3. Username is `__token__`, Password is generated [here](https://pypi.org/manage/account/#api-tokens).
