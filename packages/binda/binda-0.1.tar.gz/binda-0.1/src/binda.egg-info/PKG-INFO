@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: binda
+Version: 0.1
+Summary: Read and write binary data using Pandas
+Home-page: https://github.com/jamiecash
+Download-URL: https://github.com/jamiecash/binda/archive/v0.1.0.tar.gz
+Author: Jamie Cash
+Author-email: jlcash@gmail.com
+License: MIT
+Keywords: Binary,Data,Analytics,Analyse,Pandas,DataFrame
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+License-File: LICENSE

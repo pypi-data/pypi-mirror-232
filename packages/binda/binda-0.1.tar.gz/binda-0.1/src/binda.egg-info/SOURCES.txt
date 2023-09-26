@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+src/binda.py
+src/binda.egg-info/PKG-INFO
+src/binda.egg-info/SOURCES.txt
+src/binda.egg-info/dependency_links.txt
+src/binda.egg-info/requires.txt
+src/binda.egg-info/top_level.txt
