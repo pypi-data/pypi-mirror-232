@@ -1,0 +1,4 @@
+[console_scripts]
+generate_uart_decoder_extension = silvair_uart_decoder.main:generate_saleae_extension
+silvair-uart-decoder = silvair_uart_decoder.main:main
+
