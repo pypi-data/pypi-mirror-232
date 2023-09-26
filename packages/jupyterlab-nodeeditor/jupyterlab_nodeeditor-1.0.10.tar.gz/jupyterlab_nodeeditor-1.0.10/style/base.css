@@ -1,0 +1,40 @@
+/*
+    See the JupyterLab Developer Guide for useful CSS Patterns:
+
+    https://jupyterlab.readthedocs.io/en/stable/developer/css.html
+*/
+.nd-container {
+    width: 100%;
+    height: 100%;
+}
+
+input {
+    color: rgb(255, 255, 255);
+    background: #1a8575eb !important;
+}
+
+output {
+    color: rgb(255, 255, 255);
+    background: #1a8575eb !important;
+}
+
+textarea {
+    color: rgb(255, 255, 255);
+    background: #651889e6 !important;
+}
+
+label {
+    color: rgb(255, 255, 255);
+}
+
+.IoPorts_wrapper__3d2hh{
+    background-color: #000000b8;
+}
+
+.IoPorts_portLabel__qOE7y{
+    color: white;
+}
+
+.Select_selectedWrapper__SUs4D{
+    background: #a93939 !important;
+}
