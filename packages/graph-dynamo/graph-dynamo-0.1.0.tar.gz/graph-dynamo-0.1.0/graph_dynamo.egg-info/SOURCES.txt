@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+setup.py
+graph_dynamo.egg-info/PKG-INFO
+graph_dynamo.egg-info/SOURCES.txt
+graph_dynamo.egg-info/dependency_links.txt
+graph_dynamo.egg-info/requires.txt
+graph_dynamo.egg-info/top_level.txt
