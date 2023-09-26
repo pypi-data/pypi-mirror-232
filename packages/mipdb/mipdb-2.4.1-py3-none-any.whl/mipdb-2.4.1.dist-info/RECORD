@@ -1,0 +1,16 @@
+mipdb/__init__.py,sha256=H0npYKb-UPu-SLNCjXh80DQg5KDWnLZ_oluTxkI6H50,965
+mipdb/commands.py,sha256=t5yVG_nSkJ2qSRADQ1XsNQMtjfPUWuqtcPI5xwQjncE,14798
+mipdb/data_frame.py,sha256=8Xd_QXUareUPO4--8UNoEG93oRp4YyXxCbvGn5e6mO0,696
+mipdb/data_frame_schema.py,sha256=lSrGcgRbxPTAbSo9HRiLvsOhC9326XNLr0zwAA48D1A,2385
+mipdb/database.py,sha256=3fQHj0-Sy-sozfsMusWZYNbfo1MWk80Kac2z9e3_r_Y,18773
+mipdb/dataelements.py,sha256=APRtQ62st7OjQM4zYCRUwi_Y2o5_eTJ6G3uIixi6gDc,5194
+mipdb/exceptions.py,sha256=SV0Avz49fu3PiJNVhPcWUr3AnL8ZNp3YZPeCQLyAfIM,2623
+mipdb/properties.py,sha256=BVuFrWDAtfEZuh1KWa6U_VdpwXECweKMZuPcqLTDKMw,1697
+mipdb/reader.py,sha256=K3COapNnP2P-FKbrLkh__y0NsDFfzHJRZ48Tt7RFl5s,1061
+mipdb/schema.py,sha256=2i33yC3O4Tc5GPPNbvelpRCXF_xAiwDngwTKUUWiUXs,746
+mipdb/tables.py,sha256=e2j2Yj1fzPXD6D4J2dzbZAj_CpiCJ-BH2Ply9IKTLCI,15337
+mipdb/usecases.py,sha256=tsCssAYHztyLqZoqlj4butOng3-deDlD0NzEjfh4gGw,44852
+mipdb-2.4.1.dist-info/METADATA,sha256=kFBX4QlqBZn49FZw_m7O-W9sop5WUuwteyLKT10S4dI,503
+mipdb-2.4.1.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+mipdb-2.4.1.dist-info/entry_points.txt,sha256=eF9q4RY6l3Me08si2TrTvDjfiqGFgehuygveS6AWyk4,46
+mipdb-2.4.1.dist-info/RECORD,,
