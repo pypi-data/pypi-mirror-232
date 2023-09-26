@@ -1,0 +1,38 @@
+{
+    "definitions": {
+        "TRANSACTIONS.INDIA": {
+            "elements": {
+                "store_id": {
+                    "type": "cds.Int64",
+                    "key": true
+                },
+                "transaction_id": {
+                    "type": "cds.Int64",
+                    "key": true
+                },
+                "transaction_timestamp": {
+                    "type": "cds.DateTime"
+                },
+                "article_id": {
+                    "type": "cds.Int64"
+                },
+                "category": {
+                    "type": "cds.String",
+                    "length": 25
+                },
+                "name": {
+                    "type": "cds.String",
+                    "length": 25
+                },
+                "size": {
+                    "type": "cds.String",
+                    "length": 4
+                }
+            }
+        }
+    },
+    "version": {
+        "creator": "pycsn",
+        "csn": "0.1.99"
+    }
+}

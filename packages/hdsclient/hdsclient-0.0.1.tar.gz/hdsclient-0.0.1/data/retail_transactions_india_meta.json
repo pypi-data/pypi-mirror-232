@@ -1,0 +1,38 @@
+{
+    "name": null,
+    "description": null,
+    "format": "parquet",
+    "version": null,
+    "enableChangeDataFeed": "true",
+    "size": 30599,
+    "columns": {
+        "store_id": {
+            "type": "string",
+            "nullable": true
+        },
+        "transaction_id": {
+            "type": "long",
+            "nullable": true
+        },
+        "transaction_timestamp": {
+            "type": "timestamp",
+            "nullable": true
+        },
+        "article_id": {
+            "type": "string",
+            "nullable": true
+        },
+        "category": {
+            "type": "string",
+            "nullable": true
+        },
+        "name": {
+            "type": "string",
+            "nullable": true
+        },
+        "size": {
+            "type": "string",
+            "nullable": true
+        }
+    }
+}

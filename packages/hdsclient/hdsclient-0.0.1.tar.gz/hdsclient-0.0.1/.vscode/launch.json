@@ -1,0 +1,160 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.0.1",
+    "configurations": [
+        {
+            "name": "dsclient -h",
+            "type": "python",
+            "request": "launch",
+            "program": "src/dsclient/dsclient.py",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "args": [
+                "-h",
+            ]
+        },
+        {
+            "name": "dsclient dbxindia.json",
+            "type": "python",
+            "request": "launch",
+            "program": "src/dsclient/dsclient.py",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "args": [
+                "profiles/dbxindia.json",
+            ]
+        },
+        {
+            "name": "dsclient -m -p data dbxglobal.json retail.transactions.india",
+            "type": "python",
+            "request": "launch",
+            "program": "src/dsclient/dsclient.py",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "args": [
+                "--meta",
+                "--path",
+                "data",
+                "profiles/dbxglobal.json",
+                "retail.transactions.india"
+            ]
+        },
+        {
+            "name": "dsclient -Hp data dbxglobal.json retail.transactions.india",
+            "type": "python",
+            "request": "launch",
+            "program": "src/dsclient/dsclient.py",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "args": [
+                "-Hp",
+                "data",
+                "profiles/dbxglobal.json",
+                "retail.transactions.india",
+            ]
+        },
+        {
+            "name": "dsclient -Hdp data dbxglobal.json retail.transactions.india",
+            "type": "python",
+            "request": "launch",
+            "program": "src/dsclient/dsclient.py",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "args": [
+                "-Hdp",
+                "data",
+                "profiles/dbxglobal.json",
+                "retail.transactions.india",
+            ]
+        },
+        {
+            "name": "dsclient -Sdp data dbxglobal.json retail.transactions.india",
+            "type": "python",
+            "request": "launch",
+            "program": "src/dsclient/dsclient.py",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "args": [
+                "-Sp",
+                "data",
+                "profiles/dbxglobal.json",
+                "retail.transactions.india",
+            ]
+        },
+        {
+            "name": "dsclient dbxglobal.json -d retail.transactions.india -s 1",
+            "type": "python",
+            "request": "launch",
+            "program": "src/dsclient/dsclient.py",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "args": [
+                "-d",
+                "profiles/dbxglobal.json",
+                "retail.transactions.india",
+                "-s",
+                "1"
+            ]
+        },
+        {
+            "name": "dsclient -d dbxglobal.json retail.transactions.india",
+            "type": "python",
+            "request": "launch",
+            "program": "src/dsclient/dsclient.py",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "args": [
+                "-d",
+                "profiles/dbxglobal.json",
+                "retail.transactions.india"
+            ]
+        },
+        {
+            "name": "dsclient -d dbxglobal.json",
+            "type": "python",
+            "request": "launch",
+            "program": "src/dsclient/dsclient.py",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "args": [
+                "-d",
+                "profiles/dbxglobal.json",
+            ]
+        },
+        {
+            "name": "dsclient -dH dbxglobal.json retail.transactions.india",
+            "type": "python",
+            "request": "launch",
+            "program": "src/dsclient/dsclient.py",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "args": [
+                "-dH",
+                "profiles/dbxglobal.json",
+                "retail.transactions.india"
+            ]
+        },
+        {
+            "name": "dsclient dbxglobal.json -s 2023-09-19 11:49:23 -e 2023-09-19 11:50:45 -t retail.transactions.india -p delta",
+            "type": "python",
+            "request": "launch",
+            "program": "src/dsclient/dsclient.py",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "args": [
+                "profiles/dbxglobal.json",
+                "-t",
+                "retail.transactions.india",
+                "-p",
+                "delta",
+                "-d",
+                "-s",
+                "2023-09-19 09:50:44",
+                "-e",
+                "2023-09-19 09:50:44"
+            ]
+        }
+    ]
+}
