@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: tty-ov
+Version: 1.0.8
+Summary: A module that emulates a few core functionalities of a tty (see the inner help for a list of functions).
+Home-page: https://github.com/Hanra-s-work/tty_ov
+Author: Henry Letellier
+Author-email: henrysoftwarehouse@protonmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: colorama==0.4.6
+Requires-Dist: prettytable==3.8.0
+Requires-Dist: ask_question>=1.2.0
+Requires-Dist: colourise-output>=1.1.1
+
+# tty_ov
+
+ A tiny terminal (just the functions I need) cross-platform implemented in python.
+
+## Description
+
+    This is an inner lib intended for a project, more details and a better structured readme will be implemented later on.
