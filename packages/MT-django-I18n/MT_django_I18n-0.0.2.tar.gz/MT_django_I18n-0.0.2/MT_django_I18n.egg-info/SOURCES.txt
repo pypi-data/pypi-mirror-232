@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+MT_django_I18n.egg-info/PKG-INFO
+MT_django_I18n.egg-info/SOURCES.txt
+MT_django_I18n.egg-info/dependency_links.txt
+MT_django_I18n.egg-info/top_level.txt
+mt_django_I18n/__init__.py
+mt_django_I18n/json_to_po.py
