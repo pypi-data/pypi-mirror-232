@@ -1,0 +1,7 @@
+setup.py
+forward_decl/__init__.py
+forward_decl/fw.py
+forward_decl.egg-info/PKG-INFO
+forward_decl.egg-info/SOURCES.txt
+forward_decl.egg-info/dependency_links.txt
+forward_decl.egg-info/top_level.txt
