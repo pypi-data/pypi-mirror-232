@@ -1,0 +1,15 @@
+cma
+dectree
+matplotlib
+mypy_extensions
+networkx
+numpy
+openpyxl
+orjson>=3.8.0
+pandas
+parameterized
+pyDOE
+pyDOE2
+scikit-learn>=1.2.0
+scipy
+typeguard
