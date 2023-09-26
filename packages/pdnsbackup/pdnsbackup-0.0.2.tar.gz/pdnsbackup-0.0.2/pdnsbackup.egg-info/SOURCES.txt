@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+pdnsbackup/__init__.py
+pdnsbackup/backup.py
+pdnsbackup/webapi.py
+pdnsbackup.egg-info/PKG-INFO
+pdnsbackup.egg-info/SOURCES.txt
+pdnsbackup.egg-info/dependency_links.txt
+pdnsbackup.egg-info/requires.txt
+pdnsbackup.egg-info/top_level.txt
