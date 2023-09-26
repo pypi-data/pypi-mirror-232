@@ -1,0 +1,2 @@
+[console_scripts]
+pproxy = pproxy.server:main
