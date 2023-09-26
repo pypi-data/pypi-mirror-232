@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: rl-exp-utils
+Version: 0.16
+Summary: Library for RL research.
+Home-page: https://github.com/aszot/rl-utils
+Author: Andrew Szot
+Author-email: andrewszot32@gmail.com
+License-File: LICENSE.md
