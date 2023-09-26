@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: tidyselect
+Version: 0.0.1
+Summary: Helpers for selecting columns of data
+Author-email: Michael Chow <michael.chow@posit.co>
+Project-URL: homepage, https://machow.github.io/tidyselect
+Project-URL: repository, https://github.com/machow/tidyselect
+Project-URL: ci, https://github.com/machow/tidyselect/actions
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: jupyterlab ; extra == 'dev'
+Requires-Dist: pre-commit ; extra == 'dev'
+
