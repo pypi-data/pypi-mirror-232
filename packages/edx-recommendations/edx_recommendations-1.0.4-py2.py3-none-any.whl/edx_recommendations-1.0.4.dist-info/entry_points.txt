@@ -1,0 +1,2 @@
+[lms.djangoapp]
+edx_recommendations = edx_recommendations.apps:EdxRecommendationsConfig
