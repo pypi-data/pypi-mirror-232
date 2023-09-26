@@ -1,0 +1,5 @@
+setup.py
+botanist.egg-info/PKG-INFO
+botanist.egg-info/SOURCES.txt
+botanist.egg-info/dependency_links.txt
+botanist.egg-info/top_level.txt
