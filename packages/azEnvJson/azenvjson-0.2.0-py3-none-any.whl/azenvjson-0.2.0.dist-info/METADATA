@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: azEnvJson
+Version: 0.2.0
+Summary: Azure ENV <--> JSON
+Author-Email: Edgar E. Reyes T. <linuosx@gmail.com>
+License: MIT
+Requires-Python: >=3.10
+Requires-Dist: pandas>=2.1.1
+Description-Content-Type: text/markdown
+
+# azEnvJson
