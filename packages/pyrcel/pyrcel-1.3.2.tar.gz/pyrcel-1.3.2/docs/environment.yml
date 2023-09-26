@@ -1,0 +1,16 @@
+name: pyrcel
+channels:
+    - conda-forge
+dependencies:
+    - python==3.7
+    - assimulo
+    - pandas
+    - pyyaml
+    - scipy
+    - numba
+    - numpy
+    - xarray
+    - numpydoc
+    - ipython
+    - sphinx
+    - sphinx_rtd_theme
