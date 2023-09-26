@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+ffselect/__init__.py
+ffselect/subset.py
+ffselect.egg-info/PKG-INFO
+ffselect.egg-info/SOURCES.txt
+ffselect.egg-info/dependency_links.txt
+ffselect.egg-info/top_level.txt
