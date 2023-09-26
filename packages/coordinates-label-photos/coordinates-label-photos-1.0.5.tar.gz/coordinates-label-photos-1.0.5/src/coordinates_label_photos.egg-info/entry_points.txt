@@ -1,0 +1,6 @@
+[console_scripts]
+coordinates-clear-photos = coordinates_label_photos.scripts.clear_photo_coords:main
+coordinates-label-photos = coordinates_label_photos.scripts.label_photos:main
+images-to-gpx = coordinates_label_photos.scripts.images_to_gpx:main
+plot-coords-tracks = coordinates_label_photos.scripts.plot_coords_tracks:main
+select-closest-photos = coordinates_label_photos.scripts.select_closest_photos:main
