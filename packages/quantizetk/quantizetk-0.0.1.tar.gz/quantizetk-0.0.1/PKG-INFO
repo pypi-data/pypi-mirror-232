@@ -1,0 +1,107 @@
+Metadata-Version: 2.1
+Name: quantizetk
+Version: 0.0.1
+Summary: quantizetk
+License: MIT
+Author: wayfaring-stranger
+Author-email: zw6p226m@duck.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: onnx (>=1.14.1,<2.0.0)
+Requires-Dist: onnxruntime (>=1.15.1,<2.0.0)
+Requires-Dist: optimum (>=1.13.1,<2.0.0)
+Description-Content-Type: text/markdown
+
+# QuantizeTK
+
+QuantizeTK is a Python library that provides a set of utilities for model optimization and quantization. It simplifies the process of loading optimized and quantized models using OnnxRuntime, along with pre-trained base models. The library is built on top of `transformers` and `optimum`.
+
+## Installation
+
+```bash
+pip install quantizetk
+```
+
+## Features
+
+- Load optimized, quantized, or base pipelines
+- Supports models in the OnnxRuntime ecosystem
+- Comprehensive logging and validation utilities
+- Configurable optimization and quantization settings
+
+## Quick Start
+
+### Initialize a New Pipeline
+
+```python
+from quantizetk import init_pipeline
+
+pipeline = init_pipeline(model_id="your_model_id")
+```
+
+### Load an Existing Pipeline
+
+```python
+from quantizetk.pipeline.load import load_pipeline
+
+pipeline = load_pipeline()
+```
+
+## Directory Structure
+
+```
+quantizetk/
+│
+├── pipeline/
+│   ├── create.py
+│   ├── load.py
+│   └── __init__.py
+│
+├── shared/
+│   ├── constants.py
+│   ├── utils/
+│   │   ├── validate.py
+│   │   └── math_util.py
+│   └── __init__.py
+│
+└── __init__.py
+```
+
+## API Overview
+
+### pipeline.create
+
+- `create_pipeline(...)`
+
+### pipeline.load
+
+- `load_pipeline(save_dir, file_name)`
+
+### shared.utils
+
+#### validate
+
+- `validate_pipeline(pipeline, pipeline_type, contents)`
+
+#### math_util
+
+- `normalize(obj, p, dim)`
+- `mean_pooling(model_output, attention_mask)`
+
+### shared.constants
+
+- Configuration and path constants
+
+## Contributing
+
+Please read `CONTRIBUTING.md` for details on our code of conduct, and the process for submitting pull requests to us.
+
+## License
+
+This project is licensed under the MIT License - see the `LICENSE.md` file for details.
+

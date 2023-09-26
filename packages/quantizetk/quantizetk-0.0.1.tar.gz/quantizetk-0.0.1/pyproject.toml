@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "quantizetk"
+version = "0.0.1"
+description = "quantizetk"
+authors = ["wayfaring-stranger <zw6p226m@duck.com>"]
+packages = [
+    { include = "quantizetk" }
+]
+
+
+license = "mit"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+onnx = "^1.14.1"
+onnxruntime = "^1.15.1"
+optimum = "^1.13.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
