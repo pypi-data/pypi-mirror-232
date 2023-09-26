@@ -1,0 +1,8 @@
+.gitignore
+pyproject.toml
+tidyselect/__init__.py
+tidyselect.egg-info/PKG-INFO
+tidyselect.egg-info/SOURCES.txt
+tidyselect.egg-info/dependency_links.txt
+tidyselect.egg-info/requires.txt
+tidyselect.egg-info/top_level.txt
