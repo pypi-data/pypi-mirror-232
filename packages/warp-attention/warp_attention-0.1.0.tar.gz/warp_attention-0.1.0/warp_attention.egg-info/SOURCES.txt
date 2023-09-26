@@ -1,0 +1,14 @@
+MANIFEST.in
+setup.py
+csrc/warpat/cuda.h
+csrc/warpat/cuda_error.h
+csrc/warpat/warp_attention_api_torch.cpp
+warp_attention/__init__.py
+warp_attention/_version.py
+warp_attention.egg-info/PKG-INFO
+warp_attention.egg-info/SOURCES.txt
+warp_attention.egg-info/dependency_links.txt
+warp_attention.egg-info/top_level.txt
+warp_attention/kernel/kernel_config.pt
+warp_attention/kernel/warp_attn_forward_sm80.cubin
+warp_attention/kernel/warp_attn_forward_sm86.cubin
