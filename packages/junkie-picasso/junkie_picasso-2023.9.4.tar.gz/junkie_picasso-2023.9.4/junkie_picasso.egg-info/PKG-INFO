@@ -1,0 +1,112 @@
+Metadata-Version: 2.1
+Name: junkie-picasso
+Version: 2023.9.4
+Summary: junkie_picasso adds abstract functionality to the junkie JUpyter NotebooK Image Explorer
+Author-email: Raymond Hawkins <raymond.hawkins@mail.utoronto.ca>
+Project-URL: Homepage, https://bitbucket.org/raymond_hawkins_utor/junkie_picasso
+Project-URL: Bug Tracker, https://bitbucket.org/raymond_hawkins_utor/junkie_picasso/src/master/issues
+Classifier: Programming Language :: Python :: 3.10
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy>=1.23
+Requires-Dist: ipympl>=0.9
+Requires-Dist: ipywidgets>=8.0
+Requires-Dist: matplotlib>=3.7
+Requires-Dist: scikit-image
+
+![Logo](./docs/junkie_picasso_logo.png)
+[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/GPL-3.0)
+
+# [JuNkIE-picasso](https://bitbucket.org/raymond_hawkins_utor/junkie_picasso/src/master/): abstract functionality for [Junkie](https://bitbucket.org/rfg_lab/junkie/src/master/)
+
+[JuNkIE-picasso](https://bitbucket.org/raymond_hawkins_utor/junkie_picasso/src/master/) adds onto the functionality of [JuNkIE](https://bitbucket.org/rfg_lab/junkie/src/master/), allowing you to not just explore your images, but also the parameter space of your image processing pipeline.
+
+## Installing [JuNkIE-picasso](https://bitbucket.org/raymond_hawkins_utor/junkie_picasso/src/master/)
+
+To install [JuNkIE-picasso](https://bitbucket.org/raymond_hawkins_utor/junkie_picasso/src/master/), type:  
+
+    $ python3 -m pip install junkie_picasso
+
+We do most of the development and testing of [JuNkIE-picasso](https://bitbucket.org/raymond_hawkins_utor/junkie_picasso/src/master/) in [Jupyter Lab](https://jupyter.org/install), so we recommend using [Jupyter Lab](https://jupyter.org/install). 
+
+### A note on the Python interpreter
+
+[JuNkIE-picasso](https://bitbucket.org/raymond_hawkins_utor/junkie_picasso/src/master/) requires that you
+have [Python 3.10 or above](https://www.python.org/downloads/) installed.
+
+## Importing [JuNkIE-picasso](https://bitbucket.org/raymond_hawkins_utor/junkie_picasso/src/master/)
+
+[JuNkIE-picasso](https://bitbucket.org/raymond_hawkins_utor/junkie_picasso/src/master/) uses [matplotlib](https://matplotlib.org/) and [ipywidgets](https://ipywidgets.readthedocs.io/en/stable/), so there is some boiler plate code that you need before importing [JuNkIE-picasso](https://bitbucket.org/raymond_hawkins_utor/junkie_picasso/src/master/):
+
+```python
+import matplotlib
+%matplotlib widgets
+
+from junkie_picasso import junkie
+```
+
+## Using [JuNkIE](https://bitbucket.org/rfg_lab/junkie/src/master/)
+For details on how to use the basic functionality of [JuNkIE](https://bitbucket.org/rfg_lab/junkie/src/master/), visit the [JuNkIE docs](https://bitbucket.org/rfg_lab/junkie/src/master/README.md).
+
+
+## Adding abstract functions
+
+[JuNkIE-picasso](https://bitbucket.org/raymond_hawkins_utor/junkie_picasso/src/master/) allows the user to define abstract image processing functions that will be applied to the input image. This allows you to explore the parameter space of your image processing pipeline without re-writing and re-running your code!
+
+First, import the abstract function base class:
+
+```python
+from junkie_picasso.functions.abstractfunction import AbstractFunction
+```
+
+Next, define a class which details the parameters you want to explore using class variables and the function which updates the image using a class method "update". You will need to know a little bit about which widgets you want to use to change the parameters in the GUI. Here is an example for a simple function that adds an offset to the image:
+
+```python
+class add_offset():
+    parameters = {"offset": {"type": "intslider", "range": [0, 10000], "step": 1, "value": 0}}
+
+    def update(self, image: numpy.ndarray) -> numpy.ndarray:
+        return image + self.parameters["offset"]["value"]
+```
+
+Finally, create a [JuNkIE-picasso](https://bitbucket.org/raymond_hawkins_utor/junkie_picasso/src/master/) instance using your custom class as an additional parameter:
+
+```python
+ayim = junkie('/path/to/img.tiff', func=add_offset())
+```
+The parameters you have defined will appear to the right of the default [JuNkIE](https://bitbucket.org/rfg_lab/junkie/src/master/) parameters in a tabbed box, with each tab corresponding to a different parameter. This allows for an arbitrary number of parameters to be added without reorganizing the widget layout.
+
+![Making a custom pipeline](./docs/custom_pipeline.gif)
+
+### Possible parameter types
+For all parameter types, the dict must have:
+1. a "value" key initialized with the default value
+2. a "type" key with one of the following widget names
+3. any other keys required by that widget, as follows
+
+- "checkbox" (bool value)
+- "intslider" (int value)
+  - "range": a tuple of ints denoting the minimum and maximum extents of the slider
+  - "step": an int describing the step size for when the slider is moved
+- "floatslider" (float value)
+  - "range": a tuple of floats denoting the minimum and maximum extents of the slider
+  - "step": a float describing the step size for when the slider is moved
+- "inttext" (int value)
+- "floattext" (float value)
+- "radiobuttons" (str value)
+  - "options": a list of strings denoting the different options for each radio button
+  
+    
+## Citing [JuNkIE-picasso](https://bitbucket.org/raymond_hawkins_utor/junkie_picasso/src/master/)
+
+If you use [JuNkIE-picasso](https://bitbucket.org/raymond_hawkins_utor/junkie_picasso/src/master/), please cite this repository and the repository for the original [JuNkIE](https://bitbucket.org/rfg_lab/junkie/src/master/). We are working on the paper!
+
+## Sponsors
+
+We are grateful for the generous support from the following agencies and institutions, which contribute to the
+development and maintenance of [JuNkIE](https://bitbucket.org/rfg_lab/junkie/src/master/) and [JuNkIE-picasso](https://bitbucket.org/raymond_hawkins_utor/junkie_picasso/src/master/):
+
+![Sponsors](./docs/sponsors.png)

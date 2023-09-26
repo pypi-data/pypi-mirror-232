@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+junkie_picasso/__init__.py
+junkie_picasso/abstractfunction.py
+junkie_picasso/junkie_picasso.py
+junkie_picasso.egg-info/PKG-INFO
+junkie_picasso.egg-info/SOURCES.txt
+junkie_picasso.egg-info/dependency_links.txt
+junkie_picasso.egg-info/requires.txt
+junkie_picasso.egg-info/top_level.txt
