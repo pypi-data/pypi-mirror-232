@@ -1,0 +1,18 @@
+[project]
+name = "jahia-pylastic"
+version = "0.0.7"
+authors = [
+  { name="Jahia Cloud team", email="paas@jahia.com" },
+]
+description = "Interact with Jelastic API"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/jahia/pylastic"
+"Bug Tracker" = "https://github.com/jahia/pylastic/issues"

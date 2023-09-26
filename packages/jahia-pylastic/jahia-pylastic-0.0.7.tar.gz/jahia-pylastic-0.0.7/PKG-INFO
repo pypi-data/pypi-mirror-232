@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: jahia-pylastic
+Version: 0.0.7
+Summary: Interact with Jelastic API
+Author-email: Jahia Cloud team <paas@jahia.com>
+Project-URL: Homepage, https://github.com/jahia/pylastic
+Project-URL: Bug Tracker, https://github.com/jahia/pylastic/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# pylastic
+
+*Jelastic* combined with *Python*, here is **Pylastic** !
+
+Pylastic provides many functions to interact with Jelastic API.
+
+Arguments needed for initialization:
+
+* hostame (Jelastic cluster endpoint)
+* login
+* password
+
+To upgrade Pylastic, here is the official documentation: https://packaging.python.org/tutorials/packaging-projects/
