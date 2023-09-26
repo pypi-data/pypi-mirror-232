@@ -1,0 +1,2 @@
+[pytest11]
+collect-pytest-interinfo = pytest_collect_pytest_interinfo
