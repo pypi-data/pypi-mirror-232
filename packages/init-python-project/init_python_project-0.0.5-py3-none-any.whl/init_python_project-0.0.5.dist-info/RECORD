@@ -1,0 +1,230 @@
+init_python_project/__main__.py,sha256=Qd-f8z2Q2vpiEP2x6PBFsJrpACWDVxFKQk820MhFmHo,59
+init_python_project/cli.py,sha256=blfNpK5ZoHvHgIbcaWaoTKriNj2A-iny76GOkGPYVWY,5739
+init_python_project/copier.yaml,sha256=uDXDEjMMXjrpDqNZxgTJzRf-KIXVQnsM3Dgic4_cN04,7203
+init_python_project/template/.gitignore.jinja,sha256=R5GgxpXgBtjVMkK-ThvByyJ_hiRDzITe0mU7PBwg_6Q,199
+init_python_project/template/CHANGELOG.md.jinja,sha256=XtcD0b3nFndqfjS-5ImGhvqPyNhXGFLqwa-H7re_2R4,532
+init_python_project/template/Makefile.jinja,sha256=cdO_Xi6bM9BSN7bH9kg3RRGQzhXJUqXO5aQeZi1fLhk,1500
+init_python_project/template/README.md.jinja,sha256=CapFU9YGVbTpuhQG41-bHYBmBFxUm0WucZyPDMiyXQA,1286
+init_python_project/template/context,sha256=6LGTtam1y_gKZJ3pnEdD-3hNAZpQPbBhP0dY3T08H7I,1931
+init_python_project/template/pyproject.toml.jinja,sha256=J_NnrBDsEx6VRUWPGQWOH9UJmsKRRBMLgg_Dy8r4xN8,4861
+init_python_project/template/{% if bumpversion %}.bumpversion.cfg{% endif %}.jinja,sha256=Jt7D8v-bbxL169s3dJssA14C23uUI9RKP1JABeJjxKY,187
+init_python_project/template/{% if docs == 'mkdocs' %}mkdocs.yml{% endif %}.jinja,sha256=DjNqmXgvDAbBHqBDK_PYo7M6jhFRw4eUXwnUU6YOIZY,946
+init_python_project/template/{% if precommit %}.pre-commit-config.yaml{% endif %}.jinja,sha256=dBjk8LqwSxcW7yx2kGSbvSEeusaTKamrNLVfy3t-K5c,342
+init_python_project/template/{% if remote.startswith('gitlab') %}.gitlab-ci.yml{% endif %}.jinja,sha256=2wmuqvi6J9lroQ98YjjyEkBWIYD3Qj90BmkRqxqG6dE,1896
+init_python_project/template/{{ _copier_conf.answers_file }}.jinja,sha256=_aOGj6IREaKKxHqb2ODEZMMqy9zlY4xrG__zVESF9eE,102
+init_python_project/template/src/{{package_name}}/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+init_python_project/template/src/{{package_name}}/__main__.py,sha256=MSmt_5Xg84uHqzTN38JwgseJK8rsJn_11A8WD99VtEo,61
+init_python_project/template/src/{{package_name}}/cli.py.jinja,sha256=FPZBsXM98jRO2i6OxNA-tnBc-wgY2Mv3SkPVdaujuqg,820
+init_python_project/template/src/{{package_name}}/package_data.dat,sha256=EweZDmulyhRes16ZGCqb7EZTG8VN32VqYCx4D6AkDe4,9
+init_python_project/template/src/{{package_name}}/simple.py,sha256=wq278rSEoS3vekbW87rzmAg5erMsIT0GBRacq2Hu_bM,210
+init_python_project/template/tests/test_cli.py.jinja,sha256=alpFx9838SWU61UNMy7dnz0u9jbVu_VWFFjgOrovse4,995
+init_python_project/template/tests/test_simple.py.jinja,sha256=B5loy6xzQ5cGnLX2Jxl0050rFQw1SXHc__79PGE3Zjw,101
+init_python_project/template/{% if docs == 'mkdocs' %}docs{% endif %}/index.md,sha256=Jx1-qCY1Pm7aQsI4cspucvdlcWw0ZlnCwS08wNyuDGw,26
+init_python_project/template/{% if docs == 'mkdocs' %}docs{% endif %}/macros.py,sha256=sOZXlI-HGPq-0__pwFySezS1NSef7BybdD3_Dze6XqU,145
+init_python_project/template/{% if docs == 'mkdocs' %}docs{% endif %}/reference.md.jinja,sha256=3eKf3OobFF3nAN3D5wOWVTQQAoGHfi-0l-ss0IyKGg4,34
+init_python_project/template/{% if docs == 'mkdocs' %}docs{% endif %}/requirements.txt,sha256=3gYwoU4FCzEFnnfVGc3ZSSz_WJ_0n48ctsxGR3UxTOc,107
+init_python_project/template/{% if docs == 'sphinx' and docs_template=='none' %}docs{% endif %}/Makefile,sha256=s3rRupXfUdLO5gFL26zFRC_Myq6RHL1X5OZR65L-G7Y,766
+init_python_project/template/{% if docs == 'sphinx' and docs_template=='none' %}docs{% endif %}/changelog.md,sha256=xArP-66oWZ7LnpsSEKQbF_mVEJQqbaQM9AzO4Fk-u7o,33
+init_python_project/template/{% if docs == 'sphinx' and docs_template=='none' %}docs{% endif %}/conf.py.jinja,sha256=ef6U6qfbUU2UYKTGR3N-_xamFudMQOg-C3lRp6HWRg0,2029
+init_python_project/template/{% if docs == 'sphinx' and docs_template=='none' %}docs{% endif %}/index.md,sha256=Mb_L_IxOssyriM0oOvCBn3ov06a-lkxIuM0ek3Cd8BY,141
+init_python_project/template/{% if docs == 'sphinx' and docs_template=='none' %}docs{% endif %}/requirements.txt,sha256=jz4LfV8p67MzatzWZXnymkWbrmSpeWdAgpQhE6Pk9_s,57
+init_python_project/template/{% if docs == 'sphinx' and docs_template=='none' %}docs{% endif %}/.gitlab/docs.yml,sha256=l5M1uw6YpkhqRZNJqLHY74DDtJQRCl7sy--HvTJkv0Q,244
+init_python_project/template/{% if docs == 'sphinx' and docs_template=='none' %}docs{% endif %}/_static/.gitkeep,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/.git,sha256=tlpA_oxp98dANE6DElfJd7M8C_cUKwLfoJbBiZl6mAo,94
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/.gitlab-ci.yml,sha256=yo9hPtq4aEm70yuRRX5v2__fFbv2bRPfLPctF834kQQ,551
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/Makefile,sha256=4zv3TVkTACm6JBaKgTES3ZI9cETXgM6ULbZkXZP1as8,638
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/README.md,sha256=S9_8CEf5auMZ6y7Cev_vPhXQHqglSd-MPFjR2A3Ih1A,2981
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/make.bat,sha256=L4I5T7uDUIjwGyMRJ-y9FoT61sxIyCuaYuJyLt8c-nA,804
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/requirements.in,sha256=LiSQAhX5-rd_9jqt06NXA6I8fmpiWA-SSKjE1c0wH0c,135
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/requirements.txt,sha256=N75U3ONhz1gvJ9MrJir1Ukiy5HWAbWWtHJe41aa9FV8,2627
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/.gitlab/docs.yml,sha256=h0qUmdNKxXHwu_mp_tKKss54jK_V0KLRbmUwk1mWJ9Y,651
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/Doxyfile,sha256=enHTjRph2WMETfnsT3HeoYjgT95sv7zN8vittcqyshg,116367
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/conf.py,sha256=D9IBQwhDEzRmqVX77NTtNKMk4Yypq_EXc5qN1YqAYUc,4969
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/index.rst,sha256=AZ4JdhGsHZBwf7VJF0IILHmKpZWC7z00YaLYCXYio_U,1519
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/refs.bib,sha256=5p7AJzhcfEnj7tfyCc2mGCkbkpEsPNVrcctzDCyJOPE,168
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/iis.ico,sha256=FjvXpqDmdwp8Z7SwqMR5hekGMttPehBIENezwGjg85M,1150
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/iis.svg,sha256=QV_Hljn-AOtME0lXsJRKcp7aXD-dPOL_sOgoSG2rWd4,6107
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/html/custom.css,sha256=1NSRXF90DAIkRG4xn9_mkcjpktow1jLIVGT79o8mCXc,218
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/preamble.tex,sha256=9iaOm-H5ZIBAR0pdTibt-wmjLLZfAKUSsmPPVQ1Wb60,155
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/title.tex,sha256=dYncCLKx0X_2tc1HZlWgb1LSmsgvpnHqBErf9ejPWB4,283
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/doc/fonts/adobe/frutiger.txt,sha256=jN3Lipf-SV1kQ7NT-a0_WgFLZE6uBmF9bJzxuFE3iBg,1705
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/dvips/config/pfr.map,sha256=zwmvQRwSvNK8sS50vBtuUy0ngknMScmhwyCWb5vHnlc,1116
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/map/dvips/pfr.map,sha256=zwmvQRwSvNK8sS50vBtuUy0ngknMScmhwyCWb5vHnlc,1116
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/map/pdftex/pfr.map,sha256=auYt1mJZQGsGzGuF1aOvyg3HsXbbvODwqaiGbcMrE38,650
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/map/vtex/pfr.ali,sha256=mFnDr00Gjwdl2KbY0-x4Xz0mI9nJwhaAqrsy8Nudaug,1276
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrb7t.tfm,sha256=qNvFs2bUfjl_5xe7g-7sjoZWEnm1cigkjPSHCKwuJbA,1668
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrb7tc.tfm,sha256=NTBUedrhM-7axvkpEKiotHkiktsgKz3iqfHy0G7bMEE,2132
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrb8a.tfm,sha256=Xr6tjH3bm7OqIcTdnEghG-HnyfGPTpALegGUhDHWMzk,1252
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrb8ac.tfm,sha256=w2qa1JkbjCOnztsbY9qjte6-63v8ozojOiIAfTbK2sc,1300
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrb8c.tfm,sha256=cHrs7YPyfi5HSNcdFThZrvJ4hLpaDCZlnGCYQU_7P9I,1336
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrb8cc.tfm,sha256=TfIhRPMwcAf7wL_8B-_K0X8IzQ-M175lrwpQ_lPG5rc,1332
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrb8r.tfm,sha256=Kny_sOJWWOzmNyoN_CeXEziYPIr8YbP5hcheVC7ly_M,2556
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrb8rc.tfm,sha256=zuLOKilou8e1PmQTI7tKH5TuN9lZTUwsZS6Up8lsjZ0,4572
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrb8t.tfm,sha256=WpMKCemCK92LH8Jb2IEzjO2Dn1iNE1-dpkI_6XExato,3428
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrb8tc.tfm,sha256=kqlNegO4hxG4DK1tRHVPKBLeRG1OcL7O4IAWUtWkZT0,6760
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrbi7t.tfm,sha256=6ovOAZm6UOK_ta7hB17facyBPlco2z8bq0K1Sv8O-Fs,1784
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrbi8a.tfm,sha256=l6UUufuwJYk5vzDUFwYqmOIZFmsaWtSw8z0-mnp8zVQ,1436
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrbi8c.tfm,sha256=8noUcCSuM0j5d7dikhutqREQIhCwZG0nlk_zj0hUXjk,1440
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrbi8r.tfm,sha256=jIBF4IZGZAU4qLUGrjxI1P8ldAUok8Crjo_DZe1rGmM,2740
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrbi8t.tfm,sha256=eMcEY1Q2zKi3cwlNWgZaUXdhweA49W_cajLJcKRf148,3576
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrc7t.tfm,sha256=AOdl3vEutk5xQurKenh7I4xlL4sjug6lGweriNyBbkY,1660
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrc7tc.tfm,sha256=N2GQ67NjPE6VgwUq5WC2m-ilfXTgLnbs8inoemMZ6g8,2008
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrc8a.tfm,sha256=0Kqy_9knBv9olyiZ5tPLZMGe1tTRXz3AkbbiTv5bJ9Y,1256
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrc8ac.tfm,sha256=Zl3JwV6_czg935ZdK2nL8eqUAz_JtMaI2g_ouZprETI,1324
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrc8c.tfm,sha256=nl1C84Iu4u0e7kwVRV13ZZNcoZ5tMAgjwgA0h1Tq098,1340
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrc8cc.tfm,sha256=WtxUNI4hGMlWJNMHl9qITEiyx4A-hXLXEUsAoaA-y6I,1336
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrc8r.tfm,sha256=9ZEgvaiysdIF5vzzBRY6eo85eCkET2JXxF8YfnUbLrU,2544
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrc8rc.tfm,sha256=NuaijJPoCdpy21YHLSkbKNLCVrSkXa1l1JTDmTbCaYY,4312
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrc8t.tfm,sha256=jE-_K4hF2yCQ4F626Z1SokGzXJJamX_-3qhRGP4nB_o,3412
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrc8tc.tfm,sha256=70Mu7SN85AFXQ3J3BOkoGaLI8dspM-b2gNEgQQXoung,6288
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrci7t.tfm,sha256=eEuOgAO9-k-g7AwUjRF-8PmgBx0SnV7oV1g4RwuPk7E,1884
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrci8a.tfm,sha256=_1Ppxp-5PghDCVuP71wauiQ-ZxLETWxMubWapkfd0Tg,1452
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrci8c.tfm,sha256=QAHGV3aj3mdWOIDm31B7SuOpWBgDk9uV9hGx7LJKBRk,1452
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrci8r.tfm,sha256=X6jsakUUWbRDAzAUHoJcq1lwQanymQ4Sl3r9c5vm6n8,2812
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrci8t.tfm,sha256=cZ6jVm9f_xgiO2bMa27SAyIuYxj9h41Oa1gTo4Gy6-E,3700
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrl7t.tfm,sha256=FWkZPeE73cxgynkx4kUjdhj1zeqDZTOY9-yV6viKt7E,1680
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrl7tc.tfm,sha256=jNQ6kqWltkoNFG6JeH6xgTXZuUEendRLCsDimDAVsas,2020
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrl8a.tfm,sha256=R31AvWD7aZn_Ewd5cTYV-05zylul-aJw9nVPpsZlM8I,1244
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrl8ac.tfm,sha256=SVlhNU0krGHgH-0IUNWJHKUWyPBqkhLspjJHiWLyZts,1320
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrl8c.tfm,sha256=dXfGsTKXYQTIQWu333Ek-zEL3WWL5HDjX3mnciZvUMY,1324
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrl8cc.tfm,sha256=JrEEC2uuhO618aNyhJfatiYP9LgD7O1e-yHeKn3Bji8,1336
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrl8r.tfm,sha256=T6VdCEbHfqhqDBuJch0ceo5khbq9eJmTb2oM65LOTCo,2556
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrl8rc.tfm,sha256=OZv7rGJb66Ed9QTFKxxadl6mfN8U2juvaQtziXA2JNw,4032
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrl8t.tfm,sha256=12P5zPRkoJjPrN6FPP1BP_rM0WtIRBEeU2IcWdksshA,3464
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrl8tc.tfm,sha256=ShWCfoojuBDDT0fDbi1_QYdaEnbuzUhhYbQGT4QkrkQ,5908
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrli7t.tfm,sha256=yfxStOb6RxToB6UcECJ7PoOb9gt5n3cfvLNTD9s2kI4,1768
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrli8a.tfm,sha256=0AUP9jw63wh7ZHB67sbddONLMQYaiGLS6AHoKitXa6Y,1404
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrli8c.tfm,sha256=wyf3VGL4caa4Gw-AMHdook_4cQlQnOQ0o8GmwNYZGRs,1420
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrli8r.tfm,sha256=3qBXxMjPUCQKI-PbUp3xvWoHZqO2XfvoYj7ybFDeitM,2740
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrli8t.tfm,sha256=6J71xm2_mZX8KQY4DrDdtpUlgYnwdC57NOEcCdgZQsM,3500
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrr7t.tfm,sha256=RjTwlla8cf9XS2GPxec8TU2Yn0DAQllkcSXbwXjDzFY,1600
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrr7tc.tfm,sha256=LlzyTUEGPjzkpDTwLgy4ttNJksQ_GlIpQEhSNDYzM1g,2012
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrr8a.tfm,sha256=R-WTOla2udrNwt5a1ei5mX9RRN3Fe_j0DQb9ajdGJGg,1244
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrr8ac.tfm,sha256=OY8kSmXRXQ4Fs_INivDsjsM0BcHC0bupbNAFhp9MDtQ,1328
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrr8c.tfm,sha256=YGuURyQgpkiTNMOEN49ppzJozUr2gjYO7Q_hecwgfyc,1332
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrr8cc.tfm,sha256=GEkT5eJnZZ1IlobeiuEfj3OBn_0T0cMv1zkbR0fMLiI,1344
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrr8r.tfm,sha256=KDlMpGCjNIs2vmz13rMfZW3KF04hzyot7SVWCpPC-o0,2496
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrr8rc.tfm,sha256=2tthjU17F3GoAbHCoQMTYzO8WE481L57nw6msU7MUm8,4240
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrr8t.tfm,sha256=BWORqcOcA954kDS1jOhY7HKeLTc4pyPIFhUFwRirB8o,3352
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrr8tc.tfm,sha256=BfAh7AybTTc0MSIh5FQnWFSvAQlf6nUqG7Vuf4NXAVs,6164
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrri7t.tfm,sha256=V-Q7H6PjlnCZqR6CTocSyl7h9rbpJcYElHm43pf5G58,1764
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrri8a.tfm,sha256=wPziSlC5v5FhSKTNmqTIcdD2PQPoAuE7wQLFwqHYY7s,1408
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrri8c.tfm,sha256=rOwYkIe5iBc4cawb2h3_7vYYVTnD4l6EpJBCcmY-OqI,1412
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrri8r.tfm,sha256=qoVABbVJ_lWRdqABjPwrSQRUWqSEyQqYK08v_BHnGHc,2700
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrri8t.tfm,sha256=HVWcY7M_0UPI9Ac_kufBVbmzXlCjzIfC-4c1jwP7u24,3536
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfru7t.tfm,sha256=SqkT-8PEqa9M2dGoQ5_-QAUG2qvO-lfybneNVIk5YRY,1736
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfru7tc.tfm,sha256=N0ewhjSBhZt6d1exEmk2YU3erVvMObJQwHWxmm_LOso,1976
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfru8a.tfm,sha256=ENSogn6QJUkhBd1XSuFE3NctXLSzfv_8lh0esMCp-q8,1380
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfru8ac.tfm,sha256=9J4uqvxvId-KTOOQlcpPH0UkdpOpZkbzHqyz2ozth-w,1352
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfru8c.tfm,sha256=MByqS331gyYqhx6HL5tdShTs530fEyNGLbZbSOdGI9A,1372
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfru8cc.tfm,sha256=lbdMR21OPqWUP-CkiZ2cn4efBfuaXJotJQX6R5DrXEs,1344
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfru8r.tfm,sha256=w9NKY5dI_1Duqda1t0V5Wb1TDG2-NlmYVlkGnG4WPQM,2628
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfru8rc.tfm,sha256=Eh-Vf3Nd8RadfQdaD5oSIEL7sJIv6havoDE_yk0SElg,4300
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfru8t.tfm,sha256=RWFXRh0iNDZ2nrwW56m6_UyMUjjEXnwdSX5ZAPmgMO8,3488
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfru8tc.tfm,sha256=Xi3BJXIYuAANuJk6OpQGwAiVF8dqL3g0sD6MmvsvKuM,6160
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/truetype/adobe/frutiger/FrutigerLTCom-Black.ttf,sha256=MXxnWpyEz_FRg9QmX-Ukh0MJkBuvtpI9Z7eNKVV3ccU,130440
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/truetype/adobe/frutiger/FrutigerLTCom-Bold.ttf,sha256=882SpVxvmf7vlq-8n1BDDNp5uKsw-oizXINIA_28Pls,152312
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/truetype/adobe/frutiger/FrutigerLTCom-BoldItalic.ttf,sha256=WfVKz-9G40pfd4fJdPQtcwzhUF0c-ASC2sUWP2XMnJM,146220
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/truetype/adobe/frutiger/FrutigerLTCom-Italic.ttf,sha256=YcG4so3As3HtcFaN0ZnCbrJBgiqihipTr8yyycClna8,168048
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/truetype/adobe/frutiger/FrutigerLTCom-Light.ttf,sha256=0EuGPswC0voI6L2KZr6JVikogCOBitTMD0nbSafHxng,199776
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/truetype/adobe/frutiger/FrutigerLTCom-LightItalic.ttf,sha256=tdCwxUeHUSPKnqkEkMjTDNOLPsKnHEgPwVJGH2ErT18,195212
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/truetype/adobe/frutiger/FrutigerLTCom-Roman.ttf,sha256=MRTS_R1OUgnu_vSKCR4QeKmOZ-kmW0OQiNkery60Fss,176844
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/vf/adobe/frutiger/pfrb7t.vf,sha256=bTIQlHI__xOufOzHqCif_uwTXceoreJ8ZmS5tNuvsXw,1384
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/vf/adobe/frutiger/pfrb7tc.vf,sha256=iQ8Ueh69hTrYW3FOequiNJoxuHqK4IenBxfOruOYOR0,1376
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/vf/adobe/frutiger/pfrb8c.vf,sha256=OPlhMj8z3IcuZI8KTqCtiZ91VvSRUO5hnl5C15hRhJ0,3560
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/vf/adobe/frutiger/pfrb8cc.vf,sha256=OBKskwNAsqhW7yRhsUqat8stPitq8eNx57Yw3AbpIig,3564
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/vf/adobe/frutiger/pfrb8t.vf,sha256=4c2M3oNsnJwMdP9hwSDejMPb9DNzqVFhfS87dyju998,2352
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/vf/adobe/frutiger/pfrb8tc.vf,sha256=wQ1nCmyCobigliiCvItpzm7SrLxdszMZ-Gl1KC1PzFs,2348
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/vf/adobe/frutiger/pfrbi7t.vf,sha256=_tx4DXThHvTeBKFKxvw3ktNAQrFsR3kvsLL4c-SiafE,1384
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/vf/adobe/frutiger/pfrbi8c.vf,sha256=X1zQ6YPgh6fhX8gXg6fIylPUF_3XZbnzE3MLpYVgBGQ,3564
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/vf/adobe/frutiger/pfrbi8t.vf,sha256=fM4kMOZ4URBDVy1-7BGlHFl4-zLQhA6X6gxiyaOjjYI,2360
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/vf/adobe/frutiger/pfrc7t.vf,sha256=K5qEKs_9TW1-4Vfj44_238ihSoFohQfwkHdcJI6TBnk,1384
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/vf/adobe/frutiger/pfrc7tc.vf,sha256=r8sqvteDb3X6vE4r4zlQFE8SqSrk0Tuk2YeO4EU0STk,1376
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/vf/adobe/frutiger/pfrc8c.vf,sha256=wb5R0VGmKHCQ-Eh14SIQ2uMRHE4ncZhirrd75bP9IuY,3560
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/vf/adobe/frutiger/pfrc8cc.vf,sha256=Jj6aqYb18ySQ73s7VnMNuSzOEx_58_9Jt9lmOMSUwvU,3564
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/vf/adobe/frutiger/pfrc8t.vf,sha256=ZkGkLa1UcFjQsPFQV77KLRUeaF7fZhKcg5dop5TAJKU,2352
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/vf/adobe/frutiger/pfrc8tc.vf,sha256=nzWieOvjxFAgQv-38jQlSllCPA3YuAhr2w8IUwLYTRs,2352
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/vf/adobe/frutiger/pfrci7t.vf,sha256=Dv-nEo4ZBJsLcMu_CepqJpQftQpccmUIV7-_FfN0VPc,1384
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/vf/adobe/frutiger/pfrci8c.vf,sha256=ABmYCU6tUcdHh_iRAz6JVb9SQpUBgNZnDZbNEI6M4Gg,3564
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/vf/adobe/frutiger/pfrci8t.vf,sha256=sN4LN_ifee3QJ0i83tZMAr0IuyCBV7C3lA2pBNWrEJg,2364
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/vf/adobe/frutiger/pfrl7t.vf,sha256=I9LaQSFNlOdiUrYK0AV8bBMCA7BDlXdaGE0xOi0LK98,1384
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/vf/adobe/frutiger/pfrl7tc.vf,sha256=Isk7DYY7KRjmTPNhUs52VPr4G5MfWIWLQukABkswsZ4,1376
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/vf/adobe/frutiger/pfrl8c.vf,sha256=BVA8lP3KcJ6JrnO1rqsnd8-vwi3Q1-b61kBGOU-TQZQ,3560
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/vf/adobe/frutiger/pfrl8cc.vf,sha256=zdXQfj7Kr_ROkNq_t64AbytBjo8xnLNIFvi-kr1YJvM,3564
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/vf/adobe/frutiger/pfrl8t.vf,sha256=sGhPVuOHxoL3cq-TwXuRw5USPiWAqLUXGnq1622uRIk,2348
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/vf/adobe/frutiger/pfrl8tc.vf,sha256=LWBYo9n9i16vzCh1AezcnC7otXOV_bvLH7uhU1xvLz4,2352
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/vf/adobe/frutiger/pfrli7t.vf,sha256=TAPWKG9GHaC1DnnSrgi_ORVC50-tO_OdAbGglU_hbz8,1376
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/vf/adobe/frutiger/pfrli8c.vf,sha256=4lmVaDEXrb7WTRrSNamaIob4JNZ3Xjm2XnnhzDBY-Ok,3564
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/vf/adobe/frutiger/pfrli8t.vf,sha256=I5xOffzJZSABor-havvlp9ZRRCIFi98NBmgSTGQpcvU,2352
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/vf/adobe/frutiger/pfrr7t.vf,sha256=XfawuRE9-cM2_lL9_66YKATKEXHUpiTnNwn3BLLBSf0,1384
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/vf/adobe/frutiger/pfrr7tc.vf,sha256=n0KZoljR5ML1mgvVgoCmTwq9H7hVL7abfUdozGnjGTk,1376
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/vf/adobe/frutiger/pfrr8c.vf,sha256=SaayFkVOxziBRARm4DDPjAxYJj_odnuNQUx7_2eACnQ,3560
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/vf/adobe/frutiger/pfrr8cc.vf,sha256=EkFg0iM_oJwstMhFJTOzCUZrDojdslUrjRQiKuX2QUM,3564
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/vf/adobe/frutiger/pfrr8t.vf,sha256=Z9JirpjunCyK_F2A6S4vZhdmvCB2optPK8cfNq0elqI,2352
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/vf/adobe/frutiger/pfrr8tc.vf,sha256=-pLAPfhrwKS-SZaO_Feh4kQdmV3NiNjXBs1dd2qEg5o,2348
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/vf/adobe/frutiger/pfrri7t.vf,sha256=g_w-rXhsor5dIEYXs3s_Uduf1qyhLjOpw7LQT_9IPWE,1384
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/vf/adobe/frutiger/pfrri8c.vf,sha256=d82iMNFodtcZpISrsozWFM3E1FvKNRBPY3KpMCZXqBc,3564
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/vf/adobe/frutiger/pfrri8t.vf,sha256=hZWGGlXPdEA6FKCr0YKnvH_Tv-Y_RNhJ5B9KPYsoxqE,2360
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/vf/adobe/frutiger/pfru7t.vf,sha256=noJdw4q5AkWnDpmJnEO51FeYzDyhUA4zfnRTTu2PlP8,1384
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/vf/adobe/frutiger/pfru7tc.vf,sha256=kv8l3NUXVmzOpQXPrDX9ME1a9TvbNzdotnSnJswq3M4,1376
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/vf/adobe/frutiger/pfru8c.vf,sha256=iMX7R_lXAiLRfDxXrebEy8SXLctofDZlAKErH6LZyGI,3560
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/vf/adobe/frutiger/pfru8cc.vf,sha256=5SFYvi5R6yFVi-ZF4HU3xFdmcoK5JqoWvyfZiB6VqGs,3564
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/vf/adobe/frutiger/pfru8t.vf,sha256=tgx1HCWeN0Ka_KgKMHbjdtKElRffOMjcS-YEJX8cq5M,2360
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/vf/adobe/frutiger/pfru8tc.vf,sha256=IrWBNvMOYRtF3dh68k4Cns63tYJVO6QS3MYemD7zcHU,2352
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/logo/iis_43mm_p334.eps,sha256=QB9h8dmnysAMpeQR8NF-ATzcbJBV_8qdYwD9UQvqyiU,387738
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/logo/iis_60mm_p334.eps,sha256=Tm9EWXbumsMfAaMkL8SBwgIPtMTqUzisZHHNaqGJpTM,397110
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/logo/iis_85mm_p334.eps,sha256=gojl2Kd_lsbnWaRC-QkTuZS48ZMwj4K5uNBTLqdkOdk,413822
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/tex/fhgiislogo/iis_43mm_p334.eps,sha256=QB9h8dmnysAMpeQR8NF-ATzcbJBV_8qdYwD9UQvqyiU,387738
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/tex/fhgiislogo/iis_43mm_p334m1.eps,sha256=KUql-iwT_gA4_IS6pfSgAHoPhes-eYEay9ndgoJd9aA,18463
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/tex/fhgiislogo/iis_43mm_p334m1.pdf,sha256=uetkbZICnzodY8GnGTlEgLiP640JMNhPpRzBpvSomJk,13701
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/tex/fhgiislogo/iis_60mm_p334.eps,sha256=Tm9EWXbumsMfAaMkL8SBwgIPtMTqUzisZHHNaqGJpTM,397110
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/tex/fhgiislogo/iis_60mm_p334m1.eps,sha256=VDx98myWKixSuf3z5Wn69h-jxfI_k0m162U44aJz-cU,18494
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/tex/fhgiislogo/iis_60mm_p334m1.pdf,sha256=TGdjfWVPqNyk9NQKBN_UwlOh12R_QR1NWMwoXeX-Afg,13745
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/tex/fhgiislogo/iis_85mm_p334.eps,sha256=gojl2Kd_lsbnWaRC-QkTuZS48ZMwj4K5uNBTLqdkOdk,413822
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/tex/fhgiislogo/iis_85mm_p334m1.eps,sha256=vNhDWkD4Krmv__TNN6xGAt5AWLtQZgkyMYqHVT4sOSE,18453
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/tex/fhgiislogo/iis_85mm_p334m1.pdf,sha256=fp7APSWqTto6aV63MDp3qKZAUXpstFJDFcxOuCKDDaE,13717
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/tex/latex/iofhg/beamerthemeFhG.sty,sha256=H80GEJhh_vb-7TkQTb3_732B-Ic-8o4h38V2cPxouRc,12695
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/tex/latex/iofhg/fhginstitutes.def,sha256=oYmpSnJg8uEGM8IsbP5DB2WCAPj4EwafUTXbnUCUvtQ,353
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/tex/latex/iofhg/fhginstitutes.sty,sha256=16gd-0QgKQ-pp7GQt6-IWD8uulKu5ebNuhCxL-w9CRw,1099
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/tex/latex/iofhg/fhgtechdoku.cls,sha256=Lzz_4AUf-9axl1y_8NPt6SLPhThKjah0jds8AJxbERQ,11075
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/tex/latex/pfr/frutiger.sty,sha256=QTFPvYgx1taHp_LXxIH_g6Q_HZlkaAIZF8ZNMQqfsNQ,867
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/tex/latex/pfr/ot1pfr.fd,sha256=18sbVseXwroZXCuhANYip5daKA5lxHeC4ngo1ENvM4c,1606
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/tex/latex/pfr/t1pfr.fd,sha256=CqXJoFcCfyGvPdaDfH_DUOtIUVzEJSzA-brk9joRKow,1582
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/tex/latex/pfr/ts1pfr.fd,sha256=XMddr68VTIpPDGlCWwurz2Gj8fq7ds5m1CVr1EAO_9A,1606
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_templates/confidential.html,sha256=dns5-CmXEjeuQgytpo-1VBmHu_RnheGGaJZtwvCER3E,84
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/api/index.rst,sha256=mo3i25_usmjxg85Ow8uMzsCtdyFitvKeVb3r8mlHnVQ,405
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/include/MathHelper.h,sha256=87AX4q12qdvJ5jMjK1dPKnVRr2V9hH_sDa_JRr9dqlc,232
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/integration/guide_1.rst,sha256=eAEPY1mfV4cUQHPCcFw5vTyYPY0VKeQO3KBw7C8XkOI,65
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/integration/guide_2.rst,sha256=tyYugWB_PaDndpn-W5cSyWMbVGjpCgmwhA2dpIC1jb0,65
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/integration/guide_3.md,sha256=BZizy8BZWxByJZg-6fEvZHJ-4NBj0ZIHOjLSxfOJ66U,65
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/integration/index.rst,sha256=gNdd0I2mkFavApAVsrh3h9qxOwHD-hhwHZ3G-ULVXQc,216
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/integration/system_layer/guide_4.rst,sha256=4tOV4SW_A9ZwVZKRECo6YhgPR6PkLFBJuhJtgaYuw-0,66
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/integration/system_layer/index.rst,sha256=sEyxfFemcxdL52-EEO4LdiRLbiFY_96A0tFdV_QOgJk,163
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/product/architecture.rst,sha256=zTRxLUtwZ0n9nUvs_zclUZs_aV7mZ-SCIk0sjWZWAKo,70
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/product/copyright_notices.rst,sha256=NmdDPyEIOEsUdOueVDNdwaM3ySZPKJM1Sw9mUaGeoDs,376
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/product/copyright_notices_html.rst,sha256=XpU8hGPYwf70rMaEEaPjHVy_DLSK-WzFP2EYLnkFvXI,15008
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/product/features.rst,sha256=7MarWe-mtchNVUvf6b41PekQoTkrgjp3bH2Q7EKZEnA,66
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/product/index.rst,sha256=AGRk7gAaNUa-UiS4W2LtyQ4EpOuDMaZs2mKjd195pc4,284
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/product/performance.rst,sha256=vTvzehfT9LHZUGCWcOm2lSSAA6EmMQ-bme7kzayIPdE,69
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/product/references.rst,sha256=A--JPiE6FVrftxH_OC7x_uLLVwBdOalhGE7AYbaWzmU,86
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/product/release_notes.rst,sha256=3G6gF9oX6zy7SlLMj1uWtbbJXG_6NexCfaFKmzu_JXA,71
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/template/index.rst,sha256=ColyDnQIdHG6FY-ToqNJI5TOA9FUdt-sQ_CK4TsmyYI,797
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/template/demos/index.rst,sha256=gpbVR_ZHo0RzkVaH07w3HSxmmOU34BA7Ily65ws36fo,7263
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/template/demos/smiley.png,sha256=RpY2F2Re3FyP7sTxVZQcp11YbsddsQZkOw_stOQhzIw,272178
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/template/demos/sunglasses.png,sha256=oI-BAVoW6byFERbT9SUc6ZStvBukjEchnGTJ_ESgLCg,5616
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/template/recommendations/content.rst,sha256=TUgBDZd3-PR_yuuKpBRJN1WtYM-tFFBWt_puta1q5nc,6320
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/template/recommendations/document.rst,sha256=vpX12CqhbjpyeXTL7Y5imh50-ruhFoMDOwx6Yx_RB0Q,2294
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/template/recommendations/index.rst,sha256=YWqF5T8fzswVh4eQiNgHLd7G-a2MUc4dMzbruBOhXK8,2486
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/template/recommendations/style.rst,sha256=t4J_y0Nj9NKrPPlrp8wSdE4wDvrDysV_9qGW3HqSXss,3990
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/testing/certification.rst,sha256=a96KdSpyu9tM94CiAUlBRXIiSvcubwsbiA54pgb71bI,71
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/testing/conformance.rst,sha256=yLeOCTzZdeb3_yggY09SsQVv9xInGweAEdHHlPOQxLQ,69
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/testing/fraunhofer_product_testing.rst,sha256=ShPlR1i2J2eO8df6NpBvy0K_VSoFwLnXMHqLzWzn6_k,84
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/testing/index.rst,sha256=IHe5wI6OXUSWvAWj_a9_LIVlFrsaODqnEBjbWRrLKEI,155
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/testing/partner_testing.rst,sha256=SM-JhCg06O-XnbJe575CEhdnszKvMHn4y0MQlWDZ_5M,73
+init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/testing/trademark.rst,sha256=6VE3r4MGnpMB7LbFpK22YZKCaeQ15dgcCA1mI_9SjfI,67
+init_python_project/template/{% if remote == 'github' %}.github{% endif %}/workflows/ci.yaml.jinja,sha256=tvt7cLVr5RWGE0zjS76_7b_tR-lUIeLlZls6Kea0cKY,3060
+init_python_project-0.0.5.dist-info/METADATA,sha256=xHWmypRBxBFgmiJOp8AWrTSRK5jHT9g8hxPHJqsChOI,4551
+init_python_project-0.0.5.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+init_python_project-0.0.5.dist-info/entry_points.txt,sha256=zr8RbZRE1A8Klf8w03Cjvo2ef23H4XHXkD1KYxkzuR4,68
+init_python_project-0.0.5.dist-info/top_level.txt,sha256=qZum-bTMwQsVKPb1FLc4XCSnZjng6IQCLX_XEAYZ-mo,20
+init_python_project-0.0.5.dist-info/RECORD,,

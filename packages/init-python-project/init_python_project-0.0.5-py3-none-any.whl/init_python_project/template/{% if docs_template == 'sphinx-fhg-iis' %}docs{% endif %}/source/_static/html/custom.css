@@ -1,0 +1,12 @@
+.bd-header .navbar-item {
+    margin: 10px 0 5px 0;
+}
+
+.bd-header .navbar-header-items {
+    padding: 0 0 0 1.5rem;
+}
+
+html[data-theme="light"] {
+    --pst-color-primary: #005b7f;
+    --pst-color-secondary: #0091cb;
+}

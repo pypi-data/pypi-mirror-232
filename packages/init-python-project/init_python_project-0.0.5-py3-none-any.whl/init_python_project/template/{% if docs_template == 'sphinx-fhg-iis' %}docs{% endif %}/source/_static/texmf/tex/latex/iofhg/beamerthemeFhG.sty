@@ -1,0 +1,372 @@
+\ProvidesPackage{beamerthemeFhG}[2012/09/18b LaTeX Beamer theme for FhG]
+
+
+\mode<presentation>
+
+\RequirePackage{fhginstitutes}
+
+\RequirePackage{graphicx}
+\RequirePackage{pgf}
+
+%fonts
+\RequirePackage[scaled=1.0]{frutiger}
+\pdfmapfile{+pfr.map}
+
+\RequirePackage{euler} % better matching math font
+\RequirePackage{textcomp} % for the copyright (C) sign
+
+\def\fhgtextwidth{228mm}
+\def\fhgpaperwidth{254mm}
+\geometry{paperwidth=\fhgpaperwidth,paperheight=190.5mm,vmargin=0cm}
+\newlength\fhghmargins
+\setlength\fhghmargins{\fhgpaperwidth}
+\addtolength\fhghmargins{-\fhgtextwidth}
+\setlength\fhghmargins{0.5\fhghmargins}
+\setbeamersize{text margin left=\fhghmargins,text margin right=\fhghmargins}
+
+
+\renewcommand{\familydefault}{\sfdefault}
+\fontfamily{\familydefault}
+
+\def\ltseries{\fontseries{l}\selectfont}
+\def\ebseries{\fontseries{eb}\selectfont}
+
+\setlength\parskip{9bp}
+
+\setbeamerfont{title}{size=\fontsize{32bp}{32bp}\selectfont,series=\bfseries}
+\setbeamerfont{subtitle}{size=\fontsize{18bp}{18bp}\selectfont,series=\mdseries}
+\setbeamerfont{frametitle}{size=\fontsize{24bp}{24bp}\selectfont,series=\bfseries}
+\setbeamerfont{framesubtitle}{size=\fontsize{24bp}{24bp}\selectfont,series=\bfseries}
+\setbeamercolor{framesubtitle}{fg=fhg green}
+
+% nicht noetig? schadet aber nix
+%\def\normalsize{\fontsize{18bp}{22bp}\selectfont}
+
+\DeclareTextFontCommand{\textlt}{\ltseries}
+\DeclareTextFontCommand{\texteb}{\ebseries}
+
+%\def\seriesdefault{l}
+
+\usecolortheme[named=black]{structure}
+\useoutertheme{default}
+\useinnertheme{rectangles}
+
+
+\defbeamertemplate*{frametitle}{FhG}
+{%
+    \usebeamerfont{frametitle}%
+    \usebeamercolor{frametitle}%
+    \vskip1cm%
+    \strut\insertframetitle\strut\par%
+    {%
+      \ifx\insertframesubtitle\@empty%
+      \else%
+      {\usebeamerfont{framesubtitle}\usebeamercolor[fg]{framesubtitle}\hskip1cm\insertframesubtitle\strut\par}%
+      \fi
+    }%
+    \vskip-1ex%
+}
+
+%\defbeamertemplate*{headline}{subsection}
+%{
+%  \vskip0.75cm
+%  {\usebeamercolor[bg]{upper separation line head}\hspace*{0.3cm}\leaders\hrule height0.3bp\hfill\hspace*{0.3cm}\par}
+%  \begin{beamercolorbox}[wd=\paperwidth,ht=2.25ex,dp=1ex,right]{section in head/foot}%
+%    \usebeamerfont{section in head/foot}\insertsectionhead\hspace*{0.3cm}
+%  \end{beamercolorbox}%
+%  {\usebeamercolor[bg]{lower separation line head}\hspace*{0.3cm}\leaders\hrule height0.3bp\hfill\hspace*{0.3cm}\par}
+%}
+
+\defbeamertemplate*{footline}{FhG Pagenumber Logo}{
+	\vskip4mm{\usebeamertemplate*{separation line}}
+	\begin{beamercolorbox}[ht=1cm,dp=1cm,leftskip=\fhghmargins,rightskip=\fhghmargins]{page number in head/foot}%
+		\usebeamerfont{page number in head/foot}%
+		\rlap{\raisebox{1cm}{\raisebox{-2\height}{\insertframenumber\,/\,\inserttotalframenumber}}}%
+	{\fontsize{8bp}{10bp}\selectfont © \fhg@institutshort}%
+	  \hfill%
+	\raisebox{-14bp}[1cm][-14bp]{\fhg@bottomLogo}%
+    \end{beamercolorbox}%
+}
+
+\defbeamertemplate{footline}{FhG}{%
+	\usebeamertemplate*{separation line}
+    \begin{beamercolorbox}[ht=1cm,dp=1cm,leftskip=\fhghmargins,rightskip=\fhghmargins]{page number in head/foot}%
+      \usebeamerfont{page number in head/foot}%
+      {\fontsize{8bp}{10bp}\selectfont © \fhg@institutshort}
+    \end{beamercolorbox}%
+}
+
+\setbeamercolor{separation line}{fg=fhg green}
+\setbeamercolor{separation line thin}{parent=separation line}
+\defbeamertemplate*{separation line}{FhG}{\vbox{\hspace*{\fill}\raisebox{-1.25bp}[0pt][0pt]{\rule{\fhgtextwidth}{2.5bp}}\hspace*{\fill}}}
+\defbeamertemplate*{separation line thin}{FhG}{\vbox{\hspace*{\fill}\raisebox{-1.25bp}[0pt][0pt]{\rule{\fhgtextwidth}{1.25bp}}\hspace*{\fill}}}
+
+\definecolor{fhg green}{RGB}{23,156,125}
+\definecolor{fhg grey}{RGB}{168,175,175}
+\definecolor{fhg gray}{RGB}{168,175,175}
+\definecolor{fhg orange}{RGB}{235,106,10}
+\definecolor{fhg petrol}{RGB}{0,110,146}
+\definecolor{fhg tyrquoise}{RGB}{37,186,255}
+\definecolor{fhg tyrquois}{RGB}{37,186,255}
+\definecolor{fhg applegreen}{RGB}{177,200,0}
+\definecolor{fhg lightbeige}{RGB}{254,239,214}
+\definecolor{fhg lightblue}{RGB}{212,230,244}
+\definecolor{fhg lightgray}{RGB}{225,227,227}
+\definecolor{fhg lightgrey}{RGB}{225,227,227}
+
+\setbeamercolor{fhg green}{fg=fhg green,bg=fhg green}
+\setbeamercolor{fhg gray}{fg=fhg gray,bg=fhg gray}
+\setbeamercolor{fhg grey}{fg=fhg grey,bg=fhg grey}
+\setbeamercolor{fhg orange}{fg=fhg orange,bg=fhg orange}
+\setbeamercolor{fhg petrol}{fg=fhg petrol,bg=fhg petrol}
+\setbeamercolor{fhg tyrquoise}{fg=fhg tyrquoise,bg=fhg tyrquoise}
+\setbeamercolor{fhg tyrquois}{fg=fhg tyrquois,bg=fhg tyrquois}
+\setbeamercolor{fhg applegreen}{fg=fhg applegreen,bg=fhg applegreen}
+\setbeamercolor{fhg lightbeige}{fg=fhg lightbeige,bg=fhg lightbeige}
+\setbeamercolor{fhg lightblue}{fg=fhg lightblue,bg=fhg lightblue}
+\setbeamercolor{fhg lightgray}{fg=fhg lightgray,bg=fhg lightgray}
+\setbeamercolor{fhg lightgrey}{fg=fhg lightgrey,bg=fhg lightgrey}
+
+
+%%\usecolortheme{wolverine}
+%\setbeamercolor{highlight text}{use={palette primary},fg=palette primary.bg!50!normal text.fg}
+%%\setbeamercolor{bright text}{use={palette primary,example text},fg=palette primary.bg!33!normal text.fg}
+%\setbeamercolor{bright text}{use={normal text,example text},fg=normal text.fg!25!example text.fg}
+%\setbeamercolor{file text}{parent=highlight text}
+%\setbeamercolor{name text}{parent=highlight text}
+%\setbeamercolor{code text}{parent=highlight text}
+
+
+
+\def\beamer@enum@{%
+  \beamer@computepref\@itemdepth% sets \beameritemnestingprefix
+  \usebeamerfont{itemize/enumerate \beameritemnestingprefix body}%
+  \usebeamercolor[fg]{itemize/enumerate \beameritemnestingprefix body}%
+  \usebeamertemplate{itemize/enumerate \beameritemnestingprefix body begin}%
+  \expandafter
+    \list
+      {\usebeamertemplate{\beamer@enumtempl}}
+      {
+	\setlength\labelwidth{1cm}%
+	      \setlength\labelsep{0cm}%
+	\usecounter\@enumctr%
+	\def\makelabel##1{{{{%
+                \usebeamerfont*{enumerate \beameritemnestingprefix item}%
+                \usebeamercolor[fg]{enumerate \beameritemnestingprefix item}##1}}}}}%
+  \beamer@cramped%
+  \raggedright%
+  \beamer@firstlineitemizeunskip%
+}
+
+\setlength\leftmargini{1cm}%
+\setlength\leftmarginii{1cm}%
+
+\renewcommand{\itemize}[1][]{%
+  \beamer@ifempty{#1}{}{\def\beamer@defaultospec{#1}}%
+  \ifnum \@itemdepth >2\relax\@toodeep\else
+    \advance\@itemdepth\@ne
+    \beamer@computepref\@itemdepth% sets \beameritemnestingprefix
+    \usebeamerfont{itemize/enumerate \beameritemnestingprefix body}%
+    \usebeamercolor[fg]{itemize/enumerate \beameritemnestingprefix body}%
+    \usebeamertemplate{itemize/enumerate \beameritemnestingprefix body begin}%
+    \list
+      {\usebeamertemplate{itemize \beameritemnestingprefix item}}%
+      {%
+	      \setlength\labelwidth{1cm}%
+	      \setlength\labelsep{0cm}%
+%	      \setlength\itemsep{0cm}%
+%	      \setlength\itemindent{0cm}%
+	      \def\makelabel##1{%
+          {%
+		{{%
+                \usebeamerfont*{itemize \beameritemnestingprefix item}%
+                \usebeamercolor[fg]{itemize \beameritemnestingprefix item}##1}}%
+          }%
+        }%
+      }
+  \fi%
+  \beamer@cramped%
+  \raggedright%
+  \beamer@firstlineitemizeunskip%
+}
+
+\setbeamertemplate{items}[default]
+
+\defbeamertemplate*{itemize item}{FhG}{\boxitem}
+\defbeamertemplate*{itemize subitem}{FhG}{\boxitem}
+\defbeamertemplate*{itemize subsubitem}{FhG}{\boxitem}
+
+\setbeamercolor{item}{use=structure,fg=fhg green}
+\setbeamercolor{subitem}{parent=item,fg=fhg gray}
+\setbeamercolor{subsubitem}{parent=item,fg=fhg gray}
+
+\setbeamerfont{itemize/enumerate body}{}
+\setbeamerfont{itemize/enumerate subbody}{size=\normalsize}
+\setbeamerfont{itemize/enumerate subsubbody}{size=\small}
+
+
+
+
+\setbeamerfont{page number in head/foot}{family=\sffamily,size=\tiny,series=\mdseries}
+\setbeamercolor{page number in head/foot}{fg=fhg gray}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{background canvas}[my background]
+%\setbeamertemplate{background}[grid][step=2mm]
+
+
+\defbeamertemplate*{title page}{FhG}
+{%
+	\setbeamertemplate{footline}[FhG]
+	\vskip-1cm
+	\raisebox{-1cm}{\usebeamertemplate*{separation line}}\par
+	{\usebeamerfont{title}\parbox[t][2.8cm]{\textwidth}{\MakeUppercase{\inserttitle}}}\\
+	\vskip0.8cm
+	{\usebeamerfont{subtitle}\parbox[b]{\textwidth}{\insertsubtitle\strut}}\\
+	\usebeamertemplate*{separation line thin}
+	\vfill
+	\begin{center}\fhg@titleLogo\end{center}
+	\vfill
+}
+
+\def\titleframe{\bgroup\setbeamertemplate{footline}[FhG]\begin{frame}[t]}
+\def\endtitleframe{\end{frame}\egroup}
+
+\newenvironment{splitv}[3]{%
+	\@tempcnta0\relax%number of variable coloumns
+	\setlength\@tempdima{\textwidth}%
+	\ifx#1*%
+		\advance\@tempcnta\@ne%
+	\else%
+		\advance\@tempdima-#1%
+		\def\fhg@widthA{#1}%
+	\fi%
+	\addtolength\@tempdima{-4mm}%
+	\ifx#2*%
+		\advance\@tempcnta\@ne%
+	\else%
+		\advance\@tempdima-#2%
+		\def\fhg@widthB{#2}%
+	\fi%
+	\ifnum\the\@tempcnta>1%
+		\divide\@tempdima\@tempcnta%
+	\fi%
+	\ifdim\@tempdima<1cm%
+		\message{variable split coloumn too narrow: \@tempdima}%
+	\fi%
+	\ifx#1*\def\fhg@widthA{\@tempdima}\fi%
+	\ifx#2*\def\fhg@widthB{\@tempdima}\fi%
+	\begin{minipage}[#3]{\fhg@widthA}\raggedright%
+	\def\splitvnext{\end{minipage}\hskip4mm plus 1fil\begin{minipage}[#3]{\fhg@widthB}\raggedright%
+	\let\splitvnext=\fhg@nomoresplitvnext%
+	}
+}{%
+	\ifx\splitvnext\fhg@nomoresplitvnext\else%
+		\PackageError{beamerthemeFhG}{error: Missing splitvnext in environment}{}%
+	\fi
+	\end{minipage}%
+}
+\def\fhg@nomoresplitvnext{\PackageError{beamerthemeFhG}{error: too many splitvnext in environment}{}}
+
+\newenvironment{splitvv}[4]{%
+	\@tempcnta0\relax%number of variable coloumns
+	\setlength\@tempdima{\textwidth}%
+	\ifx#1*%
+		\advance\@tempcnta\@ne%
+	\else%
+		\advance\@tempdima-#1%
+		\def\fhg@widthA{#1}%
+	\fi%
+	\addtolength\@tempdima{-4mm}%
+	\ifx#2*%
+		\advance\@tempcnta\@ne%
+	\else%
+		\advance\@tempdima-#2%
+		\def\fhg@widthB{#2}%
+	\fi%
+	\addtolength\@tempdima{-4mm}%
+	\ifx#3*%
+		\advance\@tempcnta\@ne%
+	\else%
+		\advance\@tempdima-#3%
+		\def\fhg@widthB{#3}%
+	\fi%
+	\ifnum\the\@tempcnta>1%
+		\divide\@tempdima\@tempcnta%
+	\fi%
+	\ifdim\@tempdima<1cm%
+		\message{variable split coloumn too narrow: \@tempdima}%
+	\fi%
+	\ifx#1*\def\fhg@widthA{\@tempdima}\fi%
+	\ifx#2*\def\fhg@widthB{\@tempdima}\fi%
+	\ifx#3*\def\fhg@widthC{\@tempdima}\fi%
+	\begin{minipage}[#3]{\fhg@widthA}\raggedright%
+	\def\splitvvnext{\end{minipage}\hskip4mm plus 1fil\begin{minipage}[#3]{\fhg@widthB}\raggedright%
+	\def\splitvvnext{\end{minipage}\hskip4mm plus 1fil\begin{minipage}[#3]{\fhg@widthC}\raggedright
+	\let\splitvvnext=\fhg@nomoresplitvvnext%
+	}}%
+}{%
+	\ifx\splitvvnext\fhg@nomoresplitvvnext\else%
+		\PackageError{beamerthemeFhG}{error: Missing splitvvnext in environment}{}
+	\fi
+	\end{minipage}%
+}
+\def\fhg@nomoresplitvvnext{\PackageError{beamerthemeFhG}{error: too many splitvvnext in environment}{}}
+
+\mode<all>
+
+\newcommand{\questionitem}{\makebox[1.25ex][c]{\bfseries ?}}
+\newcommand{\trianglerightitem}{\makebox[1.25ex][c]{$\kern0.05em\blacktriangleright$}}
+\newcommand{\triangleleftitem}{\makebox[1.25ex][c]{$\blacktriangleleft\kern0.05em$}}
+\newcommand{\triangleupitem}{\makebox[1.25ex][c]{$\blacktriangle$}}
+\newcommand{\triangledownitem}{\makebox[1.25ex][c]{$\blacktriangledown$}}
+\newcommand{\vdotsitem}{\makebox[1.25ex][c]{\LARGE\vdots}}
+\newcommand{\cdotitem}{\makebox[1.25ex][c]{$\cdot$}}
+\newcommand{\boxitem}{\makebox[1.25ex][c]{\vrule width 0.95ex height 1.1ex depth -0.15ex}}
+
+\def\setinstitute#1{%
+	\ifcsname fhg@IAl #1\endcsname
+		\edef\fhg@institut{\csname fhg@IAl #1\endcsname}
+		\edef\fhg@institutshort{\csname fhg@IAk #1\endcsname}
+		\ifcsname fhg@ILogo43 #1\endcsname
+			\pgfdeclareimage[]{logo43}{\csname fhg@ILogo43 #1\endcsname}
+			\def\fhg@bottomLogo{\pgfuseimage{logo43}}
+		\else
+			\def\fhg@bottomLogo{}
+		\fi
+		\ifcsname fhg@ILogo60 #1\endcsname
+			\pgfdeclareimage[]{logo60}{\csname fhg@ILogo60 #1\endcsname}
+		\fi
+		\ifcsname fhg@ILogo85 #1\endcsname
+			\pgfdeclareimage[]{logo85}{\csname fhg@ILogo85 #1\endcsname}
+			\def\fhg@titleLogo{\pgfuseimage{logo85}}
+		\else
+			\def\fhg@titleLogo{}
+		\fi
+	\else
+		\ClassError{fhgtechdoku}{unknown acronym for an FhG institute: #1}{use a known acronym like IIS or use \backslashchar setinstitute{full name}{short name}}
+	\fi
+}
+
+\def\insertframesection{\thesection.\hspace{0.375em}\insertsectionhead}
+
+\def\insertframesubsection{%
+	\ifnum \the\c@subsection >0\relax%
+		\thesection.\thesubsection.\hspace{0.375em}\insertsubsectionhead%
+	\fi%
+}
+
+\def\insertframepart{%
+	\ifnum \the\c@subsubsection >0\relax%
+		\thesection.\thesubsection.\thesubsubsection\hspace{0.375em}\insertsubsubsectionhead%
+	\else%
+		\insertframesubsection%
+	\fi%
+}
+
+\newenvironment{frame*}{\begin{frame}%
+	{\insertframesection}%
+	{\ifnum \the\c@subsection >0\relax%
+		\insertframepart%
+	\fi}%
+}{\end{frame}}
+

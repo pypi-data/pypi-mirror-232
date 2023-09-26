@@ -1,0 +1,17 @@
+docs:
+  image: python:3.10-bullseye
+  before_script:
+    - apt-get update
+    - apt-get install -y texlive-latex-recommended texlive-fonts-recommended tex-gyre texlive-latex-extra latexmk
+    - apt-get install -y doxygen libpango-1.0-0 libharfbuzz0b libpangoft2-1.0-0
+    - python3 -m pip install --upgrade pip
+    - python3 -m pip install -r requirements.txt
+  script:
+    - cd source; doxygen Doxyfile; cd ..
+    - sphinx-build -b html source/ build/docs
+    - sphinx-build -b latex source/ docs/latex
+    - make latexpdf # build the pdf from generated latex files
+    - mv build/latex/main.pdf build/docs
+  artifacts:
+    paths:
+      - build/docs

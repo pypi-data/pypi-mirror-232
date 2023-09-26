@@ -1,0 +1,51 @@
+\ProvidesPackage{fhginstitutes}[2012/07/18dev List of FhG institutes]
+
+
+\def\defFhgInstitute#1#2#3#4#5#6{
+	\expandafter\def\csname fhg@IAl #1\endcsname{#2}
+	\expandafter\def\csname fhg@IAk #1\endcsname{#3}
+	\if|#4|\else
+		\def@fhgInstituteLogo{#1}#4
+	\fi
+	\if|#5|\else
+		\def@fhgInstituteAddress{#1}#5
+	\fi
+	\if|#6|\else
+		\def@fhgInstitutePhone{#1}#6
+	\fi
+}
+
+\def\def@fhgInstituteLogo#1#2#3#4{
+	\if|#2|\else
+		\expandafter\def\csname fhg@ILogo43 #1\endcsname{#2}
+	\fi
+	\if|#3|\else
+		\expandafter\def\csname fhg@ILogo60 #1\endcsname{#3}
+	\fi
+	\if|#4|\else
+		\expandafter\def\csname fhg@ILogo85 #1\endcsname{#4}
+	\fi
+}
+
+\def\def@fhgInstituteAddress#1#2#3#4{
+	\if|#2|\else
+		\expandafter\def\csname fhg@IAddrStreet #1\endcsname{#2}
+	\fi
+	\if|#3|\else
+		\expandafter\def\csname fhg@IAddrCity #1\endcsname{#3}
+	\fi
+	\if|#4|\else
+		\expandafter\def\csname fhg@IAddrExtra #1\endcsname{#4}
+	\fi
+}
+
+\def\def@fhgInstitutePhone#1#2#3{
+	\if|#2|\else
+		\expandafter\def\csname fhg@IPhone #1\endcsname{#2}
+	\fi
+	\if|#3|\else
+		\expandafter\def\csname fhg@IFax #1\endcsname{#3}
+	\fi
+}
+
+\input{fhginstitutes.def}
