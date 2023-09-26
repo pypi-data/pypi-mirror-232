@@ -1,0 +1,148 @@
+Metadata-Version: 2.1
+Name: ape-llamanodes
+Version: 0.6.1
+Summary: ape-llamanodes: LlamaNodes Provider plugins for Ethereum-based networks
+Home-page: https://github.com/llamanodes/ape-llamanodes
+Author: LlamaNodes
+Author-email: info@llamanodes.com
+License: Apache-2.0
+Keywords: ethereum
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.8,<4
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: eth-ape <0.7,>=0.6.5
+Provides-Extra: dev
+Requires-Dist: ape-arbitrum ; extra == 'dev'
+Requires-Dist: ape-bsc ; extra == 'dev'
+Requires-Dist: ape-optimism ; extra == 'dev'
+Requires-Dist: ape-polygon ; extra == 'dev'
+Requires-Dist: hypothesis <7.0,>=6.2.0 ; extra == 'dev'
+Requires-Dist: pytest-cov ; extra == 'dev'
+Requires-Dist: pytest-xdist ; extra == 'dev'
+Requires-Dist: pytest >=6.0 ; extra == 'dev'
+Requires-Dist: black <24,>=23.3.0 ; extra == 'dev'
+Requires-Dist: flake8 <7,>=6.0.0 ; extra == 'dev'
+Requires-Dist: isort <6,>=5.10.1 ; extra == 'dev'
+Requires-Dist: mdformat-frontmatter >=0.4.1 ; extra == 'dev'
+Requires-Dist: mdformat-gfm >=0.3.5 ; extra == 'dev'
+Requires-Dist: mdformat >=0.7.16 ; extra == 'dev'
+Requires-Dist: mypy <1,>=0.991 ; extra == 'dev'
+Requires-Dist: types-setuptools ; extra == 'dev'
+Requires-Dist: Sphinx <4,>=3.4.3 ; extra == 'dev'
+Requires-Dist: sphinx-rtd-theme <1,>=0.1.9 ; extra == 'dev'
+Requires-Dist: towncrier <20,>=19.2.0 ; extra == 'dev'
+Requires-Dist: setuptools ; extra == 'dev'
+Requires-Dist: setuptools-scm ; extra == 'dev'
+Requires-Dist: twine ; extra == 'dev'
+Requires-Dist: wheel ; extra == 'dev'
+Requires-Dist: IPython ; extra == 'dev'
+Requires-Dist: commitizen ; extra == 'dev'
+Requires-Dist: ipdb ; extra == 'dev'
+Requires-Dist: pre-commit ; extra == 'dev'
+Requires-Dist: pytest-watch ; extra == 'dev'
+Provides-Extra: doc
+Requires-Dist: Sphinx <4,>=3.4.3 ; extra == 'doc'
+Requires-Dist: sphinx-rtd-theme <1,>=0.1.9 ; extra == 'doc'
+Requires-Dist: towncrier <20,>=19.2.0 ; extra == 'doc'
+Provides-Extra: lint
+Requires-Dist: black <24,>=23.3.0 ; extra == 'lint'
+Requires-Dist: flake8 <7,>=6.0.0 ; extra == 'lint'
+Requires-Dist: isort <6,>=5.10.1 ; extra == 'lint'
+Requires-Dist: mdformat-frontmatter >=0.4.1 ; extra == 'lint'
+Requires-Dist: mdformat-gfm >=0.3.5 ; extra == 'lint'
+Requires-Dist: mdformat >=0.7.16 ; extra == 'lint'
+Requires-Dist: mypy <1,>=0.991 ; extra == 'lint'
+Requires-Dist: types-setuptools ; extra == 'lint'
+Provides-Extra: release
+Requires-Dist: setuptools ; extra == 'release'
+Requires-Dist: setuptools-scm ; extra == 'release'
+Requires-Dist: twine ; extra == 'release'
+Requires-Dist: wheel ; extra == 'release'
+Provides-Extra: test
+Requires-Dist: ape-arbitrum ; extra == 'test'
+Requires-Dist: ape-bsc ; extra == 'test'
+Requires-Dist: ape-optimism ; extra == 'test'
+Requires-Dist: ape-polygon ; extra == 'test'
+Requires-Dist: hypothesis <7.0,>=6.2.0 ; extra == 'test'
+Requires-Dist: pytest-cov ; extra == 'test'
+Requires-Dist: pytest-xdist ; extra == 'test'
+Requires-Dist: pytest >=6.0 ; extra == 'test'
+
+# Quick Start
+
+Use the [LlamaNodes](https://llamanodes.com/) provider plugin to interact with blockchains via APIs.
+This plugin supports the following ecosystems:
+
+- Ethereum (mainnet and goerli)
+- Base (currently in alpha testing)
+- Polygon
+- BNB Smart Chain
+- Arbitrum
+- Optimism
+
+## Dependencies
+
+- [python3](https://www.python.org/downloads) version 3.8 up to 3.11.
+
+## Installation
+
+### via `pip`
+
+You can install the latest release via [`pip`](https://pypi.org/project/pip/):
+
+```bash
+pip install ape-llamanodes
+```
+
+### via `setuptools`
+
+You can clone the repository and use [`setuptools`](https://github.com/pypa/setuptools) for the most up-to-date version:
+
+```bash
+git clone https://github.com/ApeWorX/ape-llamanodes.git
+cd ape-llamanodes
+python3 setup.py install
+```
+
+## Quick Usage
+
+First, make sure you have one of the following environment variables set (it doesn't matter which one):
+
+- WEB3_LLAMANODES_API_KEY
+- WEB3_LLAMANODES_PROJECT_ID
+- WEB3_LLAMARPC_API_KEY
+- WEB3_LLAMARPC_PROJECT_ID
+
+Either in your current terminal session or in your root RC file (e.g. `.bashrc`), add the following:
+
+```bash
+export WEB3_LLAMANODES_API_KEY=MY_API_TOKEN
+```
+
+The provider will work without the environment variables, but it uses the free tier which has stricter limits.
+
+To use the LlamaNodes provider plugin in most commands, set it via the `--network` option:
+
+```bash
+ape console --network ethereum:mainnet:llamanodes
+```
+
+To connect to LlamaNodes from a Python script, use the `networks` top-level manager:
+
+```python
+from ape import networks
+
+with networks.parse_network_choice("ethereum:mainnet:llamanodes") as provider:
+    ...
+```
