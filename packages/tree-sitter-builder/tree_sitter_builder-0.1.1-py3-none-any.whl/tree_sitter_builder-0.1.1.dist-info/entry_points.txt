@@ -1,0 +1,3 @@
+[console_scripts]
+tree-sitter-builder=tree_sitter_builder.__main__:main
+
