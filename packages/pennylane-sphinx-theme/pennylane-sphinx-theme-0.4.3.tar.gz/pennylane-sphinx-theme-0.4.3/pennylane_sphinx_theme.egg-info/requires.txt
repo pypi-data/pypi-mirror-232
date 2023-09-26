@@ -1,0 +1,5 @@
+sphinx
+xanadu-sphinx-theme~=0.4.0
+pillow
+sphinx-gallery
+docutils<0.18
