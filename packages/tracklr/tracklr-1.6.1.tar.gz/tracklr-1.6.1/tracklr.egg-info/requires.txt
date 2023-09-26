@@ -1,0 +1,14 @@
+appdirs
+cliff
+caldav
+icalendar
+jinja2
+pyyaml>5
+requests
+xhtml2pdf
+
+[productivity]
+khal
+khard
+pyfiglet
+vdirsyncer
