@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: pika-multithreaded
+Version: 1.1.0
+Summary: A project that enables multithreading support for the Pika package
+Home-page: https://github.com/nimbis/pika-multithreaded
+Author: Nimbis Services
+Author-email: info@nimbisservics.com
+Requires-Python: >=3.6
+License-File: LICENSE
+Requires-Dist: pika
+
+# Pika (Multithreaded)
+
+## Introduction
+
+This repository uses Pika as a base to create connections to AMQP brokers. Pika
+doesn't use threads at all so it fails when using a consumer for long lived
+tasks. This project builds on top of Pika to enable long lived task execution
+for consumers by implementing a threading layer on top of the base Pika
+connections.
