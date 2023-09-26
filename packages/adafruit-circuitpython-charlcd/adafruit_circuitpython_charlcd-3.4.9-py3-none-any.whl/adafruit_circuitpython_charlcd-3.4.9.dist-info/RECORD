@@ -1,0 +1,10 @@
+adafruit_character_lcd/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+adafruit_character_lcd/character_lcd.py,sha256=lMfrlKP6q-i-2kuO_q3-89qr_5ncwnIwHYwcF_6W3tw,25667
+adafruit_character_lcd/character_lcd_i2c.py,sha256=Hpp27PKN0LvYzlVg4YBqnwNhY6LzS-42VVcjeDkHQJw,2449
+adafruit_character_lcd/character_lcd_rgb_i2c.py,sha256=6d46bR_pn3aWq-ywvXWHDld-tTcm-cjUP3nL-cBJ7_U,6497
+adafruit_character_lcd/character_lcd_spi.py,sha256=F_mACWw5HnRAQulb9A-bUb9CANr5pArreK6BWSJiyeA,2798
+adafruit_circuitpython_charlcd-3.4.9.dist-info/LICENSE,sha256=loClQouFWCS4IlZ1sxkkeQrP4J6Fe_h7a3K04CDEG2I,1103
+adafruit_circuitpython_charlcd-3.4.9.dist-info/METADATA,sha256=UUtIO3MdoJC8O4qpv17EYhe_wYJV2boA4zfbLZnJfwY,5625
+adafruit_circuitpython_charlcd-3.4.9.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+adafruit_circuitpython_charlcd-3.4.9.dist-info/top_level.txt,sha256=7ykN6D4oBwu6B3Xdru4X6t5oiro9jcBhOaXX5OgoVYI,23
+adafruit_circuitpython_charlcd-3.4.9.dist-info/RECORD,,
