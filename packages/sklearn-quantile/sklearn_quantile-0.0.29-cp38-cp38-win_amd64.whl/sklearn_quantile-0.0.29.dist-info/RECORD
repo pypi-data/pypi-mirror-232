@@ -1,0 +1,15 @@
+sklearn_quantile/__init__.py,sha256=wDD7j15GJ8v0aicjc0vMiorcQtgGViFSHEJU2SUMnJo,298
+sklearn_quantile/base.py,sha256=G3O1pY2IuM-9Wk1B9IMM-TSP4bqyqVKE13ZGVzrIwLA,1402
+sklearn_quantile/ensemble/__init__.py,sha256=Skxv-ciXfeIUGQEX2nVLVOvar0FTnBZqzylOo-hEzpE,280
+sklearn_quantile/ensemble/maximum.cp38-win_amd64.pyd,sha256=MuKpEw2JohrIPLnpE2ptoJel3yWNRTZrKosoCpZhAO4,239104
+sklearn_quantile/ensemble/quantile.cp38-win_amd64.pyd,sha256=J0rZ_UazCQUh6LdoBsWt27--8M9tbxrMpMkbltosmOw,372736
+sklearn_quantile/neighbors/__init__.py,sha256=YA5-IA4unC8HYpMOh6Ex5vBEGUWyZF-SxwdA7adOZ8c,77
+sklearn_quantile/neighbors/quantile.py,sha256=bKQ1sVMYJSjc8yOvsW_YiODmq98dvhqpel01fRPvIlk,7416
+sklearn_quantile/utils/__init__.py,sha256=1Z6MpO0DRmqknN7-Ev137axjArr5VoH9LmFO7d7iu2g,72
+sklearn_quantile/utils/utils.py,sha256=QjfSIdtX7XD2Mnnq5EeiVBWUtUD_ZtzosDc6idoXTgg,371
+sklearn_quantile/utils/weighted_quantile.cp38-win_amd64.pyd,sha256=AGbxZ2ekjnOeVGT7hgZoT8JX3VqiMy_bHC39hbJqlJw,236544
+sklearn_quantile-0.0.29.dist-info/LICENSE,sha256=QPFrmojf2wu3S5_PIZxiCl4M-EoR3FAk-eerQQBH0m8,1544
+sklearn_quantile-0.0.29.dist-info/METADATA,sha256=FIMDaal-7xPdV1yeJJ0FsrXD8gvkIHjGb5xG2pLn-8A,194
+sklearn_quantile-0.0.29.dist-info/WHEEL,sha256=KplWMgwSZbeAOumvxNxIrVbNPnn_LVzfBH7l38jDCVM,100
+sklearn_quantile-0.0.29.dist-info/top_level.txt,sha256=tTiJV8TceHzCYil_g1MvNk5Wmal1M33WexdC1jTUm5k,17
+sklearn_quantile-0.0.29.dist-info/RECORD,,
