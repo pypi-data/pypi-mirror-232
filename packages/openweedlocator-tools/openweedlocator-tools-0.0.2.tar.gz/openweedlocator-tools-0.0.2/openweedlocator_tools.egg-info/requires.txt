@@ -1,0 +1,13 @@
+imutils<1.0,>=0.5
+numpy<2.0,>=1.10
+pandas>2.0
+python-dateutil<3.0,>=2.8
+
+[desktop]
+ultralytics
+opencv-contrib-python<5.0,>=4.0
+opencv-python<5.0,>=4.0
+
+[rpi]
+opencv-contrib-python<5.0,>=4.0
+opencv-python<5.0,>=4.0
