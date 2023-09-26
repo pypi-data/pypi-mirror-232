@@ -1,0 +1,6 @@
+kornia
+torch
+matplotlib
+opencv-python
+
+[dev]
