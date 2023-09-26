@@ -1,0 +1,11 @@
+vinculum/VERSION,sha256=ZX56PsJpnSKEAf3LTVGvTW-rq2oQZ65bx88CtuW30Hw,8
+vinculum/__init__.py,sha256=-fU3G3lfqzdlYS3sAvXivGA5IuqKK33gLI9IxM55L-4,594
+vinculum/log.py,sha256=AL51-sTWRLGgEeoopZHMIgfD8y_egygdnxx9NE3d39s,59
+vinculum/math.py,sha256=y6mjLrjVaSAHaxlnOAjU6DxJbIU6udWxy9PIMDeSyqc,2206
+vinculum/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vinculum/rational.py,sha256=LTlLj0y7P9HyHN7u6AesbFIerENuXjHEbGKavAanQhA,12677
+vinculum-1.0.0b7.dist-info/LICENSE,sha256=8IMNo5epH_DxlruYWrd62BaNrkRYcE_jSdArYOF2Wfc,1078
+vinculum-1.0.0b7.dist-info/METADATA,sha256=Owvuc2IqfyvB1Xv8NajR9x0OtBMmIBJlr5ASzy2WFsQ,3831
+vinculum-1.0.0b7.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+vinculum-1.0.0b7.dist-info/top_level.txt,sha256=7sYvW5VL2sbgQEomQ-g2mty46iswK-bsNzeBj1MMwIY,9
+vinculum-1.0.0b7.dist-info/RECORD,,
