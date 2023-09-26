@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+is_even/__init__.py
+is_even/main.py
+is_even_methods.egg-info/PKG-INFO
+is_even_methods.egg-info/SOURCES.txt
+is_even_methods.egg-info/dependency_links.txt
+is_even_methods.egg-info/top_level.txt
+tests/test_methods.py
