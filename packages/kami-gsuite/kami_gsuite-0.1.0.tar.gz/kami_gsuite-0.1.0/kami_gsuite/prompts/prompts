@@ -1,0 +1,52 @@
+now add a method with this signature get_folder_id(self, parent_folder_id:str, folder_name:str) -> str: this method should returns id of the first folder of the given param folder_name, first check if class instance already have a service connected and call connect if not then check if the folder exits inside the given parent folder then finally returns it's id or None if the folder dont exists it's receive the following Args:
+parent_folder_id: ID of a valid Google Drive folder that will be the root of the new
+folder_name: name of the searched folder
+and Returns: Id of folder or None if it dont exists
+
+now add a method with this signature create_folder(parent_folder_id: str, new_folder_name: str) -> str: this method should create new folder on the given parent folder given id if it's dont exits a folder with this name yet and then return id of the new created folder or the id of the one that already exits, first check if class instance already have a service connected and call connect if not then use get_folder_id to check if the folder already exits and then must Create new folder if not exists inside of a given google drive root folder, finally it's should returns folder id, it's receive the following Args:
+parent_folder_id: ID of a valid Google Drive folder that will be the root of the new
+new_folder_name: new folder name
+and Returns: Id of new folder or id of the one that already exits
+    
+now add a method with this signature upload_file_to(filepath: str, folder_id: str) -> str: this method should upload a file to the given folder_id in the google drive an then returns id of the uploaded file or None if it dont work, first first check if filepath is actually a valid and existing file path using the os.path library then check if the class instance already have a service connected and call connect if not then upload file to the given folder it's receive the following Args:
+folder_id: ID of a valid Google Drive folder that will be receive the file
+filename: fullpath filename
+and Returns: file ID if the upload has been successfull or None if dont
+add specific exceptions for each step, creating new types of exceptions if necessary
+
+    
+now add a method with this signature upload_files_to(folderpath: str, folder_id: str) -> List[Dict]: this method should upload all files from the given folderpath to the given folder_id in the google drive an then returns a list of dicts each one with 2 keys filename: only name of the file without previous folderpath reference and file_id id of the file in google drive or None if it dont work for each file in the folderpath, first check if folderpath is actually a valid and existing folder path using the path from the os library, then store a list with all files inside a internal variable using get_file_list_from method from kami_filemanager library, then for each file in the filelist upload current file to the given folder id using upload_file_to previously created method and store a dict with 2 mentioned keys in a result list finally return de list with result of all uploads it's receive the following Args:
+folderpath: Path to folder that contains files to upload
+folder_id: ID of a valid Google Drive folder that will be receive the files
+and Returns: a list of dicts on dict for each file in the given folder each dict must have only 2 keys 'filename'with the complete filename for each file in the source list and 'gdrive_id' with file ID if it's uploaded or None
+add specific exceptions for each step, creating new types of exceptions if necessary
+
+now add a method with this signature exists(object_id:str)->bool: this method receive a google drive object id and then return True if it exists in google drive or False if not. Check if object_id is actually a valid and existing file in google drive then return True or False according to the search result, use a local variable with False as default value to store result before return it it's receive the following Args:
+object_id: the id of the searched object (usually file or folder)
+and Returns: True if given object exits and False if not
+
+now add a method with this signature get_name_for(object_id:str)->str: this method receive a google drive object id and then return it's name fi exists or None if not. First check if object_id is actually a valid and existing using exists method, then get object's name from in google drive then return it or None, a local variable with None as default value to store result before return it it's receive the following Args:
+object_id: the id of the searched object (usually file or folder)
+and Returns: objects name if it exists
+
+now add a method with this signature get_object_type(object_id: str) -> str: this method should returns type of the given object id (file or folder) in the google drive it's receive the following Args:
+object_id: ID of a valid Google Drive object
+and Returns: file or folder
+add specific exceptions for each step including the new function exits, creating new types of exceptions if necessary
+
+now add a method with this signature get_objects_from(folder_id:str) -> List[Dict]: this method should get a dict for each object in the given google drive folder and returnn it as a list of dicts. First check if this folder exists using exists method, then check if it's really is a folder with get_object_type method, then if it is a folder create a dict with this keys name: object name, id: object id, type:object type file or folder use get_object_type for this, content:If object is a folder then this key must have a list of dicts with the same keys for all inside objects as value append this dict to a local list variable called childs_list this list should be started empty, this method should use the better computing approach to improve code performance and get all inside elements until the end of the folder tree of child elements of the given folder id it's receive the following Args:
+object_id: ID of a valid Google Drive object
+and Returns: A list of dicts with all elements file or folder
+add specific exceptions for each step including the new function exits, creating new types of exceptions if necessary
+
+now add a method with this signature download(object_id: str, folderpath: str) -> str: this method should download the given google drive object id no matter if it's a file or a folder in the given folderpath then return path to new downloaded object. First check if object_id is actually a valid and existing object in google drive using exists method, then check if folderpath is actually a valid and existing folder path using path from the os library, then the method must download all object content into given folder path with name of the given object, use get_name_for to define name of downloaded object it's receive the following Args:
+object_id: ID of a valid Google Drive object to be downloaded
+folderpath: Path to folder that will receive these object
+and Returns: fullpath to new object
+add specific exceptions for each step including the new function exits, creating new types of exceptions if necessary
+
+now add a method with this signature get_office_download_url(object_id: str, folderpath: str) -> str: this method should download the given google drive object id no matter if it's a file or a folder in the given folderpath then return path to new downloaded object. First check if object_id is actually a valid and existing object in google drive using exists method, then check if folderpath is actually a valid and existing folder path using path from the os library, then the method must download all object content into given folder path with name of the given object, use get_name_for to define name of downloaded object it's receive the following Args:
+object_id: ID of a valid Google Drive object to be downloaded
+folderpath: Path to folder that will receive these object
+and Returns: fullpath to new object
+add specific exceptions for each step including the new function exits, creating new types of exceptions if necessary
