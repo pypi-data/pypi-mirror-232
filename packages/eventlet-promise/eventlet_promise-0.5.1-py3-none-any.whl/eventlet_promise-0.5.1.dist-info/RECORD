@@ -1,0 +1,9 @@
+eventlet_promise/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+eventlet_promise/promise.py,sha256=aCxyc0QxGu1E3Lm8-Rw9vF-jqyTeqc2Hrj8-bgCHN6s,9699
+eventlet_promise/promise_js.py,sha256=MKpAofErv9jQ7OsbE2Tvsh8tzQPOOaD4MJp8VdX2aac,9965
+eventlet_promise/thenable.py,sha256=uqG_HmkrKluzAX8y3IgMylZkbtk7RjfIolgngyqjE-k,7057
+eventlet_promise/utils.py,sha256=PbfyEO1MQj-2FpbxpVa-_c8YJRAM-Be9hXMk_WVFytg,1321
+eventlet_promise-0.5.1.dist-info/METADATA,sha256=hhAd-BNBAKT7_IeSqSI7OysjjMo2URL4W5omDZWdAZc,1978
+eventlet_promise-0.5.1.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+eventlet_promise-0.5.1.dist-info/licenses/LICENSE,sha256=wti28iGYAefhYdbsQm4XKneYfhM_bL5CmltlADtAh2g,1073
+eventlet_promise-0.5.1.dist-info/RECORD,,
