@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+settings.ini
+setup.py
+limonata/__init__.py
+limonata/_lib.py
+limonata/_modidx.py
+limonata.egg-info/PKG-INFO
+limonata.egg-info/SOURCES.txt
+limonata.egg-info/dependency_links.txt
+limonata.egg-info/entry_points.txt
+limonata.egg-info/not-zip-safe
+limonata.egg-info/requires.txt
+limonata.egg-info/top_level.txt
