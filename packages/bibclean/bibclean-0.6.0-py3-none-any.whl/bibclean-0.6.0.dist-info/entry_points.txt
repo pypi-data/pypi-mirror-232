@@ -1,0 +1,4 @@
+[console_scripts]
+bibclean = bibclean.commands.bibclean:run
+bibclean-check = bibclean.commands.bibclean_check:run
+bibclean-sys_info = bibclean.commands.sys_info:run
