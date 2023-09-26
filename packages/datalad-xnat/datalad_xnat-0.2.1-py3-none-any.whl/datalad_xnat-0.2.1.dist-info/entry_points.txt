@@ -1,0 +1,2 @@
+[datalad.extensions]
+xnat = datalad_xnat:command_suite
