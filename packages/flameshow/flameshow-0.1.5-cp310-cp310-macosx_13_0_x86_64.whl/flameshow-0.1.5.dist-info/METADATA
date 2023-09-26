@@ -1,0 +1,61 @@
+Metadata-Version: 2.1
+Name: flameshow
+Version: 0.1.5
+Summary: 
+Home-page: https://github.com/laixintao/flameshow
+Keywords: terminal,golang,pprof,flamegraph
+Author: laixintao
+Author-email: laixintaoo@gmail.com
+Maintainer: laixintao
+Maintainer-email: laixintaoo@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: cffi (>=1.15.1,<2.0.0)
+Requires-Dist: click (>=8.1.7,<9.0.0)
+Requires-Dist: textual (>=0.37.1,<0.38.0)
+Requires-Dist: typing-extensions (>=4.7.1,<5.0.0)
+Description-Content-Type: text/markdown
+
+# Flameshow
+
+<a href="https://badge.fury.io/py/flameshow"><img src="https://badge.fury.io/py/flameshow.svg" alt="PyPI version"></a>
+
+Flameshow is a terminal Flamegraph viewer.
+
+![](./docs/flameshow.gif)
+
+## Features
+
+- Renders Flamegraphs in your terminal
+- Supports zooming in and displaying percentages
+- Keyboard input is prioritized
+- However, all operations in Flameshow can also be performed using the mouse
+- Can switch to different sample types
+
+## Install
+
+```shell
+pip install flameshow
+```
+
+Requirements: needs `go` command available for building `.so` file for Golang.
+
+(`.whl`s are on the way!)
+
+## Usage
+
+View golang's goroutine dump:
+
+```shell
+$ curl http://localhost:9100/debug/pprof/goroutine -o goroutine.out
+$ flameshow goroutine.out
+```
+
+Once you open flameshow, you should be able to use it, the UI is very easy to
+use.
+
+Currently it only supports Golang's pprof dump, I am working on supporting more
+formats
+
