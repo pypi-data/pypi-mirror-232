@@ -1,0 +1,10 @@
+jquants-api-client
+lightgbm
+scikit-learn
+matplotlib
+seaborn
+
+[dev]
+pytest
+pytest-cov
+pytest-mock
