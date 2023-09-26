@@ -1,0 +1,3 @@
+[console_scripts]
+synna_instructor=synna_synna_instructor.cli.cli:app
+
