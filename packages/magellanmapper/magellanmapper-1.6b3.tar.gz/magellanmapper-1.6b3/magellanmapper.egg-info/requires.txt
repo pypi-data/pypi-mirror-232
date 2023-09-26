@@ -1,0 +1,109 @@
+scikit-image
+matplotlib!=3.3.0,!=3.3.1
+pandas
+PyYAML
+appdirs
+tifffile
+imagecodecs
+bg-atlasapi
+typing_extensions
+
+[3d]
+mayavi
+
+[:python_version < "3.7"]
+dataclasses
+
+[:python_version < "3.8"]
+importlib-metadata>=1.0
+
+[all]
+matplotlib_scalebar
+pyamg
+seaborn
+scikit-learn
+PyQt5!=5.15.8
+pyface
+traitsui
+openpyxl
+jinja2
+itk
+itk-elastix
+boto3
+awscli
+jupyterlab
+bash_kernel
+mayavi
+
+[all:python_version < "3.8"]
+javabridge==1.0.19.post4+gbebed64
+python-bioformats==4.0.5.post2+g51eb88a
+
+[all:python_version >= "3.8"]
+javabridge==1.0.19.post9+gc8c12b4
+python-bioformats==4.0.7.post5+g52309d1
+
+[aws]
+boto3
+awscli
+
+[classifier]
+tensorflow
+
+[docs]
+sphinx
+sphinx-autodoc-typehints
+myst-parser
+furo
+
+[gui]
+PyQt5!=5.15.8
+pyface
+traitsui
+
+[import]
+
+[import:python_version < "3.8"]
+javabridge==1.0.19.post4+gbebed64
+python-bioformats==4.0.5.post2+g51eb88a
+
+[import:python_version >= "3.8"]
+javabridge==1.0.19.post9+gc8c12b4
+python-bioformats==4.0.7.post5+g52309d1
+
+[itk]
+itk
+itk-elastix
+
+[jupyter]
+jupyterlab
+bash_kernel
+
+[most]
+matplotlib_scalebar
+pyamg
+PyQt5!=5.15.8
+pyface
+traitsui
+itk
+itk-elastix
+
+[most:python_version < "3.8"]
+javabridge==1.0.19.post4+gbebed64
+python-bioformats==4.0.5.post2+g51eb88a
+
+[most:python_version >= "3.8"]
+javabridge==1.0.19.post9+gc8c12b4
+python-bioformats==4.0.7.post5+g52309d1
+
+[pandas_plus]
+openpyxl
+jinja2
+
+[simplitk]
+
+[simplitk:python_version < "3.8"]
+simpleitk==2.0.2rc2.dev785+g8ac4f
+
+[simplitk:python_version >= "3.8"]
+simpleitk==2.3.0.dev117+g0640d
