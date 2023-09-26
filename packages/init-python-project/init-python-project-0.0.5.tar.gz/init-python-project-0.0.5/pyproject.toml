@@ -1,0 +1,63 @@
+[build-system]
+requires = ["setuptools>=61", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "init-python-project"
+description = "A python project generator."
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [{ name = "Jannis Mainczyk", email = "jmainczyk@gmail.com" }]
+maintainers = [{ name = "Jannis Mainczyk", email = "jmainczyk@gmail.com" }]
+dependencies = ["copier", "typer[all]"]
+dynamic = ["version"]
+
+[tool.setuptools_scm]
+fallback_version = "0.0.0"
+
+[tool.setuptools.package-data]
+"*" = [
+    "**/*.jinja",
+    "**/*.md",
+    "**/*.txt",
+    "**/*.yaml",
+    "**/*.yml",
+    "**/*.toml",
+    "*.cfg",
+    "context",
+    ".*",
+    "**/.*",
+]
+"init_python_project.template" = [".*", "**/.*"]
+
+
+[project.optional-dependencies]
+dev = ["black", "pre-commit", "ruff"]
+test = ["pytest", "pytest-venv", "pytest-xdist", "pexpect"]
+doc = [
+    "mkdocs",
+    "mkdocs-material",
+    "mkdocs-git-revision-date-localized-plugin",
+    "mkdocs-literate-nav",
+    "mkdocs-macros-plugin",
+    "mkdocs-macros-includex",
+    "mkdocs-exclude",
+    "mkdocs-autorefs",
+    "pyyaml",
+]
+
+[project.scripts] # optional
+init-python-project = "init_python_project.cli:app"
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra -q -n auto --exitfirst"
+testpaths = ["tests"]
+markers = ["slow"]
+filterwarnings = ["ignore::copier.vcs.DirtyLocalWarning"]
+
+[tool.black]
+line-length = 100
+
+[tool.ruff]
+line-length = 100

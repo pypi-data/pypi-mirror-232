@@ -1,0 +1,129 @@
+site_name: Project Template for Python
+
+repo_url: https://github.com/jannismain/python-project-template
+repo_name: python-project-template
+site_url: https://jannismain.github.io/python-project-template/
+edit_uri: -/edit/main/docs/
+site_dir: build/docs
+
+theme: # https://squidfunk.github.io/mkdocs-material/setup/
+  name: material
+  icon:
+    logo: material/satellite-variant
+    tag:
+      doc: material/book-open-page-variant
+      test: material/test-tube
+      vcs: octicons/git-branch-16
+      default: material/tag
+  favicon: assets/material-satellite-variant.svg
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.indexes
+    - navigation.top
+    - navigation.tabs
+    - navigation.sections
+    - navigation.prune
+    - content.code.annotate
+    - toc.follow
+    - navigation.footer
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: deep orange
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: amber
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+
+plugins:
+  - search
+  - git-revision-date-localized:
+      type: timeago
+      fallback_to_build_date: true
+  - exclude:
+      glob:
+        - util/*
+  - literate-nav:
+      nav_file: _nav.md
+      implicit_index: true
+  - macros: # see https://mkdocs-macros-plugin.readthedocs.io/
+      include_dir: .
+      module_name: docs/util/macros
+      modules: [includex]
+  - autorefs
+  - tags:
+      enabled: !ENV [CI, true]
+      tags_file: reference/tooling/index.md
+
+markdown_extensions:
+  - abbr
+  - meta
+  - pymdownx.inlinehilite
+  - pymdownx.snippets:
+      check_paths: true
+      url_download: true
+      auto_append:
+        - docs/util/abbreviations.md
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.magiclink:
+      hide_protocol: True
+      provider: gitlab
+      user: mkj
+      repo: project-template
+      repo_url_shortener: True
+      repo_url_shorthand: True
+  - footnotes
+  - pymdownx.tabbed:
+      alternate_style: true
+  - admonition
+  - pymdownx.details
+  - md_in_html
+  - toc:
+      marker: ""
+      permalink: "#"
+      permalink_title: "Link to this section"
+      toc_depth: 3
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.keys
+  - def_list
+  - pymdownx.critic
+
+extra_javascript:
+  # pymdownx.magiclink customization
+  - assets/magiclink.js
+
+extra_css:
+  # - https://cdn.jsdelivr.net/gh/rod2ik/cdn@main/mkdocs/css/columns.css # https://eskool.gitlab.io/mkhack3rs/columns/
+  # pymdownx.magiclink customization
+  - assets/magiclink.css
+  - assets/custom.css
+
+extra:
+  generator: false
+  URL_EXAMPLE_FILE:
+    !ENV [
+      URL_EXAMPLE_FILE,
+      https://github.com/jannismain/python-project-template-example/blob/main,
+    ]
+  tags:
+    Documentation: doc
+    Testing: test
+    Continuous Integration: ci
+    Version Control: vcs

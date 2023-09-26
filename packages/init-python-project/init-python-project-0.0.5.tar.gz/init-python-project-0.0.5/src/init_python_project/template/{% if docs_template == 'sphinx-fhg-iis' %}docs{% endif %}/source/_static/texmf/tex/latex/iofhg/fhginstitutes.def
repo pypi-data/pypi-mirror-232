@@ -1,0 +1,14 @@
+% 2012-07-27
+
+
+\defFhgInstitute{EZRT}
+	{Fraunhofer-Entwicklungszentrum f\"ur R\"ontgentechnik}{Fraunhofer EZRT}
+	{}{}{}
+
+\defFhgInstitute{IIS}
+	{Fraunhofer-Institut f\"ur integrierte Schaltungen IIS}{Fraunhofer IIS}
+	{{iis_43mm_p334m1}{iis_60mm_p334m1}{iis_85mm_p334m1}}
+	{{Am Wolfsmantel 33}{91058 Erlangen}{}}
+	{{+49 9131 776-0}{+49 9131 776-2099}}
+
+

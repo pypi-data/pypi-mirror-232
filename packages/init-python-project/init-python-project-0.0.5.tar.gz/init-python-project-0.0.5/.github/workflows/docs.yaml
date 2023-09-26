@@ -1,0 +1,38 @@
+name: deploy documentation built with mkdocs as github pages
+
+on:
+  push:
+    branches: ["main"]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  # Single deploy job no building
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{steps.deployment.outputs.page_url}}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4 # https://github.com/actions/setup-python
+        with:
+          python-version: "3.11"
+      - uses: actions/configure-pages@v3
+      - run: sudo apt-get update && sudo apt-get install tree
+      - run: | # replace symlinks with actual files
+          cp -r template src/init_python_project/.
+          cp copier.yaml src/init_python_project/.
+      - run: | # creating example projects using copier requires a git identity
+          git config --global user.name "ci-runner"
+          git config --global user.email "ci-runner@github.com"
+      - run: python -m pip install .[doc]
+      - run: make docs
+      - uses: actions/upload-pages-artifact@v2
+        with:
+          path: "build/docs"
+      - id: deployment
+        uses: actions/deploy-pages@v2

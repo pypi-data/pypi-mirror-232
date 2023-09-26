@@ -1,0 +1,75 @@
+\ProvidesFile{ts1pfr.fd}[2004/08/08 scalable font definitions for TS1/pfr.]
+
+\expandafter\ifx\csname pfr@Scale\endcsname\relax
+ \let\pfr@@Scale\@empty
+\else
+ \edef\pfr@@Scale{s*[\csname pfr@Scale\endcsname]}%
+\fi
+
+\DeclareFontFamily{TS1}{pfr}{}
+
+\DeclareFontShape{TS1}{pfr}{m}{n}{
+   <-> \pfr@@Scale pfrr8c
+}{}
+
+\DeclareFontShape{TS1}{pfr}{m}{it}{
+   <-> \pfr@@Scale pfrri8c
+}{}
+
+\DeclareFontShape{TS1}{pfr}{mc}{n}{
+   <-> \pfr@@Scale pfrr8cc
+}{}
+
+\DeclareFontShape{TS1}{pfr}{b}{n}{
+   <-> \pfr@@Scale pfrb8c
+}{}
+
+\DeclareFontShape{TS1}{pfr}{b}{it}{
+   <-> \pfr@@Scale pfrbi8c
+}{}
+
+\DeclareFontShape{TS1}{pfr}{bc}{n}{
+   <-> \pfr@@Scale pfrb8cc
+}{}
+
+\DeclareFontShape{TS1}{pfr}{eb}{n}{
+   <-> \pfr@@Scale pfrc8c
+}{}
+
+\DeclareFontShape{TS1}{pfr}{eb}{it}{
+   <-> \pfr@@Scale pfrci8c
+}{}
+
+\DeclareFontShape{TS1}{pfr}{ebc}{n}{
+   <-> \pfr@@Scale pfrc8cc
+}{}
+
+\DeclareFontShape{TS1}{pfr}{ub}{n}{
+   <-> \pfr@@Scale pfru8c
+}{}
+
+\DeclareFontShape{TS1}{pfr}{ubc}{n}{
+   <-> \pfr@@Scale pfru8cc
+}{}
+
+\DeclareFontShape{TS1}{pfr}{l}{n}{
+   <-> \pfr@@Scale pfrl8c
+}{}
+
+\DeclareFontShape{TS1}{pfr}{l}{it}{
+   <-> \pfr@@Scale pfrli8c
+}{}
+
+\DeclareFontShape{TS1}{pfr}{lc}{n}{
+   <-> \pfr@@Scale pfrl8cc
+}{}
+
+\DeclareFontShape{TS1}{pfr}{m}{sl}{<->ssub * pfr/m/it}{}
+\DeclareFontShape{TS1}{pfr}{bx}{n}{<->ssub * pfr/b/n}{}
+\DeclareFontShape{TS1}{pfr}{bx}{it}{<->ssub * pfr/b/it}{}
+\DeclareFontShape{TS1}{pfr}{b}{sl}{<->ssub * pfr/b/it}{}
+\DeclareFontShape{TS1}{pfr}{bx}{sl}{<->ssub * pfr/b/sl}{}
+\DeclareFontShape{TS1}{pfr}{eb}{sl}{<->ssub * pfr/eb/it}{}
+\DeclareFontShape{TS1}{pfr}{l}{sl}{<->ssub * pfr/l/it}{}
+
+\endinput
