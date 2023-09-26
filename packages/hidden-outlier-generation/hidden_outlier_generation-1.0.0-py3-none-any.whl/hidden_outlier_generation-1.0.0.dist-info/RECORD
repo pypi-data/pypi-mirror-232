@@ -1,0 +1,11 @@
+hog_bisect/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hog_bisect/bisect.py,sha256=WKgPt_jWuf1Q8Suy81OPksTaPZbh7Hj3dmqLr0kFoe4,18170
+hog_bisect/origin_method.py,sha256=s_VbRAFLpuXwdL0UkoqW4Xz1S2degNbgUW3_6Hcmb20,3233
+hog_bisect/outlier_detection_method.py,sha256=BzzxyXEDkyZRHBlZrDw_GKDvckSOyqQ3Dj83W8Kmty8,3313
+hog_bisect/outlier_result_type.py,sha256=aFyshTt-3XRgCfwFSyDGv1pI0h7vEGPbIURhyGelI3A,394
+hog_bisect/utils.py,sha256=O2Oq73dw-VQRLNbuDd7bIyR1qX7FHUNiO6iT16LvbFo,4386
+hidden_outlier_generation-1.0.0.dist-info/LICENSE,sha256=JGUOfyv7K4CWxLsZTi-lwDmuhOjSbS_jqN7RkEwPSkA,1077
+hidden_outlier_generation-1.0.0.dist-info/METADATA,sha256=S2piGP9Kj6ej1M6Y9OGcxviK-Ql0c2Q8jlLJULTN47w,6131
+hidden_outlier_generation-1.0.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+hidden_outlier_generation-1.0.0.dist-info/top_level.txt,sha256=mgkf23FTCKI9rO2xCcgN1EfTwGRJIyYBVFhMXWAHI3U,11
+hidden_outlier_generation-1.0.0.dist-info/RECORD,,
