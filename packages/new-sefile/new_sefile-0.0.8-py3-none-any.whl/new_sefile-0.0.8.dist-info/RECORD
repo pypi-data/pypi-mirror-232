@@ -1,0 +1,14 @@
+sefile/__init__.py,sha256=D_YgLM0D7oaJh2aFm6kyOqHRTKzinyDIW7bIjTD4QrM,819
+sefile/app.py,sha256=49tfF2XE-F4AoER-p1laK8U22_0o50kaoDs3rLZzzH0,341
+sefile/callbacks.py,sha256=QMFatmm4JGR3w1rwHjBcjlDJmy7LiBTnBP9oihPCYhs,8515
+sefile/command.py,sha256=0ws9Tfy59ewcD7ZpI_rz_gs_HNeYJG7PotZjKaSCpYA,4669
+sefile/config.py,sha256=sFBg0Fko2c-oWj1Kd90420RLU5SnQ7QJ3iqwMMmdq3s,734
+sefile/controllers.py,sha256=G2vuJbKPpARF59BvPJ_LfYtVdr653qrogiIuSxGqkwY,6607
+sefile/logs.py,sha256=gj_4uNCxm7RvPFpe8YwzD1VVLYTBko459Q5a5OqeLz8,2392
+sefile/npyscreen_app.py,sha256=xSyiIFQurWhB5rzipL7B0t2HV5wfNglqdFkERA9FAJI,4276
+new_sefile-0.0.8.dist-info/LICENSE.md,sha256=ixuiBLtpoK3iv89l7ylKkg9rs2GzF9ukPH7ynZYzK5s,35148
+new_sefile-0.0.8.dist-info/METADATA,sha256=LRujQBMKzqHgjfqei2nOgFwYr_twg7iIxio5ZotyjBU,9370
+new_sefile-0.0.8.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+new_sefile-0.0.8.dist-info/entry_points.txt,sha256=qIWe6O3XfhPooNSqly2dEp3lb0xFAt-z4MqLKDNJhVM,43
+new_sefile-0.0.8.dist-info/top_level.txt,sha256=o84W71scc8Oxydc7MoXXFReBM4Bd7DscYOriY1D3tpU,7
+new_sefile-0.0.8.dist-info/RECORD,,
