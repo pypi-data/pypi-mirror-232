@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+requirements.txt
+setup.py
+src/Decode_Things.egg-info/PKG-INFO
+src/Decode_Things.egg-info/SOURCES.txt
+src/Decode_Things.egg-info/dependency_links.txt
+src/Decode_Things.egg-info/requires.txt
+src/Decode_Things.egg-info/top_level.txt
+src/decode_things/__init__.py
+src/decode_things/decode.py
+src/decode_things/encode.py
