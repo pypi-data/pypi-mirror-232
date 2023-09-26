@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/forbiddenfp/__init__.py
+src/forbiddenfp.egg-info/PKG-INFO
+src/forbiddenfp.egg-info/SOURCES.txt
+src/forbiddenfp.egg-info/dependency_links.txt
+src/forbiddenfp.egg-info/top_level.txt
