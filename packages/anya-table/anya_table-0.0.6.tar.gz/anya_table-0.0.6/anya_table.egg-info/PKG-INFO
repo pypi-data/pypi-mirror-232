@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: anya-table
+Version: 0.0.6
+Summary: Customised Dash Table Components based on Annt Design Table
+Author: Anya Ip <anyakurapica@gmail.com>
+License: MIT
+Classifier: Framework :: Dash
+License-File: LICENSE
