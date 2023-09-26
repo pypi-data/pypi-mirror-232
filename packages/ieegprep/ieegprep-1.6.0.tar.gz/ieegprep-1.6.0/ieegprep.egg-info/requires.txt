@@ -1,0 +1,4 @@
+numpy>=1.22.3
+scipy>=1.8.0
+pymef>=1.4.2
+psutil>=5.9.4
