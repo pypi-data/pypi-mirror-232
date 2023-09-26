@@ -1,0 +1,13 @@
+tshistory_supervision/__init__.py,sha256=M8dH3sTTjYXJ2FxuD_PXBW1cSl4mi0DzrcDnr1i9aAQ,23
+tshistory_supervision/api.py,sha256=Imvu8lmNJFm7y_ct7WpzZ1K2MBqdIQTqCEgErGbgxtY,1975
+tshistory_supervision/cli.py,sha256=TBpjhVa58z0SFZU-4QrtaKF6QiyCg1IZYFXuSrAKtrI,2601
+tshistory_supervision/http.py,sha256=dsMXZ5a6Qi3BRUsYYa5AB4mVsfK4GWq2-9R5h4kluG0,4166
+tshistory_supervision/migrate.py,sha256=Dl9l4YYNSP0JSIv9osFWlg8gnhJaDN64g5wnEI4ONt4,509
+tshistory_supervision/schema.py,sha256=rTlpfHMuZLI_qdaeOnLaOGDxBj7YznMCfUcYgZMOcuQ,272
+tshistory_supervision/testutil.py,sha256=B1siKNlA6xkVAeoFVfi0gjSNbSmesKDotSav_JCqqNA,434
+tshistory_supervision/tsio.py,sha256=wW6S0IZSdQllVagWhBE3eBz0CxwtSF8s0KgTpUDyPCE,8902
+tshistory_supervision-0.12.1.dist-info/METADATA,sha256=MHWEx5QSDEDUlhgwriCWSX2g5K2zykfdva3RwYQEgaI,713
+tshistory_supervision-0.12.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+tshistory_supervision-0.12.1.dist-info/entry_points.txt,sha256=-IASk3_gMwm-z_5MRUz4h-mygEJdsrmkjx6X3BP-YyE,390
+tshistory_supervision-0.12.1.dist-info/top_level.txt,sha256=3njUKwliJ85ts3t4Yh7Tm8meVGpns2jqhY_ZlYnS70E,22
+tshistory_supervision-0.12.1.dist-info/RECORD,,
