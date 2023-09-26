@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1b42fa36-94b6-4caa-a259-4edb6c90f597" name="Changes" comment="remove __grist_records__">
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="fjoizkry" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2V1S1wsuTf7QEbAQ3mIQZHwyunP" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;js.last.introduce.type&quot;: &quot;CONST&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/alex/work/snowpark-python&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/home/alex/work/jupyterlab-widget-extension/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;Python&quot;,
+      &quot;TEXT&quot;,
+      &quot;TypeScript&quot;
+    ]
+  }
+}</component>
+  <component name="RunManager">
+    <configuration name="scratch_1213" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="jupyterlab-widget-extension" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$APPLICATION_CONFIG_DIR$/scratches" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$APPLICATION_CONFIG_DIR$/scratches/scratch_1213.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.scratch_1213" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1b42fa36-94b6-4caa-a259-4edb6c90f597" name="Changes" comment="" />
+      <created>1694001882302</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1694001882302</updated>
+      <workItem from="1694001883348" duration="9300000" />
+      <workItem from="1694169869879" duration="10226000" />
+      <workItem from="1694433280819" duration="9690000" />
+      <workItem from="1694702083742" duration="15424000" />
+      <workItem from="1694780412697" duration="707000" />
+      <workItem from="1694787892191" duration="10357000" />
+      <workItem from="1695030460709" duration="25310000" />
+      <workItem from="1695306881838" duration="12356000" />
+      <workItem from="1695377697913" duration="4287000" />
+      <workItem from="1695641099051" duration="425000" />
+    </task>
+    <task id="LOCAL-00001" summary="send grist records to kernel and run all cells">
+      <option name="closed" value="true" />
+      <created>1694193488666</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1694193488666</updated>
+    </task>
+    <task id="LOCAL-00002" summary="rerun notebook cells when first loading, not in grist.onRecords">
+      <option name="closed" value="true" />
+      <created>1694454944556</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1694454944556</updated>
+    </task>
+    <task id="LOCAL-00003" summary="expose grist widget with comlink">
+      <option name="closed" value="true" />
+      <created>1694804829339</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1694804829339</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Move initial python code to separate file">
+      <option name="closed" value="true" />
+      <created>1695036230061</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1695036230061</updated>
+    </task>
+    <task id="LOCAL-00005" summary="reindent">
+      <option name="closed" value="true" />
+      <created>1695036380429</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1695036380429</updated>
+    </task>
+    <task id="LOCAL-00006" summary="fix expose and execute arguments, hide grist things inside function and rename public object to 'grist'">
+      <option name="closed" value="true" />
+      <created>1695038398802</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1695038398802</updated>
+    </task>
+    <task id="LOCAL-00007" summary="fix recursion error">
+      <option name="closed" value="true" />
+      <created>1695038677558</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1695038677559</updated>
+    </task>
+    <task id="LOCAL-00008" summary="make getTable() return a ComlinkProxy again to handle arguments in the next call">
+      <option name="closed" value="true" />
+      <created>1695040020128</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1695040020128</updated>
+    </task>
+    <task id="LOCAL-00009" summary="ensure docmanager plugin is loaded before calling reload command">
+      <option name="closed" value="true" />
+      <created>1695127578155</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1695127578155</updated>
+    </task>
+    <task id="LOCAL-00010" summary="make callbacks like grist.onRecord work">
+      <option name="closed" value="true" />
+      <created>1695138398379</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1695138398379</updated>
+    </task>
+    <task id="LOCAL-00011" summary="make onRecord(s) fetch records so that they stay encoded">
+      <option name="closed" value="true" />
+      <created>1695201673660</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1695201673660</updated>
+    </task>
+    <task id="LOCAL-00012" summary="fix getKernel">
+      <option name="closed" value="true" />
+      <created>1695206126177</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1695206126177</updated>
+    </task>
+    <task id="LOCAL-00013" summary="New Grist class with nice .on_record(s). Move ComlinkProxy instance to grist.raw.">
+      <option name="closed" value="true" />
+      <created>1695316282485</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1695316282485</updated>
+    </task>
+    <task id="LOCAL-00014" summary="auto display multiple objects">
+      <option name="closed" value="true" />
+      <created>1695317037023</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1695317037023</updated>
+    </task>
+    <task id="LOCAL-00015" summary="refactor wrap_with_display">
+      <option name="closed" value="true" />
+      <created>1695317900164</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1695317900164</updated>
+    </task>
+    <task id="LOCAL-00016" summary="simplify wrap_with_display">
+      <option name="closed" value="true" />
+      <created>1695318991672</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1695318991672</updated>
+    </task>
+    <task id="LOCAL-00017" summary="display traceback">
+      <option name="closed" value="true" />
+      <created>1695320319721</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1695320319721</updated>
+    </task>
+    <task id="LOCAL-00018" summary="skip_traceback_internals">
+      <option name="closed" value="true" />
+      <created>1695320864718</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1695320864718</updated>
+    </task>
+    <task id="LOCAL-00019" summary="handle too many display calls">
+      <option name="closed" value="true" />
+      <created>1695321804393</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1695321804393</updated>
+    </task>
+    <task id="LOCAL-00020" summary="remove __grist_records__">
+      <option name="closed" value="true" />
+      <created>1695378549552</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1695378549552</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="send grist records to kernel and run all cells" />
+    <MESSAGE value="rerun notebook cells when first loading, not in grist.onRecords" />
+    <MESSAGE value="expose grist widget with comlink" />
+    <MESSAGE value="Move initial python code to separate file" />
+    <MESSAGE value="reindent" />
+    <MESSAGE value="fix expose and execute arguments, hide grist things inside function and rename public object to 'grist'" />
+    <MESSAGE value="fix recursion error" />
+    <MESSAGE value="make getTable() return a ComlinkProxy again to handle arguments in the next call" />
+    <MESSAGE value="ensure docmanager plugin is loaded before calling reload command" />
+    <MESSAGE value="make callbacks like grist.onRecord work" />
+    <MESSAGE value="make onRecord(s) fetch records so that they stay encoded" />
+    <MESSAGE value="fix getKernel" />
+    <MESSAGE value="New Grist class with nice .on_record(s). Move ComlinkProxy instance to grist.raw." />
+    <MESSAGE value="auto display multiple objects" />
+    <MESSAGE value="refactor wrap_with_display" />
+    <MESSAGE value="simplify wrap_with_display" />
+    <MESSAGE value="display traceback" />
+    <MESSAGE value="skip_traceback_internals" />
+    <MESSAGE value="handle too many display calls" />
+    <MESSAGE value="remove __grist_records__" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove __grist_records__" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/jupyterlab_widget_extension$scratch_1213.coverage" NAME="scratch_1213 Coverage Results" MODIFIED="1695323659874" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
+  </component>
+</project>
