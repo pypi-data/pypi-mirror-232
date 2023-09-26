@@ -1,0 +1,8 @@
+bobifi/__init__.py,sha256=Y3hnePIdWvfEaIS_JJden8B9kCQ2ZIs2Z4TTa-P1IAg,176
+bobifi/data/samtrafiken-prod.json,sha256=SPeVgfCrkYRRe9xk5cvs1FODiPjVhCN2oOxCL-pAv38,978
+bobifi/data/samtrafiken-test.json,sha256=6r1MCzBBLk1BoCSnRQhnjYh6rCKETVZ0JgZINgvNEr4,979
+bobifi/samtrafiken.py,sha256=ND-BOUG0ENIORSAsBiLC1OQrmhpMJLQZhNhJbH0QbK8,1535
+bobifi-2023.9.26.dist-info/LICENSE,sha256=h2xPmzYUAQSDPmWKTF2h1Vrl9c-0yWmCulOyLVTI3ms,1242
+bobifi-2023.9.26.dist-info/METADATA,sha256=FOetnWrxd0jPIyHJlLku4BEPaIflbiLsDbWTksRXv-4,2571
+bobifi-2023.9.26.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+bobifi-2023.9.26.dist-info/RECORD,,
