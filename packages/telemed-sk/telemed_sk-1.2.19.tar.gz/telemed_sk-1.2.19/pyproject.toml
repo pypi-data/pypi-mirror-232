@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68", "wheel", "cython ~= 3.0.2"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "telemed_sk"
+#authors = [{name = "<author name>", email= "<author e-mail>"}]
+description = "Lo scopo di questa libreria è fornire uno strumento completo per il rilascio di modelli predittivi basati su serie temporali nell'ambito della Telemedicina, al fine di supportare la gestione e la pianificazione delle attività sulla Piattaforma Nazionale di Telemedicina (PNT)"
+requires-python = ">=3.9"
+classifiers = ["Programming Language :: Python :: 3"]
+dependencies = ["dtaidistance==2.3.10","geopandas==0.13.0","hierarchicalforecast==0.3.0","holidays==0.24",
+                "matplotlib==3.7.1","mlflow==1.27.0","pandas==2.0.0","plotly==5.14.1","prophet==1.1.1",
+                "scikit_learn==1.2.2","scipy==1.11.1","seaborn==0.12.2","statsmodels==0.14.0",
+                "streamlit==1.23.1","tabulate==0.9.0","tomli==2.0.1","typing_extensions==4.7.1","xgboost==1.7.6",
+                "fastparquet==2023.7.0","telemedbasics>=1.7.6"]
+dynamic = ["version"]
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["telemed_sk", "telemed_sk.algorithms", "telemed_sk.analytics", "telemed_sk.datahandler", "telemed_sk.datapreparation", 
+           "telemed_sk.dataset", "telemed_sk.utility", "telemed_sk.datavisualization"]
+exclude = []
+namespaces = false
+[tool.setuptools.dynamic]
+version = {attr = "telemed_sk.__version__"}
+[tool.setuptools]
+py-modules = ["_custom_build"]
+[tool.setuptools.cmdclass]
+build_py = "_custom_build.build_py"
+bdist_wheel = "_custom_build.CommandBdistWheel"
+[tool.distutils.bdist_wheel]
+plat-name = "manylinux1_x86_64"
