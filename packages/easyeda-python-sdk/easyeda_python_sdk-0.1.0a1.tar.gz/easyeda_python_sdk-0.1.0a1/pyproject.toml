@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "easyeda-python-sdk"
+version = "0.1.0a1"
+description = "Python tools & design framework for EasyEDA "
+authors = ["Thomas Mahé <contact@tmahe.dev>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "easyeda"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+svg-path = "^6.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
