@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: unity-project-version
+Version: 0.0.2
+Summary: Unreal Engine project version utility
+Home-page: https://github.com/Bootloader-Studio/unity-project-version
+License: MIT
+Keywords: tool,utility,unity,project,version
+Author: Daniel CAUNE
+Author-email: daniel@bootloader.studio
+Requires-Python: >=3.9,<4.0
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: MIT License
+Classifier: License :: Other/Proprietary License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Software Development :: Libraries
+Requires-Dist: perseus-core-library (>=1.18.0,<2.0.0)
+Project-URL: Repository, https://github.com/Bootloader-Studio/unity-project-version
+Description-Content-Type: text/markdown
+
+# Unity Project Version Management Command-line Interface (CLI)
+Command-line interface utility for manipulating the project version of a Unity project.
+
+```shell
+unityprjver --path .
+```
+
