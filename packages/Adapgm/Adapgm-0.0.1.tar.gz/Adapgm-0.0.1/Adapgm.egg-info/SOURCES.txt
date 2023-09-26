@@ -1,0 +1,7 @@
+README.md
+setup.py
+Adapgm/__init__.py
+Adapgm.egg-info/PKG-INFO
+Adapgm.egg-info/SOURCES.txt
+Adapgm.egg-info/dependency_links.txt
+Adapgm.egg-info/top_level.txt
