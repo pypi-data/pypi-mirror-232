@@ -1,0 +1,13 @@
+setuptools>=20.4
+yamlns>=0.6
+tqdm
+b2btest
+lxml
+numpy
+decorator
+plantmeter
+python-dateutil
+consolemsg>=0.3
+somutils
+pytest
+pytest-cov
