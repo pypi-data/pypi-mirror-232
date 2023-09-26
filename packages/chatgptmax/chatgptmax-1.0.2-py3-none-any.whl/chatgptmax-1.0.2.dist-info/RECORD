@@ -1,0 +1,7 @@
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_chatgptmax.py,sha256=IsWSxCxa73NA-ilDVNsx040ceV4AxKJkXdzAnyggfNo,1799
+chatgptmax-1.0.2.dist-info/LICENSE,sha256=sIPzOXIjX4uopCGXe5DDuKkFcZbKq04JL-aeFwNAGfM,1071
+chatgptmax-1.0.2.dist-info/METADATA,sha256=UvqR5Yh6W4tAHj2TTbNklIkRB_tX-Ry9hcB-Kb6gy30,3452
+chatgptmax-1.0.2.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+chatgptmax-1.0.2.dist-info/top_level.txt,sha256=EdW7283x-lr_cbuivW8Ij7ANAP-ZJ9sLtILQseEPxXg,6
+chatgptmax-1.0.2.dist-info/RECORD,,
