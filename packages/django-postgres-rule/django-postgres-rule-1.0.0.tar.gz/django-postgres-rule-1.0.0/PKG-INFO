@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: django-postgres-rule
+Version: 1.0.0
+Summary: postgres RULEs viewer
+Keywords: django,postgres
+Classifier: Framework :: Django
+Classifier: License :: Public Domain
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Database
+Description-Content-Type: text/markdown
+
+### Installation
+```bash
+$ pip install django-postgres-rule
+```
+
+#### `settings.py`
+```python
+INSTALLED_APPS+=['django_postgres_rule']
+```
+
+#### `migrate`
+```bash
+$ python manage.py migrate
+```
+
+### Features
++   admin only interface
+
