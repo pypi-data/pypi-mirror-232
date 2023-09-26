@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+pdf_miner_parser/__init__.py
+pdf_miner_parser/parser.py
+pdf_miner_parser.egg-info/PKG-INFO
+pdf_miner_parser.egg-info/SOURCES.txt
+pdf_miner_parser.egg-info/dependency_links.txt
+pdf_miner_parser.egg-info/requires.txt
+pdf_miner_parser.egg-info/top_level.txt

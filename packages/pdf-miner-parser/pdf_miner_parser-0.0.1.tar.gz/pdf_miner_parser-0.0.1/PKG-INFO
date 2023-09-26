@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: pdf_miner_parser
+Version: 0.0.1
+Summary: Additional parser functionality for the pdf_miner library.
+Author: leitegarcia1
+Author-email: leitegarcia1@llnl.gov
+License: UNKNOWN
+Keywords: python,pdf parser,pdf_miner
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+A package that contains methods for finding paragrahs in the original pdf and splitting them in into sentences.
+
