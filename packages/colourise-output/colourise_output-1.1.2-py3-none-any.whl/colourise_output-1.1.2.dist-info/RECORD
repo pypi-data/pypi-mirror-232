@@ -1,0 +1,9 @@
+colourise_output/__init__.py,sha256=-iCp9NT06Qr3kF0UUrwqQ5ngt7lNZ8rfo5s1Ygtc-rU,1510
+colourise_output/colourise_output.py,sha256=x3blKkCeAb72dTtFva_kJtCAFzhZXzBZuZESFgm3eDA,5459
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_colourise_output.py,sha256=cInqJPCI_bLBoupoC8CAnzgtISVpOlvErUfhXkpxv6Y,1188
+colourise_output-1.1.2.dist-info/LICENSE,sha256=I07hsgeO6qcBGgW0eParmVtbLyfL9-DHE08iM5N-dsE,1069
+colourise_output-1.1.2.dist-info/METADATA,sha256=0N4YfIb3ZYXSGAzS3UeeE5yBTbrwgxaRHTbkbwsGwCc,6756
+colourise_output-1.1.2.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+colourise_output-1.1.2.dist-info/top_level.txt,sha256=rjKr0-i_jiU7vbPERR0Yu78kdafa_znuslcBZQ2P9Cc,23
+colourise_output-1.1.2.dist-info/RECORD,,
