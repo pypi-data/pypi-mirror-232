@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: forward-decl
+Version: 0.1.1
+Summary: A simple module for supporting forward references
+Author: LMauricius
+Description-Content-Type: text/markdown
+
+# py_forward_ref
+A simple module for supporting forward references
