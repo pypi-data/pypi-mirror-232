@@ -1,0 +1,11 @@
+dask_dirac/__init__.py,sha256=iuhLEruVcJXIdm2-A8lHDUYWA5gAiRs-AukojZY_K1c,287
+dask_dirac/_dask.py,sha256=w4lcrlKcigIEijVR8-M-1Q1FyJ7Kyc5IFwZDiNREyO8,3686
+dask_dirac/_dirac.py,sha256=5gQPZ68e-NUVogM-rW32ETzJojVpgVF67x_Z4v-hQjI,2233
+dask_dirac/_version.py,sha256=lLv3mnthbCtTyurPzvZPskdEk7p02STBCkRrInhGfP0,24618
+dask_dirac/cli.py,sha256=7-ZWn12l2_NY66w_t8v8pZIKrvGWnP_3971TtuLh0i0,2823
+dask_dirac/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dask_dirac-2023.9.0.dist-info/entry_points.txt,sha256=ZNNDLn-45hvK7YJRqkfYoPwsgG2ShvPycrQD9wRv5A4,50
+dask_dirac-2023.9.0.dist-info/LICENSE,sha256=xy8H4D2wBDP7wR0Tw_RUYv2iBdQ9WBawsOkll1KOLE4,1522
+dask_dirac-2023.9.0.dist-info/WHEEL,sha256=EZbGkh7Ie4PoZfRQ8I0ZuP9VklN_TvcZ6DSE5Uar4z4,81
+dask_dirac-2023.9.0.dist-info/METADATA,sha256=U1ZuaQiUWtBgyHJjTr7s33hHYF2Lwxr9k52iVgCNUbY,2436
+dask_dirac-2023.9.0.dist-info/RECORD,,
