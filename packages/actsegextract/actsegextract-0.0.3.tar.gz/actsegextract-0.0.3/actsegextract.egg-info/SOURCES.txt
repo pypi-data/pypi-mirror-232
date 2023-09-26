@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+actsegextract/__init__.py
+actsegextract/__version__.py
+actsegextract/segment_extract.py
+actsegextract.egg-info/PKG-INFO
+actsegextract.egg-info/SOURCES.txt
+actsegextract.egg-info/dependency_links.txt
+actsegextract.egg-info/top_level.txt
