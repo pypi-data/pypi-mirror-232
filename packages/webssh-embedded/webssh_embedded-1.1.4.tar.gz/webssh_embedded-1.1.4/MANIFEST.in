@@ -1,0 +1,4 @@
+include LICENSE
+
+recursive-include webssh_embedded *
+prune webssh_embedded/__pycache__
