@@ -1,0 +1,2 @@
+[console_scripts]
+xrcea = xrcea.core.application:main
