@@ -1,0 +1,152 @@
+Metadata-Version: 2.1
+Name: changelist
+Version: 0.2
+License: BSD 3-Clause License
+        
+        Copyright (c) 2023, Scientific Python
+        
+        Redistribution and use in source and binary forms, with or without
+        modification, are permitted provided that the following conditions are met:
+        
+        1. Redistributions of source code must retain the above copyright notice, this
+           list of conditions and the following disclaimer.
+        
+        2. Redistributions in binary form must reproduce the above copyright notice,
+           this list of conditions and the following disclaimer in the documentation
+           and/or other materials provided with the distribution.
+        
+        3. Neither the name of the copyright holder nor the names of its
+           contributors may be used to endorse or promote products derived from
+           this software without specific prior written permission.
+        
+        THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+        AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+        IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+        DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+        FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+        DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+        SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+        CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+        OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+        OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+        
+Project-URL: Source, https://github.com/scientific-python/changelist
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: requests
+Requires-Dist: requests-cache
+Requires-Dist: tqdm
+Requires-Dist: PyGithub
+Provides-Extra: lint
+Requires-Dist: pre-commit ==3.4.0 ; extra == 'lint'
+
+# changelist
+
+Prepare an automatic changelog from GitHub pull requests.
+
+_This project is currently in its alpha stage and might be incomplete or change a lot!_
+
+## Installation
+
+```sh
+pip install changelist
+```
+
+## Set up your repository
+
+To categorize merged PRs in the changelist, each PR
+must have have one of the following labels:
+
+- `type: Highlights`
+- `type: New features`
+- `type: Enhancements`
+- `type: Performance`
+- `type: Bug fix`
+- `type: API`
+- `type: Maintenance`
+- `type: Documentation`
+- `type: Infrastructure`
+
+This list will soon be configurable.
+
+### Label checking
+
+To ensure that each PR has an associated `type: ` label,
+we recommend adding an action that fails CI if the label is missing.
+
+To do so, place the following in `.github/workflows/label-check.yaml`:
+
+```yaml
+name: Labels
+
+on:
+  pull_request:
+    types:
+      - opened
+      - repoened
+      - labeled
+      - unlabeled
+      - synchronize
+
+env:
+  LABELS: ${{ join( github.event.pull_request.labels.*.name, ' ' ) }}
+
+jobs:
+  check-type-label:
+    name: ensure type label
+    runs-on: ubuntu-latest
+    steps:
+      - if: "contains( env.LABELS, 'type: ' ) == false"
+        run: exit 1
+```
+
+### Milestones
+
+Often, it is helpful to have milestones that reflect the actual PRs
+merged. We therefore recommend adding an action that attached the
+next open milestone to any merged PR.
+
+To do so, place the following in `.github/workflows/milestone-merged-prs.yaml`:
+
+```yaml
+name: Milestone
+
+on:
+  pull_request_target:
+    types:
+      - closed
+    branches:
+      - "main"
+
+jobs:
+  milestone_pr:
+    name: attach to PR
+    runs-on: ubuntu-latest
+    steps:
+      - uses: scientific-python/attach-next-milestone-action@bc07be829f693829263e57d5e8489f4e57d3d420
+        with:
+          token: ${{ secrets.MILESTONE_LABELER_TOKEN }}
+          force: true
+```
+
+See https://github.com/scientific-python/attach-next-milestone-action for more information.
+
+## Usage
+
+```sh
+export GH_TOKEN='...'
+changelist scikit-image/scikit-image v0.21.0 main
+```
+
+The script requires a [GitHub personal access
+token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens).
+The token does not need any permissions, since it is used only to
+increase query limits.
