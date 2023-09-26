@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: controllogger
+Version: 0.1.0
+Summary: A simple and easy to use logger for python
+Author-email: Julius König <info@bastelquartier.de>
+License: GPL-3.0
+Keywords: logger,control,controllogger,fastapi,rich,logging,log,logs,context,contextlogger,loggers,logging-framework,logging-library,logging-tool,logging-utility,logging-util
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.7.0
+Description-Content-Type: text/markdown
+
+# fapi-el/fastapi-easylogger
+
+
+
+## Getting Started
+
+Download links:
+
+SSH clone URL: ssh://git@git.jetbrains.space/bastelquartier/fapi-el/fastapi-easylogger.git
+
+HTTPS clone URL: https://git.jetbrains.space/bastelquartier/fapi-el/fastapi-easylogger.git
+
+
+
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+
+## Prerequisites
+
+What things you need to install the software and how to install them.
+
+```
+Examples
+```
+
+## Deployment
+
+Add additional notes about how to deploy this on a production system.
+
+## Resources
+
+Add links to external resources for this project, such as CI server, bug tracker, etc.
