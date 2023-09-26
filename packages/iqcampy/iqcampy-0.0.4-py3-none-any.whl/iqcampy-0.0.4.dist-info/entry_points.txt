@@ -1,0 +1,6 @@
+[console_scripts]
+
+
+[nbdev]
+iqcampy = iqcampy._modidx:d
+
