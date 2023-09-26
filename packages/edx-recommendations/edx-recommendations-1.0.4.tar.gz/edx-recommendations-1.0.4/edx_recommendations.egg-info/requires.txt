@@ -1,0 +1,6 @@
+Django
+django-ipware
+djangorestframework
+edx-django-utils
+edx-drf-extensions
+edx-toggles
