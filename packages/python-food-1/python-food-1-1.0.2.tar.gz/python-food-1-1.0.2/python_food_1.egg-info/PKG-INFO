@@ -1,0 +1,4 @@
+Metadata-Version: 2.1
+Name: python-food-1
+Version: 1.0.2
+Requires-Dist: click
