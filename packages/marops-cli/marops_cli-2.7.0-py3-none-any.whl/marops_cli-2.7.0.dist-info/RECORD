@@ -1,0 +1,17 @@
+marops_cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+marops_cli/banner.py,sha256=AtvZbE9eMUAkBtjo4wz7_Gbh-ZccOShAwgWoQdy6Vnk,410
+marops_cli/cli.py,sha256=YMGL5oAMPp51_Lk57oD35-ufQ1h3Y600T3fJHk3k6iU,1049
+marops_cli/helpers.py,sha256=4y3do9KZ2HtXI2hhADd_F69Ur7hube0uBHj0CODmMyA,1659
+marops_cli/docker/docker-compose.base.yaml,sha256=dDiUTNSguP4jaDA1f_9D1rnZunWhKK4_JADM1VgIyxA,4400
+marops_cli/docker/docker-compose.demo.yaml,sha256=T17I3bDQvFrZZLd6WSjNI1nNjXvKRpGQUHsWB0erIKI,2148
+marops_cli/docker/docker-compose.dev.yaml,sha256=bX30Ot2jJLiRtu-1uTZqUGc9sApZ2l968KhZgFFp6bk,1315
+marops_cli/docker/docker-compose.prod.yaml,sha256=p1ZKqH6axTMUNwvFOMcRj9gf34rSHAfyGN3voGbqYik,696
+marops_cli/groups/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+marops_cli/groups/base.py,sha256=iHZaPwUEFmPPnLUC0cAmMNidBKzderBwxkCUNzTuxcc,7540
+marops_cli/groups/setup.py,sha256=d_KUF_lGq-_7MbXZuA9_IRgQnxJkgrwrf6oAAEgu3V0,831
+marops_cli-2.7.0.dist-info/METADATA,sha256=ihhzWIio6WS2hD6Ckw0D6SaBkleoVI_ZQ70zppWYCys,1849
+marops_cli-2.7.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+marops_cli-2.7.0.dist-info/entry_points.txt,sha256=AUPVnCskNKjVG9rvESa3HzmA2jaeFBH5LGpTW1xi1bY,46
+marops_cli-2.7.0.dist-info/top_level.txt,sha256=VpoLnpRG-_DXfRi7VVTgZr1xdA3VtUzofcsCym14Rvg,11
+marops_cli-2.7.0.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+marops_cli-2.7.0.dist-info/RECORD,,
