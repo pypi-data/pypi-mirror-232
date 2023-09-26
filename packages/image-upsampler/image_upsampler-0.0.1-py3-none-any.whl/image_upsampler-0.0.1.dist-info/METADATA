@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: image-upsampler
+Version: 0.0.1
+Summary: A Python library for image upsampling that uses a machine learning model.
+Home-page: https://github.com/jose-solorzano/image-upsampler
+Author: Jose Solorzano
+Author-email: jose.h.solorzano@gmail.com
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Utilities
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: numpy (>=1.24)
+Requires-Dist: tqdm (>=4.0.0)
+Requires-Dist: torch (>=2.0.0)
+Requires-Dist: torchvision (>=0.15.0)
+Requires-Dist: opencv-python (>=4.8.0)
+
+## Project
+
+
+
+TODO
+
