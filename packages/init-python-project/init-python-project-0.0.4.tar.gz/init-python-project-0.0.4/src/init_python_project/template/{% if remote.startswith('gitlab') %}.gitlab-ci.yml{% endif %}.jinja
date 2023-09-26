@@ -1,0 +1,67 @@
+image: python:latest
+
+test:
+  cache: # reuse venv in subsequent jobs
+    key: $CI_JOB_NAME
+    paths:
+      - .cache/pip
+      - env/
+  before_script:
+    - python -m venv env
+    - source env/bin/activate
+  script:
+    - pip install .[test]
+    - pytest --doctest-modules --cov --cov-config=pyproject.toml --cov-branch --cov-report term --cov-report html:build/coverage --junitxml=report.xml --cov-report xml
+    - pip install anybadge==1.9.0
+    - mkdir -p build/badges
+    - pip install radon==5.1.0
+    - make maintainability
+    # generate a badge for the maintainability index with the total average of cyclomatic complexity as value
+    - |
+      score=$(python -m radon cc --total-average src | tail -n 1 | cut -d' ' -f 3-4)
+      [[ "$score" = A* ]] && color="green";  [[ "$score" = B* ]] && color="green"
+      [[ "$score" = C* ]] && color="yellow"; [[ "$score" = D* ]] && color="orange_2"
+      [[ "$score" = E* ]] && color="orange"; [[ "$score" = F* ]] && color="orangered"
+      python -m anybadge --label=Maintainability --value="$score" --color="$color" -f build/badges/maintainability -o
+  coverage: '/TOTAL.+?(\d+\%)/'
+  artifacts:
+    when: always
+    reports:
+      junit: report.xml
+      coverage_report:
+        coverage_format: cobertura
+        path: coverage.xml
+    paths:
+      - build/coverage
+      - build/badges
+      - env/
+
+{% if docs == 'sphinx' -%}
+include: docs/.gitlab/docs.yml
+
+{% elif docs == 'mkdocs' %}
+docs:
+  script:
+    mkdocs build --clean --site-dir build/docs
+  artifacts:
+    paths:
+      - build/docs
+
+{% endif -%}
+
+pages:
+  needs: [test{% if docs != 'none' %}, docs{% endif %}]
+  only:
+    - {{default_branch}}
+    - staging
+  script:
+    {% if docs != 'none' -%}
+    - mv build/docs public
+    {% else -%}
+    - mkdir public
+    {% endif -%}
+    - mv build/badges public/.
+    - mv build/coverage public/.
+  artifacts:
+    paths:
+      - public

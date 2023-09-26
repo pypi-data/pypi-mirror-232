@@ -1,0 +1,19 @@
+# general things to ignore
+build/
+dist/
+*.egg-info/
+*.egg
+*.py[cod]
+__pycache__/
+*.so
+*~
+.venv
+
+# testing tools
+.coverage
+.cache
+
+{%- if docs=="sphinx" %}
+# documentation
+docs/reference
+{%- endif %}

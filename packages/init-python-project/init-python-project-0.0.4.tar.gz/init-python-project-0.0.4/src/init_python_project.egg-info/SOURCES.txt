@@ -1,0 +1,286 @@
+.bumpversion.cfg
+.gitignore
+.gitmodules
+.pre-commit-config.yaml
+CHANGELOG.md
+MANIFEST.in
+Makefile
+README.md
+mkdocs.yaml
+noxfile.py
+pyproject.toml
+.github/workflows/docs.yaml
+.vscode/cspell.json
+.vscode/extensions.json
+.vscode/settings.json
+.vscode/terms.txt
+docs/_nav.md
+docs/index.md
+docs/assets/custom.css
+docs/assets/magiclink.css
+docs/assets/magiclink.js
+docs/developer-guide/documentation.md
+docs/developer-guide/examples.md
+docs/developer-guide/supported-remotes.md
+docs/developer-guide/template/Calculated Variables.md
+docs/developer-guide/template/index.md
+docs/reference/changelog.md
+docs/reference/terms.md
+docs/reference/tooling/bumpversion.md
+docs/reference/tooling/git.md
+docs/reference/tooling/github.md
+docs/reference/tooling/gitlab.md
+docs/reference/tooling/index.md
+docs/reference/tooling/mkdocs.md
+docs/reference/tooling/pre-commit.md
+docs/reference/tooling/pytest.md
+docs/reference/tooling/sphinx.md
+docs/user-guide/first-project.md
+docs/user-guide/getting-started.md
+docs/user-guide/next-steps.md
+docs/user-guide/prepare-release.md
+docs/user-guide/project-structure.md
+docs/user-guide/questions.html.jinja
+docs/user-guide/topics/ci.md
+docs/user-guide/topics/cli.md
+docs/user-guide/topics/documentation.md
+docs/user-guide/topics/markup-languages.md
+docs/user-guide/topics/task-execution.md
+docs/user-guide/topics/testing.md
+docs/user-guide/topics/versioning.md
+docs/util/abbreviations.md
+docs/util/macros.py
+src/init_python_project/__main__.py
+src/init_python_project/cli.py
+src/init_python_project/copier.yaml
+src/init_python_project.egg-info/PKG-INFO
+src/init_python_project.egg-info/SOURCES.txt
+src/init_python_project.egg-info/dependency_links.txt
+src/init_python_project.egg-info/entry_points.txt
+src/init_python_project.egg-info/requires.txt
+src/init_python_project.egg-info/top_level.txt
+src/init_python_project/template/.gitignore.jinja
+src/init_python_project/template/CHANGELOG.md.jinja
+src/init_python_project/template/Makefile.jinja
+src/init_python_project/template/README.md.jinja
+src/init_python_project/template/context
+src/init_python_project/template/pyproject.toml.jinja
+src/init_python_project/template/{% if bumpversion %}.bumpversion.cfg{% endif %}.jinja
+src/init_python_project/template/{% if docs == 'mkdocs' %}mkdocs.yml{% endif %}.jinja
+src/init_python_project/template/{% if precommit %}.pre-commit-config.yaml{% endif %}.jinja
+src/init_python_project/template/{% if remote.startswith('gitlab') %}.gitlab-ci.yml{% endif %}.jinja
+src/init_python_project/template/{{ _copier_conf.answers_file }}.jinja
+src/init_python_project/template/src/{{package_name}}/__init__.py
+src/init_python_project/template/src/{{package_name}}/__main__.py
+src/init_python_project/template/src/{{package_name}}/cli.py.jinja
+src/init_python_project/template/src/{{package_name}}/package_data.dat
+src/init_python_project/template/src/{{package_name}}/simple.py
+src/init_python_project/template/tests/test_cli.py.jinja
+src/init_python_project/template/tests/test_simple.py.jinja
+src/init_python_project/template/{% if docs == 'mkdocs' %}docs{% endif %}/index.md
+src/init_python_project/template/{% if docs == 'mkdocs' %}docs{% endif %}/macros.py
+src/init_python_project/template/{% if docs == 'mkdocs' %}docs{% endif %}/reference.md.jinja
+src/init_python_project/template/{% if docs == 'mkdocs' %}docs{% endif %}/requirements.txt
+src/init_python_project/template/{% if docs == 'sphinx' and docs_template=='none' %}docs{% endif %}/Makefile
+src/init_python_project/template/{% if docs == 'sphinx' and docs_template=='none' %}docs{% endif %}/changelog.md
+src/init_python_project/template/{% if docs == 'sphinx' and docs_template=='none' %}docs{% endif %}/conf.py.jinja
+src/init_python_project/template/{% if docs == 'sphinx' and docs_template=='none' %}docs{% endif %}/index.md
+src/init_python_project/template/{% if docs == 'sphinx' and docs_template=='none' %}docs{% endif %}/requirements.txt
+src/init_python_project/template/{% if docs == 'sphinx' and docs_template=='none' %}docs{% endif %}/.gitlab/docs.yml
+src/init_python_project/template/{% if docs == 'sphinx' and docs_template=='none' %}docs{% endif %}/_static/.gitkeep
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/.git
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/.gitlab-ci.yml
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/Makefile
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/README.md
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/make.bat
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/requirements.in
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/requirements.txt
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/.gitlab/docs.yml
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/Doxyfile
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/conf.py
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/index.rst
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/refs.bib
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/iis.ico
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/iis.svg
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/html/custom.css
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/preamble.tex
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/title.tex
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/doc/fonts/adobe/frutiger.txt
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/dvips/config/pfr.map
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/map/dvips/pfr.map
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/map/pdftex/pfr.map
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/map/vtex/pfr.ali
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrb7t.tfm
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrb7tc.tfm
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrb8a.tfm
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrb8ac.tfm
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrb8c.tfm
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrb8cc.tfm
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrb8r.tfm
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrb8rc.tfm
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrb8t.tfm
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrb8tc.tfm
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrbi7t.tfm
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrbi8a.tfm
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrbi8c.tfm
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrbi8r.tfm
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrbi8t.tfm
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrc7t.tfm
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrc7tc.tfm
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrc8a.tfm
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrc8ac.tfm
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrc8c.tfm
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrc8cc.tfm
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrc8r.tfm
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrc8rc.tfm
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrc8t.tfm
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrc8tc.tfm
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrci7t.tfm
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrci8a.tfm
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrci8c.tfm
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrci8r.tfm
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrci8t.tfm
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrl7t.tfm
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrl7tc.tfm
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrl8a.tfm
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrl8ac.tfm
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrl8c.tfm
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrl8cc.tfm
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrl8r.tfm
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrl8rc.tfm
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrl8t.tfm
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrl8tc.tfm
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrli7t.tfm
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrli8a.tfm
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrli8c.tfm
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrli8r.tfm
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrli8t.tfm
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrr7t.tfm
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrr7tc.tfm
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrr8a.tfm
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrr8ac.tfm
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrr8c.tfm
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrr8cc.tfm
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrr8r.tfm
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrr8rc.tfm
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrr8t.tfm
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrr8tc.tfm
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrri7t.tfm
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrri8a.tfm
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrri8c.tfm
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrri8r.tfm
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfrri8t.tfm
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfru7t.tfm
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfru7tc.tfm
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfru8a.tfm
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfru8ac.tfm
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfru8c.tfm
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfru8cc.tfm
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfru8r.tfm
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfru8rc.tfm
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfru8t.tfm
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/tfm/adobe/frutiger/pfru8tc.tfm
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/truetype/adobe/frutiger/FrutigerLTCom-Black.ttf
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/truetype/adobe/frutiger/FrutigerLTCom-Bold.ttf
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/truetype/adobe/frutiger/FrutigerLTCom-BoldItalic.ttf
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/truetype/adobe/frutiger/FrutigerLTCom-Italic.ttf
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/truetype/adobe/frutiger/FrutigerLTCom-Light.ttf
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/truetype/adobe/frutiger/FrutigerLTCom-LightItalic.ttf
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/truetype/adobe/frutiger/FrutigerLTCom-Roman.ttf
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/vf/adobe/frutiger/pfrb7t.vf
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/vf/adobe/frutiger/pfrb7tc.vf
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/vf/adobe/frutiger/pfrb8c.vf
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/vf/adobe/frutiger/pfrb8cc.vf
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/vf/adobe/frutiger/pfrb8t.vf
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/vf/adobe/frutiger/pfrb8tc.vf
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/vf/adobe/frutiger/pfrbi7t.vf
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/vf/adobe/frutiger/pfrbi8c.vf
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/vf/adobe/frutiger/pfrbi8t.vf
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/vf/adobe/frutiger/pfrc7t.vf
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/vf/adobe/frutiger/pfrc7tc.vf
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/vf/adobe/frutiger/pfrc8c.vf
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/vf/adobe/frutiger/pfrc8cc.vf
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/vf/adobe/frutiger/pfrc8t.vf
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/vf/adobe/frutiger/pfrc8tc.vf
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/vf/adobe/frutiger/pfrci7t.vf
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/vf/adobe/frutiger/pfrci8c.vf
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/vf/adobe/frutiger/pfrci8t.vf
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/vf/adobe/frutiger/pfrl7t.vf
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/vf/adobe/frutiger/pfrl7tc.vf
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/vf/adobe/frutiger/pfrl8c.vf
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/vf/adobe/frutiger/pfrl8cc.vf
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/vf/adobe/frutiger/pfrl8t.vf
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/vf/adobe/frutiger/pfrl8tc.vf
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/vf/adobe/frutiger/pfrli7t.vf
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/vf/adobe/frutiger/pfrli8c.vf
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/vf/adobe/frutiger/pfrli8t.vf
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/vf/adobe/frutiger/pfrr7t.vf
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/vf/adobe/frutiger/pfrr7tc.vf
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/vf/adobe/frutiger/pfrr8c.vf
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/vf/adobe/frutiger/pfrr8cc.vf
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/vf/adobe/frutiger/pfrr8t.vf
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/vf/adobe/frutiger/pfrr8tc.vf
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/vf/adobe/frutiger/pfrri7t.vf
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/vf/adobe/frutiger/pfrri8c.vf
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/vf/adobe/frutiger/pfrri8t.vf
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/vf/adobe/frutiger/pfru7t.vf
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/vf/adobe/frutiger/pfru7tc.vf
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/vf/adobe/frutiger/pfru8c.vf
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/vf/adobe/frutiger/pfru8cc.vf
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/vf/adobe/frutiger/pfru8t.vf
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/fonts/vf/adobe/frutiger/pfru8tc.vf
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/logo/iis_43mm_p334.eps
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/logo/iis_60mm_p334.eps
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/logo/iis_85mm_p334.eps
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/tex/fhgiislogo/iis_43mm_p334.eps
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/tex/fhgiislogo/iis_43mm_p334m1.eps
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/tex/fhgiislogo/iis_43mm_p334m1.pdf
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/tex/fhgiislogo/iis_60mm_p334.eps
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/tex/fhgiislogo/iis_60mm_p334m1.eps
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/tex/fhgiislogo/iis_60mm_p334m1.pdf
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/tex/fhgiislogo/iis_85mm_p334.eps
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/tex/fhgiislogo/iis_85mm_p334m1.eps
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/tex/fhgiislogo/iis_85mm_p334m1.pdf
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/tex/latex/iofhg/beamerthemeFhG.sty
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/tex/latex/iofhg/fhginstitutes.def
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/tex/latex/iofhg/fhginstitutes.sty
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/tex/latex/iofhg/fhgtechdoku.cls
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/tex/latex/pfr/frutiger.sty
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/tex/latex/pfr/ot1pfr.fd
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/tex/latex/pfr/t1pfr.fd
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_static/texmf/tex/latex/pfr/ts1pfr.fd
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/_templates/confidential.html
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/api/index.rst
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/include/MathHelper.h
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/integration/guide_1.rst
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/integration/guide_2.rst
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/integration/guide_3.md
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/integration/index.rst
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/integration/system_layer/guide_4.rst
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/integration/system_layer/index.rst
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/product/architecture.rst
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/product/copyright_notices.rst
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/product/copyright_notices_html.rst
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/product/features.rst
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/product/index.rst
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/product/performance.rst
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/product/references.rst
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/product/release_notes.rst
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/template/index.rst
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/template/demos/index.rst
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/template/demos/smiley.png
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/template/demos/sunglasses.png
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/template/recommendations/content.rst
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/template/recommendations/document.rst
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/template/recommendations/index.rst
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/template/recommendations/style.rst
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/testing/certification.rst
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/testing/conformance.rst
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/testing/fraunhofer_product_testing.rst
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/testing/index.rst
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/testing/partner_testing.rst
+src/init_python_project/template/{% if docs_template == 'sphinx-fhg-iis' %}docs{% endif %}/source/testing/trademark.rst
+src/init_python_project/template/{% if remote == 'github' %}.github{% endif %}/workflows/ci.yaml.jinja
+tests/test_cli.py
+tests/test_package.py
+tests/test_template.py

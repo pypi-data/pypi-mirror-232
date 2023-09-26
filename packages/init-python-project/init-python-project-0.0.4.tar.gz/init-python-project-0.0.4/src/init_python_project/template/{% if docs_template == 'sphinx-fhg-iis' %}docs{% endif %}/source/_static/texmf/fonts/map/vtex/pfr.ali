@@ -1,0 +1,32 @@
+%1 = $PFB$
+%2 = $TEXMF$fonts/type1/adobe/frutiger/
+
+@Frutiger-Light = pfrl8a %2,1
+@Frutiger-Light-8r = pfrl8r %2,1,r="8r",b="pfrl8a"
+@Frutiger-Bold = pfrb8a %2,1
+@Frutiger-Bold-8r = pfrb8r %2,1,r="8r",b="pfrb8a"
+@Frutiger-LightItalic = pfrli8a %2,1
+@Frutiger-LightItalic-8r = pfrli8r %2,1,r="8r",b="pfrli8a"
+@Frutiger-BoldItalic = pfrbi8a %2,1
+@Frutiger-BoldItalic-8r = pfrbi8r %2,1,r="8r",b="pfrbi8a"
+@Frutiger-Roman = pfrr8a %2,1
+@Frutiger-Roman-8r = pfrr8r %2,1,r="8r",b="pfrr8a"
+@Frutiger-Black = pfrc8a %2,1
+@Frutiger-Black-8r = pfrc8r %2,1,r="8r",b="pfrc8a"
+@Frutiger-Italic = pfrri8a %2,1
+@Frutiger-Italic-8r = pfrri8r %2,1,r="8r",b="pfrri8a"
+@Frutiger-BlackItalic = pfrci8a %2,1
+@Frutiger-BlackItalic-8r = pfrci8r %2,1,r="8r",b="pfrci8a"
+@Frutiger-UltraBlack = pfru8a %2,1
+@Frutiger-UltraBlack-8r = pfru8r %2,1,r="8r",b="pfru8a"
+@Frutiger-LightCn = pfrl8ac %2,1
+@Frutiger-LightCn-8r = pfrl8rc %2,1,r="8r",b="pfrl8ac"
+@Frutiger-Cn = pfrr8ac %2,1
+@Frutiger-Cn-8r = pfrr8rc %2,1,r="8r",b="pfrr8ac"
+@Frutiger-BoldCn = pfrb8ac %2,1
+@Frutiger-BoldCn-8r = pfrb8rc %2,1,r="8r",b="pfrb8ac"
+@Frutiger-BlackCn = pfrc8ac %2,1
+@Frutiger-BlackCn-8r = pfrc8rc %2,1,r="8r",b="pfrc8ac"
+@Frutiger-ExtraBlackCn = pfru8ac %2,1
+@Frutiger-ExtraBlackCn-8r = pfru8rc %2,1,r="8r",b="pfru8ac"
+

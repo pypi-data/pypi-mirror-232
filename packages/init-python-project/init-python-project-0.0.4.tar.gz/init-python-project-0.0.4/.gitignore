@@ -1,0 +1,15 @@
+__pycache__
+*.py[cod]
+*$py.class
+.pytest_cache/
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/cspell.json
+!.vscode/terms.txt
+*.egg-info
+build
+.obsidian
+docs/examples
+src/init_python_project/template
+src/init_python_project/copier.yaml
+.env
