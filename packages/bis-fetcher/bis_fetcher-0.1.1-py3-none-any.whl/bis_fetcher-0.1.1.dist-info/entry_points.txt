@@ -1,0 +1,3 @@
+[console_scripts]
+bis_fetcher=bis_fetcher.__cli__:main
+
