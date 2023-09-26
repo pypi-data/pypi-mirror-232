@@ -1,0 +1,8 @@
+labhelper/__init__.py,sha256=DBSpfqK5u1v5F3WM517Xfhqq48mfIAFDyb2XKycBiig,73
+labhelper/pandas_utils.py,sha256=ZqTeKBPmN_ZPROfHRxQNubvQ31Bl4sb67nH0MiQqkns,2779
+labhelper/stats.py,sha256=7GIAIhsVQvjamoy7sHDVEPBD_PGb3X2qjobfILQ76g4,1655
+labhelper/symbolic.py,sha256=EOTrYgPAapYIo39I8kMFm1-6NLkY5XmSil_2wzoNwn8,8319
+labhelper-0.0.3.dist-info/METADATA,sha256=azyMVkX9xl3g9WlvJUjTYQXXPb3Vq9y65VROWcRe3lI,924
+labhelper-0.0.3.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+labhelper-0.0.3.dist-info/top_level.txt,sha256=YkaxkZJS1a1P-kNqcs5xvt3GbeSdImXj1Vc56ui_FBk,10
+labhelper-0.0.3.dist-info/RECORD,,
