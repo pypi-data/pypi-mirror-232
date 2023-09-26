@@ -1,0 +1,12 @@
+numbaml/__init__.py,sha256=h_sv7ETN_ZLFmD0OsmIm0QVkk9zt4r2Daz_J5hqGLvw,33
+numbaml/confidence_intervals.py,sha256=6bYT24F48D8g--E1pWlXCVFWnJsu-s6pNy7z0WXGA9s,3477
+numbaml/fit.py,sha256=EnPCk8GZ4RFG5E0KJpVj7HuC3h8mTQ5GrRDEaMUyEz8,1487
+numbaml/linear_model.py,sha256=8RfyLvwNYy7H2nxr0wRqPkx-0pvpNXeiioyk0oBDxws,7201
+numbaml/metrics.py,sha256=yQzyWx_SZGpTsa7C10dmJOa6_4G05wGYMUBqrf90oYQ,1213
+numbaml/model_selection.py,sha256=aBwJmmL-e1VuXjpsRkDUH6PsdsUSzL79TlAdrXcyqwc,2956
+numbaml/predict.py,sha256=F8BsxqiyoOJ26ijyApB2GsJ5ZvW2RHOyKR7nftC9YfM,164
+numbaml/scoring.py,sha256=Ga9hJOhO-xqmMn7i_lS1VjXOiA6dyABKnEVHmULKLOs,930
+NumbaML-1.0.5.dist-info/METADATA,sha256=hasqtALcfTNzS9y_rU1y0ihzkMf9MAh28wOJEYaV1Kc,6794
+NumbaML-1.0.5.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+NumbaML-1.0.5.dist-info/top_level.txt,sha256=g6vspz7MGtzmmcIPrrdMtbSDPAvpYQ3v_t_qupgjoRg,8
+NumbaML-1.0.5.dist-info/RECORD,,
