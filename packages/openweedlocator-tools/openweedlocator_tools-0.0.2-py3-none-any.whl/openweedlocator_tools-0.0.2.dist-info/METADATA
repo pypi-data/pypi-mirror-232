@@ -1,0 +1,64 @@
+Metadata-Version: 2.1
+Name: openweedlocator-tools
+Version: 0.0.2
+Summary: A toolkit for green-on-brown and green-on-green weed detection
+Home-page: https://github.com/geezacoleman/openweedlocator-tools
+Author: Guy Coleman
+Author-email: hoot@openweedlocator.com
+Maintainer-email: guy.coleman@sydney.edu.au
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: imutils <1.0,>=0.5
+Requires-Dist: numpy <2.0,>=1.10
+Requires-Dist: pandas >2.0
+Requires-Dist: python-dateutil <3.0,>=2.8
+Provides-Extra: desktop
+Requires-Dist: ultralytics ; extra == 'desktop'
+Requires-Dist: opencv-contrib-python <5.0,>=4.0 ; extra == 'desktop'
+Requires-Dist: opencv-python <5.0,>=4.0 ; extra == 'desktop'
+Provides-Extra: rpi
+Requires-Dist: opencv-contrib-python <5.0,>=4.0 ; extra == 'rpi'
+Requires-Dist: opencv-python <5.0,>=4.0 ; extra == 'rpi'
+
+# Official OpenWeedLocator Toolkit
+Simplifying the integration of weed detection into your platform.
+
+[![OWL-tools](https://github.com/geezacoleman/openweedlocator-tools/actions/workflows/owl-testing.yml/badge.svg)](https://github.com/geezacoleman/openweedlocator-tools/actions/workflows/owl-testing.yml)
+
+## Overview
+The OpenWeedLocator (OWL) is an open-source weed detection device for low-cost, 
+DIY site-specific weed management. Here, we're making the software that supports 
+the OWL more accesible with an easy-to-use API, so you can integrate weed detection 
+into your own devices and services more easily by simply calling 
+`GreenonBrown.find()`.
+
+Currently, it supports green-on-brown detection on all platforms, and green-on-green
+on desktops through the Ultralytics package.
+
+In the future, we will support plant counting, GPS integration and green-on-green 
+on edge devices (Jetson Nano, Raspberry Pi)
+
+## Installation
+To install the latest version of `openweedlocator-tools` simply run:
+### Desktop
+```
+pip install openweedlocator-tools[desktop]
+```
+
+## Quick Start
+```
+from owl.viz import webcam, images_and_video
+
+# Run using your webcam
+webcam(algorithm='gog', model_path='models/yolov8n.pt) # press escape to exit, add your own model path as required or clone this repository
+
+# or 
+images_and_video(media_path='path/to/your/media_files
+```
+
+## Streamlit App
+Try it for yourself now with the online, Streamlit app!
