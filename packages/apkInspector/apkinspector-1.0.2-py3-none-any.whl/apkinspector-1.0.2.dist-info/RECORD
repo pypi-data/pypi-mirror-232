@@ -1,0 +1,12 @@
+apkInspector/__init__.py,sha256=Y3LSfRioSl2xch70pq_ULlvyECXyEtN3krVaWeGyaxk,22
+apkInspector/extract.py,sha256=9kmXeRiNLO0DR4x5WFqbYT6llw41Q4-wNmrdO0xq50o,4182
+apkInspector/headers.py,sha256=e9zQmfJu1wKYTO-LLsZ0GlgB1NplnBYSBjjmZydTIe8,12641
+apkInspector/helpers.py,sha256=UR7vEkG4lJh57yp6kxxqwYqScIHp8hWbJ-YbxUlFpaI,1134
+apkInspector/manifestDecoder.py,sha256=SdCILHNZCrwwJtWiRThCOpsZPxOgPKEHNkLEZdE8_64,18908
+cli/__init__.py,sha256=Y3LSfRioSl2xch70pq_ULlvyECXyEtN3krVaWeGyaxk,22
+cli/apkInspector.py,sha256=wcqRPAHSYc-CabhHPfbjk1cWkNKI3nm7HcQCa3DzUrg,7003
+apkinspector-1.0.2.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+apkinspector-1.0.2.dist-info/METADATA,sha256=CoY6yvfXq1LNjf1fzUc08O3SJk8Dgi_bjZ4-eiLZhM4,5990
+apkinspector-1.0.2.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+apkinspector-1.0.2.dist-info/entry_points.txt,sha256=Vyyla_FucSzdDSnm7gQg_rjf-UeH3eRXiTS358NYDPQ,54
+apkinspector-1.0.2.dist-info/RECORD,,
