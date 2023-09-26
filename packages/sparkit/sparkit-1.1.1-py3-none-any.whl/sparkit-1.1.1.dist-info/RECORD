@@ -1,0 +1,9 @@
+sparkit/__init__.py,sha256=jxhf0Q9pNqd6SOtiG7i_XXJx0Ce6-Jeub_kADjXbqJU,190
+sparkit/exception.py,sha256=0ww8t-G5WR24313ZnwRM8v8Lw5x58UTdyvcDQSX9UCo,2261
+sparkit/pandastools.py,sha256=f-EH7xG8Q1vGkiAm0KSXYCjc7fwBugjYaTH3mcKemuk,6328
+sparkit/transformation.py,sha256=2XUKIZ7adB9KSomgZ02Mw9Dq1R1RlbnYJrlh7Mys3Qg,19833
+sparkit/validation.py,sha256=xXBfRj0jgCu4tKv61j7ARBQyv9W4HqVWudKmhiwpgmQ,12756
+sparkit-1.1.1.dist-info/LICENSE,sha256=LKk5erbBqUgeUdFI0wbWsgFrLurCevyoYC2juPv6Oe0,1520
+sparkit-1.1.1.dist-info/WHEEL,sha256=vVCvjcmxuUltf8cYhJ0sJMRDLr1XsPuxEId8YDzbyCY,88
+sparkit-1.1.1.dist-info/METADATA,sha256=YAlL3Hcu41YeMsd3br2FBldzLTTr4zTJqRPAAmfcBro,4184
+sparkit-1.1.1.dist-info/RECORD,,
