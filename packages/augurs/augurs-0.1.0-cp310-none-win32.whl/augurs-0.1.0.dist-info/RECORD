@@ -1,0 +1,7 @@
+augurs-0.1.0.dist-info/METADATA,sha256=HzuRTF6nxrzGqLDuo4dKNG1rPdtEvNAHtatJVgDiKkY,2447
+augurs-0.1.0.dist-info/WHEEL,sha256=mkSJmCUfPvZFrMmSM1-7J9GuqnWOPhzVSSfmj4QzE7M,91
+augurs/__init__.py,sha256=vsb8MNUQlADD_3dQs8Lp0HtmXL-F0j5zt1ZAVKnZ8Ew,107
+augurs/__init__.pyi,sha256=IJ4Ba64eRexNzf2pwmXPL9x7qHjnUikCVKXRTaKbrqQ,2480
+augurs/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+augurs/augurs.cp310-win32.pyd,sha256=Ydskz-IYyWFZ7We6f09kaICnZqGzLZuJ9FO3pO2VR1A,642048
+augurs-0.1.0.dist-info/RECORD,,
