@@ -1,0 +1,3 @@
+[console_scripts]
+akre = akre.create_akre_model:main
+
