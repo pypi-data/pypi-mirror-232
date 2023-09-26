@@ -1,0 +1,120 @@
+Metadata-Version: 2.1
+Name: examuploader-sebastian-stigler
+Version: 0.2.1
+Summary: Web application to upload exam files to by SaveDownloadExam!
+Home-page: https://in-stigler.htw-aalen.de/gitea/tools/examuploader
+Author: Sebastian Stigler
+Author-email: sebastian.stigler@hs-aalen.de
+License: MIT
+Project-URL: Documentation, https://pyscaffold.org/
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Description-Content-Type: text/markdown; charset=UTF-8
+License-File: LICENSE.txt
+Requires-Dist: fastapi[all] ==0.103.1
+Requires-Dist: pydantic-settings-yaml
+Requires-Dist: importlib-metadata ; python_version < "3.8"
+Provides-Extra: testing
+Requires-Dist: setuptools ; extra == 'testing'
+Requires-Dist: pytest ; extra == 'testing'
+Requires-Dist: pytest-cov ; extra == 'testing'
+
+[![Project generated with PyScaffold](https://img.shields.io/badge/-PyScaffold-005CA0?logo=pyscaffold)](https://pyscaffold.org/)
+
+
+
+# ExamUploader
+
+> A Web application to upload exam files to by SaveDownloadExam!
+
+## Installation
+
+1.  Create the user `examuuploader`, create some directories in its
+    home-directory and revoke other users access to them.
+
+``` {.}
+# as user root:
+adduser --disabled-password examuploader
+mkdir /home/examuploader/{etc,secrets,upload}
+chmod o-rwx /home/examuploader -R
+```
+
+2.  As user `examuploader` create a virtualenv within its home-directory
+    and install the ExamUploader within.
+
+``` {.}
+# as user examuploader:
+cd ~
+python3 -m venv venv
+. ./venv/bin/activate
+pip install examuploader-sebastian-stigler
+```
+
+3.  Create a config file, where you specify the `upload_path` and a
+    **list** of courses, that are allowed to upload files. Within the
+    each course you specify the course name (which is used as the name
+    of the subdirectory in the `upload_path` for it) and a **list** of
+    jupyterhub usernames of the `students` in this course either
+    directly or as a name prefix by appending an asteriks to the end
+    (and only the end) of it. Make sure, that the course name follows
+    the pattern `^[a-z0-9-]+$` and the student name (prefix) follows the
+    pattern `^[a-zA-Z0-9-]+$`.
+
+``` {.}
+# as user examuploader
+# /home/examuploader/etc/config.yaml
+
+ upload_path: /home/examuploader/upload
+ courses:
+   - name: python101
+     students:
+       - heinz
+       - python101-*
+```
+
+4.  Create a `systemd service`.
+
+``` {.}
+# /etc/systemd/system/examuploader.service
+# systemd service file to start the examuploader
+
+[Unit]
+Description=ExamUploader backend
+Wants=network.target
+Documentation=https://in-stigler.htw-aalen.de/gitea/tools/examuploader
+
+[Service]
+Type=simple
+User=examuploader
+Group=examuploader
+WorkingDirectory=/home/examuploader
+
+Environment="EXAM_UPLOADER_SECRETS_DIR=/home/examuploader/secrets"
+Environment="EXAM_UPLOADER_CONFIG=/home/examuploader/etc/config.yaml"
+
+ExecStart=/home/examuploader/venv/bin/uvicorn examuploader.main:app --host 127.0.0.1 --port 8000 --workers 3
+# Use SIGINT to stop
+KillSignal=SIGINT
+# Auto restart on crash
+Restart=on-failure
+RestartSec=20
+# Tag things in the log
+SyslogIdentifier=ExamUploader
+#StandardOutput=syslog
+
+[Install]
+WantedBy=multi-user.target
+```
+
+``` {.}
+# Enable and start the service
+systemctl deamon-reload
+systemctl enable examuploader.service
+systemctl start examuploader.service
+```
+
+## Note {#pyscaffold-notes}
+
+This project has been set up using PyScaffold 4.5. For details and usage
+information on PyScaffold see <https://pyscaffold.org/>.
