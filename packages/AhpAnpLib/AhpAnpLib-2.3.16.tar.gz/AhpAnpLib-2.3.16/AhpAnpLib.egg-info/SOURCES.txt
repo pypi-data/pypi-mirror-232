@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+AhpAnpLib.egg-info/PKG-INFO
+AhpAnpLib.egg-info/SOURCES.txt
+AhpAnpLib.egg-info/dependency_links.txt
+AhpAnpLib.egg-info/requires.txt
+AhpAnpLib.egg-info/top_level.txt
