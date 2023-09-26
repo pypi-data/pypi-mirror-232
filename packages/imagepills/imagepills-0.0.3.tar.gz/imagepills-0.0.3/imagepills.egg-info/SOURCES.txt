@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+imagepills/__init__.py
+imagepills/base.py
+imagepills/entrypoint.py
+imagepills/imagepills.py
+imagepills/pills.py
+imagepills/utils.py
+imagepills.egg-info/PKG-INFO
+imagepills.egg-info/SOURCES.txt
+imagepills.egg-info/dependency_links.txt
+imagepills.egg-info/entry_points.txt
+imagepills.egg-info/top_level.txt

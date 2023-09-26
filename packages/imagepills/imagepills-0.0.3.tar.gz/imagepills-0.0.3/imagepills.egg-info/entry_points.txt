@@ -1,0 +1,4 @@
+[console_scripts]
+pills_image2png = imagepills.imagepills:image2png
+pills_resize = imagepills.imagepills:resize
+pills_size = imagepills.imagepills:size
