@@ -1,0 +1,9 @@
+cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cli/ascii_table.py,sha256=A3rYADkTWFkZJu4ky0-eSMEd13nodLpTan0IMW5KyaM,1380
+cli/cli.py,sha256=Kyt0VNQKNZgDtSj5hyZy8SrskcUNc2c5VslXzP1HCQE,1312
+cli/client.py,sha256=1KQYENJe03oGsQX7ky9EQXai80MbiAvUmEAdISw7uOk,1601
+cli/colors.py,sha256=RkMNx4DJ4NTVJ33wOr1CMOovlvfMsVVN2uTCLMefiAE,640
+qrshare_io_cli-0.0.5.dist-info/METADATA,sha256=hs2HJGCo8a2ybWC3NjoPufo4JaHoP0gY4spAoWZjRUI,7949
+qrshare_io_cli-0.0.5.dist-info/WHEEL,sha256=7Z8_27uaHI_UZAc4Uox4PpBhQ9Y5_modZXWMxtUi4NU,88
+qrshare_io_cli-0.0.5.dist-info/entry_points.txt,sha256=0g2pFbHCnsoBgyDlkqNQRCSuINbf5rsOI47iYYcVZ-8,36
+qrshare_io_cli-0.0.5.dist-info/RECORD,,
