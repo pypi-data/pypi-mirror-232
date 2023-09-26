@@ -1,0 +1,2 @@
+[console_scripts]
+tsenum = tsenum.cli:main

@@ -1,0 +1,82 @@
+Metadata-Version: 2.1
+Name: tsenum
+Version: 1.1.1
+Summary:  Timestamp enumerator
+Project-URL: Documentation, https://github.com/aboehm/tsenum#readme
+Project-URL: Issues, https://github.com/aboehm/tsenum/issues
+Project-URL: Source, https://github.com/aboehm/tsenum
+Author-email: Alexander Böhm <alexander.boehm@malbolge.net>
+License-Expression: GPL-2.0-or-later
+License-File: LICENSE
+Keywords: enumerator,timestamp,tool
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Utilities
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# tsenum
+
+[![Publish](https://github.com/aboehm/tsenum/actions/workflows/publish.yml/badge.svg?branch=main)](https://github.com/aboehm/tsenum/actions/workflows/publish.yml)
+
+A timestamp generator.
+
+## Install
+
+You can use pip to install from the repository
+
+```
+pip install tsenum
+```
+
+or download sources and run pip from this directory
+
+```
+git clone https://github.com/aboehm/tsenum
+pip install .
+```
+
+## Usage
+
+`tsenum` provides an CLI. For help run:
+
+```
+tsenum -h
+```
+
+To count 7 days back from yesterday via CLI, run:
+
+```sh
+tsenum --offset -1 --count -7 --step day --pattern "%Y-%m-%d: Hello world!"
+2016-05-27: Hello world!
+2016-05-28: Hello world!
+2016-05-29: Hello world!
+2016-05-30: Hello world!
+2016-05-31: Hello world!
+2016-06-01: Hello world!
+2016-06-02: Hello world!
+```
+
+To do it programmatically:
+
+```python
+from datetime import datetime
+import tsenum
+
+print(
+    tsenum.enumerate_times(
+        datetime.now(),
+        offset=-1,
+        count=-7,
+        step_width=tsenum.STEP_DAY,
+        pattern='%Y-%m-%d'
+    )
+)
+```
