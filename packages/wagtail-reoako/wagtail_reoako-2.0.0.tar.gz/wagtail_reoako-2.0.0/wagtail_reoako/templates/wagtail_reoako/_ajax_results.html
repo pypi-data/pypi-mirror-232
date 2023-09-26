@@ -1,0 +1,21 @@
+{% load i18n wagtailadmin_tags %}
+
+<h2 role="alert">
+    {% blocktrans count counter=count %}
+        There is {{ counter }} result for "{{ search_term }}"
+    {% plural %}
+        There are {{ counter }} results for "{{ search_term }}"
+    {% endblocktrans %}
+</h2>
+
+
+{% if error_message %}
+    <p class="help-block help-warning">
+        There is a problem connecting to Reoako. {{ error_message }}.
+    </p>
+{% endif %}
+
+
+{% if results %}
+    {% include 'wagtail_reoako/_results.html' %}
+{% endif %}

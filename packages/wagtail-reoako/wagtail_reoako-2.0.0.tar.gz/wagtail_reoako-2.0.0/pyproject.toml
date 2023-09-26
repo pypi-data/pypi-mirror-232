@@ -1,0 +1,12 @@
+[tool.poetry]
+name = "Wagtail Reoako"
+version = "2.0"
+description = "Starter for testing Wagtail Reoako module."
+authors = ["Octave <support@octave.nz>"]
+
+[tool.poetry.dependencies]
+python = "~3.10"
+psycopg2-binary = "~2.8"
+wagtail = "~5.1"
+Django = "~4.2"
+django-extensions = "^3.1"

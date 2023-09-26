@@ -1,0 +1,5 @@
+recursive-exclude wagtail_reoako/static_src *
+recursive-include wagtail_reoako/static *
+recursive-include wagtail_reoako/templates *
+global-exclude __pycache__
+global-exclude *.py[co]

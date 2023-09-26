@@ -1,0 +1,10 @@
+{% load i18n %}
+{% trans "Reoako search" as choose_str %}
+
+{% include "wagtailadmin/shared/header.html" with title=choose_str search_url="reoako_modal_search" icon="doc-empty-inverse" %}
+
+<div class="nice-padding">
+    <div class="reoako-search-results">
+        <p>Search for a word in Māori or English to continue.</p>
+    </div>
+</div>
