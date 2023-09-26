@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: KFS
+Version: 1.1.1
+Summary: a collection of miscellaneous functions
+Home-page: https://github.com/9-FS/2022-04-07-KFS-Library-Python
+License: MIT
+Author: 9FS
+Author-email: pray4spam@googlemail.com
+Requires-Python: >=3.11,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: colorama (>=0.4.6,<0.5.0)
+Requires-Dist: dropbox (>=11.36.0,<12.0.0)
+Requires-Dist: lxml (>=4.9.2,<5.0.0)
+Requires-Dist: pillow (>=9.4.0,<10.0.0)
+Requires-Dist: requests (>=2.28.0,<3.0.0)
+Project-URL: Repository, https://github.com/9-FS/2022-04-07-KFS-Library-Python
+Description-Content-Type: text/markdown
+
+---
+Topic: "KFS Library"
+Author: "구FS"
+---
+<link href="./doc_templates/md_style.css" rel="stylesheet"></link>
+<body>
+
+# <p style="text-align: center">KFS Library</p>
+<br>
+<br>
+
+- [1. General](#1-general)
+- [2. Installation](#2-installation)
+
+**This library is deprecated and has been split up into its individual modules for better dependency management. Please use the new libraries.**
+
+## 1. General
+
+This library is a collection of miscellaneous functions that turned out to be quite useful to have while creating my other projects. They are more or less grouped by common topic in a module.  
+For further documentation, read the provided docstrings or feel free to send me a message. I'm also always happy about suggestions and tips.
+
+## 2. Installation
+
+You can install this library from PyPi with `pip install KFS`.
+
+</body>
