@@ -1,0 +1,10 @@
+sso_tools/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sso_tools/auth.py,sha256=iEnH4K2Bbk0aMmVQxiVaHuwt1SoQvaeDcQ7M8yF009g,6382
+sso_tools/configs.py,sha256=8lJ86T01HRu2qAJ0Ka6kBeFhm13xEJJ2goYT5tjTYPA,44
+sso_tools/mixins.py,sha256=ewiFd9ezZp9OROTlHNPGevbBfdUWux-B3RSkqH_o7F8,1288
+sso_tools/schemas.py,sha256=JpReDWjQFKu6si8-Qo9bNnQlKl1ODgwUI_sI5gQwXlw,1356
+sso_tools/verify.py,sha256=y2gEdGP0tkJ7T1rw5vFEfYjvg12i9-06QrRFzBs7p98,1370
+sso_tools-0.1.20.dist-info/METADATA,sha256=1kWclNUn-8-VTTnUfI8bQErd3zx12pAj1Iw3djVZjrU,624
+sso_tools-0.1.20.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+sso_tools-0.1.20.dist-info/top_level.txt,sha256=zhXm25KFH14B-JUokcvPW-iMLf-09jnaTQ7VipwkRng,10
+sso_tools-0.1.20.dist-info/RECORD,,
