@@ -1,0 +1,2 @@
+[console_scripts]
+jinja_compose = jinja_compose_wrapper:main
