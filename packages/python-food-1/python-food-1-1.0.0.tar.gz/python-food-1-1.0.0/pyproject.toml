@@ -1,0 +1,6 @@
+[project]
+name = "python-food-1"
+version = "1.0.0"
+dependencies = [
+	"click"
+]

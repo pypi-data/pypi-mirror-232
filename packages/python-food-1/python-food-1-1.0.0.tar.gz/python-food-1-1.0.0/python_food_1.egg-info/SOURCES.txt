@@ -1,0 +1,12 @@
+README.rst
+pyproject.toml
+setup.cfg
+setup.py
+python_food_1.egg-info/PKG-INFO
+python_food_1.egg-info/SOURCES.txt
+python_food_1.egg-info/dependency_links.txt
+python_food_1.egg-info/requires.txt
+python_food_1.egg-info/top_level.txt
+src/CLINIC.py
+src/__init__.py
+src/DATA/DATA.HTML
