@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "sageai"
+version = "0.1.0"
+description = "Advanced Python Integration for OpenAI Functions with File-based functions and Pydantic"
+authors = ["Samanimkr <Samanimkr@outlook.com>"]
+license = "MIT"
+readme = "README.md"
+keywords = ["python", "openai", "functions", "chatgpt", "gpt4", "genai"]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
