@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: hqporner-api
+Version: 0.1
+Summary: A Python API for the Porn Site HQPorner.com
+Home-page: https://github.com/EchterAlsFake/hqporner_api
+Author: EchterAlsFake | Johannes Habel
+Author-email: EchterAlsFake@proton.me
+License: LGPLv3
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)
+Classifier: Programming Language :: Python
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: tqdm
+Requires-Dist: requests
+Requires-Dist: bs4
+
