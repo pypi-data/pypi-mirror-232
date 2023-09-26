@@ -1,0 +1,11 @@
+ai_changelog/__init__.py,sha256=2mUOI3bjN9Szh514hRsDwFNj3Fz2hj-YWi57etI_OGM,278
+ai_changelog/__main__.py,sha256=2TdV5sVaLlVDK4RFWHN_DAV3dStiooVki4y9Uwot3xs,1235
+ai_changelog/pydantic_models.py,sha256=jevA8DobDdN5eqptAalDNlzjo6YIKuezrRcB3hLAgrI,2156
+ai_changelog/string_templates.py,sha256=IIAzq6ZVOW6vDKqUr6nWoOLgwhB6QK_cpATAULhi6HI,496
+ai_changelog/utils.py,sha256=oZCgjuocHWIjniRF4kzyX2A7qWoCQGXtp4NPXL-gHqY,4332
+ai_changelog-0.0.8.dist-info/LICENSE,sha256=8ECckSDpfqsmucctxkkijUcyru4wBM-2rTy8C7x1Hik,1079
+ai_changelog-0.0.8.dist-info/METADATA,sha256=A6FbTYMUwjkhGtqeddHKsDVZbbshkLCUruNGKbHgvMI,4901
+ai_changelog-0.0.8.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+ai_changelog-0.0.8.dist-info/entry_points.txt,sha256=K0Fj_pYeTjJ0lyefbE55nFe2EbjAtN5wVQeSHNb1RMM,60
+ai_changelog-0.0.8.dist-info/top_level.txt,sha256=I_k67FooMihEHnu89pJqlltYwtdQpfrkhGzdIIIHPkI,13
+ai_changelog-0.0.8.dist-info/RECORD,,
