@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+sfti_net/__init__.py
+sfti_net/send.py
+sfti_net/watch.py
+sfti_net.egg-info/PKG-INFO
+sfti_net.egg-info/SOURCES.txt
+sfti_net.egg-info/dependency_links.txt
+sfti_net.egg-info/entry_points.txt
+sfti_net.egg-info/requires.txt
+sfti_net.egg-info/top_level.txt
+tests/test_api.py
+tests/test_cli.py
