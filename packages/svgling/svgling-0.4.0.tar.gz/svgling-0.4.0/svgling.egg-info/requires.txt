@@ -1,0 +1,4 @@
+svgwrite
+
+[Conversion]
+cairosvg>=2.7.0
