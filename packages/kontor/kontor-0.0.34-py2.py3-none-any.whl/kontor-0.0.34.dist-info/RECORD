@@ -1,0 +1,12 @@
+kontor/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+kontor/applicant.py,sha256=gkdQLVYTWlEGIQCvgpwKuo9_DbZWWNsDAYVgM9yAVq4,13532
+kontor/bureau.py,sha256=TGPkJ2636buyF48rrSmCnfrIM6J7mRRRVqrMhLrYKrg,13038
+kontor/clerk.py,sha256=Lox78If16nSTpyzctrsThCxfDyVSGIq8V86acKWhYJM,24152
+kontor/defines.py,sha256=-esvXVXni4rmQty76ZT-wCHu5vn9uvATDsNbOU4yDGk,8504
+kontor/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+kontor-0.0.34.dist-info/LICENSE,sha256=imddkRSBuxQ5M3yoUwq7p45eyjByQlMIDQgho8UPEMQ,1499
+kontor-0.0.34.dist-info/METADATA,sha256=lUS2dUVlXrFgl8o4H89eeHQKWJdUSffNS-M98v4haM8,5809
+kontor-0.0.34.dist-info/WHEEL,sha256=iYlv5fX357PQyRT2o6tw1bN-YcKFFHKqB_LwHO5wP-g,110
+kontor-0.0.34.dist-info/top_level.txt,sha256=a-Z_f9g2nEkJ_jyiltxmXW9Z1OxeK6DVlW5aM8Tolxw,7
+kontor-0.0.34.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+kontor-0.0.34.dist-info/RECORD,,
