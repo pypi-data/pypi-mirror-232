@@ -1,0 +1,10 @@
+LICENSE.md
+README.md
+pyproject.toml
+src/potee/__init__.py
+src/potee/main.py
+src/potee/testing.py
+src/potee.egg-info/PKG-INFO
+src/potee.egg-info/SOURCES.txt
+src/potee.egg-info/dependency_links.txt
+src/potee.egg-info/top_level.txt
