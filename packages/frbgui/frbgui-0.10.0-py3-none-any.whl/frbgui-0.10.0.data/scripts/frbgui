@@ -1,0 +1,5 @@
+#!python
+
+import frbgui, os
+
+frbgui.frbgui(datadir=os.getcwd())
