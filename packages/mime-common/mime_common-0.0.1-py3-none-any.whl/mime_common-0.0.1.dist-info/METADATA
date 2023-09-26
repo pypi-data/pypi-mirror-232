@@ -1,0 +1,57 @@
+Metadata-Version: 2.1
+Name: mime-common
+Version: 0.0.1
+Summary: Some reusable libraries for properties, logging, console, etc
+Home-page: https://www.vegvesen.no
+Author: Bjørne Malmanger
+Author-email: bjorne.malmanger@vegvesen.no
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: blessings (~=1.7)
+Requires-Dist: pysmb (~=1.2.9.1)
+Provides-Extra: dev
+Requires-Dist: pytest (>=3.7) ; extra == 'dev'
+
+# Mime Common
+
+An package containing misc helper libraries for projects
+
+* console - contains Console class for terminal output including som coler support
+* logg - A logging wrapper that do some standardisation
+
+## Installation
+
+Run the following to install:
+
+```python
+pip install mime-common
+```
+
+## Usage
+
+```python
+from console import Console
+
+cons = Console(use_colors=True)
+
+cons.green("Hello World")
+```
+
+# Developing Mime Common
+
+To install Mime Common, along with the tools you need to develop and run tests, run the following in your virtualenv:
+
+```bash
+$ pip install -e .[dev]
+```
+
+
+
