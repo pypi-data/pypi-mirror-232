@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: ilollekhelperlib
+Version: 1
+Summary: Small functions that I commonly use in my Scripts 
+Home-page: https://github.com/iLollek/ilollekhelperlib
+Download-URL: https://github.com/iLollek/ilollekhelperlib/archive/refs/tags/1.tar.gz
+Author: iLollek
+Author-email: loris_06@yahoo.de
+License: MIT
+Keywords: helpful,textutils,common
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+License-File: LICENSE.txt
