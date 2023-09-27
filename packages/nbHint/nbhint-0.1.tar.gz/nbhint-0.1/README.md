@@ -1,0 +1,53 @@
+# nbcheck
+## Instructions how to use nbcheck:
+1. Import NbHint and GetCellContent from the module
+2. To get the code from the answer cells you need to use GetCellContent:
+   --> GetCellContent takes the path and the filename as arguments:
+        - nbk_cells = GetCellContent(path:str,filname:str)
+4. If you want the solution out of a spesific cell, you nedd to call the method get_cell_by_id from the GetCellContent class.
+   This method takes as argument the id of the wanted cell as string:
+   --> current_cell = nbk_cells.get_cell_by_id(cell_id:str)
+5. Now the code can be checked for specific content:
+   - check_for: for_check = current_cell.check_for() --> checks if a for-loop is defined
+   - check_if: if_check = current_cell.check_if(only_if : Bool, with_else : Bool, with_elif : Bool)
+          - only_if, with_else, with_elif are set to False by default
+          - to check one of them it has to be set to True
+   - check_varnames: var_check = current_cell.check_varnames(varnames:list)
+          - takes a list of the names of variable which should be checked as strings
+   - check_slicing: slice_check = current_cell.check_slicing() --> checks if the slicing method is used
+   - check_expr: expr = currrent_cell.check_expr(expr:list)
+          - takes a list of the expretions
+          - expretions: print(), append(), insert(), remove()
+   - check_split: split_check = current_cell.check_split() --> checks if the split method is used
+   - check_assign_func: assign_func = current_cell.check_assign_func(alowed:list, not_allowed:list)
+          - takes two lists as arguments: one with the functions which are allowed to use and the other with the functions which are not allowed to use.
+          - The items of these two list have to be strings
+          - functions could be range(), len() but also np.mean()
+   - check_import: import_check = current_cell.check_import(allowed:list, not_allowed:list)
+          - takes two lists as arguments: one with the modules which are allowed and the other with the modules which are not allowed
+          - if the allowed list is empty, than no imports are allowed in this task
+          - It is possible to check submodules, in this case the name of the main module has to be in one of the two lists
+   - check_function: function_check = current_cell.check_function(args:list, with_return : Bool)
+          - takes a list with the needed arguments of the function and if the function should have a return or not
+          - the items of the args-list have to be strings
+          - with_return is set to False as default
+
+## Feature Developmentideas
+#### For-Check:
+1. Check which iteration option was used
+     --> for node in child; for x in range(...)
+
+#### If-Elif-Else-Check:
+1. Extension that allows multiple If,Elif,Else checks --> currently only 1 permitted at a time
+2. Whether the statement block is correctly defined with the correct variable
+
+#### Variable-Check:
+1. Check the type of variable
+
+#### Slicing-Check:
+1. Specify range of values ​​and check
+      --> should be taken from metadata, or if it is possible to run a hidden cell in the notebook
+
+#### Split-Check:
+1. check the delimitor
+        -->  should be taken from metadata, or if it is possible to run a hidden cell in the notebook

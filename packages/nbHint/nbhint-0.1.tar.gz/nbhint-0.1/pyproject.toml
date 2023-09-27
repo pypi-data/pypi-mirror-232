@@ -1,0 +1,30 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "nbHint"
+version = "0.1"
+authors = [
+  { name="Felix Meixner", email="e12027400@student.tuwien.ac.at"},
+  { name="Sebastian Mikolka-Flöry", email="sebastian.mikolka@geo.tuwien.ac.at"}
+]
+description = "Python package to check structure of python code building upon AST."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = ["nbformat"]
+
+[project.urls]
+"Homepage" = "https://github.com/smfloery/nbHint"
+"Bug Tracker" = "https://github.com/smfloery/nbHint/issues"
+
+[tool.hatch.build]
+include = [
+  "nbhint/*.py",
+  "examples"
+]
