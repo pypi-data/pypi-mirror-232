@@ -1,0 +1,56 @@
+Metadata-Version: 2.1
+Name: venv-test-wzc
+Version: 1.0.2
+Summary: a python package for ... 
+Author: 
+Author-email: 
+Keywords: python,venv_test_wzc
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+
+
+# venv_test_wzc
+
+[![Downloads](https://static.pepy.tech/badge/dumb-menu)](https://pepy.tech/project/dumb-menu)
+
+这是一个用验证PIPY上传及下载的工程
+
+
+## Installation
+
+```
+pip install venv_test_wzc
+```
+
+
+## Usage
+
+example:
+
+
+another example:
+
+
+## Get help
+
+
+## Update log
+
+`1.0.1` Secondary release
+
+`1.0.0` first release
+
+## how to upload a new version (for me)
+
+
+> make sure have twine installed first
+
+1. change `setup.py`
+2. testing `python3 setup.py develop`
+3. `python3 setup.py sdist`
+4. `twine upload dist/*`

@@ -1,0 +1,6 @@
+README.md
+setup.py
+venv_test_wzc.egg-info/PKG-INFO
+venv_test_wzc.egg-info/SOURCES.txt
+venv_test_wzc.egg-info/dependency_links.txt
+venv_test_wzc.egg-info/top_level.txt
