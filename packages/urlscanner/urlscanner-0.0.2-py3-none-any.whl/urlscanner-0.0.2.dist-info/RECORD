@@ -1,0 +1,7 @@
+urlscanner/__main__.py,sha256=cZeUMnf59WwTE7MpCCXx7CpWex65vMkFswDFvfmT2qs,4240
+urlscanner/client.py,sha256=uKq2mcVg0l8JkuBXEd9DJQUWQY6z-icEnWZdfu1IID4,5911
+urlscanner/iomanager.py,sha256=rhAG95MofSFM573akIe6O120gbug6CTGzAxm_s2O_08,4971
+urlscanner/util.py,sha256=tG5v0HKzL0dCuEmwWXlisupg4Ca0huoc0KtdTNLuRtg,1908
+urlscanner-0.0.2.dist-info/METADATA,sha256=29z4UIhJ9UV9JM4M3giXMMq8CFP_FoHrl6sy4Y6sE6g,5283
+urlscanner-0.0.2.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+urlscanner-0.0.2.dist-info/RECORD,,
