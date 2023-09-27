@@ -1,0 +1,1 @@
+from .aws_secrets_manager_store import AWSSecretsManagerStore
