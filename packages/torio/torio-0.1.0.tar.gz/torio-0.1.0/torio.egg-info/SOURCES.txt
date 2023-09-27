@@ -1,0 +1,8 @@
+MANIFEST.in
+README.md
+setup.py
+torio/__init__.py
+torio.egg-info/PKG-INFO
+torio.egg-info/SOURCES.txt
+torio.egg-info/dependency_links.txt
+torio.egg-info/top_level.txt
