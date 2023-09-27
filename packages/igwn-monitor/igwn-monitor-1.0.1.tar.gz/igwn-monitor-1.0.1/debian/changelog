@@ -1,0 +1,20 @@
+igwn-monitor (1.0.1-1) unstable; urgency=low
+
+  * update to 1.0.1
+  * correct X-Python3-Version
+  * add watch file
+  * add patch to fix Python metadata for python3-kerberos
+  * add python3-importlib-resources requirement for subpackages
+  * monitoring-plugins-igwn-cvmfs: add missing subpackage
+  * mointoring-plugins-igwn-docdb: add missing subpackage
+  * monitoring-plugins-igwn-gwdatafind: install check_data_availability
+  * monitoring-plugins-igwn-kerberos: add missing subpackage
+  * monitoring-plugins-igwn-scitoken: install check_gettoken
+
+ -- Duncan Macleod <duncan.macleod@ligo.org>  Thu, 31 Aug 2023 09:00:00 +0100
+
+igwn-monitor (1.0.0-1) unstable; urgency=low
+
+  * first release of this project
+
+ -- Duncan Macleod <duncan.macleod@ligo.org>  Thu, 31 Aug 2023 09:00:00 +0100
