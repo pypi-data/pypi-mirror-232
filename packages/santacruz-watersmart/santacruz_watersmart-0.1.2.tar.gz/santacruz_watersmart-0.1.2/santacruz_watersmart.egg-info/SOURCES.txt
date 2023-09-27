@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+santacruz_watersmart/__init__.py
+santacruz_watersmart/client.py
+santacruz_watersmart/exceptions.py
+santacruz_watersmart/parsers.py
+santacruz_watersmart/sqlite.py
+santacruz_watersmart/storage_class.py
+santacruz_watersmart.egg-info/PKG-INFO
+santacruz_watersmart.egg-info/SOURCES.txt
+santacruz_watersmart.egg-info/dependency_links.txt
+santacruz_watersmart.egg-info/requires.txt
+santacruz_watersmart.egg-info/top_level.txt
