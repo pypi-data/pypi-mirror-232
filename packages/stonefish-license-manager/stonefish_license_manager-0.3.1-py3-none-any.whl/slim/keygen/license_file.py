@@ -1,0 +1,1 @@
+from .._agg import _IZxoC as LicenseFile, _OKNwH as check_out_license_file, _zsX3z as BadSignatureError, _NkVXw as Verifier, _ATFPw as LicenseError, _6euGv as assert_datetime_integrity, _8UE96 as fromisoformat, _rzESE as safeget, _3nkHg as license_dir, _nDkny as remove_prefix_suffix, _Mw1Jk as OfflineLicense, _0788c as OnlineLicense
