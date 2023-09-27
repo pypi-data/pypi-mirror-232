@@ -1,0 +1,9 @@
+utils_git/Git.py,sha256=oEeJFrH3gZ6BqzPgP-gxP1-I29gUGoae1y-95gcwCBE,131
+utils_git/GitReadOnly.py,sha256=TwmrTTyD9VMQmHaAW6dsplmKLLKnVcZAVqDVaq4u5no,1786
+utils_git/GitWrite.py,sha256=CrwvaSurh8E313l06dRFyEzseqaVbiCVm9m658HP4W8,260
+utils_git/__init__.py,sha256=wo5UIvX0TZJtwtF-e-j1lEvkWJuxVlChaJd5-9oLIEk,30
+utils_git_nuuuwan-1.0.0.dist-info/LICENSE,sha256=KG3ExLEKukwXjaQl36e36AZApEZ-oaoDNGQ-MIngbt4,1075
+utils_git_nuuuwan-1.0.0.dist-info/METADATA,sha256=4Lkbt_d0SQ_0z09VFxzzZdJGCesb5OEFcO2VuJ4c_R4,501
+utils_git_nuuuwan-1.0.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+utils_git_nuuuwan-1.0.0.dist-info/top_level.txt,sha256=BI6KCU24AOMvLowQugji17h_M4T2l_G0_2gG4Cos5c4,10
+utils_git_nuuuwan-1.0.0.dist-info/RECORD,,
