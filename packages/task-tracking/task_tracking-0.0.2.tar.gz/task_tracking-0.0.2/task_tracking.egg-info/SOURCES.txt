@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+settings.ini
+setup.py
+task_tracker/__init__.py
+task_tracker/_modidx.py
+task_tracker/interfaces.py
+task_tracker/trial_components.py
+task_tracker/utils.py
+task_tracking.egg-info/PKG-INFO
+task_tracking.egg-info/SOURCES.txt
+task_tracking.egg-info/dependency_links.txt
+task_tracking.egg-info/entry_points.txt
+task_tracking.egg-info/not-zip-safe
+task_tracking.egg-info/requires.txt
+task_tracking.egg-info/top_level.txt

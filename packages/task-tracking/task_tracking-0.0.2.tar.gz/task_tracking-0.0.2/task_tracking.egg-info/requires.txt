@@ -1,0 +1,12 @@
+numpy
+matplotlib
+seaborn
+ipywidgets
+speechrecognition
+scipy
+sounddevice
+jupyter
+pandas
+
+[dev]
+nbdev
