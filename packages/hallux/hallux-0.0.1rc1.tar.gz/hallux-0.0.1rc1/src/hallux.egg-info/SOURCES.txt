@@ -1,0 +1,16 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/hallux/__init__.py
+src/hallux/__version__.py
+src/hallux/auxilary.py
+src/hallux/main.py
+src/hallux.egg-info/PKG-INFO
+src/hallux.egg-info/SOURCES.txt
+src/hallux.egg-info/dependency_links.txt
+src/hallux.egg-info/entry_points.txt
+src/hallux.egg-info/not-zip-safe
+src/hallux.egg-info/requires.txt
+src/hallux.egg-info/top_level.txt
