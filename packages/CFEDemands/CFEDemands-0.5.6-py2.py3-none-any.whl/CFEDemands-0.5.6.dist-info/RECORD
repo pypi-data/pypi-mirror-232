@@ -1,0 +1,15 @@
+cfe/VERSION,sha256=9mm16Rg5AbeLCVLrcfj-VL3P-cw9FVcQxh4lvns1sFg,6
+cfe/__init__.py,sha256=FhTWA2K5LFf5jRL08h6ha-rQIzSIoKuHZVyDVHaFK98,342
+cfe/df_utils.py,sha256=73vGlvp4lcByZVOl0GAy1qnXcHHt0If3nVdMn5bFshQ,18675
+cfe/dgp.py,sha256=TV8l54xz9xhn4eXvtZupuPYfJAIvwC0gS9nJQE-71GQ,5576
+cfe/estimation.py,sha256=-81HSyAmauQzb4xTk-vaNEmG2GnbfT6JIyg01qUtXIU,41290
+cfe/input_files.py,sha256=RGSAMEoHYZFjBTxrihishZobwJllLUKK1FuxEMoheik,3409
+cfe/regression.py,sha256=Z0lafNpNCaujDissrTxTRvGosOUJyHQaH_cg6_o7NW0,60923
+cfe/requirements.txt,sha256=xeoEHbG6vJc9y39bJs2a6N_00tuWn0pQs8ajoBwt4AM,292
+cfe/result.py,sha256=CVBPFoDaYYCzYgZHo3zNwPSWRdlHdFnH3w5THotzqSE,32526
+CFEDemands-0.5.6.dist-info/LICENSE.txt,sha256=qImFXcRJwxIHS80FE7uOx6FhmLY8apd4Y12aR54QU7w,282
+CFEDemands-0.5.6.dist-info/METADATA,sha256=BU73mH8LMJf_eXBpguzifcLpnyzVfgIJboUjn8TQkzo,1742
+CFEDemands-0.5.6.dist-info/WHEEL,sha256=iYlv5fX357PQyRT2o6tw1bN-YcKFFHKqB_LwHO5wP-g,110
+CFEDemands-0.5.6.dist-info/top_level.txt,sha256=etC2dNVXYICGmvCQqDBiRYt8P7vL4qCSwlCv1rmCqGs,4
+CFEDemands-0.5.6.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+CFEDemands-0.5.6.dist-info/RECORD,,
