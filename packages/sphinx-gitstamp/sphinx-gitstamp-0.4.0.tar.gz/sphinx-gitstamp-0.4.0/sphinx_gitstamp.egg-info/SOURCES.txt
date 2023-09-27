@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.rst
+pyproject.toml
+setup.cfg
+setup.py
+sphinx_gitstamp/__init__.py
+sphinx_gitstamp.egg-info/PKG-INFO
+sphinx_gitstamp.egg-info/SOURCES.txt
+sphinx_gitstamp.egg-info/dependency_links.txt
+sphinx_gitstamp.egg-info/requires.txt
+sphinx_gitstamp.egg-info/top_level.txt
+tests/conftest.py
+tests/test_simple.py
+tests/roots/test-root/conf.py
