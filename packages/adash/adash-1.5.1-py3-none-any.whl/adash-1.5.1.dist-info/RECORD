@@ -1,0 +1,10 @@
+adash/__init__.py,sha256=1a4_rLqMFJl4wfdy2Bbivu0RWLmOiwgOeHSnMkfTQPs,385
+adash/collection_util.py,sha256=5t-Dj1ScFEWWF5zFEJWCwHJT9viP3EdlShtopzJINQ4,2177
+adash/date_util.py,sha256=Mo5q_NBKOA9sb0-S-iM366fipHngnV-f__LXJ3rdGQw,1163
+adash/file_util.py,sha256=hZaWNICrpnPczxN5wFfAZOQo8GtrnvtvwE3ZGw-OWHY,2381
+adash/proportion.py,sha256=5gxrKOTinGmIWXw_MOFE2V4x4THyhzb7ZZyzCHPVpLk,1610
+adash/string_util.py,sha256=Gpc3aIHF3c-rtMg3a0nWUYox9Vv1r4peFZVk0FaenrA,4416
+adash-1.5.1.dist-info/METADATA,sha256=1AV4jrzDdHefw0Pkp9PNHGoHeuoY48dkoKV7xYjwskk,964
+adash-1.5.1.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+adash-1.5.1.dist-info/licenses/LICENSE,sha256=unajP-tBkaVZyQzsZk1HbZ8sB_hIP6JEvJYXqYBPKoA,1064
+adash-1.5.1.dist-info/RECORD,,
