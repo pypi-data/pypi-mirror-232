@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/postgresql_fastquery.egg-info/PKG-INFO
+src/postgresql_fastquery.egg-info/SOURCES.txt
+src/postgresql_fastquery.egg-info/dependency_links.txt
+src/postgresql_fastquery.egg-info/requires.txt
+src/postgresql_fastquery.egg-info/top_level.txt
