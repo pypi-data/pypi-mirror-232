@@ -1,0 +1,7 @@
+django-cms~=3.11
+djangocms-aldryn-forms~=7.0
+djangocms-oidc~=4.0
+
+[quality]
+isort
+flake8
