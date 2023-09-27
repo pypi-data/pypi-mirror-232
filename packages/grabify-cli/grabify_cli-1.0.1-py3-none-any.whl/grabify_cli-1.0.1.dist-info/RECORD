@@ -1,0 +1,10 @@
+grabify_cli/__init__.py,sha256=y7kOT4x8TY9o046Ezh-bezLCc1UxRMnIJLYRRylSU4c,278
+grabify_cli/__main__.py,sha256=gTm9bweTJDRfZfx1OX8LkFnpGXabGunJBwU4scwInSI,548
+grabify_cli/cli.py,sha256=W2Rm5-V7m91XodTmJbLa9HeYMLB2i0UeaEpFZjYlRsI,3250
+grabify_cli/config.py,sha256=DUCNoAOjYZBhz4GkOaVxKsIXwRBG4_foLXZamhhSHqw,344
+grabify_cli/utils.py,sha256=J5AwMlj6OW37h4WNFLmFb7fr9GRgdaQn4MKPnBm9rns,2382
+grabify_cli-1.0.1.dist-info/METADATA,sha256=sUeb8M0cRsA1FU1gA0wV19AFrKL3Jtz3_LZMUrOUHiw,3090
+grabify_cli-1.0.1.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+grabify_cli-1.0.1.dist-info/entry_points.txt,sha256=zJ0ET7AJaKiZCsdtdTO74RhclyiWYb2Y0y-CE-xOx24,58
+grabify_cli-1.0.1.dist-info/licenses/LICENSE,sha256=KzYa7unPCMdsFW5c_bzBOTyqr81FKd_Hck4ssJMDn1g,1086
+grabify_cli-1.0.1.dist-info/RECORD,,
