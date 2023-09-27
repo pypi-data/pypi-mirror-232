@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: 4d-radar
+Version: 0.1.0
+Summary: 
+Author: Adithya Balaji
+Author-email: adithya.b94@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Description-Content-Type: text/markdown
+
+# 4D Radar
+
+4d_radar is a Python package developed to house utilities for the processing and analysis of 4D radar point cloud data.
+
+## Features
+
+Work in Progress
+
+## Contributing
+
+Contributions to 4d_radar are welcome!
+
+## License
+
+4d_radar is licensed under the MIT License.
+
