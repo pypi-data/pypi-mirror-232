@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.rst
+pytest_collect_pytest_interinfo.py
+setup.py
+pytest_collect_pytest_interinfo.egg-info/PKG-INFO
+pytest_collect_pytest_interinfo.egg-info/SOURCES.txt
+pytest_collect_pytest_interinfo.egg-info/dependency_links.txt
+pytest_collect_pytest_interinfo.egg-info/entry_points.txt
+pytest_collect_pytest_interinfo.egg-info/requires.txt
+pytest_collect_pytest_interinfo.egg-info/top_level.txt
+tests/test_collect_pytest_interinfo.py
