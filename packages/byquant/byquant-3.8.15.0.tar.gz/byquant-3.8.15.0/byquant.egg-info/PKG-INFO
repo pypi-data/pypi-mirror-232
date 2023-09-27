@@ -1,0 +1,54 @@
+Metadata-Version: 2.1
+Name: byquant
+Version: 3.8.15.0
+Summary: ByQuant.com is AI Quantitative Strategy Competition Training Community
+Home-page: https://byquant.com
+Author: Uakeey
+Author-email: uakee@outlook.com
+License: GPL
+Project-URL: Homepage, https://byquant.com
+Keywords: quant,strategy,algorithmic,algotrading
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Financial and Insurance Industry
+Classifier: Intended Audience :: Information Technology
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Topic :: Office/Business :: Financial :: Investment
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: JavaScript
+Classifier: Operating System :: OS Independent
+Classifier: Environment :: Console
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: pandas
+Requires-Dist: quantstats
+Requires-Dist: IPython
+Requires-Dist: tushare
+Requires-Dist: akshare
+Requires-Dist: baostock
+Requires-Dist: ccxt>=4.0.43
+Requires-Dist: alpaca-py
+Requires-Dist: backtrader
+Requires-Dist: mplfinance
+
+ByQuant.com
+
+Install:
+pip install byquant==*
+
+Windows:
+ByQuant 3.8.x.0 for Python 3.8.n
+ByQuant 3.9.x.0 for Python 3.9.n
+ByQuant 3.10.x.0 for Python 3.10.n
+ByQuant 3.11.x.0 for Python 3.11.n
+
+For other versions, please contact us via email for information.
+Support Windows, Linux, Mac
