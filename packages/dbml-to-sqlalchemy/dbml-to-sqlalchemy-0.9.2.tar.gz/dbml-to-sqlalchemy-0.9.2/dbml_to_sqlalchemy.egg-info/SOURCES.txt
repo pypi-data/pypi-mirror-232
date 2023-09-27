@@ -1,0 +1,16 @@
+AUTHORS.txt
+CHANGES.md
+CLASSIFIERS.txt
+MANIFEST.in
+README.md
+REQUIREMENTS.txt
+setup.py
+dbml_to_sqlalchemy/__init__.py
+dbml_to_sqlalchemy/main.py
+dbml_to_sqlalchemy.egg-info/PKG-INFO
+dbml_to_sqlalchemy.egg-info/SOURCES.txt
+dbml_to_sqlalchemy.egg-info/dependency_links.txt
+dbml_to_sqlalchemy.egg-info/not-zip-safe
+dbml_to_sqlalchemy.egg-info/requires.txt
+dbml_to_sqlalchemy.egg-info/top_level.txt
+dbml_to_sqlalchemy/mymodel/__init__.py
