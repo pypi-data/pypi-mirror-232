@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: wootrade-sdk
+Version: 0.1.0
+Summary: 
+Author: Akagi201
+Author-email: akagi201@gmail.com
+Requires-Python: >=3.11,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: aiohttp (>=3.8.5,<4.0.0)
+Requires-Dist: black (>=23.9.1,<24.0.0)
+Requires-Dist: pytest (>=7.4.2,<8.0.0)
+Requires-Dist: requests (>=2.31.0,<3.0.0)
+Requires-Dist: websockets (>=11.0.3,<12.0.0)
+Description-Content-Type: text/markdown
+
+# wootrade-sdk-py
+
+api doc: <https://docs.woo.org/#general-information>
+
+Fork from <https://github.com/wanth1997/python-wooX> to make it work.
+
+## Install dep
+
+```sh
+poetry add wootrade_sdk
+```
+
+## Usage
+
+```sh
+poetry install
+poetry shell # enter the virtual env
+black . # format code
+cd examples
+python get_all_symbols_price_change_percentage.py
+```
+
