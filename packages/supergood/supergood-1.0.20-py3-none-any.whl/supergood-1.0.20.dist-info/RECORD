@@ -1,0 +1,16 @@
+supergood/__init__.py,sha256=RadCdheytfCO4e3dfo48Lfe92vQ5uvdmdvfRE1WIbk8,49
+supergood/api.py,sha256=SuJ6ihqqPOQvl4OCk0yZdukFJ1oVGgdUKLt72sFS5Xw,1346
+supergood/client.py,sha256=X6X1Yd8sSUrHb0jNZO7ZvPm41SbKitGeocTktFMNb2c,7455
+supergood/constants.py,sha256=uvgLLPvuW0IK92vlkho77XhElK9KNiWcuVASvbXU-K8,1177
+supergood/helpers.py,sha256=zzQPgYq_xnWXUmjqH2EET-DMeCSPaqAs_nn9y08Hn58,2972
+supergood/logger.py,sha256=iiTSAjW4h-XQXUsSBonRbmQlpmG5D9IXacpRuHeMEis,725
+supergood/vendors/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+supergood/vendors/aiohttp.py,sha256=v1NxsvON-lsm2M3I34_G1XS3Kd17f-kkoRU89rzE1pw,1305
+supergood/vendors/http.py,sha256=CkhCgrPXen1Zo79tO4llQ5HMiRQcYDApUdrntqMGBFo,2081
+supergood/vendors/requests.py,sha256=w9x93nMvbTSAu-_wFT_GNoQQ28UOyZ7NnzeDdinvIFo,446
+supergood/vendors/urllib3.py,sha256=zNkZghDCnBrvbjNKxmjtDFolKYZ7q_jM6rQbjQoSMM4,1063
+supergood-1.0.20.dist-info/LICENSE,sha256=Z1GESILt9qaseLBFNaWVJMNbqnwpcOGThbKA-suKYgE,4714
+supergood-1.0.20.dist-info/METADATA,sha256=pBHuETQKlZfVboMzbfLcnmGpJtdWvrIwPYllXspqWW8,2277
+supergood-1.0.20.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+supergood-1.0.20.dist-info/top_level.txt,sha256=ZHXREMK0k5eTycJTFk8BPPzLv8Gcpj7lLasBTVEVSPE,10
+supergood-1.0.20.dist-info/RECORD,,
