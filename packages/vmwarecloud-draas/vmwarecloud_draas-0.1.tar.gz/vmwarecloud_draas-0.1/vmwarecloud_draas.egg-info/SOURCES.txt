@@ -1,0 +1,7 @@
+README.md
+setup.cfg
+setup.py
+vmwarecloud_draas.egg-info/PKG-INFO
+vmwarecloud_draas.egg-info/SOURCES.txt
+vmwarecloud_draas.egg-info/dependency_links.txt
+vmwarecloud_draas.egg-info/top_level.txt
