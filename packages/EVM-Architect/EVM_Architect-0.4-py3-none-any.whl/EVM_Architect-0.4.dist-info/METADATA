@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: EVM-Architect
+Version: 0.4
+Summary: Returns the architecture of a DeFi application with any given address
+Home-page: https://github.com/davidthegardens/EVM_Architect
+Author: David Desjardins
+Author-email: david.thegardens@gmail.com
+License: UNKNOWN
+Keywords: DeFi,Ethereum,Data,Smart Contracts,EVM
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: Python Software Foundation License
+Requires-Dist: requests ==2.31.0
+Requires-Dist: mythril ==0.23.25
+Requires-Dist: web3 ==5.31.1
+
+UNKNOWN
+
+
