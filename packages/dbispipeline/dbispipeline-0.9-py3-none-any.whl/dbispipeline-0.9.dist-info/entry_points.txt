@@ -1,0 +1,4 @@
+[console_scripts]
+dbispipeline=dbispipeline.cli.main:main
+dp=dbispipeline.cli.main:main
+
