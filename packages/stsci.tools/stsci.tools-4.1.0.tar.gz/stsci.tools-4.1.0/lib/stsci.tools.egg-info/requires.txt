@@ -1,0 +1,13 @@
+packaging
+numpy
+astropy>=5.0.4
+
+[docs]
+sphinx<7
+numpydoc
+sphinx_rtd_theme
+
+[test]
+pytest
+pytest-astropy-header
+pytest-doctestplus

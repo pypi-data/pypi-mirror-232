@@ -1,0 +1,12 @@
+documentation:
+  - .github/**/*.md
+  - .readthedocs.yml
+  - doc/**/*
+  - '*.md'
+  - any: ['*.rst', '!CHANGES.rst']
+
+tests:
+  - .bandit.yaml
+  - .github/**/*.yml
+  - conftest.py
+  - lib/stsci/tools/tests/**/*
