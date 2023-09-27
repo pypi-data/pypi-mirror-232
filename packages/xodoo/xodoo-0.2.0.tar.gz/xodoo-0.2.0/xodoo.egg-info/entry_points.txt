@@ -1,0 +1,2 @@
+[console_scripts]
+xodoo-migrate = xodoo.migration:main
