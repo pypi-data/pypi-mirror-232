@@ -1,0 +1,10 @@
+pip
+sphinx
+opencv-python
+numpy
+matplotlib
+myst-parser
+maturin
+patchelf
+linkify-it-py
+sphinx_rtd_theme

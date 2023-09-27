@@ -1,0 +1,28 @@
+[build-system]
+requires = ["maturin>=1.2.3"]
+build-backend = "maturin"
+
+[tool.maturin]
+python-source = "python"
+module-name = "actag.rust_impl"
+
+[project]
+name = "actag"
+version = "1.0.1"
+description = "AcTag: Opti-Acoustic Fiducial Markers for Underwater Localization and Mapping"
+license = "BSD-2-Clause"
+requires-python = ">=3.10"
+dependencies = [
+    "opencv-python",
+    "matplotlib",
+    "numpy",
+    "maturin",
+    "patchelf",
+]
+classifiers = [
+    "Programming Language :: Rust",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11"
+]

@@ -1,0 +1,198 @@
+kind: pipeline
+type: docker
+name: default
+
+steps:
+- name: Test Tag Family Generation
+  image: frekele/ant # Install ant for Java building
+  commands:
+  # Generate the tag family AcTag16h7 with images
+  - cd actag_families
+  - ./generateAcTags.sh -d 16 -h 7 -i
+  # Check that the family AND images were created
+  - find ../python/actag/generated_families/AcTag16h7.java
+  - find ./image_files/AcTag16h7/mosaic.png
+  - find ./image_files/AcTag16h7/tag16_07_00000.png
+  - find ./actag_files_for_apriltag/AcTag16h7/tagAcTag16h7.c
+  - find ./actag_files_for_apriltag/AcTag16h7/tagAcTag16h7.h
+  # Delete generated files
+  - rm ../python/actag/generated_families/AcTag16h7.java
+  - rm -rf ./image_files/AcTag16h7/
+  - rm -rf ./actag_files_for_apriltag/AcTag16h7/
+  depends_on:
+  - clone
+
+### Test Python 3.10
+
+- name: Quick Test Python 3.10
+  image: python:3.10
+  when:
+    branch:
+      exclude:
+      - develop
+      - master
+  commands:
+  # Update packages
+  - apt-get update && apt-get install libgl1 -y
+  # Install Rust
+  - curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf --verbose | sh -s -- -y
+  - . "$HOME/.cargo/env"
+  # Update pip and install necessary dependencies
+  - pip install -U pip
+  - pip install -r requirements_drone.txt
+  # Build and install actag wheel
+  - cargo update
+  - maturin build --release
+  - pip install target/wheels/*cp310*.whl
+  # Run python tests
+  - python tests/test_cases.py
+  depends_on:
+  - Test Tag Family Generation
+
+- name: Test Python 3.10
+  image: python:3.10
+  when:
+    branch:
+    - develop
+    - master
+  environment:
+    RUN_EXTENSIVE_TESTS: "True"
+  commands:
+  # Update packages
+  - apt-get update && apt-get install libgl1 -y
+  # Install Rust
+  - curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf --verbose | sh -s -- -y
+  - . "$HOME/.cargo/env"
+  # Update pip and install necessary dependencies
+  - pip install -U pip
+  - pip install -r requirements_drone.txt
+  # Build and install actag wheel
+  - cargo update
+  - maturin build --release
+  - pip install target/wheels/*cp310*.whl
+  # Run python tests
+  - python tests/test_cases.py
+  depends_on:
+  - Test Tag Family Generation
+
+### Test Python 3.11
+
+- name: Quick Test Python 3.11
+  image: python:3.11
+  when:
+    branch:
+      exclude:
+      - develop
+      - master
+  commands:
+  # Update packages
+  - apt-get update && apt-get install libgl1 -y
+  # Install Rust
+  - curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf --verbose | sh -s -- -y
+  - . "$HOME/.cargo/env"
+  # Update pip and install necessary dependencies
+  - pip install -U pip
+  - pip install -r requirements_drone.txt
+  # Build and install actag wheel
+  - cargo update
+  - maturin build --release
+  - pip install target/wheels/*cp311*.whl
+  # Run python tests
+  - python tests/test_cases.py
+  depends_on:
+  - Test Tag Family Generation
+
+- name: Test Python 3.11
+  image: python:3.11
+  when:
+    branch:
+    - develop
+    - master
+  environment:
+    RUN_EXTENSIVE_TESTS: "True"
+  commands:
+  # Update packages
+  - apt-get update && apt-get install libgl1 -y
+  # Install Rust
+  - curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf --verbose | sh -s -- -y
+  - . "$HOME/.cargo/env"
+  # Update pip and install necessary dependencies
+  - pip install -U pip
+  - pip install -r requirements_drone.txt
+  # Build and install actag wheel
+  - cargo update
+  - maturin build --release
+  - pip install target/wheels/*cp311*.whl
+  # Run python tests
+  - python tests/test_cases.py
+  depends_on:
+  - Test Tag Family Generation
+
+### Upload the changes to PyPI, when commit is tagged (new release)
+
+- name: Tagged Test Python 3.10
+  image: python:3.10
+  when:
+    event:
+    - tag
+  environment:
+    RUN_EXTENSIVE_TESTS: "True"
+  commands:
+  # Update packages
+  - apt-get update && apt-get install libgl1 -y
+  # Install Rust
+  - curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf --verbose | sh -s -- -y
+  - . "$HOME/.cargo/env"
+  # Update pip and install necessary dependencies
+  - pip install -U pip
+  - pip install -r requirements_drone.txt
+  # Build and install actag wheel
+  - cargo update
+  - maturin build --release --sdist
+  - pip install target/wheels/*cp310*.whl
+  # Run python tests
+  - python tests/test_cases.py
+  depends_on:
+  - Quick Test Python 3.10
+
+- name: Tagged Test Python 3.11
+  image: python:3.11
+  when:
+    event:
+    - tag
+  environment:
+    RUN_EXTENSIVE_TESTS: "True"
+  commands:
+  # Update packages
+  - apt-get update && apt-get install libgl1 -y
+  # Install Rust
+  - curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf --verbose | sh -s -- -y
+  - . "$HOME/.cargo/env"
+  # Update pip and install necessary dependencies
+  - pip install -U pip
+  - pip install -r requirements_drone.txt
+  # Build and install actag wheel
+  - cargo update
+  - maturin build --release --sdist
+  - pip install target/wheels/*cp311*.whl
+  # Run python tests
+  - python tests/test_cases.py
+  depends_on:
+  - Quick Test Python 3.11
+
+- name: Publish to PyPI
+  image: python:3.10
+  when:
+    event:
+    - tag
+  environment:
+    username: 
+      from_secret: pypi_username
+    password:
+      from_secret: pypi_password
+  commands:
+  - pip install twine
+  - twine upload target/wheels/* --username $username --password $password
+  depends_on:
+  - Tagged Test Python 3.10
+  - Tagged Test Python 3.11

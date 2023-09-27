@@ -1,0 +1,29 @@
+# .readthedocs.yaml
+# Read the Docs configuration file
+# See https://docs.readthedocs.io/en/stable/config-file/v2.html for details
+
+# Required
+version: 2
+
+# Setup Build
+build:
+  os: ubuntu-20.04
+  tools:
+    rust: "1.64"
+    python: "3.10"
+  apt_packages:
+    - m4
+  jobs:
+    post_install:
+      # Install actag
+      - maturin build --release
+      - pip install target/wheels/*.whl
+
+# Install dependencies with Python
+python:
+  install:
+    - requirements: docs/requirements.txt
+
+# Build documentation in the docs/ directory with Sphinx
+sphinx:
+   configuration: docs/conf.py
