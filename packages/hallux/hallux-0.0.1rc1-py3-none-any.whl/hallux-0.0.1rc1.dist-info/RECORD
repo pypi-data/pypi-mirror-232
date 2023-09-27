@@ -1,0 +1,10 @@
+hallux/__init__.py,sha256=f1Ty9vXZxBaztLkUez1Zkhxm7fZ1RdKNjdAXvP2ADPs,31
+hallux/__version__.py,sha256=1mKgliMM_pK8pbjDQw1Z1cNQKi02q_1Nli_TvUOZdHM,23
+hallux/auxilary.py,sha256=-IS5p-ZG0_7N_YNRr-aFBkUW3NXRmD3fAFC-Fj6dyT8,841
+hallux/main.py,sha256=SKGXLYzVpUosBPKRfr5cQtHUR3R6gWIgeem0T5Ivb0c,8829
+hallux-0.0.1rc1.dist-info/LICENSE.txt,sha256=IvZfC6ZbP7CLjytoHVzvpDZpD-Z3R_qa1GdMdWlWQ6Q,35157
+hallux-0.0.1rc1.dist-info/METADATA,sha256=RcvyMaPK2n9oNcA2lQOt6R2X2dmYZrUgmqZibWsVqDY,43424
+hallux-0.0.1rc1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+hallux-0.0.1rc1.dist-info/entry_points.txt,sha256=N99-qM1a9xzpZ9wuQfR265jgRWjzARKASHCYRWNguJY,43
+hallux-0.0.1rc1.dist-info/top_level.txt,sha256=yz8XpQq7LZJNzhp9qa0XrbF7ObL4mkK4v1QyzSwL5Gc,7
+hallux-0.0.1rc1.dist-info/RECORD,,
