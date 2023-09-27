@@ -1,0 +1,6 @@
+[console_scripts]
+fdsnavail = fdsnwsscripts.fdsnavail:main
+fdsnws2sds = fdsnwsscripts.fdsnws2sds:main
+fdsnws2seed = fdsnwsscripts.fdsnws2seed:main
+fdsnws_fetch = fdsnwsscripts.fdsnws_fetch:main
+fdsnxml2arclink = fdsnwsscripts.fdsnxml2arclink:main
