@@ -1,0 +1,3 @@
+### User Guide
+
+Escribir aquí la guía para el usuario normal ...
