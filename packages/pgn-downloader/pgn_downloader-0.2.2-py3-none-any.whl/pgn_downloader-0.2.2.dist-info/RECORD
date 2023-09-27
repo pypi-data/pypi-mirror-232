@@ -1,0 +1,12 @@
+pgn_downloader/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pgn_downloader/__main__.py,sha256=ndKny90Ku2o1umqzQdx3hXKKhqI8_M9DWREkOQFeYG4,3205
+pgn_downloader/chess_com.py,sha256=BRvPfX2PGynho48yYgTK9m3TExvx_JiptJv9_lzZsO8,3306
+pgn_downloader/date_parser.py,sha256=KrI3ijROrIG35ANC70YeVbnen4yd_7gWAvFLE-n921s,4268
+pgn_downloader/lichess.py,sha256=xpTtuj8grkBr1gGE-RElkQnpChYmi_Pv0FTw31FZ-0E,1864
+pgn_downloader/version.py,sha256=mdAmYb9Q0luFTM6k23nuxDWipKzlMo8rccojh9cV40w,274
+pgn_downloader-0.2.2.dist-info/COPYING,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+pgn_downloader-0.2.2.dist-info/METADATA,sha256=cIA5hrNS75XH-NvU0ZA6wrpjT_ekukH3RAltzf3qdzo,3831
+pgn_downloader-0.2.2.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+pgn_downloader-0.2.2.dist-info/entry_points.txt,sha256=rMSKrFSCqt7uW45Lv55aYrhfIHkFCkNv8e14dSr3C8Y,64
+pgn_downloader-0.2.2.dist-info/top_level.txt,sha256=d5JOqwfkWefl_MaydoDDx8Y7kkRHw27N0sF1S3jk9BU,15
+pgn_downloader-0.2.2.dist-info/RECORD,,
