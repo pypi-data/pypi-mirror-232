@@ -1,0 +1,3 @@
+[console_scripts]
+adock=adock.main:async_main
+
