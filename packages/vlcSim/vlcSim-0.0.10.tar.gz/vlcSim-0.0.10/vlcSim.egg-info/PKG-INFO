@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: vlcSim
+Version: 0.0.10
+Summary: Python Package of Event-Oriented Simulation for visible light communication
+Home-page: https://gitlab.com/DaniloBorquez/simvlc/
+Author: Danilo Bórquez-Paredes
+Author-email: danilo.borquez.p@uai.cl
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+
+VLCSim is an Event-Oriented simulator package for Visible Light Communication.
+
+# Features
+
+- Dynamic Environment with in/out connections 
+- Flexible resource allocation algorithm 
+- Flexible VLC/room parameters
+
+
