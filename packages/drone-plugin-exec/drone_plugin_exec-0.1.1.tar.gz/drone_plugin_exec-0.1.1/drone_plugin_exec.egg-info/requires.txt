@@ -1,0 +1,11 @@
+PyNaCl
+GitPython
+typer
+docker
+
+[:python_version < "3.11"]
+toml
+
+[lint]
+isort
+flake8
