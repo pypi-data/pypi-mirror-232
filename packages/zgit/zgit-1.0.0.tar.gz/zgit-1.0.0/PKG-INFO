@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: zgit
+Version: 1.0.0
+Summary: A collection of git sync and analysis tools.
+Keywords: git,git graph
+Author-email: Intel Corp <wenyitang@outlook.com>
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Dist: dateparser
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Project-URL: Home, https://github.com/llteco/zgit
+
+# laZy GIT
+
