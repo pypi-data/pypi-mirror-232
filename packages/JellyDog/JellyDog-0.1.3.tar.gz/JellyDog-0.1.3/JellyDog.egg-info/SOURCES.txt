@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+JellyDog/__init__.py
+JellyDog.egg-info/PKG-INFO
+JellyDog.egg-info/SOURCES.txt
+JellyDog.egg-info/dependency_links.txt
+JellyDog.egg-info/not-zip-safe
+JellyDog.egg-info/requires.txt
+JellyDog.egg-info/top_level.txt
