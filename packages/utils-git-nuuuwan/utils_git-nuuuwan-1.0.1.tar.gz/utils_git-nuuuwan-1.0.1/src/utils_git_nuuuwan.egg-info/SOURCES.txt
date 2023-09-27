@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+src/utils_git/Git.py
+src/utils_git/GitReadOnly.py
+src/utils_git/GitWrite.py
+src/utils_git/__init__.py
+src/utils_git_nuuuwan.egg-info/PKG-INFO
+src/utils_git_nuuuwan.egg-info/SOURCES.txt
+src/utils_git_nuuuwan.egg-info/dependency_links.txt
+src/utils_git_nuuuwan.egg-info/requires.txt
+src/utils_git_nuuuwan.egg-info/top_level.txt
+tests/test_git.py
