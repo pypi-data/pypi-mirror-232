@@ -1,0 +1,11 @@
+tictacsync/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tictacsync/device_scanner.py,sha256=ObgT6pb4kzMwgRPkp7aeoSiFm8mBZuMOO8cAXH5mj1o,17868
+tictacsync/entry.py,sha256=Wkz8JH2dOM8ZHQMspl6-wY-MvBwxK1s51QqJ21w5mMQ,8758
+tictacsync/timeline.py,sha256=99lG2aQ7Bia34pjZbX2OZb60Fb_VAZHg6hg3eHaV-VQ,34745
+tictacsync/yaltc.py,sha256=Hy0SFQNZDtm_14XYXbn3uaNXcS9Mhrj2dB9DljQm2z0,66992
+tictacsync-0.1a7.dist-info/LICENSE,sha256=ZAOPXLh1zlQAnhHUd7oLslKM01YZ5UiAu3STYjwIxck,1068
+tictacsync-0.1a7.dist-info/METADATA,sha256=dRi1jpo-R0U4XHcl_ROu9vnk1Zkcdu-4NrWEtfFL57o,4255
+tictacsync-0.1a7.dist-info/WHEEL,sha256=pqI-DBMA-Z6OTNov1nVxs7mwm6Yj2kHZGNp_6krVn1E,92
+tictacsync-0.1a7.dist-info/entry_points.txt,sha256=7Ih9Xas4RWMDqt2adwXpt7x9j2YtXwj_jl-jNhkIArg,54
+tictacsync-0.1a7.dist-info/top_level.txt,sha256=eaCWG-BsYTRR-gLTJbK4RfcaXajr0gjQ6wG97MkGRrg,11
+tictacsync-0.1a7.dist-info/RECORD,,
