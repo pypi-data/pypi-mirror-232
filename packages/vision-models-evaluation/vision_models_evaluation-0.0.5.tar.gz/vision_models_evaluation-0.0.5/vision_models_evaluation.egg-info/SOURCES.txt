@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+settings.ini
+setup.py
+vision_models_evaluation/__init__.py
+vision_models_evaluation/_modidx.py
+vision_models_evaluation/core.py
+vision_models_evaluation.egg-info/PKG-INFO
+vision_models_evaluation.egg-info/SOURCES.txt
+vision_models_evaluation.egg-info/dependency_links.txt
+vision_models_evaluation.egg-info/entry_points.txt
+vision_models_evaluation.egg-info/not-zip-safe
+vision_models_evaluation.egg-info/requires.txt
+vision_models_evaluation.egg-info/top_level.txt

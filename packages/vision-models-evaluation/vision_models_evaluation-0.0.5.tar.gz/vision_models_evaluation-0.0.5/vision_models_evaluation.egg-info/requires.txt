@@ -1,0 +1,6 @@
+fastai
+fastcore
+pandas
+scikit-learn
+
+[dev]
