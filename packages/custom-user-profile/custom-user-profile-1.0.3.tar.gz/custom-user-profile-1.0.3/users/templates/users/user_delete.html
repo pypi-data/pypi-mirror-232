@@ -1,0 +1,24 @@
+{% extends "users/base.html" %}
+{% load static %}
+{% block title %}
+    <title>User Detail</title>
+{% endblock title %}
+
+{% block content %}
+    <div class="card">
+        <div class="card-header">
+            <h1>Confirm Delete</h1>
+
+        </div>
+        <form? action="." method="post">
+            <div class="card-body">
+                <p>Are you sure you want to delete user {{object.get_full_name}}?</p>
+                {% csrf_token %}
+                <button type="submit" class="btn btn-danger">Delete</button>
+                <a class="btn btn-primary" href="{% url 'user_list' %}">
+                    Cancel
+                </a>
+            </div>
+        </form?
+    </div>
+{% endblock content %}

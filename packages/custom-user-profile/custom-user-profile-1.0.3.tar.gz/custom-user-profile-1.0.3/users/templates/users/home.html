@@ -1,0 +1,17 @@
+{% extends "users/base.html" %}
+{% load static %}
+
+{%block styles %}
+<link rel="stylesheet" href="{% static 'users/styles.css' %}" />
+{% endblock styles %}
+
+{% block title %}
+    <title>User View</title>
+{% endblock title %}
+
+{% block content %}
+    <div class="container">
+        <h3>Users View</h3>
+        {{data}}
+    </div>
+{% endblock content %}
