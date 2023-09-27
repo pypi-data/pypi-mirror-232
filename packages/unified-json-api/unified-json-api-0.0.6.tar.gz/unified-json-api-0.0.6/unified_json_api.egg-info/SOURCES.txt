@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.py
+unified_json_api.egg-info/PKG-INFO
+unified_json_api.egg-info/SOURCES.txt
+unified_json_api.egg-info/dependency_links.txt
+unified_json_api.egg-info/requires.txt
+unified_json_api.egg-info/top_level.txt
+unified_json_api/src/__init__.py
+unified_json_api/src/constants_unified_json.py
+unified_json_api/src/unified_json.py
