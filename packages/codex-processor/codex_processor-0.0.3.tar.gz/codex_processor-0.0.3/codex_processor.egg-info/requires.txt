@@ -1,0 +1,4 @@
+pypandoc
+requests
+toml
+pyaml
