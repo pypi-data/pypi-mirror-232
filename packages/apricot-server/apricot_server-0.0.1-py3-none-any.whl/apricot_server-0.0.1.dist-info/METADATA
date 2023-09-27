@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: apricot-server
+Version: 0.0.1
+Summary: A proxy for delegating LDAP requests to an OpenID Connect backend.
+Project-URL: Documentation, https://github.com/alan-turing-institute/apricot#readme
+Project-URL: Issues, https://github.com/alan-turing-institute/apricot/issues
+Project-URL: Source, https://github.com/alan-turing-institute/apricot
+Author-email: James Robinson <james.em.robinson@gmail.com>
+License-Expression: BSD-3-Clause
+License-File: LICENSE
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.7
+Requires-Dist: ldaptor~=21.2.0
+Requires-Dist: twisted~=23.8.0
+Requires-Dist: zope-interface~=6.0
+Description-Content-Type: text/markdown
+
+# Apricot
+
+`Apricot` is a proxy for delegating LDAP requests to an OpenID Connect backend.
+The name is a slightly tortured acronym for: LD**A**P **pr**oxy for Open**I**D **Co**nnec**t**.
+
+## Usage
+
+Start the `Apricot` server on port 8080 by running:
+
+```bash
+python run.py --port 8080
+```

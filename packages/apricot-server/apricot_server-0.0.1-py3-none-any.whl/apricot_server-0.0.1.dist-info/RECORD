@@ -1,0 +1,11 @@
+run.py,sha256=P3fc3n9S_Gg1oBxB9VZRc6NP_6zyM7pMlM2ohS10dI8,438
+apricot/__about__.py,sha256=nQJIPsKp5t64YzDNl-Q2yCAbtdvtJs6BUvwZzXgJg2U,71
+apricot/__init__.py,sha256=v3p2aK6yRuNLKFZk6SkgbjLxhadhRD7ZQrX7lcYaKCg,173
+apricot/apricot_server.py,sha256=9m-qOsTDyoY1nW12L79keXhlXcZn40t5L1JF-EPIhgw,954
+apricot/ldap_lookup_tree.py,sha256=xNtXjd9lKTJYGu-6wVefZ4bPzY3EQbDXY2ukNa1jRKw,857
+apricot/ldap_server_factory.py,sha256=82WyTBebOoQuwrQztt5lxSbZTuQM5XJa_6ye1ZEuob0,579
+apricot/proxied_ldap_entry.py,sha256=BEmtIizUbGLNtFtjBe2GTG5NMLlgV7v0o9OZfbIN7Dw,726
+apricot_server-0.0.1.dist-info/METADATA,sha256=MQ_A156t1daK5g9E4RIzBbYk88x3UHMk-ik5K3sAAro,1407
+apricot_server-0.0.1.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+apricot_server-0.0.1.dist-info/licenses/LICENSE,sha256=JumL_MHFxjpB-Bi-EuBtvuSGhHuaXL8trvCiBBRCrYI,1512
+apricot_server-0.0.1.dist-info/RECORD,,
