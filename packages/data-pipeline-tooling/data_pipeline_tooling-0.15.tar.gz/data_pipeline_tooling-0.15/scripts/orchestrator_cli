@@ -1,0 +1,11 @@
+#!/usr/bin/env python
+
+import fire
+from data_pipeline_tooling.artifact_store import AzureDataLakeClient
+from data_pipeline_tooling import orchestrator, tooling
+import os
+import sys
+
+if __name__ == '__main__':
+    orca = tooling.Orca()
+    fire.Fire(orca)
