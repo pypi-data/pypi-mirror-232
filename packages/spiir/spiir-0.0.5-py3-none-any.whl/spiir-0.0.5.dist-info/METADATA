@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: spiir
+Version: 0.0.5
+Summary: A Python library for the SPIIR gravitational wave science pipeline.
+Author: Tim Davies, Luke Davis, Manoj Kovalam, Daniel Tang
+Author-email: tim.davies@uwa.edu.au, luke.davis@uwa.edu.au, manoj.kovalam@uwa.edu.au, daniel.tang@uwa.edu.au
+Requires-Python: >=3.8
+License-File: LICENSE
+Requires-Dist: wheel
+Requires-Dist: setuptools
+Requires-Dist: lalsuite
+Requires-Dist: astropy
+Requires-Dist: python-ligo-lw >=1.8.1
+Requires-Dist: ligo.skymap
+Requires-Dist: ligo-gracedb
+Requires-Dist: numpy >=1.23
+Requires-Dist: scipy
+Requires-Dist: pandas <2.0.0
+Requires-Dist: matplotlib
+Requires-Dist: click
+Provides-Extra: all
+Requires-Dist: scikit-learn >=1.0 ; extra == 'all'
+Requires-Dist: pycbc ; extra == 'all'
+Requires-Dist: spiir-p-astro ; extra == 'all'
+Requires-Dist: igwn-alert ; extra == 'all'
+Requires-Dist: toml ; extra == 'all'
+Requires-Dist: sealgw ; extra == 'all'
+Provides-Extra: igwn-alert
+Requires-Dist: igwn-alert ; extra == 'igwn-alert'
+Requires-Dist: toml ; extra == 'igwn-alert'
+Provides-Extra: p-astro
+Requires-Dist: scikit-learn >=1.0 ; extra == 'p-astro'
+Requires-Dist: pycbc ; extra == 'p-astro'
+Requires-Dist: spiir-p-astro ; extra == 'p-astro'
+Provides-Extra: sealgw
+Requires-Dist: sealgw ; extra == 'sealgw'
+
