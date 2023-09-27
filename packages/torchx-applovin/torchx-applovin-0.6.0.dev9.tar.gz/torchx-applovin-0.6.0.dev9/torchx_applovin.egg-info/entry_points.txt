@@ -1,0 +1,17 @@
+[console_scripts]
+torchx = torchx.cli.main:main
+
+[fsspec.specs]
+torchx_minio = torchx.test.minio.MinioFS
+
+[torchx.named_resources]
+testGPU = torchx.named_resources.ResourceLovin:test_gpu_node_selector
+
+[torchx.schedulers]
+docker = torchx.schedulers.docker_scheduler:create_scheduler
+k8sLovin = torchx.schedulers.k8sLovin:create_scheduler
+kubernetes = torchx.schedulers.kubernetes_scheduler:create_scheduler
+local_cwd = torchx.schedulers.local_scheduler:create_scheduler
+
+[torchx.tracker]
+fsspec = torchx.tracker.backend.fsspec:create
