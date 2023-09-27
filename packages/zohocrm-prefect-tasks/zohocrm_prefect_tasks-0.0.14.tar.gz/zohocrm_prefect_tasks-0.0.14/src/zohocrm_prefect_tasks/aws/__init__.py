@@ -1,0 +1,1 @@
+from .secretsmanager_client import SecretsManagerClient
