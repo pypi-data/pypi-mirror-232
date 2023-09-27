@@ -1,0 +1,2 @@
+[ofxstatement]
+mastercard-de = ofxstatement.plugins.mastercard_de:MastercardPlugin
