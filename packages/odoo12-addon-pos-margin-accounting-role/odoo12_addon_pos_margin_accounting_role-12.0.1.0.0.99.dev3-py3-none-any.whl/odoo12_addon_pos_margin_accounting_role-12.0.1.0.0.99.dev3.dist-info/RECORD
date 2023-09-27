@@ -1,0 +1,13 @@
+odoo/addons/pos_margin_accounting_role/README.rst,sha256=7b9QHGERDvvi2CFC3LkPBmFALJglKOh8GvdTUf0sx2w,3175
+odoo/addons/pos_margin_accounting_role/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+odoo/addons/pos_margin_accounting_role/__manifest__.py,sha256=eHOm0XxeO89k4WTNVP1nm02LnluSbb3VfueY0rLhi04,696
+odoo/addons/pos_margin_accounting_role/i18n/pos_margin_accounting_role.pot,sha256=2T_62s-OoonWUW5mCPeLA8WOQV-FszQcdurSAtvuYmA,344
+odoo/addons/pos_margin_accounting_role/readme/CONTRIBUTORS.rst,sha256=8ZETMLtLjoSxHYNDdR6ADwGfKlIalP-b__LcZAWJpJU,59
+odoo/addons/pos_margin_accounting_role/readme/DESCRIPTION.rst,sha256=u0YD471Hxur2igQpSWYnRGpv1xOoBjllsQGM0w1RRJo,134
+odoo/addons/pos_margin_accounting_role/static/description/icon.png,sha256=6xBPJauaFOF0KDHfHgQopSc28kKvxMaeoQFQWZtfZDo,9455
+odoo/addons/pos_margin_accounting_role/static/description/index.html,sha256=l01DSkLgXlBR_a7Lul6IoB6aAICSk_dV4nQ54f-fZTc,12488
+odoo/addons/pos_margin_accounting_role/views/view_pos_order.xml,sha256=9WuRAJGEfubABzM3z0UjaHoFRP6KabowdwmmX0Pnw3E,1913
+odoo12_addon_pos_margin_accounting_role-12.0.1.0.0.99.dev3.dist-info/METADATA,sha256=F-F2DWrKLh1mjldy0gYpJnEfagF8cACdC2MW4nK9phs,3799
+odoo12_addon_pos_margin_accounting_role-12.0.1.0.0.99.dev3.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+odoo12_addon_pos_margin_accounting_role-12.0.1.0.0.99.dev3.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
+odoo12_addon_pos_margin_accounting_role-12.0.1.0.0.99.dev3.dist-info/RECORD,,
