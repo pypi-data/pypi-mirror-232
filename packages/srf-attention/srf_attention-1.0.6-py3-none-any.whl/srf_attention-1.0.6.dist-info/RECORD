@@ -1,0 +1,10 @@
+srf_attention/__init__.py,sha256=HQpwTX6OxqO99GXQ9XdNkYT1DbWTOK0nUiJqid01aDM,187
+srf_attention/att.py,sha256=8PO3sJ0l-a5Tqo2h_YgF97gf22M7pthiNFQLqx1KPII,2829
+srf_attention/kernel.py,sha256=cjyCyiRq8vvucnHKWWXGeo0FscKTc0QgjgcfVaeKnz4,2036
+srf_attention/lowmem_attn.py,sha256=89ppPNgr3cC-_EC-k6-cWsaRtn5zBLJ3KvopY-7WqE8,2614
+srf_attention/rfs.py,sha256=_kppHYBgtPJVXqeszlNlpEgsie35YvFTHLDy-WnFXhg,2135
+srf_attention-1.0.6.dist-info/LICENSE,sha256=0eHu-X-AmDcXVexMd67suaDeTrQNzgsmXqDY_51IORQ,1071
+srf_attention-1.0.6.dist-info/METADATA,sha256=Lnp5Lo5SrrPHDBlNAAd7BYvgSTCNd6dAsFDIeU9rJus,3516
+srf_attention-1.0.6.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
+srf_attention-1.0.6.dist-info/top_level.txt,sha256=nnO7SFYu4z814eAafpe9aOfUM8JvqSI4aSsqwKSDS0g,14
+srf_attention-1.0.6.dist-info/RECORD,,
