@@ -1,0 +1,85 @@
+# General Use Case for Spark/Databricks
+
+The usage of Spark is required for big data that needs a cluster of compute nodes and cheap storage (delta lake). The result of processing big data needs to be HANA tables that can be consumed by DataSphere. In order to share the results with other applications you either need a 
+
+1. **system - to - system** integration where the credentials of the target applications are shared or
+2. **"data product"**-kind of integration where you expose the data to external users with an external access management like "delta sharing".
+
+The following client was developed to use the API of the Databricks delta-sharing-server of the Unity catalog. 
+
+![use case](images/e2e_usecase.png)
+
+The data can be downloaded to a csv-file with the name **\<share\>_\<schema\>_\<table\>.csv** and uploded to a HANA Database. Because the standard spark catalog is based on the delta lake format there is no feature for defining primary keys. The reason might be that there are not inherent tests on a "primary key violation" when a new record is written. A "primary key" might therefore lead to false assumptions. 
+
+For supporting **primary keys** and DB-specific data types a csn-file can be used when a table is created in HANA. The csn-file needs to have the same name as the table file-name but with the ".csn"-extension.
+
+Used files: 
+
+- **filename of table**: \<share\>_\<schema\>_\<table\>.csv
+- **metadata of table**: \<share\>_\<schema\>_\<table\>_meta.json
+- **delta records of tables when CDF-enabled**: \<share\>_\<schema\>_\<table\>_delta.csv
+- **CSN table definition**: \<share\>_\<schema\>_\<table\>_delta.csn
+- **Last downloaded version**: \<share\>_\<schema\>_\<table\>_version.csn
+- - **Last uploaded hana version**: \<share\>_\<schema\>_\<table\>_hana.csn
+
+All files are stored in the CWD or to the *path* given in the command options. 
+
+## CSN File Creation
+To support the creation of a csn-file you can use 
+
+```shell
+pip install pycsn
+
+pyscn -h
+pycsn <csv-file> -p [<primary keys>] -n [<table names>]
+
+usage: pycsn [-h] [-o OUTPUT] [-p PRIMARY_KEYS [PRIMARY_KEYS ...]] [-n NAMES [NAMES ...]] [-s] [-b BUFFER] filenames [filenames ...]
+
+Creates csn-file from pandas DataFrame.
+
+positional arguments:
+  filenames             Data Filenames (csv)
+
+options:
+  -h, --help            show this help message and exit
+  -o OUTPUT, --output OUTPUT Overwrite default filename
+  -p PRIMARY_KEYS [PRIMARY_KEYS ...], --primary_keys PRIMARY_KEYS [PRIMARY_KEYS ...] Add primary keys (Attention for all tables!).
+  -n NAMES [NAMES ...], --names NAMES [NAMES ...] Set table names.
+  -s, --sql Create table sql.
+  -b BUFFER, --buffer BUFFER Additional string buffer
+```
+
+# Installation
+```
+pip install dsclient
+```
+
+
+# Delta Sharing Commandline Client
+
+Lists and downloads files from Delta Sharing.
+
+```angular2html
+usage: dsclient.py [-h] [-p PATH] [-d] [-s STARTING] [-e ENDING] [-m] [-c CONFIG_FILE] [-H] [-S] profile [table]
+
+positional arguments:
+  profile               Profile of delta sharing
+  table                 (optional) Table URL: <share>.<schema>.<table>. If not given table can be selected from available table list.
+
+options:
+  -h, --help            show this help message and exit
+  -p PATH, --path PATH  Directory to store data.
+  -d, --delta           Capture delta feeds
+  -s STARTING, --starting STARTING
+                        Start version (int, min=1)m or timestamp (str,"2019-09-26T07:58:30.996+0200")
+  -e ENDING, --ending ENDING
+                        End version (int, min=1) or timestamp (str,"2019-09-26T07:58:30.996+0200")
+  -m, --meta            Show metadata
+  -c CONFIG_FILE, --config-file CONFIG_FILE
+                        Config-file for HANA access (yaml with url, user, pwd, port)
+  -H, --Hana            Upload to hana
+  -S, --Sync            Sync files with hana
+
+```
+
+
