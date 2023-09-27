@@ -1,0 +1,10 @@
+numpy
+zarr
+numcodecs
+imagecodecs==2023.1.23
+dask
+
+[testing]
+tox
+pytest
+pytest-cov
