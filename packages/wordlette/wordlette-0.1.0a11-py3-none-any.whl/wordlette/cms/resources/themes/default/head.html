@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+
+    <!-- CSS Reset -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+
+    <!-- Milligram CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+
+    <!-- You should properly set the path from the main file. -->
+    <style>
+        a {
+            color: rgb(0, 119, 226);
+            border-bottom: 2px solid rgba(0, 119, 226, 0);
+            transition: border-bottom-color 0.3s linear;
+        }
+
+        a:hover {
+            color: rgb(0, 119, 226);
+            border-bottom-color: rgba(0, 119, 226, 1.0);
+        }
+
+        header {
+            background: rgb(182, 30, 0);
+            background: linear-gradient(90deg, rgba(182, 30, 0, 1) 0%, rgba(255, 249, 0, 1) 100%);
+            background: rgb(182, 30, 0);
+            background: linear-gradient(90deg, rgba(182, 30, 0, 1) 0%, rgba(255, 195, 86, 1) 100%);
+            background: rgb(92, 98, 255);
+            background: linear-gradient(90deg, rgba(92, 98, 255, 1) 0%, rgba(255, 0, 102, 1) 100%);
+            background: rgb(0, 126, 96);
+            background: linear-gradient(90deg, rgba(0, 126, 96, 1) 0%, rgba(0, 255, 189, 1) 100%);
+            background: rgb(0, 19, 126);
+            background: linear-gradient(90deg, rgba(0, 19, 126, 1) 0%, rgba(0, 221, 255, 1) 100%);
+            color: white;
+            padding: 92px 0;
+        }
+
+        header.short {
+            padding: 32px 0;
+        }
+
+        header + div.container {
+            margin-top: 32px;
+        }
+
+        header h1, header h2, header h3, header h4, header h5, header h6 {
+            color: white;
+            line-height: 1.0;
+            margin: 0;
+        }
+
+        header h1 + h2, header h1 + h3, header h1 + h4, header h1 + h5, header h1 + h6,
+        header h2 + h3, header h2 + h4, header h2 + h5, header h2 + h6,
+        header h3 + h4, header h3 + h5, header h3 + h6,
+        header h4 + h5, header h4 + h6,
+        header h5 + h6 {
+            margin-top: 0.25em;
+        }
+
+        header h3 {
+            opacity: 60%;
+        }
+
+        header p {
+            max-width: 320pt;
+        }
+
+        button, .button, input[type="submit"] {
+            background-color: #0077e2;
+            border-color: #0077e2;
+            border-radius: 16px;
+            border-width: 0;
+            color: white;
+            font-size: 1em;
+            height: auto;
+            line-height: 1.0;
+            padding: 8px 24px;
+            text-transform: none;
+            transition: background-color 0.3s linear;
+        }
+
+        button:hover, .button:hover, input[type="submit"]:hover {
+            background-color: #00137E;
+        }
+
+        label[for] {
+            cursor: pointer;
+        }
+
+        label.required:after {
+            content: '*';
+            color: #ff4444;
+            margin-left: 4px;
+        }
+
+        .form-nav a {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        pre {
+            border-color: #0077e2;
+            padding: 8px 16px;
+        }
+
+        blockquote.error {
+            border-left-color: #ff4444
+        }
+
+        h1:has(+pre), h2:has(+pre), h3:has(+pre), h4:has(+pre), h5:has(+pre), h6:has(+pre) {
+            margin-bottom: 0.25em;
+        }
+
+        h1 + pre, h2 + pre, h3 + pre, h4 + pre, h5 + pre, h6 + pre {
+            margin-top: 0;
+        }
+
+        .error-section {
+            background-color: #ffddcc;
+            color: #444444;
+            margin-bottom: 3rem;
+            margin-top: 0;
+            padding: 3rem 0;
+        }
+
+        .error-section a {
+            color: #333;
+            border: none;
+            border-bottom: 1px solid transparent;
+        }
+
+        .error-section a:hover {
+            border-bottom: 1px solid #333;
+        }
+
+        .error-section blockquote {
+            border-left-color: #ff4444;
+            margin: 0
+        }
+
+        .error-section h4 {
+            color: black;
+        }
+
+        .error-section code {
+            background-color: #ffffff80
+        }
+
+        .container + .container {
+            margin-top: 32px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        select:focus {
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 8" width="30"><path fill="%230077e2" d="M0,0l6,8l6-8"/></svg>');
+            border-color: #0077e2;
+        }
+
+        input.error {
+            outline: 1px solid #ff4444;
+            margin-bottom: 0;
+        }
+
+        div.error {
+            color: #ff4444;
+            font-size: 0.8em;
+        }
+
+        input[type='color']:focus, input[type='date']:focus, input[type='datetime']:focus,
+        input[type='datetime-local']:focus, input[type='email']:focus, input[type='month']:focus,
+        input[type='number']:focus, input[type='password']:focus, input[type='search']:focus,
+        input[type='tel']:focus, input[type='text']:focus, input[type='url']:focus, input[type='week']:focus,
+        input:not([type]):focus, textarea:focus, select:focus {
+            border-color: #0077e2;
+        }
+    </style>
+</head>
+<body>
