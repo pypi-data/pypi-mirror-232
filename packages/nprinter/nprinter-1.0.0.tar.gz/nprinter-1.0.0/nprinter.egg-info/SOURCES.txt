@@ -1,0 +1,7 @@
+README.md
+nprinter.py
+setup.py
+nprinter.egg-info/PKG-INFO
+nprinter.egg-info/SOURCES.txt
+nprinter.egg-info/dependency_links.txt
+nprinter.egg-info/top_level.txt
