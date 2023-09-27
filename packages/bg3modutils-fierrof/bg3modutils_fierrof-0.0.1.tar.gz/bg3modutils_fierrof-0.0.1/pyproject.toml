@@ -1,0 +1,20 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "bg3modutils_fierrof"
+version = "0.0.1"
+authors = [{ name = "fierrof", email = "fierrof_47@hotmail.com" }]
+description = "Modding utilities for Baldur's Gate 3"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/facufierro/BG3ModUtils"
+"Bug Tracker" = "https://github.com/facufierro/BG3ModUtils/issues"
