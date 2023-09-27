@@ -1,0 +1,126 @@
+Metadata-Version: 2.1
+Name: matpowercaseframes
+Version: 1.0.7
+Summary: Parse MATPOWER case into pandas DataFrame.
+Author-email: Muhammad Yasirroni <muhammadyasirroni@gmail.com>
+Maintainer-email: Muhammad Yasirroni <muhammadyasirroni@gmail.com>
+License: MIT License
+Project-URL: Documentation, https://github.com/UGM-EPSLab/matpowercaseframes#readme
+Project-URL: Issues, https://github.com/UGM-EPSLab/matpowercaseframes/issues
+Project-URL: Source, https://github.com/UGM-EPSLab/matpowercaseframes
+Keywords: matpower,parser
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Requires-Python: >=3.7.1
+Description-Content-Type: text/markdown
+License-File: LICENSE.rst
+Requires-Dist: numpy >=1.19.0
+Requires-Dist: pandas >=1.2
+Provides-Extra: dev
+Requires-Dist: oct2py >=5.5.1 ; extra == 'dev'
+Requires-Dist: openpyxl >=3.1.2 ; extra == 'dev'
+Requires-Dist: matpower >=7.1.0.2.1.4 ; extra == 'dev'
+Requires-Dist: pytest >=7.2.0 ; extra == 'dev'
+Requires-Dist: pytest-cov >=4.0.0 ; extra == 'dev'
+Requires-Dist: pytest-xdist >=3.1.0 ; extra == 'dev'
+Requires-Dist: pre-commit >=2.21.0 ; extra == 'dev'
+Provides-Extra: matpower
+Requires-Dist: matpower >=7.1.0.2.1.4 ; extra == 'matpower'
+
+# MATPOWER Case Frames
+
+Parse MATPOWER case into pandas DataFrame.
+
+Unlike the [tutorial](https://github.com/yasirroni/matpower-pip#extra-require-oct2py-or-matlabengine) on [`matpower-pip`](https://github.com/yasirroni/matpower-pip), this package supports parsing MATPOWER case using `re` instead of `Oct2Py` and Octave. After that, you can further parse the data into any format supported by your solver.
+
+## Installation
+
+```plaintext
+pip install matpowercaseframes
+```
+
+## Usage
+
+The main utility of `matpowercaseframes` is to help read `matpower` data in user-friendly format as follows,
+
+```python
+from matpowercaseframes import CaseFrames
+
+case_path = 'case9.m'
+cf = CaseFrames(case_path)
+
+print(cf.gencost)
+```
+
+If you have `matpower` installed via `pip install matpower` (did not require `matpower[octave]`), you can easily navigate `matpower` case using:
+
+```python
+import os
+from matpower import path_matpower # require `pip install matpower`
+from matpowercaseframes import CaseFrames
+
+case_name = 'case9.m'
+case_path = os.path.join(path_matpower, 'data', case_name)
+cf = CaseFrames(case_path)
+
+print(cf.gencost)
+```
+
+Furthermore, `matpowercaseframes` also support generating data that is acceptable by `matpower` via `matpower-pip` package (require `matlab` or `octave`),
+
+```python
+from matpowercaseframes import CaseFrames
+
+case_path = 'case9.m'
+cf = CaseFrames(case_path)
+mpc = cf.to_dict()
+
+m = start_instance()
+m.runpf(mpc)
+```
+
+To save all `DataFrame` to a single `xlsx` file, use:
+
+```python
+from matpowercaseframes import CaseFrames
+
+case_path = 'case9.m'
+cf = CaseFrames(case_path)
+
+cf.to_excel('PATH/TO/DIR/case9.xlsx')
+```
+
+If you use `matpower[octave]`, `CaseFrames` also support `oct2py.io.Struct` as input using:
+
+```python
+from matpower import start_instance
+from matpowercaseframes import CaseFrames
+
+m = start_instance()
+
+# support mpc before runpf
+mpc = m.loadcase('case9', verbose=False)
+cf = CaseFrames(mpc)
+print(cf.gencost)
+
+# support mpc after runpf
+mpc = m.runpf(mpc, verbose=False)
+cf = CaseFrames(mpc)
+print(cf.gencost)
+
+m.exit()
+```
+
+## Acknowledgment
+
+This repository was supported by the [Faculty of Engineering, Universitas Gadjah Mada](https://ft.ugm.ac.id/en/) under the supervision of [Mr. Sarjiya](https://www.researchgate.net/profile/Sarjiya_Sarjiya). If you use this package for your research, we are very glad if you cite any relevant publication under Mr. Sarjiya's name as thanks (but you are not responsible to cite). You can find his publications in the [semantic](https://www.semanticscholar.org/author/Sarjiya/2267414) scholar](https://www.semanticscholar.org/author/Sarjiya/2267414) or [IEEE](https://ieeexplore.ieee.org/author/37548066400).
+
+This package is a fork and simplification from [psst](https://github.com/ames-market/psst) MATPOWER parser, thus we greatly thank psst developers and contributors.
