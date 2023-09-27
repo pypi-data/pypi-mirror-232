@@ -1,0 +1,3 @@
+[console_scripts]
+brew-search = brew_search.__main__:cli
+
