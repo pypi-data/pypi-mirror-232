@@ -1,0 +1,17 @@
+tinylang/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tinylang/chains/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tinylang/llms/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tinylang/memory/__init__.py,sha256=Wlg3tEvhSBlWMEMzXaiyOCrrqwUODk4_bTX0_WESOsE,79
+tinylang/memory/base.py,sha256=SN0k0wCSqWRh4YuldKexKuHcHoMwcWI9UO5zETfT5pA,1190
+tinylang/memory/conversation.py,sha256=pWzkR8WJgR0sbAmNN0WccjugZiZCxos7397gDXDlcNM,1808
+tinylang/messages/__init__.py,sha256=5MItSaAoMbA2i5O8TCXaVbozFKBtVjjtC0KAzsf9gaI,213
+tinylang/messages/assistant.py,sha256=Hm3bPpJ20c8N4Ow-pk-I-X-3UM4S0DmC_cVXhw2hG8E,326
+tinylang/messages/base.py,sha256=lKoS1gTOUbjGNj6BUqcswrHxBoEu9PpeLCxLhHyISAY,904
+tinylang/messages/system.py,sha256=mvXkYTBKxG0h4TMosXlan-2TdpqU9xjM3oB2CAC-KBs,314
+tinylang/messages/user.py,sha256=RgMtwNzfoqTQC24uFPCAR7DaPoeyerpKaUT-Cnr9z_M,336
+tinylang/messages/utils.py,sha256=zpjtekk_9g70FqSLufvjc9GjlLl-gVQfbvP-SnNzRqs,500
+tinylang/prompts/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tinylang-0.1.0.dist-info/LICENSE,sha256=G4LGNg_GWnwrpkKjOb8rKStPDKJUzLJfLjx1PZbqG_U,1072
+tinylang-0.1.0.dist-info/METADATA,sha256=ZeuFv4hGLn3jeHR741AcnUIkUQzgggFrnOBmbh4bS8Q,2055
+tinylang-0.1.0.dist-info/WHEEL,sha256=Zb28QaM1gQi8f4VCBhsUklF61CTlNYfs9YAZn-TOGFk,88
+tinylang-0.1.0.dist-info/RECORD,,
