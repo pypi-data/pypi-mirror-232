@@ -1,0 +1,2 @@
+[console_scripts]
+lw = lightweight.lw:main
