@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: neetbox
+Version: 0.1.516
+Summary: NEETBox contains useless CV code snippets.
+Home-page: https://neetbox.550w.host
+License: MIT
+Keywords: computer vision,tools,logging
+Author: VisualDust
+Author-email: gavin@gong.host
+Maintainer: VisualDust
+Maintainer-email: gavin@gong.host
+Requires-Python: >=3.9,<3.13
+Classifier: Development Status :: 1 - Planning
+Classifier: Environment :: Console
+Classifier: Framework :: Matplotlib
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Classifier: Topic :: Software Development :: Testing
+Classifier: Topic :: System :: Logging
+Classifier: Topic :: Utilities
+Requires-Dist: injector (>=0.20)
+Requires-Dist: numpy (>=1.26.0,<2.0.0)
+Requires-Dist: pillow (>=10.0.1,<11.0.0)
+Requires-Dist: rich (>=13)
+Requires-Dist: setproctitle (>=1.0)
+Requires-Dist: toml (>0.10)
+Project-URL: Repository, https://github.com/visualDust/neetbox
+Description-Content-Type: text/markdown
+
+# NEETBOX
+
+[![wakatime](https://wakatime.com/badge/user/b93a26b6-8ea1-44ef-99ed-bcb6e2c732f1/project/8f99904d-dbb1-49e4-814d-8d18bf1e6d1c.svg)](https://wakatime.com/badge/user/b93a26b6-8ea1-44ef-99ed-bcb6e2c732f1/project/8f99904d-dbb1-49e4-814d-8d18bf1e6d1c)
+
+~~一个自产自销的仓库~~ Logging/Debugging/Tracing/Managing/Facilitating your deep learning projects
+
+A small part of the documentation at [neetbox.550w.host](https://neetbox.550w.host). (We are not ready for the doc yet)
+
