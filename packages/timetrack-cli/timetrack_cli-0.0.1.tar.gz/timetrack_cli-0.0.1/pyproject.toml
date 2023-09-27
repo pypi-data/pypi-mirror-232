@@ -1,0 +1,38 @@
+[build-system]
+build-backend = "flit_core.buildapi"
+requires = ["flit_core >=3.7.1,<4"]
+
+[project]
+name = "timetrack-cli"
+description = "A console-based program that helps you track your time spent working on various tasks."
+readme = "README.md"
+dependencies = [
+"termcolor",
+"art",
+"pandas",
+"pyyaml",
+"prettytable"
+]
+dynamic = [
+    "version",
+]
+requires-python = ">=3.9"
+# readme = "README.md"
+# license = {file = "LICENSE"}
+authors = [
+  { name = "Arun Reddy", email = "arun.reddy@jhu.edu" },
+]
+maintainers = [
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "License :: OSI Approved :: MIT License"
+]
+
+[project.urls]
+# Documentation = ""
+Source = "https://github.com/reddyav1/timetrack"
+
+[tool.flit.module]
+name = "timetrack"
