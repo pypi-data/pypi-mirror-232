@@ -1,0 +1,66 @@
+Metadata-Version: 2.1
+Name: nethsm
+Version: 0.1.0
+Summary: Python Library to manage NetHSM(s).
+Author-email: Nitrokey <pypi@nitrokey.com>
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Classifier: License :: OSI Approved :: Apache Software License
+Requires-Dist: urllib3 >=2.0,<2.1
+Requires-Dist: typing_extensions ~= 4.3.0
+Requires-Dist: python-dateutil ~= 2.8.0
+Requires-Dist: black >=22.1.0,<23 ; extra == "dev"
+Requires-Dist: flake8 ; extra == "dev"
+Requires-Dist: flit >=3.2,<4 ; extra == "dev"
+Requires-Dist: ipython ; extra == "dev"
+Requires-Dist: isort ; extra == "dev"
+Requires-Dist: mypy >=1.4,<1.5 ; extra == "dev"
+Requires-Dist: pyinstaller ==5.9.0 ; extra == "dev"
+Requires-Dist: pyinstaller-versionfile ==2.1.1 ; extra == "dev" and ( sys_platform=='win32')
+Requires-Dist: pytest ; extra == "dev"
+Requires-Dist: pytest-reporter-html1 ; extra == "dev"
+Requires-Dist: docker ; extra == "dev"
+Requires-Dist: pycryptodome ; extra == "dev"
+Requires-Dist: requests ; extra == "dev"
+Requires-Dist: types-requests ; extra == "dev"
+Project-URL: Source, https://github.com/Nitrokey/nethsm-sdk-py
+Provides-Extra: dev
+
+# nethsm-sdk-py
+
+Python client for NetHSM
+
+## Setting Up The Environment
+
+Use `make init` to set up the development environment.
+
+You can then run `make check` to run the checks on your changes and `make fix` to format the code.
+
+## Updating the client
+
+To update the NetHSM HTTP client, you need to download the updated ``nethsm-api.yml`` OpenAPI specification. The easiest is to download it from the NetHSM demo server (``curl`` required):
+
+```sh
+make nethsm-api.yaml --always-make
+```
+
+Then, run the generation script, docker is required:
+
+```sh
+make nethsm-client
+```  
+
+Be sure to run the linter, tests and check that everything is working as expected after the update.
+
+## Custom functions
+
+The generator doesn't support upload of binary files and custom ``Content-Type`` headers (fails to serialize).
+To work around this, some functions are written manually, using ``NetHSM.request()`` to send the request.
+
+The current list of such functions is:
+
+- ``NetHSM.restore()`` : ``/system/restore``
+- ``NetHSM.set_key_certificate()`` : ``/keys/{KeyID}/cert``
+- ``NetHSM.set_certificate()`` : ``/config/tls/cert.pem``
+- ``NetHSM.update()`` : ``/system/update``
+
