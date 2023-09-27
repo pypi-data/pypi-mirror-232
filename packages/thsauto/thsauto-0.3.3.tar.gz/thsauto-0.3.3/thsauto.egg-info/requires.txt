@@ -1,0 +1,10 @@
+pandas
+uiautomator2
+lxml
+loguru
+
+[cli]
+fastapi
+uvicorn[standard]
+fire
+requests
