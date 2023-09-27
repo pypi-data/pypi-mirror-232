@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: vectorview
+Version: 0.2
+Summary: A simple Hello World library
+Home-page: https://github.com/Vectorview/vectorview_py
+Author: Vectorview
+Author-email: lukas.petersson.1999@gmail.com
+Description-Content-Type: text/markdown
+
+# Vectorview
+
+This is a simple Hello World library.
+
