@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "tg-api"
+version = "1.1.0"
+description = "Thin wrapper around Telegram Bot API"
+authors = ["Evgeny Evseev <pelid80@gmail.com>"]
+license = "GNU GPLv3"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+httpx = "0.24.1"
+pydantic = "1.10.8"
+pytest = {version = "7.3.*", extras = ["anyio"]}
+anyio = "3.7.0"
+pytest-httpx = "0.22.0"
+trio = "^0.22.0"
+requests = "^2.31.0"
+exceptiongroup = "^1.1.1"
+
+[tool.pytest.ini_options]
+python_files = "tests.py test_*.py *_tests.py"
+cache_dir = "/pytest_cache_dir"
+filterwarnings = [
+    "ignore::trio.TrioDeprecationWarning",
+]
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
