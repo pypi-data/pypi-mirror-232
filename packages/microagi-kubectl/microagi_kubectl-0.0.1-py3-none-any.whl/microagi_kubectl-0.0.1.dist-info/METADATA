@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: microagi-kubectl
+Version: 0.0.1
+Summary: AKube - #microAGI agent assistant translating natural language commands to kubectl actions
+Author: Sivan Grünberg
+Author-email: sivan@vitakka.co
+Requires-Python: >=3.11,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: autopage (>=0.5.1,<0.6.0)
+Requires-Dist: colorama (>=0.4.6,<0.5.0)
+Requires-Dist: openai (>=0.27.8,<0.28.0)
+Requires-Dist: pydantic (>=2.0.3,<3.0.0)
+Requires-Dist: python-dotenv (>=1.0.0,<2.0.0)
+Requires-Dist: requests (>=2.31.0,<3.0.0)
+Description-Content-Type: text/markdown
+
+## Placeholder for AKube ##
+

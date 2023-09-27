@@ -1,0 +1,12 @@
+adock/config.py,sha256=cmY_EYWrakrTnzo2CoJWYB8Ptl1VpgTL8GBYrwiBIAo,1295
+adock/main.py,sha256=tdLjZCimbNfNSjLKa4S4zKGfRyAdogvufzFp7_xphbo,3850
+adock/openai_api.py,sha256=q4-6yawonKIgWV5lgXZVGCZy3Eg4xM2MZME1I4xvEt4,978
+adock/security.py,sha256=nRRA6HLRiEL5vIkKCip2gFKVKPR-nQyCxdQWycLCL0A,364
+adock/tests/test_openai_api.py,sha256=n4iO1iZN5EzT1fC1TJGodrR75LxzF9DdbmN9LJNC4sM,297
+adock/tests/test_security.py,sha256=GHSl9NTHwWoS0JYayAbyOTO4NzMJEAkx8RRSJZh1YqY,347
+adock/util.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+microagi_kubectl-0.0.1.dist-info/LICENSE.txt,sha256=zFRw_u1mGSOH8GrpOu0L1P765aX9fB5UpKz06mTxAos,34893
+microagi_kubectl-0.0.1.dist-info/METADATA,sha256=XPCmM1Of3nCZr4aavuaVQ3Okj-oYuRvcOEUpQnZNo1Y,665
+microagi_kubectl-0.0.1.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+microagi_kubectl-0.0.1.dist-info/entry_points.txt,sha256=EMB_kKXUMBatURx5jVtqlkA1KJrdwHHhgEaWCvd5x04,47
+microagi_kubectl-0.0.1.dist-info/RECORD,,
