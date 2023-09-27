@@ -1,0 +1,1 @@
+from panax.panax_views.auto_view import *

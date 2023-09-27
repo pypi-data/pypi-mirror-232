@@ -1,0 +1,13 @@
+panax/__init__.py,sha256=oOVqCl95UK7uYjEm-Sn_w-_dFXQ40gceaDd7VX4qrBU,5029
+panax/database.py,sha256=lMdykqMy4y9R8HhE6EgIkXBuXh0tDkW4VY2JmxxlD5A,1207
+panax/permission.py,sha256=mhsKuh3Y-LL4U9v3vzH3s0CBRdZzPzAFRcSxzbgspVI,179
+panax/request.py,sha256=THBZM0tOl_fJIDj25TQ8Z9VDR-JFvIDC6_2blNMajng,3272
+panax/tool.py,sha256=PD1h7FqhLJMhDrwJ3duTjOjgM5ADXmOKWMFsCyThstk,1395
+panax/utils.py,sha256=cQczRZnU6CB64OkDe6QTl1wH3JBb-3WPq13quCRAu3w,1362
+panax/panax_views/__init__.py,sha256=d1aKu1GxLhtqe3tY7jC7T2ceVsCFTwtRufZUohWsNcA,41
+panax/panax_views/auto_view.py,sha256=_2pLLC6MVEHZWVV1fEDobpnmeC2CwRu4KQcaX0NwQbk,6542
+panax-0.0.42.dist-info/METADATA,sha256=rqBc4SYn8sxLlnx33mtvLSGuJxFdX8s-zsU6rdZ8hlE,461
+panax-0.0.42.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+panax-0.0.42.dist-info/entry_points.txt,sha256=T9sTeycnxkhmQb7mxCwp1kLoMWIbbJwpKErXvuA2RPU,42
+panax-0.0.42.dist-info/top_level.txt,sha256=eYjztBL19CbWPlo4Vc-uxZ7Ii2JnusLTNYsSswplxfU,6
+panax-0.0.42.dist-info/RECORD,,
