@@ -1,0 +1,13 @@
+timetrack/__init__.py,sha256=07NzQXBgNlnw5kSN6ZYxE9By-_RuH3Jyy58Z74sIio0,21
+timetrack/config.py,sha256=s3jjlRAyQpoqs8iu05Ufo3jTPGBnDlST2FxhUwapIMs,390
+timetrack/config.yml,sha256=BIsWVQdB098t4DwCKKcpbLyF6b4tFNf4AFNpBISblig,51
+timetrack/main.py,sha256=oWHOcoahaKTiBD0FcU11nI_WHLrC27V6X0gqvn0LGbM,3447
+timetrack/outputs.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+timetrack/reports.py,sha256=xduK9fGILSI8WHeoBnH6JyHFAu8z32LZJgGkzuYkAmA,5333
+timetrack/timeblock.py,sha256=DkmriT2LatwQ-nqlzGFPduQAkqALkZVRc1WVP2UUGhE,2675
+timetrack/utils.py,sha256=X1SwLlbda3FCRKfY1WjCxzO7TprHR_J0cPKuqknaQFU,5694
+timetrack/sounds/ding3.mp3,sha256=rMa8Y4iAG1StbS0Oa1fATeBLH43tfoqlIvkt7gS4BtM,137926
+timetrack_cli-0.0.1.dist-info/LICENSE,sha256=QhHEEF3wsy3ShpwFuVnjs7oecCSrHsD90_PqQ-8SVb4,1067
+timetrack_cli-0.0.1.dist-info/WHEEL,sha256=EZbGkh7Ie4PoZfRQ8I0ZuP9VklN_TvcZ6DSE5Uar4z4,81
+timetrack_cli-0.0.1.dist-info/METADATA,sha256=Jntzt6weIUwrTeVLZJ-_6qq0o6nJ0UIYoppPIS1YfS0,683
+timetrack_cli-0.0.1.dist-info/RECORD,,
