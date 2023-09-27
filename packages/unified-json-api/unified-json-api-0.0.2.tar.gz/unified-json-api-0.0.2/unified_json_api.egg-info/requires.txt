@@ -1,0 +1,10 @@
+PyMySQL>=1.0.2
+pytest>=7.4.0
+mysql-connector>=2.2.9
+logzio-python-handler>=4.1.0
+user-context-remote>=0.0.17
+python-sdk-local>=0.0.27
+langchain==0.0.266
+jq==1.4.1
+opensearch-py==2.3.0
+user-context-remote>=0.0.18
