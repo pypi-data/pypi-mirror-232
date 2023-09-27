@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: framecraft
+Version: 0.0.5
+Summary: by hyeonwoo jeong
+Home-page: https://github.com/HyeonuJeong/frame_craft
+Author: hyeonu
+Author-email: hyeonu4945@gmail.com
+Keywords: frame,video,capture
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
