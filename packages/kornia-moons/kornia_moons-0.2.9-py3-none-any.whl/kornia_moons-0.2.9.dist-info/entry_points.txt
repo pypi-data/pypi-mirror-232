@@ -1,0 +1,2 @@
+[nbdev]
+kornia_moons = kornia_moons._modidx:d
