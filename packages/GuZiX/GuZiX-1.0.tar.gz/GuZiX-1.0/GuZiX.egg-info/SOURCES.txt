@@ -1,0 +1,8 @@
+setup.py
+GIZ/DataStore.py
+GIZ/TTN.py
+GIZ/__init__.py
+GuZiX.egg-info/PKG-INFO
+GuZiX.egg-info/SOURCES.txt
+GuZiX.egg-info/dependency_links.txt
+GuZiX.egg-info/top_level.txt
