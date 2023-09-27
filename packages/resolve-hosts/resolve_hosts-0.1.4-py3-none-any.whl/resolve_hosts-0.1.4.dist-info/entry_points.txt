@@ -1,0 +1,3 @@
+[console_scripts]
+a-lookup = resolve_hosts:cli
+resolve-hosts = resolve_hosts:cli
