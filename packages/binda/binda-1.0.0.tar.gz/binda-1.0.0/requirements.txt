@@ -1,0 +1,10 @@
+# Used by binda
+pandas
+numpy
+
+# Required for deployment actions.
+# Generating documentation, building and deploying to PyPi
+hatchling
+hatch-vcs
+pdoc
+twine

@@ -1,0 +1,61 @@
+[build-system]
+requires = ["hatchling", "hatch-vcs"]
+build-backend = "hatchling.build"
+
+[project]
+name = "binda"
+dynamic = ["version"]
+authors = [
+  { name="Jamie Cash", email="jlcash@gmail.com" },
+]
+description = "Read and write binary data using Pandas"
+readme = "README.md"
+dependencies = [
+  'pandas',
+  'numpy',
+]
+requires-python = ">=3.6"
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Build Tools",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3 :: Only",
+]
+
+keywords = ["data", "analytics", "binary", "pandas", "hex", "hexadecimal"] 
+license = {file = "LICENSE"}
+
+[project.urls]
+"Homepage" = "https://github.com/jamiecash/binda"
+"Bug Tracker" = "https://github.com/jamiecash/binda/issues"
+"Documentation" = "https://jamiecash.github.io/binda/binda.html"
+
+[project.scripts]
+hatch = "hatch.cli:main"
+
+[tool.hatch.build]
+sources = ["src"]
+
+[tool.hatch.version]
+source = "vcs"
+
+[tool.hatch.build.hooks.vcs]
+version-file = "_version.py"
+
+[tool.hatch.version.raw-options]
+version_scheme = "python-simplified-semver"
+git_describe_command = ["git", "describe", "--tags", "--abbrev=0"]
+
+
+
+
