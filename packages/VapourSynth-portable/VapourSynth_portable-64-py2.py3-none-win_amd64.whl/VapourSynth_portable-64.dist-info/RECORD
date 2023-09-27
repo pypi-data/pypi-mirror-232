@@ -1,0 +1,14 @@
+VapourSynth_portable-64.data/data/Lib/site-packages/concrt140.dll,sha256=3h0b84CQCUtwKDPd86aO4fXUriDKV_U5L6vPTEnFuAc,327576
+VapourSynth_portable-64.data/data/Lib/site-packages/msvcp140.dll,sha256=dIktm0AowF3rrwubXZ3G0i95Vvp9fu4AxoExjCZ5KCM,578384
+VapourSynth_portable-64.data/data/Lib/site-packages/portable.vs,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+VapourSynth_portable-64.data/data/Lib/site-packages/vccorlib140.dll,sha256=mGqfHcyrziSaDbI7n14gV6tkQIHNBMZH8nEYhM_ys0Y,346008
+VapourSynth_portable-64.data/data/Lib/site-packages/vcruntime140.dll,sha256=aTIPJ42Q76rrZ-KhtV5bBUOIMSWDTIEsjZw5Z24ElPw,109440
+VapourSynth_portable-64.data/data/Lib/site-packages/vapoursynth64/coreplugins/AvsCompat.dll,sha256=csydbttg8CDXlJtIWBZ-tE1eO4M75Xv3ocOOCZACTUk,138240
+VapourSynth_portable-64.data/data/Lib/site-packages/vapoursynth64/plugins/.keep,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+VapourSynth_portable-64.data/data/Scripts/VSPipe.exe,sha256=He842ngGD95Z3o1pqEcOKhNPLyWprz6aGs0QGrrJZjo,114176
+VapourSynth_portable-64.data/data/Scripts/VSScript.dll,sha256=-e6KRladtHaWai5jFLJb-upMUHSVm807x0B953BBLhk,28672
+VapourSynth_portable-64.data/data/Scripts/portable.vs,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+VapourSynth_portable-64.dist-info/METADATA,sha256=IUXm_XFWJ0gRKRIwufF1p4nKK__7QcZ-eDae71mc7Is,308
+VapourSynth_portable-64.dist-info/WHEEL,sha256=FaL9B4cl1plILiZ69XFPGDAS_l3GDD25DcB-m8RE3dQ,123
+VapourSynth_portable-64.dist-info/top_level.txt,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+VapourSynth_portable-64.dist-info/RECORD,,
