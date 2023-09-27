@@ -1,0 +1,12 @@
+MANIFEST.in
+setup.cfg
+setup.py
+dagster_insights/__init__.py
+dagster_insights/exceptions.py
+dagster_insights/query.py
+dagster_insights/version.py
+dagster_insights.egg-info/PKG-INFO
+dagster_insights.egg-info/SOURCES.txt
+dagster_insights.egg-info/dependency_links.txt
+dagster_insights.egg-info/requires.txt
+dagster_insights.egg-info/top_level.txt

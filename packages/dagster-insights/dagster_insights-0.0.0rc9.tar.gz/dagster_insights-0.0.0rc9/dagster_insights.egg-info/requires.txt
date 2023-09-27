@@ -1,0 +1,6 @@
+dagster
+dagster_cloud
+gql[requests]>=3.0.0
+
+[tests]
+freezegun
