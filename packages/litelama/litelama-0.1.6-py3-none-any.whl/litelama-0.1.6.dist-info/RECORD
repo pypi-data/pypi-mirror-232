@@ -1,0 +1,16 @@
+litelama/__init__.py,sha256=zAZ7hJFCYZvRMQnc98HHIFM79BrFZMSii6AbMzaKAx4,31
+litelama/base.py,sha256=142YA7aaUyCfcXsAaDoYxiBdwl0zuaufbsLxuBBRhrg,2696
+litelama/config.yaml,sha256=T97tSZJuE7EBxN2eGTrOyeWGd9_bS6Sd1qOoknlk4qc,3947
+litelama/depthwise_sep_conv.py,sha256=za0YLvxTVaxhst1G8F0kIhpdh7scK2eTUcVTNo_R2Oo,530
+litelama/fake_fakes.py,sha256=Tc_BWt855BG1cdr5lJRQUeea1hLdbDAl8cBjKMvIgNY,2151
+litelama/ffc.py,sha256=jPW7twFcbhvWd0E_wDM17yHInclvwYQ2rhFUt9MCP9w,17641
+litelama/litelama.py,sha256=lctAFxGjJrVGQxTLH__O3bzRtW8US6cACQ7Z8X-guI0,4363
+litelama/model.py,sha256=ttQqArwT7bu-6GZ3QCyrSicq-0WfXM0XRhK8CCFyXIk,4447
+litelama/multidilated_conv.py,sha256=8K0zhgnwZ2a91N4RBZHaaDgBL7fST-V39BP_rV7kubM,4037
+litelama/multiscale.py,sha256=O4ykI7T0SuhuO8hRozhGJddWP-ZwyMWphJZ-ZEkC3AI,10649
+litelama/pix2pixhd.py,sha256=jninzYCNzwxtwdRgnmvYTO7tIOpimTC3vEtbfi_fefo,27895
+litelama/spatial_transform.py,sha256=QVhFJj8eUys3r1-Fz65cT7WP1GSuTTFp-lWsV5wwRzY,1975
+litelama/squeeze_excitation.py,sha256=kzxTrbJHe5nFirMlsmsSRQega4wJftLdITwo9YQYOf4,609
+litelama-0.1.6.dist-info/METADATA,sha256=Nx2HWShcxpFc4OviLGOgEBIRdvopqI3C4fQ8HYjkc14,1233
+litelama-0.1.6.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+litelama-0.1.6.dist-info/RECORD,,
