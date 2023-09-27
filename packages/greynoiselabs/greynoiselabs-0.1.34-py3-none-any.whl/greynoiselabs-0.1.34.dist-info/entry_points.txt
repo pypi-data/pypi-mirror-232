@@ -1,0 +1,3 @@
+[console_scripts]
+greynoiselabs=greynoiselabs.cli.main:app
+
