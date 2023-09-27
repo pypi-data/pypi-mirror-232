@@ -1,0 +1,8 @@
+head_switcher/__init__.py,sha256=zCTWWm6USTrrkDrenbJsnhZJO0XATZ-s3XQgaRerdbs,105
+head_switcher/cli.py,sha256=xenjyxHRpvQ0hLq-PbYEeTcp_27FD7EBzPP8KzpaoLc,560
+head_switcher/core.py,sha256=l8JjczHwTrPSgTB_PI6YuvBePv7qTkVOdxGzYjOyph4,1332
+head_switcher/install.py,sha256=NVjpVuEwG1u_XXwCr7J35XUoQrsBXI8yoOYM8kMYqQ4,912
+head_switcher-0.0.1.dist-info/METADATA,sha256=isk0e1sI3-gkj9RLqDoCDCvXK-J7W0nbebI_UdnchQU,2854
+head_switcher-0.0.1.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+head_switcher-0.0.1.dist-info/entry_points.txt,sha256=pY4oxzvS4-vYa4zquc_gbuqrpaxweD1mmtTfx0502Ms,62
+head_switcher-0.0.1.dist-info/RECORD,,

@@ -1,0 +1,2 @@
+[console_scripts]
+build-frontend-pack = head_switcher.cli:run
