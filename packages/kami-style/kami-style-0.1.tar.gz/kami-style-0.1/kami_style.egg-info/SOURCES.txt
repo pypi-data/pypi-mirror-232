@@ -1,0 +1,6 @@
+README.md
+setup.py
+kami_style.egg-info/PKG-INFO
+kami_style.egg-info/SOURCES.txt
+kami_style.egg-info/dependency_links.txt
+kami_style.egg-info/top_level.txt
