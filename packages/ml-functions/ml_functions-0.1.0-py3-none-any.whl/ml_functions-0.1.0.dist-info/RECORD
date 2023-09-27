@@ -1,0 +1,7 @@
+ml_functions/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ml_functions/convolution2d.py,sha256=WpD0ldYzjQOzt5-Rj7BBVJ9N4gWvq2EJGHTfeLYFpyM,1085
+ml_functions/transpose2d.py,sha256=8g2Ajab5DjysJNldwi6x7nL6Hd9_ms2-jVoTELXn_s0,932
+ml_functions/window1d.py,sha256=m-l60HoVyv5PpH_Bu_3ON7sqZD16g4wE72eNEUqqWD8,1122
+ml_functions-0.1.0.dist-info/METADATA,sha256=Ml_BMDMDE_cO6bPI2VFExt24TSFDi8PLlp4UqLwJfO8,3051
+ml_functions-0.1.0.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+ml_functions-0.1.0.dist-info/RECORD,,
