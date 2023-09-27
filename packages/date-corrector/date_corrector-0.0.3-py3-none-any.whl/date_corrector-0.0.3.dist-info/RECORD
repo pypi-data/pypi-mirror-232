@@ -1,0 +1,9 @@
+date_corrector/DateCorrector.py,sha256=FXFGnNKtFsc6wltXxIMx_4LVZOmPqVzUC54w53krLso,24179
+date_corrector/__init__.py,sha256=e8d7-zbjadG892ETQgpYKUS4KKcomW1g_fZVwuuVG1g,53
+date_corrector/helpers/DateAuxiliary.py,sha256=_XYM35nAAgLI6s1x7yqBm_Kme65kJQqqzCJrXhX1UdM,5237
+date_corrector/helpers/Suggestion.py,sha256=yX-0FPuijg6G-tFqqKb0ya5hvAdX8-9MBbEMi4Ql1Ig,522
+date_corrector/helpers/__init__.py,sha256=A4f_DibeFl1teSiyIMZSvqXg2hJFc_PRCKtcGaCxtuM,71
+date_corrector-0.0.3.dist-info/METADATA,sha256=yUifYA9R4uXEk5okNDraYq8konmMJLYbvQbz6W8rxfs,1025
+date_corrector-0.0.3.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+date_corrector-0.0.3.dist-info/licenses/LICENSE,sha256=jHt4MzL36ErFds1rsyioYxGzTBqdbZox4fXzTJfVQtg,1079
+date_corrector-0.0.3.dist-info/RECORD,,
