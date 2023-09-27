@@ -1,0 +1,10 @@
+ooengine/__init__.py,sha256=yOHNZm_ZjPI2TywkyAVTTj5JaNghV7jQEcJLIUaQqQA,18
+ooengine/__main__.py,sha256=xj1Uuxx04Rc34MisvHTFYdTUUWdfcNaxjX1nDDyMi4I,1127
+ooengine/commands.py,sha256=7uj34avUwg1wXZcNzin3BiK8Jyh9YyWju6YFWC5V6zA,3243
+ooengine/main.py,sha256=KOgxWgYCcHcwr_gK7MeniDIpno0TYzSAuz7R89tC3Uc,7410
+ooengine/usernamelib.py,sha256=k-C80mQuW8Sy-47ffRyv5OmHejR-3RZn6oAk_uMdIx4,916
+ooengine-0.1.0.dist-info/LICENSE,sha256=ixuiBLtpoK3iv89l7ylKkg9rs2GzF9ukPH7ynZYzK5s,35148
+ooengine-0.1.0.dist-info/METADATA,sha256=-gQ3AsxE5D0SN3GCJFL7I9Jl0ZQai29NMQwRQDt3Bqk,1211
+ooengine-0.1.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+ooengine-0.1.0.dist-info/top_level.txt,sha256=JbFqi1LfpDNCZ3AZS_-r2Przc_yNsfPks8YBOjp4hNU,9
+ooengine-0.1.0.dist-info/RECORD,,
