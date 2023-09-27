@@ -1,0 +1,13 @@
+onprem/__init__.py,sha256=Uz2nbhkSQd9I9RJsMeLPcSe2mFa0FsJhxs1RPDkxz_I,380
+onprem/_modidx.py,sha256=-3lUyTOM3oDSKl-dRDHEDo6G-mSrlIqU9bWAprcvsTk,3779
+onprem/console.py,sha256=kf8wIQsLFLAMkw7vzbEn8Dp66QduMaJAZJx6H9nE6K4,1368
+onprem/core.py,sha256=oMjZDGubbzO15CqTtXC1AvEy263M0kbewJWAMJlfFv0,13982
+onprem/ingest.py,sha256=pV-9EigqOQrvehiYOLhZXrMbOSMyFK-Q3lpuwynCWRA,10841
+onprem/utils.py,sha256=GMFPoJsMrxwSRfKjlExiE5BTFP2GNCgtJZp8yYj7OJI,1255
+onprem/webapp.py,sha256=-rxzhZB7zQFzrcwKykQb9WZXVzRhqzUuJWz1lfSiZa4,9720
+onprem-0.0.24.dist-info/LICENSE,sha256=_hJMV-lVf59XfRiMEyG102rB5uc_6BEZZ3TaCSRoTCE,11344
+onprem-0.0.24.dist-info/METADATA,sha256=O5vjflCaTiGwJ_MSJ-iqCesd64Q4-vl9RBslIZegY0Y,15391
+onprem-0.0.24.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+onprem-0.0.24.dist-info/entry_points.txt,sha256=jcjsy81VfY_N7w6rssJVpYkc9tNpy7313rRqB-fJ3Vc,81
+onprem-0.0.24.dist-info/top_level.txt,sha256=B7Ng1NVRBWwXJGPH5QvkTliEe28Vf97cX8bPGQOM26c,7
+onprem-0.0.24.dist-info/RECORD,,
