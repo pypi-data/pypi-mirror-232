@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: ofxstatement-mastercard-de
+Version: 0.1.0
+Summary: OFXStatement plugin for Mastercard statements (Germany)
+Home-page: https://github.com/FliegendeWurst/ofxstatement-mastercard-de
+Author: Arne Keller
+Author-email: arne.keller@posteo.de
+License: GPLv3
+Keywords: ofx,banking,statement
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: Natural Language :: English
+Classifier: Topic :: Office/Business :: Financial :: Accounting
+Classifier: Topic :: Utilities
+Classifier: Environment :: Console
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Intended Audience :: End Users/Desktop
+License-File: LICENSE
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Mastercard plugin for ofxstatement
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This project provides a plugin for ofxstatement that imports German Mastercard statements.
+
+`ofxstatement`_ is a tool to convert proprietary bank statement to OFX format, suitable for importing to GnuCash and other programs.
+
+.. _ofxstatement: https://github.com/kedder/ofxstatement
+
+Whilst the plugin was developed for statements created by Sparkasse, it should work for all German Mastercard statements.
+Tested with statements named:
+
+* `1234xxxxxxxx5678_Abrechnung_vom_DD_MM_YYYY_Last_First.PDF`
+* `YYYYMMDD_1234xxxxxxxx5678_Abrechnung_vom_DD_MM_YYYY_Last_First.PDF`
+* `YYYYMMDD_1234xxxxxxxx5678_-_Ihre_Abrechnung_vom_DD_MM_YYYY.PDF`
+
+If you encounter any errors when using this plugin, feel free to open an issue.
