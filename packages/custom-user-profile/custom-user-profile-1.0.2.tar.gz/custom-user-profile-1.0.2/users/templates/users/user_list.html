@@ -1,0 +1,54 @@
+{% extends "users/base.html" %}
+{% load static %}
+
+{%block styles %}
+<link rel="stylesheet" href="{% static 'users/styles.css' %}" />
+{% endblock styles %}
+
+{% block title %}
+    <title>User List</title>
+{% endblock title %}
+
+{% block content %}
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center">
+            <h3>All Users</h3>
+            {% if "archive" in request.path %}
+                <a href="{% url 'user_list' %}" class="btn btn-secondary">See All Users</a>
+            {% else %}
+                <a href="{% url 'archive' %}" class="btn btn-secondary">See Archived Users</a>
+            {% endif %}
+        </div>
+        <table class="table">
+            <thead>
+                <th>SN</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Actions</th>
+            </thead>
+            <tbody>
+            {% for user in users_list %}
+                <tr>
+                    <td>{{forloop.counter}}</td>
+                    <td>{{user.first_name}}</td>
+                    <td>{{user.last_name}}</td>
+                    <td>{{user.email}}</td>
+                    <td>{{user.phone}}</td>
+                    <td><div class="d-flex justify-content-between align-items-center">
+                        {% if "archive" in request.path %}
+                            <a href="{% url 'undo_delete' user.id %}" class="btn btn-primary text-white"><i class="bi bi-pencil-fill"></i> Undo Delete</a>
+                            <a href="{% url 'hard_delete' user.id %}" class="btn btn-danger text-white"><i class="bi bi-pencil-fill"></i> Permanent Delete</a>
+                        {% else %}
+                            <a href="{% url 'user_detail' user.id %}" class="btn btn-secondary text-white"><i class="bi bi-pencil-fill"></i> View</a>
+                            <a href="{% url 'user_edit' user.id %}" class="btn btn-primary text-white"><i class="bi bi-pencil-fill"></i> Edit</a>
+                            <a href="{% url 'user_delete' user.id %}" class="btn btn-danger text-white"><i class="bi bi-pencil-fill"></i> Delete</a>
+                        {% endif %}
+                    </div></td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock content %}

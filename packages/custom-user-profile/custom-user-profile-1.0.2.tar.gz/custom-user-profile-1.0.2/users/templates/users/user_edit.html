@@ -1,0 +1,14 @@
+{% extends "users/base.html" %}
+{% load crispy_forms_tags %}
+
+{% load static %}
+{% block title %}
+    <title>User Detail</title>
+{% endblock title %}
+
+{% block content %}
+    <div class="content">
+        {% csrf_token %}
+        {% crispy form %}
+    </div>
+{% endblock content%}

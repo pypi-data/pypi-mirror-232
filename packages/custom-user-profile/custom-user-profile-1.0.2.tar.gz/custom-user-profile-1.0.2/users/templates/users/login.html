@@ -1,0 +1,31 @@
+{% extends "users/base.html" %}
+
+{% load static %}
+
+{% load crispy_forms_tags %}
+
+{%block styles %}
+<link rel="stylesheet" href="{% static 'users/styles.css' %}" />
+{% endblock styles %}
+
+{% block title %}
+<title>Login</title>
+{% endblock title %}
+
+{% block content %}
+
+    <div class="container ">
+        <div class="card flex flex-col justify-center align-items-center mt-20 ">
+            <form method="post" class="d-flex flex-column">
+                {% csrf_token %}
+                {% crispy form %}
+            </form>
+            <br>
+            <div class="col-md-6 card-body">
+                <p>Don't have an account?</p>
+                <a href="{% url 'user_register' %}"> Register</a>
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}

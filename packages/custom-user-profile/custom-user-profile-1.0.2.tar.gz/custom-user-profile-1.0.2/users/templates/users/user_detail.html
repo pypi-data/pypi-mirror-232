@@ -1,0 +1,61 @@
+{% extends "users/base.html" %}
+{% load static %}
+{% block title %}
+    <title>User Detail</title>
+{% endblock title %}
+
+{% block content %}
+<div class="d-flex flex-column justify-content-start ">
+    <h2>User Detail</h2>
+
+    <div class="card " style="width: 550px;">
+        <div class="card-header">
+            <div class="d-flex justify-content-between p-10">
+                <h5>Name</h5>
+                <b>{{object.get_full_name}}</b>
+            </div>
+        </div>
+        <div class="card-body" >
+
+            <div class="d-flex justify-content-between p-10">
+                <h5>Address</h5>
+                <b>{{object.address}}</b>
+            </div>
+            <div class="d-flex justify-content-between p-10">
+                <h5>Gender</h5>
+                <b>{{object.gender}}</b>
+            </div>
+            <div class="d-flex justify-content-between p-10">
+                <h5>Phone</h5>
+                <b>{{object.phone}}</b>
+            </div>
+            <div class="d-flex justify-content-between p-10">
+                <h5>Email</h5>
+                <b>{{object.email}}</b>
+            </div>
+            <div class="d-flex justify-content-between p-10">
+                <h5>Date Of Birth</h5>
+                <b>{{object.date_of_birth}}</b>
+            </div>
+            <div class="d-flex justify-content-between p-10">
+                <h5>Education</h5>
+                <b>{{object.education}}</b>
+            </div>
+            <div class="d-flex justify-content-between p-10">
+                <h5>Preferred Contact Mode</h5>
+                <b>{{object.contact_mode}}</b>
+            </div>
+        </div>
+        {% comment %} {% if not object.archive %} {% endcomment %}
+            <div class="card-footer">
+                <div class="d-flex justify-content-between align-items-center">
+                    <a href="{% url 'user_edit' object.id %}" class="btn btn-primary text-white"><i class="bi bi-pencil-fill"></i> Edit</a>
+                    <a href="{% url 'user_delete' object.id %}" class="btn btn-danger text-white"><i class="bi bi-pencil-fill"></i> Delete</a>
+                </div>
+            </div>
+        {% comment %} {% endif %} {% endcomment %}
+
+    </div>
+
+</div>
+{% endblock content %}
