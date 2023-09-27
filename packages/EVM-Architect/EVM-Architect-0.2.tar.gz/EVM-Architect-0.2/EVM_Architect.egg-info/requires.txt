@@ -1,0 +1,4 @@
+requests==2.31.0
+mythril==0.23.25
+pandas==2.1.1
+web3==5.31.1
