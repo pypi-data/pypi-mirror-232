@@ -1,0 +1,15 @@
+score.sa.orm-0.3.4-py3.7-nspkg.pth,sha256=r42BAxsuC5LbXB3ECU9gZUGLeGXUqNwXvg9bvmhVr0g,1664
+score/sa/orm/__init__.py,sha256=jyY4H5sH1JTT-fwWDKeWZDa5DEokHVLndLGquSDCdjQ,1874
+score/sa/orm/_init.py,sha256=I-uqB2xxNXLJ1aU5joJGWC8PAhqS3UAT2z7ZDc3iuoY,11229
+score/sa/orm/_session.py,sha256=PM8FqEqOQ-J4vmwbm47qp3v6lvjM4YTkVEETrJcrhlo,4178
+score/sa/orm/base.py,sha256=zJS61X9Ms4q9HiUahT3eP5V5-DvfOz7C-e5O1MXXKuU,11649
+score/sa/orm/dataloader.py,sha256=dJ2eI0aywfKAhrLAmueuLpWm_Rb4abOb9ERKGthh1R8,6480
+score/sa/orm/helpers.py,sha256=dklp7o1ejY3J_kn2-KawFge_HCn7B3ohZg_gsRWKLXQ,7209
+score/sa/orm/triggers.py,sha256=eHwPcOmmZeXq1dRk6Q4jS0J825-PtSl3eh9q8GEXlGI,3179
+score/sa/orm/views.py,sha256=hYnNDNvjxiwMZXAZ9UbIYzCdXeZTlZNrFi07O5RnFgA,3616
+score.sa.orm-0.3.4.dist-info/COPYING.LESSER.txt,sha256=Okmm5A9QcXz_d-8FH0qPxEG_r_Yc0bM07KQZHBTzAH8,42870
+score.sa.orm-0.3.4.dist-info/METADATA,sha256=ZKO_GtNQMeJuUUxYTv8-Wvk6KlGr8d59kjbuh_zQvkI,3180
+score.sa.orm-0.3.4.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+score.sa.orm-0.3.4.dist-info/namespace_packages.txt,sha256=9vG9YULXFXpe8-m7noAwww1ZwJw0pdx1xV-Efi5-xh8,15
+score.sa.orm-0.3.4.dist-info/top_level.txt,sha256=ombXQcxxoHXkOBjIMIwHIdXOU_bRR6fxpkmCd_LLxCQ,6
+score.sa.orm-0.3.4.dist-info/RECORD,,
