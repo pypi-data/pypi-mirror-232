@@ -1,0 +1,109 @@
+[build-system]
+build-backend = "hatchling.build"
+requires = ["hatchling"]
+
+[project]
+authors = [{name = "Justin Flannery", email = "justin.flannery@juftin.com"}]
+classifiers = [
+  "License :: OSI Approved :: MIT License",
+  "Development Status :: 5 - Production/Stable",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11"
+]
+dependencies = [
+  "openai",
+  "rich",
+  "click",
+  "prompt-toolkit"
+]
+description = "A simple CLI to chat with OpenAI GPT Models"
+dynamic = ["version"]
+keywords = ["openai", "rich", "cli", "python", "chatgpt"]
+license = "MIT"
+name = "llm-term"
+readme = "README.md"
+requires-python = ">=3.8,<4"
+
+[project.scripts]
+llm-term = "llm_term.cli:cli"
+
+[project.urls]
+Changelog = "https://github.com/juftin/llm-cli/releases"
+Issues = "https://github.com/juftin/llm-cli/issues"
+Source = "https://github.com/juftin/llm-cli"
+
+[tool.hatch.envs.default]
+dependencies = [
+  "mypy~=1.4.1",
+  "ruff~=0.0.281",
+  "black~=23.9.1",
+  "pip-tools~=7.3.0"
+]
+path = ".venv"
+
+[tool.hatch.envs.default.scripts]
+all = [
+  "fmt",
+  "typing"
+]
+fmt = [
+  "black {args:.}",
+  "ruff --fix {args:.}",
+  "style"
+]
+precommit = [
+  "pre-commit run --all-files"
+]
+semantic-release = [
+  "npm install --prefix .github/semantic_release/",
+  "npx --prefix .github/semantic_release/ semantic-release {args:}"
+]
+style = [
+  "ruff {args:.}",
+  "black --check --diff {args:.}"
+]
+typing = "mypy --install-types --non-interactive {args:llm_term}"
+
+[tool.hatch.version]
+path = "llm_term/about.py"
+
+[tool.ruff]
+ignore = [
+  # Boolean-typed positional argument in function definition
+  "FBT001",
+  # Ignore complexity
+  "PLR0913"
+]
+line-length = 100
+select = [
+  "A",
+  "ARG",
+  "B",
+  "C",
+  "DTZ",
+  "E",
+  "EM",
+  "F",
+  "FBT",
+  "I",
+  "ICN",
+  "ISC",
+  "N",
+  "PLC",
+  "PLE",
+  "PLR",
+  "PLW",
+  "Q",
+  "RUF",
+  "S",
+  "T",
+  "TID",
+  "UP",
+  "W",
+  "YTT"
+]
+target-version = "py38"
