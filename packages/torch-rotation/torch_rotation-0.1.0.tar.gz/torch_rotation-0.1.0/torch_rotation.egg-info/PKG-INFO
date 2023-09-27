@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: torch-rotation
+Version: 0.1.0
+Summary: A Python package for rotating tensors using PyTorch
+Home-page: https://github.com/teboli/pytorch_rotation
+Author: Thomas Eboli
+Author-email: thomas.eboli@ens-paris-saclay.fr
+Keywords: pytorch,rotation
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.7
+License-File: LICENSE

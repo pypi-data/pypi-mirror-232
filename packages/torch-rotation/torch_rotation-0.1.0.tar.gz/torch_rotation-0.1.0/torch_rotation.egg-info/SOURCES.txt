@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+torch_rotation/__init__.py
+torch_rotation/rotation.py
+torch_rotation.egg-info/PKG-INFO
+torch_rotation.egg-info/SOURCES.txt
+torch_rotation.egg-info/dependency_links.txt
+torch_rotation.egg-info/requires.txt
+torch_rotation.egg-info/top_level.txt
