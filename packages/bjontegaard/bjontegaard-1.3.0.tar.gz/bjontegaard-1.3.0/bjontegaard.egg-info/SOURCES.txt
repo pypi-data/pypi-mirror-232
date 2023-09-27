@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+bjontegaard/__init__.py
+bjontegaard/bjontegaard_delta.py
+bjontegaard/evaluate.py
+bjontegaard/functions.py
+bjontegaard/interpolation.py
+bjontegaard.egg-info/PKG-INFO
+bjontegaard.egg-info/SOURCES.txt
+bjontegaard.egg-info/dependency_links.txt
+bjontegaard.egg-info/requires.txt
+bjontegaard.egg-info/top_level.txt
