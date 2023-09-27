@@ -1,0 +1,2 @@
+[mkdocs.plugins]
+d2 = d2.plugin:Plugin
