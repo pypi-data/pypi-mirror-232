@@ -1,0 +1,9 @@
+pathxf/__init__.py,sha256=4GZKi13lDTD25YBkGakhZyEQZWTER_OWQMNPoH_UM2c,22
+pathxf/app.py,sha256=xWGvEttk0sGGPdDT6eyFTuxbJZ9GOwvlPwZJISNFxns,8351
+pathxf/bids.py,sha256=OihDOyqDjl9nNosOY3DGSbJnJX27b1N2FhXXLCSQIJw,8169
+pathxf/spec.py,sha256=Yu_CkBWA_XF61Kv-XcWuLPcdUV56KU9d3dGvhMCHzwQ,657
+pathxf/utils.py,sha256=_NEvzyGhew7mi88tUv65_4ZdgOeGNPgQ2LLBpZdEFdo,6934
+pathxf-0.0.3.dist-info/METADATA,sha256=qofUgRAuZJcuEkSMjQIDPnmeeXgIt5Kbn4HTIEnqj4U,1348
+pathxf-0.0.3.dist-info/WHEEL,sha256=WGfLGfLX43Ei_YORXSnT54hxFygu34kMpcQdmgmEwCQ,88
+pathxf-0.0.3.dist-info/entry_points.txt,sha256=883KQeZ7-JFYxGxDmCx5S_Jlc9pic1qX0l8KiN_x4FM,41
+pathxf-0.0.3.dist-info/RECORD,,
