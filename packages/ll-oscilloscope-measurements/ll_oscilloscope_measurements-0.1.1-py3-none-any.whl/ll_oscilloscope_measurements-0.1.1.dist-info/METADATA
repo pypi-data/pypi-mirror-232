@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: ll-oscilloscope-measurements
+Version: 0.1.1
+Summary: UNKNOWN
+Home-page: https://github.com/labsland/ll-oscilloscope-measurements/
+Author: LabsLand
+Author-email: dev@labsland.com
+License: BSD 2-Clause license
+Project-URL: Code, https://github.com/labsland/ll-oscilloscope-measurements
+Project-URL: Issue tracker, https://github.com/labsland/ll-oscilloscope-measurements/issues
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: scipy
+
+# ll-oscilloscope-measurements
+
+Library for calculating oscilloscope measurements based on graph data.
+
+$ pip install ll-oscilloscope-measurements
+
+The goal is to provide transparency on how the LabsLand Hive ( https://labsland.com/web/hive )
+takes measurements, but it can be usedf or other purposes.
+
+
