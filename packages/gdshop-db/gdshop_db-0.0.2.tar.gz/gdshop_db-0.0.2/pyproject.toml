@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "gdshop_db"
+version = "0.0.2"
+description = "Grey Dream DB contracts"
+authors = ["Nikolay Baryshnikov <root@k0d.ru>"]
+packages = [
+    { include = "gdshop_db" },
+]
+license="MIT"
+readme="README.md"
+homepage="https://github.com/p141592"
+repository="https://github.com/gdhorseshop/gdlib"
+classifiers=[
+    "License :: OSI Approved :: MIT License",
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Information Technology",
+    "Natural Language :: Russian",
+    "Natural Language :: English",
+    "Programming Language :: Python :: 3.10",
+]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+psycopg2-binary = "^2.9.7"
+pydantic = "^2.4.1"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.9.1"
+isort = "^5.12.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
