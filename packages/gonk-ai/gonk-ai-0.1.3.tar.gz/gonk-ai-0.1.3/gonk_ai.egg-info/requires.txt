@@ -1,0 +1,5 @@
+Flask
+jsonschema
+PyNaCl
+click
+requests
