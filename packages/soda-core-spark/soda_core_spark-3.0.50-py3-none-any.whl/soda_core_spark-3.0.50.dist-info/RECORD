@@ -1,0 +1,5 @@
+soda/data_sources/spark_data_source.py,sha256=CvboEPbKkseD3ojtpbb5bY9EU-Q3LZaZBDjNhXFyyoc,17022
+soda_core_spark-3.0.50.dist-info/METADATA,sha256=Qz5Kz7Rwaieg8zSqL4MvHqdMuelW30vXeLjmhtH6tK0,314
+soda_core_spark-3.0.50.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+soda_core_spark-3.0.50.dist-info/top_level.txt,sha256=nh9kmM9ZWOtIXfwHLUKLl7m6xAFti83JVa2Rcxm6Zck,5
+soda_core_spark-3.0.50.dist-info/RECORD,,
