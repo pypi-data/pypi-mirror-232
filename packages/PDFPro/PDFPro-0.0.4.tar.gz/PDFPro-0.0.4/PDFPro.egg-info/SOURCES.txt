@@ -1,0 +1,7 @@
+setup.py
+PDFPro/__init__.py
+PDFPro/title.py
+PDFPro.egg-info/PKG-INFO
+PDFPro.egg-info/SOURCES.txt
+PDFPro.egg-info/dependency_links.txt
+PDFPro.egg-info/top_level.txt
