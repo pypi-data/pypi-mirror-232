@@ -1,0 +1,6 @@
+dask-gateway-server
+datasize
+humanize
+pydantic>2
+aws-pcluster-helpers>=3.5
+typer
