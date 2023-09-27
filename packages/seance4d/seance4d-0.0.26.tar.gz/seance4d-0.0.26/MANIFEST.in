@@ -1,0 +1,4 @@
+include LICENSE.md
+include README.md
+exclude seance4d/output.wav
+exclude seance4d/response.mp3
