@@ -1,0 +1,2 @@
+seqLister>=1.2.0
+lsseq>=2.5.0
