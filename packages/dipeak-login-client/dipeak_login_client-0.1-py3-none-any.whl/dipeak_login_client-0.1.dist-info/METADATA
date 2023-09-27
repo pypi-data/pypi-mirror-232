@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: dipeak-login-client
+Version: 0.1
+License-File: LICENSE
+Requires-Dist: json
+Requires-Dist: requests (>=2.0.0)
+
