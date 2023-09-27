@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: keras-gpt
+Version: 0.0.1.dev0
+Summary: From zero to GPT-hero with Keras 3
+Project-URL: Documentation, https://alvarobartt.github.io/keras-gpt
+Project-URL: Issues, https://github.com/alvarobartt/keras-gpt/issues
+Project-URL: Source, https://github.com/alvarobartt/keras-gpt
+Author-email: Alvaro Bartolome <alvarobartt@gmail.com>
+License-Expression: MIT
+License-File: LICENSE
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Internet
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: <3.12,>=3.8
+Requires-Dist: keras-core
+Requires-Dist: regex
+Provides-Extra: docs
+Requires-Dist: mkdocs-git-revision-date-localized-plugin~=1.1.0; extra == 'docs'
+Requires-Dist: mkdocs-material~=8.5.4; extra == 'docs'
+Requires-Dist: mkdocstrings[python]~=0.19.0; extra == 'docs'
+Requires-Dist: mkdocs~=1.4.0; extra == 'docs'
+Provides-Extra: examples
+Requires-Dist: datasets; extra == 'examples'
+Provides-Extra: quality
+Requires-Dist: black~=23.9.1; extra == 'quality'
+Requires-Dist: mypy~=1.4.0; extra == 'quality'
+Requires-Dist: pre-commit~=2.20.0; extra == 'quality'
+Requires-Dist: ruff~=0.0.291; extra == 'quality'
+Provides-Extra: tests
+Requires-Dist: pytest-cov~=4.1; extra == 'tests'
+Requires-Dist: pytest~=7.1.2; extra == 'tests'
+Description-Content-Type: text/markdown
+
+<div align="center">
+  <h1>From zero to GPT-hero with Keras 3</h1>
+</div>
+
+## 📖 Reading list
+
+Find the GPT-reading list at [hf.co/collections/alvarobartt/from-zero-to-gpt-hero](https://huggingface.co/collections/alvarobartt/from-zero-to-gpt-hero-650b112cee5dfd0c2a5e0ecb).
