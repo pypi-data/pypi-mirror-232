@@ -1,0 +1,2 @@
+pulp@ git+https://github.com/connor-makowski/pulp.git@c2b350ce8fec165a21f3096dfde95202ac620048
+type_enforced>=0.0.14
