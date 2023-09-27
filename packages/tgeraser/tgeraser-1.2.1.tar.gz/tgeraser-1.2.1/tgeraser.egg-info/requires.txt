@@ -1,0 +1,6 @@
+docopt
+pyaes
+pyasn1
+pyyaml
+rsa
+telethon>=1.23.0
