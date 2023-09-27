@@ -1,0 +1,12 @@
+metrics_miscellany/GMM_class.py,sha256=F5p3VQRLUxHuHiOury5WITCOEhHZn7SMzjscPxc2Ius,1852
+metrics_miscellany/__init__.py,sha256=1r6Mm-RUrPXK4UnNx1L-KwUZ8BOK_I6ux2RH41WUwEU,45
+metrics_miscellany/estimators.py,sha256=0OBDUI898spFQOY62FUZdFh4LEmUFaTb6_Uv4gfC8Z0,2500
+metrics_miscellany/gmm.py,sha256=huUJFfk9VyhO_9qpupGflxDxbcm7kq8xawt0MB21kwE,2826
+metrics_miscellany/random.py,sha256=_Jt9L71p2Tc_fH4k-WNzpQVcs4V76nkQZO3gtmFudHQ,606
+metrics_miscellany/tests.py,sha256=rrs7-uHKh-fmVrMBtPiWZcIWWIhArInMtfffu0Y03M8,6229
+metrics_miscellany/utils.py,sha256=oLuu5ACC0lcgHB7lntNIdkxWwegnKpRjPmwLrcuTVII,2550
+Metrics_Miscellany-0.2.2.dist-info/LICENSE.txt,sha256=qImFXcRJwxIHS80FE7uOx6FhmLY8apd4Y12aR54QU7w,282
+Metrics_Miscellany-0.2.2.dist-info/METADATA,sha256=3nmgKy6lM7YUgyLIgWjk27ikPLQyaUAbGOyvQk1zdks,396
+Metrics_Miscellany-0.2.2.dist-info/WHEEL,sha256=z9j0xAa_JmUKMpmz72K0ZGALSM_n-wQVmGbleXx2VHg,110
+Metrics_Miscellany-0.2.2.dist-info/top_level.txt,sha256=Pq6L_ZV2iZoEsw7DdAvxRYAh-bPx8VptD6Pn5p6QaPg,19
+Metrics_Miscellany-0.2.2.dist-info/RECORD,,
