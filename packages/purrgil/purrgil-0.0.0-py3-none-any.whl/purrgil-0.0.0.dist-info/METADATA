@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: purrgil
+Version: 0.0.0
+Summary: Project TBA.
+Home-page: https://github.com/ITProKyle/purrgil
+License: Apache-2.0
+Author: Kyle Finley
+Author-email: kyle@finley.sh
+Requires-Python: >=3.11,<4.0
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Utilities
+Project-URL: Documentation, https://github.com/ITProKyle/purrgil
+Project-URL: Repository, https://github.com/ITProKyle/purrgil
+Description-Content-Type: text/markdown
+
+# purrgil
+
+Project TBA.
+
