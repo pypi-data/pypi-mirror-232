@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools>=43.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "zelf"
+description = "the self"
+version = "101"
+authors = [
+    {name = "Zelf", email = "tehzelf@gmail.com" },
+]
+readme = "README.rst"
+license = { text="Public Domain"}
+classifiers = [ 
+               'Development Status :: 3 - Alpha',
+               'License :: Public Domain',
+               'Operating System :: Unix',
+               'Programming Language :: Python',
+               'Topic :: Utilities'
+              ]
+
+
+[project.urls]
+"home" = "https://pypi.org/project/zelf"
+"bugs" = "https://github.com/bthate/zelf/issues"
+"source" = "https://github.com/bthate/zelf"
+
+
+[project.scripts]
+zelf = "zelf.run:wrapped"
+
+[tool.setuptools]
+packages = [
+            "zelf",
+            "zelf.modules"
+           ]
+zip-safe = true
+
+
+[tool.setuptools.data-files]
+"share/zelf" = [
+                  "README.rst",
+                 ]
+
+[tool.setuptools.exclude-package-data]
+"*" = [
+       "env*",
+       "html*",
+       "test*"
+      ]
