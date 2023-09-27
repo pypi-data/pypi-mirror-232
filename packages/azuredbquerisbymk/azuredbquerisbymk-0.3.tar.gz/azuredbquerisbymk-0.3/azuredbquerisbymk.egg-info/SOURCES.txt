@@ -1,0 +1,6 @@
+setup.py
+azuredbquerisbymk.egg-info/PKG-INFO
+azuredbquerisbymk.egg-info/SOURCES.txt
+azuredbquerisbymk.egg-info/dependency_links.txt
+azuredbquerisbymk.egg-info/requires.txt
+azuredbquerisbymk.egg-info/top_level.txt
