@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: RefractXAI
+Version: 1.0.0
+Requires-Dist: pandas-profiling (==3.6.6)
+Requires-Dist: bs4 (==0.0.1)
+
