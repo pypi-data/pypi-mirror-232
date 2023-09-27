@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: direnumerate
+Version: 1.0rc1
+Summary: Python 3 library for directory enumeration tool in web applications.
+Home-page: https://github.com/juanbindez/direnum
+Author: Juan Bindez
+Author-email: juanbindez780@gmail.com
+License: GPLv2 license
+Project-URL: Bug Reports, https://github.com/juanbindez/direnumerate/issues
+Project-URL: Read the Docs, https://github.com/JuanBindez/direnumerate/tree/main/docs/user
+Keywords: youtube,download,video,stream
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v2 (GPLv2)
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python
+Classifier: Topic :: Internet
+Classifier: Topic :: Multimedia :: Video
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Terminals
+Classifier: Topic :: Utilities
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+
+# direnumerate
+
+### inslall:
+
+    pip install direnumerate
+
+#### usage:
+
+```python
+
+from direnumerate import DirScan
+
+url = input("url target here >")
+wordlist = "wordlist.txt"
+
+enum = DirScan(url, wordlist)
+enum.dir_enum()
+```
+
+----------
