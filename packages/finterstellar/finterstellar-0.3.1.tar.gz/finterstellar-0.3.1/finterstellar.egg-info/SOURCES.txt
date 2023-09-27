@@ -1,0 +1,16 @@
+License
+README.md
+setup.py
+finterstellar/__init__.py
+finterstellar/data_prep.py
+finterstellar/financials.py
+finterstellar/krx.py
+finterstellar/local.py
+finterstellar/trading.py
+finterstellar/trend.py
+finterstellar/visualization.py
+finterstellar.egg-info/PKG-INFO
+finterstellar.egg-info/SOURCES.txt
+finterstellar.egg-info/dependency_links.txt
+finterstellar.egg-info/requires.txt
+finterstellar.egg-info/top_level.txt
