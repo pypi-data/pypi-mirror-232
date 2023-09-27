@@ -1,0 +1,9 @@
+README.md
+setup.py
+blandai/__init__.py
+blandai/blandai.py
+blandai.egg-info/PKG-INFO
+blandai.egg-info/SOURCES.txt
+blandai.egg-info/dependency_links.txt
+blandai.egg-info/requires.txt
+blandai.egg-info/top_level.txt
