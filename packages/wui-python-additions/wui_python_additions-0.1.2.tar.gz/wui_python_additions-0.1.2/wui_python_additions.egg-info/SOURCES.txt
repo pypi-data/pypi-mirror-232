@@ -1,0 +1,13 @@
+.gitignore
+Makefile
+README.md
+pyproject.toml
+setup.py
+wui_python_additions/__init__.py
+wui_python_additions/configuration.py
+wui_python_additions/process_watcher.py
+wui_python_additions.egg-info/PKG-INFO
+wui_python_additions.egg-info/SOURCES.txt
+wui_python_additions.egg-info/dependency_links.txt
+wui_python_additions.egg-info/requires.txt
+wui_python_additions.egg-info/top_level.txt
