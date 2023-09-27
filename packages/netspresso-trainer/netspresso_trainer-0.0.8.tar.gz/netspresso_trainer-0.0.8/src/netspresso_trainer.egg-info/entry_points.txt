@@ -1,0 +1,3 @@
+[console_scripts]
+netspresso-train = netspresso_trainer.train:netspresso_train
+
