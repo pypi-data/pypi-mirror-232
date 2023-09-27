@@ -1,0 +1,8 @@
+README.md
+setup.py
+kokokoako.egg-info/PKG-INFO
+kokokoako.egg-info/SOURCES.txt
+kokokoako.egg-info/dependency_links.txt
+kokokoako.egg-info/top_level.txt
+pypiele/__init__.py
+pypiele/modules/__init__.py
