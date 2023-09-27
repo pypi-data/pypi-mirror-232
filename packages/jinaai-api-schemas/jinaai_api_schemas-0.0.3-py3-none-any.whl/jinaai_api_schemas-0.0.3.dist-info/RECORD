@@ -1,0 +1,7 @@
+api_schemas/__init__.py,sha256=yyLtGsBhynC-sSHdax-rRGvHNjH-gdWxIY68WnPVfDw,22
+api_schemas/base.py,sha256=7U5MXd29UIFG6_a33afPoB7aQADxUP3_2N-MEsT5_zg,832
+api_schemas/embedding.py,sha256=DFgy5BnTCsGrnS-BV19613WrGfVP8aIdOoI-ayN13fk,2866
+jinaai_api_schemas-0.0.3.dist-info/METADATA,sha256=ZyT_ky5nrt9gEibPuEPI0hzOAc3tClzMroGmxZUPufg,1062
+jinaai_api_schemas-0.0.3.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+jinaai_api_schemas-0.0.3.dist-info/top_level.txt,sha256=hGjpzNURM-NBP33TrD7beV4KQnMgAA2ICjWEBOCrvn4,12
+jinaai_api_schemas-0.0.3.dist-info/RECORD,,
