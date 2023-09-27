@@ -1,0 +1,4 @@
+camelot-py
+opencv-python
+py_console
+PyPDF2==2.0.0
