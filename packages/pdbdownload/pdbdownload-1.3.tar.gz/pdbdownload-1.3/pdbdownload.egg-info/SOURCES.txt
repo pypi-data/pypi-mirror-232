@@ -1,0 +1,10 @@
+README.md
+setup.py
+pdbdownload/__init__.py
+pdbdownload/__main__.py
+pdbdownload.egg-info/PKG-INFO
+pdbdownload.egg-info/SOURCES.txt
+pdbdownload.egg-info/dependency_links.txt
+pdbdownload.egg-info/entry_points.txt
+pdbdownload.egg-info/requires.txt
+pdbdownload.egg-info/top_level.txt
