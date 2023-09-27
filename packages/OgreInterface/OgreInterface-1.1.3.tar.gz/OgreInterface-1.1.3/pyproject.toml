@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "OgreInterface"
+version = "1.1.3"
+description = "A Python library used to generate and optimize epitaxial inorganic interface structures."
+authors = [{name = "Derek Dardzinski", email = "dardzinski.derek@gmail.com"}]
+dependencies = [
+  "pymatgen", 
+  "matplotlib", 
+  "numpy", 
+  "tqdm", 
+  "ase", 
+  "scikit-opt", 
+  "cmcrameri",
+  "seaborn",
+  "matscipy",
+  "scipy",
+]
+requires-python = ">=3.9"
+
+[project.urls]
+source = "https://github.com/DerekDardzinski/OgreInterface"
+
+[tool.setuptools.packages.find]
+exclude = ["site"]
