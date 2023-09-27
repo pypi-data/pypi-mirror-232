@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: nanb
+Version: 0.0.2
+Summary: Not A NoteBook
+Author-email: Espen Notodden <espen@enotodden.com>
+Project-URL: Homepage, https://github.com/enotodden/nanb
+Project-URL: Bug Tracker, https://github.com/enotodden/nanb/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: importlib-metadata ==6.8.0
+Requires-Dist: linkify-it-py ==2.0.2
+Requires-Dist: markdown-it-py ==3.0.0
+Requires-Dist: mdit-py-plugins ==0.4.0
+Requires-Dist: mdurl ==0.1.2
+Requires-Dist: Pygments ==2.16.1
+Requires-Dist: rich ==13.5.3
+Requires-Dist: textual ==0.38.1
+Requires-Dist: tree-sitter ==0.20.2
+Requires-Dist: tree-sitter-languages ==1.7.0
+Requires-Dist: typing-extensions ==4.8.0
+Requires-Dist: uc-micro-py ==1.0.2
+Requires-Dist: zipp ==3.17.0
+
+Not a notebook
+==============
