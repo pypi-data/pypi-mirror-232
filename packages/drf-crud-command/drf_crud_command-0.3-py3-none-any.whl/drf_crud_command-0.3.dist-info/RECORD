@@ -1,0 +1,16 @@
+crud_management/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+crud_management/admin.py,sha256=suMo4x8I3JBxAFBVIdE-5qnqZ6JAZV0FESABHOSc-vg,63
+crud_management/apps.py,sha256=VbDd4V82OxrH5LBpmkHX3KbYN87BUlI0sm0-9im3kZw,161
+crud_management/models.py,sha256=Vjc0p2XbAPgE6HyTF6vll98A4eDhA5AvaQqsc4kQ9AQ,57
+crud_management/tests.py,sha256=mrbGGRNg5jwbTJtWWa7zSKdDyeB4vmgZCRc2nk6VY-g,60
+crud_management/views.py,sha256=mLtbDEl9WzBNheV1wV8ocVpIHYHXN8SBs_z8O9h1FG4,305
+crud_management/management/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+crud_management/management/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+crud_management/management/commands/generate_crud.py,sha256=pqtkQfz_NEUM3u0EqfGbCf-J-g8QbLkWX4LnCLee-Aw,1169
+crud_management/management/commands/generate_crud_views.py,sha256=s1S23BS9SpiQysFH3j5MHy4nUYV0Q6yLOS6xMrZj8pw,7845
+crud_management/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+drf_crud_command-0.3.dist-info/LICENSE,sha256=GEfg4GmBQu1DR8FEGp-oHI-93USx2LvNXjZH-ZF1nX8,1035
+drf_crud_command-0.3.dist-info/METADATA,sha256=rZOPVE3nQjSGCFJpwVkl1HiaAp9-qHmVqevW0b3D-1s,1453
+drf_crud_command-0.3.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+drf_crud_command-0.3.dist-info/top_level.txt,sha256=W409xg3x_rbG5LwF0IYjdaESLr6I8WkBDvDF-VkNU-o,16
+drf_crud_command-0.3.dist-info/RECORD,,
