@@ -1,0 +1,2 @@
+[console_scripts]
+pcluster-bootstrap-helper = aws_pcluster_bootstrap_helpers.cli:cli

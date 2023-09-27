@@ -1,0 +1,15 @@
+typer
+typer[all]
+rich
+inquirer
+colorlog
+textual
+datasize
+questionary
+boto3-stubs[batch,ec2,essential,logs,s3]
+boto3
+funcy
+humanize
+cookiecutter
+pandas
+numpy
