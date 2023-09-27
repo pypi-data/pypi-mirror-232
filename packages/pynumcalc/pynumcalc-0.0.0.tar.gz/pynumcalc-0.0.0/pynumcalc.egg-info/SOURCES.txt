@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+pynumcalc/__init__.py
+pynumcalc.egg-info/PKG-INFO
+pynumcalc.egg-info/SOURCES.txt
+pynumcalc.egg-info/dependency_links.txt
+pynumcalc.egg-info/top_level.txt
