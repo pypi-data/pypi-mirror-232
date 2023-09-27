@@ -1,0 +1,17 @@
+slambda/__init__.py,sha256=b2jxRfGrqtMXi0MMSl_yYNIs_vyZPjeIPtzdKqt9eUg,118
+slambda/core.py,sha256=P3qOvpOGguXjSyOQifVQ8CLz2HTDBio8ckKb8tN3guc,23703
+slambda/gpt.py,sha256=e--95lDtYVBDgMXrPLQdu3qhH_huyc18iuH6YD-XCXg,3425
+slambda/utils.py,sha256=ExupCp4UnjD_z4v5cqGvVumyWGt1aDNemXdZTrAKSjE,683
+slambda/contrib/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+slambda/contrib/entail.py,sha256=7Ql39zNgUppFsRGgE_N4NU3QCXlXxT8WnHG7zzimTH4,546
+slambda/contrib/motivate.py,sha256=FH2UbI_PPFMKGD1fAIb65lOemqiPSst3LkvfwDm7Dxw,862
+slambda/contrib/sentiment.py,sha256=G9ttRchtxQTFMKZ828plMW_FwOeNqLM0adpLyhoMndY,1464
+slambda/contrib/summarize.py,sha256=HgbnIL2i34TZKr_LG1lihjzILK8B12ACHyaR8sNTdFA,681
+slambda/contrib/wiki_link.py,sha256=Ku46FGPLVobC0t5rjJ_oMLJi1bW9C8fX8QuteUFFJeg,1436
+slambda/contrib/writing/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+slambda/contrib/writing/essay.py,sha256=gv2LFfY5XxOvWqZ_HMOFBopcnXzZsx_YZhaUw2OPH_Q,2290
+slambda/contrib/writing/grammar.py,sha256=flulgEVmrnHsmP7FzDgSxRkDDI0wkPlyHy-cKyRgW3E,237
+slambda-0.0.14.dist-info/METADATA,sha256=A8VbOjbSetegD2DAySS0KtmpYdNDbWkkwfIdeuTG-mY,12071
+slambda-0.0.14.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+slambda-0.0.14.dist-info/licenses/LICENSE,sha256=k_brp5UD4bdSU1gUtinlCa_bM0JnLCfVtBvKL1wtdSc,1062
+slambda-0.0.14.dist-info/RECORD,,
