@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: mapilio-kit-v2
+Version: 2.0.0
+Summary: MAPILIO Image/Video Upload and Pipeline
+Home-page: https://github.com/mapilio/mapilio-kit-v2
+Author: Mapilio
+License: MIT License
+Requires-Python: >=3.6
+License-File: LICENSE
+Requires-Dist: attrs ==21.2.0
+Requires-Dist: certifi ==2021.10.8
+Requires-Dist: chardet ==3.0.4
+Requires-Dist: charset-normalizer ==2.0.7
+Requires-Dist: construct ==2.8.8
+Requires-Dist: ExifRead ==2.3.2
+Requires-Dist: gpxpy ==0.9.8
+Requires-Dist: pip >22.3.0
+Requires-Dist: idna ==2.7
+Requires-Dist: jsonschema ==4.1.1
+Requires-Dist: key ==0.4
+Requires-Dist: piexif ==1.1.3
+Requires-Dist: pymp4 ==1.1.0
+Requires-Dist: pynmea2 ==1.12.0
+Requires-Dist: pyrsistent ==0.18.0
+Requires-Dist: python-dateutil ==2.8.1
+Requires-Dist: requests ==2.20.0
+Requires-Dist: Shapely
+Requires-Dist: six ==1.16.0
+Requires-Dist: tqdm ==4.62.3
+Requires-Dist: typing-extensions >=4.7.1
+Requires-Dist: tzwhere ==3.0.3
+Requires-Dist: simple-term-menu
+Requires-Dist: gps-anomaly
+Requires-Dist: calculation-mapilio >=0.1.36
+Requires-Dist: windows-curses ; platform_system == "Windows"
+
