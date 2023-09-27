@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+src/glsr_present/__init__.py
+src/glsr_present/__main__.py
+src/glsr_present/commandline.py
+src/glsr_present.egg-info/PKG-INFO
+src/glsr_present.egg-info/SOURCES.txt
+src/glsr_present.egg-info/dependency_links.txt
+src/glsr_present.egg-info/requires.txt
+src/glsr_present.egg-info/top_level.txt
+src/glsr_present/static/report-parser-common.js
+src/glsr_present/static/report.css
+src/glsr_present/static/show-report.html
+src/glsr_present/templates/build-info.md.j2
+tests/test_commandline.py

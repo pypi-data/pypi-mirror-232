@@ -1,0 +1,16 @@
+# Build Information
+
+_provided by [glsr-present](https://pypi.org/project/glsr-present/) {{ version }}_
+
+[{{ build_info.ci_project_title }}]({{ build_info.ci_project_url }})
+built with pipeline
+[{{ build_info.ci_pipeline_id }}]({{ build_info.ci_pipeline_url }})
+(build started {{ build_info.ci_pipeline_created_at }})
+
+{% if reports_data %}
+## GitLab security reports
+
+{% for report_name, report_type, report_file in reports_data %}
+- [{{ report_name }}](show-report.html?type={{ report_type }}&filename={{ report_file }})
+{% endfor %}
+{% endif %}
