@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: spu-stubs
+Version: 0.0.1.dev0
+Summary: Type stubs for SPU
+Author-email: Tony Wu <tonywu6@protonmail.com>
+Classifier: Development Status :: 1 - Planning
+Classifier: License :: OSI Approved :: Apache Software License
+Requires-Python: <3.9,>=3.8
+Description-Content-Type: text/markdown
+
+# spu-stubs
+
+[Type stubs][stubs] for [SPU].
+
+[stubs]: https://www.python.org/dev/peps/pep-0561/
+[SPU]: https://www.secretflow.org.cn/docs/spu
