@@ -1,0 +1,7 @@
+[lammps.plugins]
+deepmd = deepmd.lmp:get_op_dir
+
+[console_scripts]
+dp = deepmd_cli.main:main
+dp_ipi = deepmd.entrypoints.ipi:dp_ipi
+
