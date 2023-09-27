@@ -1,0 +1,5 @@
+setup.py
+athleticism.egg-info/PKG-INFO
+athleticism.egg-info/SOURCES.txt
+athleticism.egg-info/dependency_links.txt
+athleticism.egg-info/top_level.txt
