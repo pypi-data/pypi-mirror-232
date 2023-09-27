@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: simpleregistry
+Version: 0.1.0
+Summary: 
+License: MIT
+Author: Piotr Kilczuk
+Author-email: piotr@kilczuk.dev
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Description-Content-Type: text/markdown
+
+pyreg
+=====
+
+Registry Pattern implementation in Python.
+
+
