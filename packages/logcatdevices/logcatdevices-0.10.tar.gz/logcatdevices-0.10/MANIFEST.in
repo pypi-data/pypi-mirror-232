@@ -1,0 +1,3 @@
+include logcatdevices/requirements.txt
+include logcatdevices/thirdparty.json
+include logcatdevices/README.MD

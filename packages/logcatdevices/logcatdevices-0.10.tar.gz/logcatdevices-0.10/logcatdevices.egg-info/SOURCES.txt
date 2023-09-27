@@ -1,0 +1,14 @@
+LICENSE.rst
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+logcatdevices/README.MD
+logcatdevices/__init__.py
+logcatdevices/requirements.txt
+logcatdevices/thirdparty.json
+logcatdevices.egg-info/PKG-INFO
+logcatdevices.egg-info/SOURCES.txt
+logcatdevices.egg-info/dependency_links.txt
+logcatdevices.egg-info/requires.txt
+logcatdevices.egg-info/top_level.txt
