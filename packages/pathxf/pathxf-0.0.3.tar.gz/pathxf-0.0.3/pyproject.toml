@@ -1,0 +1,41 @@
+[tool.poetry]
+name = "pathxf"
+version = "0.0.3"
+description = ""
+authors = ["Peter Van Dyken <pvandyk2@uwo.ca>"]
+readme = "README.md"
+packages = [{include = "pathxf"}]
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.12"
+more-itertools = "^9.0"
+typer = "^0.7.0"
+appdirs = "^1.4.4"
+typing-extensions = "^4.5.0"
+pyyaml = "^6.0"
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.3.0"
+isort = "^5.12.0"
+
+[tool.poetry-dynamic-versioning]
+enable = false
+vcs = "git"
+dirty = true
+style = "pep440"
+bump = true
+
+[tool.poetry-dynamic-versioning.substitution]
+files = ['pathxf/__init__.py']
+patterns = ["(^__version__\\s*(?::.*?)?=\\s*['\"])[^'\"]*(['\"])"]
+
+[tool.poetry.scripts]
+pathxf = "pathxf.app:run"
+
+[build-system]
+requires = ["poetry-core>=1.0.0", "poetry-dynamic-versioning"]
+build-backend = "poetry_dynamic_versioning.backend"
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
