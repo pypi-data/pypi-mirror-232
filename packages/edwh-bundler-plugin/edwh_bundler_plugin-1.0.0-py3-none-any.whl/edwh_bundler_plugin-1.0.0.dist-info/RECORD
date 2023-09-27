@@ -1,0 +1,12 @@
+edwh_bundler_plugin/__about__.py,sha256=GqbQWiUFkpRWsMeEqWChyU1nrGMvTgCVIOkJlZ_b2mc,139
+edwh_bundler_plugin/__init__.py,sha256=o0tr7fSXDvnp9aDr07-zEuqMwLX6ThEXJuP5PbrZTF8,300
+edwh_bundler_plugin/bundler_plugin.py,sha256=L2KrQul5wHYP4rJJfJClQNuhYv8_ZXiEtZF6vOjRvGU,24344
+edwh_bundler_plugin/css.py,sha256=fCeKEaw-4rR4eGQL95KiG31wnprUjYch3Ou6_o6f1AE,6276
+edwh_bundler_plugin/js.py,sha256=BziiOYaJ9eNqUp6oBmNvcxQDz1UV77xvvWcRTpEkjcU,3699
+edwh_bundler_plugin/lazy.py,sha256=IjZfbXAJTvVAnDTNJf_mu743r9TclOYeoTs0ZVJ-LHc,1990
+edwh_bundler_plugin/shared.py,sha256=mckGp8WfCEPebDXyMPbJ1xiw5xEuZogkBjk32pp785c,2749
+edwh_bundler_plugin-1.0.0.dist-info/METADATA,sha256=vkq2W3lq2LD1RScIo_4encyzhaMFYLA3HOlZMVtdoPo,8426
+edwh_bundler_plugin-1.0.0.dist-info/WHEEL,sha256=EI2JsGydwUL5GP9t6kzZv7G3HDPi7FuZDDf9In6amRM,87
+edwh_bundler_plugin-1.0.0.dist-info/entry_points.txt,sha256=GRShb00kRz-TFBQv0VChG6Q8Pb0MuFit3NmwpRjhXIM,57
+edwh_bundler_plugin-1.0.0.dist-info/licenses/LICENSE.txt,sha256=WPXhk3g8238APd_24VBa4QJY0d9QdgKbI0KZrCajYSk,1109
+edwh_bundler_plugin-1.0.0.dist-info/RECORD,,
