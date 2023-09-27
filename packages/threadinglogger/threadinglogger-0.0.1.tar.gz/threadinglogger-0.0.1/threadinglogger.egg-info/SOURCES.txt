@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+threadinglogger.egg-info/PKG-INFO
+threadinglogger.egg-info/SOURCES.txt
+threadinglogger.egg-info/dependency_links.txt
+threadinglogger.egg-info/not-zip-safe
+threadinglogger.egg-info/top_level.txt
