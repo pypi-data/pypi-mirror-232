@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: bandwidth-sdk
+Version: 15.0.0b2
+Summary: Bandwidth
+Home-page: https://dev.bandwidth.com/sdks/python
+Author: Bandwidth
+Author-email: letstalk@bandwidth.com
+License: UNKNOWN
+Keywords: OpenAPI,OpenAPI-Generator,Bandwidth
+Platform: UNKNOWN
+Requires-Python: >=3.6
+License-File: LICENSE
+
+    Bandwidth&#39;s Communication APIs  # noqa: E501
+    
+
