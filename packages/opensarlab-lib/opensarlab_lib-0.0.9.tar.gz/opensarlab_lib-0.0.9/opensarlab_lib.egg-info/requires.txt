@@ -1,0 +1,15 @@
+asf_search
+cartopy
+gdal
+hyp3_sdk
+ipywidgets
+IPython
+matplotlib
+numpy
+pandas
+pyproj
+requests
+
+[dev]
+pytest
+pytest-cov
