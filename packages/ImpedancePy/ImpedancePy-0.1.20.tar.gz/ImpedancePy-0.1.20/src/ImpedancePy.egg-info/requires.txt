@@ -1,0 +1,6 @@
+UQpy
+
+[dev]
+Sphinx
+sphinx-rtd-theme
+sphinxcontrib-bibtex
