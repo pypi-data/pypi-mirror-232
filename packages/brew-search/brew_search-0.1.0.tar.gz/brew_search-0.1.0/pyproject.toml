@@ -1,0 +1,104 @@
+[project]
+name = "brew-search"
+dynamic = []
+description = "Search CLI tool for Homebrew (support sorting by popularity)"
+readme = "README.md"
+authors = [
+    { name = "strayge", email = "strayge@gmail.com" },
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Natural Language :: English",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Topic :: Utilities",
+]
+requires-python = ">=3.10"
+dependencies = [
+    "httpx",
+    "colorama",
+]
+version = "0.1.0"
+
+[project.license]
+text = "MIT"
+
+[project.urls]
+repository = "https://github.com/strayge/pybrew"
+
+[project.optional-dependencies]
+dev = [
+    "flake8-pyproject",
+    "flake8-commas",
+    "flake8-isort",
+    "flake8-bugbear",
+    "flake8-simplify",
+    "flake8-print",
+    "flake8-debugger",
+    "flake8-fixme",
+    "flake8-leading-blank-lines",
+    "isort",
+    "mypy",
+]
+
+[project.scripts]
+brew-search = "brew_search.__main__:cli"
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool.pdm.version]
+source = "file"
+path = "brew_search/__init__.py"
+
+[tool.flake8]
+exclude = [
+    ".git",
+    ".idea",
+    "__pycache__",
+    "venv",
+]
+max-line-length = 100
+ignore = [
+    "C819",
+    "W503",
+    "SIM113",
+    "SIM102",
+    "SIM106",
+    "SIM119",
+    "SIM114",
+    "SIM110",
+    "SIM111",
+    "SIM116",
+    "T201",
+]
+per-file-ignores = [
+    "*/__init__.py:F401",
+]
+
+[tool.mypy]
+exclude = [
+    "venv",
+]
+disable_error_code = "attr-defined"
+ignore_missing_imports = true
+disallow_untyped_calls = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+disallow_untyped_decorators = true
+warn_return_any = true
+warn_unreachable = true
+
+[tool.isort]
+line_length = 100
+include_trailing_comma = true
+combine_as_imports = true
+use_parentheses = true
