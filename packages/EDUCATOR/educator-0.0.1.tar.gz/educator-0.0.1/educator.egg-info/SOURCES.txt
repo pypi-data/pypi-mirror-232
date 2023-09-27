@@ -1,0 +1,6 @@
+LICENSE
+setup.py
+educator.egg-info/PKG-INFO
+educator.egg-info/SOURCES.txt
+educator.egg-info/dependency_links.txt
+educator.egg-info/top_level.txt
