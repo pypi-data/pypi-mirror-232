@@ -1,0 +1,4 @@
+packages/*/dist/
+docs/
+build/
+data_wizard/static/
