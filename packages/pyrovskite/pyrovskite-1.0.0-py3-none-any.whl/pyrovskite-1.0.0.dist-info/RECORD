@@ -1,0 +1,11 @@
+pyrovskite/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyrovskite/auxiliary.py,sha256=7h8POx1-X0GMvuC_C2H7Dlnwi3F21KT2w04uHw2nu6Y,2621
+pyrovskite/builder.py,sha256=dA2ZafqChWeccakSHuPmOBVwu759j7By1uyD4ndpZ6M,40767
+pyrovskite/geometry.py,sha256=HzwW0eWJ5dyOXiQE5fzawpgeKdfZrQXtr3o919hn9w4,6094
+pyrovskite/io.py,sha256=bWqZH6UwFabgnPBQdbuCqBIvV-ce--U4hBQe3hWz_8c,9191
+pyrovskite/perovskite.py,sha256=C_5ykTPWcgh2r5d-bYIaN0u2STM8Z7D74Ys7-Buosv4,33360
+pyrovskite-1.0.0.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+pyrovskite-1.0.0.dist-info/METADATA,sha256=tfqLhHf1o7WZ4mOIicG039z_a8CBRsdTzKLyNHHVHBk,849
+pyrovskite-1.0.0.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+pyrovskite-1.0.0.dist-info/top_level.txt,sha256=ulFVBQ-edM1jLlKr3lLACzMSUkNgeAGabEf7-kjX3HI,11
+pyrovskite-1.0.0.dist-info/RECORD,,

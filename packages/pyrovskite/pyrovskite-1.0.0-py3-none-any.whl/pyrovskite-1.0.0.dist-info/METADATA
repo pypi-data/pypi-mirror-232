@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: pyrovskite
+Version: 1.0.0
+Summary: Python package for 2D- and 3D-perovskites
+Author: Robert Stanton, Dhara J. Trivedi
+Author-email: <stantor@clarkson.edu>
+Keywords: python,perovskite,hybrid,electronic structure,DFT,xTB
+Classifier: Development Status :: 1 - Planning
+Classifier: Programming Language :: Python :: 3
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pymatgen
+Requires-Dist: ase
+
+A software package for the high throughput construction, analysis, and featurization of two- and three-dimensional perovskite systems.
