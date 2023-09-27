@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+isostream/__init__.py
+isostream/client.py
+isostream/utils.py
+isostream.egg-info/PKG-INFO
+isostream.egg-info/SOURCES.txt
+isostream.egg-info/dependency_links.txt
+isostream.egg-info/requires.txt
+isostream.egg-info/top_level.txt
