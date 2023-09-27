@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+instacrawler/__init__.py
+instacrawler/crawling.py
+instacrawler.egg-info/PKG-INFO
+instacrawler.egg-info/SOURCES.txt
+instacrawler.egg-info/dependency_links.txt
+instacrawler.egg-info/not-zip-safe
+instacrawler.egg-info/requires.txt
+instacrawler.egg-info/top_level.txt
