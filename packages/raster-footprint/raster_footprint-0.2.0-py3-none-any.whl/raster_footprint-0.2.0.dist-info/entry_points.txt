@@ -1,0 +1,2 @@
+[console_scripts]
+raster-footprint = raster_footprint._cli:cli
