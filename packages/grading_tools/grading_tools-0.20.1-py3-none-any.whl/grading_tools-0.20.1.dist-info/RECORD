@@ -1,0 +1,9 @@
+grading_tools/__init__.py,sha256=_-W4DsY25IRCmRYfSd3O3-5Oy0W1BUGMo83xLvQ82VA,18
+grading_tools/checkers.py,sha256=KbDUPjmNzoltlt9AbvMc3iW9oCKyLDOMsxT9kK4xdC4,2994
+grading_tools/feedback/english.py,sha256=ELUbpkigwumPNi1MEOtLLS_mUe666m61mnEQshj1boM,2702
+grading_tools/graders.py,sha256=EW0925NiELt-Rjv223IPp4z7Gbxczz45AkCf0wJC_HI,70146
+grading_tools/loaders.py,sha256=rPVxaj0sug5ly_jgHGastMyJt62owt9vCrZHZWj-Xa8,3005
+grading_tools/utils.py,sha256=mJq3u3x-qAG5dsWokf1gcCB85qEwJKzsJ3bw5vgZpDQ,1513
+grading_tools-0.20.1.dist-info/METADATA,sha256=B3Lsr6ej4Wf8JC8jmtpEwosth3kmQ5RSE-RAjd_vfmo,2439
+grading_tools-0.20.1.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+grading_tools-0.20.1.dist-info/RECORD,,
