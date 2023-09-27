@@ -1,0 +1,7 @@
+README.md
+VERSION
+pyproject.toml
+teft.egg-info/PKG-INFO
+teft.egg-info/SOURCES.txt
+teft.egg-info/dependency_links.txt
+teft.egg-info/top_level.txt
