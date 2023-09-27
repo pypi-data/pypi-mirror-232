@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: rwa
+Version: 1.0.0.2
+Summary: Python bindings for robot workspace analysis.
+Home-page: https://leibrandt.gitlab.io/rwa/index.html
+License: GPL-3.0-or-later
+Keywords: robotics, workspace analysis
+Author: Konrad Leibrandt
+Author-email: research@leibrandt.eu
+Requires-Python: >=3.10,<3.11
+Classifier: Framework :: Robot Framework
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: C++
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Requires-Dist: numpy (>=1.24.3,<2.0.0)
+Project-URL: Documentation, https://leibrandt.gitlab.io/rwa/python_rwa.html
+Project-URL: Repository, https://gitlab.com/leibrandt/rwa
+Description-Content-Type: text/markdown
+
+# Robot Workspace Analysis (RWA)
+The robot workspace analysis (RWA) library is a library in C++ and Python that enables to analyse the workspace of a robotic manipulator. This python package is a wrapper around the C++ code. It gets compiled with Linux, and includes binaries.
+
+More extensive documentation can be found: [https://gitlab.com/leibrandt/rwa](https://gitlab.com/leibrandt/rwa)
+
+And API documentation: [https://leibrandt.gitlab.io/rwa/python_rwa.html](https://leibrandt.gitlab.io/rwa/python_rwa.html)
+
