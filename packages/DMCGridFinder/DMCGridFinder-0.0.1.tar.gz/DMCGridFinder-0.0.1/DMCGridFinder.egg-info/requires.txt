@@ -1,0 +1,4 @@
+scikit-learn==1.1.3
+scikit-image==0.19.3
+pystrich==0.8
+pandas
