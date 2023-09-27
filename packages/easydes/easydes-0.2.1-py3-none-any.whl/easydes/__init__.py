@@ -1,0 +1,1 @@
+from .deslib import encrypt_des, decrypt_des
