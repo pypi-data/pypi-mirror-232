@@ -1,0 +1,57 @@
+Metadata-Version: 2.1
+Name: equality-check
+Version: 0.0.5
+License: pscl
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+
+
+
+
+
+
+
+# equality-check
+
+```
+from equality_check import EQUALITY
+
+EQ = EQUALITY (
+	FOLDER ("STATUS_FOLDERS/1/EQ_1"),
+	FOLDER ("STATUS_FOLDERS/1/EQ_2")
+)
+```
+
+If the folders are equal, 
+then these assertions should pass.
+```
+assert (len (EQ ['1']) == 0)
+assert (len (EQ ['2']) == 0)
+```
+
+Otherwise:
+```
+#
+# UNIQUE TO 1
+# UNIQUE TO 2
+#
+#	"f" 	UNIQUE FILE
+#	"fc" 	UNIQUE FILE CONTENTS
+#
+#	"d"		UNIQUE DIRECTORY
+#
+#	"s"		UNIQUE SYMLINK
+#	"sc"	UNIQUE SYMLINK CONTENTS
+#
+EQ = {
+	1: {
+		"asdf/asdf": "f",
+		"asdf/asd": "d",
+		"asdff/asd": "?"
+	},
+	2: {}
+}
+```
+
+	
