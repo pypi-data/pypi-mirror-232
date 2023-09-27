@@ -1,0 +1,2 @@
+[console_scripts]
+navicat_mikimo = navicat_mikimo.__main__:main
