@@ -1,0 +1,11 @@
+geopandas
+scipy
+shapely
+numpy
+pandas
+matplotlib
+utm
+contextily
+requests
+isoweek
+cchardet
