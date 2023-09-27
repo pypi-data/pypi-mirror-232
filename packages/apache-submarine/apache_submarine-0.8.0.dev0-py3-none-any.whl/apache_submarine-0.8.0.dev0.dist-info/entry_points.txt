@@ -1,0 +1,2 @@
+[console_scripts]
+submarine = submarine.cli.main:entry_point
