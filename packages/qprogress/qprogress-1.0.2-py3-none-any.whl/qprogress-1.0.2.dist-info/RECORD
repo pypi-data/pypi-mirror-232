@@ -1,0 +1,6 @@
+qprogress/__init__.py,sha256=KnNgjzYFqYoO0wqk8am5iyeVyLCGU2-I3Rxl1BU73Gc,38
+qprogress/formatters.py,sha256=GF2UCSajnQTNPxt30f8rwu--7cdMAJfK4qXuLJd1Bm8,322
+qprogress/progress_bar.py,sha256=nt8ogRmFmAbMFdGmUcz0fCPEAzokmJpKQZdiF1csMhI,720
+qprogress-1.0.2.dist-info/METADATA,sha256=D9ykchHCqZD4EESZ1AUFD0bY4J3399NHq6Zv659kJiY,483
+qprogress-1.0.2.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+qprogress-1.0.2.dist-info/RECORD,,
