@@ -1,0 +1,3 @@
+[console_scripts]
+clientele=src.cli:cli_group
+
