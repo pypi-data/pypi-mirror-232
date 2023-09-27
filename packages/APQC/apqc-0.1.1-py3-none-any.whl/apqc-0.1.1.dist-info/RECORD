@@ -1,0 +1,10 @@
+apqc-0.1.1.dist-info/METADATA,sha256=t0sOFsJ0zDgBut5iMalPy9IlOLauk3Cylpmf2xZDAxI,938
+apqc-0.1.1.dist-info/WHEEL,sha256=1D4d-_ODszlK6-qFybc5BLF-ZhZvee-uKVh2hLa3IIc,90
+apqc-0.1.1.dist-info/licenses/LICENSE,sha256=NGlx7OuxrN9eTYNg8xC4D-vxGGmC-d-cYbiOcE6qtvQ,1063
+apqc/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+apqc/density_estimation.py,sha256=oCqqMyxfQeWeTb4xjPj8T4cb1lX79EezquBfdhJDeVE,10823
+apqc/pqc.py,sha256=vz1AUFcp4D4C1FIPMYm15i48a1i4KUtsQp100FhS374,35287
+apqc/sample_data/__init__.py,sha256=OGaW55KtdnXZixty3WuGDCvNTPVzLNpiRyPvhT6KN8Y,87
+apqc/sample_data/generate_toy_datasets.py,sha256=usIoY9yVVfb0BC1cB_FAGHPZ3uWVpKsN3_FJ9cE5Hn8,2096
+apqc/utils.py,sha256=sFOCQ5oUrtnyAzPZxJHHLAu5IwPCMcAXZCEo0eZ1MBc,7131
+apqc-0.1.1.dist-info/RECORD,,
