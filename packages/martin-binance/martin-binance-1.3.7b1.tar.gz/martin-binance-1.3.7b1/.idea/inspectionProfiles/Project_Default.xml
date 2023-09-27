@@ -1,0 +1,37 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <option name="scopesOrder">
+      <list>
+        <option value="All Changed Files" />
+        <option value="Not_checked" />
+        <option value="Open Files" />
+        <option value="Project Files" />
+        <option value="Scratches and Consoles" />
+      </list>
+    </option>
+    <inspection_tool class="BuildoutUnresolvedPartInspection" enabled="true" level="ERROR" enabled_by_default="true" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="3">
+            <item index="0" class="java.lang.String" itemvalue="exchanges-wrapper" />
+            <item index="1" class="java.lang.String" itemvalue="simplejson" />
+            <item index="2" class="java.lang.String" itemvalue="shortuuid" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="exchanges_wrapper.api_pb2_grpc.MartinStub.*" />
+          <option value="grpc.RpcError.*" />
+          <option value="martin_binance.executor.Strategy.*" />
+          <option value="exchanges_wrapper.api_pb2.OpenClientConnectionId" />
+          <option value="exchanges_wrapper.api_pb2.*" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
