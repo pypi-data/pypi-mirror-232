@@ -1,0 +1,11 @@
+nrlmsise00/_nrlmsise00.cpython-39-darwin.so,sha256=a-dW1rY-m2Sms3xv7kflddIht20ohos4S57QdtB7WmE,90096
+nrlmsise00/__init__.py,sha256=satlHlaZLiP8wlG9aaz9gOHxuqr_8H4Po0RGXmav_hY,595
+nrlmsise00/core.py,sha256=rpuB0ynw6FNCcBmjovwVEgvYOkZ1phfSGsV0Brg9J3Y,7182
+nrlmsise00/dataset/__init__.py,sha256=39OapBTbkDqg2UgKlS3_WJ_ERW0auY3v7pUdG912jGs,842
+nrlmsise00/dataset/core.py,sha256=tTjyvfxvS1qlciCkUUxCTGY5-sPMbi6wBWIrtLz0N9I,9777
+nrlmsise00-0.1.2.dist-info/RECORD,,
+nrlmsise00-0.1.2.dist-info/WHEEL,sha256=cABgpcR3h0cnc4AMuKpjsaE5aw1qSnrxpuJorQio3VM,109
+nrlmsise00-0.1.2.dist-info/COPYING.NRLMSISE-00,sha256=-QgY4T4cFEJzV-TmiK1a9Pl0bRLfdmLOxNd-FxbSC04,1119
+nrlmsise00-0.1.2.dist-info/COPYING.GPLv2,sha256=gXf5dRMhNSbfLPYYTY_5hsZ1r7UU1OaKQEAQUhuIBkM,18092
+nrlmsise00-0.1.2.dist-info/top_level.txt,sha256=R2hqc0W_g7YUebtAkXyrY7cqk9wHtSf0oB35DXmjA0M,11
+nrlmsise00-0.1.2.dist-info/METADATA,sha256=ua9JEVxsIcDcoCh2_xhXvzhGPTo_cobsJIcBwTj_duA,15793
