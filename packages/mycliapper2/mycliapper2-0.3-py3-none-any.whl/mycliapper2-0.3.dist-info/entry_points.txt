@@ -1,0 +1,3 @@
+[console_scripts]
+mycliapp = mycliapp.main:hello
+
