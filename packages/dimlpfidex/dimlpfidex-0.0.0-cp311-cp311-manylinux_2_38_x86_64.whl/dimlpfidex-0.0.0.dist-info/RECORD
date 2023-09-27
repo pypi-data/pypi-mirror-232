@@ -1,0 +1,15 @@
+dimlp/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dimlp/crossValid.py,sha256=r1JN4Ej1uDJaf-iLpr48DQnzS7-GBVfW3JQR7tLHQzU,105890
+dimlp/mlpTrn.py,sha256=xCj1gycg6xUZb5GBhY8OuwVOmuViVUPKQotKwOWQJPc,18587
+dimlp/stairObj.py,sha256=nvp89BSj3IM9dNpkNNQUfq5FTPA-ikUU8P__rZ0manU,1576
+dimlp/svmTrn.py,sha256=dLgEowhlS57t-3JbwVlJhK3W2M1-oTHHNMAK5EE7OYY,12979
+dimlp/trnFun.py,sha256=vX_g1f9hhS3SfQlLxStUHbptPoP329vKS7kR_NwT2X4,7180
+dimlpfidex/dimlp.cpython-311-x86_64-linux-gnu.so,sha256=J0L8k5fSiIL9HQ041lO-q-Y8GmtnzzoDacyV-MAFbEY,388840
+dimlpfidex/fidex.cpython-311-x86_64-linux-gnu.so,sha256=WAUd4T0zV7T7vZhNgR_kf3gB4LgDAj3YqE8rEhbuOx8,229144
+dimlpfidex/fidexGlo.cpython-311-x86_64-linux-gnu.so,sha256=FV7oYGNGOC69v2a5C_iTRZ2nMbsYALMfoHp-l2CgU4I,282368
+fidex/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fidexGlo/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dimlpfidex-0.0.0.dist-info/LICENSE,sha256=9ro03jhll8-mgqkThrPNOmh_gQTRioSyTcN_Pyan5XY,1497
+dimlpfidex-0.0.0.dist-info/METADATA,sha256=jLrE1yXb6sAwouJj8VVyeUAZQP436PU-1zoM7algng0,3350
+dimlpfidex-0.0.0.dist-info/WHEEL,sha256=I2Z5PMl-TOyoOYm4A6wN9XK85_fgWd7HNPZhfPM2rgQ,110
+dimlpfidex-0.0.0.dist-info/RECORD,,
