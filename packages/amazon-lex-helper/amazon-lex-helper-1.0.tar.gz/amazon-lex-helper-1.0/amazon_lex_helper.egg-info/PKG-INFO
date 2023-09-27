@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: amazon-lex-helper
+Version: 1.0
+Summary: Interact with Amazon Lex using Python in an easy way
+Home-page: https://github.com/aws-samples/amazon-lex-v2-helper
+Download-URL: https://github.com/aws-samples/amazon-lex-v2-helper/amazon-lex-v2-helper-v0.1.tgz
+Author: rubenafo
+Author-email: rubenafo@amazon.com
+Keywords: amazon-lex,lex,chatbot,voicebot,nlp,aws
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Utilities
+Classifier: Development Status :: 4 - Beta
+Requires-Python: >=3.9
+License-File: LICENSE
