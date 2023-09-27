@@ -1,0 +1,11 @@
+setup.py
+equality_check.egg-info/PKG-INFO
+equality_check.egg-info/SOURCES.txt
+equality_check.egg-info/dependency_links.txt
+equality_check.egg-info/top_level.txt
+src/__init__.py
+src/FUNCTIONS/ADD_DIFFERENT_CONTENTS.py
+src/FUNCTIONS/ADD_DIFFERENT_PATHS.py
+src/FUNCTIONS/GET_DIRECTORIES.py
+src/FUNCTIONS/GET_SAME_DIRECTORIES.py
+src/FUNCTIONS/IS_DIR.py
