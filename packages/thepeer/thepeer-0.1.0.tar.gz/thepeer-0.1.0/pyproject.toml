@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "thepeer"
+version = "0.1.0"
+description = "A 3rd party developer friendly client package for thepeer"
+authors = ["Gbenga Adeyi <adeyigbenga005@gmail.com>"]
+maintainers = ["Gbenga Adeyi <adeyigbenga005@gmail.com>"]
+readme = "PACKAGE_README.md"
+license = "MIT"
+repository = "https://github.com/gray-adeyi/thepeer"
+keywords = ["thepeer", "api wrapper"]
+classifiers = [
+"Intended Audience :: Developers"
+]
+packages = [{include = "thepeer"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+httpx = "^0.24.1"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.7.0"
+ruff = "^0.0.287"
+python-dotenv = "^1.0.0"
+mkdocs-material = "^9.2.8"
+fastapi = "^0.103.1"
+uvicorn = "^0.23.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
