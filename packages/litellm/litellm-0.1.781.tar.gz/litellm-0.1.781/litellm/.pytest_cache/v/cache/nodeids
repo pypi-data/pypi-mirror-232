@@ -1,0 +1,4 @@
+[
+  "tests/test_mock_request.py::test_mock_request",
+  "tests/test_mock_request.py::test_streaming_mock_request"
+]
