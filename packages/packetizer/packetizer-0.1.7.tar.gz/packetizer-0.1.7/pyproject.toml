@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "packetizer"
+version = "0.1.7"
+description = ""
+authors = ["Uriel Reina <urielreina@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+typer = "^0.9.0"
+
+[tool.poetry.scripts]
+packetizer = "packetizer.packetizer:app"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.0.290"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
