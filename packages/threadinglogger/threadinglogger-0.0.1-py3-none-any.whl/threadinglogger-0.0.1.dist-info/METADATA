@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: threadinglogger
+Version: 0.0.1
+Summary: Logger by a thread.
+Home-page: https://github.com/chorong8883/threadinglogger.git
+Author: chorong
+Author-email: chorong8883@gmail.com
+License: UNKNOWN
+Keywords: logger
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# threadinglogger
+Logger by a thread.
+
+
