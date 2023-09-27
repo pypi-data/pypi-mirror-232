@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: azuredbquerisbymk
+Version: 0.3
+Requires-Dist: pyodbc >=4.0.39
+Requires-Dist: pandas >=2.1.0
+Requires-Dist: streamlit >=1.26.0
+Requires-Dist: datetime >=5.2
+
