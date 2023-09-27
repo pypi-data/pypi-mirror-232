@@ -1,0 +1,8 @@
+pyarrow
+datetime
+numpy
+pandas
+pathlib
+lxml
+bs4
+openpyxl
