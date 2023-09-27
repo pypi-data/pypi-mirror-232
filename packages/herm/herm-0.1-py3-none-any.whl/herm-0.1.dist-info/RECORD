@@ -1,0 +1,10 @@
+herm/__init__.py,sha256=3XsDH_0MPQtsoelIqGCxgOZbKfwXiQ4HRvx_l4AkS5g,74
+herm/client.py,sha256=uVJ0WEcCOZ_TtdRKshJZnjPxhqiuyta_eLyhI07MXCE,2285
+herm/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+herm/tests/test_basic.py,sha256=TD7avGsywdLMHGeQEZpwqVl57VtJRsD5TEhzI_z0sb4,1257
+herm-0.1.dist-info/LICENSE,sha256=ex6ROKAQ9nsbEhGi8NcVUh8gXxh1vm3fVGlR04bnSPs,1068
+herm-0.1.dist-info/METADATA,sha256=hgk_KQCoyskqqFY4hU14qPunM2se8L-Z1VtBxl2PKds,776
+herm-0.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+herm-0.1.dist-info/top_level.txt,sha256=mgDZZA8S1uMTMPdOIMhrCNCWZjKQmoDPXCDxvsa3fRw,5
+herm-0.1.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+herm-0.1.dist-info/RECORD,,
