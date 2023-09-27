@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0acf7d6d-e9a3-4ec0-b16f-017fa82829f0" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="total-column" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2VqdAS7aTSUTPnpR1RN2Jr6nWkt" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "/home/bmarts/projects/django-pivot",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "reference.settings.deploy.options",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0acf7d6d-e9a3-4ec0-b16f-017fa82829f0" name="Changes" comment="" />
+      <created>1695567401078</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1695567401078</updated>
+      <workItem from="1695567402131" duration="11849000" />
+      <workItem from="1695650229978" duration="21936000" />
+    </task>
+    <task id="LOCAL-00001" summary="Fix for issue #26. Since column aliases in annotations are now restricted to not have whitespace, sql comments, quotes, or semicolons, they are aliased during the SQL query, and returned back after the query returns.">
+      <option name="closed" value="true" />
+      <created>1695652609654</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1695652609654</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Move to modern versions of python and django">
+      <option name="closed" value="true" />
+      <created>1695655603029</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1695655603029</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Be specific about python version 3.10, which looked like 3.1 to github">
+      <option name="closed" value="true" />
+      <created>1695655890384</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1695655890384</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Be specific about python version 3.10, which looked like 3.1 to github">
+      <option name="closed" value="true" />
+      <created>1695656095170</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1695656095170</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Remove unused lines from test models">
+      <option name="closed" value="true" />
+      <created>1695656862623</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1695656862623</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Clean up test runner, add syntax for running a single test, class, or module">
+      <option name="closed" value="true" />
+      <created>1695662727673</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1695662727673</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Add a test for pivoting on an annotation that isn't in the default model ordering. Remove ordering from the queryset so that the default ordering doesn't mess up the results.">
+      <option name="closed" value="true" />
+      <created>1695665071880</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1695665071880</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Add an option to specify the ordering of the queryset">
+      <option name="closed" value="true" />
+      <created>1695665960814</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1695665960814</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Add an optional parameter to pivot to include an additional column containing the Total of the aggregation">
+      <option name="closed" value="true" />
+      <created>1695733407553</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1695733407553</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Floating point comparisons should be almost equal">
+      <option name="closed" value="true" />
+      <created>1695733916996</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1695733916996</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Update documentation in the Readme">
+      <option name="closed" value="true" />
+      <created>1695739083905</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1695739083905</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Update documentation in the Readme">
+      <option name="closed" value="true" />
+      <created>1695739414348</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1695739414348</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Add pyproject.toml, remove setup.py">
+      <option name="closed" value="true" />
+      <created>1695740960449</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1695740960449</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Fix for issue #26. Since column aliases in annotations are now restricted to not have whitespace, sql comments, quotes, or semicolons, they are aliased during the SQL query, and returned back after the query returns." />
+    <MESSAGE value="Move to modern versions of python and django" />
+    <MESSAGE value="Be specific about python version 3.10, which looked like 3.1 to github" />
+    <MESSAGE value="Remove unused lines from test models" />
+    <MESSAGE value="Clean up test runner, add syntax for running a single test, class, or module" />
+    <MESSAGE value="Add a test for pivoting on an annotation that isn't in the default model ordering. Remove ordering from the queryset so that the default ordering doesn't mess up the results." />
+    <MESSAGE value="Add an option to specify the ordering of the queryset" />
+    <MESSAGE value="Add an optional parameter to pivot to include an additional column containing the Total of the aggregation" />
+    <MESSAGE value="Floating point comparisons should be almost equal" />
+    <MESSAGE value="Update documentation in the Readme" />
+    <MESSAGE value="Add pyproject.toml, remove setup.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add pyproject.toml, remove setup.py" />
+  </component>
+</project>
