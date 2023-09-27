@@ -1,0 +1,9 @@
+celx/__about__.py,sha256=FVHPBGkfhbQDi_z3v0PiKJrXXqXOx0vGW_1VaqNJi7U,22
+celx/__init__.py,sha256=yL4Luhgvy-M0_5yP7N9j57EWW16XUhMvnidX9kY8D_I,10596
+celx/__main__.py,sha256=37nl0jAU6D3_OCZNtY64OS2XnSX_pAlHv3Y-cWB9s2Y,632
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sh40_celx-0.2.0.dist-info/METADATA,sha256=3r24HvO2Yb3Is43RbJSDIUtz4fnEPjrqAMW7y8xDhvo,9210
+sh40_celx-0.2.0.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+sh40_celx-0.2.0.dist-info/entry_points.txt,sha256=iXtgjiHMg1cyWYyfNp6Pu2cdKGdoal7sGJGNB3V63Mg,44
+sh40_celx-0.2.0.dist-info/licenses/LICENSE,sha256=4s1cFnrWJ53UvzhbOh5vJ-EI5Kf5qGZztV675VPD7Ic,1067
+sh40_celx-0.2.0.dist-info/RECORD,,
