@@ -1,0 +1,8 @@
+license.txt
+setup.py
+math_package_test/__init__.py
+math_package_test/calc.py
+math_package_test.egg-info/PKG-INFO
+math_package_test.egg-info/SOURCES.txt
+math_package_test.egg-info/dependency_links.txt
+math_package_test.egg-info/top_level.txt
