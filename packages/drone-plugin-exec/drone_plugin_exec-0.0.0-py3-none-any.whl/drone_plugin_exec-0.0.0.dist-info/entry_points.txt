@@ -1,0 +1,4 @@
+[console_scripts]
+drone-plugin-exec-genkeypair = drone_plugin_exec.keys:_app
+drone-plugin-exec-plugin = drone_plugin_exec.plugin.__main__:main
+drone-plugin-exec-target = drone_plugin_exec.target.__main__:app
