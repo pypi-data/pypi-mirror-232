@@ -1,0 +1,12 @@
+gbot/__init__.py,sha256=_mzJ8nvqREDQoRwo-eMJ1zGia8LB5DV54kfReIFAJQk,23
+gbot/consts.py,sha256=4QZgYwGFTnXtgNJo2zS6EnKMhsOVjJ4Clhk2wYtl9LY,114
+gbot/discord.py,sha256=8-yJxEjyo-u90ouilkedmIV6yrLaCg4NwKLx7Y67iUc,2051
+gbot/utils.py,sha256=IpFOrq6eTrLCGxbwhUzxZUHjAexxAmRMCCKLxtRfyws,1599
+gbot/apis/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gbot/apis/github.py,sha256=ZNLmfW8ttgFp4zwU_pIbqjNopLSVXv2qHH3GmkwtiYE,931
+gitscribe-0.1.0.data/scripts/gbot,sha256=XoOSH0t_brz1tvwXaTjwKZlIwgJCsulTwYxjif9qvTY,651
+gitscribe-0.1.0.dist-info/LICENSE,sha256=E3blup6XJPNhB38_vUD9mQ0KyJSDLdXknPNctePbNfg,1065
+gitscribe-0.1.0.dist-info/METADATA,sha256=Mr3K15-ftyJyGSPBkE6-IiLxQtXUYUwb-NEJZ30Niwk,2786
+gitscribe-0.1.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+gitscribe-0.1.0.dist-info/top_level.txt,sha256=cR31mjFrTUxDAyanPsdMEXKi47x04XOvCXgj9vdjMNU,5
+gitscribe-0.1.0.dist-info/RECORD,,
