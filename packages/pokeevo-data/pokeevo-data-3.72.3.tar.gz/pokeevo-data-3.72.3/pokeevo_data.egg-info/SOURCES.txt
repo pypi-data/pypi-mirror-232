@@ -1,0 +1,6 @@
+setup.py
+pokeevo_data.egg-info/PKG-INFO
+pokeevo_data.egg-info/SOURCES.txt
+pokeevo_data.egg-info/dependency_links.txt
+pokeevo_data.egg-info/requires.txt
+pokeevo_data.egg-info/top_level.txt
