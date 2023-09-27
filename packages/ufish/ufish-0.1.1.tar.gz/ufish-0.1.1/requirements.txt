@@ -1,0 +1,16 @@
+numpy
+scipy
+pandas
+matplotlib
+torch
+torchvision
+scikit-image
+scikit-learn
+fire
+loguru
+tensorboard
+imagecodecs
+onnx
+onnxruntime
+zarr
+ome-zarr
