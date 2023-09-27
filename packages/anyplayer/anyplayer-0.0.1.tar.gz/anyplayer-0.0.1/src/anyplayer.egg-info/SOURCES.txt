@@ -1,0 +1,10 @@
+LICENSE
+README.rst
+pyproject.toml
+src/anyplayer/__init__.py
+src/anyplayer/players.py
+src/anyplayer.egg-info/PKG-INFO
+src/anyplayer.egg-info/SOURCES.txt
+src/anyplayer.egg-info/dependency_links.txt
+src/anyplayer.egg-info/requires.txt
+src/anyplayer.egg-info/top_level.txt
