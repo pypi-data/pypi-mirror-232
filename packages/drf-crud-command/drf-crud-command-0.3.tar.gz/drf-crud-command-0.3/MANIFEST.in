@@ -1,0 +1,3 @@
+include LICENSE
+include README.rst
+recursive-include crud_management/templates/crud_management *

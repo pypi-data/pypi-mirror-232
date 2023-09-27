@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: drf-crud-command
+Version: 0.3
+Summary: django rest management command for dynamic write crud api
+Home-page: https://www.trootech.com/
+Author: Dharmrajsinh Gohil
+Author-email: dharmrajsinh.gohil@trootech.com
+Maintainer: Dharmrajsinh
+Maintainer-email: dharmrajsinh.gohil@trootech.com
+License: MIT
+Keywords: drf crud command
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+
+Quick Start
+===========
+
+1. Add "crud_management" to your INSTALLED_APPS setting like this:
+
+    INSTALLED_APPS = [
+
+        ...
+        'crud_management',
+
+
+    ]
+
+2. Run ``python manage.py migrate`` to create the user models
+
+
+3. You need to create a url.py and serializers.py file in your applications
+
+4. Run ``python manage.py generate_crud`` <your_app_name> <your_model>
+
+5. Start the development server and visit http://127.0.0.1:8000/ to create a new user login register
