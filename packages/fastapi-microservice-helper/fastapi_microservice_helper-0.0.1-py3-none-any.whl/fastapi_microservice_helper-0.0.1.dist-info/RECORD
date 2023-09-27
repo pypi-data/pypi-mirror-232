@@ -1,0 +1,10 @@
+fastapi_microservice_helper/__init__.py,sha256=lNgHSHdrPEOjIZDMtmnR068UpmZOuxIG8MPXYGp42mk,835
+fastapi_microservice_helper/base_microservice_client.py,sha256=CK8YMG88qUWexMe04SaBVEZ-ExEGyYdIaTh2OG_KXsA,945
+fastapi_microservice_helper/code_generation.py,sha256=CCliyG6ej8p8SvNwxzZEOENYKt4bx6J-O2Ebmrlg8ts,5972
+fastapi_microservice_helper/decorator.py,sha256=wpf6reHuvM5PcRlhKIuGUFiqt0Zd2WvGhOGkzwj0PfU,978
+fastapi_microservice_helper/helper.py,sha256=fTbgvgKEdH11EDaZIAGtShgY3yllytGDtlkbL6asDok,471
+fastapi_microservice_helper/sdk_builder.py,sha256=CNUCBqfyPU7U5g1M_38i1GY61j15obuX_6Wl-Hi_E40,7007
+fastapi_microservice_helper-0.0.1.dist-info/METADATA,sha256=mjIesepRS6i4RBlni0-ehUNNT-9cawx72t74Nrei8-0,2272
+fastapi_microservice_helper-0.0.1.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+fastapi_microservice_helper-0.0.1.dist-info/licenses/LICENSE,sha256=7EI8xVBu6h_7_JlVw-yPhhOZlpY9hP8wal7kHtqKT_E,1074
+fastapi_microservice_helper-0.0.1.dist-info/RECORD,,
