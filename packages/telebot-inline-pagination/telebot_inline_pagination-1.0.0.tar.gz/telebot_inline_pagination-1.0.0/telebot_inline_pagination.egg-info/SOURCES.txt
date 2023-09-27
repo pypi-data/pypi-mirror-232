@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+telebot_inline_pagination/__init__.py
+telebot_inline_pagination/keyboard.py
+telebot_inline_pagination.egg-info/PKG-INFO
+telebot_inline_pagination.egg-info/SOURCES.txt
+telebot_inline_pagination.egg-info/dependency_links.txt
+telebot_inline_pagination.egg-info/requires.txt
+telebot_inline_pagination.egg-info/top_level.txt
