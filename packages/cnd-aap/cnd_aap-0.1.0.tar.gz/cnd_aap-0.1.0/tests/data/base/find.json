@@ -1,0 +1,117 @@
+{
+  "count": 1,
+  "next": null,
+  "previous": null,
+  "results": [
+    {
+      "created": "2018-02-01T08:00:00.000000Z",
+      "custom_virtualenv": null,
+      "description": "test-org-desc",
+      "id": 123,
+      "max_hosts": 0,
+      "modified": "2018-02-01T08:00:00.000000Z",
+      "name": "test-org-1",
+      "related": {
+        "access_list": "/api/v2/organizations/2/access_list/",
+        "activity_stream": "/api/v2/organizations/2/activity_stream/",
+        "admins": "/api/v2/organizations/2/admins/",
+        "applications": "/api/v2/organizations/2/applications/",
+        "credentials": "/api/v2/organizations/2/credentials/",
+        "galaxy_credentials": "/api/v2/organizations/2/galaxy_credentials/",
+        "instance_groups": "/api/v2/organizations/2/instance_groups/",
+        "inventories": "/api/v2/organizations/2/inventories/",
+        "job_templates": "/api/v2/organizations/2/job_templates/",
+        "notification_templates": "/api/v2/organizations/2/notification_templates/",
+        "notification_templates_approvals": "/api/v2/organizations/2/notification_templates_approvals/",
+        "notification_templates_error": "/api/v2/organizations/2/notification_templates_error/",
+        "notification_templates_started": "/api/v2/organizations/2/notification_templates_started/",
+        "notification_templates_success": "/api/v2/organizations/2/notification_templates_success/",
+        "object_roles": "/api/v2/organizations/2/object_roles/",
+        "projects": "/api/v2/organizations/2/projects/",
+        "teams": "/api/v2/organizations/2/teams/",
+        "users": "/api/v2/organizations/2/users/",
+        "workflow_job_templates": "/api/v2/organizations/2/workflow_job_templates/"
+      },
+      "summary_fields": {
+        "object_roles": {
+          "admin_role": {
+            "description": "Can manage all aspects of the organization",
+            "id": 15,
+            "name": "Admin",
+            "user_only": true
+          },
+          "approval_role": {
+            "description": "Can approve or deny a workflow approval node",
+            "id": 26,
+            "name": "Approve"
+          },
+          "auditor_role": {
+            "description": "Can view all aspects of the organization",
+            "id": 23,
+            "name": "Auditor"
+          },
+          "credential_admin_role": {
+            "description": "Can manage all credentials of the organization",
+            "id": 19,
+            "name": "Credential Admin"
+          },
+          "execute_role": {
+            "description": "May run any executable resources in the organization",
+            "id": 16,
+            "name": "Execute"
+          },
+          "inventory_admin_role": {
+            "description": "Can manage all inventories of the organization",
+            "id": 18,
+            "name": "Inventory Admin"
+          },
+          "job_template_admin_role": {
+            "description": "Can manage all job templates of the organization",
+            "id": 22,
+            "name": "Job Template Admin"
+          },
+          "member_role": {
+            "description": "User is a member of the organization",
+            "id": 24,
+            "name": "Member",
+            "user_only": true
+          },
+          "notification_admin_role": {
+            "description": "Can manage all notifications of the organization",
+            "id": 21,
+            "name": "Notification Admin"
+          },
+          "project_admin_role": {
+            "description": "Can manage all projects of the organization",
+            "id": 17,
+            "name": "Project Admin"
+          },
+          "read_role": {
+            "description": "May view settings for the organization",
+            "id": 25,
+            "name": "Read"
+          },
+          "workflow_admin_role": {
+            "description": "Can manage all workflows of the organization",
+            "id": 20,
+            "name": "Workflow Admin"
+          }
+        },
+        "related_field_counts": {
+          "admins": 0,
+          "inventories": 0,
+          "job_templates": 0,
+          "projects": 0,
+          "teams": 0,
+          "users": 1
+        },
+        "user_capabilities": {
+          "delete": false,
+          "edit": false
+        }
+      },
+      "type": "organization",
+      "url": "/api/v2/organizations/2/"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "count": 1,
+  "next": null,
+  "previous": null,
+  "results": [
+    {
+      "auth": [],
+      "created": "2018-02-01T08:00:00.000000Z",
+      "email": "",
+      "external_account": "enterprise",
+      "first_name": "",
+      "id": 1,
+      "is_superuser": true,
+      "is_system_auditor": false,
+      "last_login": null,
+      "last_name": "",
+      "ldap_dn": "",
+      "related": {
+        "access_list": "/api/v2/users/1/access_list/",
+        "activity_stream": "/api/v2/users/1/activity_stream/",
+        "admin_of_organizations": "/api/v2/users/1/admin_of_organizations/",
+        "authorized_tokens": "/api/v2/users/1/authorized_tokens/",
+        "credentials": "/api/v2/users/1/credentials/",
+        "organizations": "/api/v2/users/1/organizations/",
+        "personal_tokens": "/api/v2/users/1/personal_tokens/",
+        "projects": "/api/v2/users/1/projects/",
+        "roles": "/api/v2/users/1/roles/",
+        "teams": "/api/v2/users/1/teams/",
+        "tokens": "/api/v2/users/1/tokens/"
+      },
+      "summary_fields": {
+        "user_capabilities": {
+          "delete": false,
+          "edit": false
+        }
+      },
+      "type": "user",
+      "url": "/api/v2/users/1/",
+      "username": "admin"
+    }
+  ]
+}

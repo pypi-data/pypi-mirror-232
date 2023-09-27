@@ -1,0 +1,66 @@
+{
+  "allow_simultaneous": false,
+  "canceled_on": null,
+  "created": "2018-02-01T08:00:00.000000Z",
+  "description": "",
+  "elapsed": 0,
+  "extra_vars": "{}",
+  "failed": false,
+  "finished": null,
+  "id": 1,
+  "ignored_fields": {},
+  "inventory": 234,
+  "is_sliced_job": false,
+  "job_args": "",
+  "job_cwd": "",
+  "job_env": {},
+  "job_explanation": "",
+  "job_template": 123,
+  "launch_type": "manual",
+  "limit": null,
+  "modified": "2018-02-01T08:00:00.000000Z",
+  "name": "foobar",
+  "related": {
+    "activity_stream": "/api/v2/workflow_jobs/1/activity_stream/",
+    "cancel": "/api/v2/workflow_jobs/1/cancel/",
+    "labels": "/api/v2/workflow_jobs/1/labels/",
+    "notifications": "/api/v2/workflow_jobs/1/notifications/",
+    "relaunch": "/api/v2/workflow_jobs/1/relaunch/",
+    "unified_job_template": "/api/v2/workflow_job_templates/3/",
+    "workflow_job_template": "/api/v2/workflow_job_templates/3/",
+    "workflow_nodes": "/api/v2/workflow_jobs/1/workflow_nodes/"
+  },
+  "result_traceback": "",
+  "scm_branch": null,
+  "started": null,
+  "status": "pending",
+  "summary_fields": {
+    "labels": {
+      "count": 0,
+      "results": []
+    },
+    "unified_job_template": {
+      "description": "",
+      "id": 3,
+      "name": "foobar",
+      "unified_job_type": "workflow_job"
+    },
+    "user_capabilities": {
+      "delete": true,
+      "start": true
+    },
+    "workflow_job_template": {
+      "description": "",
+      "id": 3,
+      "name": "foobar"
+    }
+  },
+  "type": "workflow_job",
+  "unified_job_template": 3,
+  "url": "/api/v2/workflow_jobs/1/",
+  "webhook_credential": null,
+  "webhook_guid": "",
+  "webhook_service": "",
+  "workflow_job": 234,
+  "workflow_job_template": 3
+}
