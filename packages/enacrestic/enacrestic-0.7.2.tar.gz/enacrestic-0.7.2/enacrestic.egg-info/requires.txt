@@ -1,0 +1,8 @@
+PyQt5
+python-pidfile
+requests
+dynaconf
+
+[dev]
+
+[test]
