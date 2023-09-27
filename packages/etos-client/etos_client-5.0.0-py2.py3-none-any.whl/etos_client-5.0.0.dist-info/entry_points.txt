@@ -1,0 +1,4 @@
+[console_scripts]
+etos_client = etos_client.__main__:run
+etosctl = etosctl.__main__:run
+
