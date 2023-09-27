@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: doors
+Version: 0.0.6
+Home-page: https://github.com/chechir/doors
+Author: Matias Thayer
+Author-email: matias.thayer@gmail.com
+License: MIT
+License-File: LICENCE.txt
+Requires-Dist: matplotlib
+Requires-Dist: matplotlib-venn
+Requires-Dist: numexpr
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: plotly
+Requires-Dist: scikit-learn
+Requires-Dist: scipy
+Requires-Dist: seaborn
+
