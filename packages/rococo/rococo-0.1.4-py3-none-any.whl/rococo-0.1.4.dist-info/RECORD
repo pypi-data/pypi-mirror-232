@@ -1,0 +1,17 @@
+rococo/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+rococo/messaging/__init__.py,sha256=1ZUX8Fh-Rwys2BTIR6NP0o0q_d6XJ6gb4IbtIympLbI,100
+rococo/messaging/base.py,sha256=wfjISD-VWcruD-pp9At1iACiZwyu-8EHVMnVXkpRltU,1199
+rococo/messaging/rabbitmq.py,sha256=kBw0vsguOJoti8IIKLkFNWDMDFrMiM1gmgcrWpA_cpo,4989
+rococo/messaging/sqs.py,sha256=OEhYRp9u38iOwXqoVAYdNba0KPU-hg7QBaXFPjVNWhI,3135
+rococo/models/__init__.py,sha256=wjRZLXHQ1coaTOJMzeqr-K9DKoqT9sDnO-BC4TWN0SY,244
+rococo/models/login_method.py,sha256=6Ff2wcgFcWEiWuKMzpusd9YqySB1_vuRq5m3nuh_KjA,298
+rococo/models/organization.py,sha256=Anky1ApIKL5-gyk5WYu07IAUo-SqUAsXq9o44FsYtmM,161
+rococo/models/otp_method.py,sha256=wMdXjW1sXWbAqHj2cuRoHcV9PkZbUJILIjvaKRptRgY,263
+rococo/models/person.py,sha256=w72A5j5UPj7sOel-9OCGKQkE07Aj5Ghzxd6hPpTf5xo,173
+rococo/models/person_organization_role.py,sha256=r8YR9GwlIDeANOf9Py48vq7iCcA0tlKVAVXd_bxuL5M,226
+rococo/models/versioned_model.py,sha256=MeebLbHqvwCDUz_sGSKcC6tgrXVYARywJqaIqgx7sdY,2184
+rococo-0.1.4.dist-info/LICENSE,sha256=PKcpFCeFfDzuok4sJqHZ8oguL2L02MPW8PoYdWx0VBY,1067
+rococo-0.1.4.dist-info/METADATA,sha256=rUCkw3xLcgajgCMQtdlQLsL1EzIuLsW2lvgjMmLb_i8,2412
+rococo-0.1.4.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+rococo-0.1.4.dist-info/top_level.txt,sha256=LpwBbJGOIoYDbuogalg2YGotnOWDbGrQgY5Y5kE_x64,7
+rococo-0.1.4.dist-info/RECORD,,
