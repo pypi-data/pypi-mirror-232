@@ -1,0 +1,7 @@
+LICENSE
+README.md
+setup.py
+Selene_wdm_4.0.1.egg-info/PKG-INFO
+Selene_wdm_4.0.1.egg-info/SOURCES.txt
+Selene_wdm_4.0.1.egg-info/dependency_links.txt
+Selene_wdm_4.0.1.egg-info/top_level.txt
