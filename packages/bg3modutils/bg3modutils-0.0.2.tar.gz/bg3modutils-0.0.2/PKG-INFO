@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: bg3modutils
+Version: 0.0.2
+Summary: Modding tools for Baldur's Gate 3
+Project-URL: Homepage, https://github.com/facufierro/BG3ModUtils
+Project-URL: Bug Tracker, https://github.com/facufierro/BG3ModUtils/issues
+Author-email: fierrof <facufierro@gmail.com>
+License-File: LICENCE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.7
+Requires-Dist: lxml
