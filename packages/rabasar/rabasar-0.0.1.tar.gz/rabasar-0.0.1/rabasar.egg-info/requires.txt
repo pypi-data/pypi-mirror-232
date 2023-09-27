@@ -1,0 +1,6 @@
+attrs>=23.1.0
+matplotlib>=3.7.2
+mulog>=0.0.4
+nptyping>=2.4.0
+opencv-python
+typing_extensions>=4.7.1
