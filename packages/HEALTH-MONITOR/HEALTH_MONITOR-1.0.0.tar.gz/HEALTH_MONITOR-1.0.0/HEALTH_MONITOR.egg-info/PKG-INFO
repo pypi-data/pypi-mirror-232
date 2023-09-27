@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: HEALTH-MONITOR
+Version: 1.0.0
+License: pscl
+Description-Content-Type: text/markdown
+Requires-Dist: botanist
