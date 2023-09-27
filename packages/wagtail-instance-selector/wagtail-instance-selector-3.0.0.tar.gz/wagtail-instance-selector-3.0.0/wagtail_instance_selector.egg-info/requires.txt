@@ -1,0 +1,4 @@
+wagtail>=4.1
+
+[testing]
+django_webtest
