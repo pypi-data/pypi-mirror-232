@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: mapilio-kit-v2
+Version: 2.0.0
+Summary: MAPILIO Image/Video Upload and Pipeline
+Home-page: https://github.com/mapilio/mapilio-kit-v2
+Author: Mapilio
+License: MIT License
+Requires-Python: >=3.6
+License-File: LICENSE
