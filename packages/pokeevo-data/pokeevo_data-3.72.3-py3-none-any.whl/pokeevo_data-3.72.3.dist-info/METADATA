@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: pokeevo-data
+Version: 3.72.3
+Summary: A Python module for scraping Pokémon data.
+Author: ohioman02
+Author-email: gdnunuuwu@gmail.com
+Requires-Dist: requests
+
