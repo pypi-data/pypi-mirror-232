@@ -1,0 +1,3 @@
+include mylib/include/*.h
+recursive-include mylib/src *.cpp
+recursive-include python *.cpp
