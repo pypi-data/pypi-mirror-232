@@ -1,0 +1,138 @@
+Metadata-Version: 2.1
+Name: mkdocs-d2-plugin
+Version: 0.2.1
+Summary: MkDocs plugin for D2
+Home-page: https://github.com/landmaj/mkdocs-d2-plugin
+Author: Michał Wieluński
+Author-email: michal@wielunski.net
+License: MIT
+Keywords: mkdocs python markdown d2 diagram
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: mkdocs>=1.4.0
+Requires-Dist: pydantic
+
+# mkdocs-d2-plugin
+A plugin for the MkDocs documentation site generator which automatically
+generates and embeds [D2](https://d2lang.com) diagrams.
+
+
+## Requirements
+* [MkDocs](https://www.mkdocs.org/) >= 1.4.0
+* [Pydantic](https://pydantic-docs.helpmanual.io/)
+* [D2](https://d2lang.com)
+
+
+## Installation
+Install the plugin using pip:
+```bash
+pip install mkdocs-d2-plugin
+```
+And add it to your `mkdocs.yml`:
+```yaml
+plugins:
+  - d2
+```
+
+
+## Usage
+The plugin will automatically generate and embed D2 diagrams from code blocks
+with the `d2` language tag.
+
+````
+```d2
+shape: sequence_diagram
+Alice -> John: Hello John, how are you?
+Alice -> John.ack: John, can you hear me?
+John.ack -> Alice: Hi Alice, I can hear you!
+John -> Alice: I feel great!
+```
+````
+
+
+## Configuration
+The plugin can be configured in your `mkdocs.yml` file.
+```yaml
+plugins:
+  - d2:
+      executable: d2
+      layout: dagre
+      theme: 0
+      dark_theme: False
+      sketch: False
+      pad: 100
+      scale: -1.0
+      force_appendix: False
+```
+
+Run `d2 --help` for more information about the options.
+
+Everything (except executable path) can be overriden locally.
+````
+```d2 sketch=true force_appendix=True
+shape: sequence_diagram
+Alice -> John: Hello John, how are you?
+Alice -> John.ack: John, can you hear me?
+John.ack -> Alice: Hi Alice, I can hear you!
+John -> Alice: I feel great!
+```
+````
+
+[List of available themes](https://d2lang.com/tour/themes/)
+
+
+## Example
+You can find example app in the `example` directory.
+
+![exampe](example/example.png)
+
+To run in locally:
+```bash
+cd example
+python3 -m venv .venv
+source .venv/bin/activate
+pip install mkdocs-material mkdocs-d2-plugin
+mkdocs serve
+```
+
+To run it using Docker:
+```bash
+cd example
+docker build --tag mkdocs-d2-plugin:latest .
+docker run --rm -it -p 8000:8000 -v ${PWD}:/docs mkdocs-d2-plugin:latest
+```
+
+
+### \<rant\>
+Why this fenced code block format?
+````
+```d2 key=value
+[...]
+```
+````
+MkDocs uses [python-markdown](https://python-markdown.github.io/extensions/fenced_code_blocks/)
+library, which expects key-value pairs in a following format:
+````
+```{ .d2 key="value" }
+[...]
+```
+````
+
+This breaks syntax highlighting in most editors. The format used by this plugin
+breaks python-markdown library instead, however the entire code block is 
+replaced anyway, so it doesn't matter. And according to 
+[CommonMark specification](https://spec.commonmark.org/0.30/#info-string)
+it is a valid Markdown.
+### \</rant\>
