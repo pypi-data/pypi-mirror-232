@@ -1,0 +1,8 @@
+idem>=23
+pop<27,>=17.0
+pytest
+pop-config!=12.0.2,!=12.0.3
+gitdb>=1.7.0
+GitPython
+semantic-version
+twine==3.8.0
