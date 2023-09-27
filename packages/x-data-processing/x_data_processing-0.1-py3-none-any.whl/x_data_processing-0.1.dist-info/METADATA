@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: x-data-processing
+Version: 0.1
+Summary: X-data-processing is a package for data processing.
+Home-page: https://github.com/cdevent/x-data-processing
+Author: CoteDevent
+Author-email: srwind18@gmail.com
+Description-Content-Type: text/markdown
+
+# x-data-processing
+It is a base app to start the x-data processing
