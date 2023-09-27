@@ -1,0 +1,5 @@
+ds-io-utilities>=0.0.8
+bda-service-utils>=0.0.13
+kafka-python>=2.0.2
+alida-arg-parser>=0.0.43
+pandas
