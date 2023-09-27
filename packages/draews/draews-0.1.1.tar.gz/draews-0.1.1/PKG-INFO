@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: draews
+Version: 0.1.1
+Summary: A library to find words from the web page of Real Academia Española
+License: MIT
+Author: Sergio Mondragon
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: beautifulsoup4 (>=4.12.2,<5.0.0)
+Requires-Dist: pydantic (>=2.4.1,<3.0.0)
+Requires-Dist: requests (>=2.31.0,<3.0.0)
+Description-Content-Type: text/markdown
+
+# DRAEWebScrapping
+A proyect to find words from the web page of Real Academia Española
+
+# Usage
+A simple example to find a word
+
+```
+from draews.draews import DRAEws as drae    
+from draews.models import MeaningList 
+
+drae = drae() 
+
+# Finding the meaning of a word 
+meaning_list: MeaningList = drae.find_word("sustantivo")
+
+# Obtaining the meaning on dictionary format
+meaning_dict = meaning_list.model_dump()
+```
+
