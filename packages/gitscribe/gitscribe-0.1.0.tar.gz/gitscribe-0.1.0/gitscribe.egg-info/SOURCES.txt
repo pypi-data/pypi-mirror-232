@@ -1,0 +1,15 @@
+LICENSE
+README.rst
+setup.py
+gbot/__init__.py
+gbot/consts.py
+gbot/discord.py
+gbot/utils.py
+gbot/apis/__init__.py
+gbot/apis/github.py
+gitscribe.egg-info/PKG-INFO
+gitscribe.egg-info/SOURCES.txt
+gitscribe.egg-info/dependency_links.txt
+gitscribe.egg-info/requires.txt
+gitscribe.egg-info/top_level.txt
+scripts/gbot
