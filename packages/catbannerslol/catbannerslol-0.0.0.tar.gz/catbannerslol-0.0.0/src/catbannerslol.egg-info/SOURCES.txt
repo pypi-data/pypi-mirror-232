@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/catbannerslol/__init__.py
+src/catbannerslol/cat.py
+src/catbannerslol.egg-info/PKG-INFO
+src/catbannerslol.egg-info/SOURCES.txt
+src/catbannerslol.egg-info/dependency_links.txt
+src/catbannerslol.egg-info/top_level.txt
