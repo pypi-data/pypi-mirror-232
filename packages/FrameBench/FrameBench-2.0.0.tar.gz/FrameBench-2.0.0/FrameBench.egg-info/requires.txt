@@ -1,0 +1,5 @@
+fire
+pyyaml
+pydantic
+ffmpeg-python
+pandas
