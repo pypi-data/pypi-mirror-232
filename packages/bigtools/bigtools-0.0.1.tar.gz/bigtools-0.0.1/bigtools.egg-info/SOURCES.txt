@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+bigtools/__init__.py
+bigtools.egg-info/PKG-INFO
+bigtools.egg-info/SOURCES.txt
+bigtools.egg-info/dependency_links.txt
+bigtools.egg-info/top_level.txt
