@@ -1,0 +1,39 @@
+#!/usr/bin/env python3
+
+import argparse
+import subprocess
+import os
+import c4p
+
+def main():
+    parser = argparse.ArgumentParser(
+            description='''
+========================================================================================
+ c4p: CESM for Paleo (fengzhu@ucar.edu, jiangzhu@ucar.edu)
+----------------------------------------------------------------------------------------
+ Usage example:
+    c4p  # start a JupyterLab server at the current working directory
+========================================================================================
+            ''', formatter_class=argparse.RawTextHelpFormatter)
+
+    parser.add_argument(
+            '-v',
+            '--version',
+            action='version',
+            version=f'%(prog)s version: {c4p.__version__}',
+            )
+
+    parser.add_argument(
+            '-p',
+            '--port',
+            default=None,
+            help='the port kept for the server',
+            )
+
+    # parse the input command line
+    args = parser.parse_args()
+
+    c4p.utils.jupyter_server(port=args.port)
+
+if __name__ == '__main__':
+    main()
