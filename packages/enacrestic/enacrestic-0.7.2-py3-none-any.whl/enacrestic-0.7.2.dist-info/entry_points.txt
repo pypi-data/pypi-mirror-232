@@ -1,0 +1,2 @@
+[console_scripts]
+enacrestic = enacrestic:main.main
