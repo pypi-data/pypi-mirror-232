@@ -1,0 +1,8 @@
+configured_mail_sender/__init__.py,sha256=U22NLvfzPTWHZfzi7_YnvHvMVTkDWVIUIUl0TD5H9Iw,665
+configured_mail_sender/mail_sender.py,sha256=qPljK999nE3q-XjDfr2z-gRCWWwF-yO2F9Jet1LTHT8,8750
+configured_mail_sender/smtp_sender.py,sha256=-z_XgfQ9wWOLICgpliX5ReABKGEdI7LM7xxvcXZpEIY,7480
+configured_mail_sender-1.0.0.dist-info/LICENSE,sha256=L-C4lr3svN8umB4nRoXku0T4pkCPAJHlw80u-Lwaz9Q,1070
+configured_mail_sender-1.0.0.dist-info/METADATA,sha256=rhI05TkHfoZhKaz2R4airnKK68wwiqT96EavkAuh5PM,4850
+configured_mail_sender-1.0.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+configured_mail_sender-1.0.0.dist-info/top_level.txt,sha256=i-dZsMXJWhO13b65Ql2Chx1kzMjRvdTtDy-Ci0sEvug,23
+configured_mail_sender-1.0.0.dist-info/RECORD,,
