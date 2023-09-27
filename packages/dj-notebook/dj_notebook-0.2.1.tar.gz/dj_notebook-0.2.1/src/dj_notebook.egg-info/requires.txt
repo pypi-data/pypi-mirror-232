@@ -1,0 +1,15 @@
+django
+django-extensions
+ipython
+jupyter
+
+[test]
+django
+django-extensions
+ipython
+black
+coverage
+isort
+mypy
+pytest
+ruff
