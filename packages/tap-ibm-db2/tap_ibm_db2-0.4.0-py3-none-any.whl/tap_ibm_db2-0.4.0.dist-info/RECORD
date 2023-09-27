@@ -1,0 +1,9 @@
+tap_db2/__init__.py,sha256=GSM81OGS8GD1APlRNhnK5xqlTQc-bb4uaQs99O7dgws,19
+tap_db2/connector.py,sha256=RB0cMZGxtsIDQWD-IYqi9gtKMU_Qy7ARkZek1CEteA4,7857
+tap_db2/stream.py,sha256=8lNPceIvqiIGKA1g_vmsnsewCTw5j2oE982b38x2tqo,6313
+tap_db2/tap.py,sha256=db9pq3gLvwutocDJemVaM2uYYhXNWCvY8j-3La8iJpU,5312
+tap_ibm_db2-0.4.0.dist-info/LICENSE,sha256=roQL-OttGRhZf8o1EqQQofwGp0LybAv3w1OZBLG7xFw,1070
+tap_ibm_db2-0.4.0.dist-info/METADATA,sha256=5LIbubx1yb6anoiFNYrtcKHHQI7ORa3fH9MfYYaWPgU,8923
+tap_ibm_db2-0.4.0.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+tap_ibm_db2-0.4.0.dist-info/entry_points.txt,sha256=rbOH6rwfi5mqVHId8Tg60C9_j05AHRd6OOUBUASUoLo,50
+tap_ibm_db2-0.4.0.dist-info/RECORD,,
