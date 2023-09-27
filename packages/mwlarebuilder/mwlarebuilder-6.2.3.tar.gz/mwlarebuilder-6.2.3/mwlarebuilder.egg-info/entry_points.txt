@@ -1,0 +1,7 @@
+[console_scripts]
+mwlarebuilder = MwlareBuilder.__main__:_console_script_run
+pyi-archive_viewer = MwlareBuilder.utils.cliutils.archive_viewer:run
+pyi-bindepend = MwlareBuilder.utils.cliutils.bindepend:run
+pyi-grab_version = MwlareBuilder.utils.cliutils.grab_version:run
+pyi-makespec = MwlareBuilder.utils.cliutils.makespec:run
+pyi-set_version = MwlareBuilder.utils.cliutils.set_version:run
