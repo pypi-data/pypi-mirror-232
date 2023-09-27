@@ -1,0 +1,72 @@
+Metadata-Version: 2.1
+Name: aws-pcluster-bootstrap-helpers
+Version: 3.24.0
+Summary: Helpers to bootstrap a AWS PCluster + SLURM + Custom AMIs
+Home-page: https://github.com/dabble-of-devops-bioanalyze/aws_pcluster_bootstrap_helpers
+Author: Jillian Rowe
+Author-email: jillian@dabbleofdevops.com
+License: Apache Software License 2.0
+Keywords: aws_pcluster_bootstrap_helpers
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6
+License-File: LICENSE
+Requires-Dist: typer
+Requires-Dist: typer[all]
+Requires-Dist: rich
+Requires-Dist: ansible
+Requires-Dist: ansible-runner
+Requires-Dist: aws-parallelcluster>=3.5
+Requires-Dist: inquirer
+Requires-Dist: colorlog
+Requires-Dist: textual
+Requires-Dist: click>=8
+Requires-Dist: datasize
+Requires-Dist: questionary
+Requires-Dist: boto3-stubs[batch,ec2,essential,logs,s3]
+Requires-Dist: boto3
+Requires-Dist: funcy
+Requires-Dist: humanize
+Requires-Dist: cookiecutter
+Requires-Dist: pandas
+Requires-Dist: numpy
+
+# aws_pcluster_bootstrap_helpers
+
+[![image](https://img.shields.io/pypi/v/aws_pcluster_bootstrap_helpers.svg)](https://pypi.python.org/pypi/aws_pcluster_bootstrap_helpers)
+
+[![image](https://img.shields.io/travis/dabble-of-devops-bioanalyze/aws_pcluster_bootstrap_helpers.svg)](https://travis-ci.com/dabble-of-devops-bioanalyze/aws_pcluster_bootstrap_helpers)
+
+Helpers to bootstrap a AWS PCluster + SLURM + Custom AMIs
+
+- Free software: Apache Software License 2.0
+
+## Features
+
+- Build a PCluster AMI and watch it
+- Build a PCluster Cluster
+
+Please note that you must build new AMIs per version of parallel cluster and region.
+
+## Credits
+
+This package was created with
+[Cookiecutter](https://github.com/audreyr/cookiecutter) and the
+[audreyr/cookiecutter-pypackage](https://github.com/audreyr/cookiecutter-pypackage)
+project template.
+
+
+=======
+History
+=======
+
+0.1.0 (2022-08-11)
+------------------
+
+* First release on PyPI.
