@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: neap
+Version: 0.1.8
+Summary: A Python wrapper for the NEAP API
+Author: Bard
+Author-email: bard@google.com
+Requires-Dist: requests
+
