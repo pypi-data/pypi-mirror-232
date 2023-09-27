@@ -1,0 +1,8 @@
+batchspawner
+datasize
+humanize
+boto3
+aws-pcluster-helpers
+pandas
+numpy
+pydantic>2
