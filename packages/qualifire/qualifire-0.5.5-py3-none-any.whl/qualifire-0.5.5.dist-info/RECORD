@@ -1,0 +1,10 @@
+qualifire/__init__.py,sha256=MhkOduwXaLXoUBkBR-m6McZhVGnxddfpBhQzppo6sHM,1564
+qualifire/client.py,sha256=UmYmTA8cXSaBoIs8VIfBJno8jO_Vav87CWFntNabZz4,958
+qualifire/example.py,sha256=m80Z9xlCdvY6EGTL6DFHqZUZiCv-qAF17Eylh6ZJC1o,313
+qualifire/instrumentations/__init__.py,sha256=beknGIWN97nBJYa4dTTau4iq6FoYaGphwTceTZNL_Y4,129
+qualifire/instrumentations/base_instrumentor.py,sha256=trUa7P5hYh4KTRviLD4IopmQXHC_xhRAH4oJeJwmBAs,146
+qualifire/instrumentations/openai_instrumentor.py,sha256=nbrvM-aFb1ak30UaNA4E0ji2XGm6XRbJjRMOMOkqgtQ,2665
+qualifire-0.5.5.dist-info/LICENSE,sha256=wsVuajbPhqb8yZ_ogJFR4Ln6TlaRiDQvo-gen40nq6I,1078
+qualifire-0.5.5.dist-info/METADATA,sha256=YWIXBQrLhqkYpnUlfX4BgmFXYb-pQCN6l5Vn7Uq2xZ8,13520
+qualifire-0.5.5.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+qualifire-0.5.5.dist-info/RECORD,,
