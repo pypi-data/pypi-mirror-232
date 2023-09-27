@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: mycliapper132
+Version: 0.7
+Summary: UNKNOWN
+Home-page: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: click
+Requires-Dist: databricks-sql-connector
+Requires-Dist: datetime
+Requires-Dist: hashlib
+Requires-Dist: hmac
+Requires-Dist: json
+Requires-Dist: pytz
+Requires-Dist: requests
+Requires-Dist: typing
+
+UNKNOWN
+
