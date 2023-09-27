@@ -1,0 +1,17 @@
+numexpr.libs/libstdc++-a9383cce.so.6.0.28,sha256=Wy9UCdwS1rwI9GU5e7qE61S0AkRqqwti1q_adWSs-Rk,2447393
+numexpr.libs/libgcc_s-a04fdf82.so.1,sha256=YxqJNaesQMhDswHEQpXsiLnVvMBBbYO6KYMDZFPWKSM,81257
+numexpr/necompiler.py,sha256=ZCYoQsp2zDIuG_w-meyidL4gsUugvCCQSXjkcF1X6zU,34598
+numexpr/version.py,sha256=Aa-1q3Hzu45DAFv_G3sahkoGOmOvAX_23Z-q1rATBx0,116
+numexpr/__init__.py,sha256=BveiRb343utwo5WHQhDDXW-rzj8xempYWkpUKPP42-A,2279
+numexpr/interpreter.cpython-39-x86_64-linux-gnu.so,sha256=RmY6GAufJaZJYY_nenm4_-uS8EriGSwcqsE6gLugXXk,1305329
+numexpr/cpuinfo.py,sha256=AFBUER-10rJclvgH6nGgOj7q-HahAoj3_SxftaUnRkQ,25164
+numexpr/expressions.py,sha256=J9e_mlMRDfCQlridk48vwgnyFIhlCzA3voNLJpowheY,16138
+numexpr/utils.py,sha256=XolRoNnlJb-omz2S1WgQHjCbtovLcLvxW5b0N9m0VLM,7466
+numexpr/tests/__init__.py,sha256=GBFxEA1-KjffdC-yum4Zj4u-f_zYVhSZIMPv-bOKoSQ,447
+numexpr/tests/test_numexpr.py,sha256=DPA5rtEjD69xPFEsrrWtzhzsQVM_ivBT_joVHOVEcOM,49966
+numexpr-2.8.7.dist-info/AUTHORS.txt,sha256=nB0u6wu_ZTGYUs_6doqAmr-7QoR74HQbLel6r3k6Z58,916
+numexpr-2.8.7.dist-info/top_level.txt,sha256=5R5OAhc7k6sUajqt4vp-368lWWhb23CoC6LltIMNqNA,8
+numexpr-2.8.7.dist-info/LICENSE.txt,sha256=A_3YAlpObXDK8ncg6Rp5rY2f5CLr4YIPXOxh3OrnCf8,1193
+numexpr-2.8.7.dist-info/WHEEL,sha256=Hp3KPZqrQYshC_LJJaFzC6y1haTh2q7vm4PrdofEPO4,111
+numexpr-2.8.7.dist-info/METADATA,sha256=u_N0cv-h0ozzSmSMrsrTCozW6bYyVBS9hbYuAdicxdY,8678
+numexpr-2.8.7.dist-info/RECORD,,
