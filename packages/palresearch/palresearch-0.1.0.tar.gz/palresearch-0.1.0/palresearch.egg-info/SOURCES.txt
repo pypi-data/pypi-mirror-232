@@ -1,0 +1,6 @@
+README.md
+setup.py
+palresearch.egg-info/PKG-INFO
+palresearch.egg-info/SOURCES.txt
+palresearch.egg-info/dependency_links.txt
+palresearch.egg-info/top_level.txt
