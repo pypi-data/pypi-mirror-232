@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "draews"
+version = "0.1.0"
+description = "A library to find words from the web page of Real Academia Española"
+authors = ["Sergio Mondragon"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+requests = "^2.31.0"
+beautifulsoup4 = "^4.12.2"
+pydantic = "^2.4.1"
+
+[tool.poetry.group.dev.dependencies]
+requests = "^2.31.0"
+beautifulsoup4 = "^4.12.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
