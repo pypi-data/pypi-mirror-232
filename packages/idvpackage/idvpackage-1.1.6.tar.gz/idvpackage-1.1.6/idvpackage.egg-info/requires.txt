@@ -1,0 +1,9 @@
+setuptools
+google-cloud-vision
+opencv-python-headless
+Pillow
+scikit-image
+numpy
+cmake
+face-recognition
+googletrans==4.0.0-rc1
