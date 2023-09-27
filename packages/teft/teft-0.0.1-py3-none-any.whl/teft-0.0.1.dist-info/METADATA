@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: teft
+Version: 0.0.1
+Summary: Token efficient fine tuning of large language models (LLMs) to reduce the output size
+Author-email: Fireworks AI <info@fireworks.ai>
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Description-Content-Type: text/markdown
+
+# Token Efficient Fine Tuning (TEFT)
+A library reducing the output size of large language models (LLM)
+
+## Build
+
+Put pypi credentials in `~/.pypirc`. The relevant section should look like this
+```
+[distutils]
+  index-servers =
+    testpypi
+
+[pypi]
+  username = __token__
+  password = pypi-...
+
+[testpypi]
+  username = __token__
+  password = pypi-...
+```
+
+```
+python -m build
+```
+
+Upload to test index:
+```
+twine upload --repository testpypi dist/*
+```
+
+Upload to prod index:
+```
+twine upload dist/*
+```
