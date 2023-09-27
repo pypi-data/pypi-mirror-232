@@ -1,0 +1,36 @@
+[tool.poetry]
+name = "mongo-cmd"
+version = "0.0.0.1"
+description = "一个mongodb命令行操作版本界面"
+authors = ["SsrRains <158117249@qq.com>"]
+author-email = "158117249@qq.com"
+readme = "README.md"
+homepage = "https://github.com/geekcampchina/geekcamp-calculator"
+repository = "https://github.com/geekcampchina/geekcamp-calculator"
+documentation = "https://github.com/geekcampchina/geekcamp-calculator"
+
+classifiers = [
+    'Intended Audience :: Developers',
+    'Operating System :: OS Independent',
+    'Programming Language :: Python',
+    'Programming Language :: Python :: 3',
+    'Topic :: System :: System Shells'
+]
+
+packages = [
+    { include = "mongo" },
+    { include = "mongo.py" },
+]
+
+
+
+[tool.poetry.dependencies]
+python = ">=3.8.5 <4.0.0"
+antlr4-tools = ">=0.2"
+antlr4-python3-runtime = ">=4.13.1"
+pytest = ">=7.4.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
