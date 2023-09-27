@@ -1,0 +1,10 @@
+eodc/__init__.py,sha256=I199A7ywAHQWgHUnZWiz4jszuU1B1OPN4aBEmAwhwOU,180
+eodc/auth.py,sha256=Jc_WCmxP1kBwHZp5jOwdlRLPXZgGdohLchOOPmaSJRo,1794
+eodc/dask.py,sha256=7oiaFnLOokymfqH1Dyz08Xxu8pwPcIdFjQrQcvcBPYI,1311
+eodc/faas.py,sha256=p43rmd_D27FiUGQiTwv9I3mUjGpp0CfpNMAhTyO1ogg,12750
+eodc/settings.py,sha256=ULclaYBHAGAl0yCrIVu6ZKIk3XUO113tPXkRKj4yQpk,1183
+eodc/storage.py,sha256=OLI8pixN3Ju2ewIVEiWg1v1-hgiHzFNqQ8Fa_WUxUZM,2226
+eodc/workspace.py,sha256=SNC2IqkRa5_PIVyrIGwny15S8BN-aXJxz3Mfkux3wXA,6277
+eodc-2023.9.7.dist-info/METADATA,sha256=qigF9XijR4Z50ZykJ85mZWWe7Dw1K8dhHjiAJ1VtWQE,1870
+eodc-2023.9.7.dist-info/WHEEL,sha256=Zb28QaM1gQi8f4VCBhsUklF61CTlNYfs9YAZn-TOGFk,88
+eodc-2023.9.7.dist-info/RECORD,,
