@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/mysql_fastconnector/__init__.py
+src/mysql_fastconnector/app.py
+src/mysql_fastconnector/main.py
+src/mysql_fastconnector.egg-info/PKG-INFO
+src/mysql_fastconnector.egg-info/SOURCES.txt
+src/mysql_fastconnector.egg-info/dependency_links.txt
+src/mysql_fastconnector.egg-info/requires.txt
+src/mysql_fastconnector.egg-info/top_level.txt
