@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: slambda_playground
+Version: 0.0.2
+Summary: slambda playground
+Project-URL: Homepage, https://github.com/dataset-sh/slambda-playground
+Project-URL: Bug Tracker, https://github.com/dataset-sh/slambda-playground/issues
+Author-email: Hao Wu <haowu@dataset.sh>
+License: MIT License
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Requires-Dist: flask<3.0.0,>=2.0.0
+Requires-Dist: head-switcher~=0.0.1
+Requires-Dist: slambda~=0.0.14
+Description-Content-Type: text/markdown
+
+# slambda Playground (Experimental)
+
+We also include a playground app as a simple web interface for you slambda functions.
+
+Read more here about this project on our [documentation site](https://slambda.dataset.sh/docs/playground).

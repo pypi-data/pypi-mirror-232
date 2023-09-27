@@ -1,0 +1,45 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build]
+exclude = [
+    "/.*",
+    "/dist",
+    "/doc-site",
+    "/playground-frontend",
+    "/playground-frontend/*.frontend",
+    "/utils",
+    "/tests",
+]
+
+artifacts = [
+    "*.frontend",
+    "!/playground-frontend/*.frontend"
+]
+
+[project]
+name = "slambda_playground"
+version = "0.0.2"
+authors = [
+    { name = "Hao Wu", email = "haowu@dataset.sh" },
+]
+description = "slambda playground"
+readme = "readme.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    'slambda~=0.0.14',
+    'flask>=2.0.0,<3.0.0',
+    'head_switcher~=0.0.1',
+]
+license = { text = "MIT License" }
+
+[project.urls]
+"Homepage" = "https://github.com/dataset-sh/slambda-playground"
+"Bug Tracker" = "https://github.com/dataset-sh/slambda-playground/issues"
+
