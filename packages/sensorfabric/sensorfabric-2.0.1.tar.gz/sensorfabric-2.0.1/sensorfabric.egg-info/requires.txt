@@ -1,0 +1,7 @@
+boto3
+pandas
+configparser
+pathlib
+numpy
+requests
+pyjwt==2.8.0
