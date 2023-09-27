@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: spektro
+Version: 0.0.3
+Summary: A Python package for hyperspectral/multispectral imaging research.
+Author: Yannis Kalfas
+License-File: LICENSE
+Requires-Dist: h5py>=3.9.0
+Requires-Dist: matplotlib>=3.8.0
+Requires-Dist: numpy>=1.26.0

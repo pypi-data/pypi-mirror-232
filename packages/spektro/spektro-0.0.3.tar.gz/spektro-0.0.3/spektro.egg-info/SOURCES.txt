@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+spektro/__init__.py
+spektro/loader.py
+spektro.egg-info/PKG-INFO
+spektro.egg-info/SOURCES.txt
+spektro.egg-info/dependency_links.txt
+spektro.egg-info/requires.txt
+spektro.egg-info/top_level.txt
+tests/__init__.py
+tests/test_loader.py
