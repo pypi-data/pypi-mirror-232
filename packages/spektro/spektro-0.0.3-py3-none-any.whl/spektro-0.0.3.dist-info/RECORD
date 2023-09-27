@@ -1,0 +1,10 @@
+spektro/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+spektro/loader.py,sha256=3dPYgaf-w3KDJonGNVY9mVhM20zgt_casCGzwbz1_Xw,2215
+spektro/spektro.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_loader.py,sha256=k3kfnuBzagXy9rPkbUesFB9veTD6ZXoNCaRLTcFy8g4,1466
+spektro-0.0.3.dist-info/LICENSE,sha256=EbfwGyotccZQOTu2Ibu0uPpexxLDQOJXt5_VssmGgv0,1080
+spektro-0.0.3.dist-info/METADATA,sha256=WIAyuIypqjFeJ4rodA331kyanMDs8JQt8eAbYlD9Uno,264
+spektro-0.0.3.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+spektro-0.0.3.dist-info/top_level.txt,sha256=h8HPYJgf9y8fPlBknwVvnhU1j6gUmDk8OPbcd83QWZ4,14
+spektro-0.0.3.dist-info/RECORD,,
