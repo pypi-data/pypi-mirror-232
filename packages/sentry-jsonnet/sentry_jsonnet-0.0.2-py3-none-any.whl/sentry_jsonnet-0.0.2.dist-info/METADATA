@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: sentry-jsonnet
+Version: 0.0.2
+Summary: Sentry wrapper to the go-jsonnet library
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: jsonnet
+Requires-Dist: pyright
+Requires-Dist: black
+Requires-Dist: flake8
+
