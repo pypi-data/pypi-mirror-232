@@ -1,0 +1,219 @@
+Metadata-Version: 2.1
+Name: graph_of_thoughts
+Version: 0.0.2
+Summary: Python package for Graph of Thoughts that enables solving elaborate problems with Large Language Models
+Project-URL: Homepage, https://github.com/spcl/graph-of-thoughts
+Author-email: Maciej Besta <maciej.besta@inf.ethz.ch>, Nils Blach <nils.blach@inf.ethz.ch>, Ales Kubicek <akubicek@student.ethz.ch>, Robert Gerstenberger <gerstenberger.robert@gmail.com>
+License: Copyright (c) 2023 ETH Zurich.
+                           All rights reserved.
+        
+        Redistribution and use in source and binary forms, with or without
+        modification, are permitted provided that the following conditions are
+        met:
+        
+        - Redistributions of source code must retain the above copyright
+          notice, this list of conditions and the following disclaimer.
+        
+        - Redistributions in binary form must reproduce the above copyright
+          notice, this list of conditions and the following disclaimer listed
+          in this license in the documentation and/or other materials
+          provided with the distribution.
+        
+        - Neither the name of the copyright holders nor the names of its
+          contributors may be used to endorse or promote products derived from
+          this software without specific prior written permission.
+        
+        The copyright holders provide no reassurances that the source code
+        provided does not infringe any patent, copyright, or any other
+        intellectual property rights of third parties.  The copyright holders
+        disclaim any liability to any recipient for claims brought against
+        recipient by any third party for infringement of that parties
+        intellectual property rights.
+        
+        THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+        "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+        LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+        A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+        OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+        SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+        LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+        DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+        THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+        (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+        OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+        
+        
+        Citation
+        ========
+        
+        Any published work which uses this software should include the
+        following citation:
+        
+        ----------------------------------------------------------------------
+        Maciej Besta, Nils Blach, Ales Kubicek, Robert Gerstenberger, Lukas
+        Gianinazzi, Joanna Gajda, Tomasz Lehmann, Michał Podstawski, Hubert
+        Niewiadomski, Piotr Nyczyk, Torsten Hoefler: Graph of Thoughts: Solving
+        Elaborate Problems with Large Language Models. In: arXiv preprint
+        arXiv:2308.09687
+        ----------------------------------------------------------------------
+License-File: LICENSE
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Requires-Dist: accelerate>=0.21.0
+Requires-Dist: backoff>=2.2.1
+Requires-Dist: bitsandbytes>=0.41.0
+Requires-Dist: matplotlib>=3.7.1
+Requires-Dist: numpy>=1.24.3
+Requires-Dist: openai>=0.27.7
+Requires-Dist: pandas>=2.0.3
+Requires-Dist: scipy>=1.10.1
+Requires-Dist: sympy>=1.12
+Requires-Dist: torch>=2.0.1
+Requires-Dist: transformers>=4.31.0
+Description-Content-Type: text/markdown
+
+# Graph of Thoughts (GoT)
+
+<p align="center">
+  <img src="paper/pics/preview.svg">
+</p>
+
+This is the official implementation of [Graph of Thoughts: Solving Elaborate Problems with Large Language Models](https://arxiv.org/pdf/2308.09687.pdf).  
+This framework gives you the ability to solve complex problems by modeling them as a Graph of Operations (GoO), which is automatically executed with a Large Language Model (LLM) as the engine.  
+This framework is designed to be flexible and extensible, allowing you to not only solve problems using the new GoT approach, but also to implement GoOs resembling previous approaches like CoT or ToT.
+
+## Setup Guide
+
+In order to use this framework, you need to have a working installation of Python 3.8 or newer.
+
+### Installing GoT
+
+Before running either of the following two installation methods, make sure to activate your Python environment (if any) beforehand.  
+If you are a user and you just want to use `graph_of_thoughts`, you can install it directly from PyPI:
+```bash
+pip install graph_of_thoughts
+```
+If you are a developer and you want to modify the code, you can install it in editable mode from source:
+```bash
+git clone https://github.com/spcl/graph-of-thoughts.git
+cd graph-of-thoughts
+pip install -e .
+```
+
+### Configuring the LLM
+
+In order to use the framework, you need to have access to an LLM.
+Please follow the instructions in the [Controller README](graph_of_thoughts/controller/README.md) to configure the LLM of your choice.
+
+## Quick Start
+
+The following code snippet shows how to use the framework to solve the sorting problem for a list of 32 numbers using a CoT-like approach.  
+Make sure you have followed the [Setup Guide](#setup-guide) before running the code.
+
+```python
+from examples.sorting.sorting_032 import SortingPrompter, SortingParser, utils
+from graph_of_thoughts import controller, operations
+
+# Problem input
+
+to_be_sorted = "[0, 2, 6, 3, 8, 7, 1, 1, 6, 7, 7, 7, 7, 9, 3, 0, 1, 7, 9, 1, 3, 5, 1, 3, 6, 4, 5, 4, 7, 3, 5, 7]"
+
+# Create the Graph of Operations
+gop = operations.GraphOfOperations()
+gop.append_operation(operations.Generate())
+gop.append_operation(operations.Score(scoring_function=utils.num_errors))
+gop.append_operation(operations.GroundTruth(utils.test_sorting))
+
+# Configure the Language Model (Assumes config.json is in the current directory with OpenAI API key)
+lm = controller.ChatGPT("config.json", model_name="chatgpt")
+
+# Create the Controller
+ctrl = controller.Controller(
+  lm, 
+  gop, 
+  SortingPrompter(), 
+  SortingParser(),
+  # The following dictionary is used to configure the initial thought state
+  {
+    "original": to_be_sorted,
+    "current": "",
+    "method": "cot"
+  }
+)
+
+# Run the Controller and generate the output graph
+ctrl.run()
+ctrl.output_graph("output_cot.json")
+```
+
+To run the more sophisticated GoT approach, you can use the following code snippet.
+
+```python
+from examples.sorting.sorting_032 import SortingPrompter, SortingParser, got, utils
+from graph_of_thoughts import controller, operations
+
+# Problem input
+
+to_be_sorted = "[0, 2, 6, 3, 8, 7, 1, 1, 6, 7, 7, 7, 7, 9, 3, 0, 1, 7, 9, 1, 3, 5, 1, 3, 6, 4, 5, 4, 7, 3, 5, 7]"
+
+# Retrieve the Graph of Operations
+gop = got()
+
+# Configure the Language Model (Assumes config.json is in the current directory with OpenAI API key)
+lm = controller.ChatGPT("config.json", model_name="chatgpt")
+
+# Create the Controller
+ctrl = controller.Controller(
+  lm, 
+  gop, 
+  SortingPrompter(), 
+  SortingParser(),
+  # The following dictionary is used to configure the initial thought state
+  {
+    "original": to_be_sorted,
+    "current": "",
+    "phase": 0,
+    "method": "got"
+  }
+)
+
+# Run the Controller and generate the output graph
+ctrl.run()
+ctrl.output_graph("output_got.json")
+```
+You can compare the two results by inspecting the output graphs `output_cot.json` and `output_got.json`.  
+The final thought states' scores indicate the number of errors in the sorted list.
+
+## Documentation
+The paper gives a high-level overview of the framework and its components.  
+In order to understand the framework in more detail, you can read the documentation of the individual modules.  
+Especially the [Controller](graph_of_thoughts/controller/README.md) and [Operations](graph_of_thoughts/operations/README.md) modules are important for understanding how to make the most out of the framework.  
+We took extra care to fully document the code, so that you can easily understand how it works and how to extend it.
+
+## Examples
+
+The [examples](examples) directory contains several examples of problems that can be solved using the framework, including the ones presented in the paper.  
+It is a great starting point for learning how to use the framework to solve real problems.  
+Each example contains a `README.md` file with instructions on how to run it and play with it. The code is fully documented and should be easy to follow.
+
+## Paper Results
+
+You can run the experiments from the paper by following the instructions in the [examples](examples) directory.  
+However, if you just want to inspect and replot the results, you can use the [paper](paper) directory.
+
+## Citations
+
+If you find this repository valuable, please give it a star!  
+Got any questions or feedback? Feel free to reach out to [nils.blach@inf.ethz.ch](mailto:nils.blach@inf.ethz.ch) or open an issue.  
+Using this in your work? Please reference us using the provided citation:
+
+```bibtex
+@misc{besta2023got,
+  title = {{Graph of Thoughts: Solving Elaborate Problems with Large Language Models}},
+  author = {Besta, Maciej and Blach, Nils and Kubicek, Ales and Gerstenberger, Robert and Gianinazzi, Lukas and Gajda, Joanna and Lehmann, Tomasz and Podstawski, Micha{\l} and Niewiadomski, Hubert and Nyczyk, Piotr and Hoefler, Torsten},
+  year = 2023,
+  eprinttype = {arXiv},
+  eprint = {2308.09687}
+}
+```
