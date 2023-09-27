@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: mongo-cmd
+Version: 0.0.0.1
+Summary: 一个mongodb命令行操作版本界面
+Home-page: https://github.com/geekcampchina/geekcamp-calculator
+Author: SsrRains
+Author-email: 158117249@qq.com
+Requires-Python: >=3.8.5,<4.0.0
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: System :: System Shells
+Requires-Dist: antlr4-python3-runtime (>=4.13.1)
+Requires-Dist: antlr4-tools (>=0.2)
+Requires-Dist: pytest (>=7.4.1)
+Project-URL: Documentation, https://github.com/geekcampchina/geekcamp-calculator
+Project-URL: Repository, https://github.com/geekcampchina/geekcamp-calculator
+Description-Content-Type: text/markdown
+
+123
+
