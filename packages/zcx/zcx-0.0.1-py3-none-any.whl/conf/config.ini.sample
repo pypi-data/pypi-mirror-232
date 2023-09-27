@@ -1,0 +1,4 @@
+[main]
+db_url = mongodb://192.168.122.208:27017/
+db_name = mydatabase
+collection_name = mycollection
