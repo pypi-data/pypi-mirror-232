@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+sideralib/__init__.py
+sideralib/astrochart.py
+sideralib/astrodata.py
+sideralib.egg-info/PKG-INFO
+sideralib.egg-info/SOURCES.txt
+sideralib.egg-info/dependency_links.txt
+sideralib.egg-info/requires.txt
+sideralib.egg-info/top_level.txt
+sideralib/tools/__init__.py
+sideralib/tools/astrojdate.py
