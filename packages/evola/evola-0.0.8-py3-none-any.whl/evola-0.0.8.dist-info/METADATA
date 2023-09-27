@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: evola
+Version: 0.0.8
+Summary: Evolutionary algorithms
+Home-page: https://github.com/DavidFreire-FEUP/evolutionary-algorithms
+License: MIT
+Author: David Freire
+Author-email: up201806711@up.pt
+Requires-Python: >3.8
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Project-URL: Repository, https://github.com/DavidFreire-FEUP/evolutionary-algorithms
+Description-Content-Type: text/markdown
+
+# Evolutionary algorithms in (pure) Python
+
+There are three algorithms implemented in this package (from best to worse):
+
+- epso (Evolutionary Particle Swarm Optimization)
+- pso (Particle Swarm Optimization) (tbd)
+- pop (Classic Genetic Algorithm) (tbd)
+
