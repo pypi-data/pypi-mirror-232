@@ -1,0 +1,85 @@
+Metadata-Version: 2.1
+Name: breast-cancer-toolkit
+Version: 0.0.9
+Summary: Machine learning toolkit designed to support health professional in breast cancer detection and analysis.
+Home-page: https://carlos-eduardo-sanchez-torres.sanchezcarlosjr.com/Mexican-Deep-DICOM-7a807c1db3b641378180b0c60633c38b
+Author: sanchezcarlosjr
+Author-email: 24639141+sanchezcarlosjr@users.noreply.github.com
+License: MIT
+Project-URL: Documentation, https://github.com/sanchezcarlosjr/breast-cancer-toolkit
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Description-Content-Type: text/x-rst; charset=UTF-8
+License-File: LICENSE.txt
+Requires-Dist: gradio
+Requires-Dist: pydicom
+Requires-Dist: numpy
+Requires-Dist: Pillow
+Requires-Dist: opencv-python
+Requires-Dist: tensorflow-io
+Requires-Dist: importlib-metadata ; python_version < "3.8"
+Provides-Extra: testing
+Requires-Dist: setuptools ; extra == 'testing'
+Requires-Dist: pytest ; extra == 'testing'
+Requires-Dist: pytest-cov ; extra == 'testing'
+
+.. image:: https://img.shields.io/badge/-PyScaffold-005CA0?logo=pyscaffold
+    :alt: Project generated with PyScaffold
+    :target: https://pyscaffold.org/
+
+.. image:: https://img.shields.io/pypi/v/breast-cancer-toolkit.svg
+        :alt: PyPI-Server
+        :target: https://pypi.org/project/breast-cancer-toolkit/
+
+
+|
+
+=====================
+breast-cancer-toolkit
+=====================
+
+
+    Machine learning toolkit designed to support radiologists and oncologists in breast cancer detection and analysis.
+
+
+Installation from pypi
+======================
+
+.. code-block:: bash
+
+   pip install breast-cancer-toolkit
+
+
+CLI
+============
+
+
+Start web server
+++++++++++++++++
+
+.. code-block:: bash
+
+   bct -s
+
+Visualize from local storage
+++++++++++++++++++++++++++++
+
+.. code-block:: bash
+
+   bct -lv [file_path].(dcm|tif|tiff|jpg|png|ljpeg)
+
+
+Python
+==========
+
+Consult our `notebooks`_ to learn more. We recommend you starting with `Getting started`_.
+
+.. _notebooks: https://github.com/sanchezcarlosjr/breast-cancer-toolkit/tree/main/notebooks 
+.. _Getting started: https://github.com/sanchezcarlosjr/breast-cancer-toolkit/blob/main/notebooks/getting-started.ipynb
+
+Note
+====
+
+This project has been set up using PyScaffold 4.4. For details and usage
+information on PyScaffold see https://pyscaffold.org/.
