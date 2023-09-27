@@ -1,0 +1,7 @@
+app
+dist
+.env
+.venv
+*.pyc
+__pycache__
+scriptman.egg-info
