@@ -1,0 +1,36 @@
+[tool.poetry]
+name = "wordlette"
+version = "0.1.0a11"
+description = "Simple and easy framework for building complex websites."
+authors = ["ZechCodes <hi@zech.codes>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+bevy = "^2.0.1"
+starlette = "^0.28.0"
+jinja2 = { version = "^3.1.2", optional = true }
+pyyaml = { version = "^6.0.1", optional = true }
+sqlalchemy = { version = "^2.0.19", optional = true }
+tomlkit = { version = "^0.11.8", optional = true }
+uvicorn = { version = "^0.22.0", optional = true }
+python-multipart = "^0.0.6"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.0"
+pytest-asyncio = "^0.21.0"
+httpx = "^0.24.1"
+
+[tool.poetry.extras]
+cms = ["uvicorn", "jinja2"]
+yaml = ["pyyaml"]
+toml = ["tomlkit"]
+sql = ["sqlalchemy"]
+
+[tool.poetry.scripts]
+wordlette = "wordlette.cms.cli:run"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

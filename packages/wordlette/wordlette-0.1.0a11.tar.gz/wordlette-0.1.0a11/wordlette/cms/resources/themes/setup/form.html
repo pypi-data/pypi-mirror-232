@@ -1,0 +1,34 @@
+{% macro render_label(label, field) %}
+{% if field.attrs["required"] %}
+{{ label.add_class("required").render() }}
+{% else %}
+{{ label.render() }}
+{% endif %}
+{% endmacro %}
+<form method="{{ form.method }}">
+    <div class="row">
+        <div class="column column-50">
+            <fieldset>
+                {% for name, field in form.fields.items() %}
+                {% if name in form.labels and "label-inline" not in field.classes %}
+                {{ render_label(form.labels[name], field) }}
+                {% endif %}
+                {% if name in form.errors %}
+                {{ field.add_class("error").render() }}
+                <div class="error">*{{ form.errors[name] }}</div>
+                {% else %}
+                {{ field.render() }}
+                {% endif %}
+                {% if name in form.labels and "label-inline" in field.classes %}
+                {{ render_label(form.labels[name].add_class("label-inline"), field) }}
+                {% endif %}
+                {% endfor %}
+            </fieldset>
+            <div class="float-right form-nav">
+                {% for button in form.buttons %}
+                {{ button.render() }}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</form>
