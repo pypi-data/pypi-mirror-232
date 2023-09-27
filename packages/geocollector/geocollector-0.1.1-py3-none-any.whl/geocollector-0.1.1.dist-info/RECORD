@@ -1,0 +1,12 @@
+geocollector/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+geocollector/api.py,sha256=mJc1gYon1rGYhpo-Ru7QGSCbW7nFcUTMcKxg7rYHGys,12213
+geocollector/cli.py,sha256=bIbnudWww0PUKW5da9UIscO5FOWUypmZhh49OAwIb-Q,2207
+geocollector/database.py,sha256=MvRv-UKzfN9N5UAanJQglH44IpgAzbBNQuoSrvmTLxM,1049
+geocollector/logger.py,sha256=4JfJsKoHoK_5DNmZE13sBPTLGVxGiRpLfPo7xpMyBZQ,900
+geocollector/main.py,sha256=Q7LcI9_JIU778X1gaRqZYBpgw07YuIM8GHm9etrI43I,971
+geocollector/records.py,sha256=pbrJ_akMtBsOkeHL0wOFI2nchaoji9m6r4zXT-_PtxM,489
+geocollector/settings.py,sha256=omajvqkaF3nxcc0EIGJZJDmYrwMbhQAoDXF-HYYTvLs,442
+geocollector-0.1.1.dist-info/METADATA,sha256=qCp9KEAubHu2wDvpqGpe6J4vMWYpGbJrY2s_hNEqakk,624
+geocollector-0.1.1.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+geocollector-0.1.1.dist-info/entry_points.txt,sha256=3xdcR3g6VDVPNLsL1NfrShGSOsiJhvsxFhk9Ao443CE,55
+geocollector-0.1.1.dist-info/RECORD,,
