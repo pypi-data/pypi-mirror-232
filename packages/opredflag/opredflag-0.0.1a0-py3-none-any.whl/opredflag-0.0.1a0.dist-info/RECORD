@@ -1,0 +1,13 @@
+opredflag/__init__.py,sha256=FY1THHKcAfW8jSebklP3wIUC65akkiZDlrjzFFaj8lA,665
+opredflag/cli.py,sha256=QZjKv4C5wLUkZ5JfCQzgN5uuSGoAh3ljDjtE5H2OsC0,1172
+opredflag/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+opredflag/updater/__init__.py,sha256=6MMpsvIYn1emwdVOQ8Z7qLk0gPKVgzj7gFJea4z7rKw,721
+opredflag/updater/cli.py,sha256=7WOSvvnXSTElumVS4Vt_1u8ZXgeH-WhXM1s5IlN52kY,3216
+opredflag/updater/core.py,sha256=U2lCJl10o8_rQ1u4QxtRo4Objwe8I5ibqRELvySSdgU,6797
+opredflag/updater/enums.py,sha256=hSl_nEuXvWv83AjudR73i4GorxIPyUZCoKbt_XOcFP0,1185
+opredflag-0.0.1a0.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+opredflag-0.0.1a0.dist-info/METADATA,sha256=0yxMqwehaId3lX8fY55GPnfWwLAGXSiTR7VdHiSM2AA,42194
+opredflag-0.0.1a0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+opredflag-0.0.1a0.dist-info/entry_points.txt,sha256=x3zIqNB5wzm1eY0WHs792r0mS0HQt8okL10FWubY8Qo,73
+opredflag-0.0.1a0.dist-info/top_level.txt,sha256=pLg8wp7xzumfmpsW8iKCAuyPrVXzCdAJu5HQ7ceaGUg,10
+opredflag-0.0.1a0.dist-info/RECORD,,
