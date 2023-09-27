@@ -1,0 +1,41 @@
+
+[tool.poetry]
+name = "FastAPI-SQLAlchemy-improved"
+description = "Adds simple SQLAlchemy support with multiple databases to FastAPI."
+version = "0.5.1"
+readme = "README.md"
+authors = ["Ewen Lorimer <ewen@zippedscript.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+starlette = "^0.13.2"
+SQLAlchemy = "^1.2"
+fastapi = "^0.52.0"
+curio = "^1.6"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.4.2"
+pymysql = "^1.1.0"
+aiomysql = "^0.2.0"
+cryptography = "^41.0.3"
+
+
+[tool.black]
+line-length = 100
+target-version = ['py37']
+include = '\.pyi?$'
+exclude = '''
+(
+    | .git
+    | .venv
+    | build
+    | dist
+    | venv
+    | .env
+)
+'''
