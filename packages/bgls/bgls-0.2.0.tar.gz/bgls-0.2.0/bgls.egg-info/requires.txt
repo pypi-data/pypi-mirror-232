@@ -1,0 +1,15 @@
+cirq-core>=1.1.0
+
+[development]
+pytest-xdist[psutil]
+pytest-cov
+mypy
+furo
+myst-nb
+quimb
+ply
+black
+nbmake
+flake8
+sphinx
+quimb[tensor]
