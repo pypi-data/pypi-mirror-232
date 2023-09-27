@@ -1,0 +1,65 @@
+Metadata-Version: 2.1
+Name: LPDT
+Version: 0.0.2
+Summary: Locally differentially Private Decision Tree
+Home-page: https://github.com/Karlmyh/LPDT
+Author: Yuheng Ma, Han Zhang
+Author-email: yma@ruc.edu.cn
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy>=1.24.2
+Requires-Dist: scikit-learn>=1.3.1
+Requires-Dist: numba>=0.58.0
+Requires-Dist: scipy>=1.11.2
+
+# Locally differentially Private Decision Tree (LPDT)
+
+This repository implements **LPDT**, the Locally differentially Private Decision Tree described in the paper Decision Tree for Locally Private Estimation with Public Data accepted for NeurIPS 2023.
+The implementation is based on pure Python with the following required packages:
+
+- Scikit-learn
+- NumPy
+- Numba
+- Scipy
+
+## Contents
+
+- [Installation](#Installation)
+- [Demo](#Demo)
+- [References](#References)
+
+
+## Installation
+
+### Via PyPI
+
+```bash
+pip install LPDT
+```
+
+### Via GitHub
+
+```bash
+pip install git+https://github.com/Karlmyh/LPDT.git
+```
+
+
+### Manual Install
+  > 
+```bash
+git clone git@github.com:Karlmyh/LPDT.git
+cd LPDT 
+python setup.py install
+```
+
+## Demo
+See simulation.py for a demo of the use of the class.
+
+
+
+## References
+
+- *Decision Tree for Locally Private Estimation with Public Data* (NeurIPS 2023)
