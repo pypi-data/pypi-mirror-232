@@ -1,0 +1,64 @@
+Metadata-Version: 2.1
+Name: udlr
+Version: 0.0.3
+Summary: A C++ Sparse Matrix Library
+Author-email: Joschka Roffe <joschka@roffe.eu>
+License: MIT License
+        
+        Copyright (c) 2023 qec.Codes
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Classifier: Development Status :: 4 - Beta
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy>=1.24.0
+Requires-Dist: scipy>=1.9.3
+
+# Up-Down-Left-Right: A C++ Sparse Matrix Library
+
+Up-down-left-right (UDLR) is a templated sparse matrix library designed the facilitate the development of algorithms that run on sparse graphs. The core datastructure is a quadrupally linked list representing the non-zero entries of the matrix. Every entry in this structure is connected with its immediate neighbours in the _up, down, left, and right_ directions. The quad-directional linked layout enables rapid matrix traversal both horizontally and vertically, making it highly efficient for algorithms such as Gaussian elimination. UDLR is fully templated, allowing for arbitrary meta data to be appended to each list entry. This is particularly useful for graph algorithms such as belief propagation in which messages are passed between nodes.
+
+## CPP Installation
+
+UDLR is a header only libary. Simply include the file and `udlr.hpp` and enjoy the library!
+
+## Python Installation
+
+Install using pip. Navigate to the repository root and run:
+
+`pip install -Ue .`
+
+## CPP Features
+
+UDLR has initially been developed to provide sparse matrix operations over a GF2 field for applications in classical and quantum coding theory. As such, the sparse GF2 matrix is currently the most developed feature of this package. However, more functiionality will be added soon. The current fuctionality is listed below:
+
+- A sparse GF2 matrix class. This class can be initialised with a custom node type that can contain user defined meta data.
+- Function for performing linear algebra on GF2 matrices. Current funcitons include rank calculation, nullspace computation, LU decomposition and matrix inversion.
+- Python bindings (via cython) for linear algebra operations on sparse GF2 matrices.
+
+
+
+
+
+
+
+
+
