@@ -1,0 +1,9 @@
+xodoo/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+xodoo/migration.py,sha256=yxO8-GdUB3eIOMnva7Gn5URTAYvA-jyHWCwSWUEPItI,3690
+xodoo/utils.py,sha256=1WWCo5ybkabaz2U2_d2TBS_m6QdtRmngNjmm3uGeh5U,726
+xodoo-0.2.0.dist-info/LICENSE,sha256=2n6rt7r999OuXp8iOqW9we7ORaxWncIbOwN1ILRGR2g,7651
+xodoo-0.2.0.dist-info/METADATA,sha256=mBdTgZasw7bqoUQ6bP-2eYz7O_CLDusLFB7uy6P7RUc,3668
+xodoo-0.2.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+xodoo-0.2.0.dist-info/entry_points.txt,sha256=OfU1liTyN009-hcDFD9UnMq83mdReJL-aqWrX2RFC60,55
+xodoo-0.2.0.dist-info/top_level.txt,sha256=J5-xaw1tEGYxxbMs5KxvsChMtAGW7TQHoijmNx-kE-c,6
+xodoo-0.2.0.dist-info/RECORD,,
