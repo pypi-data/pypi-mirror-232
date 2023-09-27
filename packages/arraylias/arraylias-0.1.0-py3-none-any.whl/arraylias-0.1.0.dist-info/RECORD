@@ -1,0 +1,17 @@
+arraylias/VERSION.txt,sha256=6d2FB_S_DG9CRY5BrqgzrQvT9hJycjNe7pv01YVB7Wc,6
+arraylias/__init__.py,sha256=hkD7NnBxBI706zd2_PXH4ba5TyXEPzvO6Yz0k99OQdw,1431
+arraylias/alias.py,sha256=xfDn2VK6WEFGa0FSf08JeYRBgpdOPD-4dNURt4GlGp8,20306
+arraylias/aliased.py,sha256=E3KfPT8WlP4Qwwgjn0xf-WUpef5On82Cf3sBZ09B9lo,3516
+arraylias/exceptions.py,sha256=wpcBO2ao_6-xQdb2YDeFpdtc5xryORu2gP4KgcpAvGU,986
+arraylias/version.py,sha256=Jjc0Hzb7mHTrgMrPY2zpE6bWV4DNhc6UY-3oRmXHo3o,2349
+arraylias/default_alias/__init__.py,sha256=5N_SPzUJ7vMrFmRd_KayHs-EdpEhgNbhpiUchQNBG6o,585
+arraylias/default_alias/numpy_alias.py,sha256=OvRXFf3tQ82QgXQzxtGCWFaYxdnlScVB9K-K87hJcGQ,1351
+arraylias/default_alias/register_jax.py,sha256=UWPkPNmhKfwzB2d5Tvm_qDyHftOEKuT_b8Ioqr-3FQc,2430
+arraylias/default_alias/register_numpy.py,sha256=vO1WM65g_78WsNSzFVcUAgRowzhdeOpcOCSrMkYWZwE,3165
+arraylias/default_alias/register_tensorflow.py,sha256=hKpuvmidnK3CPdiwpNaJ89UBsiLAedvhfZ3uJTlrs2I,1664
+arraylias/default_alias/scipy_alias.py,sha256=nVzqE2ALwMA4R-INnfV5ttWLRfJmGBw9Z_gYEbG21mw,1356
+arraylias-0.1.0.dist-info/LICENSE.txt,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+arraylias-0.1.0.dist-info/METADATA,sha256=3a0DWH19PTF_f2KJQAFBVlTPIZZo5QE6I_P4vzOSq6k,3427
+arraylias-0.1.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+arraylias-0.1.0.dist-info/top_level.txt,sha256=-S7fpZdWcHw8s7efIrvamR7c8-N8fvubRbLzSI3i0yY,10
+arraylias-0.1.0.dist-info/RECORD,,
