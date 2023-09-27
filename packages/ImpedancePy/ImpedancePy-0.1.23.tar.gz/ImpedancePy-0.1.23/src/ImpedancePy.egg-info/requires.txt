@@ -1,0 +1,8 @@
+UQpy
+shapely
+seaborn
+
+[dev]
+Sphinx
+sphinx-rtd-theme
+sphinxcontrib-bibtex
