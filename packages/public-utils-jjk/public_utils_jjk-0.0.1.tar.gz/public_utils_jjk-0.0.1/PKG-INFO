@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: public_utils_jjk
+Version: 0.0.1
+Summary: 一些简单的工具方法集合
+Author-email: jinjiakang <296508600@qq.com>
+Project-URL: Homepage, https://www.baidu.com
+Project-URL: Bug Tracker, https://www.google.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# 一些简单的工具方法集合

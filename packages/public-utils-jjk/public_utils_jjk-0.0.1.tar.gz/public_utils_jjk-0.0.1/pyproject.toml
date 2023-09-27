@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68.2.0", "Django>=3.2", "requests>=2.31.0"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "public_utils_jjk"
+version = "0.0.1"
+authors = [
+  { name="jinjiakang", email="296508600@qq.com" },
+]
+description = "一些简单的工具方法集合"
+readme = "README.md"
+requires-python = ">=3.9.6"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://www.baidu.com"
+"Bug Tracker" = "https://www.google.com"
