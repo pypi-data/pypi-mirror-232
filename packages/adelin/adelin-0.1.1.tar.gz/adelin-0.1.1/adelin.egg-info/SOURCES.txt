@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+adelin/Crypto_.py
+adelin/DB_Tools.py
+adelin/Filecheck.py
+adelin/Object_.py
+adelin/Readwrite.py
+adelin/__init__.py
+adelin.egg-info/PKG-INFO
+adelin.egg-info/SOURCES.txt
+adelin.egg-info/dependency_links.txt
+adelin.egg-info/top_level.txt
