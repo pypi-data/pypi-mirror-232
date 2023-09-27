@@ -1,0 +1,41 @@
+[tool.poetry]
+name = "zcx"
+version = "0.0.1"
+description = "Mongodb数据操作工具"
+authors = ["Zcx <colampszcx@gmail.com>"]
+readme = "README.md"
+homepage = "https://github.com/Zcxx0322/mongodb-tool"
+repository = "https://github.com/Zcxx0322/mongodb-tool"
+documentation = "https://github.com/Zcxx0322/mongodb-tool"
+
+classifiers = [
+    'Intended Audience :: Developers',
+    'Operating System :: OS Independent',
+    'Programming Language :: Python',
+    'Programming Language :: Python :: 3',
+    'Topic :: System :: System Shells'
+]
+
+packages = [
+    { include = "method" },
+    { include = "main.py" },
+]
+
+include = [
+    "method/*.py",
+    "conf/*.sample",
+    "var/log/*.log",
+]
+
+[tool.poetry.dependencies]
+python = ">=3.8.5 <4.0.0"
+pytest = ">=7.4.1"
+happy-python = ">=0.4.7"
+pymongo = ">=4.5.0"
+
+[tool.poetry.scripts]
+zcx = "main:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
