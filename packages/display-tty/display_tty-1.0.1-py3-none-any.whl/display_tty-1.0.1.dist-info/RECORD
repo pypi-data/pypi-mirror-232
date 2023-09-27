@@ -1,0 +1,9 @@
+display_tty/__init__.py,sha256=7aVTFXRi2Ht3PKhDtlgjj4AjsLy8JEfWM0SDe6s6loA,1193
+display_tty/my_disp.py,sha256=teUJ964HQQNtdPKNvbAjfDVe5o3JogbjS3JpYGk7TWU,14692
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_disp.py,sha256=pmOYJvJgFG5U-cpszL1Xzz5N4PcJfp5_B-nHPMpXOQk,2342
+display_tty-1.0.1.dist-info/LICENSE,sha256=RpOKrzZvggUTOcul2W-d2BwZKagqMz4wmp3a7BSGyYw,1069
+display_tty-1.0.1.dist-info/METADATA,sha256=eUKBaSQ9UwiGW6U_XoQ1V1J064t79Gnc2ZBWjfvKFUQ,16638
+display_tty-1.0.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+display_tty-1.0.1.dist-info/top_level.txt,sha256=mHIQa_7YjC6NkZmGIbSuMZBTP00aLCBEk0bS45tCiUA,18
+display_tty-1.0.1.dist-info/RECORD,,
