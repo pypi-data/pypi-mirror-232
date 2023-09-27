@@ -1,0 +1,12 @@
+entrypoints
+pluggy
+lxml
+
+[bash]
+argcomplete
+
+[jinja]
+jinja2
+
+[thirdparty]
+splunk-sdk>=1.7.0
