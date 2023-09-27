@@ -1,0 +1,11 @@
+omg_dosimetry/OMG_Logo.png,sha256=QoqwKtooZEQaSDsfo2vqxUJxNuIpeyfBuazWeU2pqJs,27306
+omg_dosimetry/__init__.py,sha256=wMpOiBvql-h2lgyBp9WTmJLNggTxqtXVHNA9UfS25B4,28
+omg_dosimetry/analysis.py,sha256=QzRTIkkBPMbzf4YAG7epjKk_QSZ_dmz-FfEVFlrkV6Q,58392
+omg_dosimetry/calibration.py,sha256=EyBOiZNzSdKZTZDB5KXA5a9C4s792xK9jR83Xgk4iR8,41888
+omg_dosimetry/i_o.py,sha256=00EaG7AYUO70_l4VjFZ5utNtQ-E9EE-BJLlkkwNDKZM,1351
+omg_dosimetry/imageRGB.py,sha256=9CPI6Y0DsmqlK1AoWfPuAIsHrSU9NkuZ6Y4WYRw3RE0,41949
+omg_dosimetry/tiff2dose.py,sha256=wrGQUehkM7uB8un8CLvlipkPSUO5510uqXQYv6FdukU,21552
+omg_dosimetry-1.5.1.dist-info/METADATA,sha256=PfQMMqEltXEt4Luk35TH6m-IzeAqRj6hew6ec3ZTRs4,4194
+omg_dosimetry-1.5.1.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+omg_dosimetry-1.5.1.dist-info/licenses/LICENSE,sha256=93YthhKcdeqpOwpsTZ2ygqumSmKmN3Wl17jD9Hh6rRg,1099
+omg_dosimetry-1.5.1.dist-info/RECORD,,
