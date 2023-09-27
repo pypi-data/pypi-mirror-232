@@ -1,0 +1,9 @@
+ckanapi>=3.5
+flask-caching
+flask>=2.2.5<2.3
+libhxl==5.1
+redis
+requests_cache
+structlog
+typing_extensions
+urllib3<1.27,>1.21.1
