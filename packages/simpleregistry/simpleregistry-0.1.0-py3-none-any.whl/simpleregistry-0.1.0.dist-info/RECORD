@@ -1,0 +1,10 @@
+simpleregistry/__init__.py,sha256=8NgwNTHOMyKnIBZY7uzjvotCjxZbU7ZMtsCThDKGjZU,74
+simpleregistry/adapters/__init__.py,sha256=716PzoGxh4iUt4ejrSdu2VrYmKvZqD2gXph7ndOQeqc,53
+simpleregistry/adapters/pyreg_dataclasses.py,sha256=MN5JeCphQ9OVO_eR-MampcFEjznmyRdsuhWVtl3Al_Q,165
+simpleregistry/adapters/pyreg_pydantic.py,sha256=LtxEoQuWdLIucV3nK68JvgEBcu_gxwWIy3U7guUPn7w,1095
+simpleregistry/base.py,sha256=VOFg-P2gB5CVRIwyUDah_ugx65f8KM6qpChEnVATI4w,4914
+simpleregistry/exceptions.py,sha256=fKLI2ZrDL3e9AKjRtN7VzuKLKIHAj-FdmhkVLbpxHlE,138
+simpleregistry-0.1.0.dist-info/LICENSE,sha256=MlqPh-XhGp_st0WbS7hD8f1e_r8AMbcfuwrI4yVkYrc,1068
+simpleregistry-0.1.0.dist-info/METADATA,sha256=upG402mpDHKdRwE14WMsivJbYUqonmeFkxwbHkkqBa8,613
+simpleregistry-0.1.0.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+simpleregistry-0.1.0.dist-info/RECORD,,
