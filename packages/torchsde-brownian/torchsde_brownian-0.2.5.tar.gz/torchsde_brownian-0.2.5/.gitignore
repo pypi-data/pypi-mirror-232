@@ -1,0 +1,11 @@
+.idea
+.DS_Store
+.lib
+__pycache__
+.ipynb_checkpoints
+build/
+dist/
+.vscode/
+*.egg-info/
+*-darwin.so
+**.pyc
