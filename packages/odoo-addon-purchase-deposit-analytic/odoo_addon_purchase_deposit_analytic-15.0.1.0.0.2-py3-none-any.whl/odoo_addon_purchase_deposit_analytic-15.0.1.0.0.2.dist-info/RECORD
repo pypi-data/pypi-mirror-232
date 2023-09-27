@@ -1,0 +1,17 @@
+odoo/addons/purchase_deposit_analytic/README.rst,sha256=7VsLEqfNE0YwUbrbMANSxhQ_sRJFX5DF5nf2wXJ9haQ,3199
+odoo/addons/purchase_deposit_analytic/__init__.py,sha256=grlkrJYaWOlc15fFIksL8cJohCfsbm2YN78nimAMdvU,86
+odoo/addons/purchase_deposit_analytic/__manifest__.py,sha256=h02J1_5Egy2CTSqCD80tMUwTca0Axhq78vmRz6ML_dA,613
+odoo/addons/purchase_deposit_analytic/i18n/purchase_deposit_analytic.pot,sha256=d2i06TXneIs3rmnqg5SGoP_D9H5psqNWVlSK6zSUVX8,935
+odoo/addons/purchase_deposit_analytic/readme/CONTRIBUTORS.rst,sha256=G2zA5tOfZDES60Fif1REl-3h5-9Y50hpnn0uRFW-cMY,36
+odoo/addons/purchase_deposit_analytic/readme/DESCRIPTION.rst,sha256=VTstJOY5Y-pd-dNEYpF_Bsl7qP8gfJ-ZmZ6LH0S1trM,92
+odoo/addons/purchase_deposit_analytic/static/description/icon.png,sha256=6xBPJauaFOF0KDHfHgQopSc28kKvxMaeoQFQWZtfZDo,9455
+odoo/addons/purchase_deposit_analytic/static/description/index.html,sha256=5njYdo6VVwykT2AebuTa0XAIwiVjiEXDj4NkhAZ0Lvc,12507
+odoo/addons/purchase_deposit_analytic/tests/__init__.py,sha256=M5lAs00PDLCOrTKNstGbsX8QfujDWUcZiZ-wVgsPZic,116
+odoo/addons/purchase_deposit_analytic/tests/test_purchase_deposit_analytic.py,sha256=SYl0sI236i9okYnNVLKMmGo4lpMapEW2AJxJzDhreXU,298
+odoo/addons/purchase_deposit_analytic/wizard/__init__.py,sha256=y1Kufx7pTZDkKl1mHGC5s3OCvTwSIEBOahLt50DQuLk,109
+odoo/addons/purchase_deposit_analytic/wizard/purchase_make_invoice_advance.py,sha256=tD5Nk648zCZ6bVGYoe_Y4FZprtmys5RDnCa6yX-D5Ek,1745
+odoo/addons/purchase_deposit_analytic/wizard/purchase_make_invoice_advance_views.xml,sha256=OHxx55E3uFyiM2GwaQGYEY2EUFoG5l1YHx5BmL_g3M8,812
+odoo_addon_purchase_deposit_analytic-15.0.1.0.0.2.dist-info/METADATA,sha256=e_oIDLQRvlDxVW-7Dt4D4i3bZAecw-EcpulLBT7gdaY,3824
+odoo_addon_purchase_deposit_analytic-15.0.1.0.0.2.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+odoo_addon_purchase_deposit_analytic-15.0.1.0.0.2.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
+odoo_addon_purchase_deposit_analytic-15.0.1.0.0.2.dist-info/RECORD,,
