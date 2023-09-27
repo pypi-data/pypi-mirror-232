@@ -1,0 +1,3 @@
+[mwlarebuilder40]
+hook-dirs = _mwlarebuilder_hooks_contrib.hooks:get_hook_dirs
+tests = _mwlarebuilder_hooks_contrib.tests:get_test_dirs
