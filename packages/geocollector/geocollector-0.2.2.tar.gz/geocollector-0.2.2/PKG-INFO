@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: geocollector
+Version: 0.2.2
+Summary: Collect information from NCBI for the https://github.com/HelikarLab/FastqToGeneCounts project
+Home-page: https://github.com/JoshLoecker/GEOcollector
+Author: Josh Loecker
+Author-email: joshloecker@icloud.com
+Requires-Python: >=3.11,<3.13
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: aiohttp (>=3.8.5)
+Requires-Dist: argcomplete (>=3.1.2)
+Requires-Dist: pandas (>=2.1.1)
+Requires-Dist: tqdm (>=4.66.1)
+Project-URL: Repository, https://github.com/JoshLoecker/GEOcollector
+Description-Content-Type: text/markdown
+
+# GEO Collector
+
