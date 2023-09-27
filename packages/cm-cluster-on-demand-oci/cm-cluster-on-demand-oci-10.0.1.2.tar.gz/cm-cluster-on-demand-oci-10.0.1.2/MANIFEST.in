@@ -1,0 +1,3 @@
+prune clusterondemandoci/tests
+global-exclude test_*.py
+global-exclude *_test.py
