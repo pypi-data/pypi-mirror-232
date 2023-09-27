@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: pyrocat
+Version: 1.1.1
+Summary: A multiclient bot that leverages the pyrogram's smart plugins system.
+License: MIT
+Author: devops117
+Author-email: devops117.main@protonmail.com
+Requires-Python: >=3.11,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: TgCrypto (>=1.2.5,<2.0.0)
+Requires-Dist: attrs (>=23.1.0,<24.0.0)
+Requires-Dist: click (>=8.1.3,<9.0.0)
+Requires-Dist: pyrocatto-pyrogram (>=2.0.107,<3.0.0)
+Requires-Dist: ruamel-yaml (>=0.17.32,<0.18.0)
+Description-Content-Type: text/markdown
+
+# pyrogram-template
+A multiclient bot that leverages the pyrogram's smart plugins system.
+
