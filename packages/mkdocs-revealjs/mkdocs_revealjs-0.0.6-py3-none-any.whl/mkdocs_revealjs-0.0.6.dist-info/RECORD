@@ -1,0 +1,11 @@
+mkdocs_revealjs/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mkdocs_revealjs/ci.py,sha256=CD66qZ26nQ6X0prZE2ZSWh5IW8PnlSX4w5gI-WTVuF0,3345
+mkdocs_revealjs/exclude.py,sha256=nRmpbXtdAYlOVKvr8BhwCX3Cc9LLnLijBegli9E0A0k,1570
+mkdocs_revealjs/plugin.py,sha256=67aoW3EcXflDCCsTGr7hMF9Pb-QYzFqr9BFe2w5klgM,15270
+mkdocs_revealjs/util.py,sha256=I7Q9vyTpBI2YJKvC2K-stw6AHR4lNxB-aLzQ80lgtNY,8421
+mkdocs_revealjs-0.0.6.dist-info/LICENSE,sha256=jOtLnuWt7d5Hsx6XXB2QxzrSe2sWWh3NgMfFRetluQM,35147
+mkdocs_revealjs-0.0.6.dist-info/METADATA,sha256=Y_ZGBSDMTFfrZUfWQzIDnzdJKmzaNn07U1s3d-5-nfQ,1167
+mkdocs_revealjs-0.0.6.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+mkdocs_revealjs-0.0.6.dist-info/entry_points.txt,sha256=EF-X47KLnpZ4K-5NdzNtT3VfaZXl-Ya0ylU4sS2Zo-w,73
+mkdocs_revealjs-0.0.6.dist-info/top_level.txt,sha256=qpOHVPak4tNO_0bu8WHsJht5NJmh6lxL6QG6WQ92yVo,16
+mkdocs_revealjs-0.0.6.dist-info/RECORD,,
