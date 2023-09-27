@@ -1,0 +1,2 @@
+[console_scripts]
+i18 = i18.cli:run
