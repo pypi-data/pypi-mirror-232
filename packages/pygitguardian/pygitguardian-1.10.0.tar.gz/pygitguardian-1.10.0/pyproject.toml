@@ -1,0 +1,16 @@
+[tool.black]
+target-version = ['py39']
+line-length = 88
+
+[tool.isort]
+profile = "black"
+lines_after_imports = 2
+
+[tool.pyright]
+include = ["pygitguardian"]
+
+[tool.scriv]
+version = "literal: pygitguardian/__init__.py: __version__"
+format = "md"
+md_header_level = "2"
+insert_marker = "# Changelog"
