@@ -1,0 +1,7 @@
+hurst_exponent/__init__.py,sha256=9YZJCj1Wva1az8NL34iIK3Cg-Yqdx2Rb3Vm5aFQwVxM,30
+hurst_exponent/acf.py,sha256=y2HHmFrvIhS3TWPloYgP9FO1g8VVjdGhcC_YUIqr-Y4,2668
+hurst_exponent/hurst_exponent.py,sha256=wE_WH79UNuJYjLtivxm01s91POKkWnl7XKbNgN9N9Bw,6164
+hurst_exponent-1.0.1.dist-info/LICENSE,sha256=9gL9sszXTOeVmRJPKdD8elFy2_1FSTDtEPt8N9Js6OM,1069
+hurst_exponent-1.0.1.dist-info/METADATA,sha256=jcGZBwndz8zjiYPlB3W82E3ig_wAnMkVefjfJHF5pTk,4111
+hurst_exponent-1.0.1.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+hurst_exponent-1.0.1.dist-info/RECORD,,
