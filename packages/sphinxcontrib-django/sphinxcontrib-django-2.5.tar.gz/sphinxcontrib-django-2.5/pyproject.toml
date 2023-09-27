@@ -1,0 +1,99 @@
+[build-system]
+    build-backend = "setuptools.build_meta"
+    requires      = ["setuptools"]
+
+[project]
+    authors = [
+        { name = "Diederik van der Boor", email = "opensource@edoburu.nl" },
+        { name = "Timo Brembeck", email = "opensource@timo.brembeck.email" },
+    ]
+    classifiers = [
+        "Development Status :: 5 - Production/Stable",
+        "Environment :: Web Environment",
+        "Framework :: Django :: 3.2",
+        "Framework :: Django :: 4.1",
+        "Framework :: Django :: 4.2",
+        "Framework :: Django",
+        "Framework :: Sphinx :: Extension",
+        "Intended Audience :: Developers",
+        "License :: OSI Approved :: Apache Software License",
+        "Operating System :: OS Independent",
+        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.11",
+        "Programming Language :: Python",
+        "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
+        "Topic :: Internet :: WWW/HTTP",
+        "Topic :: Software Development :: Libraries :: Application Frameworks",
+        "Topic :: Software Development :: Libraries :: Python Modules",
+    ]
+    dependencies = ["Django>=3.2", "Sphinx>=3.4.0", "pprintpp"]
+    description = "Improve the Sphinx autodoc for Django classes."
+    dynamic = ["version"]
+    keywords = ["django", "docstrings", "extension", "sphinx"]
+    license = { text = "Apache2 2.0 License" }
+    maintainers = [
+        { name = "Timo Brembeck", email = "opensource@timo.brembeck.email" },
+    ]
+    name = "sphinxcontrib-django"
+    readme = "README.rst"
+    requires-python = ">=3.8"
+
+    [project.urls]
+        "Bug Tracker"   = "https://github.com/edoburu/sphinxcontrib-django/issues"
+        "Documentation" = "https://sphinxcontrib-django.readthedocs.io/"
+        "Release Notes" = "https://github.com/edoburu/sphinxcontrib-django/blob/main/CHANGES.rst"
+        "Source Code"   = "https://github.com/edoburu/sphinxcontrib-django"
+
+    [project.optional-dependencies]
+        dev = ["pre-commit"]
+        doc = ["sphinx-last-updated-by-git", "sphinx-rtd-theme"]
+        optional = [
+            "django-mptt",
+            "django-phonenumber-field[phonenumbers]",
+            "psycopg2-binary",
+        ]
+        test = ["coverage", "pytest", "pytest-icdiff", "requests-mock"]
+
+[tool.setuptools.dynamic]
+    version = { attr = "sphinxcontrib_django.__version__" }
+
+[tool.setuptools.packages.find]
+    include = ["sphinxcontrib_django*"]
+
+[tool.black]
+    skip-magic-trailing-comma = true
+    preview = true
+
+[tool.coverage.run]
+    command_line = "-m pytest"
+    source       = ["sphinxcontrib_django"]
+
+[tool.coverage.report]
+    exclude_lines = [
+        "pragma: no cover",
+        "if TYPE_CHECKING:",
+    ]
+
+[tool.pytest.ini_options]
+    addopts    = "-ra -vv --color=yes"
+    minversion = "6.0"
+    testpaths  = ["tests"]
+
+[tool.flake8]
+    ignore = [
+        "D1",   # Missing docstrings
+        "E203", # whitespace before ':' in slice (incompatible with black)
+        "E731", # Allow lambdas
+        "F405", # name undefined due to star imports
+        "W503", # line break before binary operator (incompatible with black)
+    ]
+    max-line-length = 99
+
+[tool.isort]
+    known_first_party = "sphinxcontrib_django"
+    # Approach Black compatibility (just run black after isort)
+    include_trailing_comma = true
+    line_length            = 88
+    multi_line_output      = 3
