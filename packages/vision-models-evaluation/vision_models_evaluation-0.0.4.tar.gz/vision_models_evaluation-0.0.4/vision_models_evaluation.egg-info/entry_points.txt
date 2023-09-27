@@ -1,0 +1,6 @@
+[console_scripts]
+
+
+[nbdev]
+vision_models_evaluation = vision_models_evaluation._modidx:d
+

@@ -1,0 +1,6 @@
+fastai
+fastcore
+pandas
+sklearn
+
+[dev]
