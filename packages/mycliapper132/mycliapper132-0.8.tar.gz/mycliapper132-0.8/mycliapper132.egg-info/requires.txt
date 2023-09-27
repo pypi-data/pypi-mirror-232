@@ -1,0 +1,8 @@
+click
+databricks-sql-connector
+datetime
+hmac
+json
+pytz
+requests
+typing
