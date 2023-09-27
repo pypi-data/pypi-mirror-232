@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: geocollector
+Version: 0.1.0
+Summary: 
+Author: Josh Loecker
+Author-email: joshloecker@icloud.com
+Requires-Python: >=3.11,<3.13
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: aiohttp (>=3.8.5)
+Requires-Dist: pandas (>=2.1.1)
+Requires-Dist: tqdm (>=4.66.1)
+Description-Content-Type: text/markdown
+
+# GEO Collector
+

@@ -1,0 +1,11 @@
+geocollector/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+geocollector/api.py,sha256=RsG5KexCPQsm1sM_kR3uyy_hyynzIkF2BsZvBg_o5k4,12199
+geocollector/cli.py,sha256=PfpLUVyxQwpZ8IpoVhkI63ds9mcpxTwPR5g1A84eF68,2226
+geocollector/database.py,sha256=MvRv-UKzfN9N5UAanJQglH44IpgAzbBNQuoSrvmTLxM,1049
+geocollector/logger.py,sha256=4JfJsKoHoK_5DNmZE13sBPTLGVxGiRpLfPo7xpMyBZQ,900
+geocollector/main.py,sha256=4DbaoLlYNhaszyvX1Ov2UelK1hBB7D5BENEWTHSl8ak,890
+geocollector/records.py,sha256=pbrJ_akMtBsOkeHL0wOFI2nchaoji9m6r4zXT-_PtxM,489
+geocollector/settings.py,sha256=3_0l_R5BckpA5pXlnemqwe1vZwIs9_uNcwnvUDLNbgg,453
+geocollector-0.1.0.dist-info/METADATA,sha256=otslPxP54sIi_-APPiJFHZ9k3ZFjid_VnbCpA_HznyI,407
+geocollector-0.1.0.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+geocollector-0.1.0.dist-info/RECORD,,
