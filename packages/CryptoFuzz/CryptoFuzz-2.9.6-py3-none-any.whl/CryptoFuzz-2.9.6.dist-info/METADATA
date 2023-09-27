@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: CryptoFuzz
+Version: 2.9.6
+Summary: Generated and Converted Keys with any Type Foundation from Private Key [WIF Hexed Mnemonic and Binary Bytes seed] in Python
+Home-page: https://github.com/Pymmdrza/cryptofuzz
+Author: Mohammadreza (Mmdrza.Com)
+Author-email: Pymmdrza@gmail.com
+License: MIT
+Project-URL: Bug Tracker, https://github.com/Pymdrza/CryptoFuzz/issues
+Project-URL: Documentation, https://github.com/Pymdrza/CryptoFuzz
+Project-URL: Source Code, https://github.com/Pymmdrza/cryptofuzz
+Project-URL: Website, https://mmdrza.com
+Keywords: CryptoFuzz,Wif,Mnemonic,Binary,seed,Foundation,Private,Key,HEX,Mnemonic,Binary,Bytes,bitcoin,ethereum,tron,dogecoin,zcash,digibyte,bitcoin gold,wallet,bip32,bip39,litecoin,qtum,ravencoin,BTC,ETH,TRX,DOGE,BTG,LTC,ZEC,AXE,DASH
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Topic :: Security :: Cryptography
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: hdwallet >=2.2.1
+Requires-Dist: ecdsa >=0.18.0
+
+README.md
+
