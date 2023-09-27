@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+resolve_hosts.py
+resolve_hosts.egg-info/PKG-INFO
+resolve_hosts.egg-info/SOURCES.txt
+resolve_hosts.egg-info/dependency_links.txt
+resolve_hosts.egg-info/entry_points.txt
+resolve_hosts.egg-info/requires.txt
+resolve_hosts.egg-info/top_level.txt
+tests/test_nop.py
