@@ -1,0 +1,11 @@
+bg3modutils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bg3modutils/debug.py,sha256=TZxSoF19A4IpvmlPcemOcjHBrcPkf9FJ-HjGcWgaV4o,3819
+bg3modutils/enums.py,sha256=1pIeBmuB9AbHoE5DofKfeMkovQtZcEFmXETsSCI5zx4,320
+bg3modutils/file_manager.py,sha256=hNKjR4zXd229JrCbxWHIYNJyUwnO7lLSrQ2_AHuCQyQ,10622
+bg3modutils/lslib.py,sha256=YPCy_Jcj6PkgBIdXL3pN4zXwIIWNELKweqxlCakItio,917
+bg3modutils/mod_manager.py,sha256=CWwd3ngBYpqBMwRgJNHPiO2cfe2Xf3TPntpWsQqa7XI,14289
+bg3modutils/paths.py,sha256=d4gjnshkxQ-WxOxkJOH2eV7veyIJr3SHVmkqFs9uhv8,2282
+bg3modutils-0.0.1.dist-info/METADATA,sha256=YV-s_tkKoHpWkGYiAN7xVS62lcvHEuw3D3_EqBgcwE0,474
+bg3modutils-0.0.1.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+bg3modutils-0.0.1.dist-info/licenses/LICENCE,sha256=6kbiFSfobTZ7beWiKnHpN902HgBx-Jzgcme0SvKqhKY,1091
+bg3modutils-0.0.1.dist-info/RECORD,,
