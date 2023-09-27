@@ -1,0 +1,16 @@
+pysqream/SQSocket.py,sha256=x14mpf2flk0lz4WaXHtIFEZUH_n6FIBlyK2JwEMO0as,5817
+pysqream/__init__.py,sha256=flsJcPQShKaWr08G1PPcbzzrhNA01e0cOkLpL5oj2KM,142
+pysqream/casting.py,sha256=tnvsUw7HWiytfUDvHRVZLXmP1hYAZS8I-IN6mevWyS4,4918
+pysqream/column_buffer.py,sha256=qo1xqolee3xjGaHtMK_T8eZ59ID6RMuozMVQP--JvEo,15773
+pysqream/connection.py,sha256=YJIYhNm_xci0gO26qr7UwY1ehh1d_DAuFxjm81E97fY,8893
+pysqream/cursor.py,sha256=4stmQ6exiGbScNOAs_SVMOttmuozKBpZXMuRA2YwkRc,34403
+pysqream/globals.py,sha256=y0ecnZDNogctveFyQYhp8Nt8NcRn1-eDUXD7765dXuw,2591
+pysqream/logger.py,sha256=evT9CMTc53Gi7-FdkTysiV6tz5i0XYVUEvFNtzKOH5Y,1047
+pysqream/ping.py,sha256=il-8e_uLHDwMMBsHeevrW572vEjZLPvpQtxUHXUcGuY,1088
+pysqream/pysqream.py,sha256=G1cLZXBW3adF8lpQSvXOz-yF5XXUB8Z9iT-yD9xUECU,3331
+pysqream/utils.py,sha256=G0W-bQl1eK51eC6lEO_NcEV7fhCHsbfUJVpDpnIOuVw,2375
+pysqream-5.0.0.dist-info/LICENSE,sha256=lFiUM1uZxOk78qEv0tmwDOg4oadoiZKyMrpeuhohsdQ,1519
+pysqream-5.0.0.dist-info/METADATA,sha256=PfsXqPEuZxlNSgJ9odjmNfD1CJX67duMh4tPycV4jBw,11253
+pysqream-5.0.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+pysqream-5.0.0.dist-info/top_level.txt,sha256=UIju0LEw41bAKYBv7eOiWfLBDl7FpxoV2t8bebqC9Y0,9
+pysqream-5.0.0.dist-info/RECORD,,
