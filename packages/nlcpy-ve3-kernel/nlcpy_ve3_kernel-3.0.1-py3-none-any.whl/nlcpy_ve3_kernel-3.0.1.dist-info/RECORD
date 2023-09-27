@@ -1,0 +1,11 @@
+nlcpy_ve3_kernel/__init__.py,sha256=8U8DF8W8anh4wPCjKvdCnhhX-4cIpjVUevAMPrBsuXE,89
+nlcpy_ve3_kernel/build_info.py,sha256=2PrMBxaRQek7VK-bSJt6UjPnIu0VJ64icyw1333RMQg,28
+nlcpy_ve3_kernel/libnlcpy_profiling.so,sha256=0mxb4zzfoxXYq94CRZZVfW_Z1ZgcjZ8KprCVyW7ZDd4,8984
+nlcpy_ve3_kernel/libnlcpy_ve_kernel_common.so,sha256=vQ5GxZ6J01FofHM34ULj45i_cvPvGwkSDmvkkSGKSJI,320613152
+nlcpy_ve3_kernel/libnlcpy_ve_kernel_fast_math.so,sha256=LHqhv4p1mVtguNzs-CFTI8ffsitajLkptPwNwuEDabE,106113328
+nlcpy_ve3_kernel/libnlcpy_ve_kernel_no_fast_math.so,sha256=mcqo7hlCfxBX4QuGKO3iz11fCnGAYOjLnCt-7uDbGGc,104070688
+nlcpy_ve3_kernel-3.0.1.dist-info/LICENSE,sha256=d9Rw1roCy-RDD4_hh4lGAb6mLrCIw-wbaK2aF3MuGjU,1523
+nlcpy_ve3_kernel-3.0.1.dist-info/METADATA,sha256=2NU6Tq2SER6lvNvDTq5A118papwRZZcWq-vZY_9fdtM,4095
+nlcpy_ve3_kernel-3.0.1.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+nlcpy_ve3_kernel-3.0.1.dist-info/top_level.txt,sha256=RC6oH9mJWDmlySFosphVcwg8wYCrrpg4MtXP6wWj49M,17
+nlcpy_ve3_kernel-3.0.1.dist-info/RECORD,,
