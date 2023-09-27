@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: PubmedZenbu
+Version: 0.1.0
+Summary: - This tool extracts metadata from PubMed articles using ChatGPT. Inputs as a `search query for PubMed` and `prompt for ChatGPT`, output as a csv file including the extracted results. Positional arguments: arguments.csv (csv file including openai_api_key, ncbi_api_key, search_query, and prompt),oldest_year (oldest year to search for PubMed)
+Home-page: https://github.com/dogrun-inc/pubmed-zenbu/tree/2023_dev_suzuki
+Download-URL: https://github.com/dogrun-inc/pubmed-zenbu/tree/2023_dev_suzuki
+Author: Sora Yonezawa, Mitsuo Shintani, Naoya Oec, Takayuki Suzuki
+Author-email: oec@dogrun.jp
+Maintainer: Sora Yonezawa, Mitsuo Shintani, Naoya Oec, Takayuki Suzuki
+Maintainer-email: oec@dogrun.jp
+License: MIT
+Keywords: pubmed scraping article dogrun
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests >=2.31
+Requires-Dist: openai <=0.28.1
+Requires-Dist: PyYAML >=5.1
+Requires-Dist: Pandas >=2.0.0
+
+# pubmed-zenbu
+- This tool extracts metadata from PubMed articles using ChatGPT. Inputs as a `search query for PubMed` and `prompt for ChatGPT`, output as a csv file including the extracted results.
+- positional arguments:
+  - arguments.csv  csv file including openai_api_key, ncbi_api_key, search_query, prompt, and oldest_year_for_pubmedsearch
