@@ -1,0 +1,11 @@
+docstring_parser
+refactor
+
+[dev]
+pre-commit
+pytest
+mypy
+flake8
+black
+build
+twine
