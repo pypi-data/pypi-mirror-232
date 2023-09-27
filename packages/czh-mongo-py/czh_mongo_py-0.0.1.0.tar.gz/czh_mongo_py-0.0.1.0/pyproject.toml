@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "czh-mongo-py"
+version = "0.0.1.0"
+description = ""
+authors = ["xiangyouzhuan <xiangyouzhuan2018@gmail.com>"]
+readme = "README.md"
+
+packages = [
+    { include = "common.py" },
+    { include = "main.py" },
+    { include = "mongo_tool" },
+]
+
+[tool.poetry.dependencies]
+python = ">=3.8.5 <4.0.0"
+pytest = ">=7.4.1"
+happy-python = "^0.4.7"
+
+[tool.poetry.scripts]
+pycalculator = "gkcalculator:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
