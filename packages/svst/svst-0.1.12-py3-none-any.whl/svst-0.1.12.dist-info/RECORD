@@ -1,0 +1,14 @@
+svst/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+svst/api.py,sha256=U8gtlZw8ZY-WQ4TuyzqIhwyvzbAuSPlb7qxR4d-wevE,2220
+svst/cli.py,sha256=pchVaixMGCRSOoB_OZbT5CxOAro_LmxOcjkMBtExGEk,1157
+svst/config.py,sha256=eVVMVXbeB2lNpR6DHnu1Hivw6Xg2YSN0_Kr9yU0FKe0,961
+svst/constants.py,sha256=HtMustaHL4jV-6n490fz3i2SoUihjsG5FIVBWgzCnfQ,94
+svst/output.py,sha256=an4k2mQCnThXYExj2eFZCGhAGv3xCqbFkwZo_6ZjBz0,2389
+svst/parsing.py,sha256=Ho9eLeOQx72s9kbdRkqtGoRtQx4hJBlJitSG_qpHzfc,5006
+svst/utils.py,sha256=0zGRhmNpFZgGRJe363cOx7a9eIbhktZYqH1j8-wngsM,1230
+svst-0.1.12.dist-info/LICENSE,sha256=HyVuytGSiAUQ6ErWBHTqt1iSGHhLmlC8fO7jTCuR8dU,16725
+svst-0.1.12.dist-info/METADATA,sha256=O6xsMNLlsiKSDuaxK3GuaFSsMy4OYXjEWlOWvpMAlcU,4940
+svst-0.1.12.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+svst-0.1.12.dist-info/entry_points.txt,sha256=4kbBAb_YUQYHrytjPCn8LEPGae3kc0J7EUfM6khPC9c,40
+svst-0.1.12.dist-info/top_level.txt,sha256=9zXD-LfS5B9H99siNxwiHVkNICT8B-v5MdPMHslB4V4,5
+svst-0.1.12.dist-info/RECORD,,
