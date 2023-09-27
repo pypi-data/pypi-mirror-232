@@ -1,0 +1,13 @@
+voyllect/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+voyllect/aggregate.py,sha256=WsRKX7g8CFE-gp-oNj9U_urO_IQZdobIcFmLGUv6MUk,16629
+voyllect/collect.py,sha256=HUynsg5esX9RS7hxDK96Vv9bau0Fsgw5s7zVwwfqokc,69135
+voyllect/driver.py,sha256=Sx_nkUgMqUeHWhe4x-So0B-XTshUpR9BZ35JFOupzp0,2644
+voyllect/init_dicts.py,sha256=5LxUmAKFkQNtdx56S02jWJWIukE-viFTJx6MII0B9CQ,6021
+voyllect/parser.py,sha256=fyKg0B1QLzHd5Wgfc6QKiZdv5JfOSEV6_J6GVh9kvyE,10761
+voyllect/save.py,sha256=dq-ezVG5SDt_FKZJ2lfrVmPqQz7EjOfjUfasHBUvU_w,2712
+voyllect/transfer.py,sha256=aBoT5_QcvmLZ5NJWFgqq1JPSREKgkVecXLn5T7bVjVk,8080
+voyllect/utils.py,sha256=I28jnNXOWJ7ifcz44L4PfVvzwdA59rTpqaNU5pRinAk,2634
+voyllect-0.1.3.dist-info/METADATA,sha256=JJVfVzlULYKzZP5DUFmDduitCY0ntvr5Bhwb3CnA-CQ,554
+voyllect-0.1.3.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+voyllect-0.1.3.dist-info/licenses/LICENSE,sha256=xnTGkgcYtZsCnelaFyyrvj40aSn1sv0sX4CyWwftbTk,1084
+voyllect-0.1.3.dist-info/RECORD,,
