@@ -1,0 +1,39 @@
+[tool.black]
+line-length = 88
+
+[tool.ruff]
+select = ["E", "F", "I"]
+ignore-init-module-imports = true
+
+[tool.ruff.isort]
+force-sort-within-sections = true
+order-by-type = true
+combine-as-imports = true
+detect-same-package = true
+
+[tool.coverage.report]
+# Regexes for lines to exclude from consideration
+exclude_also = [
+    # Don't complain about missing debug-only code:
+    "if debug:",
+    "if self\\.debug:",
+
+    # Don't complain about skipping matplotib show
+    "plt.show()",
+
+    # Don't complain if tests don't hit defensive assertion code:
+    "raise AssertionError",
+    "raise NotImplementedError",
+
+    # Don't complain if non-runnable code isn't run:
+    "if __name__ == .__main__.:",
+
+    # Don't complain about abstract methods, they aren't run:
+    "@(abc\\.)?abstractmethod",
+]
+
+[tool.coverage.run]
+omit = [
+     'tests/*',
+     'setup.py'
+]
