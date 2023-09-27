@@ -1,0 +1,11 @@
+wassima-1.0.1.dist-info/METADATA,sha256=t2dsu49n2TsTVr1K0DE1ma7KIAI9IKeyvPfB648t7jM,3534
+wassima-1.0.1.dist-info/WHEEL,sha256=KtwBqOIhg-JD0wUY93sQZeNOkN51CNf813OpMa0sGGU,105
+wassima-1.0.1.dist-info/license_files/LICENSE,sha256=ToUOwl05zh2cp8kxJwqBfrnvKhG-nOEk3efQH4KwpWk,1071
+wassima.libs/libgcc_s-1e52349c.so.1,sha256=Ani0u_W_tB8ESsFePO4D2mn2lrgWLhyFdw6RETxBTYM,437537
+wassima/__init__.py,sha256=59Gpx1nO2gudG_kKD20BbiFxRh0__xLyfJIdBrLaQSk,3234
+wassima/_version.py,sha256=KXKCBf9Vllvhh6c0fj6qnie0338b-W1KWxvKPGMsBWk,91
+wassima/__main__.py,sha256=xKcxBxjeKfs0woDVsga5zLuAcZ15ds3qHOHPNGkbWlI,531
+wassima/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+wassima/_rustls.pyi,sha256=mUdu2w6QMcuKgxHnOGGrZrmYz8mtY650pyif_KIjz-I,245
+wassima/_rustls.abi3.so,sha256=1lAvJvsLSpgFAzwp--adJmUy-wnKi_LbFBFYXzWeXjI,4454401
+wassima-1.0.1.dist-info/RECORD,,
