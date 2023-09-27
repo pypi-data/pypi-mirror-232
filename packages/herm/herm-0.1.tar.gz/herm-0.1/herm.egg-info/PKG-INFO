@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: herm
+Version: 0.1
+Summary: Python client library for the Herm API
+Home-page: https://github.com/Hermseas/herm-python
+Author: Hermseas
+Author-email: dev@hermseas.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7.1
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests>=2.20
+Requires-Dist: tqdm
+Requires-Dist: typing_extensions; python_version < "3.8"
+Requires-Dist: aiohttp
+Provides-Extra: dev
+Requires-Dist: black~=21.6b0; extra == "dev"
+Requires-Dist: pytest==6.*; extra == "dev"
+Requires-Dist: pytest-asyncio; extra == "dev"
+Requires-Dist: pytest-mock; extra == "dev"
+
+# herm-python
