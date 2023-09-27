@@ -1,0 +1,4 @@
+[console_scripts]
+zgit-plot=zgit.plot.__main__:main
+zgit-sync=zgit.sync.sync:sync
+
