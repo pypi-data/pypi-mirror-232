@@ -1,0 +1,17 @@
+typer
+typer[all]
+rich
+aws-parallelcluster>=3.5
+inquirer
+colorlog
+textual
+click>=8
+datasize
+questionary
+boto3-stubs[batch,ec2,essential,logs,s3]
+boto3
+funcy
+humanize
+cookiecutter
+pandas
+numpy
