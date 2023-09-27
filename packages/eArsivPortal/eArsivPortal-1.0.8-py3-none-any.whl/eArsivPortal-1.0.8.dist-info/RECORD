@@ -1,0 +1,13 @@
+eArsivPortal/__init__.py,sha256=OZfgTgaINkaTupqrSYF_WiLP-Hxz1pKvLDxPPBHbFWM,108
+eArsivPortal/Core/Hatalar.py,sha256=yV7xpgI9pFCcCba-hFEqx8uxOcgaf0fmuww_BW3JUOs,212
+eArsivPortal/Core/__init__.py,sha256=o_ma8WRBpJDrJiWowa2q-eaQZMnEhuR7x2OA5n8e9Ew,9889
+eArsivPortal/Libs/FaturaVer.py,sha256=1w-aY9pOvjxbaiiE_ZF_zow9HUDSAMfoDLoh0bUMfwU,3568
+eArsivPortal/Libs/Oturum.py,sha256=oiAue70EmX0hxOfa7S8BD_uT5I2T-3KOTb05q8p0FIk,785
+eArsivPortal/Libs/__init__.py,sha256=sxFrPiV5-JaG5CCXe1--dk1p2IHcMFMKOuGCsFgMdhg,188
+eArsivPortal/Models/Komutlar.py,sha256=S57QWgeQJNbXD1x8Y7T0msYXC8voKbLEu1LDHkLKZtM,1513
+eArsivPortal/Models/__init__.py,sha256=CPYv-m4A94tlIZkvLvIEBYAcrBpgYkPFk8Cy_J27T64,115
+eArsivPortal-1.0.8.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+eArsivPortal-1.0.8.dist-info/METADATA,sha256=ycn6EW5JSTYoXQNwlnNyV_QjD682Y2z8FcZzqQGcqVU,7072
+eArsivPortal-1.0.8.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+eArsivPortal-1.0.8.dist-info/top_level.txt,sha256=8mxd_v0yTAtr5MA6kR5ah1AqmIn0mRMKY3n7NEOeFhE,13
+eArsivPortal-1.0.8.dist-info/RECORD,,
