@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: flygym
+Version: 0.2.0
+Summary: Gym environments for NeuroMechFly in various physics simulators
+Author: Neuroengineering Laboratory, EPFL
+Author-email: sibo.wang@epfl.ch
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Requires-Python: >=3.7
+License-File: LICENSE
+Requires-Dist: gymnasium
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: pyyaml
+Requires-Dist: jupyter
+Requires-Dist: mediapy
+Requires-Dist: imageio
+Requires-Dist: imageio[pyav]
+Requires-Dist: imageio[ffmpeg]
+Requires-Dist: tqdm
+Provides-Extra: dev
+Requires-Dist: sphinx ; extra == 'dev'
+Requires-Dist: furo ; extra == 'dev'
+Requires-Dist: numpydoc ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: ruff ; extra == 'dev'
+Requires-Dist: black ==23.3.0 ; extra == 'dev'
+Requires-Dist: black[jupyter] ; extra == 'dev'
+Requires-Dist: shapely ; extra == 'dev'
+Requires-Dist: rasterio ; extra == 'dev'
+Requires-Dist: requests ; extra == 'dev'
+Provides-Extra: mujoco
+Requires-Dist: mujoco ; extra == 'mujoco'
+Requires-Dist: dm-control ; extra == 'mujoco'
+Requires-Dist: numba ; extra == 'mujoco'
+Requires-Dist: opencv-python ; extra == 'mujoco'
+Provides-Extra: pybullet
+Requires-Dist: pybullet ; extra == 'pybullet'
+
