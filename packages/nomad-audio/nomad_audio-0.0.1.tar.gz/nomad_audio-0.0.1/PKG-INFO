@@ -1,0 +1,90 @@
+Metadata-Version: 2.1
+Name: nomad_audio
+Version: 0.0.1
+Summary: Perceptual similarity embeddings for non-matching reference audio quality assessment and speech enhancement
+Project-URL: Homepage, https://github.com/alessandroragano/nomad
+Author-email: Alessandro Ragano <alessandroragano@gmail.com>
+License: Copyright (c) 2018 The Python Packaging Authority
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+License-File: LICENSE
+Keywords: Audio quality,Speech enhancement,Speech quality
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Requires-Dist: click>=8.1.3
+Requires-Dist: fairseq>=0.12.2
+Requires-Dist: matplotlib>=3.5.2
+Requires-Dist: pandas>=1.4.2
+Requires-Dist: pesq>=0.0.4
+Requires-Dist: scikit-learn>=1.0.2
+Requires-Dist: seaborn>=0.12.2
+Requires-Dist: soundfile>=0.12.1
+Requires-Dist: torch==1.12.1
+Requires-Dist: torchaudio==0.12.1
+Requires-Dist: torchvision==0.13.1
+Description-Content-Type: text/markdown
+
+# Non-Matching Audio Distance (NOMAD)
+
+### Purpose
+NOMAD is a differentiable perceptual similarity metric that measures the distance of a degraded signal against non-matching references (unpaired speech).
+The proposed method is based on learning deep feature embeddings via a triplet loss guided by the Neurogram Similarity Index Measure (NSIM) to capture degradation intensity. During inference, the similarity score between any two audio samples is computed through Euclidean distance of their embedding.
+NOMAD can be also used as a loss function to improve speech enhancement models.
+
+### More Information
+For additional information on NOMAD see the [preprint](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10096274). 
+
+## Installation
+NOMAD is hosted on PyPi. It can be installed in your Python environment with the following command
+```
+pip install nomad_audio
+```
+
+## Using NOMAD
+QAMA has been evaluated with a 3-fold cross-validation. We provide the 3 models plus a model trained using the full Vinylset.
+* ```qama_fold1.pt```
+* ```qama_fold2.pt```
+* ```qama_fold3.pt```
+* ```qama_full.pt```
+
+To predict the quality of your music collection, organise files in a directory and run:
+
+```python predict.py --data_dir /path/to/dir/collection```
+
+The script creates a csv file in ```prediction_files``` with date time format ```DD-MM-YYYY_hh-mm-ss_qama.csv```
+The csv files includes predictions of the 4 models and the average of the 3 cross-validation models. This is defined with the column ```Mean CV```.
+### Full Model
+The model ```qama_full.pt``` is trained using all the Vinylset tracks. Unlike the cross-validation models, the full model has not been evaluated in the ICASSP paper although it might be more accurate. 
+Informal tests show aligned results with the cross-validation models.
+
+You can set ```full_model=False``` if you do not want to use QAMA full.
+
+### Correct usage
+QAMA has been evaluated for vinyl degradations and using files around 10 seconds. The model accepts variable input length but it was not evaluated for very long tracks. 
+
+## Paper and license
+If you use QAMA or Vinylset please cite this [paper](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10096274): 
+
+A. Ragano, E. Benetos, and A. Hines "Audio Quality Assessment of Vinyl Music Collections using Self-Supervised Learning", in IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP) 2023.
+
+
+The code is licensed under MIT license.
+
