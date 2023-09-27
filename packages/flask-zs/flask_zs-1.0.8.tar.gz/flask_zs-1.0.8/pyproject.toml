@@ -1,0 +1,37 @@
+[tool.poetry]
+name = "flask-zs"
+version = "1.0.8"
+description = "A helpers for Flask."
+authors = ["codeif <me@codeif.com>"]
+license = "MIT"
+readme = "README.rst"
+repository = "https://github.com/codeif/flask-zs"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+Flask = "*"
+requests = "*"
+zs-mixins = {version = "*", optional = true}
+flask-http-client = {version = "*", optional = true}
+
+[tool.poetry.dev-dependencies]
+pre-commit = "^2.14.1"
+
+[tool.poetry.scripts]
+collect-models = "flask_zs.bin.collect_models:main"
+
+[tool.poetry.extras]
+mixins = ["zs-mixins"]
+http-client = ["flask-http-client"]
+full = ["zs-mixins", "flask-http-client"]
+
+[tool.isort]
+profile = "black"
+float_to_top = true
+
+[tool.black]
+line-length = 88
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
