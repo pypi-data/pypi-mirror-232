@@ -1,0 +1,11 @@
+pylint_to_ruff/__init__.py,sha256=kUR5RAFc7HCeiqdlX36dZOHkUI5wI6V_43RpEcD8b-0,22
+pylint_to_ruff/__main__.py,sha256=EB9dOYii6JZ9wO5m8N1YkrABf2cOKruGuuH_p22SFCU,77
+pylint_to_ruff/cli.py,sha256=mzqbC3_Oe_9HZQqQI6LCof1qYKMZgmC2c1FUrVRB4uk,2123
+pylint_to_ruff/pylint.py,sha256=rJmYjIlCpuicaQXPM-7QKfpCOcFBsp6p2NqGWkusxRc,1532
+pylint_to_ruff/ruff.py,sha256=2oU3JZnN-Y-2TYNJoFczcN5hk-CUHbFBouDacllk3iw,1249
+pylint_to_ruff/ruff_aliases.py,sha256=r4UdzMSf4iylB1nwXrtXuFqPrV9IK_1ZWV92CBYFqP8,2462
+pylint_to_ruff-0.1.0.dist-info/METADATA,sha256=Qk5HKDhBbxnqY_6QcXRydrODpHQ30JxtUsbuWy8jG9o,1496
+pylint_to_ruff-0.1.0.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+pylint_to_ruff-0.1.0.dist-info/entry_points.txt,sha256=ar_knhgNbb94ufBKNlKRk9tTcRhGPRXZocwnnBRi51Y,58
+pylint_to_ruff-0.1.0.dist-info/licenses/LICENSE,sha256=xH3qjs5wPt9tULYPiuft4if7DBv5j8ZvebkSsUZUDqw,1094
+pylint_to_ruff-0.1.0.dist-info/RECORD,,
