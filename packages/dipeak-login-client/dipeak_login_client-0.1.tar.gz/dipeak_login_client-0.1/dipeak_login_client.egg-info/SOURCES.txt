@@ -1,0 +1,8 @@
+LICENSE
+README.rst
+setup.py
+dipeak_login_client.egg-info/PKG-INFO
+dipeak_login_client.egg-info/SOURCES.txt
+dipeak_login_client.egg-info/dependency_links.txt
+dipeak_login_client.egg-info/requires.txt
+dipeak_login_client.egg-info/top_level.txt
