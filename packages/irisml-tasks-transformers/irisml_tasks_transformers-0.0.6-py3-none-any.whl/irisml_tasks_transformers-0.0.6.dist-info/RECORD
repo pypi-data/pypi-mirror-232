@@ -1,0 +1,10 @@
+irisml/tasks/cache_transformers_model_on_azure_blob.py,sha256=eG0cDtLMri703G6pcXy9FMSw-noalefCHzX8moFnZ_k,2521
+irisml/tasks/create_transformers_model.py,sha256=nKfZaWMJ0ZODriNUnPAAMEG41vgFle4gudpPVR2zVb4,5479
+irisml/tasks/create_transformers_raw_tokenizer.py,sha256=maQkRQzpl7KdSRD1iCFPMrDg_nSkZl9G5-9COk24EWk,738
+irisml/tasks/create_transformers_text_model.py,sha256=1uc0UVaHtQ7tJbG5Gi8HToKS2E7KITxQPEbBTJgJGkI,4057
+irisml/tasks/create_transformers_tokenizer.py,sha256=EvV0x6FMSLizACgYLggA86w5P0ZxSpHBKWrF7xESgO8,750
+irisml_tasks_transformers-0.0.6.dist-info/LICENSE,sha256=ws_MuBL-SCEBqPBFl9_FqZkaaydIJmxHrJG2parhU4M,1141
+irisml_tasks_transformers-0.0.6.dist-info/METADATA,sha256=J9SVIWlfz6vFmd5bCDkBW4C_u_NUAm33B6aVgvcWXHs,996
+irisml_tasks_transformers-0.0.6.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+irisml_tasks_transformers-0.0.6.dist-info/top_level.txt,sha256=-O6mZvBaJ0q2Xuea9BVCfU8n5tO5UO5aLoPn_Eos3Ao,7
+irisml_tasks_transformers-0.0.6.dist-info/RECORD,,
