@@ -1,0 +1,5 @@
+PyNaCl
+GitPython
+toml
+typer
+docker
