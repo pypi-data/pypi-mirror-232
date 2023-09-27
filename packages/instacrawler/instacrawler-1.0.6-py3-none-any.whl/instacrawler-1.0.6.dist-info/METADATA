@@ -1,0 +1,63 @@
+Metadata-Version: 2.1
+Name: instacrawler
+Version: 1.0.6
+Summary: The fastest way to check someone's instagram feed/story.
+Home-page: https://github.com/gibiee/instacrawler
+Download-URL: 
+Author: gibiee
+Author-email: gibiee@naver.com
+License: MIT
+Keywords: instacrawler,instagram,crawler,crawling,instagram-crawler,instagram-crawling
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: selenium >=4.10
+Requires-Dist: beautifulsoup4
+Requires-Dist: requests
+Requires-Dist: pillow
+
+![PyPI - Version](https://img.shields.io/pypi/v/instacrawler?color=red)
+![PyPI - Downloads](https://img.shields.io/pypi/dm/instacrawler?color=orange)
+![PyPI - License](https://img.shields.io/pypi/l/instacrawler?color=green)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/instacrawler?color=blue)
+
+# instacrawler
+**instacrawler** is the fastest and simplest way to check someone's instagram feed/story.
+- No instagram account required.
+- Available on VM
+
+You can find more detailed information in [Caution](#caution).
+
+**<ins>If it helped you, please give me a star⭐️. Thank you!</ins>**
+
+
+## Installation
+- Python >= 3.7
+```bash
+pip install --upgrade pip
+pip install instacrawler
+```
+
+## Quick start
+```py
+import instacrawler
+
+instacrawler.get_latest_feed(username='starbucks')
+# OUTPUT : (text, PIL.Image)
+
+instacrawler.get_latest_story(username='starbucks')
+# OUTPUT : PIL.Image
+```
+
+## Caution
+- This library use the mirror site named [imgsed](https://imgsed.com/). So if the site changes, this may not be worked.
+- Due to the nature of the mirror site, it is hard to identify fixed feeds.
+- When a new feed/story is posted, it needs time to be reflected.
+  - New feed : *maybe* up to 4 hours
+  - New Story : *maybe* up to 3 hours
