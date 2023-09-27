@@ -1,0 +1,24 @@
+name: Create Release and Upload Artifacts
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Create GitHub Release
+      id: create_release
+      uses: ncipollo/release-action@v1
+      with:
+        artifacts: "dist/adash-${{ github.ref }}-py3-none-any.whl,dist/adash-${{ github.ref }}.tar.gz"
+        token: ${{ secrets.GITHUB_TOKEN }}
+        draft: false
+        prerelease: false
+        tag: ${{ github.ref }}
+        name: Release ${{ github.ref }}
