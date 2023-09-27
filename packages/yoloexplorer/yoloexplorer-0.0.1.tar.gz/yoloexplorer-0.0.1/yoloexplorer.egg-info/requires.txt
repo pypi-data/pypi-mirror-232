@@ -1,0 +1,7 @@
+lancedb
+duckdb
+scikit-learn
+streamlit
+plotly
+ultralytics
+pandas==2.0.3
