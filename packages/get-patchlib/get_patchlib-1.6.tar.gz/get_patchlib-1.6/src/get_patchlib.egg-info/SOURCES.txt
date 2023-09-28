@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/get_patchlib.egg-info/PKG-INFO
+src/get_patchlib.egg-info/SOURCES.txt
+src/get_patchlib.egg-info/dependency_links.txt
+src/get_patchlib.egg-info/requires.txt
+src/get_patchlib.egg-info/top_level.txt
+src/patchlib/__init__.py
+src/patchlib/bps.py
+src/patchlib/eps.py
+src/patchlib/ips.py
