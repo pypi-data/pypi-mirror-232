@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: lm-format-enforcer
+Version: 0.0.dev1
+Summary: Enforce the format of the output of a language model
+Home-page: https://github.com/noamgat
+License: MIT
+Author: Noam Gat
+Author-email: noamgat@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: pydantic (>=1.10.8)
+Requires-Dist: tokenizers (>=0.13.3)
+Requires-Dist: transformers (>=4.28.1)
+Project-URL: Bug Tracker, https://github.com/noamgat/lm-format-enforcer/issues
+Project-URL: Documentation, https://github.com/noamgat/lm-format-enforcer
+Project-URL: Repository, https://github.com/noamgat/lm-format-enforcer
+Description-Content-Type: text/markdown
+
+# lm-format-enforcer
+Enforce the format of the output of a language model
+
