@@ -1,0 +1,7 @@
+rgb_lib/__init__.py,sha256=QH83AI5eveUxmDzz7JT5QqcIZV-Myn44XAKERS2nIfE,56
+rgb_lib/_rgb_lib/__init__.py,sha256=RyO-ROmKR_Am7r1ncOWdVZ8YXcigs-l20uFWi7_NLLI,50
+rgb_lib/_rgb_lib/librgblibffi.so,sha256=e96uvLaFbuB2jhDiZ0baxB_WSyBK-ZMkianL66AXJyw,723861040
+rgb_lib/_rgb_lib/rgb_lib.py,sha256=P1cdu1_mxjjvuKjd9CBSwJgOgEAI5xyzoogWBa9omeU,157594
+rgb_lib-0.2.0a5.dist-info/METADATA,sha256=NnMIa3Zj4eubnVzRFEf6-2rohXbHIR1WKU3ecxbEcVc,2925
+rgb_lib-0.2.0a5.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+rgb_lib-0.2.0a5.dist-info/RECORD,,
