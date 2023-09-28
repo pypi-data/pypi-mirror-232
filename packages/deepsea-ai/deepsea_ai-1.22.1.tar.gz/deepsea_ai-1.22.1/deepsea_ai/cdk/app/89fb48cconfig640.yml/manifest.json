@@ -1,0 +1,338 @@
+{
+  "version": "34.0.0",
+  "artifacts": {
+    "yv5.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "yv5.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "yv5": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://548531997526/us-west-2",
+      "properties": {
+        "templateFile": "yv5.template.json",
+        "tags": {
+          "mbari:description": "yv5 elastic cluster for processing underwater video",
+          "mbari:project-number": "000000",
+          "mbari:stage": "prod"
+        },
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::548531997526:role/cdk-hnb659fds-deploy-role-548531997526-us-west-2",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::548531997526:role/cdk-hnb659fds-cfn-exec-role-548531997526-us-west-2",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-548531997526-us-west-2/eae9b8ede311c7f2347a5667da1983b9b07416f9fdfe0557f688bbad228200fd.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "yv5.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::548531997526:role/cdk-hnb659fds-lookup-role-548531997526-us-west-2",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "yv5.assets"
+      ],
+      "metadata": {
+        "/yv5": [
+          {
+            "type": "aws:cdk:stack-tags",
+            "data": [
+              {
+                "Key": "mbari:description",
+                "Value": "yv5 elastic cluster for processing underwater video"
+              },
+              {
+                "Key": "mbari:project-number",
+                "Value": "000000"
+              },
+              {
+                "Key": "mbari:stage",
+                "Value": "prod"
+              }
+            ]
+          }
+        ],
+        "/yv5/asg-yv5": [
+          {
+            "type": "aws:cdk:warning",
+            "data": "desiredCapacity has been configured. Be aware this will reset the size of your AutoScalingGroup on every deployment. See https://github.com/aws/aws-cdk/issues/5215 [ack: @aws-cdk/aws-autoscaling:desiredCapacitySet]",
+            "trace": [
+              "Annotations.addMessage (/Users/dcline/Dropbox/code/deepsea-ai/deepsea_ai/cdk/app/node_modules/aws-cdk-lib/core/lib/annotations.js:1:1392)",
+              "Annotations.addWarningV2 (/Users/dcline/Dropbox/code/deepsea-ai/deepsea_ai/cdk/app/node_modules/aws-cdk-lib/core/lib/annotations.js:1:699)",
+              "new AutoScalingGroup (/Users/dcline/Dropbox/code/deepsea-ai/deepsea_ai/cdk/app/node_modules/aws-cdk-lib/aws-autoscaling/lib/auto-scaling-group.js:1:15158)",
+              "new AutoScalingTaskStack (/Users/dcline/Dropbox/code/deepsea-ai/deepsea_ai/cdk/app/lib/ecs_task_autoscaling.ts:27:17)",
+              "main (/Users/dcline/Dropbox/code/deepsea-ai/deepsea_ai/cdk/app/bin/deploy_stack.ts:31:5)"
+            ]
+          }
+        ],
+        "/yv5/asg-yv5/InstanceSecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "asgyv5InstanceSecurityGroup27291980"
+          }
+        ],
+        "/yv5/asg-yv5/InstanceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "asgyv5InstanceRole2AD1AACF"
+          }
+        ],
+        "/yv5/asg-yv5/InstanceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "asgyv5InstanceRoleDefaultPolicy661C2312"
+          }
+        ],
+        "/yv5/asg-yv5/InstanceProfile": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "asgyv5InstanceProfile11CBAF43"
+          }
+        ],
+        "/yv5/asg-yv5/LaunchTemplate/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "asgyv5LaunchTemplate0BCE66E9"
+          }
+        ],
+        "/yv5/asg-yv5/ASG": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "asgyv5ASGBF670AC3"
+          }
+        ],
+        "/yv5/SsmParameterValue:--aws--service--ecs--optimized-ami--amazon-linux-2--gpu--recommended--image_id:C96584B6-F00A-464E-AD19-53AFF4B05118.Parameter": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SsmParameterValueawsserviceecsoptimizedamiamazonlinux2gpurecommendedimageidC96584B6F00A464EAD1953AFF4B05118Parameter"
+          }
+        ],
+        "/yv5/cluster-yv5/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "clusteryv5CBE5A6C9"
+          }
+        ],
+        "/yv5/cluster-yv5/cluster-yv5": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "clusteryv5AFA60A24"
+          }
+        ],
+        "/yv5/asg-yv5-capacity-provider/asg-yv5-capacity-provider": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "asgyv5capacityprovider7B149DB6"
+          }
+        ],
+        "/yv5/dead/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "dead9A6F9BCE"
+          }
+        ],
+        "/yv5/video/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "videoC740E53C"
+          }
+        ],
+        "/yv5/video/Policy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "videoPolicy87E2417C"
+          }
+        ],
+        "/yv5/track/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "trackC8D9330E"
+          }
+        ],
+        "/yv5/track/Policy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "trackPolicy33FF340D"
+          }
+        ],
+        "/yv5/video-queue-deadletter": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "videoqueuedeadletter"
+          }
+        ],
+        "/yv5/video-queue-deadletter-arn": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "videoqueuedeadletterarn"
+          }
+        ],
+        "/yv5/video-queue": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "videoqueue"
+          }
+        ],
+        "/yv5/video-queue-arn": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "videoqueuearn"
+          }
+        ],
+        "/yv5/track-queue": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "trackqueue"
+          }
+        ],
+        "/yv5/track-queue-arn": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "trackqueuearn"
+          }
+        ],
+        "/yv5/video-/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "videoD6CC678B"
+          }
+        ],
+        "/yv5/tracks-/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "tracksAF817E35"
+          }
+        ],
+        "/yv5/dsai/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "dsaiCECB5963"
+          }
+        ],
+        "/yv5/DeepSeaAI-ecs-taskexec-sqs-s3-log/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DeepSeaAIecstaskexecsqss3log0BADEC52"
+          }
+        ],
+        "/yv5/DeepSeaAI-ecs-taskexec-sqs-s3-log/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DeepSeaAIecstaskexecsqss3logDefaultPolicy9E895914"
+          }
+        ],
+        "/yv5/strongsort-yolov5/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "strongsortyolov5469D7B5D"
+          }
+        ],
+        "/yv5/strongsort-yolov5/yv5": [
+          {
+            "type": "aws:cdk:warning",
+            "data": "Proper policies need to be attached before pulling from ECR repository, or use 'fromEcrRepository'. [ack: @aws-cdk/aws-ecs:ecrImageRequiresPolicy]",
+            "trace": [
+              "Annotations.addMessage (/Users/dcline/Dropbox/code/deepsea-ai/deepsea_ai/cdk/app/node_modules/aws-cdk-lib/core/lib/annotations.js:1:1392)",
+              "Annotations.addWarningV2 (/Users/dcline/Dropbox/code/deepsea-ai/deepsea_ai/cdk/app/node_modules/aws-cdk-lib/core/lib/annotations.js:1:699)",
+              "RepositoryImage.bind (/Users/dcline/Dropbox/code/deepsea-ai/deepsea_ai/cdk/app/node_modules/aws-cdk-lib/aws-ecs/lib/images/repository.js:1:1129)",
+              "new ContainerDefinition (/Users/dcline/Dropbox/code/deepsea-ai/deepsea_ai/cdk/app/node_modules/aws-cdk-lib/aws-ecs/lib/container-definition.js:1:2908)",
+              "Ec2TaskDefinition.addContainer (/Users/dcline/Dropbox/code/deepsea-ai/deepsea_ai/cdk/app/node_modules/aws-cdk-lib/aws-ecs/lib/base/task-definition.js:1:9354)",
+              "new AutoScalingTaskStack (/Users/dcline/Dropbox/code/deepsea-ai/deepsea_ai/cdk/app/lib/ecs_task_autoscaling.ts:152:20)",
+              "main (/Users/dcline/Dropbox/code/deepsea-ai/deepsea_ai/cdk/app/bin/deploy_stack.ts:31:5)"
+            ]
+          }
+        ],
+        "/yv5/service-[object Object]/Service": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "serviceobjectObjectService10D8676F"
+          }
+        ],
+        "/yv5/service-[object Object]/TaskCount/Target/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "serviceobjectObjectTaskCountTargetBB9BB221"
+          }
+        ],
+        "/yv5/service-[object Object]/TaskCount/Target/scaling-[object Object]/LowerPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "serviceobjectObjectTaskCountTargetscalingobjectObjectLowerPolicyAF15B713"
+          }
+        ],
+        "/yv5/service-[object Object]/TaskCount/Target/scaling-[object Object]/LowerAlarm/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "serviceobjectObjectTaskCountTargetscalingobjectObjectLowerAlarmD421C3D9"
+          }
+        ],
+        "/yv5/service-[object Object]/TaskCount/Target/scaling-[object Object]/UpperPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "serviceobjectObjectTaskCountTargetscalingobjectObjectUpperPolicyD7FF12DC"
+          }
+        ],
+        "/yv5/service-[object Object]/TaskCount/Target/scaling-[object Object]/UpperAlarm/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "serviceobjectObjectTaskCountTargetscalingobjectObjectUpperAlarmBB5F2386"
+          }
+        ],
+        "/yv5/scale-out/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "scaleout9660673C"
+          }
+        ],
+        "/yv5/scale-out-action/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "scaleoutaction240431FD"
+          }
+        ],
+        "/yv5/scale-in/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "scaleinCAF92544"
+          }
+        ],
+        "/yv5/scale-in-action/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "scaleinactionDA2EF43D"
+          }
+        ],
+        "/yv5/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/yv5/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/yv5/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "yv5"
+    },
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    }
+  }
+}

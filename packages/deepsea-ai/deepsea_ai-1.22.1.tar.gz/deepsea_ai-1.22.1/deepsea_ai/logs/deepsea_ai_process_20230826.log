@@ -1,0 +1,56 @@
+2023-08-26 14:57:44,916 INFO Logging to logs/deepsea_ai_process_20230826.log
+2023-08-26 14:57:44,916 INFO =============== Config file /Users/dcline/Dropbox/code/deepsea-ai/deepsea_ai/config/config.ini =================
+2023-08-26 14:57:44,916 INFO [docker]
+2023-08-26 14:57:44,916 INFO yolov5_container = mbari/deepsea-yolov5:1.1.2
+2023-08-26 14:57:44,916 INFO strongsort_container = mbari/strongsort-yolov5:5c05df0
+2023-08-26 14:57:44,916 INFO 
+2023-08-26 14:57:44,916 INFO [aws]
+2023-08-26 14:57:44,916 INFO account_id = 548531997526
+2023-08-26 14:57:44,916 INFO sagemaker_arn = arn:aws:iam::548531997526:role/DeepSeaAI
+2023-08-26 14:57:44,916 INFO model = s3://deepsea-ai-548531997526-models/yolov5x_mbay_benthic_model.tar.gz
+2023-08-26 14:57:44,916 INFO track_config = s3://deepsea-ai-548531997526-track-conf/strong_sort_benthic.yaml
+2023-08-26 14:57:44,916 INFO videos = s3://deepsea-ai-548531997526-videos
+2023-08-26 14:57:44,916 INFO models = s3://deepsea-ai-548531997526-models
+2023-08-26 14:57:44,916 INFO tracks = s3://deepsea-ai-548531997526-tracks
+2023-08-26 14:57:44,916 INFO 
+2023-08-26 14:57:44,916 INFO [aws_public]
+2023-08-26 14:57:44,916 INFO model = s3://902005-public/models/yolov5x_mbay_benthic_model.tar.gz
+2023-08-26 14:57:44,916 INFO track_config = s3://902005-public/models/track-config/strong_sort_benthic.yaml
+2023-08-26 14:57:44,916 INFO video_ex1 = s3://902005-public/video/1sec/V4361_20211006T162656Z_h265_1sec.mp4
+2023-08-26 14:57:44,916 INFO video_ex2 = s3://902005-public/video/1sec/V4361_20211006T163256Z_h265_1sec.mp4
+2023-08-26 14:57:44,916 INFO video_ex3 = s3://902005-public/video/1sec/V4361_20211006T163856Z_h265_1sec.mp4
+2023-08-26 14:57:44,917 INFO 
+2023-08-26 14:57:44,917 INFO [database]
+2023-08-26 14:57:44,917 INFO site = http://localhost:4000
+2023-08-26 14:57:44,917 INFO gql = %(site)s/graphql
+2023-08-26 14:57:44,917 INFO 
+2023-08-26 14:57:44,917 INFO [tags]
+2023-08-26 14:57:44,917 INFO organization = mbari
+2023-08-26 14:57:44,917 INFO project_number = NA
+2023-08-26 14:57:44,917 INFO stage = test
+2023-08-26 14:57:44,917 INFO application = detection
+2023-08-26 14:57:44,917 INFO 
+2023-08-26 14:57:45,272 WARNING Unable to get AWS account number: An error occurred (ExpiredToken) when calling the GetCallerIdentity operation: The security token included in the request is expired. Using SIM as account number
+2023-08-26 14:57:45,274 INFO Initializing job cache in /Users/dcline/Dropbox/code/deepsea-ai/deepsea_ai
+2023-08-26 14:57:45,274 INFO Using existing job cache database in /Users/dcline/Dropbox/code/deepsea-ai/deepsea_ai
+2023-08-26 14:57:45,646 INFO Checking tag {'Key': 'mbari:project-number', 'Value': 'NA'}
+2023-08-26 14:57:45,646 INFO Checking tag {'Key': 'mbari:owner', 'Value': 'Unknown'}
+2023-08-26 14:57:45,646 INFO Checking tag {'Key': 'mbari:description', 'Value': 'Ventana Dive 4263 with 0.5 conf with new mbari315k model'}
+2023-08-26 14:57:45,646 INFO Checking tag {'Key': 'mbari:stage', 'Value': 'test'}
+2023-08-26 14:57:45,646 INFO Checking tag {'Key': 'mbari:application', 'Value': 'detection'}
+2023-08-26 14:57:45,646 INFO Checking tag {'Key': 'mbari:deletion-date', 'Value': '20231124T215745Z'}
+2023-08-26 14:57:45,646 INFO Checking tag {'Key': 'mbari:created-by', 'Value': 'Unknown'}
+2023-08-26 14:57:45,647 INFO Creating buckets
+2023-08-26 14:57:45,647 INFO dry-run: Would have created bucket 902005-dev-test with tags [{'Key': 'mbari:project-number', 'Value': 'NA'}, {'Key': 'mbari:owner', 'Value': 'Unknown'}, {'Key': 'mbari:description', 'Value': 'Ventana Dive 4263 with 0.5 conf with new mbari315k model'}, {'Key': 'mbari:stage', 'Value': 'test'}, {'Key': 'mbari:application', 'Value': 'detection'}, {'Key': 'mbari:deletion-date', 'Value': '20231124T215745Z'}, {'Key': 'mbari:created-by', 'Value': 'Unknown'}]
+2023-08-26 14:57:45,647 INFO dry-run: Would have created bucket 902005-dev-test-out with tags [{'Key': 'mbari:project-number', 'Value': 'NA'}, {'Key': 'mbari:owner', 'Value': 'Unknown'}, {'Key': 'mbari:description', 'Value': 'Ventana Dive 4263 with 0.5 conf with new mbari315k model'}, {'Key': 'mbari:stage', 'Value': 'test'}, {'Key': 'mbari:application', 'Value': 'detection'}, {'Key': 'mbari:deletion-date', 'Value': '20231124T215745Z'}, {'Key': 'mbari:created-by', 'Value': 'Unknown'}]
+2023-08-26 14:57:45,647 INFO No video file exclusions specified
+2023-08-26 14:57:45,647 INFO Found 3 videos to process
+2023-08-26 14:57:45,647 INFO dry-run: Would have uploaded /Users/dcline/Dropbox/code/deepsea-ai/tests/data/V4361_20211006T163256Z_h265_1sec.mp4 to 902005-dev-test with tags [{'Key': 'mbari:project-number', 'Value': 'NA'}, {'Key': 'mbari:owner', 'Value': 'Unknown'}, {'Key': 'mbari:description', 'Value': 'Ventana Dive 4263 with 0.5 conf with new mbari315k model'}, {'Key': 'mbari:stage', 'Value': 'test'}, {'Key': 'mbari:application', 'Value': 'detection'}, {'Key': 'mbari:deletion-date', 'Value': '20231124T215745Z'}, {'Key': 'mbari:created-by', 'Value': 'Unknown'}]
+2023-08-26 14:57:45,647 INFO dry-run: Would have uploaded /Users/dcline/Dropbox/code/deepsea-ai/tests/data/V4361_20211006T162656Z_h265_1sec.mp4 to 902005-dev-test with tags [{'Key': 'mbari:project-number', 'Value': 'NA'}, {'Key': 'mbari:owner', 'Value': 'Unknown'}, {'Key': 'mbari:description', 'Value': 'Ventana Dive 4263 with 0.5 conf with new mbari315k model'}, {'Key': 'mbari:stage', 'Value': 'test'}, {'Key': 'mbari:application', 'Value': 'detection'}, {'Key': 'mbari:deletion-date', 'Value': '20231124T215745Z'}, {'Key': 'mbari:created-by', 'Value': 'Unknown'}]
+2023-08-26 14:57:45,647 INFO dry-run: Would have uploaded /Users/dcline/Dropbox/code/deepsea-ai/tests/data/V4361_20211006T163856Z_h265_1sec.mp4 to 902005-dev-test with tags [{'Key': 'mbari:project-number', 'Value': 'NA'}, {'Key': 'mbari:owner', 'Value': 'Unknown'}, {'Key': 'mbari:description', 'Value': 'Ventana Dive 4263 with 0.5 conf with new mbari315k model'}, {'Key': 'mbari:stage', 'Value': 'test'}, {'Key': 'mbari:application', 'Value': 'detection'}, {'Key': 'mbari:deletion-date', 'Value': '20231124T215745Z'}, {'Key': 'mbari:created-by', 'Value': 'Unknown'}]
+2023-08-26 14:57:46,030 INFO Running with args ['dettrack', '--model-s3=s3://deepsea-ai-548531997526-models/yolov5x_mbay_benthic_model.tar.gz', '--args="\'--agnostic-nms\'"']
+2023-08-26 14:57:46,411 INFO Found account 548531997526
+2023-08-26 14:57:46,418 INFO Found region us-west-2
+2023-08-26 14:57:46,514 INFO Start script processor for inputs s3://902005-dev-test/dcline/Dropbox/code/deepsea-ai/tests/data/
+2023-08-26 14:57:46,515 INFO Updating job strongsort-yolov5-Unknown running on strongsort-yolov5:5c05df0 in cache status to SUCCESS
+2023-08-26 14:57:46,516 INFO Added job strongsort-yolov5-Unknown running on strongsort-yolov5:5c05df0 to cache

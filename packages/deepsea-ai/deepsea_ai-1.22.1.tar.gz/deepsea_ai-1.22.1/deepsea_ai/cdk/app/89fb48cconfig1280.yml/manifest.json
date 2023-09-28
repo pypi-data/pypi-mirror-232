@@ -1,0 +1,338 @@
+{
+  "version": "34.0.0",
+  "artifacts": {
+    "Megadetector.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "Megadetector.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "Megadetector": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://548531997526/us-west-2",
+      "properties": {
+        "templateFile": "Megadetector.template.json",
+        "tags": {
+          "mbari:description": "Megadetector elastic cluster for processing underwater video",
+          "mbari:project-number": "000000",
+          "mbari:stage": "prod"
+        },
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::548531997526:role/cdk-hnb659fds-deploy-role-548531997526-us-west-2",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::548531997526:role/cdk-hnb659fds-cfn-exec-role-548531997526-us-west-2",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-548531997526-us-west-2/fca251026e5314a3a3dd3a3ff8d51d58bfe09db6ce722c79a6261db609b34d20.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "Megadetector.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::548531997526:role/cdk-hnb659fds-lookup-role-548531997526-us-west-2",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "Megadetector.assets"
+      ],
+      "metadata": {
+        "/Megadetector": [
+          {
+            "type": "aws:cdk:stack-tags",
+            "data": [
+              {
+                "Key": "mbari:description",
+                "Value": "Megadetector elastic cluster for processing underwater video"
+              },
+              {
+                "Key": "mbari:project-number",
+                "Value": "000000"
+              },
+              {
+                "Key": "mbari:stage",
+                "Value": "prod"
+              }
+            ]
+          }
+        ],
+        "/Megadetector/asg-Megadetector": [
+          {
+            "type": "aws:cdk:warning",
+            "data": "desiredCapacity has been configured. Be aware this will reset the size of your AutoScalingGroup on every deployment. See https://github.com/aws/aws-cdk/issues/5215 [ack: @aws-cdk/aws-autoscaling:desiredCapacitySet]",
+            "trace": [
+              "Annotations.addMessage (/Users/dcline/Dropbox/code/deepsea-ai/deepsea_ai/cdk/app/node_modules/aws-cdk-lib/core/lib/annotations.js:1:1392)",
+              "Annotations.addWarningV2 (/Users/dcline/Dropbox/code/deepsea-ai/deepsea_ai/cdk/app/node_modules/aws-cdk-lib/core/lib/annotations.js:1:699)",
+              "new AutoScalingGroup (/Users/dcline/Dropbox/code/deepsea-ai/deepsea_ai/cdk/app/node_modules/aws-cdk-lib/aws-autoscaling/lib/auto-scaling-group.js:1:15158)",
+              "new AutoScalingTaskStack (/Users/dcline/Dropbox/code/deepsea-ai/deepsea_ai/cdk/app/lib/ecs_task_autoscaling.ts:27:17)",
+              "main (/Users/dcline/Dropbox/code/deepsea-ai/deepsea_ai/cdk/app/bin/deploy_stack.ts:31:5)"
+            ]
+          }
+        ],
+        "/Megadetector/asg-Megadetector/InstanceSecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "asgMegadetectorInstanceSecurityGroup1FC9EBBF"
+          }
+        ],
+        "/Megadetector/asg-Megadetector/InstanceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "asgMegadetectorInstanceRole9ECBBE33"
+          }
+        ],
+        "/Megadetector/asg-Megadetector/InstanceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "asgMegadetectorInstanceRoleDefaultPolicy6D9B6913"
+          }
+        ],
+        "/Megadetector/asg-Megadetector/InstanceProfile": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "asgMegadetectorInstanceProfile354C5468"
+          }
+        ],
+        "/Megadetector/asg-Megadetector/LaunchTemplate/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "asgMegadetectorLaunchTemplateA2C78FB9"
+          }
+        ],
+        "/Megadetector/asg-Megadetector/ASG": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "asgMegadetectorASG7F85179E"
+          }
+        ],
+        "/Megadetector/SsmParameterValue:--aws--service--ecs--optimized-ami--amazon-linux-2--gpu--recommended--image_id:C96584B6-F00A-464E-AD19-53AFF4B05118.Parameter": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SsmParameterValueawsserviceecsoptimizedamiamazonlinux2gpurecommendedimageidC96584B6F00A464EAD1953AFF4B05118Parameter"
+          }
+        ],
+        "/Megadetector/cluster-Megadetector/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "clusterMegadetector8E4EE8AB"
+          }
+        ],
+        "/Megadetector/cluster-Megadetector/cluster-Megadetector": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "clusterMegadetectorE5064DCD"
+          }
+        ],
+        "/Megadetector/asg-Megadetector-capacity-provider/asg-Megadetector-capacity-provider": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "asgMegadetectorcapacityprovider1CF73A0E"
+          }
+        ],
+        "/Megadetector/dead/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "dead9A6F9BCE"
+          }
+        ],
+        "/Megadetector/video/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "videoC740E53C"
+          }
+        ],
+        "/Megadetector/video/Policy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "videoPolicy87E2417C"
+          }
+        ],
+        "/Megadetector/track/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "trackC8D9330E"
+          }
+        ],
+        "/Megadetector/track/Policy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "trackPolicy33FF340D"
+          }
+        ],
+        "/Megadetector/video-queue-deadletter": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "videoqueuedeadletter"
+          }
+        ],
+        "/Megadetector/video-queue-deadletter-arn": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "videoqueuedeadletterarn"
+          }
+        ],
+        "/Megadetector/video-queue": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "videoqueue"
+          }
+        ],
+        "/Megadetector/video-queue-arn": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "videoqueuearn"
+          }
+        ],
+        "/Megadetector/track-queue": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "trackqueue"
+          }
+        ],
+        "/Megadetector/track-queue-arn": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "trackqueuearn"
+          }
+        ],
+        "/Megadetector/video-/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "videoD6CC678B"
+          }
+        ],
+        "/Megadetector/tracks-/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "tracksAF817E35"
+          }
+        ],
+        "/Megadetector/dsai/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "dsaiCECB5963"
+          }
+        ],
+        "/Megadetector/DeepSeaAI-ecs-taskexec-sqs-s3-log/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DeepSeaAIecstaskexecsqss3log0BADEC52"
+          }
+        ],
+        "/Megadetector/DeepSeaAI-ecs-taskexec-sqs-s3-log/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DeepSeaAIecstaskexecsqss3logDefaultPolicy9E895914"
+          }
+        ],
+        "/Megadetector/strongsort-yolov5/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "strongsortyolov5469D7B5D"
+          }
+        ],
+        "/Megadetector/strongsort-yolov5/Megadetector": [
+          {
+            "type": "aws:cdk:warning",
+            "data": "Proper policies need to be attached before pulling from ECR repository, or use 'fromEcrRepository'. [ack: @aws-cdk/aws-ecs:ecrImageRequiresPolicy]",
+            "trace": [
+              "Annotations.addMessage (/Users/dcline/Dropbox/code/deepsea-ai/deepsea_ai/cdk/app/node_modules/aws-cdk-lib/core/lib/annotations.js:1:1392)",
+              "Annotations.addWarningV2 (/Users/dcline/Dropbox/code/deepsea-ai/deepsea_ai/cdk/app/node_modules/aws-cdk-lib/core/lib/annotations.js:1:699)",
+              "RepositoryImage.bind (/Users/dcline/Dropbox/code/deepsea-ai/deepsea_ai/cdk/app/node_modules/aws-cdk-lib/aws-ecs/lib/images/repository.js:1:1129)",
+              "new ContainerDefinition (/Users/dcline/Dropbox/code/deepsea-ai/deepsea_ai/cdk/app/node_modules/aws-cdk-lib/aws-ecs/lib/container-definition.js:1:2908)",
+              "Ec2TaskDefinition.addContainer (/Users/dcline/Dropbox/code/deepsea-ai/deepsea_ai/cdk/app/node_modules/aws-cdk-lib/aws-ecs/lib/base/task-definition.js:1:9354)",
+              "new AutoScalingTaskStack (/Users/dcline/Dropbox/code/deepsea-ai/deepsea_ai/cdk/app/lib/ecs_task_autoscaling.ts:152:20)",
+              "main (/Users/dcline/Dropbox/code/deepsea-ai/deepsea_ai/cdk/app/bin/deploy_stack.ts:31:5)"
+            ]
+          }
+        ],
+        "/Megadetector/service-[object Object]/Service": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "serviceobjectObjectService10D8676F"
+          }
+        ],
+        "/Megadetector/service-[object Object]/TaskCount/Target/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "serviceobjectObjectTaskCountTargetBB9BB221"
+          }
+        ],
+        "/Megadetector/service-[object Object]/TaskCount/Target/scaling-[object Object]/LowerPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "serviceobjectObjectTaskCountTargetscalingobjectObjectLowerPolicyAF15B713"
+          }
+        ],
+        "/Megadetector/service-[object Object]/TaskCount/Target/scaling-[object Object]/LowerAlarm/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "serviceobjectObjectTaskCountTargetscalingobjectObjectLowerAlarmD421C3D9"
+          }
+        ],
+        "/Megadetector/service-[object Object]/TaskCount/Target/scaling-[object Object]/UpperPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "serviceobjectObjectTaskCountTargetscalingobjectObjectUpperPolicyD7FF12DC"
+          }
+        ],
+        "/Megadetector/service-[object Object]/TaskCount/Target/scaling-[object Object]/UpperAlarm/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "serviceobjectObjectTaskCountTargetscalingobjectObjectUpperAlarmBB5F2386"
+          }
+        ],
+        "/Megadetector/scale-out/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "scaleout9660673C"
+          }
+        ],
+        "/Megadetector/scale-out-action/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "scaleoutaction240431FD"
+          }
+        ],
+        "/Megadetector/scale-in/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "scaleinCAF92544"
+          }
+        ],
+        "/Megadetector/scale-in-action/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "scaleinactionDA2EF43D"
+          }
+        ],
+        "/Megadetector/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/Megadetector/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/Megadetector/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "Megadetector"
+    },
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    }
+  }
+}

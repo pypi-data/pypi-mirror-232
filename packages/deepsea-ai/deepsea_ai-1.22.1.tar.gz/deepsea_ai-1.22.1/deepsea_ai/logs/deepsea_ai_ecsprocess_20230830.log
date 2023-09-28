@@ -1,0 +1,43 @@
+2023-08-30 08:18:53,709 INFO Logging to logs/deepsea_ai_ecsprocess_20230830.log
+2023-08-30 08:18:53,709 INFO =============== Config file /Users/dcline/Dropbox/code/deepsea-ai/deepsea_ai/config/config.ini =================
+2023-08-30 08:18:53,709 INFO [docker]
+2023-08-30 08:18:53,710 INFO yolov5_container = mbari/deepsea-yolov5:1.1.2
+2023-08-30 08:18:53,710 INFO strongsort_container = mbari/strongsort-yolov5:6f35769
+2023-08-30 08:18:53,710 INFO 
+2023-08-30 08:18:53,710 INFO [aws]
+2023-08-30 08:18:53,710 INFO account_id = 548531997526
+2023-08-30 08:18:53,710 INFO sagemaker_arn = arn:aws:iam::548531997526:role/DeepSeaAI
+2023-08-30 08:18:53,710 INFO model = s3://deepsea-ai-548531997526-models/yolov5x_mbay_benthic_model.tar.gz
+2023-08-30 08:18:53,710 INFO track_config = s3://deepsea-ai-548531997526-track-conf/strong_sort_benthic.yaml
+2023-08-30 08:18:53,710 INFO videos = s3://deepsea-ai-548531997526-videos
+2023-08-30 08:18:53,710 INFO models = s3://deepsea-ai-548531997526-models
+2023-08-30 08:18:53,710 INFO tracks = s3://deepsea-ai-548531997526-tracks
+2023-08-30 08:18:53,710 INFO 
+2023-08-30 08:18:53,710 INFO [aws_public]
+2023-08-30 08:18:53,710 INFO model = s3://902005-public/models/yolov5x_mbay_benthic_model.tar.gz
+2023-08-30 08:18:53,710 INFO track_config = s3://902005-public/models/track-config/strong_sort_benthic.yaml
+2023-08-30 08:18:53,710 INFO video_ex1 = s3://902005-public/video/1sec/V4361_20211006T162656Z_h265_1sec.mp4
+2023-08-30 08:18:53,710 INFO video_ex2 = s3://902005-public/video/1sec/V4361_20211006T163256Z_h265_1sec.mp4
+2023-08-30 08:18:53,710 INFO video_ex3 = s3://902005-public/video/1sec/V4361_20211006T163856Z_h265_1sec.mp4
+2023-08-30 08:18:53,710 INFO 
+2023-08-30 08:18:53,710 INFO [database]
+2023-08-30 08:18:53,710 INFO site = http://localhost:4000
+2023-08-30 08:18:53,710 INFO gql = %(site)s/graphql
+2023-08-30 08:18:53,710 INFO 
+2023-08-30 08:18:53,710 INFO [tags]
+2023-08-30 08:18:53,710 INFO organization = mbari
+2023-08-30 08:18:53,710 INFO project_number = NA
+2023-08-30 08:18:53,710 INFO stage = test
+2023-08-30 08:18:53,710 INFO application = detection
+2023-08-30 08:18:53,710 INFO 
+2023-08-30 08:18:54,756 INFO No video file exclusions specified
+2023-08-30 08:18:55,123 INFO Found 33 videos to process
+2023-08-30 08:18:55,509 INFO Checking tag {'Key': 'mbari:project-number', 'Value': 'NA'}
+2023-08-30 08:18:55,510 INFO Checking tag {'Key': 'mbari:owner', 'Value': 'dcline'}
+2023-08-30 08:18:55,510 INFO Checking tag {'Key': 'mbari:description', 'Value': 'Video uploaded from /Volumes/M3/mezzanine/DocRicketts/2022/02/1423/ by user dcline '}
+2023-08-30 08:18:55,510 INFO Checking tag {'Key': 'mbari:stage', 'Value': 'test'}
+2023-08-30 08:18:55,510 INFO Checking tag {'Key': 'mbari:application', 'Value': 'detection'}
+2023-08-30 08:18:55,510 INFO Checking tag {'Key': 'mbari:deletion-date', 'Value': '20231128T151855Z'}
+2023-08-30 08:18:55,510 INFO Checking tag {'Key': 'mbari:created-by', 'Value': 'dcline'}
+2023-08-30 08:18:55,597 INFO Checking /Volumes/M3/mezzanine/DocRicketts/2022/02/1423/D1423_20220221T143050Z_h265.mp4 in s3://yolov5x-mbay-benthic-videod6cc678b-13jda91y8l0z9/M3/mezzanine/DocRicketts/2022/02/1423/D1423_20220221T143050Z_h265.mp4...
+2023-08-30 08:18:55,885 INFO Uploading /Volumes/M3/mezzanine/DocRicketts/2022/02/1423/D1423_20220221T143050Z_h265.mp4 to s3://yolov5x-mbay-benthic-videod6cc678b-13jda91y8l0z9/M3/mezzanine/DocRicketts/2022/02/1423/D1423_20220221T143050Z_h265.mp4...

@@ -1,0 +1,20 @@
+{
+  "version": "34.0.0",
+  "files": {
+    "cfa86b145e49953e287cd7becb8cc5352a7ac94009a20f99e4bc21dedfe8d05c": {
+      "source": {
+        "path": "Megadetector.template.json",
+        "packaging": "file"
+      },
+      "destinations": {
+        "168552337187-us-west-2": {
+          "bucketName": "cdk-hnb659fds-assets-168552337187-us-west-2",
+          "objectKey": "cfa86b145e49953e287cd7becb8cc5352a7ac94009a20f99e4bc21dedfe8d05c.json",
+          "region": "us-west-2",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::168552337187:role/cdk-hnb659fds-file-publishing-role-168552337187-us-west-2"
+        }
+      }
+    }
+  },
+  "dockerImages": {}
+}

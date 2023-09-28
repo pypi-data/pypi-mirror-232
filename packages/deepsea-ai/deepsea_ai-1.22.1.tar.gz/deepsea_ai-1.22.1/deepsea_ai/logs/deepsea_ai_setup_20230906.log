@@ -1,0 +1,71 @@
+2023-09-06 07:15:50,550 INFO Logging to logs/deepsea_ai_setup_20230906.log
+2023-09-06 07:15:50,551 INFO =============== Config file /Users/dcline/Dropbox/code/deepsea-ai/deepsea_ai/config/config.ini =================
+2023-09-06 07:15:50,551 INFO [docker]
+2023-09-06 07:15:50,551 INFO yolov5_container = mbari/deepsea-yolov5
+2023-09-06 07:15:50,551 INFO strongsort_container = mbari/strongsort-yolov5:b2a511e
+2023-09-06 07:15:50,551 INFO 
+2023-09-06 07:15:50,551 INFO [aws]
+2023-09-06 07:15:50,551 INFO account_id = 168552337187
+2023-09-06 07:15:50,551 INFO sagemaker_arn = arn:aws:iam::168552337187:role/DeepSeaAI
+2023-09-06 07:15:50,551 INFO model = s3://deepsea-ai-548531997526-models/yolov5x_mbay_benthic_model.tar.gz
+2023-09-06 07:15:50,551 INFO track_config = s3://deepsea-ai-168552337187-track-conf
+2023-09-06 07:15:50,551 INFO videos = s3://deepsea-ai-168552337187-videos
+2023-09-06 07:15:50,551 INFO models = s3://deepsea-ai-168552337187-models
+2023-09-06 07:15:50,551 INFO tracks = s3://deepsea-ai-168552337187-tracks
+2023-09-06 07:15:50,552 INFO 
+2023-09-06 07:15:50,552 INFO [aws_public]
+2023-09-06 07:15:50,552 INFO model = s3://902005-public/models/yolov5x_mbay_benthic_model.tar.gz
+2023-09-06 07:15:50,552 INFO track_config = s3://902005-public/models/track-config/strong_sort_benthic.yaml
+2023-09-06 07:15:50,552 INFO video_ex1 = s3://902005-public/video/1sec/V4361_20211006T162656Z_h265_1sec.mp4
+2023-09-06 07:15:50,552 INFO video_ex2 = s3://902005-public/video/1sec/V4361_20211006T163256Z_h265_1sec.mp4
+2023-09-06 07:15:50,552 INFO video_ex3 = s3://902005-public/video/1sec/V4361_20211006T163856Z_h265_1sec.mp4
+2023-09-06 07:15:50,552 INFO 
+2023-09-06 07:15:50,552 INFO [database]
+2023-09-06 07:15:50,552 INFO site = http://localhost:4000
+2023-09-06 07:15:50,552 INFO gql = %(site)s/graphql
+2023-09-06 07:15:50,552 INFO 
+2023-09-06 07:15:50,552 INFO [tags]
+2023-09-06 07:15:50,552 INFO organization = mbari
+2023-09-06 07:15:50,552 INFO project_number = NA
+2023-09-06 07:15:50,552 INFO stage = test
+2023-09-06 07:15:50,552 INFO application = detection
+2023-09-06 07:15:50,552 INFO 
+2023-09-06 07:15:50,553 INFO =============== Config file /Users/dcline/Dropbox/code/deepsea-ai/deepsea_ai/config/config.ini =================
+2023-09-06 07:15:50,553 INFO [docker]
+2023-09-06 07:15:50,553 INFO yolov5_container = mbari/deepsea-yolov5
+2023-09-06 07:15:50,553 INFO strongsort_container = mbari/strongsort-yolov5:b2a511e
+2023-09-06 07:15:50,553 INFO 
+2023-09-06 07:15:50,553 INFO [aws]
+2023-09-06 07:15:50,553 INFO account_id = 168552337187
+2023-09-06 07:15:50,553 INFO sagemaker_arn = arn:aws:iam::168552337187:role/DeepSeaAI
+2023-09-06 07:15:50,553 INFO model = s3://deepsea-ai-548531997526-models/yolov5x_mbay_benthic_model.tar.gz
+2023-09-06 07:15:50,553 INFO track_config = s3://deepsea-ai-168552337187-track-conf
+2023-09-06 07:15:50,553 INFO videos = s3://deepsea-ai-168552337187-videos
+2023-09-06 07:15:50,553 INFO models = s3://deepsea-ai-168552337187-models
+2023-09-06 07:15:50,553 INFO tracks = s3://deepsea-ai-168552337187-tracks
+2023-09-06 07:15:50,553 INFO 
+2023-09-06 07:15:50,553 INFO [aws_public]
+2023-09-06 07:15:50,553 INFO model = s3://902005-public/models/yolov5x_mbay_benthic_model.tar.gz
+2023-09-06 07:15:50,553 INFO track_config = s3://902005-public/models/track-config/strong_sort_benthic.yaml
+2023-09-06 07:15:50,553 INFO video_ex1 = s3://902005-public/video/1sec/V4361_20211006T162656Z_h265_1sec.mp4
+2023-09-06 07:15:50,553 INFO video_ex2 = s3://902005-public/video/1sec/V4361_20211006T163256Z_h265_1sec.mp4
+2023-09-06 07:15:50,553 INFO video_ex3 = s3://902005-public/video/1sec/V4361_20211006T163856Z_h265_1sec.mp4
+2023-09-06 07:15:50,553 INFO 
+2023-09-06 07:15:50,553 INFO [database]
+2023-09-06 07:15:50,553 INFO site = http://localhost:4000
+2023-09-06 07:15:50,553 INFO gql = %(site)s/graphql
+2023-09-06 07:15:50,553 INFO 
+2023-09-06 07:15:50,553 INFO [tags]
+2023-09-06 07:15:50,553 INFO organization = mbari
+2023-09-06 07:15:50,553 INFO project_number = NA
+2023-09-06 07:15:50,553 INFO stage = test
+2023-09-06 07:15:50,553 INFO application = detection
+2023-09-06 07:15:50,553 INFO 
+2023-09-06 07:15:50,553 INFO ============ You can override these settings by creating a customconfig.ini file and pass that in with --config=customconfig.ini =====
+2023-09-06 07:15:50,554 INFO Initializing job cache database in /Users/dcline/Dropbox/code/deepsea-ai/deepsea_ai/config as sqlite_job_cache_168552337187.db
+2023-09-06 07:15:50,981 INFO Found account 168552337187
+2023-09-06 07:15:50,993 INFO Found region us-west-2
+2023-09-06 07:15:51,037 INFO Creating all ECR repositories in account 168552337187...
+2023-09-06 07:15:51,320 INFO Authenticating Docker with ECR for account 168552337187...
+2023-09-06 07:15:53,111 INFO Mirroring mbari/strongsort-yolov5:b2a511e to 168552337187.dkr.ecr.us-west-2.amazonaws.com/mbari/strongsort-yolov5:b2a511e
+2023-09-06 07:15:54,558 ERROR Exiting. Error: Command '['/usr/local/bin/docker', 'pull', 'mbari/strongsort-yolov5:b2a511e']' returned non-zero exit status 1.

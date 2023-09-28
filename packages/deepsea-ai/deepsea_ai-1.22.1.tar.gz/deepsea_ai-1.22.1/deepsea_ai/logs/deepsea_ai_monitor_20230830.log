@@ -1,0 +1,58 @@
+2023-08-30 08:32:46,583 INFO Logging to logs/deepsea_ai_monitor_20230830.log
+2023-08-30 08:32:46,584 INFO =============== Config file /Users/dcline/Dropbox/code/deepsea-ai/deepsea_ai/config/config.ini =================
+2023-08-30 08:32:46,584 INFO [docker]
+2023-08-30 08:32:46,584 INFO yolov5_container = mbari/deepsea-yolov5:1.1.2
+2023-08-30 08:32:46,584 INFO strongsort_container = mbari/strongsort-yolov5:6f35769
+2023-08-30 08:32:46,584 INFO 
+2023-08-30 08:32:46,584 INFO [aws]
+2023-08-30 08:32:46,584 INFO account_id = 548531997526
+2023-08-30 08:32:46,584 INFO sagemaker_arn = arn:aws:iam::548531997526:role/DeepSeaAI
+2023-08-30 08:32:46,584 INFO model = s3://deepsea-ai-548531997526-models/yolov5x_mbay_benthic_model.tar.gz
+2023-08-30 08:32:46,584 INFO track_config = s3://deepsea-ai-548531997526-track-conf/strong_sort_benthic.yaml
+2023-08-30 08:32:46,584 INFO videos = s3://deepsea-ai-548531997526-videos
+2023-08-30 08:32:46,584 INFO models = s3://deepsea-ai-548531997526-models
+2023-08-30 08:32:46,584 INFO tracks = s3://deepsea-ai-548531997526-tracks
+2023-08-30 08:32:46,584 INFO 
+2023-08-30 08:32:46,584 INFO [aws_public]
+2023-08-30 08:32:46,584 INFO model = s3://902005-public/models/yolov5x_mbay_benthic_model.tar.gz
+2023-08-30 08:32:46,584 INFO track_config = s3://902005-public/models/track-config/strong_sort_benthic.yaml
+2023-08-30 08:32:46,584 INFO video_ex1 = s3://902005-public/video/1sec/V4361_20211006T162656Z_h265_1sec.mp4
+2023-08-30 08:32:46,584 INFO video_ex2 = s3://902005-public/video/1sec/V4361_20211006T163256Z_h265_1sec.mp4
+2023-08-30 08:32:46,584 INFO video_ex3 = s3://902005-public/video/1sec/V4361_20211006T163856Z_h265_1sec.mp4
+2023-08-30 08:32:46,584 INFO 
+2023-08-30 08:32:46,584 INFO [database]
+2023-08-30 08:32:46,584 INFO site = http://localhost:4000
+2023-08-30 08:32:46,584 INFO gql = %(site)s/graphql
+2023-08-30 08:32:46,584 INFO 
+2023-08-30 08:32:46,584 INFO [tags]
+2023-08-30 08:32:46,585 INFO organization = mbari
+2023-08-30 08:32:46,585 INFO project_number = NA
+2023-08-30 08:32:46,585 INFO stage = test
+2023-08-30 08:32:46,585 INFO application = detection
+2023-08-30 08:32:46,585 INFO 
+2023-08-30 08:32:46,585 INFO ============ You can override these settings by creating a customconfig.ini file and pass that in with --config=customconfig.ini =====
+2023-08-30 08:32:47,115 INFO Found 1 jobs in the database
+2023-08-30 08:32:47,115 INFO Job Pycharm D1423 defaults status yolov5x-mbay-benthic
+2023-08-30 08:32:47,116 INFO Getting jobs for cluster yolov5x-mbay-benthic
+2023-08-30 08:32:47,116 INFO Found 1 jobs for cluster yolov5x-mbay-benthic
+2023-08-30 08:32:47,117 INFO Monitoring on cluster yolov5x-mbay-benthic
+2023-08-30 08:32:47,117 ERROR Job Thread-1 not found in database. Cannot monitor. Trying again in 10 seconds.
+2023-08-30 08:32:47,503 INFO 2023-08-30 11:29:19.610000+00:00 Terminating EC2 instance: i-08d2cc5aec35f3dbc  At 2023-08-30T11:29:19Z an instance was taken out of service in response to a difference between desired and actual capacity, shrinking the capacity from 1 to 0.  At 2023-08-30T11:29:19Z instance i-08d2cc5aec35f3dbc was selected for termination.
+2023-08-30 08:32:47,503 INFO 2023-08-30 10:34:23.905000+00:00 Could not scale to desired capacity because all remaining instances are protected from scale-in.  At 2023-08-30T10:34:13Z a monitor alarm yolov5x-mbay-benthic-scaleinCAF92544-I2iJ3keuEOAP in state ALARM triggered policy yolov5x-mbay-benthic-scaleinactionDA2EF43D-QESYGvnhnq4Y changing the desired capacity from 1 to 0.  At 2023-08-30T10:34:23Z group reached equilibrium.
+2023-08-30 08:32:47,503 INFO 2023-08-30 10:32:15.040000+00:00 Terminating EC2 instance: i-0f855e62583c88321  At 2023-08-30T10:32:14Z an instance was taken out of service in response to a difference between desired and actual capacity, shrinking the capacity from 2 to 1.  At 2023-08-30T10:32:15Z instance i-0f855e62583c88321 was selected for termination.
+2023-08-30 08:32:47,503 INFO 2023-08-30 10:05:26.607000+00:00 Could not scale to desired capacity because all remaining instances are protected from scale-in.  At 2023-08-30T10:05:13Z a monitor alarm yolov5x-mbay-benthic-scaleinCAF92544-I2iJ3keuEOAP in state ALARM triggered policy yolov5x-mbay-benthic-scaleinactionDA2EF43D-QESYGvnhnq4Y changing the desired capacity from 2 to 1.  At 2023-08-30T10:05:26Z group reached equilibrium.
+2023-08-30 08:32:47,503 INFO 2023-08-30 09:02:54.184000+00:00 Launching a new EC2 instance: i-0f855e62583c88321  At 2023-08-30T09:02:47Z a monitor alarm yolov5x-mbay-benthic-scaleout9660673C-4uvsxzfmjWgQ in state ALARM triggered policy yolov5x-mbay-benthic-scaleoutaction240431FD-9AVhdlGEeEUq changing the desired capacity from 1 to 2.  At 2023-08-30T09:02:52Z an instance was started in response to a difference between desired and actual capacity, increasing the capacity from 1 to 2.
+2023-08-30 08:32:47,503 INFO 2023-08-30 08:59:59.565000+00:00 Launching a new EC2 instance: i-08d2cc5aec35f3dbc  At 2023-08-30T08:59:47Z a monitor alarm yolov5x-mbay-benthic-scaleout9660673C-4uvsxzfmjWgQ in state ALARM triggered policy yolov5x-mbay-benthic-scaleoutaction240431FD-9AVhdlGEeEUq changing the desired capacity from 0 to 1.  At 2023-08-30T08:59:57Z an instance was started in response to a difference between desired and actual capacity, increasing the capacity from 0 to 1.
+2023-08-30 08:32:47,504 INFO 2023-08-30 07:16:23.296000+00:00 Terminating EC2 instance: i-03712658e55912d6b  At 2023-08-30T07:16:23Z an instance was taken out of service in response to a difference between desired and actual capacity, shrinking the capacity from 1 to 0.  At 2023-08-30T07:16:23Z instance i-03712658e55912d6b was selected for termination.
+2023-08-30 08:32:47,504 INFO 2023-08-30 07:01:27.656000+00:00 Could not scale to desired capacity because all remaining instances are protected from scale-in.  At 2023-08-30T07:01:13Z a monitor alarm yolov5x-mbay-benthic-scaleinCAF92544-I2iJ3keuEOAP in state ALARM triggered policy yolov5x-mbay-benthic-scaleinactionDA2EF43D-QESYGvnhnq4Y changing the desired capacity from 1 to 0.  At 2023-08-30T07:01:27Z group reached equilibrium.
+2023-08-30 08:32:47,504 INFO 2023-08-30 06:46:03.824000+00:00 Launching a new EC2 instance: i-03712658e55912d6b  At 2023-08-30T06:46:01Z an instance was started in response to a difference between desired and actual capacity, increasing the capacity from 0 to 1.
+2023-08-30 08:32:47,504 INFO 2023-08-30 06:45:53.730000+00:00 Launching a new EC2 instance.  Status Reason: Your requested instance type (g4dn.xlarge) is not supported in your requested Availability Zone (us-west-2d). Please retry your request by not specifying an Availability Zone or choosing us-west-2a, us-west-2b, us-west-2c. Launching EC2 instance failed.  At 2023-08-30T06:45:47Z a monitor alarm yolov5x-mbay-benthic-scaleout9660673C-4uvsxzfmjWgQ in state ALARM triggered policy yolov5x-mbay-benthic-scaleoutaction240431FD-9AVhdlGEeEUq changing the desired capacity from 0 to 1.  At 2023-08-30T06:45:52Z an instance was started in response to a difference between desired and actual capacity, increasing the capacity from 0 to 1.
+2023-08-30 08:32:47,761 INFO yolov5x-mbay-benthic:TRACK_QUEUE number of completed videos: 0
+2023-08-30 08:32:47,761 INFO yolov5x-mbay-benthic:TRACK_QUEUE number of completed videos: 5
+2023-08-30 08:32:48,018 INFO yolov5x-mbay-benthic:VIDEO_QUEUE number of videos to process: 0  number of videos in progress: 0
+2023-08-30 08:32:48,300 INFO yolov5x-mbay-benthic:DEAD_QUEUE number of failed videos: 3
+2023-08-30 08:32:48,504 INFO Getting jobs for cluster yolov5x-mbay-benthic
+2023-08-30 08:32:48,504 INFO Found 1 jobs for cluster yolov5x-mbay-benthic
+2023-08-30 08:32:48,504 INFO Creating job report for Pycharm D1423 defaults in reports/Pycharm_D1423_defaults_20230830.txt
+2023-08-30 08:32:48,509 ERROR Unable to fetch job id from deepsea_ai database: HTTPConnectionPool(host='localhost', port=4000): Max retries exceeded with url: /graphql (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1688c2450>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-08-30 08:32:48,509 INFO Checking again in 10 seconds. Ctrl-C to stop.

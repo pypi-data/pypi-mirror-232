@@ -1,0 +1,20 @@
+{
+  "version": "34.0.0",
+  "files": {
+    "eae9b8ede311c7f2347a5667da1983b9b07416f9fdfe0557f688bbad228200fd": {
+      "source": {
+        "path": "yv5.template.json",
+        "packaging": "file"
+      },
+      "destinations": {
+        "548531997526-us-west-2": {
+          "bucketName": "cdk-hnb659fds-assets-548531997526-us-west-2",
+          "objectKey": "eae9b8ede311c7f2347a5667da1983b9b07416f9fdfe0557f688bbad228200fd.json",
+          "region": "us-west-2",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::548531997526:role/cdk-hnb659fds-file-publishing-role-548531997526-us-west-2"
+        }
+      }
+    }
+  },
+  "dockerImages": {}
+}

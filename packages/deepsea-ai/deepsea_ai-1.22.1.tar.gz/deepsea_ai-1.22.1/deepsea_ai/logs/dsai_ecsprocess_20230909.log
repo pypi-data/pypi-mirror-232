@@ -1,0 +1,61 @@
+2023-09-09 00:46:09,726 INFO Logging to logs/dsai_ecsprocess_20230909.log
+2023-09-09 00:46:09,727 INFO =============== Config file /Users/dcline/Dropbox/code/deepsea-ai/deepsea_ai/config/config.ini =================
+2023-09-09 00:46:09,727 INFO [docker]
+2023-09-09 00:46:09,727 INFO yolov5_container = mbari/deepsea-yolov5:1.1.2
+2023-09-09 00:46:09,727 INFO strongsort_container = mbari/strongsort-yolov5:6f35769
+2023-09-09 00:46:09,727 INFO 
+2023-09-09 00:46:09,727 INFO [aws]
+2023-09-09 00:46:09,727 INFO account_id = 548531997526
+2023-09-09 00:46:09,727 INFO sagemaker_arn = arn:aws:iam::548531997526:role/DeepSeaAI
+2023-09-09 00:46:09,727 INFO model = s3://deepsea-ai-548531997526-models/yolov5x_mbay_benthic_model.tar.gz
+2023-09-09 00:46:09,727 INFO track_config = s3://deepsea-ai-548531997526-track-conf/strong_sort_benthic.yaml
+2023-09-09 00:46:09,727 INFO videos = s3://deepsea-ai-548531997526-videos
+2023-09-09 00:46:09,727 INFO models = s3://deepsea-ai-548531997526-models
+2023-09-09 00:46:09,727 INFO tracks = s3://deepsea-ai-548531997526-tracks
+2023-09-09 00:46:09,727 INFO 
+2023-09-09 00:46:09,727 INFO [aws_public]
+2023-09-09 00:46:09,727 INFO model = s3://902005-public/models/yolov5x_mbay_benthic_model.tar.gz
+2023-09-09 00:46:09,727 INFO track_config = s3://902005-public/models/track-config/strong_sort_benthic.yaml
+2023-09-09 00:46:09,727 INFO video_ex1 = s3://902005-public/video/1sec/V4361_20211006T162656Z_h265_1sec.mp4
+2023-09-09 00:46:09,727 INFO video_ex2 = s3://902005-public/video/1sec/V4361_20211006T163256Z_h265_1sec.mp4
+2023-09-09 00:46:09,727 INFO video_ex3 = s3://902005-public/video/1sec/V4361_20211006T163856Z_h265_1sec.mp4
+2023-09-09 00:46:09,727 INFO 
+2023-09-09 00:46:09,727 INFO [database]
+2023-09-09 00:46:09,727 INFO site = http://localhost:4000
+2023-09-09 00:46:09,727 INFO gql = %(site)s/graphql
+2023-09-09 00:46:09,727 INFO 
+2023-09-09 00:46:09,728 INFO [tags]
+2023-09-09 00:46:09,728 INFO organization = mbari
+2023-09-09 00:46:09,728 INFO project_number = NA
+2023-09-09 00:46:09,728 INFO stage = test
+2023-09-09 00:46:09,728 INFO application = detection
+2023-09-09 00:46:09,728 INFO 
+2023-09-09 00:46:09,728 INFO Initializing job cache database in /Users/dcline/Dropbox/code/deepsea-ai/deepsea_ai/config as sqlite_job_cache_548531997526.db
+2023-09-09 00:46:10,782 INFO No video file exclusions specified
+2023-09-09 00:46:10,783 INFO Found 3 videos to process
+2023-09-09 00:46:11,172 INFO Checking tag {'Key': 'mbari:project-number', 'Value': 'NA'}
+2023-09-09 00:46:11,173 INFO Checking tag {'Key': 'mbari:owner', 'Value': 'dcline'}
+2023-09-09 00:46:11,173 INFO Checking tag {'Key': 'mbari:description', 'Value': 'Video uploaded from /Users/dcline/Dropbox/code/deepsea-ai/tests/data by user dcline '}
+2023-09-09 00:46:11,173 INFO Checking tag {'Key': 'mbari:stage', 'Value': 'test'}
+2023-09-09 00:46:11,173 INFO Checking tag {'Key': 'mbari:application', 'Value': 'detection'}
+2023-09-09 00:46:11,173 INFO Checking tag {'Key': 'mbari:deletion-date', 'Value': '20231208T074611Z'}
+2023-09-09 00:46:11,173 INFO Checking tag {'Key': 'mbari:created-by', 'Value': 'dcline'}
+2023-09-09 00:46:11,208 INFO Checking /Users/dcline/Dropbox/code/deepsea-ai/tests/data/V4361_20211006T163256Z_h265_1sec.mp4 in s3://yv5-videod6cc678b-1k0cwlto44bx4/dcline/Dropbox/code/deepsea-ai/tests/data/V4361_20211006T163256Z_h265_1sec.mp4...
+2023-09-09 00:46:11,412 INFO Found s3://yv5-videod6cc678b-1k0cwlto44bx4/dcline/Dropbox/code/deepsea-ai/tests/data/V4361_20211006T163256Z_h265_1sec.mp4 ...skipping upload
+2023-09-09 00:46:11,413 INFO Tagging /Users/dcline/Dropbox/code/deepsea-ai/tests/data/V4361_20211006T163256Z_h265_1sec.mp4 with [{'Key': 'mbari:project-number', 'Value': 'NA'}, {'Key': 'mbari:owner', 'Value': 'dcline'}, {'Key': 'mbari:description', 'Value': 'Video uploaded from /Users/dcline/Dropbox/code/deepsea-ai/tests/data by user dcline '}, {'Key': 'mbari:stage', 'Value': 'test'}, {'Key': 'mbari:application', 'Value': 'detection'}, {'Key': 'mbari:deletion-date', 'Value': '20231208T074611Z'}, {'Key': 'mbari:created-by', 'Value': 'dcline'}]...
+2023-09-09 00:46:11,945 INFO Message queued to yv5-videoC740E53C-cjOSovORFAxL.fifo. MessageId: 6e4ed27d-8217-429b-a5a9-7b3f77e5712e
+2023-09-09 00:46:11,948 INFO Updating media dcline/Dropbox/code/deepsea-ai/tests/data/V4361_20211006T163256Z_h265_1sec.mp4 to QUEUED
+2023-09-09 00:46:11,950 INFO A new media dcline/Dropbox/code/deepsea-ai/tests/data/V4361_20211006T163256Z_h265_1sec.mp4 was added to job Pycharm 1sec default args kwargs {'message_uuid': 'c700a753-790d-4adc-ba32-42889987f16f'}
+2023-09-09 00:46:11,964 INFO Checking /Users/dcline/Dropbox/code/deepsea-ai/tests/data/V4361_20211006T162656Z_h265_1sec.mp4 in s3://yv5-videod6cc678b-1k0cwlto44bx4/dcline/Dropbox/code/deepsea-ai/tests/data/V4361_20211006T162656Z_h265_1sec.mp4...
+2023-09-09 00:46:12,169 INFO Found s3://yv5-videod6cc678b-1k0cwlto44bx4/dcline/Dropbox/code/deepsea-ai/tests/data/V4361_20211006T162656Z_h265_1sec.mp4 ...skipping upload
+2023-09-09 00:46:12,169 INFO Tagging /Users/dcline/Dropbox/code/deepsea-ai/tests/data/V4361_20211006T162656Z_h265_1sec.mp4 with [{'Key': 'mbari:project-number', 'Value': 'NA'}, {'Key': 'mbari:owner', 'Value': 'dcline'}, {'Key': 'mbari:description', 'Value': 'Video uploaded from /Users/dcline/Dropbox/code/deepsea-ai/tests/data by user dcline '}, {'Key': 'mbari:stage', 'Value': 'test'}, {'Key': 'mbari:application', 'Value': 'detection'}, {'Key': 'mbari:deletion-date', 'Value': '20231208T074611Z'}, {'Key': 'mbari:created-by', 'Value': 'dcline'}]...
+2023-09-09 00:46:12,648 INFO Message queued to yv5-videoC740E53C-cjOSovORFAxL.fifo. MessageId: 3b3f4f2a-b82d-4dad-bd3f-1cabbcc12c20
+2023-09-09 00:46:12,649 INFO Updating media dcline/Dropbox/code/deepsea-ai/tests/data/V4361_20211006T162656Z_h265_1sec.mp4 to QUEUED
+2023-09-09 00:46:12,650 INFO A new media dcline/Dropbox/code/deepsea-ai/tests/data/V4361_20211006T162656Z_h265_1sec.mp4 was added to job Pycharm 1sec default args kwargs {'message_uuid': '1c6f34e5-61fe-4d91-bc60-6d09c13f873c'}
+2023-09-09 00:46:12,659 INFO Checking /Users/dcline/Dropbox/code/deepsea-ai/tests/data/V4361_20211006T163856Z_h265_1sec.mp4 in s3://yv5-videod6cc678b-1k0cwlto44bx4/dcline/Dropbox/code/deepsea-ai/tests/data/V4361_20211006T163856Z_h265_1sec.mp4...
+2023-09-09 00:46:12,849 INFO Found s3://yv5-videod6cc678b-1k0cwlto44bx4/dcline/Dropbox/code/deepsea-ai/tests/data/V4361_20211006T163856Z_h265_1sec.mp4 ...skipping upload
+2023-09-09 00:46:12,849 INFO Tagging /Users/dcline/Dropbox/code/deepsea-ai/tests/data/V4361_20211006T163856Z_h265_1sec.mp4 with [{'Key': 'mbari:project-number', 'Value': 'NA'}, {'Key': 'mbari:owner', 'Value': 'dcline'}, {'Key': 'mbari:description', 'Value': 'Video uploaded from /Users/dcline/Dropbox/code/deepsea-ai/tests/data by user dcline '}, {'Key': 'mbari:stage', 'Value': 'test'}, {'Key': 'mbari:application', 'Value': 'detection'}, {'Key': 'mbari:deletion-date', 'Value': '20231208T074611Z'}, {'Key': 'mbari:created-by', 'Value': 'dcline'}]...
+2023-09-09 00:46:13,310 INFO Message queued to yv5-videoC740E53C-cjOSovORFAxL.fifo. MessageId: 4aab1ad1-4582-4b84-b7c8-06a22c66a469
+2023-09-09 00:46:13,312 INFO Updating media dcline/Dropbox/code/deepsea-ai/tests/data/V4361_20211006T163856Z_h265_1sec.mp4 to QUEUED
+2023-09-09 00:46:13,313 INFO A new media dcline/Dropbox/code/deepsea-ai/tests/data/V4361_20211006T163856Z_h265_1sec.mp4 was added to job Pycharm 1sec default args kwargs {'message_uuid': 'f3394fab-f3f2-402c-8e91-1badecf8e763'}
+2023-09-09 00:46:13,317 INFO ==== Submitted 3 videos to yv5 for processing =====

@@ -1,0 +1,69 @@
+2023-09-06 01:24:46,192 INFO Logging to logs/deepsea_ai_setup_20230906.log
+2023-09-06 01:24:46,193 INFO AWS_DEFAULT_PROFILE is set to 168552337187_AWSAdministratorAccess and will be used for all AWS commands
+2023-09-06 01:24:46,211 INFO =============== Config file /Users/dcline/miniforge3/envs/deploy-deepsea-ai/lib/python3.9/site-packages/deepsea_ai/config/config.ini =================
+2023-09-06 01:24:46,211 INFO [docker]
+2023-09-06 01:24:46,211 INFO yolov5_container = mbari/deepsea-yolov5:1.1.2
+2023-09-06 01:24:46,211 INFO strongsort_container = mbari/strongsort-yolov5:6f35769
+2023-09-06 01:24:46,211 INFO 
+2023-09-06 01:24:46,211 INFO [aws]
+2023-09-06 01:24:46,211 INFO account_id = 548531997526
+2023-09-06 01:24:46,211 INFO sagemaker_arn = arn:aws:iam::548531997526:role/DeepSeaAI
+2023-09-06 01:24:46,211 INFO model = s3://deepsea-ai-548531997526-models/yolov5x_mbay_benthic_model.tar.gz
+2023-09-06 01:24:46,211 INFO track_config = s3://deepsea-ai-548531997526-track-conf/strong_sort_benthic.yaml
+2023-09-06 01:24:46,211 INFO videos = s3://deepsea-ai-548531997526-videos
+2023-09-06 01:24:46,211 INFO models = s3://deepsea-ai-548531997526-models
+2023-09-06 01:24:46,211 INFO tracks = s3://deepsea-ai-548531997526-tracks
+2023-09-06 01:24:46,211 INFO 
+2023-09-06 01:24:46,211 INFO [aws_public]
+2023-09-06 01:24:46,211 INFO model = s3://902005-public/models/yolov5x_mbay_benthic_model.tar.gz
+2023-09-06 01:24:46,211 INFO track_config = s3://902005-public/models/track-config/strong_sort_benthic.yaml
+2023-09-06 01:24:46,211 INFO video_ex1 = s3://902005-public/video/1sec/V4361_20211006T162656Z_h265_1sec.mp4
+2023-09-06 01:24:46,211 INFO video_ex2 = s3://902005-public/video/1sec/V4361_20211006T163256Z_h265_1sec.mp4
+2023-09-06 01:24:46,219 INFO video_ex3 = s3://902005-public/video/1sec/V4361_20211006T163856Z_h265_1sec.mp4
+2023-09-06 01:24:46,219 INFO 
+2023-09-06 01:24:46,219 INFO [database]
+2023-09-06 01:24:46,219 INFO site = http://localhost:4000
+2023-09-06 01:24:46,219 INFO gql = %(site)s/graphql
+2023-09-06 01:24:46,219 INFO 
+2023-09-06 01:24:46,219 INFO [tags]
+2023-09-06 01:24:46,219 INFO organization = mbari
+2023-09-06 01:24:46,219 INFO project_number = NA
+2023-09-06 01:24:46,219 INFO stage = test
+2023-09-06 01:24:46,219 INFO application = detection
+2023-09-06 01:24:46,219 INFO 
+2023-09-06 01:24:46,219 INFO =============== Config file /Users/dcline/Dropbox/code/deepsea-ai-scripts/902005prod.ini =================
+2023-09-06 01:24:46,220 INFO [docker]
+2023-09-06 01:24:46,220 INFO yolov5_container = mbari/deepsea-yolov5
+2023-09-06 01:24:46,220 INFO strongsort_container = mbari/strongsort-yolov5:b2a511e
+2023-09-06 01:24:46,220 INFO 
+2023-09-06 01:24:46,220 INFO [aws]
+2023-09-06 01:24:46,220 INFO account_id = 168552337187
+2023-09-06 01:24:46,220 INFO sagemaker_arn = arn:aws:iam::168552337187:role/DeepSeaAI
+2023-09-06 01:24:46,220 INFO model = s3://deepsea-ai-548531997526-models/yolov5x_mbay_benthic_model.tar.gz
+2023-09-06 01:24:46,220 INFO track_config = s3://deepsea-ai-168552337187-track-conf
+2023-09-06 01:24:46,220 INFO videos = s3://deepsea-ai-168552337187-videos
+2023-09-06 01:24:46,220 INFO models = s3://deepsea-ai-168552337187-models
+2023-09-06 01:24:46,220 INFO tracks = s3://deepsea-ai-168552337187-tracks
+2023-09-06 01:24:46,220 INFO 
+2023-09-06 01:24:46,220 INFO [aws_public]
+2023-09-06 01:24:46,220 INFO model = s3://902005-public/models/yolov5x_mbay_benthic_model.tar.gz
+2023-09-06 01:24:46,220 INFO track_config = s3://902005-public/models/track-config/strong_sort_benthic.yaml
+2023-09-06 01:24:46,220 INFO video_ex1 = s3://902005-public/video/1sec/V4361_20211006T162656Z_h265_1sec.mp4
+2023-09-06 01:24:46,220 INFO video_ex2 = s3://902005-public/video/1sec/V4361_20211006T163256Z_h265_1sec.mp4
+2023-09-06 01:24:46,220 INFO video_ex3 = s3://902005-public/video/1sec/V4361_20211006T163856Z_h265_1sec.mp4
+2023-09-06 01:24:46,220 INFO 
+2023-09-06 01:24:46,220 INFO [database]
+2023-09-06 01:24:46,220 INFO site = http://localhost:4000
+2023-09-06 01:24:46,221 INFO gql = %(site)s/graphql
+2023-09-06 01:24:46,221 INFO 
+2023-09-06 01:24:46,221 INFO [tags]
+2023-09-06 01:24:46,221 INFO organization = mbari
+2023-09-06 01:24:46,221 INFO project_number = NA
+2023-09-06 01:24:46,221 INFO stage = test
+2023-09-06 01:24:46,221 INFO application = detection
+2023-09-06 01:24:46,221 INFO 
+2023-09-06 01:24:46,576 INFO Found account 168552337187
+2023-09-06 01:24:46,595 INFO Found region us-west-2
+2023-09-06 01:24:46,600 INFO Creating all ECR repositories in account 168552337187...
+2023-09-06 01:24:46,777 INFO Authenticating Docker with ECR for account 168552337187...
+2023-09-06 07:09:42,923 INFO Mirroring mbari/deepsea-yolov5 to 168552337187.dkr.ecr.us-west-2.amazonaws.com/mbari/deepsea-yolov5

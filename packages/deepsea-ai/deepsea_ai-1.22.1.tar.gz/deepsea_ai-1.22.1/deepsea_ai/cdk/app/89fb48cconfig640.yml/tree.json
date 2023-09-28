@@ -1,0 +1,1578 @@
+{
+  "version": "tree-0.1",
+  "tree": {
+    "id": "App",
+    "path": "",
+    "children": {
+      "yv5": {
+        "id": "yv5",
+        "path": "yv5",
+        "children": {
+          "VPC": {
+            "id": "VPC",
+            "path": "yv5/VPC",
+            "children": {
+              "PublicSubnet1": {
+                "id": "PublicSubnet1",
+                "path": "yv5/VPC/PublicSubnet1",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.Resource",
+                  "version": "2.95.1"
+                }
+              },
+              "PublicSubnet2": {
+                "id": "PublicSubnet2",
+                "path": "yv5/VPC/PublicSubnet2",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.Resource",
+                  "version": "2.95.1"
+                }
+              },
+              "PublicSubnet3": {
+                "id": "PublicSubnet3",
+                "path": "yv5/VPC/PublicSubnet3",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.Resource",
+                  "version": "2.95.1"
+                }
+              },
+              "PublicSubnet4": {
+                "id": "PublicSubnet4",
+                "path": "yv5/VPC/PublicSubnet4",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.Resource",
+                  "version": "2.95.1"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.Resource",
+              "version": "2.95.1"
+            }
+          },
+          "asg-yv5": {
+            "id": "asg-yv5",
+            "path": "yv5/asg-yv5",
+            "children": {
+              "InstanceSecurityGroup": {
+                "id": "InstanceSecurityGroup",
+                "path": "yv5/asg-yv5/InstanceSecurityGroup",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "yv5/asg-yv5/InstanceSecurityGroup/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::SecurityGroup",
+                      "aws:cdk:cloudformation:props": {
+                        "groupDescription": "yv5/asg-yv5/InstanceSecurityGroup",
+                        "securityGroupEgress": [
+                          {
+                            "cidrIp": "0.0.0.0/0",
+                            "description": "Allow all outbound traffic by default",
+                            "ipProtocol": "-1"
+                          }
+                        ],
+                        "tags": [
+                          {
+                            "key": "Name",
+                            "value": "yv5/asg-yv5"
+                          }
+                        ],
+                        "vpcId": "vpc-0aa1f64ab99b207bd"
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_ec2.CfnSecurityGroup",
+                      "version": "2.95.1"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_ec2.SecurityGroup",
+                  "version": "2.95.1"
+                }
+              },
+              "InstanceRole": {
+                "id": "InstanceRole",
+                "path": "yv5/asg-yv5/InstanceRole",
+                "children": {
+                  "ImportInstanceRole": {
+                    "id": "ImportInstanceRole",
+                    "path": "yv5/asg-yv5/InstanceRole/ImportInstanceRole",
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.Resource",
+                      "version": "2.95.1"
+                    }
+                  },
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "yv5/asg-yv5/InstanceRole/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                      "aws:cdk:cloudformation:props": {
+                        "assumeRolePolicyDocument": {
+                          "Statement": [
+                            {
+                              "Action": "sts:AssumeRole",
+                              "Effect": "Allow",
+                              "Principal": {
+                                "Service": "ec2.amazonaws.com"
+                              }
+                            }
+                          ],
+                          "Version": "2012-10-17"
+                        },
+                        "tags": [
+                          {
+                            "key": "Name",
+                            "value": "yv5/asg-yv5"
+                          }
+                        ]
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_iam.CfnRole",
+                      "version": "2.95.1"
+                    }
+                  },
+                  "DefaultPolicy": {
+                    "id": "DefaultPolicy",
+                    "path": "yv5/asg-yv5/InstanceRole/DefaultPolicy",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "yv5/asg-yv5/InstanceRole/DefaultPolicy/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                          "aws:cdk:cloudformation:props": {
+                            "policyDocument": {
+                              "Statement": [
+                                {
+                                  "Action": [
+                                    "ecs:DeregisterContainerInstance",
+                                    "ecs:RegisterContainerInstance",
+                                    "ecs:Submit*"
+                                  ],
+                                  "Effect": "Allow",
+                                  "Resource": {
+                                    "Fn::GetAtt": [
+                                      "clusteryv5CBE5A6C9",
+                                      "Arn"
+                                    ]
+                                  }
+                                },
+                                {
+                                  "Action": [
+                                    "ecs:Poll",
+                                    "ecs:StartTelemetrySession"
+                                  ],
+                                  "Condition": {
+                                    "ArnEquals": {
+                                      "ecs:cluster": {
+                                        "Fn::GetAtt": [
+                                          "clusteryv5CBE5A6C9",
+                                          "Arn"
+                                        ]
+                                      }
+                                    }
+                                  },
+                                  "Effect": "Allow",
+                                  "Resource": "*"
+                                },
+                                {
+                                  "Action": [
+                                    "ecr:GetAuthorizationToken",
+                                    "ecs:DiscoverPollEndpoint",
+                                    "logs:CreateLogStream",
+                                    "logs:PutLogEvents"
+                                  ],
+                                  "Effect": "Allow",
+                                  "Resource": "*"
+                                }
+                              ],
+                              "Version": "2012-10-17"
+                            },
+                            "policyName": "asgyv5InstanceRoleDefaultPolicy661C2312",
+                            "roles": [
+                              {
+                                "Ref": "asgyv5InstanceRole2AD1AACF"
+                              }
+                            ]
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.aws_iam.CfnPolicy",
+                          "version": "2.95.1"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_iam.Policy",
+                      "version": "2.95.1"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_iam.Role",
+                  "version": "2.95.1"
+                }
+              },
+              "InstanceProfile": {
+                "id": "InstanceProfile",
+                "path": "yv5/asg-yv5/InstanceProfile",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::IAM::InstanceProfile",
+                  "aws:cdk:cloudformation:props": {
+                    "roles": [
+                      {
+                        "Ref": "asgyv5InstanceRole2AD1AACF"
+                      }
+                    ]
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_iam.CfnInstanceProfile",
+                  "version": "2.95.1"
+                }
+              },
+              "ImportedInstanceProfile": {
+                "id": "ImportedInstanceProfile",
+                "path": "yv5/asg-yv5/ImportedInstanceProfile",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.Resource",
+                  "version": "2.95.1"
+                }
+              },
+              "LaunchTemplate": {
+                "id": "LaunchTemplate",
+                "path": "yv5/asg-yv5/LaunchTemplate",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "yv5/asg-yv5/LaunchTemplate/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::LaunchTemplate",
+                      "aws:cdk:cloudformation:props": {
+                        "launchTemplateData": {
+                          "blockDeviceMappings": [
+                            {
+                              "deviceName": "/dev/sdh",
+                              "ebs": {
+                                "volumeSize": 10
+                              }
+                            }
+                          ],
+                          "iamInstanceProfile": {
+                            "arn": {
+                              "Fn::GetAtt": [
+                                "asgyv5InstanceProfile11CBAF43",
+                                "Arn"
+                              ]
+                            }
+                          },
+                          "imageId": {
+                            "Ref": "SsmParameterValueawsserviceecsoptimizedamiamazonlinux2gpurecommendedimageidC96584B6F00A464EAD1953AFF4B05118Parameter"
+                          },
+                          "instanceType": "g4dn.xlarge",
+                          "monitoring": {
+                            "enabled": false
+                          },
+                          "securityGroupIds": [
+                            {
+                              "Fn::GetAtt": [
+                                "asgyv5InstanceSecurityGroup27291980",
+                                "GroupId"
+                              ]
+                            }
+                          ],
+                          "tagSpecifications": [
+                            {
+                              "resourceType": "instance",
+                              "tags": [
+                                {
+                                  "key": "Name",
+                                  "value": "yv5/asg-yv5/LaunchTemplate"
+                                }
+                              ]
+                            },
+                            {
+                              "resourceType": "volume",
+                              "tags": [
+                                {
+                                  "key": "Name",
+                                  "value": "yv5/asg-yv5/LaunchTemplate"
+                                }
+                              ]
+                            }
+                          ],
+                          "userData": {
+                            "Fn::Base64": {
+                              "Fn::Join": [
+                                "",
+                                [
+                                  "#!/bin/bash\necho ECS_CLUSTER=",
+                                  {
+                                    "Ref": "clusteryv5CBE5A6C9"
+                                  },
+                                  " >> /etc/ecs/ecs.config\nsudo iptables --insert FORWARD 1 --in-interface docker+ --destination 169.254.169.254/32 --jump DROP\nsudo service iptables save\necho ECS_AWSVPC_BLOCK_IMDS=true >> /etc/ecs/ecs.config"
+                                ]
+                              ]
+                            }
+                          }
+                        },
+                        "tagSpecifications": [
+                          {
+                            "resourceType": "launch-template",
+                            "tags": [
+                              {
+                                "key": "Name",
+                                "value": "yv5/asg-yv5/LaunchTemplate"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_ec2.CfnLaunchTemplate",
+                      "version": "2.95.1"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_ec2.LaunchTemplate",
+                  "version": "2.95.1"
+                }
+              },
+              "ASG": {
+                "id": "ASG",
+                "path": "yv5/asg-yv5/ASG",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::AutoScaling::AutoScalingGroup",
+                  "aws:cdk:cloudformation:props": {
+                    "cooldown": "900",
+                    "desiredCapacity": "0",
+                    "launchTemplate": {
+                      "launchTemplateId": {
+                        "Ref": "asgyv5LaunchTemplate0BCE66E9"
+                      },
+                      "version": {
+                        "Fn::GetAtt": [
+                          "asgyv5LaunchTemplate0BCE66E9",
+                          "LatestVersionNumber"
+                        ]
+                      }
+                    },
+                    "maxSize": "1",
+                    "minSize": "0",
+                    "newInstancesProtectedFromScaleIn": true,
+                    "tags": [
+                      {
+                        "key": "Name",
+                        "value": "yv5/asg-yv5",
+                        "propagateAtLaunch": true
+                      }
+                    ],
+                    "vpcZoneIdentifier": [
+                      "subnet-00ff89223d2f5c75a",
+                      "subnet-08cec4b37fc2c7121",
+                      "subnet-0d71ef00f7ad81c28",
+                      "subnet-0f2623093b672dda4"
+                    ]
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_autoscaling.CfnAutoScalingGroup",
+                  "version": "2.95.1"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.aws_autoscaling.AutoScalingGroup",
+              "version": "2.95.1"
+            }
+          },
+          "SsmParameterValue:--aws--service--ecs--optimized-ami--amazon-linux-2--gpu--recommended--image_id:C96584B6-F00A-464E-AD19-53AFF4B05118.Parameter": {
+            "id": "SsmParameterValue:--aws--service--ecs--optimized-ami--amazon-linux-2--gpu--recommended--image_id:C96584B6-F00A-464E-AD19-53AFF4B05118.Parameter",
+            "path": "yv5/SsmParameterValue:--aws--service--ecs--optimized-ami--amazon-linux-2--gpu--recommended--image_id:C96584B6-F00A-464E-AD19-53AFF4B05118.Parameter",
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.CfnParameter",
+              "version": "2.95.1"
+            }
+          },
+          "SsmParameterValue:--aws--service--ecs--optimized-ami--amazon-linux-2--gpu--recommended--image_id:C96584B6-F00A-464E-AD19-53AFF4B05118": {
+            "id": "SsmParameterValue:--aws--service--ecs--optimized-ami--amazon-linux-2--gpu--recommended--image_id:C96584B6-F00A-464E-AD19-53AFF4B05118",
+            "path": "yv5/SsmParameterValue:--aws--service--ecs--optimized-ami--amazon-linux-2--gpu--recommended--image_id:C96584B6-F00A-464E-AD19-53AFF4B05118",
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.Resource",
+              "version": "2.95.1"
+            }
+          },
+          "cluster-yv5": {
+            "id": "cluster-yv5",
+            "path": "yv5/cluster-yv5",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "yv5/cluster-yv5/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::ECS::Cluster",
+                  "aws:cdk:cloudformation:props": {}
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_ecs.CfnCluster",
+                  "version": "2.95.1"
+                }
+              },
+              "cluster-yv5": {
+                "id": "cluster-yv5",
+                "path": "yv5/cluster-yv5/cluster-yv5",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::ECS::ClusterCapacityProviderAssociations",
+                  "aws:cdk:cloudformation:props": {
+                    "capacityProviders": [
+                      {
+                        "Ref": "asgyv5capacityprovider7B149DB6"
+                      }
+                    ],
+                    "cluster": {
+                      "Ref": "clusteryv5CBE5A6C9"
+                    },
+                    "defaultCapacityProviderStrategy": []
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_ecs.CfnClusterCapacityProviderAssociations",
+                  "version": "2.95.1"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.aws_ecs.Cluster",
+              "version": "2.95.1"
+            }
+          },
+          "asg-yv5-capacity-provider": {
+            "id": "asg-yv5-capacity-provider",
+            "path": "yv5/asg-yv5-capacity-provider",
+            "children": {
+              "asg-yv5-capacity-provider": {
+                "id": "asg-yv5-capacity-provider",
+                "path": "yv5/asg-yv5-capacity-provider/asg-yv5-capacity-provider",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::ECS::CapacityProvider",
+                  "aws:cdk:cloudformation:props": {
+                    "autoScalingGroupProvider": {
+                      "autoScalingGroupArn": {
+                        "Ref": "asgyv5ASGBF670AC3"
+                      },
+                      "managedScaling": {
+                        "status": "ENABLED",
+                        "targetCapacity": 100,
+                        "maximumScalingStepSize": 1,
+                        "minimumScalingStepSize": 1
+                      },
+                      "managedTerminationProtection": "ENABLED"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_ecs.CfnCapacityProvider",
+                  "version": "2.95.1"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.aws_ecs.AsgCapacityProvider",
+              "version": "2.95.1"
+            }
+          },
+          "dead": {
+            "id": "dead",
+            "path": "yv5/dead",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "yv5/dead/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::SQS::Queue",
+                  "aws:cdk:cloudformation:props": {
+                    "contentBasedDeduplication": true,
+                    "fifoQueue": true,
+                    "messageRetentionPeriod": 864000
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_sqs.CfnQueue",
+                  "version": "2.95.1"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.aws_sqs.Queue",
+              "version": "2.95.1"
+            }
+          },
+          "video": {
+            "id": "video",
+            "path": "yv5/video",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "yv5/video/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::SQS::Queue",
+                  "aws:cdk:cloudformation:props": {
+                    "contentBasedDeduplication": true,
+                    "fifoQueue": true,
+                    "redrivePolicy": {
+                      "deadLetterTargetArn": {
+                        "Fn::GetAtt": [
+                          "dead9A6F9BCE",
+                          "Arn"
+                        ]
+                      },
+                      "maxReceiveCount": 600
+                    },
+                    "visibilityTimeout": 7200
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_sqs.CfnQueue",
+                  "version": "2.95.1"
+                }
+              },
+              "Policy": {
+                "id": "Policy",
+                "path": "yv5/video/Policy",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "yv5/video/Policy/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::SQS::QueuePolicy",
+                      "aws:cdk:cloudformation:props": {
+                        "policyDocument": {
+                          "Statement": [
+                            {
+                              "Action": "sqs:*",
+                              "Effect": "Allow",
+                              "Principal": {
+                                "AWS": "arn:aws:iam::548531997526:role/DeepSeaAI"
+                              },
+                              "Resource": {
+                                "Fn::GetAtt": [
+                                  "videoC740E53C",
+                                  "Arn"
+                                ]
+                              },
+                              "Sid": "allow-sns-messages"
+                            }
+                          ],
+                          "Version": "2012-10-17"
+                        },
+                        "queues": [
+                          {
+                            "Ref": "videoC740E53C"
+                          }
+                        ]
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_sqs.CfnQueuePolicy",
+                      "version": "2.95.1"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_sqs.QueuePolicy",
+                  "version": "2.95.1"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.aws_sqs.Queue",
+              "version": "2.95.1"
+            }
+          },
+          "track": {
+            "id": "track",
+            "path": "yv5/track",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "yv5/track/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::SQS::Queue",
+                  "aws:cdk:cloudformation:props": {
+                    "contentBasedDeduplication": true,
+                    "fifoQueue": true,
+                    "redrivePolicy": {
+                      "deadLetterTargetArn": {
+                        "Fn::GetAtt": [
+                          "dead9A6F9BCE",
+                          "Arn"
+                        ]
+                      },
+                      "maxReceiveCount": 600
+                    },
+                    "visibilityTimeout": 7200
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_sqs.CfnQueue",
+                  "version": "2.95.1"
+                }
+              },
+              "Policy": {
+                "id": "Policy",
+                "path": "yv5/track/Policy",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "yv5/track/Policy/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::SQS::QueuePolicy",
+                      "aws:cdk:cloudformation:props": {
+                        "policyDocument": {
+                          "Statement": [
+                            {
+                              "Action": "sqs:*",
+                              "Effect": "Allow",
+                              "Principal": {
+                                "AWS": "arn:aws:iam::548531997526:role/DeepSeaAI"
+                              },
+                              "Resource": {
+                                "Fn::GetAtt": [
+                                  "trackC8D9330E",
+                                  "Arn"
+                                ]
+                              },
+                              "Sid": "allow-sns-messages"
+                            }
+                          ],
+                          "Version": "2012-10-17"
+                        },
+                        "queues": [
+                          {
+                            "Ref": "trackC8D9330E"
+                          }
+                        ]
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_sqs.CfnQueuePolicy",
+                      "version": "2.95.1"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_sqs.QueuePolicy",
+                  "version": "2.95.1"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.aws_sqs.Queue",
+              "version": "2.95.1"
+            }
+          },
+          "video-queue-deadletter": {
+            "id": "video-queue-deadletter",
+            "path": "yv5/video-queue-deadletter",
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.CfnOutput",
+              "version": "2.95.1"
+            }
+          },
+          "video-queue-deadletter-arn": {
+            "id": "video-queue-deadletter-arn",
+            "path": "yv5/video-queue-deadletter-arn",
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.CfnOutput",
+              "version": "2.95.1"
+            }
+          },
+          "video-queue": {
+            "id": "video-queue",
+            "path": "yv5/video-queue",
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.CfnOutput",
+              "version": "2.95.1"
+            }
+          },
+          "video-queue-arn": {
+            "id": "video-queue-arn",
+            "path": "yv5/video-queue-arn",
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.CfnOutput",
+              "version": "2.95.1"
+            }
+          },
+          "track-queue": {
+            "id": "track-queue",
+            "path": "yv5/track-queue",
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.CfnOutput",
+              "version": "2.95.1"
+            }
+          },
+          "track-queue-arn": {
+            "id": "track-queue-arn",
+            "path": "yv5/track-queue-arn",
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.CfnOutput",
+              "version": "2.95.1"
+            }
+          },
+          "video-": {
+            "id": "video-",
+            "path": "yv5/video-",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "yv5/video-/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::S3::Bucket",
+                  "aws:cdk:cloudformation:props": {}
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_s3.CfnBucket",
+                  "version": "2.95.1"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.aws_s3.Bucket",
+              "version": "2.95.1"
+            }
+          },
+          "tracks-": {
+            "id": "tracks-",
+            "path": "yv5/tracks-",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "yv5/tracks-/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::S3::Bucket",
+                  "aws:cdk:cloudformation:props": {}
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_s3.CfnBucket",
+                  "version": "2.95.1"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.aws_s3.Bucket",
+              "version": "2.95.1"
+            }
+          },
+          "dsai": {
+            "id": "dsai",
+            "path": "yv5/dsai",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "yv5/dsai/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::Logs::LogGroup",
+                  "aws:cdk:cloudformation:props": {
+                    "logGroupName": "/ecs/yv5",
+                    "retentionInDays": 30
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_logs.CfnLogGroup",
+                  "version": "2.95.1"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.aws_logs.LogGroup",
+              "version": "2.95.1"
+            }
+          },
+          "DeepSeaAI-ecs-taskexec-sqs-s3-log": {
+            "id": "DeepSeaAI-ecs-taskexec-sqs-s3-log",
+            "path": "yv5/DeepSeaAI-ecs-taskexec-sqs-s3-log",
+            "children": {
+              "ImportDeepSeaAI-ecs-taskexec-sqs-s3-log": {
+                "id": "ImportDeepSeaAI-ecs-taskexec-sqs-s3-log",
+                "path": "yv5/DeepSeaAI-ecs-taskexec-sqs-s3-log/ImportDeepSeaAI-ecs-taskexec-sqs-s3-log",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.Resource",
+                  "version": "2.95.1"
+                }
+              },
+              "Resource": {
+                "id": "Resource",
+                "path": "yv5/DeepSeaAI-ecs-taskexec-sqs-s3-log/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                  "aws:cdk:cloudformation:props": {
+                    "assumeRolePolicyDocument": {
+                      "Statement": [
+                        {
+                          "Action": "sts:AssumeRole",
+                          "Effect": "Allow",
+                          "Principal": {
+                            "Service": "ecs-tasks.amazonaws.com"
+                          }
+                        }
+                      ],
+                      "Version": "2012-10-17"
+                    },
+                    "managedPolicyArns": [
+                      {
+                        "Fn::Join": [
+                          "",
+                          [
+                            "arn:",
+                            {
+                              "Ref": "AWS::Partition"
+                            },
+                            ":iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy"
+                          ]
+                        ]
+                      }
+                    ]
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_iam.CfnRole",
+                  "version": "2.95.1"
+                }
+              },
+              "DefaultPolicy": {
+                "id": "DefaultPolicy",
+                "path": "yv5/DeepSeaAI-ecs-taskexec-sqs-s3-log/DefaultPolicy",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "yv5/DeepSeaAI-ecs-taskexec-sqs-s3-log/DefaultPolicy/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                      "aws:cdk:cloudformation:props": {
+                        "policyDocument": {
+                          "Statement": [
+                            {
+                              "Action": [
+                                "logs:*",
+                                "s3:*",
+                                "sqs:*"
+                              ],
+                              "Effect": "Allow",
+                              "Resource": "*"
+                            },
+                            {
+                              "Action": [
+                                "logs:CreateLogStream",
+                                "logs:PutLogEvents"
+                              ],
+                              "Effect": "Allow",
+                              "Resource": {
+                                "Fn::GetAtt": [
+                                  "dsaiCECB5963",
+                                  "Arn"
+                                ]
+                              }
+                            },
+                            {
+                              "Action": [
+                                "sqs:ChangeMessageVisibility",
+                                "sqs:DeleteMessage",
+                                "sqs:GetQueueAttributes",
+                                "sqs:GetQueueUrl",
+                                "sqs:ReceiveMessage"
+                              ],
+                              "Effect": "Allow",
+                              "Resource": [
+                                {
+                                  "Fn::GetAtt": [
+                                    "trackC8D9330E",
+                                    "Arn"
+                                  ]
+                                },
+                                {
+                                  "Fn::GetAtt": [
+                                    "videoC740E53C",
+                                    "Arn"
+                                  ]
+                                }
+                              ]
+                            }
+                          ],
+                          "Version": "2012-10-17"
+                        },
+                        "policyName": "DeepSeaAIecstaskexecsqss3logDefaultPolicy9E895914",
+                        "roles": [
+                          {
+                            "Ref": "DeepSeaAIecstaskexecsqss3log0BADEC52"
+                          }
+                        ]
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_iam.CfnPolicy",
+                      "version": "2.95.1"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_iam.Policy",
+                  "version": "2.95.1"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.aws_iam.Role",
+              "version": "2.95.1"
+            }
+          },
+          "strongsort-yolov5": {
+            "id": "strongsort-yolov5",
+            "path": "yv5/strongsort-yolov5",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "yv5/strongsort-yolov5/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::ECS::TaskDefinition",
+                  "aws:cdk:cloudformation:props": {
+                    "containerDefinitions": [
+                      {
+                        "command": [
+                          "dettrack",
+                          "-c",
+                          "s3://deepsea-ai-548531997526-track-conf/strong_sort_benthic.yaml",
+                          "--model-s3",
+                          "s3://deepsea-ai-548531997526-models/yolov5x_mbay_benthic_model.tar.gz"
+                        ],
+                        "essential": true,
+                        "image": "548531997526.dkr.ecr.us-west-2.amazonaws.com/mbari/strongsort-yolov5:b8c720b",
+                        "memoryReservation": 3072,
+                        "name": "yv5",
+                        "stopTimeout": 60,
+                        "logConfiguration": {
+                          "logDriver": "awslogs",
+                          "options": {
+                            "awslogs-group": {
+                              "Ref": "dsaiCECB5963"
+                            },
+                            "awslogs-stream-prefix": "task",
+                            "awslogs-region": "us-west-2"
+                          }
+                        },
+                        "environment": [
+                          {
+                            "name": "PROCESSOR",
+                            "value": "yv5"
+                          },
+                          {
+                            "name": "VIDEO_QUEUE",
+                            "value": {
+                              "Fn::GetAtt": [
+                                "videoC740E53C",
+                                "QueueName"
+                              ]
+                            }
+                          },
+                          {
+                            "name": "TRACK_QUEUE",
+                            "value": {
+                              "Fn::GetAtt": [
+                                "trackC8D9330E",
+                                "QueueName"
+                              ]
+                            }
+                          },
+                          {
+                            "name": "DEAD_QUEUE",
+                            "value": {
+                              "Fn::GetAtt": [
+                                "dead9A6F9BCE",
+                                "QueueName"
+                              ]
+                            }
+                          },
+                          {
+                            "name": "VIDEO_BUCKET",
+                            "value": {
+                              "Ref": "videoD6CC678B"
+                            }
+                          },
+                          {
+                            "name": "TRACK_BUCKET",
+                            "value": {
+                              "Ref": "tracksAF817E35"
+                            }
+                          },
+                          {
+                            "name": "AWS_REGION",
+                            "value": "us-west-2"
+                          },
+                          {
+                            "name": "DEFAULT_MAX_CALL_ATTEMPTS",
+                            "value": "6"
+                          }
+                        ],
+                        "resourceRequirements": [
+                          {
+                            "type": "GPU",
+                            "value": "1"
+                          }
+                        ]
+                      }
+                    ],
+                    "executionRoleArn": {
+                      "Fn::GetAtt": [
+                        "DeepSeaAIecstaskexecsqss3log0BADEC52",
+                        "Arn"
+                      ]
+                    },
+                    "family": "yv5strongsortyolov5D0200636",
+                    "networkMode": "bridge",
+                    "requiresCompatibilities": [
+                      "EC2"
+                    ],
+                    "taskRoleArn": {
+                      "Fn::GetAtt": [
+                        "DeepSeaAIecstaskexecsqss3log0BADEC52",
+                        "Arn"
+                      ]
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_ecs.CfnTaskDefinition",
+                  "version": "2.95.1"
+                }
+              },
+              "yv5": {
+                "id": "yv5",
+                "path": "yv5/strongsort-yolov5/yv5",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_ecs.ContainerDefinition",
+                  "version": "2.95.1"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.aws_ecs.Ec2TaskDefinition",
+              "version": "2.95.1"
+            }
+          },
+          "service-[object Object]": {
+            "id": "service-[object Object]",
+            "path": "yv5/service-[object Object]",
+            "children": {
+              "Service": {
+                "id": "Service",
+                "path": "yv5/service-[object Object]/Service",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::ECS::Service",
+                  "aws:cdk:cloudformation:props": {
+                    "cluster": {
+                      "Ref": "clusteryv5CBE5A6C9"
+                    },
+                    "deploymentConfiguration": {
+                      "maximumPercent": 200,
+                      "minimumHealthyPercent": 50,
+                      "alarms": {
+                        "alarmNames": [],
+                        "enable": false,
+                        "rollback": false
+                      }
+                    },
+                    "desiredCount": 0,
+                    "enableEcsManagedTags": false,
+                    "launchType": "EC2",
+                    "placementStrategies": [
+                      {
+                        "type": "spread",
+                        "field": "instanceId"
+                      }
+                    ],
+                    "schedulingStrategy": "REPLICA",
+                    "taskDefinition": {
+                      "Ref": "strongsortyolov5469D7B5D"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_ecs.CfnService",
+                  "version": "2.95.1"
+                }
+              },
+              "ScalingRole": {
+                "id": "ScalingRole",
+                "path": "yv5/service-[object Object]/ScalingRole",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.Resource",
+                  "version": "2.95.1"
+                }
+              },
+              "TaskCount": {
+                "id": "TaskCount",
+                "path": "yv5/service-[object Object]/TaskCount",
+                "children": {
+                  "Target": {
+                    "id": "Target",
+                    "path": "yv5/service-[object Object]/TaskCount/Target",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "yv5/service-[object Object]/TaskCount/Target/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::ApplicationAutoScaling::ScalableTarget",
+                          "aws:cdk:cloudformation:props": {
+                            "maxCapacity": 1,
+                            "minCapacity": 0,
+                            "resourceId": {
+                              "Fn::Join": [
+                                "",
+                                [
+                                  "service/",
+                                  {
+                                    "Ref": "clusteryv5CBE5A6C9"
+                                  },
+                                  "/",
+                                  {
+                                    "Fn::GetAtt": [
+                                      "serviceobjectObjectService10D8676F",
+                                      "Name"
+                                    ]
+                                  }
+                                ]
+                              ]
+                            },
+                            "roleArn": "arn:aws:iam::548531997526:role/aws-service-role/ecs.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_ECSService",
+                            "scalableDimension": "ecs:service:DesiredCount",
+                            "serviceNamespace": "ecs"
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.aws_applicationautoscaling.CfnScalableTarget",
+                          "version": "2.95.1"
+                        }
+                      },
+                      "scaling-[object Object]": {
+                        "id": "scaling-[object Object]",
+                        "path": "yv5/service-[object Object]/TaskCount/Target/scaling-[object Object]",
+                        "children": {
+                          "LowerPolicy": {
+                            "id": "LowerPolicy",
+                            "path": "yv5/service-[object Object]/TaskCount/Target/scaling-[object Object]/LowerPolicy",
+                            "children": {
+                              "Resource": {
+                                "id": "Resource",
+                                "path": "yv5/service-[object Object]/TaskCount/Target/scaling-[object Object]/LowerPolicy/Resource",
+                                "attributes": {
+                                  "aws:cdk:cloudformation:type": "AWS::ApplicationAutoScaling::ScalingPolicy",
+                                  "aws:cdk:cloudformation:props": {
+                                    "policyName": "yv5serviceobjectObjectTaskCountTargetscalingobjectObjectLowerPolicyDA1FB66F",
+                                    "policyType": "StepScaling",
+                                    "scalingTargetId": {
+                                      "Ref": "serviceobjectObjectTaskCountTargetBB9BB221"
+                                    },
+                                    "stepScalingPolicyConfiguration": {
+                                      "adjustmentType": "ChangeInCapacity",
+                                      "cooldown": 300,
+                                      "metricAggregationType": "Average",
+                                      "stepAdjustments": [
+                                        {
+                                          "metricIntervalUpperBound": 0,
+                                          "scalingAdjustment": -1
+                                        }
+                                      ]
+                                    }
+                                  }
+                                },
+                                "constructInfo": {
+                                  "fqn": "aws-cdk-lib.aws_applicationautoscaling.CfnScalingPolicy",
+                                  "version": "2.95.1"
+                                }
+                              }
+                            },
+                            "constructInfo": {
+                              "fqn": "aws-cdk-lib.aws_applicationautoscaling.StepScalingAction",
+                              "version": "2.95.1"
+                            }
+                          },
+                          "LowerAlarm": {
+                            "id": "LowerAlarm",
+                            "path": "yv5/service-[object Object]/TaskCount/Target/scaling-[object Object]/LowerAlarm",
+                            "children": {
+                              "Resource": {
+                                "id": "Resource",
+                                "path": "yv5/service-[object Object]/TaskCount/Target/scaling-[object Object]/LowerAlarm/Resource",
+                                "attributes": {
+                                  "aws:cdk:cloudformation:type": "AWS::CloudWatch::Alarm",
+                                  "aws:cdk:cloudformation:props": {
+                                    "alarmActions": [
+                                      {
+                                        "Ref": "serviceobjectObjectTaskCountTargetscalingobjectObjectLowerPolicyAF15B713"
+                                      }
+                                    ],
+                                    "alarmDescription": "Lower threshold scaling alarm",
+                                    "comparisonOperator": "LessThanOrEqualToThreshold",
+                                    "dimensions": [
+                                      {
+                                        "name": "QueueName",
+                                        "value": {
+                                          "Fn::GetAtt": [
+                                            "videoC740E53C",
+                                            "QueueName"
+                                          ]
+                                        }
+                                      }
+                                    ],
+                                    "evaluationPeriods": 1,
+                                    "metricName": "ApproximateNumberOfMessagesVisible",
+                                    "namespace": "AWS/SQS",
+                                    "period": 60,
+                                    "statistic": "Average",
+                                    "threshold": 0
+                                  }
+                                },
+                                "constructInfo": {
+                                  "fqn": "aws-cdk-lib.aws_cloudwatch.CfnAlarm",
+                                  "version": "2.95.1"
+                                }
+                              }
+                            },
+                            "constructInfo": {
+                              "fqn": "aws-cdk-lib.aws_cloudwatch.Alarm",
+                              "version": "2.95.1"
+                            }
+                          },
+                          "UpperPolicy": {
+                            "id": "UpperPolicy",
+                            "path": "yv5/service-[object Object]/TaskCount/Target/scaling-[object Object]/UpperPolicy",
+                            "children": {
+                              "Resource": {
+                                "id": "Resource",
+                                "path": "yv5/service-[object Object]/TaskCount/Target/scaling-[object Object]/UpperPolicy/Resource",
+                                "attributes": {
+                                  "aws:cdk:cloudformation:type": "AWS::ApplicationAutoScaling::ScalingPolicy",
+                                  "aws:cdk:cloudformation:props": {
+                                    "policyName": "yv5serviceobjectObjectTaskCountTargetscalingobjectObjectUpperPolicy294DD061",
+                                    "policyType": "StepScaling",
+                                    "scalingTargetId": {
+                                      "Ref": "serviceobjectObjectTaskCountTargetBB9BB221"
+                                    },
+                                    "stepScalingPolicyConfiguration": {
+                                      "adjustmentType": "ChangeInCapacity",
+                                      "cooldown": 300,
+                                      "metricAggregationType": "Average",
+                                      "stepAdjustments": [
+                                        {
+                                          "metricIntervalLowerBound": 0,
+                                          "scalingAdjustment": 1
+                                        }
+                                      ]
+                                    }
+                                  }
+                                },
+                                "constructInfo": {
+                                  "fqn": "aws-cdk-lib.aws_applicationautoscaling.CfnScalingPolicy",
+                                  "version": "2.95.1"
+                                }
+                              }
+                            },
+                            "constructInfo": {
+                              "fqn": "aws-cdk-lib.aws_applicationautoscaling.StepScalingAction",
+                              "version": "2.95.1"
+                            }
+                          },
+                          "UpperAlarm": {
+                            "id": "UpperAlarm",
+                            "path": "yv5/service-[object Object]/TaskCount/Target/scaling-[object Object]/UpperAlarm",
+                            "children": {
+                              "Resource": {
+                                "id": "Resource",
+                                "path": "yv5/service-[object Object]/TaskCount/Target/scaling-[object Object]/UpperAlarm/Resource",
+                                "attributes": {
+                                  "aws:cdk:cloudformation:type": "AWS::CloudWatch::Alarm",
+                                  "aws:cdk:cloudformation:props": {
+                                    "alarmActions": [
+                                      {
+                                        "Ref": "serviceobjectObjectTaskCountTargetscalingobjectObjectUpperPolicyD7FF12DC"
+                                      }
+                                    ],
+                                    "alarmDescription": "Upper threshold scaling alarm",
+                                    "comparisonOperator": "GreaterThanOrEqualToThreshold",
+                                    "dimensions": [
+                                      {
+                                        "name": "QueueName",
+                                        "value": {
+                                          "Fn::GetAtt": [
+                                            "videoC740E53C",
+                                            "QueueName"
+                                          ]
+                                        }
+                                      }
+                                    ],
+                                    "evaluationPeriods": 1,
+                                    "metricName": "ApproximateNumberOfMessagesVisible",
+                                    "namespace": "AWS/SQS",
+                                    "period": 60,
+                                    "statistic": "Average",
+                                    "threshold": 1
+                                  }
+                                },
+                                "constructInfo": {
+                                  "fqn": "aws-cdk-lib.aws_cloudwatch.CfnAlarm",
+                                  "version": "2.95.1"
+                                }
+                              }
+                            },
+                            "constructInfo": {
+                              "fqn": "aws-cdk-lib.aws_cloudwatch.Alarm",
+                              "version": "2.95.1"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.aws_applicationautoscaling.StepScalingPolicy",
+                          "version": "2.95.1"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_applicationautoscaling.ScalableTarget",
+                      "version": "2.95.1"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_ecs.ScalableTaskCount",
+                  "version": "2.95.1"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.aws_ecs.Ec2Service",
+              "version": "2.95.1"
+            }
+          },
+          "scale-out": {
+            "id": "scale-out",
+            "path": "yv5/scale-out",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "yv5/scale-out/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::CloudWatch::Alarm",
+                  "aws:cdk:cloudformation:props": {
+                    "alarmActions": [
+                      {
+                        "Ref": "scaleoutaction240431FD"
+                      }
+                    ],
+                    "comparisonOperator": "GreaterThanOrEqualToThreshold",
+                    "dimensions": [
+                      {
+                        "name": "QueueName",
+                        "value": {
+                          "Fn::GetAtt": [
+                            "videoC740E53C",
+                            "QueueName"
+                          ]
+                        }
+                      }
+                    ],
+                    "evaluationPeriods": 1,
+                    "metricName": "ApproximateNumberOfMessagesVisible",
+                    "namespace": "AWS/SQS",
+                    "period": 60,
+                    "statistic": "Average",
+                    "threshold": 1,
+                    "treatMissingData": "notBreaching"
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_cloudwatch.CfnAlarm",
+                  "version": "2.95.1"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.aws_cloudwatch.Alarm",
+              "version": "2.95.1"
+            }
+          },
+          "scale-out-action": {
+            "id": "scale-out-action",
+            "path": "yv5/scale-out-action",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "yv5/scale-out-action/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::AutoScaling::ScalingPolicy",
+                  "aws:cdk:cloudformation:props": {
+                    "adjustmentType": "ChangeInCapacity",
+                    "autoScalingGroupName": {
+                      "Ref": "asgyv5ASGBF670AC3"
+                    },
+                    "estimatedInstanceWarmup": 120,
+                    "policyType": "StepScaling",
+                    "stepAdjustments": [
+                      {
+                        "metricIntervalLowerBound": 0,
+                        "scalingAdjustment": 1
+                      }
+                    ]
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_autoscaling.CfnScalingPolicy",
+                  "version": "2.95.1"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.aws_autoscaling.StepScalingAction",
+              "version": "2.95.1"
+            }
+          },
+          "scale-in": {
+            "id": "scale-in",
+            "path": "yv5/scale-in",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "yv5/scale-in/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::CloudWatch::Alarm",
+                  "aws:cdk:cloudformation:props": {
+                    "alarmActions": [
+                      {
+                        "Ref": "scaleinactionDA2EF43D"
+                      }
+                    ],
+                    "comparisonOperator": "LessThanOrEqualToThreshold",
+                    "dimensions": [
+                      {
+                        "name": "QueueName",
+                        "value": {
+                          "Fn::GetAtt": [
+                            "videoC740E53C",
+                            "QueueName"
+                          ]
+                        }
+                      }
+                    ],
+                    "evaluationPeriods": 1,
+                    "metricName": "ApproximateNumberOfMessagesVisible",
+                    "namespace": "AWS/SQS",
+                    "period": 3600,
+                    "statistic": "Average",
+                    "threshold": 0,
+                    "treatMissingData": "breaching"
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_cloudwatch.CfnAlarm",
+                  "version": "2.95.1"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.aws_cloudwatch.Alarm",
+              "version": "2.95.1"
+            }
+          },
+          "scale-in-action": {
+            "id": "scale-in-action",
+            "path": "yv5/scale-in-action",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "yv5/scale-in-action/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::AutoScaling::ScalingPolicy",
+                  "aws:cdk:cloudformation:props": {
+                    "adjustmentType": "ChangeInCapacity",
+                    "autoScalingGroupName": {
+                      "Ref": "asgyv5ASGBF670AC3"
+                    },
+                    "policyType": "StepScaling",
+                    "stepAdjustments": [
+                      {
+                        "metricIntervalUpperBound": 0,
+                        "scalingAdjustment": -1
+                      }
+                    ]
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_autoscaling.CfnScalingPolicy",
+                  "version": "2.95.1"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.aws_autoscaling.StepScalingAction",
+              "version": "2.95.1"
+            }
+          },
+          "CDKMetadata": {
+            "id": "CDKMetadata",
+            "path": "yv5/CDKMetadata",
+            "children": {
+              "Default": {
+                "id": "Default",
+                "path": "yv5/CDKMetadata/Default",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.CfnResource",
+                  "version": "2.95.1"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "constructs.Construct",
+              "version": "10.2.69"
+            }
+          },
+          "BootstrapVersion": {
+            "id": "BootstrapVersion",
+            "path": "yv5/BootstrapVersion",
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.CfnParameter",
+              "version": "2.95.1"
+            }
+          },
+          "CheckBootstrapVersion": {
+            "id": "CheckBootstrapVersion",
+            "path": "yv5/CheckBootstrapVersion",
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.CfnRule",
+              "version": "2.95.1"
+            }
+          }
+        },
+        "constructInfo": {
+          "fqn": "aws-cdk-lib.Stack",
+          "version": "2.95.1"
+        }
+      },
+      "Tree": {
+        "id": "Tree",
+        "path": "Tree",
+        "constructInfo": {
+          "fqn": "constructs.Construct",
+          "version": "10.2.69"
+        }
+      }
+    },
+    "constructInfo": {
+      "fqn": "aws-cdk-lib.App",
+      "version": "2.95.1"
+    }
+  }
+}
