@@ -1,0 +1,5 @@
+langchain==0.0.255
+openai
+zhipuai
+websocket-client
+elasticsearch
