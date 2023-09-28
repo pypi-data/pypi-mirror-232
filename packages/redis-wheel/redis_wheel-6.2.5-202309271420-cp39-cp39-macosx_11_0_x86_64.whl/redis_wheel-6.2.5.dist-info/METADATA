@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: redis-wheel
+Version: 6.2.5
+Summary: Wheels that bundle precompiled redis-server and redis-cli binaries for the appropriate platform
+Home-page: https://github.com/bplevin36/redis-wheel
+License: MIT
+Keywords: redis,server
+Author: Benjamin Levin
+Author-email: bplevin36@gmail.com
+Requires-Python: >=3,<4
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Project-URL: Repository, https://github.com/bplevin36/redis-wheel
+Description-Content-Type: text/markdown
+
+# redis-wheel
+
+To install the pre-compiled Redis binaries:
+
+```sh
+pip install redis-wheel==<redis-version>
+```
+
+Supported versions of Redis:
+
+- `6.2.5`
+
+Supported platforms:
+
+- `manylinux2014_x86_64`
+- `macosx_11_0_x86_64`
+
+Supported python versions:
+
+- `cp39`
+
+To get the paths of pre-compiled Redis binaries:
+
+```python
+import redis_wheel
+
+redis_wheel.REDIS_SERVER_PATH  # redis-server
+redis_wheel.REDIS_CLI_PATH     # redis-cli
+```
+
