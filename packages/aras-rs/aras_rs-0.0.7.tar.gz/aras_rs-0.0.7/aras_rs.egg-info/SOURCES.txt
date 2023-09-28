@@ -1,0 +1,11 @@
+CHANGELOG.txt
+LICENSE.txt
+MANIFEST.in
+README.txt
+setup.py
+aras_rs/__init__.py
+aras_rs.egg-info/PKG-INFO
+aras_rs.egg-info/SOURCES.txt
+aras_rs.egg-info/dependency_links.txt
+aras_rs.egg-info/requires.txt
+aras_rs.egg-info/top_level.txt

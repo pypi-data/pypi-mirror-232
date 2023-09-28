@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: aras-rs
+Version: 0.0.7
+Summary: A recommender system and calculating metrics such as Top@k, Recall@k, and One-hit accuracy for recommender systems
+Home-page: https://aras.kntu.ac.ir/
+Author: Alireza Jahani
+Author-email: alirezajahani.earno@gmail.com
+License: MIT
+Description: This code is a recommender system and assesses the performance of recommendation systems by calculating metrics such as Top@k, Recall@k, and One-hit accuracy.
+        
+        CHANGELOG
+        ========
+        
+        0.0.7 (27/9/2023)
+        ----------------
+        First Release
+Keywords: Recommender_system
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
