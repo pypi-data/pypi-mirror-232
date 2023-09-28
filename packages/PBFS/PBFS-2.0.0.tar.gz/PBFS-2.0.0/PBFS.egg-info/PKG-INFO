@@ -1,0 +1,63 @@
+Metadata-Version: 2.1
+Name: PBFS
+Version: 2.0.0
+Summary: Performance Based Feature selection Technique: Prototype
+Home-page: https://github.com/hongzhu6129/HidenFeatures
+Author: Movin Fernandes, Prof. Hong Zhu
+Author-email: movin.fernandes@hotmail.com, hzhu@brookes.ac.uk
+Maintainer: Movin Fernandes
+Maintainer-email: movin.fernandes@hotmail.com
+License: MIT
+Keywords: Feature selection,Machine learning,Feature engineering,Performance based,open source
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+This is a PBFS (Performance-Based Feature Selection) Library.
+
+The library has functions which predict the effect of features on ML models based on pre-trained ML models. 
+Library owners: Movin Fernandes, Hong Zhu.
+
+This was created as a part of Dissertation project for MSc Data Analytics alongside Research.
+
+===========================================================================================================================
+
+
+
+
+CHANGE LOG For Performance based Feature Selection Technique
+
+
+===========================================================================================================================
+
+Latest Changes
+
+/\
+
+||        2.0.0 --  Latest update - Consists of updates to descriptions, python code, metadata.
+
+||        1.0.8 --  bug fixes
+
+||        1.0.7 --  path fixes v4
+
+||        1.0.6 --  path fixes v3
+
+||        1.0.5 --  path fixes v2
+
+||        1.0.4 --  path fixes
+
+||        1.0.3 --  path fixes for users to use the function call
+
+||        1.0.2 --  bug fixes for users to use the function call
+
+||        1.0.0.2 --  Bug fixes, path fixes.
+
+||        1.0.0.1 --  Bug fixes, path fixes.
+
+||        1.0.0 -- First Release to PYPI
+
+/\
+
+Oldest changes
+
+
+
