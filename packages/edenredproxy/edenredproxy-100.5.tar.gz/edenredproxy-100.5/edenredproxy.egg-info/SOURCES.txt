@@ -1,0 +1,8 @@
+README.md
+setup.cfg
+setup.py
+edenredproxy/__init__.py
+edenredproxy.egg-info/PKG-INFO
+edenredproxy.egg-info/SOURCES.txt
+edenredproxy.egg-info/dependency_links.txt
+edenredproxy.egg-info/top_level.txt
