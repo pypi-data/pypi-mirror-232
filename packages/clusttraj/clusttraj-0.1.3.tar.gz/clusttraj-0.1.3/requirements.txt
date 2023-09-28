@@ -1,0 +1,6 @@
+numpy
+rmsd
+scipy
+scikit-learn
+matplotlib
+openbabel-wheel>=3.0
