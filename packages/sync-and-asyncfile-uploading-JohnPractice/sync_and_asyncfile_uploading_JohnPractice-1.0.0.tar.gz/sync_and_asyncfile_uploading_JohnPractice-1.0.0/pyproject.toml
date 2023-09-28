@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "upload_file_with_request"
+version = "0.0.1"
+authors = [
+  "JohnPractice <rezamosavian1010@gmail.com>" ,
+]
+description = "A file uploader to API url"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+[build-system]
+requires = ["aiohttp>=3.8.5","wheel"]
+build-backend = "setuptools.build_meta"
+
+
+[project.urls]
+"Homepage" = "https://github.com/johnPractice/upload_file_with_request"
+"Bug Tracker" = "https://github.com/johnPractice/upload_file_with_request/issues"

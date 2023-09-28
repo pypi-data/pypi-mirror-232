@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: sync-and-asyncfile-uploading-JohnPractice
+Version: 1.0.0
+Summary: Useful functions for uploading file 
+Home-page: UNKNOWN
+Author: John Practice
+Author-email: rezamosavian1014@gmail.com
+License: UNKNOWN
+Keywords: python,first package
+Platform: UNKNOWN
+Classifier: Intended Audience :: Education
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Operating System :: OS Independent
+License-File: LICENSE
+
+Useful functions for uploading file with supporting `sync` and `async`
+
