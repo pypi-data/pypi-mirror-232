@@ -1,0 +1,3 @@
+[console_scripts]
+pypi-deploy-test=pypi_deploy_test.main:main
+
