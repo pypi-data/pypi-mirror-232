@@ -1,0 +1,3 @@
+include ihk_ausbildungsnachweis_utilities/schemas/*.xsd
+include ihk_ausbildungsnachweis_utilities/schemas/*.json
+include ihk_ausbildungsnachweis_utilities/templates/*.docx
