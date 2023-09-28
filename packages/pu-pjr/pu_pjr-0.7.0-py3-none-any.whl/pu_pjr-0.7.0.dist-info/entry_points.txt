@@ -1,0 +1,4 @@
+[console_scripts]
+quickcd=pu_pjr.changing_dirs.__main__:main
+quickplot=pu_pjr.plotting.__main__:main
+
