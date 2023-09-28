@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: natchecker
+Version: 0.2.1
+Summary: check nat type by stun server.
+Home-page: https://github.com/onewesong/natchecker
+Author: onewesong
+Author-email: onewesong@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: argparse
+Requires-Dist: ipaddress
+Requires-Dist: netifaces
+
+# natchecker
+check nat type by stun server.
+## usage
+```
+natchecker -i ppp0
+```
+## install
+```
+pip3 install natchecker
+```
+
+
