@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "remocker"
+version = "0.1.0"
+description = "mocking http request more easy"
+authors = ["Jrog <jrog612@gmail.com>"]
+license = "MIT"
+repository = "https://github.com/jrog612/remocker"
+readme = 'README.md'
+packages = [{include = "remocker.py"}]
+
+
+[tool.poetry.dependencies]
+python = "^3.7"
+httpretty = "^1.1.4"
+
+[tool.poetry.group.dev.dependencies]
+requests = "^2.31.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
