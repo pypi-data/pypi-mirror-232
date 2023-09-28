@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: Eu0-ng-test
+Version: 1.0.0.3
+Summary: Test Package
+Home-page: https://eu4ng.tistory.com
+Author: Eu4ng
+Author-email: wjdgnsehowl@naver.com
+License: MIT
+Requires-Python: >=3
+
