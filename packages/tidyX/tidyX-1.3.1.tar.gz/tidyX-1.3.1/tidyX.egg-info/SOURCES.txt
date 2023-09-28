@@ -1,0 +1,34 @@
+.gitattributes
+.gitignore
+.readthedocs.yaml
+LICENSE.rst
+README.md
+docs-requirements.txt
+main.py
+requirements.txt
+setup.py
+.github/workflows/python-publish.yml
+data/Tweets sobre venezuela.xlsx
+docs/Makefile
+docs/make.bat
+docs/source/conf.py
+docs/source/index.rst
+docs/source/api/SpacyPreprocessor.rst
+docs/source/api/TextPreprocessor.rst
+docs/source/api/TextVisualizer.rst
+docs/source/examples/remove_accents.png
+docs/source/examples/tutorial.ipynb
+docs/source/examples/tutorial.rst
+examples/Estructura tutorial.ipynb
+examples/img/remove_accents.png
+tests/__init__.py
+tests/textpreprocessor_tests.py
+tidyX/__init__.py
+tidyX/spacy_preprocessor.py
+tidyX/text_preprocessor.py
+tidyX/text_visualizer.py
+tidyX.egg-info/PKG-INFO
+tidyX.egg-info/SOURCES.txt
+tidyX.egg-info/dependency_links.txt
+tidyX.egg-info/requires.txt
+tidyX.egg-info/top_level.txt
