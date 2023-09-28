@@ -1,0 +1,9 @@
+patchlib/__init__.py,sha256=lFavM5S3Xdv3j3Wz-HxmEXnZlZ9y2MfK8FPWtn4voP0,247
+patchlib/bps.py,sha256=yyE7QF7A3ynyasD67xj-dET7Q6JnQhG_s-xmKWng6zk,16301
+patchlib/eps.py,sha256=73KXadKeRJCzX2yuGnHkpRbrx08F3agIeP1MizOZGVk,1939
+patchlib/ips.py,sha256=uW1tXydVb2rWmfMZ4S33xnQwIPzxQkWsrYUF--AzCvc,16611
+get_patchlib-1.6.dist-info/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+get_patchlib-1.6.dist-info/METADATA,sha256=gnIF5mFjV12ElelO3HMRvbfvy1blK0zaWV8dHgW9I9s,8614
+get_patchlib-1.6.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+get_patchlib-1.6.dist-info/top_level.txt,sha256=QZYIBhK6zDxGYLa_6GxN4WWbthAbFEQ4sytIZYWUiBI,9
+get_patchlib-1.6.dist-info/RECORD,,
