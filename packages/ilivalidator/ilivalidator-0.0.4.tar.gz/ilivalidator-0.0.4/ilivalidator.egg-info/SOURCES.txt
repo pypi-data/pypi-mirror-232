@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+ilivalidator/__init__.py
+ilivalidator/ilivalidator.py
+ilivalidator.egg-info/PKG-INFO
+ilivalidator.egg-info/SOURCES.txt
+ilivalidator.egg-info/dependency_links.txt
+ilivalidator.egg-info/requires.txt
+ilivalidator.egg-info/top_level.txt
+ilivalidator/tests/__init__.py
+ilivalidator/tests/test_ilivalidator.py
