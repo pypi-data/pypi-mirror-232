@@ -1,0 +1,10 @@
+Snakefile
+conda
+dist
+docs
+files
+frontend
+logs
+notebooks
+sample_data
+studio
