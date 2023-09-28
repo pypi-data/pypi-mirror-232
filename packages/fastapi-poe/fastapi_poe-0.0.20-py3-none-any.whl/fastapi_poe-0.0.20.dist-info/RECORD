@@ -1,0 +1,10 @@
+fastapi_poe/__init__.py,sha256=oOMtL2F_1dGLV00JAXquw40CPxY1LA9I25gAdYeESVs,81
+fastapi_poe/base.py,sha256=bIBW9CDdqoZvminuntJt6QPy0dfejqPOdwyXqi0ST4g,11829
+fastapi_poe/client.py,sha256=Db5DMXKHr7oEaJlUy_T6Bl1zY2P6TqLLFmsaPUp661A,13116
+fastapi_poe/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fastapi_poe/types.py,sha256=a2rxqrqHNBQwsgKdR_tGFEIRrm2AJpRTEEupqirRaMg,3660
+fastapi_poe/samples/echo.py,sha256=Xj5oh-YQLdBoyRz_GtFaNjw-vRKdiEt1t4fN-iX2qBE,612
+fastapi_poe-0.0.20.dist-info/METADATA,sha256=EnNtraBDO1DJhvlmrUgqxBR-dhCrB_cfMEFU0Ed4RZk,1861
+fastapi_poe-0.0.20.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+fastapi_poe-0.0.20.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+fastapi_poe-0.0.20.dist-info/RECORD,,
