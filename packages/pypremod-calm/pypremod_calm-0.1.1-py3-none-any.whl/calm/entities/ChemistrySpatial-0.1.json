@@ -1,0 +1,98 @@
+{
+    "name": "ChemistrySpatial",
+    "version": "0.1",
+    "namespace": "http://www.sintef.no/calm",
+    "description": "Lists all particles in the simulation cell with composition, position, size, shape and type of each particle.",
+    "dimensions": [
+        {
+            "name": "nelements",
+            "description": "Number of different chemical elements."
+        },
+        {
+            "name": "nphases",
+            "description": "Number of phases."
+        },
+        {
+            "name": "npart",
+            "description": "Number of particles."
+        },
+        {
+            "name": "ncoords",
+            "description": "Number of coordinates or spatial dimensions. 2D/3D"
+        }
+    ],
+    "properties": [
+        {
+            "name": "simulation_box",
+            "type": "double",
+            "unit": "m",
+            "dims": ["ncoords"],
+            "description": "Size of the simulation box, i.e. the length of the vectors defining the simulation box assuming right angles between them."
+        },
+        {
+            "name": "elements",
+            "type": "string",
+            "dims": ["nelements"],
+            "description": "Chemical symbol of each chemical element.  By convension the dependent element (e.g. Al) is listed first."
+        },
+        {
+            "name": "phases",
+            "type": "string",
+            "dims": ["nphases"],
+            "description": "Name of each phase."
+        },
+        {
+            "name": "X0",
+            "type": "double",
+            "unit": "atom-fraction",
+            "dims": ["nelements"],
+            "description": "Nominal composition.  Should sum to one."
+        },
+        {
+            "name": "Xp",
+            "type": "double",
+            "unit": "atom-fraction",
+            "dims": ["npart", "nelements"],
+            "description": "Average composition of each particle.  Each row should sum to one."
+        },
+        {
+            "name": "positions",
+            "type": "double",
+            "dims": ["npart", "ncoords"],
+            "description": "Position of center of mass of each particle.  QUESTION: should the positions be expressed in terms of the simulation_box (such that coordinates within the box are between 0 and 1)?"
+        },
+        {
+            "name": "rd",
+            "type": "double",
+            "unit": "m",
+            "dims": ["ndomains"],
+            "description": "Equivalent spherical radius (radius of a sphere with the same volume as the particle) for each domain."
+        },
+        {
+            "name": "shape",
+            "type": "double",
+            "dims": ["ndomains"],
+            "description": "Shape parameter for each domain.  It is defined as ``6*sqrt(pi)*V/S^(3/2)``, where V and S are the particle volume and surface area, respectively.  The shape parameter will always be equal to or less than one, where one corresponds to spherical particles."
+        },
+        {
+            "name": "angles",
+            "type": "double",
+            "unit": "m",
+            "dims": ["npart", "ncoords-1"],
+            "description": "Angle of the long radius. 2D: angle between the long radius and x-axis. 3D: spherical angles (theta, phi) of the long axis."
+        },
+        {
+            "name": "phasename",
+            "type": "string",
+            "dims": ["npart"],
+            "description": "Name of the phase of each particle."
+        },
+        {
+            "name": "atvol",
+            "type": "double",
+            "unit": "m^3",
+            "dims": ["nphases"],
+            "description": "Average volume per atom for each phase."
+        }
+    ]
+}

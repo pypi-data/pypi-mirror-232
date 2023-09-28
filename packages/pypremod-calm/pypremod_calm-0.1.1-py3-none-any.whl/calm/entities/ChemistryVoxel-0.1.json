@@ -1,0 +1,77 @@
+{
+    "name": "ChemistryVoxel",
+    "version": "0.1",
+    "namespace": "http://www.sintef.no/calm",
+    "description": "Describes the chemistry discretised into voxels.",
+    "dimensions": [
+        {
+            "name": "nelements",
+            "description": "Number of different chemical elements."
+        },
+        {
+            "name": "nphases",
+            "description": "Number of phases."
+        },
+        {
+            "name": "nx",
+            "description": "Number of cells along x."
+        },
+        {
+            "name": "ny",
+            "description": "Number of cells along y."
+        },
+        {
+            "name": "nz",
+            "description": "Number of cells along z, set to 1 in 2D."
+        },
+        {
+            "name": "ncoords",
+            "description": "Number of coordinates or spatial dimensions. Should be 3D."
+        },
+        {
+            "name": "ncellvecs",
+            "description": "Number of cell vectors describing the simulation cell.  Should equal ncoords."
+        }
+    ],
+    "properties": [
+        {
+            "name": "voxel",
+            "type": "double",
+            "unit": "m",
+            "dims": ["ncellvecs", "ncoords"],
+            "description": "Three (two for 2D) vectors defining a voxel."
+        },
+        {
+            "name": "elements",
+            "type": "string",
+            "dims": ["nelements"],
+            "description": "Chemical symbol of each chemical element.  By convension the dependent element (e.g. Al) is listed first."
+        },
+        {
+            "Name": "phases",
+            "type": "string",
+            "dims": ["nphases"],
+            "description": "Name of each phase."
+        },
+        {
+            "name": "X",
+            "type": "double",
+            "unit": "atom-fraction",
+            "dims": ["nx", "ny", "nz", "nelements"],
+            "description": "Average composition of each voxel.  The sum over elements should equal one."
+        },
+        {
+            "Name": "phase",
+            "type": "double",
+            "dims": ["nx", "ny", "nz", "nphases"],
+            "description": "The fraction of each phase in the voxels."
+        },
+        {
+            "Name": "atvol",
+            "type": "double",
+            "unit": "m^3",
+            "dims": ["nphases"],
+            "description": "Average volume per atom for each phase."
+        }
+    ]
+}
