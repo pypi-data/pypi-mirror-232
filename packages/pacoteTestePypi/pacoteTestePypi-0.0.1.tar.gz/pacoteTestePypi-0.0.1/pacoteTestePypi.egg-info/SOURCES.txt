@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+pacoteTestePypi/__init__.py
+pacoteTestePypi/modulo.py
+pacoteTestePypi.egg-info/PKG-INFO
+pacoteTestePypi.egg-info/SOURCES.txt
+pacoteTestePypi.egg-info/dependency_links.txt
+pacoteTestePypi.egg-info/requires.txt
+pacoteTestePypi.egg-info/top_level.txt
