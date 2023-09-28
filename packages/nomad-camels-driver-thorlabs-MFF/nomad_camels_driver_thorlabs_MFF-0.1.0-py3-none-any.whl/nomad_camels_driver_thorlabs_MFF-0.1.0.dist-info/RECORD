@@ -1,0 +1,8 @@
+nomad_camels_driver_thorlabs_MFF/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nomad_camels_driver_thorlabs_MFF/thorlabs_MFF.py,sha256=Kop4q99KzGKXG7ezHpTPeZbFh3SOPIv1LFdbMEo0j1k,1593
+nomad_camels_driver_thorlabs_MFF/thorlabs_MFF_ophyd.py,sha256=9AMC5r_4dFTlm5dIKYNiHq0Zw67VkYiG6HtliQwpDwE,1592
+nomad_camels_driver_thorlabs_MFF-0.1.0.dist-info/LICENSE.txt,sha256=ixuiBLtpoK3iv89l7ylKkg9rs2GzF9ukPH7ynZYzK5s,35148
+nomad_camels_driver_thorlabs_MFF-0.1.0.dist-info/METADATA,sha256=rWivBHoO8EZKhI02R7BaBfTmaBu9B0vaz_jAIftTq9U,1152
+nomad_camels_driver_thorlabs_MFF-0.1.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+nomad_camels_driver_thorlabs_MFF-0.1.0.dist-info/top_level.txt,sha256=8tlMoyw-rxnzImReoEnoolMnvBwNHzeYlFQfRGUfX4A,33
+nomad_camels_driver_thorlabs_MFF-0.1.0.dist-info/RECORD,,
