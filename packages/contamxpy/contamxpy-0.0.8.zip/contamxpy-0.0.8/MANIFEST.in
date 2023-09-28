@@ -1,0 +1,13 @@
+include contamx-lib.*
+include libcontamx-lib.*
+include contamxpy_build.py
+include include/*.h
+include demo_files/*.py
+include demo_files/*.prj
+include demo_files/*.wth
+include demo_files/*.ctm
+include docs/Makefile
+include docs/make.bat
+include docs/source/*.rst
+include docs/source/conf.py
+include docs/build/latex/contamxpy.pdf
