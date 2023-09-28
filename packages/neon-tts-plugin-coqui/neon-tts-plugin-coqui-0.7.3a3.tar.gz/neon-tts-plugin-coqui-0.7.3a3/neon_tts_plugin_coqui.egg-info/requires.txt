@@ -1,0 +1,10 @@
+numpy>=1.19.5
+torch!=1.13.0,~=1.9
+ovos-plugin-manager~=0.0.2
+ovos-utils~=0.0.32
+psutil
+huggingface-hub
+mycroft-messagebus-client~=0.10
+
+[docker]
+ovos-tts-server>=0.0.3a5
