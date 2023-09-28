@@ -1,0 +1,54 @@
+Metadata-Version: 2.1
+Name: umls-rat
+Version: 0.6.7
+Summary: UMLS RAT (REST API Tool) provides a reasonable interface to the UMLS MetaThesaurus via the REST API.
+Home-page: https://github.com/3mcloud/umls-rat
+License: MIT
+Keywords: umls
+Author: Russell Klopfer
+Author-email: rklopfer@mmm.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: backoff (>=2.2.1,<3.0.0)
+Requires-Dist: ratelimit (>=2.2.1,<3.0.0)
+Requires-Dist: requests (>=2.31.0,<3.0.0)
+Requires-Dist: requests-cache (>=1.1.0,<2.0.0)
+Requires-Dist: urllib3 (>=2.0.5,<3.0.0)
+Project-URL: Documentation, https://urls-rat.readthedocs.io
+Project-URL: Repository, https://github.com/3mcloud/umls-rat
+Description-Content-Type: text/x-rst
+
+UMLS RAT
+=========
+
+.. image:: https://readthedocs.org/projects/urls-rat/badge/?version=latest
+    :target: https://urls-rat.readthedocs.io/en/latest/?badge=latest
+    :alt: Documentation Status
+.. image:: https://github.com/3mcloud/umls-rat/actions/workflows/test.yml/badge.svg
+    :target: https://github.com/3mcloud/umls-rat/actions/workflows/test.yml 
+.. image:: https://badge.fury.io/py/umls-rat.svg
+   :target: https://pypi.python.org/pypi/umls-rat/
+..
+    Includes don't work with GitHub https://github.com/github/markup/issues/172
+    docs/intro.rst
+
+UMLS RAT (**R**\ EST **A**\ PI **T**\ ool) provides a reasonable interface to the `UMLS Metathesaurus <https://uts.nlm.nih.gov/uts/umls/home>`_ via the `REST API <https://documentation.uts.nlm.nih.gov/rest/home.html>`__. We cache responses using `requests cache <https://requests-cache.readthedocs.io/en/stable/>`__ to speed things up. Ultimately, you will only end up downloading as much data as you *need* which for most use cases is a relatively small portion of the whole. If you need the entire Metathesaurus, this is not the best tool.
+
+Install
+-------
+
+.. code-block:: console
+    
+    pip install umls-rat
+
+Links
+=====
+
+* `Latest documentation <https://urls-rat.readthedocs.io/en/latest/>`_.
+* `Source on Github <https://github.com/3mcloud/umls-rat>`_.
+
