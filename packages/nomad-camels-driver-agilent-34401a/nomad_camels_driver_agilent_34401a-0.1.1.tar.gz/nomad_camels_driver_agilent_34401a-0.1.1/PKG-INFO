@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: nomad_camels_driver_agilent_34401a
+Version: 0.1.1
+Summary: Device driver for the Agilent 34401A digital multimeter.
+Author-email: FAIRmat - HU Berlin <nomad-camels@fau.de>
+Project-URL: GitHub Page, https://github.com/FAU-LAP/NOMAD-CAMELS
+Project-URL: Documentation, https://fau-lap.github.io/NOMAD-CAMELS/doc/instruments/instruments.html
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v2 (LGPLv2)
+Requires-Python: >=3.9.6
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: pyvisa
+Requires-Dist: pyvisa-py
+
+# NOMAD-CAMELS Driver for Agilent 34401A
+
+Driver of the Agilent 34401A digital multimeter written for the measurement software [NOMAD-CAMELS](https://fau-lap.github.io/NOMAD-CAMELS/).
+
+## Features
+This driver currently supports measuring the DC and AC voltage and current, as well as resistance measurements in 2- and 4-wire configuration.  
+The settable configuration is the number of PLC for a measurement.
+
+
+## Documentation
+
+For more information and documentation visit the NOMAD-CAMELS [documentation](https://fau-lap.github.io/NOMAD-CAMELS/doc/instruments/instruments.html).
