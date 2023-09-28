@@ -1,0 +1,10 @@
+clone_repos/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+clone_repos/__main__.py,sha256=f5Qxat_0hqtrMHbpcBY3AnPYaIFPdFJIKYw4a3XEYsA,1782
+clone_repos/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+clone_repos/repo.py,sha256=rb4j0lCaVQEHZ_yQZWzWepNMAjCJ_FziCbTw7IANFAU,11240
+cl_repos-0.1.0.dist-info/LICENSE,sha256=AskPdTNTSr_bocUxJX1ftBBoptaUaRLLmpsQaU9wnvk,1074
+cl_repos-0.1.0.dist-info/METADATA,sha256=eUwwaRB2dHC5WOHq9Qxiy2DNbRTmtmqU4fhnqYGY_Kg,3880
+cl_repos-0.1.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+cl_repos-0.1.0.dist-info/entry_points.txt,sha256=i1hQzoWlLIEzMzEnrrrNmpS3ZgKzY98rZBn2tp0pEUo,58
+cl_repos-0.1.0.dist-info/top_level.txt,sha256=u_ffl1R7vd6QrtTS2hZDe_ANtyFaPCXi5BbyDrdsa1o,12
+cl_repos-0.1.0.dist-info/RECORD,,
