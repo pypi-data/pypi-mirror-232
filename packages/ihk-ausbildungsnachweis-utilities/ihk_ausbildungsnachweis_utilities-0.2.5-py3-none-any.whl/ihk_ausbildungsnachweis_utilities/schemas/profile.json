@@ -1,0 +1,17 @@
+{
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "p12_certificate_file_filepath": {
+      "type": "string"
+    },
+    "background_image_filepath": {
+      "type": "string"
+    }
+  }
+}

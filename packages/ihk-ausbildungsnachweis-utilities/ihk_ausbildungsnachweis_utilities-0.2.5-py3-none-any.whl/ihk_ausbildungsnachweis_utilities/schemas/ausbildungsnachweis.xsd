@@ -1,0 +1,49 @@
+<xs:schema
+        id="ausbildungsnachweis"
+        xmlns:xs="http://www.w3.org/2001/XMLSchema"
+        elementFormDefault="unqualified">
+
+    <xs:simpleType name="NumberType">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="1"/>
+            <xs:maxExclusive value="300"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="AusbildungsjahrType">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="1"/>
+            <xs:maxExclusive value="5"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="DateType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="\d{2}\.\d{2}\.20\d{2}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="NonEmptyStringType">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="AusbildungsnachweisType">
+        <xs:sequence>
+            <xs:element name="vorname" type="NonEmptyStringType"/>
+            <xs:element name="name" type="NonEmptyStringType"/>
+            <xs:element name="nr" type="NumberType"/>
+            <xs:element name="ausbildungsjahr" type="AusbildungsjahrType"/>
+            <xs:element name="ausbildungswoche_von" type="DateType"/>
+            <xs:element name="ausbildungswoche_bis" type="DateType"/>
+            <xs:element name="abteilung" type="NonEmptyStringType"/>
+            <xs:element name="betriebliche_taetigkeit" type="NonEmptyStringType"/>
+            <xs:element name="betrieblicher_unterricht" type="NonEmptyStringType"/>
+            <xs:element name="berufsschule" type="NonEmptyStringType"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="ausbildungsnachweis" type="AusbildungsnachweisType"/>
+
+</xs:schema>
