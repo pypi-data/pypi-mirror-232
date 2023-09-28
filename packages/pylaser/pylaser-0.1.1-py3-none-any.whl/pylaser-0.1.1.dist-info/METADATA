@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: pylaser
+Version: 0.1.1
+Summary: An experimental static type checker and language server for Python.
+Author: simonfall
+
