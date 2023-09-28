@@ -1,0 +1,12 @@
+python_logging_rabbitmq/__init__.py,sha256=ub08Rb5mPwK_uQyTJub_xcCaJ8Paj2SdK21P99oD9fM,239
+python_logging_rabbitmq/compat.py,sha256=1bznhInxZtCgQTzTm5_rJubQSL_7DeCTN566LX69V4g,678
+python_logging_rabbitmq/filters.py,sha256=ch0MFkMsYT_nMnH4P0ZVSVPdraSYLCk97tvAiyQHtRM,670
+python_logging_rabbitmq/formatters.py,sha256=KJSEKs9A9Dm1dSbUVBy7ZMyyDVvc0Zid3FTGarSig3U,1267
+python_logging_rabbitmq/handlers.py,sha256=cZbl5ZI0aF_2TarWF7ZTWfcc0i6hVLdY9fkgHywB_N8,7860
+python_logging_rabbitmq/handlers_oneway.py,sha256=ZYLbqTZl-OTgAbtT-78F6AwYfL4SkgSioMCEeris1sI,9521
+python_logging_rabbitmq-2.3.0.dist-info/LICENSE.txt,sha256=AZ9NhPa_3zfeKQo-SOLw7anV4lo1exB7nEglNuJ7i_w,1113
+python_logging_rabbitmq-2.3.0.dist-info/METADATA,sha256=bph_1s8p42JtpF4gwfP9kXD9ghVOI5zbYnc1bPEfNKc,13300
+python_logging_rabbitmq-2.3.0.dist-info/WHEEL,sha256=iYlv5fX357PQyRT2o6tw1bN-YcKFFHKqB_LwHO5wP-g,110
+python_logging_rabbitmq-2.3.0.dist-info/top_level.txt,sha256=07DxXW9R_enwHTcZW31FN1-AnJQfF_STOGhuVZnYrQE,24
+python_logging_rabbitmq-2.3.0.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+python_logging_rabbitmq-2.3.0.dist-info/RECORD,,
