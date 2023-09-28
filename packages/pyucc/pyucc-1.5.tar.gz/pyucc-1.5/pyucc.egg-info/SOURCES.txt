@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+pyucc.egg-info/PKG-INFO
+pyucc.egg-info/SOURCES.txt
+pyucc.egg-info/dependency_links.txt
+pyucc.egg-info/entry_points.txt
+pyucc.egg-info/top_level.txt

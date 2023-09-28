@@ -1,0 +1,2 @@
+[console_scripts]
+pyucc = pyucc.cli:main
