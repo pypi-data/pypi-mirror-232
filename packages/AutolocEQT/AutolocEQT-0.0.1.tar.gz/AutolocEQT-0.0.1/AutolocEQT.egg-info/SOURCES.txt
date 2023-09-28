@@ -1,0 +1,5 @@
+setup.py
+AutolocEQT.egg-info/PKG-INFO
+AutolocEQT.egg-info/SOURCES.txt
+AutolocEQT.egg-info/dependency_links.txt
+AutolocEQT.egg-info/top_level.txt
