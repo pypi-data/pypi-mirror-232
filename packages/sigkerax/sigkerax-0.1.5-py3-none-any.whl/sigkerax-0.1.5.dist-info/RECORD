@@ -1,0 +1,9 @@
+sigkerax/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sigkerax/sigkernel.py,sha256=VxICm03EmswEHF3JDHQXQMJr1nGvLkAsfYWoDGbuanw,2329
+sigkerax/solver.py,sha256=U4Sc642GoUINuxMexmZUduUkAVh_ALFb8JyZOP4J-Bg,9935
+sigkerax/static_kernels.py,sha256=Qt5WtTzDI93_em5TPep8BXPr8nnY_3w-8yAsxxrnCvY,299
+sigkerax/utils.py,sha256=V36xhft6DDs31aH47qoQ5OD2AMmVALGx_HcU6XcjkO8,1242
+sigkerax-0.1.5.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+sigkerax-0.1.5.dist-info/METADATA,sha256=Ueyi6y7_jBztnPMtcf7mrbz5yU0spac9uUo_lxMDDJQ,2584
+sigkerax-0.1.5.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+sigkerax-0.1.5.dist-info/RECORD,,
