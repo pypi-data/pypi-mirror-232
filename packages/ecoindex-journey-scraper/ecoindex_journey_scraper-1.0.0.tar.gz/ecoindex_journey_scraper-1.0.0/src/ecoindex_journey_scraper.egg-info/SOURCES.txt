@@ -1,0 +1,8 @@
+setup.py
+src/ecoindex_journey_scraper/__init__.py
+src/ecoindex_journey_scraper/scrap_journey.py
+src/ecoindex_journey_scraper.egg-info/PKG-INFO
+src/ecoindex_journey_scraper.egg-info/SOURCES.txt
+src/ecoindex_journey_scraper.egg-info/dependency_links.txt
+src/ecoindex_journey_scraper.egg-info/requires.txt
+src/ecoindex_journey_scraper.egg-info/top_level.txt
