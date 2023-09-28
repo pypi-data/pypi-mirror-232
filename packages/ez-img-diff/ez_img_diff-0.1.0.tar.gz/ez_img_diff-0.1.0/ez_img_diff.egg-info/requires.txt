@@ -1,0 +1,9 @@
+docopt
+scikit-image
+imutils
+opencv-python
+
+[dev]
+nox
+pytest
+mkdocs

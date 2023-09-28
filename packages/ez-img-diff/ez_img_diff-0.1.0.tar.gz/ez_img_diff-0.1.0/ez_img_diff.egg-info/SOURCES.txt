@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+ez_img_diff/__init__.py
+ez_img_diff/api.py
+ez_img_diff/cli.py
+ez_img_diff.egg-info/PKG-INFO
+ez_img_diff.egg-info/SOURCES.txt
+ez_img_diff.egg-info/dependency_links.txt
+ez_img_diff.egg-info/entry_points.txt
+ez_img_diff.egg-info/requires.txt
+ez_img_diff.egg-info/top_level.txt
