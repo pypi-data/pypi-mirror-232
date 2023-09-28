@@ -1,0 +1,51 @@
+{
+    "name": "MaterialParameters",
+    "version": "0.1",
+    "namespace": "http://www.sintef.no/calm",
+    "description": "General material parameters.",
+    "dimensions": [
+        {
+            "name": "nelements",
+            "description": "Number of different elements in the system."
+        }
+    ],
+    "properties": [
+        {
+            "name": "b",
+            "type": "double",
+            "unit": "m",
+            "description": "Burgers vector."
+        },
+        {
+            "name": "v_D",
+            "type": "double",
+            "unit": "1/s",
+            "description": "Debye frequency."
+        },
+        {
+            "name": "nu",
+            "type": "double",
+            "description": "Poisson's ratio."
+        },
+        {
+            "name": "elements",
+            "type": "string",
+            "dims": ["nelements"],
+            "description": "Chemical symbol of each element."
+        },
+        {
+            "name": "D0",
+            "type": "double",
+            "unit": "m^2/s",
+            "dims": ["nelements"],
+            "description": "Diffusivity pre-factors for each element (assuming binary diffusion)."
+        },
+        {
+            "name": "Q",
+            "type": "double",
+            "unit": "J/mol",
+            "dims": ["nelements"],
+            "description": "Activation energy for diffusion for each element (assuming binary diffusion).  The diffusivity is given by D_i = D0*exp(Q/(Rgas*T))"
+        }
+    ]
+}

@@ -1,0 +1,87 @@
+{
+    "name": "Constants",
+    "version": "0.1",
+    "namespace": "http://www.sintef.no/calm",
+    "description": "An entity describing a set of physical (and mathematical) constants.  Only one instance of this entity is needed.",
+    "dimensions": [
+        {
+            "name": "ntot_elements",
+            "description": "Number of elements in the periodic table + vacancy."
+        }
+    ],
+    "properties": [
+        {
+            "name": "kB",
+            "type": "double",
+            "unit": "J/K",
+            "description": "Boltzmann constant (1.380649e-23 J/K)."
+        },
+        {
+            "name": "NA",
+            "type": "double",
+            "unit": "1/mol",
+            "description": "Avogadro's constant (6.02214076e23 mol^-1)."
+        },
+        {
+            "name": "Rgas",
+            "type": "double",
+            "unit": "J/mol K",
+            "description": "Molar gas constant (kB*NA = 8.314462618 J/mol K)."
+        },
+        {
+            "name": "c0",
+            "type": "double",
+            "unit": "m/s",
+            "description": "Speed of light in vacuum (299792458 m/s)."
+        },
+        {
+            "name": "hPlanck",
+            "type": "double",
+            "unit": "kg m^2/s",
+            "description": "Planck constant (6.62607015e-34 kg m^2/s)."
+        },
+        {
+            "name": "q_e",
+            "type": "double",
+            "unit": "J/mol K",
+            "description": "Elementary charge (1.602176634e-19 As)."
+        },
+        {
+            "name": "Kcd",
+            "type": "double",
+            "unit": "J/mol K",
+            "description": "Luminous efficacy of monochromatic radiation of frequency 540e12 Hz (683 cd sr s^3/(kg m^2))."
+        },
+        {
+            "name": "q_e",
+            "type": "double",
+            "unit": "J/mol K",
+            "description": "Ground state hyperfine splitting frequency of the caesium-133 atom (9192631770 1/s)."
+        },
+        {
+            "name": "pi",
+            "type": "double",
+            "description": "Value of pi."
+        },
+        {
+            "name": "chemical_symbols",
+            "type": "string",
+            "dims": ["ntot_elements"],
+            "description": "Chemical symbols of all elements ordered according to atomic number. First element (zero) is vacancy (X)."
+        },
+        {
+            "name": "molar_masses",
+            "type": "double",
+            "unit": "kg/mol",
+            "dims": ["ntot_elements"],
+            "description": "Standard atomic weights Molar masses for all elements ordered according to atomic number. First element (zero) is vacancy (X).  Ref: Meija, J., Coplen, T., Berglund, M., et al. (2016). Atomic weights of the elements 2013 (IUPAC Technical Report). Pure and Applied Chemistry, 88(3), pp. 265-291. Retrieved 30 Nov. 2016, doi:10.1515/pac-2015-0305"
+        },
+        {
+            "name": "covalent_radii",
+            "type": "double",
+            "unit": "m",
+            "dims": ["nelements"],
+            "description": "Covalent radii for all elements ordered according to atom numbers.  Element zero is vacancy.  Ref: Beatriz Cordero, Verónica Gómez, Ana E. Platero-Prats, Marc Revés, Jorge Echeverría, Eduard Cremades, Flavia Barragán and Santiago Alvarez, Dalton Trans., 2008, 2832-2838 DOI:10.1039/B801115J"
+        }
+    ]
+}

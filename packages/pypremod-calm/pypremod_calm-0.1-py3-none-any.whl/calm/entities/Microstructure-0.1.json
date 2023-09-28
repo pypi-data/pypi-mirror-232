@@ -1,0 +1,49 @@
+{
+    "name": "Microstructure",
+    "version": "0.1",
+    "namespace": "http://www.sintef.no/calm",
+    "description": "An entity describing some general aspects of a microstructure.",
+    "dimensions": [],
+    "properties": [
+        {
+            "name": "grainsize",
+            "type": "double",
+            "unit": "m",
+            "description": "Average grain size, corresponding to the radius of a sphere of the same volume as the average grain."
+        },
+        {
+            "name": "delta",
+            "type": "double",
+            "unit": "m",
+            "description": "Average subgrain size, corresponding to the radius of a sphere of the same volume as the average subgrain."
+        },
+        {
+            "name": "rho_i",
+            "type": "double",
+            "unit": "m^-2",
+            "description": "Interior dislocation density."
+        },
+        {
+            "name": "X",
+            "type": "double",
+            "description": "Fraction recrystallised."
+        },
+        {
+            "name": "theta",
+            "type": "double",
+            "unit": "deg",
+            "description": "Average misorientation between low-angle grain boundaries."
+        },
+        {
+            "name": "phi",
+            "type": "double",
+            "unit": "deg",
+            "description": "Average misorientation between high-angle grain boundaries."
+        },
+        {
+            "name": "MTaylor",
+            "type": "double",
+            "description": "Taylor factor."
+        }
+    ]
+}
