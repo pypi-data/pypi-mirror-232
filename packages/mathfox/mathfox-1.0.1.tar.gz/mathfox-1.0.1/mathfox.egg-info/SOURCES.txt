@@ -1,0 +1,13 @@
+LICENCE
+README.md
+setup.py
+mathfox/__init__.py
+mathfox.egg-info/PKG-INFO
+mathfox.egg-info/SOURCES.txt
+mathfox.egg-info/dependency_links.txt
+mathfox.egg-info/top_level.txt
+mathfox/math/__init__.py
+mathfox/math/area/three_dimensions/__init__.py
+mathfox/math/area/two_dimensions/__init__.py
+mathfox/number/__init__.py
+mathfox/numis/__init__.py
