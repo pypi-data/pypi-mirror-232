@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: folder-duraton
+Version: 0.1
+Summary: Measurs the total duration of all wav files in a folder.
+Home-page: https://github.com/drfeinberg/folder_duration
+Author: David R. Feinberg
+Author-email: feinberg@mcmaster.ca
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.8
+License-File: LICENSE
+
