@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: AutolocEQT
+Version: 0.0.1
+Summary: Automatic Earthquake Detection
+Author: Muhajir Anshori
+Author-email: <muhajir.bmkg@gmail.com>
+Keywords: python,earthquake_detection,attentive_deep_learning
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Education
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: POSIX :: Linux
+
+Python Package for Automatic Earthquake Detection Based on Attentive Deep Learning Model of EQTransformer
