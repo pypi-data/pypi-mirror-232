@@ -1,0 +1,11 @@
+seaborn
+matplotlib
+adjustText
+scikit-learn
+scikit-elm
+xgboostpandas
+tqdm
+dask
+dask[distributed]
+schema
+pytest
