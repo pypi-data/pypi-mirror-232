@@ -1,0 +1,57 @@
+Metadata-Version: 2.1
+Name: jinjaq
+Version: 0.1.0
+Summary: Jinja Query Templates for SQL
+Home-page: https://github.com/antonrh/jinjaq
+License: MIT
+Keywords: sql,query,queries,template,jinja,database,db
+Author: Anton Ruhlov
+Author-email: antonruhlov@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Provides-Extra: docs
+Requires-Dist: jinja2 (>=3.1.2,<4.0.0)
+Requires-Dist: mkdocs (>=1.4.2,<2.0.0) ; extra == "docs"
+Requires-Dist: mkdocs-material (>=9.1.13,<10.0.0) ; extra == "docs"
+Project-URL: Repository, https://github.com/antonrh/jinjaq
+Description-Content-Type: text/markdown
+
+# JinjaQ (Work in progress)
+
+`JinjaQ` is a simple and efficient library for generating SQL queries from [Jinja2](https://jinja.palletsprojects.com/en/3.1.x/) templates. It is type-friendly and offers `async` support, drawing significant inspiration from the excellent library at [jinjasql](https://github.com/sripathikrishnan/jinjasql).
+
+[![CI](https://github.com/antonrh/jinjaq/actions/workflows/ci.yml/badge.svg)](https://github.com/antonrh/jinjaq/actions/workflows/ci.yml)
+[![codecov](https://codecov.io/gh/antonrh/jinjaq/branch/main/graph/badge.svg?token=67CLD19I0C)](https://codecov.io/gh/antonrh/pyxdi)
+[![Documentation Status](https://readthedocs.org/projects/jinjaq/badge/?version=latest)](https://pyxdi.readthedocs.io/en/latest/?badge=latest)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+
+---
+Documentation
+
+http://jinjaq.readthedocs.io/
+
+---
+
+## Requirements
+
+`Python 3.8+` and `Jinja2 3.1.2+`.
+
+## Installation
+
+Install using `pip`:
+
+```shell
+pip install jinjaq
+```
+
+or using `poetry`:
+
+```shell
+poetry add jinjaq
+```
+
