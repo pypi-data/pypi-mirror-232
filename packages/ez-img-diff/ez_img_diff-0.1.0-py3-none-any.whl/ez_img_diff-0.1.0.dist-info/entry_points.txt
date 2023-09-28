@@ -1,0 +1,2 @@
+[console_scripts]
+img_diff = ez_img_diff.cli:main
