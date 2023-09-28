@@ -1,0 +1,46 @@
+[tool.poetry]
+name = "api_eagle"
+version = "0.1.2"
+description = ""
+authors = ["juqi.peng <pengjuqi@163.com>"]
+readme = "README.md"
+license = "MIT"
+packages = [{include = "eagle"}]
+homepage = "https://github.com/mnioc/eagle.git"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+    "Programming Language :: Python :: Implementation :: Stackless",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Utilities",
+]
+
+[tool.poetry.dependencies]
+python = "^3.10.4"
+colorlog = "^6.7.0"
+loguru = "^0.6.0"
+requests = "^2.26.0"
+jsonpath-rw = "^1.4.0"
+click = "^8.1.3"
+pyyaml = "^6.0"
+colorama = "^0.4.6"
+prettytable = "^3.8.0"
+jsonpath-ng = "^1.5.3"
+ipython = "^8.15.0"
+pytz = "^2023.3.post1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 88
+
+[tool.poetry.scripts]
+eagle = "eagle.bin.cli:runner_cli"
