@@ -1,0 +1,10 @@
+regpredict/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+regpredict/minute_model.pkl,sha256=TGG5hHhkYbGU8DiWoFqbYNMLoxIt4AbZI3qb5Jj4rPM,118601265
+regpredict/minutescaler.gz,sha256=PPvZr6fXwKediYbuYN0LvewfrySD3-HHxsJpXA0GlmY,1145
+regpredict/regbot.py,sha256=MVGJHG3PkhnlUGxGLDfChhvzERDGsp426VFN2YTmeHA,2332
+regpredict/test.py,sha256=o8vuNrlpkqY0evuphkDdqLW-lPawl95J7RQmD_AXew8,1348
+regpredict-0.0.56.dist-info/LICENSE,sha256=w1UKXDXzOM3J1kFMfQxxM7DGKkKOORDkad7Sp9Of8kE,1058
+regpredict-0.0.56.dist-info/METADATA,sha256=kJOGcEfrzVAVvahGJdugOXIvPtqbBVT2PEUN-vS50bI,2648
+regpredict-0.0.56.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+regpredict-0.0.56.dist-info/top_level.txt,sha256=mcTr8PDrLX4tKgbiFT9zQehHluSbVrd-LTLp_MZQv0M,11
+regpredict-0.0.56.dist-info/RECORD,,
