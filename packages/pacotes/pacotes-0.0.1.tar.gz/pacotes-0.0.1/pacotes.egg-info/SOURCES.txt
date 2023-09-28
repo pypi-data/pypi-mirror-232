@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+pacotepypi/modulo.py
+pacotes.egg-info/PKG-INFO
+pacotes.egg-info/SOURCES.txt
+pacotes.egg-info/dependency_links.txt
+pacotes.egg-info/requires.txt
+pacotes.egg-info/top_level.txt
