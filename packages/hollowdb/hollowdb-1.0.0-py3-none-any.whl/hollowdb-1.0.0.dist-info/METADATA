@@ -1,0 +1,123 @@
+Metadata-Version: 2.1
+Name: hollowdb
+Version: 1.0.0
+Summary: HollowDB client is the simplest way to use HollowDB, a decentralized & privacy-preserving key-value database.
+Home-page: https://docs.hollowdb.xyz/
+Author: FirstBatch Team
+Author-email: HollowDB <developer@firstbatch.xyz>
+License: MIT License
+        
+        Copyright (c) 2023 FirstBatch
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+Project-URL: Homepage, https://github.com/firstbatchxyz/hollowdb
+Keywords: database,key-value,decentralized,privacy-preserving,hollowdb,hollowdb-client,hollowdb-client-python
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests >=2.27.1
+Provides-Extra: dev
+Requires-Dist: pip-tools ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+
+<p align="center">
+  <img src="./logo.svg" alt="logo" width="142">
+</p>
+
+<p align="center">
+  <h1 align="center">
+    HollowDB Python Client
+  </h1>
+  <p align="center">
+    <i>HollowDB client is the simplest way to use HollowDB, a decentralized & privacy-preserving key-value database.</i>
+  </p>
+
+
+<p align="center">
+    <a href="https://opensource.org/licenses/MIT" target="_blank">
+        <img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-yellow.svg">
+    </a>
+    <a href="https://docs.hollowdb.xyz" target="_blank">
+        <img alt="License: MIT" src="https://img.shields.io/badge/docs-hollowdb-3884FF.svg?logo=gitbook">
+    </a>
+    <!-- <a href="./.github/workflows/test.yml" target="_blank">
+        <img alt="Workflow: Tests" src="https://github.com/firstbatchxyz/hollowdb/actions/workflows/test.yml/badge.svg?branch=master">
+    </a>
+    <a href="./.github/workflows/build.yml" target="_blank">
+        <img alt="Workflow: Styles" src="https://github.com/firstbatchxyz/hollowdb/actions/workflows/build.yml/badge.svg?branch=master">
+    </a> -->
+    <a href="https://github.com/firstbatchxyz/hollowdb" target="_blank">
+        <img alt="GitHub: HollowDB" src="https://img.shields.io/badge/github-hollowdb-5C3EFE?logo=github">
+    </a>
+    <a href="https://discord.gg/2wuU9ym6fq" target="_blank">
+        <img alt="Discord" src="https://dcbadge.vercel.app/api/server/2wuU9ym6fq?style=flat">
+    </a>
+</p>
+
+## Installation
+
+HollowDB client is an PyPI package. You can install it as:
+
+```sh
+pip install hollowdb
+```
+
+## Usage
+
+Create a new client with:
+
+```python
+from hollowdb import HollowClient
+
+client = HollowClient(api_key="api_key",db="your_db")
+```
+
+After that, using the client is as simple as it gets:
+
+```python
+# without zero-knowledge proofs
+client.get(KEY);
+client.put(KEY, VALUE);
+client.get_multi([KEY1, KEY2]);
+client.update(KEY, VALUE);
+client.remove(KEY);
+```
+
+If you are connecting to a database that has zero-knowledge proof verifications enabled, you will need to provide proofs along with your requests.
+
+You can use our [HollowDB Prover](https://github.com/firstbatchxyz/hollowdb) utility to generate proofs with minimal development effort. Assuming that a proof is generated for the respective request, the proof shall be provided as an additional argument to these functions.
+
+```python
+# with zero-knowledge proofs
+client.get(KEY);
+client.put(KEY, VALUE);
+client.update(KEY, VALUE, PROOF);
+client.remove(KEY, PROOF);
+```
+
+## Testing
+
+To run tests:
+
+```sh
+python -m unittest tests/tests.py
+```
