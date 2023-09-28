@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: pytiming
+Version: 0.0.2
+Home-page: https://github.com/konrad966/pytiming
+Author: Konrad Lis
+Author-email: konrad.lis11@gmail.com
+License-File: LICENSE
+Requires-Dist: numpy
+
