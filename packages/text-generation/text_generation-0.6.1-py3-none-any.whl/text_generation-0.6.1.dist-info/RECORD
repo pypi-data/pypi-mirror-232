@@ -1,0 +1,8 @@
+text_generation/__init__.py,sha256=q6mxbAmeOQ5Gme0d8LQkaXKBF1feLn8z9gUCnOXkhaE,771
+text_generation/client.py,sha256=eLG5yyaIncXnhgZF-Sdk1NfISW_id5IR4_5UC0iPhwc,19449
+text_generation/errors.py,sha256=O-QtX_4UdDhGqzJIQXREwM2jRgsfw_5FEXYXISiEkro,2839
+text_generation/inference_api.py,sha256=avgy7SUjFqFxVmTwj-hQqm75LbeZNQ08Rxz4qLGsUzw,5579
+text_generation/types.py,sha256=9Gfmda5Gt94Vs3hAnVZUfrp1zZzOvzaFQew1BggvJFA,7956
+text_generation-0.6.1.dist-info/METADATA,sha256=TF-PONVWeW7JuOHyqhNhNxwXgPi88tGZailfxcW0Pr8,7807
+text_generation-0.6.1.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+text_generation-0.6.1.dist-info/RECORD,,
