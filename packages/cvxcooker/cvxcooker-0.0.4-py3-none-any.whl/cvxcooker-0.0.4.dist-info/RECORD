@@ -1,0 +1,17 @@
+cvx/cook.py,sha256=rX89Jaou1nuDKqEuNchN4DZ78Eu-K2_z3ox4mSAPvo4,2012
+cvx/cooker/__init__.py,sha256=FjtVvzBiMgxkG8wKzAzESexxe-jdDw7C3NgUwBwnF30,639
+cvx/cooker/parse.py,sha256=aT_AuoEE69dics7NUCg70LO_7smbC1UoVEMdlZzRGZk,1137
+cvx/templates/book/_config.yml,sha256=h1_hoeLWcDQeePZJGa-sDeehxjlJ0QezoQTz5yQAw2s,833
+cvx/templates/book/_toc.yml,sha256=KPDTMIkn8eHT4ih8_P0k9qz6LFMc0xQdSHj7yqsBWwY,237
+cvx/templates/book/docs/api.md,sha256=1g_lRaJT1QkK_ouVDcVnHWTYVmba9HRfT-0dHEzH-Fc,48
+cvx/templates/book/docs/nb.md,sha256=mVjWkxFBL8YceeWEWA1eyz28Hat1dpyO21iUQDtLd2U,38
+cvx/templates/book/docs/reports.md,sha256=MsIGFazNff-Q1SXEc2YEZxsrqCX7VLVcEvH3f5dFfC8,154
+cvx/templates/book/sphinx/conf.py,sha256=i1gXMU6qD7su2Tbkg7PdWJgdgLEOJi9T_7TIOHKEb2s,1312
+cvx/templates/contributions/CODE_OF_CONDUCT.md,sha256=L4ntt6TGsyjILzFVB8yRgTPd6LwaIVHAEVM7I6MPLIM,3336
+cvx/templates/contributions/CONTRIBUTING.md,sha256=sIcoL5X85hjDHeDIFiAdp_5amtXpetWXyTo-np8_4eg,3204
+cvx/templates/readme/README.md,sha256=17lENTUOyUWSpxhgBITPWAkydl7d8zuTgq7F7mQLImg,639
+cvxcooker-0.0.4.dist-info/LICENSE,sha256=psuoW8kuDP96RQsdhzwOqi6fyWv0ct8CR6Jr7He_P_k,10173
+cvxcooker-0.0.4.dist-info/METADATA,sha256=1U3zwioNry2KIgTY280GpxRv645GazTzEgifXUET-m4,2971
+cvxcooker-0.0.4.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+cvxcooker-0.0.4.dist-info/entry_points.txt,sha256=lVGnkamWBjnhXZ4W6UlTw-2xeYJF-CR-1Z0wNv2L6m4,38
+cvxcooker-0.0.4.dist-info/RECORD,,
