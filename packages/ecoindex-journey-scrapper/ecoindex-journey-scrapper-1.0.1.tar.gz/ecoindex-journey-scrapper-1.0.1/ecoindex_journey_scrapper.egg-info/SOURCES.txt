@@ -1,0 +1,7 @@
+pyproject.toml
+setup.py
+ecoindex_journey_scrapper.egg-info/PKG-INFO
+ecoindex_journey_scrapper.egg-info/SOURCES.txt
+ecoindex_journey_scrapper.egg-info/dependency_links.txt
+ecoindex_journey_scrapper.egg-info/requires.txt
+ecoindex_journey_scrapper.egg-info/top_level.txt
