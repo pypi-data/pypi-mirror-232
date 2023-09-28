@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: GRIDX
+Version: 1.0
+Summary: a simple tool for grids
+Author: chanakya ram sai illa
+Author-email: chanakyaramsaiilla@gmail.com
+Keywords: GRIDX,gridm
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+
+a simple tool for girds still in working
