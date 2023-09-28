@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/perphix.egg-info/PKG-INFO
+src/perphix.egg-info/SOURCES.txt
+src/perphix.egg-info/dependency_links.txt
+src/perphix.egg-info/requires.txt
+src/perphix.egg-info/top_level.txt
