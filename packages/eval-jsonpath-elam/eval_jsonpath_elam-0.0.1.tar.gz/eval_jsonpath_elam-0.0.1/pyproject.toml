@@ -1,0 +1,57 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+license = { file = "LICENSE.txt" }
+name = "eval_jsonpath_elam"
+version = "0.0.1"
+authors = [{ name = "Eric Lam", email = "ericlamqa@quadfactor.com" }]
+maintainers = [{ name = "Eric Lam", email = "ericlamqa@quadfactor.com" }]
+description = "Given a json value, this method will generate an eval jsonPath string for Python or dot notation string for Java/Javascript"
+readme = "README.md"
+requires-python = ">=3.11.4"
+classifiers = [
+    "Programming Language :: Python :: 3.11",
+    "License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)",
+    "Operating System :: Microsoft :: Windows :: Windows 11",
+]
+keywords = [
+    "return",
+    "jsonpath",
+    "string",
+    "get",
+    "eval",
+    "eval()",
+    "generate",
+    "path",
+    "json",
+    "aggregate",
+    "collect",
+    "collected",
+    "collection",
+    "array",
+    "dict",
+    "dictionary",
+    "list",
+    "tree",
+    "dot",
+    "notation",
+    "branch",
+    "recursive",
+    "recursion",
+    "build",
+    "join",
+    "javascript",
+    "java",
+    "brackets",
+    "sequential",
+    "sequence",
+    "traverse",
+    "traversal",
+    "chain",
+]
+
+[project.urls]
+"GitHub" = "https://github.com/genericGenie"
+"LinkedIn" = "https://www.linkedin.com/in/genericlam"

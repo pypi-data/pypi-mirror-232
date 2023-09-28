@@ -1,0 +1,9 @@
+LICENSE.txt
+README.md
+pyproject.toml
+src/eval_jsonpath_elam/__init__.py
+src/eval_jsonpath_elam/evalpath.py
+src/eval_jsonpath_elam.egg-info/PKG-INFO
+src/eval_jsonpath_elam.egg-info/SOURCES.txt
+src/eval_jsonpath_elam.egg-info/dependency_links.txt
+src/eval_jsonpath_elam.egg-info/top_level.txt
