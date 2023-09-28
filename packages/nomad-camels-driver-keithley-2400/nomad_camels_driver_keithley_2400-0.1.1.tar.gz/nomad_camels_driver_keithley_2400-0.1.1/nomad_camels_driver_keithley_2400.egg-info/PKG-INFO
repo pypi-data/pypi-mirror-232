@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: nomad-camels-driver-keithley-2400
+Version: 0.1.1
+Summary: Device driver for the Keithley 2400 source measure unit.
+Author-email: FAIRmat - HU Berlin <nomad-camels@fau.de>
+Project-URL: GitHub Page, https://github.com/FAU-LAP/NOMAD-CAMELS
+Project-URL: Documentation, https://fau-lap.github.io/NOMAD-CAMELS/doc/instruments/instruments.html
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v2 (LGPLv2)
+Requires-Python: >=3.9.6
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: nomad-camels>=0.2
+
+# NOMAD-CAMELS driver for Keithley 2400
+
+Driver of the Keithley 2400 source measure unit written for the measurement software [NOMAD-CAMELS](https://fau-lap.github.io/NOMAD-CAMELS/).
+
+## Features
+Currently supported are basic voltage and current setting and reading.
+## Documentation
+
+For more information and documentation visit the NOMAD-CAMELS [documentation](https://fau-lap.github.io/NOMAD-CAMELS/doc/instruments/instruments.html).
