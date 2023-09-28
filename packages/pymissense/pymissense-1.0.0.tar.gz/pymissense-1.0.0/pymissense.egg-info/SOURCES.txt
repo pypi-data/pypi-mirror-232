@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+missense/__init__.py
+missense/missense.py
+pymissense.egg-info/PKG-INFO
+pymissense.egg-info/SOURCES.txt
+pymissense.egg-info/dependency_links.txt
+pymissense.egg-info/entry_points.txt
+pymissense.egg-info/requires.txt
+pymissense.egg-info/top_level.txt
