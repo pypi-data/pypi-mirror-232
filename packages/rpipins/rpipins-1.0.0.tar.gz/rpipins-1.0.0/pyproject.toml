@@ -1,0 +1,113 @@
+[build-system]
+requires = ["hatchling", "hatch-fancy-pypi-readme"]
+build-backend = "hatchling.build"
+
+[project]
+name = "rpipins"
+dynamic = ["version", "readme"]
+description = "A command-line pinout for the Raspberry Pi Pico W"
+license = {file = "LICENSE"}
+requires-python = ">= 3.7"
+authors = [
+    { name = "Philip Howard", email = "pinout@gadgetoid.com" },
+]
+maintainers = [
+    { name = "Philip Howard", email = "pinout@gadgetoid.com" },
+]
+keywords = [
+    "Pico",
+    "Raspberry",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Software Development",
+    "Topic :: System :: Hardware",
+]
+dependencies = ["rich>=13.3.5"]
+
+[project.urls]
+GitHub = "https://www.github.com/pinout-xyz/rpipins"
+Homepage = "https://pico.pinout.xyz"
+
+[project.scripts]
+rpipins = "rpipins.__main__:main"
+
+[tool.hatch.version]
+path = "rpipins/__main__.py"
+
+[tool.hatch.build]
+include = [
+    "rpipins",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+]
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "*"
+]
+exclude = [
+    ".*",
+    "dist"
+]
+
+[tool.hatch.metadata.hooks.fancy-pypi-readme]
+content-type = "text/markdown"
+fragments = [
+  { path = "README.md" },
+  { text = "\n" },
+  { path = "CHANGELOG.md" }
+]
+
+[tool.ruff]
+exclude = [
+    '.tox',
+    '.egg',
+    '.git',
+    '__pycache__',
+    'build',
+    'dist'
+]
+ignore = [
+    'E701'
+]
+line-length = 200
+
+[tool.codespell]
+skip = """
+./.tox,\
+./.egg,\
+./.git,\
+./__pycache__,\
+./build,\
+./dist.\
+"""
+
+[tool.isort]
+line_length = 200
+
+[tool.check-manifest]
+ignore = [
+    '.stickler.yml',
+    'boilerplate.md',
+    'check.sh',
+    'install.sh',
+    'uninstall.sh',
+    'Makefile',
+    'tox.ini',
+    'tests/*',
+    'examples/*',
+    '.coveragerc',
+    'requirements-dev.txt'
+]
