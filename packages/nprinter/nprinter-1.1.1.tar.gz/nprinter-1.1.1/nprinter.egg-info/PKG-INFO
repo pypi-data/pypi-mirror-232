@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: nprinter
+Version: 1.1.1
+Summary: A simple level-based printer for nested lists
+Home-page: http://www.nolinearpath.com
+Author: nolinearpath
+Author-email: donaldteghen@gmail.com
+Description-Content-Type: text/markdown
+
+Help on function printlist in module nprinter:
+
+printlist(obj, level=0)
+    prints out the content of the list object styled based on the level
