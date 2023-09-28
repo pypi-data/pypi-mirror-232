@@ -1,0 +1,10 @@
+pyproject.toml
+setup.py
+src/switchedon/__init__.py
+src/switchedon/parse.py
+src/switchedon.egg-info/PKG-INFO
+src/switchedon.egg-info/SOURCES.txt
+src/switchedon.egg-info/dependency_links.txt
+src/switchedon.egg-info/entry_points.txt
+src/switchedon.egg-info/requires.txt
+src/switchedon.egg-info/top_level.txt
