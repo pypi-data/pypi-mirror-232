@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: lawnmowerlatte
+Version: 1.1.32
+Summary: Useful tools for Python
+Home-page: https://github.com/lawnmowerlatte/python_tools
+Author: lawnmowerlatte
+Author-email: lawnmowerlatte@gmail.com
+Project-URL: Bug Tracker, https://github.com/lawnmowerlatte/python_tools/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: rich
+Requires-Dist: jinja2
+
+# python_tools
+Python3 package containing general tools
