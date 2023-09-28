@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: MOFUN-CCC
+Version: 1.1.0
+Summary: Multi Omics FUsion Neural network- Computational Cell Counting
+Home-page: https://github.com/yuemolin/MOFUN-CCC
+Author: Molin Yue
+Author-email: moy6@pitt.edu
+License: MIT License
+Platform: any
+Requires-Python: >=3.9
+License-File: LICENSES
