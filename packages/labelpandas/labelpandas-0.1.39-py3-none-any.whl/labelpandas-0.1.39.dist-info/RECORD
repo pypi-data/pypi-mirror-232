@@ -1,0 +1,9 @@
+labelpandas/__init__.py,sha256=ecYOFsR25szukoLJ0fHlf45CoS9EnmJNGY77IxCR_Xk,141
+labelpandas/client.py,sha256=0Xql4QyEvtRurvjJkRwwl2QAPMqJyRqRHxjhPPeC5tY,24268
+labelpandas/connector.py,sha256=cu-CSuWKhYGdW4DRKbDGldm6V6RY8yECFzXwIzxuxik,2624
+labelpandas/load_local_files.py,sha256=I4g4vTwb2plB7ecxgjbc3Yo5uwhPY2p15mTHZ-8J0ac,1833
+labelpandas/uploader.py,sha256=NTvmTuYSK28ahFJPOXnfE_pa2b_ZJ5mw_sJWuU3QT5U,17660
+labelpandas-0.1.39.dist-info/METADATA,sha256=RwWij8h0HYlHHWZsldSFpgtIvJBlI7Xg3O1myiRGQTQ,5654
+labelpandas-0.1.39.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+labelpandas-0.1.39.dist-info/top_level.txt,sha256=IZDJ_lm9DOTtdgTG0yUOhrFfcc1CwV3jRbN2ed6ubYU,12
+labelpandas-0.1.39.dist-info/RECORD,,
