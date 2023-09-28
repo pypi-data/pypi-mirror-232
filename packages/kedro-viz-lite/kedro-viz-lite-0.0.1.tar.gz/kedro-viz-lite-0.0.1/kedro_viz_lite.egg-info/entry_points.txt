@@ -1,0 +1,2 @@
+[nbdev]
+kedro_viz_lite = kedro_viz_lite._modidx:d

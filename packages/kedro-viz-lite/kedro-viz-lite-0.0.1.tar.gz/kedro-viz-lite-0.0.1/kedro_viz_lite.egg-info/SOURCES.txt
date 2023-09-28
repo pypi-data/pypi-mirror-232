@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+settings.ini
+setup.py
+kedro_viz_lite/__init__.py
+kedro_viz_lite/_modidx.py
+kedro_viz_lite/core.py
+kedro_viz_lite.egg-info/PKG-INFO
+kedro_viz_lite.egg-info/SOURCES.txt
+kedro_viz_lite.egg-info/dependency_links.txt
+kedro_viz_lite.egg-info/entry_points.txt
+kedro_viz_lite.egg-info/not-zip-safe
+kedro_viz_lite.egg-info/requires.txt
+kedro_viz_lite.egg-info/top_level.txt
