@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# https://packaging.python.org/tutorials/packaging-projects/
+
+set -e
+rm -rf dist
+python3 -m build
+python3 -m twine upload dist/*
