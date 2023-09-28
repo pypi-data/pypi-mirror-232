@@ -1,0 +1,11 @@
+fuzzywuzzy
+Levenshtein
+nltk
+numpy
+pandas
+python-dateutil
+pytz==2023.3.post1
+rapidfuzz
+regex
+scikit-learn
+scipy
