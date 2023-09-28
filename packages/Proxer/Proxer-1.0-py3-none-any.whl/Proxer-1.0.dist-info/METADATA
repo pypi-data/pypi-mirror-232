@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: Proxer
+Version: 1.0
+Summary: Proxer - get a free working proxy simply and free of charge
+Home-page: https://github.com/ssshipilo/Proxer
+Author: Shypilo Oleksandr
+Author-email: ssshipilo@gmail.com
+Project-URL: Documentation, https://github.com/ssshipilo/Proxer/blob/main/git/documentation.md
+Project-URL: Source Code, https://github.com/ssshipilo/Proxer
+Description-Content-Type: text/markdown
+Requires-Dist: beautifulsoup4 ==4.12.2
+Requires-Dist: colorama ==0.4.6
+Requires-Dist: futures ==3.4.0
+Requires-Dist: requests
+
