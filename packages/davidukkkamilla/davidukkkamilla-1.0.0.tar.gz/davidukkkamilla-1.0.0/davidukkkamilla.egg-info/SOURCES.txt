@@ -1,0 +1,7 @@
+README.md
+setup.cfg
+setup.py
+davidukkkamilla.egg-info/PKG-INFO
+davidukkkamilla.egg-info/SOURCES.txt
+davidukkkamilla.egg-info/dependency_links.txt
+davidukkkamilla.egg-info/top_level.txt
