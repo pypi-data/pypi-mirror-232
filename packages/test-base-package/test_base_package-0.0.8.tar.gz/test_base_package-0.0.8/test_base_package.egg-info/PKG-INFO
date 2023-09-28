@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: test-base-package
+Version: 0.0.8
+Summary: python 自动化测试基础包
+Home-page: https://www.baidu.com
+Author: 自动化测试基础包
+Author-email: tianjincn@163.com
+Requires-Python: >=3.5.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Example Package
+
+This is a simple example package. You can use
+[Github-flavored Markdown](https://guides.github.com/features/mastering-markdown/)
+to write your content.
