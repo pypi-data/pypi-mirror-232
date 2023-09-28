@@ -1,0 +1,52 @@
+name: autofix.ci
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  rust_clippy: "1.70"  # MSRV
+
+jobs:
+  protobuf:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: brew install swift-protobuf
+      - run: cargo install protoc-gen-prost
+      - run: protoc --proto_path=./src/ipc/ mitmproxy_ipc.proto
+          --prost_out=./src/ipc/
+          --swift_out=./mitmproxy-macos/redirector/ipc
+      - uses: autofix-ci/action@8caa572fd27b0019a65e4c695447089c8d3138b9
+
+  rustfmt:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        include:
+          - os: windows-latest
+          - os: macos-latest
+          - os: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: rustup toolchain install ${{ env.rust_clippy }} --profile minimal --component rustfmt --component clippy
+      - run: rustup default ${{ env.rust_clippy }}
+      - uses: Swatinem/rust-cache@e207df5d269b42b69c8bc5101da26f7d31feddb4  # v2.6.2
+        timeout-minutes: 2
+        continue-on-error: true
+      # PyO3 wants recent Python on Windows.
+      - uses: actions/setup-python@v4
+        with:
+          python-version-file: .github/python-version.txt
+
+      - run: cargo clippy --fix --allow-dirty --workspace
+      - run: cargo fmt --all
+      - run: git checkout src/ipc/mitmproxy_ipc.rs
+
+      - uses: autofix-ci/action@8caa572fd27b0019a65e4c695447089c8d3138b9

@@ -1,0 +1,8 @@
+/.idea/
+/dist/
+/out/
+/target/
+/venv/
+/docs/
+__pycache__/
+*.xcuserstate
