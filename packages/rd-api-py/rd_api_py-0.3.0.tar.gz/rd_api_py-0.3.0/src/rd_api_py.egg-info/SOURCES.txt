@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/rd_api_py.egg-info/PKG-INFO
+src/rd_api_py.egg-info/SOURCES.txt
+src/rd_api_py.egg-info/dependency_links.txt
+src/rd_api_py.egg-info/requires.txt
+src/rd_api_py.egg-info/top_level.txt
+src/rdapi/__init__.py
+src/rdapi/error_codes.json
+src/rdapi/rdapi.py
