@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: compPy
+Version: 0.1.3
+Summary: A package for working with (u)CoMP data.
+Author-email: Richard Morton <richard.morton@northumbria.ac.uk>
+Project-URL: Homepage, https://github.com/Richardjmorton/compPy
+Project-URL: Bug Tracker, https://github.com/Richardjmorton/compPy/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Physics
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: sunpy >=5.0.0
+Requires-Dist: numpy >=1.21.0
+Requires-Dist: scipy !=1.10.0,>=1.7.0
+Requires-Dist: matplotlib >=3.5.0
+Requires-Dist: astropy >=5.0.1
+Requires-Dist: more-itertools >=10.0.0
+Requires-Dist: scikit-image >=0.18.0
+
+A package to work with CoMP/uCoMP data.
+
+Package still in development.
