@@ -1,0 +1,10 @@
+pyvisa
+softioc
+schema
+
+[test]
+pytest
+pytest-cov
+softioc
+pyepics
+PyVISA-sim
