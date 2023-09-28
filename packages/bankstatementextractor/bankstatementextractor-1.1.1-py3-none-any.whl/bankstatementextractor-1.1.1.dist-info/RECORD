@@ -1,0 +1,11 @@
+bankstatementextractor/BanksExtractor.py,sha256=vhpjnGRJc5By5F6y4YjaZd-2hmBsbz_4t6LnoeaIGvg,10648
+bankstatementextractor/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bankstatementextractor/banks.py,sha256=s6tNWFzpvFNWprhvfK2Y8e-ZiDDq9PnefHyoUlaKLJ4,16096
+bankstatementextractor/banks_utils.py,sha256=csmmAyVVj03WxKVIb9UYLxc3W4qHyUEvH0Uy9NvBKGg,607
+bankstatementextractor/test.py,sha256=TY2mBfg1l5xI53zFvh_5iUjXmfqXahm4YPxWc2S0EBI,389
+bankstatementextractor/models/best.pt,sha256=7k7476CdZroF2d2-rZVDKqfwlNFbXuCGV9MGx8KhWJk,14588861
+bankstatementextractor-1.1.1.dist-info/LICENSE,sha256=JTmNGOPPvG2XBgkW2R2xwzJeR_OEjaFKeePN1jGYVt8,1068
+bankstatementextractor-1.1.1.dist-info/METADATA,sha256=n6odLWR0uplf3AsqvDnO_ca5yPfAWqtdZNDI7OJEdLo,4189
+bankstatementextractor-1.1.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+bankstatementextractor-1.1.1.dist-info/top_level.txt,sha256=HzeQA-9AsRdftJJEKKP_sUBoU0k-3zoH7OqBFdTKw10,23
+bankstatementextractor-1.1.1.dist-info/RECORD,,
