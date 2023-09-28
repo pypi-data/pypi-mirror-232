@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: plot_confusion_matrix
+Version: 0.0.1
+Summary: A simple confusion matrix
+Project-URL: Homepage, https://github.com/eduardo-gomes/confusion_matrix
+Project-URL: Bug Tracker, https://github.com/eduardo-gomes/confusion_matrix/issues
+Author-email: Eduardo M Gomes <me@emg.dev>
+License-File: LICENSE
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Description-Content-Type: text/markdown
+
+# Simple confusion matrix
+
+Plot a simple confusion matrix using matplotlib
+
+Example:
+
+```py
+from plot_confusion_matrix import confusion_matrix
+from matplotlib import pyplot
+
+matrix = [[5, 2, 0],
+		  [1, 2, 3],
+		  [2, 1, 6]]
+
+confusion_matrix(matrix)
+pyplot.show(block=True)
+```
+
+Output:
+
+![Result](plot.png)
