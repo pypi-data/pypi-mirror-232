@@ -1,0 +1,11 @@
+src/PhysioKit2/main.py,sha256=0BNcH3Q1k9VzP-EwQ6yCrJMqxn68ZOUsrTn6wOM8oJA,36550
+src/PhysioKit2/register_dummy.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+src/PhysioKit2/utils/biofeedback_vis.py,sha256=5FfHgDBn5lFBR7Ge0TNRjZHdpBMvYcRSrERMp4hUTbg,6155
+src/PhysioKit2/utils/data_processing_lib.py,sha256=I1oGqPNczHAdOEqe9aI41ciWVRrqyxyoeYd-fY4TR9U,1877
+src/PhysioKit2/utils/devices.py,sha256=SdiYcFXUItJYDVTFFzQ8ermcO6yzNTNhMvc8NuS7lc0,1003
+src/PhysioKit2/utils/external_sync.py,sha256=Fr3FKBtOoXAIksWNEoGDDor4TqXQFZKgLzxpiUHAlx4,4006
+src/PhysioKit2/utils/load_data.py,sha256=Wy4rnM2BDWZQBeBfXXsJLjeCepUbl4exgJgVdw9LRAU,2186
+physiokit2-1.5.1.dist-info/METADATA,sha256=tcgmMNA5eLksZbWCO252LRFOHGcRQJQtVxx3-BHE_mo,11765
+physiokit2-1.5.1.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+physiokit2-1.5.1.dist-info/licenses/LICENSE,sha256=4-WPjgWQvEK2D8ni35U6ZRnp4UCX-2MZFFCWWGx2ifY,1084
+physiokit2-1.5.1.dist-info/RECORD,,
