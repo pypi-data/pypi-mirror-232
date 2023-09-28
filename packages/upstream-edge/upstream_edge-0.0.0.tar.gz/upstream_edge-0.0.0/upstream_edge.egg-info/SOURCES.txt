@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+upstream_edge/__init__.py
+upstream_edge.egg-info/PKG-INFO
+upstream_edge.egg-info/SOURCES.txt
+upstream_edge.egg-info/dependency_links.txt
+upstream_edge.egg-info/top_level.txt

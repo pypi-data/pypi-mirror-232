@@ -1,0 +1,15 @@
+[project]
+name = "upstream_edge"
+version = "0.0.0"
+description = "Upstream Edge Python Utilities"
+authors = []
+license = { file = "LICENSE" }
+readme = "README.md"
+classifiers = [
+    "Development Status :: 1 - Planning",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+]
+requires-python = ">=3.10"
+dependencies = []
