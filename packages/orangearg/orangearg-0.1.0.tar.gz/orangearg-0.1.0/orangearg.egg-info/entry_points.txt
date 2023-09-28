@@ -1,0 +1,5 @@
+[orange.widgets]
+Argument = orangearg.argument.widgets
+
+[orange3.addon]
+argument = orangearg.argument
