@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/vectra_py/__init__.py
+src/vectra_py/item_selector.py
+src/vectra_py/local_index.py
+src/vectra_py.egg-info/PKG-INFO
+src/vectra_py.egg-info/SOURCES.txt
+src/vectra_py.egg-info/dependency_links.txt
+src/vectra_py.egg-info/top_level.txt
