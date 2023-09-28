@@ -1,0 +1,51 @@
+[build-system]
+requires = ["jupyter_packaging~=0.10,<2", "jupyterlab~=3.1"]
+build-backend = "jupyter_packaging.build_api"
+
+[project]
+name = "jupyterlab_accessible_themes"
+requires-python = ">=3.8"
+dynamic = ["version", "description", "readme", "license", "authors", "urls"]
+
+[tool.jupyter-packaging.options]
+ensured-targets = [
+    "jupyterlab_accessible_themes/labextensions/githubdark/static/style.js",
+    "jupyterlab_accessible_themes/labextensions/githubdark/package.json",
+    "jupyterlab_accessible_themes/labextensions/githublight/static/style.js",
+    "jupyterlab_accessible_themes/labextensions/githublight/package.json",
+    "jupyterlab_accessible_themes/labextensions/pitayasmoothie/static/style.js",
+    "jupyterlab_accessible_themes/labextensions/pitayasmoothie/package.json"
+]
+
+[tool.jupyter-packaging.builder]
+factory = "jupyter_packaging.npm_builder"
+
+[tool.jupyter-packaging.build-args]
+build_cmd = "build"
+npm = ["jlpm"]
+
+[tool.check-manifest]
+ignore = [
+    "jupyterlab_accessible_themes/labextensions/**",
+    "yarn.lock",
+    ".*",
+    "package-lock.json"
+]
+
+[tool.ruff]
+builtins = ["c"]
+# E501 Line too long (158 > 100 characters)
+# D400: First line should end with a period
+# F401: Imported but unused
+# F841: Local variable is assigned to but never used
+ignore = ["D400", "E501"]
+include = ["*.py", "*.pyi", "**/pyproject.toml", "*.ipynb"]
+# A: builtins
+# F: Pyflakes
+# E,W: pycodestyle
+# C4: flake8-comprehensions
+# D: pydocstyle
+select = ["A", "B", "C", "C4", "C9", "D", "E", "F", "W", "ICN"]
+
+[tool.ruff.pydocstyle]
+convention = "google" # Accepts: "google", "numpy", or "pep257".
