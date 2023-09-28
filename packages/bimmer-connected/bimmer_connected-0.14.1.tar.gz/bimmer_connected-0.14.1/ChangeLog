@@ -1,0 +1,7 @@
+CHANGES
+=======
+
+0.14.1
+------
+
+* Optimize capture verification method in China region (#564)
