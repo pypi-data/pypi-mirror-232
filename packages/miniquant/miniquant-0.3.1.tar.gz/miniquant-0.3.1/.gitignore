@@ -1,0 +1,6 @@
+*~
+#*
+__pycache__
+miniquant.egg-info
+dist/*
+src/miniquant/_version.py
