@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: generate-md-links
+Version: 0.1.1
+Summary: Generate Markdown links for specified files.
+Home-page: https://gitee.com/763593659/generate_-md_links
+Author: xgh
+
+# generate_MD_links
+
+##
+generate_MD_links is a Python script that generates a Markdown file with links to all the files in a directory.
+
+## memo for uploading to PyPI
+```powershell
+python setup.py sdist bdist_wheel
+python -m twine upload --repository pypi dist/*
+```
+### update
+```powershell
+rm -r dist
+python setup.py sdist bdist_wheel
+python -m twine upload --repository pypi dist/*
+```
+
