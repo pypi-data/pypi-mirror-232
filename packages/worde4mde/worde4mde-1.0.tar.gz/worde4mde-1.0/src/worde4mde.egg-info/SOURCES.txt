@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+src/worde4mde/__init__.py
+src/worde4mde/load_embeddings.py
+src/worde4mde.egg-info/PKG-INFO
+src/worde4mde.egg-info/SOURCES.txt
+src/worde4mde.egg-info/dependency_links.txt
+src/worde4mde.egg-info/requires.txt
+src/worde4mde.egg-info/top_level.txt
