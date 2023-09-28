@@ -1,0 +1,7 @@
+setuptools
+cone.sql
+python-dateutil
+qrcode[pil]
+
+[test]
+zope.testrunner
