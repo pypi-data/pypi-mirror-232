@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: schedview
+Version: 0.7.0
+Summary: Tools for visualization of Rubin Observatory's scheduler status, strategy and progress on LSST.
+Author: Lynne Jones, Eman Ali, Alice Serene
+Author-email: "Eric H. Neilsen, Jr." <neilsen@fnal.gov>
+Classifier: Intended Audience :: Science/Research
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Scientific/Engineering :: Astronomy
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# schedview
+The `schedview` module provides tools for visualizing Rubin Observatory scheduler behaviour and Rubin Observatory/LSST survey status, including:
+
+- A collection of functions, eacho of which creates an independent visualization of some aspect of scheduler behaviour, state, or surve progress. These functions may be used in `jupyter` notebooks or other python applications, or combined into dashboards or other higher level applications.
+- A handful of dashboard applications that collect relevant visualizations into sets suitable for specific use cases.
