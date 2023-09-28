@@ -1,0 +1,18 @@
+from setuptools import find_packages, setup
+
+setup(
+    name="pipedrive-wrapper",
+    version="1.0.11",
+    author="Pedro Cantidio",
+    author_email="ppcantidio@gmail.com",
+    description="A Python wrapper for the Pipedrive API",
+    long_description="A Python wrapper that simplifies interaction with the Pipedrive API",
+    url="https://github.com/ppcantidio/pipedrive.py",
+    packages=find_packages(exclude=["tests"]),
+    classifiers=[
+        "Development Status :: 3 - Alpha",
+        "Intended Audience :: Developers",
+        "License :: OSI Approved :: MIT License",
+        "Programming Language :: Python :: 3",
+    ],
+)
