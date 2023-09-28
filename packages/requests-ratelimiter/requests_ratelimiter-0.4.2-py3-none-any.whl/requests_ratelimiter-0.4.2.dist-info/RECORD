@@ -1,0 +1,7 @@
+requests_ratelimiter/__init__.py,sha256=NMEZ6RdZv5euK2tX6Km1xLMqGnw0VabKnF5Gens4_8k,474
+requests_ratelimiter/py.typed,sha256=rnYdiA2Ka23H1X4q_PHfFdD9_Z0QiH6cMspLo5NxsTw,21
+requests_ratelimiter/requests_ratelimiter.py,sha256=aPU8fcT6-6OIfjNpK0JDIilpDFSgKiPmRrfUy4wfdrc,7304
+requests_ratelimiter-0.4.2.dist-info/LICENSE,sha256=wRl8HyY_hPTfA8RIbj14O-3ZEg7E_-wraovXRpiZbdk,1068
+requests_ratelimiter-0.4.2.dist-info/METADATA,sha256=MHOQ4D_ifFVOTxj0Z4fdJ9Y8k1daVb-zmrvWNEbX_pw,11211
+requests_ratelimiter-0.4.2.dist-info/WHEEL,sha256=Zb28QaM1gQi8f4VCBhsUklF61CTlNYfs9YAZn-TOGFk,88
+requests_ratelimiter-0.4.2.dist-info/RECORD,,
