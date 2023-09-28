@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: post-processing-library-llm
+Version: 0.2
+Summary: # post-processing-library-llm
+Requires-Dist: fuzzywuzzy
+Requires-Dist: Levenshtein
+Requires-Dist: nltk
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: python-dateutil
+Requires-Dist: pytz (==2023.3.post1)
+Requires-Dist: rapidfuzz
+Requires-Dist: regex
+Requires-Dist: scikit-learn
+Requires-Dist: scipy
+
