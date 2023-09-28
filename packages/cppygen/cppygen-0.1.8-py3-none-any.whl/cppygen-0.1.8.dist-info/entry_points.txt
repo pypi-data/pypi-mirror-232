@@ -1,0 +1,3 @@
+[console_scripts]
+cppygen=cppygen.__main__:run
+
