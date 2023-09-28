@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: polapy
+Version: 0.0.1
+Summary: PolaPy (Polarization for Python) is a collection of algorithmic implementations of polarization metrics in Python.
+Home-page: https://github.com/cnavarreteliz/polapy
+Author: cnavarreteliz
+Author-email: cnavarreteliz@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+
+# PolaPy
+
+An open-source library for the study of polarization.
