@@ -1,0 +1,33 @@
+# generate_MD_links
+
+##
+generate_MD_links is a Python script that generates a Markdown file with links to all the files in a directory.
+
+
+
+> usage: x-generate-md-links [-h]
+>                            output_file extension directory [directory ...]
+> 
+> Generate Markdown links for specified files.
+> 
+> positional arguments:
+>   output_file  Output Markdown file name
+>   extension    File extension to search for (e.g., .pdf)
+>   directory    Directories to search for files
+> 
+> options:
+>   -h, --help   show this help message and exit
+
+
+## memo for uploading to PyPI
+```powershell
+python setup.py sdist bdist_wheel
+python -m twine upload --repository pypi dist/*
+```
+### update
+```powershell
+rm -r dist
+python setup.py sdist bdist_wheel
+python -m twine upload --repository pypi dist/*
+```
+
