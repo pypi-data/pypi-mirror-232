@@ -1,0 +1,23 @@
+[console_scripts]
+alignmentSieve = deeptools.alignmentSieve:main
+bamCompare = deeptools.bamCompare:main
+bamCoverage = deeptools.bamCoverage:main
+bamPEFragmentSize = deeptools.bamPEFragmentSize:main
+bigwigAverage = deeptools.bigwigAverage:main
+bigwigCompare = deeptools.bigwigCompare:main
+computeGCBias = deeptools.computeGCBias:main
+computeMatrix = deeptools.computeMatrix:main
+computeMatrixOperations = deeptools.computeMatrixOperations:main
+correctGCBias = deeptools.correctGCBias:main
+deeptools = deeptools.deeptools_list_tools:main
+estimateReadFiltering = deeptools.estimateReadFiltering:main
+estimateScaleFactor = deeptools.estimateScaleFactor:main
+multiBamSummary = deeptools.multiBamSummary:main
+multiBigwigSummary = deeptools.multiBigwigSummary:main
+plotCorrelation = deeptools.plotCorrelation:main
+plotCoverage = deeptools.plotCoverage:main
+plotEnrichment = deeptools.plotEnrichment:main
+plotFingerprint = deeptools.plotFingerprint:main
+plotHeatmap = deeptools.plotHeatmap:main
+plotPCA = deeptools.plotPCA:main
+plotProfile = deeptools.plotProfile:main
