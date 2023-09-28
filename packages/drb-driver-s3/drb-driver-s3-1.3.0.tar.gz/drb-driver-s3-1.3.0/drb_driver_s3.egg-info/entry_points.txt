@@ -1,0 +1,5 @@
+[drb.driver]
+aws3 = drb.drivers.aws3:S3NodeFactory
+
+[drb.topic]
+aws3 = drb.topics.aws3
