@@ -1,0 +1,8 @@
+bandit_plugins/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bandit_plugins/ban_network_requests.py,sha256=uxmADqU6ROQHKIlEr7Zso0NuW2tDRwcKSuBsSzmWhjE,771
+bandit_ban_network_requests-0.0.1.dist-info/AUTHORS,sha256=YJ7iChcrYEQm8bYIY-qy_r7k07K3dSP_k-wee5V97GI,65
+bandit_ban_network_requests-0.0.1.dist-info/METADATA,sha256=yisVb_FVEwn98ySeOegy-Pc4sI8UW45hhEKvn1gh_SU,222
+bandit_ban_network_requests-0.0.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+bandit_ban_network_requests-0.0.1.dist-info/entry_points.txt,sha256=z5qcZDikEcURxBCmIoX1VciZscS-6AWZCF1Dm9CLAHY,97
+bandit_ban_network_requests-0.0.1.dist-info/top_level.txt,sha256=1Nny26j3pa9V9iba0XSGo_wCj4uxlaYEaA1qOx_BJuQ,15
+bandit_ban_network_requests-0.0.1.dist-info/RECORD,,
