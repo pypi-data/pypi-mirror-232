@@ -1,0 +1,9 @@
+casafeather-0.0.20.dist-info/WHEEL,sha256=ySCtlGwQEDl70RgVHawRuNIoK6wecZaynKNMI_Hoao4,110
+casafeather-0.0.20.dist-info/RECORD,,
+casafeather-0.0.20.dist-info/top_level.txt,sha256=jIrZVp0qaUrNLOsXz5ng_0QfKMCoT-3427W6rmtXp0Y,12
+casafeather-0.0.20.dist-info/METADATA,sha256=aNMTEXwg_vKJicLay8-WUv3j3DYgLrxGlNO8LvWAWlg,376
+casafeather/casafeather.py,sha256=j_NpZJby3kIZfXrYQZmWyFNO6YHkHSY8FnJqRSDjqms,2710
+casafeather/__main__.py,sha256=foTRovpAhE6NHWEbeDUfilsAgiImLSclyMiwyC409yw,1515
+casafeather/__init__.py,sha256=W9gCecBEbyeZTi9ATr-O8i7Uwkr1jhO8qdjIR8PCWZ8,1363
+casafeather/__bin__/casafeather-x86_64.AppImage,sha256=BkZpdjVe2l1YCcxkFebngJjBi2mQnmmowzf1VB0xHcU,53611512
+casafeather.libs/libz-eb09ad1d.so.1.2.3,sha256=Occ38Rdxpnqlv4lgkj2inrjERnLkx0ig9Kb0Ce5GMQ4,92080
