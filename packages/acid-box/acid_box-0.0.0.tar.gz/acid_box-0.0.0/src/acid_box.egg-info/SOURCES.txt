@@ -1,0 +1,11 @@
+COPYING
+NOTICE
+README.md
+pyproject.toml
+setup.py
+src/acid_box/__init__.py
+src/acid_box.egg-info/PKG-INFO
+src/acid_box.egg-info/SOURCES.txt
+src/acid_box.egg-info/dependency_links.txt
+src/acid_box.egg-info/not-zip-safe
+src/acid_box.egg-info/top_level.txt
