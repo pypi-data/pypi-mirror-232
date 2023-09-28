@@ -1,0 +1,12 @@
+.gitignore
+Makefile
+README.md
+setup.py
+natchecker.egg-info/PKG-INFO
+natchecker.egg-info/SOURCES.txt
+natchecker.egg-info/dependency_links.txt
+natchecker.egg-info/entry_points.txt
+natchecker.egg-info/requires.txt
+natchecker.egg-info/top_level.txt
+src/__init__.py
+src/main.py

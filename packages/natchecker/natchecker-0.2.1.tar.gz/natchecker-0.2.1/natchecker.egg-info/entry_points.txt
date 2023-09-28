@@ -1,0 +1,3 @@
+[console_scripts]
+natchecker = src.main:main
+
