@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: roboco-py
+Version: 0.1.0
+Summary: A Python package wrapper for windows robocopy command.
+Home-page: https://github.com/hasansezertasan/roboco-py.git
+Author: hasansezertasan
+Author-email: hasansezertasan@gmail.com
+Classifier: Development Status :: 1 - Planning
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+License-File: LICENSE
+
+<h1 align="center">
+    <strong>roboco-py</strong>
+</h1>
+<p align="center">
+    <a href="https://github.com/hasansezertasan/roboco-py" target="_blank">
+        <img src="https://img.shields.io/github/last-commit/hasansezertasan/roboco-py" alt="Latest Commit">
+    </a>
+        <img src="https://img.shields.io/github/workflow/status/hasansezertasan/roboco-py/Test">
+        <img src="https://img.shields.io/codecov/c/github/hasansezertasan/roboco-py">
+    <br />
+    <a href="https://pypi.org/project/roboco-py" target="_blank">
+        <img src="https://img.shields.io/pypi/v/roboco-py" alt="Package version">
+    </a>
+    <img src="https://img.shields.io/pypi/pyversions/roboco-py">
+    <img src="https://img.shields.io/github/license/hasansezertasan/roboco-py">
+</p>
+
+## Installation
+
+``` bash
+pip install roboco-py
+```
