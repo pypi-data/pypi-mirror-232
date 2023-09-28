@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: roboto
+Version: 0.1.0
+Summary: Tools for interacting with roboto.ai
+License: MIT
+Author: Roboto
+Author-email: admin@roboto.ai
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: roboto-sdk (>=0.1,<0.2)
+Description-Content-Type: text/markdown
+
+# Roboto
+This package is an alias to the `roboto-sdk` package, which is the authoritative package
+for interacting with the Roboto AI platform.
+
+Please prefer a dependency on `roboto-sdk` instead of using this.
+
+
