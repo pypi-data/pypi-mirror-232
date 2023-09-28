@@ -1,0 +1,2 @@
+[console_scripts]
+trail = trail.__init__:parse
