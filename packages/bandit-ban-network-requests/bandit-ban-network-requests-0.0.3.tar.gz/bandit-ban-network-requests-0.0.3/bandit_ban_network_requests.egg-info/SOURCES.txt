@@ -1,0 +1,11 @@
+AUTHORS
+README.md
+setup.py
+bandit_ban_network_requests.egg-info/PKG-INFO
+bandit_ban_network_requests.egg-info/SOURCES.txt
+bandit_ban_network_requests.egg-info/dependency_links.txt
+bandit_ban_network_requests.egg-info/entry_points.txt
+bandit_ban_network_requests.egg-info/requires.txt
+bandit_ban_network_requests.egg-info/top_level.txt
+bandit_plugins/__init__.py
+bandit_plugins/ban_network_requests.py
