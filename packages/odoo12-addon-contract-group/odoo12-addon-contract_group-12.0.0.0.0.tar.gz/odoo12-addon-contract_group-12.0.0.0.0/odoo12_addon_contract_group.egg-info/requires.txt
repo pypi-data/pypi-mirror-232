@@ -1,0 +1,2 @@
+odoo12-addon-contract
+odoo<12.1dev,>=12.0a
