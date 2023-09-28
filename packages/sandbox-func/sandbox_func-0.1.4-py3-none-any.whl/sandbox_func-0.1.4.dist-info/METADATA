@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: sandbox-func
+Version: 0.1.4
+Requires-Python: >=3.6
+Requires-Dist: pluggy >=1.0
+
