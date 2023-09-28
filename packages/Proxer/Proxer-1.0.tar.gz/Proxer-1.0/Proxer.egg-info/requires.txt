@@ -1,0 +1,4 @@
+beautifulsoup4==4.12.2
+colorama==0.4.6
+futures==3.4.0
+requests
