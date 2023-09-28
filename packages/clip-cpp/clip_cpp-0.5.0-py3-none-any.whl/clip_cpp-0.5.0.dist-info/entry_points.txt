@@ -1,0 +1,3 @@
+[console_scripts]
+clip-cpp-models=clip_cpp.file_download:available_models
+
