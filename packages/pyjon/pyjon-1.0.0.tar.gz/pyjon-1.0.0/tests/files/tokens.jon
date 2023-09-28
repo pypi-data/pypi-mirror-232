@@ -1,0 +1,12 @@
+a = {
+    bcd = efg
+    hij = 100
+    230 = 2.3
+    "nop" = "qr"
+    s = { "t1" { u = vw } 0 }
+    x = {
+        y = z:
+    } # abc def "ghi" 0
+    color = hsv { 1 2 3 }
+    not_color = hsv
+}

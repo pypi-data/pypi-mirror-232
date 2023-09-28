@@ -1,0 +1,27 @@
+[project]
+name = "pyjon"
+version = "1.0.0"
+authors = [
+  { name="Justin Béra", email="me@just1not2.org" },
+]
+description = "A Python package to manipulate JON documents"
+readme = "README.md"
+requires-python = ">=3.7"
+license = { file = "LICENSE" }
+keywords = ["jon", "parser", "pyjon"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+]
+
+[project.scripts]
+jon-lint = "jon.cli:lint"
+
+[project.urls]
+repository = "https://github.com/just1not2/pyjon.git"
+documentation = "https://github.com/just1not2/pyjon/blob/main/README.md"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

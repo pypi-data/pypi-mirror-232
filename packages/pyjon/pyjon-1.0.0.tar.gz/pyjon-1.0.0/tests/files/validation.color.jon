@@ -1,0 +1,10 @@
+a = {
+    rgb { 23 21 22 }
+    hsv { 10 11 }
+ 2 } # to skip the rest of the error
+    hsv { 10 11 12 13 }
+ } # to skip the rest of the error
+    hsv360 { 0.5 0.2 10 }
+    rgb { e f g }
+ 1 2 3 } # to skip the rest of the error
+}

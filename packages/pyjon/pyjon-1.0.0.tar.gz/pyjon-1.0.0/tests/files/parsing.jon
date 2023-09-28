@@ -1,0 +1,23 @@
+a = {
+    b = { c- d e }
+    b = f
+    g = {
+        { h = i j = k }
+        L/M
+        "  nop "
+        100
+    }
+    @qr = 5.21
+    23 = t:u
+}
+
+vwx = { y = { z = { ab cd } e = "fgh" } }
+
+"Ij" = {
+    k6l#mno
+    "pq # rs"
+    # tuv
+    -
+    -10
+    rgb { 100 50.5 30 }
+}

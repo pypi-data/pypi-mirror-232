@@ -1,0 +1,194 @@
+parsing:
+  - a:
+      - b: [c-, d, e]
+      - b: f
+      - g:
+          - [{h: i}, {j: k}]
+          - L/M
+          - '"  nop "'
+          - 100
+      - '@qr': 5.21
+      - 23: t:u
+  - vwx:
+      - y:
+          - z: [ab, cd]
+          - e: '"fgh"'
+  - '"Ij"':
+      - k6l
+      - '"pq # rs"'
+      - 0
+      - -10
+      - color(rgb, (100, 50.5, 30))
+
+
+validation:
+  indent:
+    - code: W003
+      positions: [[1, 1], [1, 4]]
+    - code: W003
+      positions: [[2, 1], [2, 8]]
+    - code: W003
+      positions: [[5, 1], [5, 0]]
+    - code: W003
+      positions: [[6, 1], [6, 12]]
+    - code: W003
+      positions: [[14, 1], [14, 8]]
+    - code: W003
+      positions: [[15, 1], [15, 4]]
+    - code: W003
+      positions: [[17, 1], [17, 1]]
+    - code: W003
+      positions: [[20, 1], [20, 4]]
+    - code: W001
+      positions: [[22, 1], [22, 5]]
+    - code: W001
+      positions: [[23, 1], [23, 3]]
+    - code: W003
+      positions: [[23, 1], [23, 3]]
+
+  end-of-line:
+    - code: W002
+      positions: [[1, 6], [1, 6]]
+    - code: W002
+      positions: [[2, 10], [2, 10]]
+    - code: E001
+      positions: [[5, 0], [5, 0]]
+    - code: E001
+      positions: [[6, 0], [6, 0]]
+    - code: W002
+      positions: [[6, 1], [6, 4]]
+    - code: W002
+      positions: [[7, 2], [7, 2]]
+    - code: W002
+      positions: [[8, 1], [8, 1]]
+    - code: W002
+      positions: [[9, 10], [9, 10]]
+    - code: E002
+      positions: [[11, 7], [11, 7]]
+    - code: W002
+      positions: [[12, 6], [12, 6]]
+
+  inline:
+    - code: E001
+      positions: [[12, 0], [12, 0]]
+    - code: W004
+      positions: [[12, 1], [12, 0]]
+
+  space-separation:
+    - code: W004
+      positions: [[1, 4], [1, 5]]
+    - code: W004
+      positions: [[2, 6], [2, 7]]
+    - code: W004
+      positions: [[3, 8], [3, 9]]
+    - code: W004
+      positions: [[4, 6], [4, 7]]
+    - code: W004
+      positions: [[4, 11], [4, 10]]
+    - code: W004
+      positions: [[4, 12], [4, 13]]
+    - code: W004
+      positions: [[5, 6], [5, 5]]
+    - code: W004
+      positions: [[5, 9], [5, 8]]
+    - code: W004
+      positions: [[5, 10], [5, 9]]
+    - code: W004
+      positions: [[5, 11], [5, 12]]
+    - code: W005
+      positions: [[6, 6], [6, 7]]
+    - code: W004
+      positions: [[6, 6], [6, 7]]
+    - code: W005
+      positions: [[6, 11], [6, 11]]
+    - code: W002
+      positions: [[6, 11], [6, 11]]
+    - code: W004
+      positions: [[7, 15], [7, 14]]
+    - code: W004
+      positions: [[7, 16], [7, 15]]
+    - code: W004
+      positions: [[7, 21], [7, 22]]
+    - code: W004
+      positions: [[8, 2], [8, 1]]
+
+  block:
+    - code: E002
+      positions: [[8, 1], [8, 1]]
+    - code: E002
+      positions: [[10, 1], [10, 1]]
+    - code: E002
+      positions: [[15, 19], [15, 19]]
+    - code: W004  # collateral error
+      positions: [[16, 1], [16, 0]]
+    - code: E003
+      positions: [[17, 0], [17, 0]]
+    
+  color:
+    - code: E002
+      positions: [[3, 17], [3, 17]]
+    - code: E002
+      positions: [[5, 20], [5, 20]]
+    - code: E002
+      positions: [[8, 11], [8, 11]]
+
+
+tokens:
+  - type: STRING
+    positions: [[1, 1], [1, 1]]
+  - type: STRING
+    positions: [[2, 5], [2, 7]]
+  - type: STRING
+    positions: [[2, 11], [2, 13]]
+  - type: STRING
+    positions: [[3, 5], [3, 7]]
+  - type: NUMBER
+    positions: [[3, 11], [3, 13]]
+  - type: NUMBER
+    positions: [[4, 5], [4, 7]]
+  - type: NUMBER
+    positions: [[4, 11], [4, 13]]
+  - type: QUOTED_STRING
+    positions: [[5, 5], [5, 9]]
+  - type: QUOTED_STRING
+    positions: [[5, 13], [5, 16]]
+  - type: STRING
+    positions: [[6, 5], [6, 5]]
+  - type: QUOTED_STRING
+    positions: [[6, 11], [6, 14]]
+  - type: STRING
+    positions: [[6, 18], [6, 18]]
+  - type: STRING
+    positions: [[6, 22], [6, 23]]
+  - type: NUMBER
+    positions: [[6, 27], [6, 27]]
+  - type: STRING
+    positions: [[7, 5], [7, 5]]
+  - type: STRING
+    positions: [[8, 9], [8, 9]]
+  - type: STRING
+    positions: [[8, 13], [8, 14]]
+  - type: COMMENT
+    positions: [[9, 7], [9, 7]]
+  - type: COMMENT
+    positions: [[9, 9], [9, 11]]
+  - type: COMMENT
+    positions: [[9, 13], [9, 15]]
+  - type: COMMENT
+    positions: [[9, 17], [9, 21]]
+  - type: COMMENT
+    positions: [[9, 23], [9, 23]]
+  - type: STRING
+    positions: [[10, 5], [10, 9]]
+  - type: FUNCTION
+    positions: [[10, 13], [10, 15]]
+  - type: NUMBER
+    positions: [[10, 19], [10, 19]]
+  - type: NUMBER
+    positions: [[10, 21], [10, 21]]
+  - type: NUMBER
+    positions: [[10, 23], [10, 23]]
+  - type: STRING
+    positions: [[11, 5], [11, 13]]
+  - type: STRING
+    positions: [[11, 17], [11, 19]]
