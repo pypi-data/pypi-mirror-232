@@ -1,0 +1,10 @@
+ai_changelog/__init__.py,sha256=wY3S-KnB_a84cNO8o5-qR2Rpdbe9Sm-WFGIy-p8QtKo,279
+ai_changelog/__main__.py,sha256=dWei_42MlqyS7-hbCvJCIDhDB5Vt9Eyw24zKI-WkebY,2890
+ai_changelog/pydantic_models.py,sha256=Rs5_25ySTMfh9QQPhKBK2OMZQpJ1QGT276UVTXbEHkU,2243
+ai_changelog/utils.py,sha256=AX79mDbkhI2a1zSsH6TbmcSN1FC8f3c0xYm2EoSbsQE,5870
+ai_changelog-0.0.10.dist-info/LICENSE,sha256=8ECckSDpfqsmucctxkkijUcyru4wBM-2rTy8C7x1Hik,1079
+ai_changelog-0.0.10.dist-info/METADATA,sha256=8MCPFb-8v7xLk4B_aU4hBK16pXlI8vtIAxXAa17HzXo,6175
+ai_changelog-0.0.10.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+ai_changelog-0.0.10.dist-info/entry_points.txt,sha256=K0Fj_pYeTjJ0lyefbE55nFe2EbjAtN5wVQeSHNb1RMM,60
+ai_changelog-0.0.10.dist-info/top_level.txt,sha256=I_k67FooMihEHnu89pJqlltYwtdQpfrkhGzdIIIHPkI,13
+ai_changelog-0.0.10.dist-info/RECORD,,
