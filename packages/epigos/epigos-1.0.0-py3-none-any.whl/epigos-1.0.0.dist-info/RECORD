@@ -1,0 +1,15 @@
+epigos/__init__.py,sha256=bmrgyuvB5iqw68skAk_iUL4LSTLno5Nvx751JQyVPrc,192
+epigos/__version__.py,sha256=xyhfv_ypLhJBT3fcv6gasqXWA6FYplEjJbMa4qXwZkQ,115
+epigos/client.py,sha256=_pinB1aqxXYEWLsM3Em5WTY1ENZkoYQzzDt4w91fUbA,3764
+epigos/core/__init__.py,sha256=y5M_xAENqEiz8N5wEHSBNAXzg5l5hooDQGR3IZBY2aY,169
+epigos/core/base.py,sha256=sh6I6Vdi70Ho9IKgFeqE95foN1ae929TxuKoJqNtHfg,1039
+epigos/core/classification.py,sha256=3PH3akCIQWmCZLnkgzeyFrDMjy1Gw4yB-ly3iL-NozU,1062
+epigos/core/object_detection.py,sha256=uAoqRKt-ElecJt5fDw-WlCHgMiwV6sqy2MCB1d_JyMc,2015
+epigos/typings.py,sha256=yWVOR08alxtJC9LDLAo2PbiuDbeYw_R72G1xe1aSdN8,237
+epigos/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+epigos/utils/image.py,sha256=jcMv_vezU8xjsl-riertRYzWWYrzH9NvGh5A36mVKZo,1621
+epigos/utils/prediction.py,sha256=sCduXYUTdnqZScGkudL5SWuBzNJbiS6wYohT5F86Ouw,2077
+epigos-1.0.0.dist-info/LICENSE,sha256=VbFfvoCgBDywcnKX0pjgHn4crl-0wSzAVZOpstkFy0w,1067
+epigos-1.0.0.dist-info/METADATA,sha256=OpXXB3BVQ0MnIuAbYMovWILH-yBNqtznkmII1a11L6M,2893
+epigos-1.0.0.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+epigos-1.0.0.dist-info/RECORD,,
