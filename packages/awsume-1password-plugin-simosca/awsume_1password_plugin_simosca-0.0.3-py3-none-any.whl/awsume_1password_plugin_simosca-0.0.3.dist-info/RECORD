@@ -1,0 +1,11 @@
+1password.py,sha256=wYgig89i340CBbbLUvLD-voki7D7EhqVMghywfd81BU,6127
+helpers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+helpers/config.py,sha256=C1YLLW9TJoY0viv8zoh6XyVqONZu5lgEefNfnhvKt9s,214
+helpers/opCLI.py,sha256=QmouIufWv7Cfx1sRtKC0LZgIHwqNqCjvQW0YWhgjxCk,2836
+helpers/profile.py,sha256=XeDsxhm0xs_aA6VvOijGRG0L6ZqX-7y8nbl1khRbfxU,805
+awsume_1password_plugin_simosca-0.0.3.dist-info/LICENSE,sha256=GXqQzXtIJsqBbf6epfoCZhoK1gWglOFukxbIE0Bdx2E,1069
+awsume_1password_plugin_simosca-0.0.3.dist-info/METADATA,sha256=1i99_2g-i_w7tpt92HBLZPZZT1yng6v9aCOOo-K6uS0,293
+awsume_1password_plugin_simosca-0.0.3.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+awsume_1password_plugin_simosca-0.0.3.dist-info/entry_points.txt,sha256=2N7V4JD_PPVsLBMG9N4I7gaAEZwjZb-u8YCFvwCtKFs,31
+awsume_1password_plugin_simosca-0.0.3.dist-info/top_level.txt,sha256=BhQk7LbOptNMA-K2YOOsjX7tj3vw2owZUpmIkgwfijY,18
+awsume_1password_plugin_simosca-0.0.3.dist-info/RECORD,,
