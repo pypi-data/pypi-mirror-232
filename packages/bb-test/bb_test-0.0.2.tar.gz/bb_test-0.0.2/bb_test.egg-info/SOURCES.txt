@@ -1,0 +1,7 @@
+setup.py
+bb_test/__init__.py
+bb_test/bb_module.py
+bb_test.egg-info/PKG-INFO
+bb_test.egg-info/SOURCES.txt
+bb_test.egg-info/dependency_links.txt
+bb_test.egg-info/top_level.txt
