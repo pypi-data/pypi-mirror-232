@@ -1,0 +1,7 @@
+ner_tool/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ner_tool/get_metrics.py,sha256=y3B3ujGedatJlniq6kQAe8SlcUA5J6GSW9JvV102JAc,8384
+ner_tool/ner.py,sha256=XVO-jqA2KdFZPgo4gUjTNkKWBoKVlmt0Qvc1OpivMXc,1901
+ner_tool-0.3.dist-info/METADATA,sha256=7uIOOWFFCLKDFtdIYWU_bvfmUrmS3s2j699p-Sg4f44,365
+ner_tool-0.3.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+ner_tool-0.3.dist-info/top_level.txt,sha256=2RpteRt2TUcyk_A7LQ7wgMNqDCGLfOayHbqTWKY8zoE,9
+ner_tool-0.3.dist-info/RECORD,,

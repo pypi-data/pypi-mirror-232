@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: ner-tool
+Version: 0.3
+Requires-Dist: fuzzywuzzy
+Requires-Dist: Levenshtein
+Requires-Dist: nltk
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: python-dateutil
+Requires-Dist: pytz (==2023.3.post1)
+Requires-Dist: rapidfuzz
+Requires-Dist: regex
+Requires-Dist: scikit-learn
+Requires-Dist: scipy
+Requires-Dist: six
+
