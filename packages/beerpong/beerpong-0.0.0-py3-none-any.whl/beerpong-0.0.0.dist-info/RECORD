@@ -1,0 +1,15 @@
+beerpong/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+beerpong/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+beerpong/cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+beerpong/cli/beerpong.py,sha256=rWgqLYbwOMjF6FpjdZ85NOt5yMxI5RK6_msW0r1l7mA,704
+beerpong/cli/cli.py,sha256=2XdngZXGYpUbQy9moizehQ2GSzEOWH-I9MIKIiB7dT0,748
+beerpong/gui/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+beerpong/gui/gui.py,sha256=d3BIHRAEKfp3T2USefoHEBeANu9ORcxkHZRg2pS5Gks,1290
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_cli.py,sha256=J-CNtiZaNOlVggpso9HAhY8p8k3xe_0SC9wx96RaKXs,635
+beerpong-0.0.0.dist-info/LICENSE,sha256=ZwCox903w8z431Q7XZDZ61wmW_wQ_N1fV_HAkkoPZDI,1075
+beerpong-0.0.0.dist-info/METADATA,sha256=nZqMv6JcfTkVYxEnAZeaHOI5L7wkVFmZ8ha0nQQswL8,3608
+beerpong-0.0.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+beerpong-0.0.0.dist-info/entry_points.txt,sha256=Y5bOLCBt-WlhdTQpAbbZdvLIzWwQ9aY7kDMbz7e8cog,51
+beerpong-0.0.0.dist-info/top_level.txt,sha256=hpEFh3jT_kbSSv4Xej5CNGUvpJfg6qjYd0BF1G6VDhQ,15
+beerpong-0.0.0.dist-info/RECORD,,
