@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+graphypy.egg-info/PKG-INFO
+graphypy.egg-info/SOURCES.txt
+graphypy.egg-info/dependency_links.txt
+graphypy.egg-info/top_level.txt
+py_graphs/__init__.py

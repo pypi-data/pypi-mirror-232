@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "graphypy"
+version = "0.0.1"
+authors = [{ name = "Andreas Venturini", email = "andreas.venturini@live.de" }]
+maintainers = [
+    { name = "Andreas Venturini", email = "andreas.venturini@live.de" },
+]
+description = "A python graph libary."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { file = "LICENSE" }
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+keywords = ["graph", "graphs", "graph-theory", "graph-algorithms"]
+
+[project.urls]
+"Homepage" = "https://github.com/Andiyi/graphypy"
+"Bug Tracker" = "https://github.com/Andiyi/graphypy/issues"
