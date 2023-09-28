@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: pyactions
+Version: 0.1.0
+Summary: A simple python library for creating functions that can be called with keyboard shortcuts or hotkeys with decorators.
+Home-page: https://github.com/hasansezertasan/pyactions.git
+Author: hasansezertasan
+Author-email: hasansezertasan@gmail.com
+Classifier: Development Status :: 1 - Planning
+Classifier: License :: OSI Approved :: MIT License
+License-File: LICENSE
+
+<h1 align="center">
+    <strong>pyactions</strong>
+</h1>
+<p align="center">
+    <a href="https://github.com/hasansezertasan/pyactions" target="_blank">
+        <img src="https://img.shields.io/github/last-commit/hasansezertasan/pyactions" alt="Latest Commit">
+    </a>
+        <img src="https://img.shields.io/github/workflow/status/hasansezertasan/pyactions/Test">
+        <img src="https://img.shields.io/codecov/c/github/hasansezertasan/pyactions">
+    <br />
+    <a href="https://pypi.org/project/pyactions" target="_blank">
+        <img src="https://img.shields.io/pypi/v/pyactions" alt="Package version">
+    </a>
+    <img src="https://img.shields.io/pypi/pyversions/pyactions">
+    <img src="https://img.shields.io/github/license/hasansezertasan/pyactions">
+</p>
+
+## Installation
+
+``` bash
+pip install pyactions
+```
