@@ -1,0 +1,14 @@
+numpy
+meshpy
+opencv-python-headless
+
+[:platform_system != "Darwin" or platform_machine != "arm64"]
+mediapipe==0.9.3.0
+
+[:platform_system == "Darwin" and platform_machine == "arm64"]
+mediapipe-silicon==0.9.2.1
+
+[testing]
+setuptools
+pytest
+pytest-cov
