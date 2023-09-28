@@ -1,0 +1,131 @@
+Metadata-Version: 2.1
+Name: Proxer
+Version: 1.3.2
+Summary: Proxer - get a free working proxy simply and free of charge
+Home-page: https://github.com/ssshipilo/Proxer
+Author: Shypilo Oleksandr
+Author-email: ssshipilo@gmail.com
+Project-URL: Documentation, https://github.com/ssshipilo/Proxer/blob/main/git/documentation.md
+Project-URL: Source Code, https://github.com/ssshipilo/Proxer
+Description-Content-Type: text/markdown
+
+<h1 align="center">Proxer</h1>
+
+![GPT 4 Private](https://github.com/ssshipilo/Proxer/raw/main/git/welcome.png)
+
+<div align="center">
+  <a href="https://github.com/ssshipilo/microsoft_account/pull">
+    <img src="https://img.shields.io/github/issues-pr/cdnjs/cdnjs.svg" alt="GitHub pull requests" />
+  </a>
+</div>
+
+<br />
+
+___
+
+<div align="center">
+    The Proxer class provides methods to retrieve, validate, and save proxies.
+</div>
+
+
+## Features
+
+- Huge proxy database
+- Parsing of new available proxies (with uniqueization function)
+- You can use your own proxy database
+- Cleaning of database, working proxies, and general proxy list
+- Checking proxies for performance, using popular sites giants for verification
+
+## Documentation
+[![Read Documentation](https://github.com/ssshipilo/Proxer/raw/main/git/btn.png)](https://github.com/ssshipilo/Proxer/blob/main/git/documentation.md)
+
+## Steps 
+
+### Install
+
+#### Copy repository
+    git clone https://github.com/ssshipilo/Proxer
+
+#### Dependency installation
+    pip install -r requirements.txt
+
+## OR
+
+#### Install library
+    pip install Proxer
+
+## Starting Proxer
+
+Import the library into your project, and initialize the Proxer class, sample code to get 5 working proxies
+
+```python
+import Proxer
+
+proxy = Proxer(file_path_output=os.path.join(os.getcwd(), "output.txt"), file_path_save=os.path.join(os.getcwd(), "save.txt"))
+result = proxy.get(5)
+print(result)
+```
+
+#### Result:
+![Result Proxer](https://github.com/ssshipilo/Proxer/raw/main/git/result.png)
+
+
+## Initialization
+```python
+proxy = Proxer(file_path_output="path_to_output_file", file_path_save="path_to_save_file")
+```
+
+*path must be absolute*
+file_path_output: path to the file where the list of sparse proxies will be saved.
+file_path_save: path to the file where the list of working proxies will be saved.
+
+---
+## Methods
+
+### parse()
+Parsing of popular proxy providers:
+
+- hidemyname: [https://hidemy.name/en/proxy-list/](https://hidemy.name/en/proxy-list/)
+- free_proxy_list: [https://free-proxy-list.net/](https://free-proxy-list.net/) 
+- proxyscrape: [https://proxyscrape.com/](https://proxyscrape.com/)  
+
+*They may be added over time, or maybe they already are.*
+
+Arguments:
+path: path to the file where the proxy list will be written. By default - the path from file_path_output.
+returned_array: whether to return the array of sparse proxies. By default - False.
+
+
+---
+### check_proxy()
+Checking the proxy to make sure it works.
+
+Arguments:
+proxy: proxy to check.
+_class: whether to save the working proxy to a file. The default is False.
+
+
+---
+### update_db_proxy()
+Updating the database of working proxies.
+
+Arguments:
+path: (optional) - path to the list of sparser proxies
+file: True - from your file. The default is False. Make parsing of known services with proxy
+
+
+---
+### get()
+Get a working proxy.
+
+Arguments:
+count: number of required proxies. The default is 1.
+
+---
+### clear_db()
+Cleaning databases, verified and unverified proxies.
+
+Arguments:
+mode: cleaning mode. Can be "output" (unchecked proxies) or "save" (checked proxies). The default is None (clearing both databases).
+path_output: path to the file with unchecked proxies.
+path_save: path to the file with verified proxies.
