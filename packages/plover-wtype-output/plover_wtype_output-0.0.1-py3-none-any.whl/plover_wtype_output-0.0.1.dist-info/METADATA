@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: plover-wtype-output
+Version: 0.0.1
+Home-page: https://git.d2evs.net/~evan/plover-wtype-output
+Author: Evan Johnston
+License: GNU General Public License v3 or later (GPLv3+)
+Keywords: plover plover_plugin
+Classifier: Environment :: Plugins
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: plover >=4.0.0.dev10
+
+# plover-wtype-output
+
+use wtype to emulate keyboard on wayland, because uinput doesn't unicode
+
+requires a `wype` binary in `$PATH`

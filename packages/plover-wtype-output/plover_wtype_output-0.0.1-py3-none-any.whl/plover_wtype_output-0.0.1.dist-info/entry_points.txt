@@ -1,0 +1,5 @@
+[plover.extension]
+plover_wtype_output = plover_wtype_output:Main
+
+[plover.output]
+plover_wtype_output = plover_wtype_output:KeyboardEmulation
