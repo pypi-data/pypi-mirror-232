@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+Moises.egg-info/PKG-INFO
+Moises.egg-info/SOURCES.txt
+Moises.egg-info/dependency_links.txt
+Moises.egg-info/top_level.txt
+moises/__init__.py
