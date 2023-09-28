@@ -1,0 +1,84 @@
+2023-09-04 17:30:10,116 INFO Logging to logs/deepsea_ai_setup_20230905.log
+2023-09-04 17:30:10,116 INFO =============== Config file /Users/dcline/Dropbox/code/deepsea-ai/deepsea_ai/config/config.ini =================
+2023-09-04 17:30:10,116 INFO [docker]
+2023-09-04 17:30:10,116 INFO yolov5_container = mbari/deepsea-yolov5
+2023-09-04 17:30:10,116 INFO strongsort_container = mbari/strongsort-yolov5:b2a511e
+2023-09-04 17:30:10,116 INFO 
+2023-09-04 17:30:10,116 INFO [aws]
+2023-09-04 17:30:10,116 INFO account_id = 548531997526
+2023-09-04 17:30:10,117 INFO sagemaker_arn = arn:aws:iam::548531997526:role/DeepSeaAI
+2023-09-04 17:30:10,117 INFO model = s3://deepsea-ai-548531997526-models/yolov5x_mbay_benthic_model.tar.gz
+2023-09-04 17:30:10,117 INFO track_config = s3://deepsea-ai-548531997526-track-conf/strong_sort_benthic.yaml
+2023-09-04 17:30:10,117 INFO videos = s3://deepsea-ai-548531997526-videos
+2023-09-04 17:30:10,117 INFO models = s3://deepsea-ai-548531997526-models
+2023-09-04 17:30:10,117 INFO tracks = s3://deepsea-ai-548531997526-tracks
+2023-09-04 17:30:10,117 INFO 
+2023-09-04 17:30:10,117 INFO [aws_public]
+2023-09-04 17:30:10,117 INFO model = s3://902005-public/models/yolov5x_mbay_benthic_model.tar.gz
+2023-09-04 17:30:10,117 INFO track_config = s3://902005-public/models/track-config/strong_sort_benthic.yaml
+2023-09-04 17:30:10,117 INFO video_ex1 = s3://902005-public/video/1sec/V4361_20211006T162656Z_h265_1sec.mp4
+2023-09-04 17:30:10,117 INFO video_ex2 = s3://902005-public/video/1sec/V4361_20211006T163256Z_h265_1sec.mp4
+2023-09-04 17:30:10,117 INFO video_ex3 = s3://902005-public/video/1sec/V4361_20211006T163856Z_h265_1sec.mp4
+2023-09-04 17:30:10,117 INFO 
+2023-09-04 17:30:10,117 INFO [database]
+2023-09-04 17:30:10,117 INFO site = http://localhost:4000
+2023-09-04 17:30:10,117 INFO gql = %(site)s/graphql
+2023-09-04 17:30:10,117 INFO 
+2023-09-04 17:30:10,117 INFO [tags]
+2023-09-04 17:30:10,117 INFO organization = mbari
+2023-09-04 17:30:10,117 INFO project_number = NA
+2023-09-04 17:30:10,117 INFO stage = test
+2023-09-04 17:30:10,117 INFO application = detection
+2023-09-04 17:30:10,117 INFO 
+2023-09-04 17:30:10,117 INFO =============== Config file /Users/dcline/Dropbox/code/deepsea-ai/deepsea_ai/config/config.ini =================
+2023-09-04 17:30:10,117 INFO [docker]
+2023-09-04 17:30:10,117 INFO yolov5_container = mbari/deepsea-yolov5
+2023-09-04 17:30:10,117 INFO strongsort_container = mbari/strongsort-yolov5:b2a511e
+2023-09-04 17:30:10,117 INFO 
+2023-09-04 17:30:10,117 INFO [aws]
+2023-09-04 17:30:10,117 INFO account_id = 548531997526
+2023-09-04 17:30:10,117 INFO sagemaker_arn = arn:aws:iam::548531997526:role/DeepSeaAI
+2023-09-04 17:30:10,117 INFO model = s3://deepsea-ai-548531997526-models/yolov5x_mbay_benthic_model.tar.gz
+2023-09-04 17:30:10,117 INFO track_config = s3://deepsea-ai-548531997526-track-conf/strong_sort_benthic.yaml
+2023-09-04 17:30:10,117 INFO videos = s3://deepsea-ai-548531997526-videos
+2023-09-04 17:30:10,118 INFO models = s3://deepsea-ai-548531997526-models
+2023-09-04 17:30:10,118 INFO tracks = s3://deepsea-ai-548531997526-tracks
+2023-09-04 17:30:10,118 INFO 
+2023-09-04 17:30:10,118 INFO [aws_public]
+2023-09-04 17:30:10,118 INFO model = s3://902005-public/models/yolov5x_mbay_benthic_model.tar.gz
+2023-09-04 17:30:10,118 INFO track_config = s3://902005-public/models/track-config/strong_sort_benthic.yaml
+2023-09-04 17:30:10,118 INFO video_ex1 = s3://902005-public/video/1sec/V4361_20211006T162656Z_h265_1sec.mp4
+2023-09-04 17:30:10,118 INFO video_ex2 = s3://902005-public/video/1sec/V4361_20211006T163256Z_h265_1sec.mp4
+2023-09-04 17:30:10,118 INFO video_ex3 = s3://902005-public/video/1sec/V4361_20211006T163856Z_h265_1sec.mp4
+2023-09-04 17:30:10,118 INFO 
+2023-09-04 17:30:10,118 INFO [database]
+2023-09-04 17:30:10,118 INFO site = http://localhost:4000
+2023-09-04 17:30:10,118 INFO gql = %(site)s/graphql
+2023-09-04 17:30:10,118 INFO 
+2023-09-04 17:30:10,118 INFO [tags]
+2023-09-04 17:30:10,118 INFO organization = mbari
+2023-09-04 17:30:10,118 INFO project_number = NA
+2023-09-04 17:30:10,118 INFO stage = test
+2023-09-04 17:30:10,118 INFO application = detection
+2023-09-04 17:30:10,118 INFO 
+2023-09-04 17:30:10,118 INFO ============ You can override these settings by creating a customconfig.ini file and pass that in with --config=customconfig.ini =====
+2023-09-04 17:30:10,118 INFO Initializing job cache database in /Users/dcline/Dropbox/code/deepsea-ai/deepsea_ai/config as sqlite_job_cache_548531997526.db
+2023-09-04 17:30:10,502 INFO Found account 548531997526
+2023-09-04 17:30:10,509 INFO Found region us-west-2
+2023-09-04 17:30:11,006 WARNING Role DeepSeaAI already exists.
+2023-09-04 17:30:11,437 INFO Setting SageMaker Role ARN to arn:aws:iam::548531997526:role/DeepSeaAI in /Users/dcline/Dropbox/code/deepsea-ai/deepsea_ai/config/config.ini
+2023-09-04 17:30:11,813 INFO Found account 548531997526
+2023-09-04 17:30:11,858 INFO Creating bucket deepsea-ai-548531997526-models in us-west-2
+2023-09-04 17:30:12,650 INFO Creating bucket deepsea-ai-548531997526-track-conf in us-west-2
+2023-09-04 17:30:13,481 INFO Creating bucket deepsea-ai-548531997526-videos in us-west-2
+2023-09-04 17:30:14,268 INFO Creating bucket deepsea-ai-548531997526-tracks in us-west-2
+2023-09-04 17:30:15,278 INFO Downloading s3://902005-public/video/1sec/V4361_20211006T162656Z_h265_1sec.mp4 to /var/folders/p8/dld1k4l14tg5fpljnb32tl9h0000k6/T/tmp7sw75gs3/V4361_20211006T162656Z_h265_1sec.mp4
+2023-09-04 17:30:16,149 INFO Uploading /var/folders/p8/dld1k4l14tg5fpljnb32tl9h0000k6/T/tmp7sw75gs3/V4361_20211006T162656Z_h265_1sec.mp4 to deepsea-ai-548531997526-videos
+2023-09-04 17:30:16,986 INFO Downloading s3://902005-public/video/1sec/V4361_20211006T163256Z_h265_1sec.mp4 to /var/folders/p8/dld1k4l14tg5fpljnb32tl9h0000k6/T/tmp7sw75gs3/V4361_20211006T163256Z_h265_1sec.mp4
+2023-09-04 17:30:18,560 INFO Uploading /var/folders/p8/dld1k4l14tg5fpljnb32tl9h0000k6/T/tmp7sw75gs3/V4361_20211006T163256Z_h265_1sec.mp4 to deepsea-ai-548531997526-videos
+2023-09-04 17:30:19,393 INFO Downloading s3://902005-public/video/1sec/V4361_20211006T163856Z_h265_1sec.mp4 to /var/folders/p8/dld1k4l14tg5fpljnb32tl9h0000k6/T/tmp7sw75gs3/V4361_20211006T163856Z_h265_1sec.mp4
+2023-09-04 17:30:20,006 INFO Uploading /var/folders/p8/dld1k4l14tg5fpljnb32tl9h0000k6/T/tmp7sw75gs3/V4361_20211006T163856Z_h265_1sec.mp4 to deepsea-ai-548531997526-videos
+2023-09-04 17:30:21,593 INFO Downloading s3://902005-public/models/yolov5x_mbay_benthic_model.tar.gz to /var/folders/p8/dld1k4l14tg5fpljnb32tl9h0000k6/T/tmp7sw75gs3/yolov5x_mbay_benthic_model.tar.gz
+2023-09-04 17:30:30,402 INFO Uploading /var/folders/p8/dld1k4l14tg5fpljnb32tl9h0000k6/T/tmp7sw75gs3/yolov5x_mbay_benthic_model.tar.gz to s3://deepsea-ai-548531997526-models
+2023-09-04 17:31:06,296 INFO Downloading s3://902005-public/models/track-config/strong_sort_benthic.yaml to /var/folders/p8/dld1k4l14tg5fpljnb32tl9h0000k6/T/tmp7sw75gs3/strong_sort_benthic.yaml
+2023-09-04 17:31:06,640 INFO Uploading /var/folders/p8/dld1k4l14tg5fpljnb32tl9h0000k6/T/tmp7sw75gs3/strong_sort_benthic.yaml to s3://deepsea-ai-548531997526-track-conf

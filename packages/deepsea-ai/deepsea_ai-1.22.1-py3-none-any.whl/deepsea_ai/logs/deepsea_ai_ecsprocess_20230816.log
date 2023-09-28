@@ -1,0 +1,35 @@
+2023-08-16 14:58:51,949 INFO Logging to logs/deepsea_ai_ecsprocess_20230816.log
+2023-08-16 14:58:51,949 INFO AWS_PROFILE is set to 902005-vaa-prod and will be used for all AWS commands
+2023-08-16 14:58:51,955 INFO =============== Config file /Users/dcline/Dropbox/code/deepsea-ai/deepsea_ai/config/config.ini =================
+2023-08-16 14:58:51,955 INFO [aws]
+2023-08-16 14:58:51,955 INFO sagemaker_arn =
+2023-08-16 14:58:51,955 INFO yolov5_ecr = mbari/deepsea-yolov5:1.1.2
+2023-08-16 14:58:51,955 INFO strongsort_ecr = mbari/strongsort-yolov5:1.4.0
+2023-08-16 14:58:51,955 INFO yolov5_model_s3 = s3://902005-public/models/yolov5x_mbay_benthic_model.tar.gz
+2023-08-16 14:58:51,955 INFO strongsort_track_config_s3 = s3://902005-public/models/strong_sort_benthic.yaml
+2023-08-16 14:58:51,955 INFO 
+2023-08-16 14:58:51,955 INFO [database]
+2023-08-16 14:58:51,955 INFO site = http://localhost:4000
+2023-08-16 14:58:51,955 INFO gql = %(site)s/graphql
+2023-08-16 14:58:51,955 INFO 
+2023-08-16 14:58:51,955 INFO [tags]
+2023-08-16 14:58:51,955 INFO organization = mbari
+2023-08-16 14:58:51,955 INFO project_number = NA
+2023-08-16 14:58:51,955 INFO stage = test
+2023-08-16 14:58:51,955 INFO application = detection
+2023-08-16 14:58:51,955 INFO 
+2023-08-16 14:58:52,362 INFO Initializing job cache in /Users/dcline/Dropbox/code/deepsea-ai/deepsea_ai
+2023-08-16 14:58:52,362 INFO Creating job cache database in /Users/dcline/Dropbox/code/deepsea-ai/deepsea_ai
+2023-08-16 14:58:52,737 INFO No video file exclusions specified
+2023-08-16 14:58:52,737 INFO Found 3 videos to process
+2023-08-16 14:58:53,110 INFO Checking tag {'Key': 'mbari:project-number', 'Value': 'NA'}
+2023-08-16 14:58:53,111 INFO Checking tag {'Key': 'mbari:owner', 'Value': 'deepsea-ai'}
+2023-08-16 14:58:53,111 INFO Checking tag {'Key': 'mbari:description', 'Value': 'Video uploaded from /Users/dcline/Dropbox/code/deepsea-ai/tests/data/ by user deepsea-ai '}
+2023-08-16 14:58:53,111 INFO Checking tag {'Key': 'mbari:stage', 'Value': 'test'}
+2023-08-16 14:58:53,111 INFO Checking tag {'Key': 'mbari:application', 'Value': 'detection'}
+2023-08-16 14:58:53,111 INFO Checking tag {'Key': 'mbari:deletion-date', 'Value': '20231114T215853Z'}
+2023-08-16 14:58:53,111 INFO Checking tag {'Key': 'mbari:created-by', 'Value': 'deepsea-ai'}
+2023-08-16 14:58:53,111 INFO Dry run: Submitting V4361_20211006T163256Z_h265_1sec.mp4 to cluster for processing with job Ventana Dive 4263 with 0.5 conf with new mbari315k model, cluster -mbari315k,processor -mbari315k, user deepsea-ai, clean True, args None
+2023-08-16 14:58:53,111 INFO Dry run: Submitting V4361_20211006T162656Z_h265_1sec.mp4 to cluster for processing with job Ventana Dive 4263 with 0.5 conf with new mbari315k model, cluster -mbari315k,processor -mbari315k, user deepsea-ai, clean True, args None
+2023-08-16 14:58:53,111 INFO Dry run: Submitting V4361_20211006T163856Z_h265_1sec.mp4 to cluster for processing with job Ventana Dive 4263 with 0.5 conf with new mbari315k model, cluster -mbari315k,processor -mbari315k, user deepsea-ai, clean True, args None
+2023-08-16 14:58:53,111 INFO ==== Submitted 3 videos to -mbari315k for processing =====

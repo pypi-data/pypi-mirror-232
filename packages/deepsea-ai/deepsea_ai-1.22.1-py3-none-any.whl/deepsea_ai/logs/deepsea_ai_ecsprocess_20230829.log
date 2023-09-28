@@ -1,0 +1,53 @@
+2023-08-29 16:59:49,372 INFO Logging to logs/deepsea_ai_ecsprocess_20230829.log
+2023-08-29 16:59:49,373 INFO =============== Config file /Users/dcline/Dropbox/code/deepsea-ai/deepsea_ai/config/config.ini =================
+2023-08-29 16:59:49,373 INFO [docker]
+2023-08-29 16:59:49,373 INFO yolov5_container = mbari/deepsea-yolov5:1.1.2
+2023-08-29 16:59:49,373 INFO strongsort_container = mbari/strongsort-yolov5:6f35769
+2023-08-29 16:59:49,373 INFO 
+2023-08-29 16:59:49,374 INFO [aws]
+2023-08-29 16:59:49,374 INFO account_id = 548531997526
+2023-08-29 16:59:49,374 INFO sagemaker_arn = arn:aws:iam::548531997526:role/DeepSeaAI
+2023-08-29 16:59:49,374 INFO model = s3://deepsea-ai-548531997526-models/yolov5x_mbay_benthic_model.tar.gz
+2023-08-29 16:59:49,374 INFO track_config = s3://deepsea-ai-548531997526-track-conf/strong_sort_benthic.yaml
+2023-08-29 16:59:49,374 INFO videos = s3://deepsea-ai-548531997526-videos
+2023-08-29 16:59:49,374 INFO models = s3://deepsea-ai-548531997526-models
+2023-08-29 16:59:49,374 INFO tracks = s3://deepsea-ai-548531997526-tracks
+2023-08-29 16:59:49,374 INFO 
+2023-08-29 16:59:49,375 INFO [aws_public]
+2023-08-29 16:59:49,375 INFO model = s3://902005-public/models/yolov5x_mbay_benthic_model.tar.gz
+2023-08-29 16:59:49,375 INFO track_config = s3://902005-public/models/track-config/strong_sort_benthic.yaml
+2023-08-29 16:59:49,375 INFO video_ex1 = s3://902005-public/video/1sec/V4361_20211006T162656Z_h265_1sec.mp4
+2023-08-29 16:59:49,375 INFO video_ex2 = s3://902005-public/video/1sec/V4361_20211006T163256Z_h265_1sec.mp4
+2023-08-29 16:59:49,375 INFO video_ex3 = s3://902005-public/video/1sec/V4361_20211006T163856Z_h265_1sec.mp4
+2023-08-29 16:59:49,375 INFO 
+2023-08-29 16:59:49,375 INFO [database]
+2023-08-29 16:59:49,375 INFO site = http://localhost:4000
+2023-08-29 16:59:49,375 INFO gql = %(site)s/graphql
+2023-08-29 16:59:49,375 INFO 
+2023-08-29 16:59:49,375 INFO [tags]
+2023-08-29 16:59:49,375 INFO organization = mbari
+2023-08-29 16:59:49,375 INFO project_number = NA
+2023-08-29 16:59:49,376 INFO stage = test
+2023-08-29 16:59:49,376 INFO application = detection
+2023-08-29 16:59:49,376 INFO 
+2023-08-29 16:59:50,220 INFO No video file exclusions specified
+2023-08-29 16:59:50,221 INFO Found 6 videos to process
+2023-08-29 16:59:50,540 INFO Checking tag {'Key': 'mbari:project-number', 'Value': 'NA'}
+2023-08-29 16:59:50,540 INFO Checking tag {'Key': 'mbari:owner', 'Value': 'dcline'}
+2023-08-29 16:59:50,541 INFO Checking tag {'Key': 'mbari:description', 'Value': 'Video uploaded from /Users/dcline/Dropbox/code/deepsea-ai/tests/data/ by user dcline '}
+2023-08-29 16:59:50,541 INFO Checking tag {'Key': 'mbari:stage', 'Value': 'test'}
+2023-08-29 16:59:50,541 INFO Checking tag {'Key': 'mbari:application', 'Value': 'detection'}
+2023-08-29 16:59:50,541 INFO Checking tag {'Key': 'mbari:deletion-date', 'Value': '20231127T235950Z'}
+2023-08-29 16:59:50,541 INFO Checking tag {'Key': 'mbari:created-by', 'Value': 'dcline'}
+2023-08-29 16:59:57,647 INFO Checking /Users/dcline/Dropbox/code/deepsea-ai/tests/data/V4361_20211006T163256Z_h265_1sec.mp4 in s3://yolov5x-mbay-benthic-videod6cc678b-1xmwnde8b51uh/dcline/Dropbox/code/deepsea-ai/tests/data/V4361_20211006T163256Z_h265_1sec.mp4...
+2023-08-29 17:00:00,666 INFO Found s3://yolov5x-mbay-benthic-videod6cc678b-1xmwnde8b51uh/dcline/Dropbox/code/deepsea-ai/tests/data/V4361_20211006T163256Z_h265_1sec.mp4 ...skipping upload
+2023-08-29 17:00:01,780 INFO Tagging /Users/dcline/Dropbox/code/deepsea-ai/tests/data/V4361_20211006T163256Z_h265_1sec.mp4 with [{'Key': 'mbari:project-number', 'Value': 'NA'}, {'Key': 'mbari:owner', 'Value': 'dcline'}, {'Key': 'mbari:description', 'Value': 'Video uploaded from /Users/dcline/Dropbox/code/deepsea-ai/tests/data/ by user dcline '}, {'Key': 'mbari:stage', 'Value': 'test'}, {'Key': 'mbari:application', 'Value': 'detection'}, {'Key': 'mbari:deletion-date', 'Value': '20231127T235950Z'}, {'Key': 'mbari:created-by', 'Value': 'dcline'}]...
+2023-08-29 17:01:00,620 INFO Message queued to yolov5x-mbay-benthic-videoC740E53C-BLDUMFvW3JtM.fifo. MessageId: c72cbaea-c1f7-42a9-bc90-024004115847
+2023-08-29 17:01:34,217 INFO Added job Pycharm test yolov5x-mbay-benthic model from ecsprocess with args running on yolov5x-mbay-benthic to cache.
+2023-08-29 17:01:51,979 ERROR Exiting. Error: 3 validation errors for PydanticJobWithMedias
+id
+  none is not an allowed value (type=type_error.none.not_allowed)
+cluster
+  field required (type=value_error.missing)
+createdAt
+  none is not an allowed value (type=type_error.none.not_allowed)

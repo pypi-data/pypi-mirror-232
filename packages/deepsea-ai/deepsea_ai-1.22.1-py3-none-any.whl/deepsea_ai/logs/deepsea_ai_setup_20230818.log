@@ -1,0 +1,45 @@
+2023-08-17 21:18:17,477 INFO Logging to logs/deepsea_ai_setup_20230818.log
+2023-08-17 21:18:17,478 INFO =============== Config file /Users/dcline/Dropbox/code/deepsea-ai/deepsea_ai/config/config.ini =================
+2023-08-17 21:18:17,478 INFO [aws]
+2023-08-17 21:18:17,478 INFO sagemaker_arn = arn:aws:iam::548531997526:role/DeepSeaAI
+2023-08-17 21:18:17,478 INFO yolov5_ecr = mbari/deepsea-yolov5:1.1.2
+2023-08-17 21:18:17,478 INFO strongsort_ecr = mbari/strongsort-yolov5:addhyperparameters
+2023-08-17 21:18:17,478 INFO yolov5_model_s3 = s3://902005-public/models/yolov5x_mbay_benthic_model.tar.gz
+2023-08-17 21:18:17,479 INFO strongsort_track_config_s3 = s3://902005-public/models/strong_sort_benthic.yaml
+2023-08-17 21:18:17,479 INFO 
+2023-08-17 21:18:17,479 INFO [database]
+2023-08-17 21:18:17,479 INFO site = http://localhost:4000
+2023-08-17 21:18:17,479 INFO gql = %(site)s/graphql
+2023-08-17 21:18:17,479 INFO 
+2023-08-17 21:18:17,479 INFO [tags]
+2023-08-17 21:18:17,479 INFO organization = mbari
+2023-08-17 21:18:17,479 INFO project_number = NA
+2023-08-17 21:18:17,479 INFO stage = test
+2023-08-17 21:18:17,479 INFO application = detection
+2023-08-17 21:18:17,479 INFO 
+2023-08-17 21:18:17,845 INFO Initializing job cache in /Users/dcline/Dropbox/code/deepsea-ai/deepsea_ai
+2023-08-17 21:18:17,845 INFO Using existing job cache database in /Users/dcline/Dropbox/code/deepsea-ai/deepsea_ai
+2023-08-17 21:18:17,848 INFO =============== Config file /Users/dcline/Dropbox/code/deepsea-ai/deepsea_ai/config/config.ini =================
+2023-08-17 21:18:17,849 INFO [aws]
+2023-08-17 21:18:17,849 INFO sagemaker_arn = arn:aws:iam::548531997526:role/DeepSeaAI
+2023-08-17 21:18:17,849 INFO yolov5_ecr = mbari/deepsea-yolov5:1.1.2
+2023-08-17 21:18:17,849 INFO strongsort_ecr = mbari/strongsort-yolov5:addhyperparameters
+2023-08-17 21:18:17,849 INFO yolov5_model_s3 = s3://902005-public/models/yolov5x_mbay_benthic_model.tar.gz
+2023-08-17 21:18:17,849 INFO strongsort_track_config_s3 = s3://902005-public/models/strong_sort_benthic.yaml
+2023-08-17 21:18:17,849 INFO 
+2023-08-17 21:18:17,849 INFO [database]
+2023-08-17 21:18:17,849 INFO site = http://localhost:4000
+2023-08-17 21:18:17,849 INFO gql = %(site)s/graphql
+2023-08-17 21:18:17,849 INFO 
+2023-08-17 21:18:17,849 INFO [tags]
+2023-08-17 21:18:17,849 INFO organization = mbari
+2023-08-17 21:18:17,849 INFO project_number = NA
+2023-08-17 21:18:17,849 INFO stage = test
+2023-08-17 21:18:17,849 INFO application = detection
+2023-08-17 21:18:17,849 INFO 
+2023-08-17 21:18:17,849 INFO ============ You can override these settings by creating a customconfig.ini file and pass that in with --config=customconfig.ini =====
+2023-08-17 21:18:18,211 INFO Found account 548531997526
+2023-08-17 21:18:18,215 INFO Found region us-west-2
+2023-08-17 21:18:18,275 INFO Creating all ECR repositories in account 548531997526...
+2023-08-17 21:18:18,532 INFO Authenticating Docker with ECR for account 548531997526...
+2023-08-17 21:18:18,580 ERROR Exiting. Error: [Errno 2] No such file or directory: 'docker'

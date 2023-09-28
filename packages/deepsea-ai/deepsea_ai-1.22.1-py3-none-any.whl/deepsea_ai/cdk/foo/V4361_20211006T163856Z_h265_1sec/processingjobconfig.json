@@ -1,0 +1,74 @@
+{
+    "ProcessingJobArn": "arn:aws:sagemaker:us-west-2:548531997526:processing-job/strongsort-yolov5-dcline-2023-09-15-05-37-25-689",
+    "ProcessingJobName": "strongsort-yolov5-dcline-2023-09-15-05-37-25-689",
+    "AppSpecification": {
+        "ImageUri": "548531997526.dkr.ecr.us-west-2.amazonaws.com/mbari/strongsort-yolov5:b8c720b",
+        "ContainerEntrypoint": [
+            "python3",
+            "/opt/ml/processing/input/code/run_strongsort.py"
+        ],
+        "ContainerArguments": [
+            "dettrack",
+            "--model-s3=s3://deepsea-ai-548531997526-models/yolov5x_mbay_benthic_model.tar.gz",
+            "--args=\"--conf-thres=0.1 --iou-thres=0.4 --max-det=100 --agnostic-nms --imgsz 640 --classes 49\""
+        ]
+    },
+    "ProcessingInputs": [
+        {
+            "InputName": "input-1",
+            "AppManaged": false,
+            "S3Input": {
+                "LocalPath": "/opt/ml/processing/input",
+                "S3Uri": "s3://deepsea-ai-548531997526-videos/dcline/Dropbox/code/deepsea-ai/tests/data/V4361_20211006T163856Z_h265_1sec.mp4",
+                "S3DataDistributionType": "FullyReplicated",
+                "S3DataType": "S3Prefix",
+                "S3InputMode": "File",
+                "S3CompressionType": "None",
+                "S3DownloadMode": "StartOfJob"
+            },
+            "DatasetDefinition": null
+        },
+        {
+            "InputName": "code",
+            "AppManaged": false,
+            "S3Input": {
+                "LocalPath": "/opt/ml/processing/input/code",
+                "S3Uri": "s3://sagemaker-us-west-2-548531997526/strongsort-yolov5-dcline-2023-09-15-05-37-25-689/input/code/run_strongsort.py",
+                "S3DataDistributionType": "FullyReplicated",
+                "S3DataType": "S3Prefix",
+                "S3InputMode": "File",
+                "S3CompressionType": "None",
+                "S3DownloadMode": "StartOfJob"
+            },
+            "DatasetDefinition": null
+        }
+    ],
+    "ProcessingOutputConfig": {
+        "Outputs": [
+            {
+                "OutputName": "output-1",
+                "AppManaged": false,
+                "S3Output": {
+                    "LocalPath": "/opt/ml/processing/output",
+                    "S3Uri": "s3://deepsea-ai-548531997526-tracks/v4361_20211006t163256z_h265_1sec_with_0.1_conf_iou_.4_with_class_49/20230915T053724Z/",
+                    "S3UploadMode": "EndOfJob"
+                },
+                "FeatureStoreOutput": null
+            }
+        ],
+        "KmsKeyId": null
+    },
+    "ProcessingResources": {
+        "ClusterConfig": {
+            "InstanceCount": 1,
+            "InstanceType": "ml.g4dn.xlarge",
+            "VolumeSizeInGB": 1,
+            "VolumeKmsKeyId": null
+        }
+    },
+    "RoleArn": "arn:aws:iam::548531997526:role/DeepSeaAI",
+    "StoppingCondition": {
+        "MaxRuntimeInSeconds": 172800
+    },
+    "VideoName": "V4361_20211006T163856Z_h265_1sec.mp4"
+}

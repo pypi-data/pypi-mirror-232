@@ -1,0 +1,1061 @@
+{
+ "Description": "Megadetector elastic cluster for processing underwater video",
+ "Resources": {
+  "asgMegadetectorInstanceSecurityGroup1FC9EBBF": {
+   "Type": "AWS::EC2::SecurityGroup",
+   "Properties": {
+    "GroupDescription": "Megadetector/asg-Megadetector/InstanceSecurityGroup",
+    "SecurityGroupEgress": [
+     {
+      "CidrIp": "0.0.0.0/0",
+      "Description": "Allow all outbound traffic by default",
+      "IpProtocol": "-1"
+     }
+    ],
+    "Tags": [
+     {
+      "Key": "Name",
+      "Value": "Megadetector/asg-Megadetector"
+     }
+    ],
+    "VpcId": "vpc-0aa1f64ab99b207bd"
+   },
+   "Metadata": {
+    "aws:cdk:path": "Megadetector/asg-Megadetector/InstanceSecurityGroup/Resource"
+   }
+  },
+  "asgMegadetectorInstanceRole9ECBBE33": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "ec2.amazonaws.com"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "Tags": [
+     {
+      "Key": "Name",
+      "Value": "Megadetector/asg-Megadetector"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "Megadetector/asg-Megadetector/InstanceRole/Resource"
+   }
+  },
+  "asgMegadetectorInstanceRoleDefaultPolicy6D9B6913": {
+   "Type": "AWS::IAM::Policy",
+   "Properties": {
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": [
+        "ecs:DeregisterContainerInstance",
+        "ecs:RegisterContainerInstance",
+        "ecs:Submit*"
+       ],
+       "Effect": "Allow",
+       "Resource": {
+        "Fn::GetAtt": [
+         "clusterMegadetector8E4EE8AB",
+         "Arn"
+        ]
+       }
+      },
+      {
+       "Action": [
+        "ecs:Poll",
+        "ecs:StartTelemetrySession"
+       ],
+       "Condition": {
+        "ArnEquals": {
+         "ecs:cluster": {
+          "Fn::GetAtt": [
+           "clusterMegadetector8E4EE8AB",
+           "Arn"
+          ]
+         }
+        }
+       },
+       "Effect": "Allow",
+       "Resource": "*"
+      },
+      {
+       "Action": [
+        "ecr:GetAuthorizationToken",
+        "ecs:DiscoverPollEndpoint",
+        "logs:CreateLogStream",
+        "logs:PutLogEvents"
+       ],
+       "Effect": "Allow",
+       "Resource": "*"
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "PolicyName": "asgMegadetectorInstanceRoleDefaultPolicy6D9B6913",
+    "Roles": [
+     {
+      "Ref": "asgMegadetectorInstanceRole9ECBBE33"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "Megadetector/asg-Megadetector/InstanceRole/DefaultPolicy/Resource"
+   }
+  },
+  "asgMegadetectorInstanceProfile354C5468": {
+   "Type": "AWS::IAM::InstanceProfile",
+   "Properties": {
+    "Roles": [
+     {
+      "Ref": "asgMegadetectorInstanceRole9ECBBE33"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "Megadetector/asg-Megadetector/InstanceProfile"
+   }
+  },
+  "asgMegadetectorLaunchTemplateA2C78FB9": {
+   "Type": "AWS::EC2::LaunchTemplate",
+   "Properties": {
+    "LaunchTemplateData": {
+     "BlockDeviceMappings": [
+      {
+       "DeviceName": "/dev/sdh",
+       "Ebs": {
+        "VolumeSize": 10
+       }
+      }
+     ],
+     "IamInstanceProfile": {
+      "Arn": {
+       "Fn::GetAtt": [
+        "asgMegadetectorInstanceProfile354C5468",
+        "Arn"
+       ]
+      }
+     },
+     "ImageId": {
+      "Ref": "SsmParameterValueawsserviceecsoptimizedamiamazonlinux2gpurecommendedimageidC96584B6F00A464EAD1953AFF4B05118Parameter"
+     },
+     "InstanceType": "g4dn.xlarge",
+     "Monitoring": {
+      "Enabled": false
+     },
+     "SecurityGroupIds": [
+      {
+       "Fn::GetAtt": [
+        "asgMegadetectorInstanceSecurityGroup1FC9EBBF",
+        "GroupId"
+       ]
+      }
+     ],
+     "TagSpecifications": [
+      {
+       "ResourceType": "instance",
+       "Tags": [
+        {
+         "Key": "Name",
+         "Value": "Megadetector/asg-Megadetector/LaunchTemplate"
+        }
+       ]
+      },
+      {
+       "ResourceType": "volume",
+       "Tags": [
+        {
+         "Key": "Name",
+         "Value": "Megadetector/asg-Megadetector/LaunchTemplate"
+        }
+       ]
+      }
+     ],
+     "UserData": {
+      "Fn::Base64": {
+       "Fn::Join": [
+        "",
+        [
+         "#!/bin/bash\necho ECS_CLUSTER=",
+         {
+          "Ref": "clusterMegadetector8E4EE8AB"
+         },
+         " >> /etc/ecs/ecs.config\nsudo iptables --insert FORWARD 1 --in-interface docker+ --destination 169.254.169.254/32 --jump DROP\nsudo service iptables save\necho ECS_AWSVPC_BLOCK_IMDS=true >> /etc/ecs/ecs.config"
+        ]
+       ]
+      }
+     }
+    },
+    "TagSpecifications": [
+     {
+      "ResourceType": "launch-template",
+      "Tags": [
+       {
+        "Key": "Name",
+        "Value": "Megadetector/asg-Megadetector/LaunchTemplate"
+       }
+      ]
+     }
+    ]
+   },
+   "DependsOn": [
+    "asgMegadetectorInstanceRoleDefaultPolicy6D9B6913",
+    "asgMegadetectorInstanceRole9ECBBE33"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "Megadetector/asg-Megadetector/LaunchTemplate/Resource"
+   }
+  },
+  "asgMegadetectorASG7F85179E": {
+   "Type": "AWS::AutoScaling::AutoScalingGroup",
+   "Properties": {
+    "Cooldown": "900",
+    "DesiredCapacity": "0",
+    "LaunchTemplate": {
+     "LaunchTemplateId": {
+      "Ref": "asgMegadetectorLaunchTemplateA2C78FB9"
+     },
+     "Version": {
+      "Fn::GetAtt": [
+       "asgMegadetectorLaunchTemplateA2C78FB9",
+       "LatestVersionNumber"
+      ]
+     }
+    },
+    "MaxSize": "1",
+    "MinSize": "0",
+    "NewInstancesProtectedFromScaleIn": true,
+    "Tags": [
+     {
+      "Key": "Name",
+      "PropagateAtLaunch": true,
+      "Value": "Megadetector/asg-Megadetector"
+     }
+    ],
+    "VPCZoneIdentifier": [
+     "subnet-00ff89223d2f5c75a",
+     "subnet-08cec4b37fc2c7121",
+     "subnet-0d71ef00f7ad81c28",
+     "subnet-0f2623093b672dda4"
+    ]
+   },
+   "UpdatePolicy": {
+    "AutoScalingScheduledAction": {
+     "IgnoreUnmodifiedGroupSizeProperties": true
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "Megadetector/asg-Megadetector/ASG"
+   }
+  },
+  "clusterMegadetector8E4EE8AB": {
+   "Type": "AWS::ECS::Cluster",
+   "Metadata": {
+    "aws:cdk:path": "Megadetector/cluster-Megadetector/Resource"
+   }
+  },
+  "clusterMegadetectorE5064DCD": {
+   "Type": "AWS::ECS::ClusterCapacityProviderAssociations",
+   "Properties": {
+    "CapacityProviders": [
+     {
+      "Ref": "asgMegadetectorcapacityprovider1CF73A0E"
+     }
+    ],
+    "Cluster": {
+     "Ref": "clusterMegadetector8E4EE8AB"
+    },
+    "DefaultCapacityProviderStrategy": []
+   },
+   "Metadata": {
+    "aws:cdk:path": "Megadetector/cluster-Megadetector/cluster-Megadetector"
+   }
+  },
+  "asgMegadetectorcapacityprovider1CF73A0E": {
+   "Type": "AWS::ECS::CapacityProvider",
+   "Properties": {
+    "AutoScalingGroupProvider": {
+     "AutoScalingGroupArn": {
+      "Ref": "asgMegadetectorASG7F85179E"
+     },
+     "ManagedScaling": {
+      "MaximumScalingStepSize": 1,
+      "MinimumScalingStepSize": 1,
+      "Status": "ENABLED",
+      "TargetCapacity": 100
+     },
+     "ManagedTerminationProtection": "ENABLED"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "Megadetector/asg-Megadetector-capacity-provider/asg-Megadetector-capacity-provider"
+   }
+  },
+  "dead9A6F9BCE": {
+   "Type": "AWS::SQS::Queue",
+   "Properties": {
+    "ContentBasedDeduplication": true,
+    "FifoQueue": true,
+    "MessageRetentionPeriod": 864000
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "Megadetector/dead/Resource"
+   }
+  },
+  "videoC740E53C": {
+   "Type": "AWS::SQS::Queue",
+   "Properties": {
+    "ContentBasedDeduplication": true,
+    "FifoQueue": true,
+    "RedrivePolicy": {
+     "deadLetterTargetArn": {
+      "Fn::GetAtt": [
+       "dead9A6F9BCE",
+       "Arn"
+      ]
+     },
+     "maxReceiveCount": 600
+    },
+    "VisibilityTimeout": 7200
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "Megadetector/video/Resource"
+   }
+  },
+  "videoPolicy87E2417C": {
+   "Type": "AWS::SQS::QueuePolicy",
+   "Properties": {
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sqs:*",
+       "Effect": "Allow",
+       "Principal": {
+        "AWS": "arn:aws:iam::548531997526:role/DeepSeaAI"
+       },
+       "Resource": {
+        "Fn::GetAtt": [
+         "videoC740E53C",
+         "Arn"
+        ]
+       },
+       "Sid": "allow-sns-messages"
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "Queues": [
+     {
+      "Ref": "videoC740E53C"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "Megadetector/video/Policy/Resource"
+   }
+  },
+  "trackC8D9330E": {
+   "Type": "AWS::SQS::Queue",
+   "Properties": {
+    "ContentBasedDeduplication": true,
+    "FifoQueue": true,
+    "RedrivePolicy": {
+     "deadLetterTargetArn": {
+      "Fn::GetAtt": [
+       "dead9A6F9BCE",
+       "Arn"
+      ]
+     },
+     "maxReceiveCount": 600
+    },
+    "VisibilityTimeout": 7200
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "Megadetector/track/Resource"
+   }
+  },
+  "trackPolicy33FF340D": {
+   "Type": "AWS::SQS::QueuePolicy",
+   "Properties": {
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sqs:*",
+       "Effect": "Allow",
+       "Principal": {
+        "AWS": "arn:aws:iam::548531997526:role/DeepSeaAI"
+       },
+       "Resource": {
+        "Fn::GetAtt": [
+         "trackC8D9330E",
+         "Arn"
+        ]
+       },
+       "Sid": "allow-sns-messages"
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "Queues": [
+     {
+      "Ref": "trackC8D9330E"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "Megadetector/track/Policy/Resource"
+   }
+  },
+  "videoD6CC678B": {
+   "Type": "AWS::S3::Bucket",
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "Megadetector/video-/Resource"
+   }
+  },
+  "tracksAF817E35": {
+   "Type": "AWS::S3::Bucket",
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "Megadetector/tracks-/Resource"
+   }
+  },
+  "dsaiCECB5963": {
+   "Type": "AWS::Logs::LogGroup",
+   "Properties": {
+    "LogGroupName": "/ecs/Megadetector",
+    "RetentionInDays": 30
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "Megadetector/dsai/Resource"
+   }
+  },
+  "DeepSeaAIecstaskexecsqss3log0BADEC52": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "ecs-tasks.amazonaws.com"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "ManagedPolicyArns": [
+     {
+      "Fn::Join": [
+       "",
+       [
+        "arn:",
+        {
+         "Ref": "AWS::Partition"
+        },
+        ":iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy"
+       ]
+      ]
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "Megadetector/DeepSeaAI-ecs-taskexec-sqs-s3-log/Resource"
+   }
+  },
+  "DeepSeaAIecstaskexecsqss3logDefaultPolicy9E895914": {
+   "Type": "AWS::IAM::Policy",
+   "Properties": {
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": [
+        "logs:*",
+        "s3:*",
+        "sqs:*"
+       ],
+       "Effect": "Allow",
+       "Resource": "*"
+      },
+      {
+       "Action": [
+        "logs:CreateLogStream",
+        "logs:PutLogEvents"
+       ],
+       "Effect": "Allow",
+       "Resource": {
+        "Fn::GetAtt": [
+         "dsaiCECB5963",
+         "Arn"
+        ]
+       }
+      },
+      {
+       "Action": [
+        "sqs:ChangeMessageVisibility",
+        "sqs:DeleteMessage",
+        "sqs:GetQueueAttributes",
+        "sqs:GetQueueUrl",
+        "sqs:ReceiveMessage"
+       ],
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::GetAtt": [
+          "trackC8D9330E",
+          "Arn"
+         ]
+        },
+        {
+         "Fn::GetAtt": [
+          "videoC740E53C",
+          "Arn"
+         ]
+        }
+       ]
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "PolicyName": "DeepSeaAIecstaskexecsqss3logDefaultPolicy9E895914",
+    "Roles": [
+     {
+      "Ref": "DeepSeaAIecstaskexecsqss3log0BADEC52"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "Megadetector/DeepSeaAI-ecs-taskexec-sqs-s3-log/DefaultPolicy/Resource"
+   }
+  },
+  "strongsortyolov5469D7B5D": {
+   "Type": "AWS::ECS::TaskDefinition",
+   "Properties": {
+    "ContainerDefinitions": [
+     {
+      "Command": [
+       "dettrack",
+       "-c",
+       "s3://deepsea-ai-548531997526-track-conf/strong_sort_benthic.yaml",
+       "--model-s3",
+       "s3://deepsea-ai-548531997526-models/Megadetector.pt"
+      ],
+      "Environment": [
+       {
+        "Name": "PROCESSOR",
+        "Value": "Megadetector"
+       },
+       {
+        "Name": "VIDEO_QUEUE",
+        "Value": {
+         "Fn::GetAtt": [
+          "videoC740E53C",
+          "QueueName"
+         ]
+        }
+       },
+       {
+        "Name": "TRACK_QUEUE",
+        "Value": {
+         "Fn::GetAtt": [
+          "trackC8D9330E",
+          "QueueName"
+         ]
+        }
+       },
+       {
+        "Name": "DEAD_QUEUE",
+        "Value": {
+         "Fn::GetAtt": [
+          "dead9A6F9BCE",
+          "QueueName"
+         ]
+        }
+       },
+       {
+        "Name": "VIDEO_BUCKET",
+        "Value": {
+         "Ref": "videoD6CC678B"
+        }
+       },
+       {
+        "Name": "TRACK_BUCKET",
+        "Value": {
+         "Ref": "tracksAF817E35"
+        }
+       },
+       {
+        "Name": "AWS_REGION",
+        "Value": "us-west-2"
+       },
+       {
+        "Name": "DEFAULT_MAX_CALL_ATTEMPTS",
+        "Value": "6"
+       }
+      ],
+      "Essential": true,
+      "Image": "548531997526.dkr.ecr.us-west-2.amazonaws.com/mbari/strongsort-yolov5:b8c720b",
+      "LogConfiguration": {
+       "LogDriver": "awslogs",
+       "Options": {
+        "awslogs-group": {
+         "Ref": "dsaiCECB5963"
+        },
+        "awslogs-stream-prefix": "task",
+        "awslogs-region": "us-west-2"
+       }
+      },
+      "MemoryReservation": 3072,
+      "Name": "Megadetector",
+      "ResourceRequirements": [
+       {
+        "Type": "GPU",
+        "Value": "1"
+       }
+      ],
+      "StopTimeout": 60
+     }
+    ],
+    "ExecutionRoleArn": {
+     "Fn::GetAtt": [
+      "DeepSeaAIecstaskexecsqss3log0BADEC52",
+      "Arn"
+     ]
+    },
+    "Family": "Megadetectorstrongsortyolov5F65FD22D",
+    "NetworkMode": "bridge",
+    "RequiresCompatibilities": [
+     "EC2"
+    ],
+    "TaskRoleArn": {
+     "Fn::GetAtt": [
+      "DeepSeaAIecstaskexecsqss3log0BADEC52",
+      "Arn"
+     ]
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "Megadetector/strongsort-yolov5/Resource"
+   }
+  },
+  "serviceobjectObjectService10D8676F": {
+   "Type": "AWS::ECS::Service",
+   "Properties": {
+    "Cluster": {
+     "Ref": "clusterMegadetector8E4EE8AB"
+    },
+    "DeploymentConfiguration": {
+     "Alarms": {
+      "AlarmNames": [],
+      "Enable": false,
+      "Rollback": false
+     },
+     "MaximumPercent": 200,
+     "MinimumHealthyPercent": 50
+    },
+    "DesiredCount": 0,
+    "EnableECSManagedTags": false,
+    "LaunchType": "EC2",
+    "PlacementStrategies": [
+     {
+      "Field": "instanceId",
+      "Type": "spread"
+     }
+    ],
+    "SchedulingStrategy": "REPLICA",
+    "TaskDefinition": {
+     "Ref": "strongsortyolov5469D7B5D"
+    }
+   },
+   "DependsOn": [
+    "DeepSeaAIecstaskexecsqss3logDefaultPolicy9E895914",
+    "DeepSeaAIecstaskexecsqss3log0BADEC52"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "Megadetector/service-[object Object]/Service"
+   }
+  },
+  "serviceobjectObjectTaskCountTargetBB9BB221": {
+   "Type": "AWS::ApplicationAutoScaling::ScalableTarget",
+   "Properties": {
+    "MaxCapacity": 1,
+    "MinCapacity": 0,
+    "ResourceId": {
+     "Fn::Join": [
+      "",
+      [
+       "service/",
+       {
+        "Ref": "clusterMegadetector8E4EE8AB"
+       },
+       "/",
+       {
+        "Fn::GetAtt": [
+         "serviceobjectObjectService10D8676F",
+         "Name"
+        ]
+       }
+      ]
+     ]
+    },
+    "RoleARN": "arn:aws:iam::548531997526:role/aws-service-role/ecs.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_ECSService",
+    "ScalableDimension": "ecs:service:DesiredCount",
+    "ServiceNamespace": "ecs"
+   },
+   "DependsOn": [
+    "DeepSeaAIecstaskexecsqss3logDefaultPolicy9E895914",
+    "DeepSeaAIecstaskexecsqss3log0BADEC52"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "Megadetector/service-[object Object]/TaskCount/Target/Resource"
+   }
+  },
+  "serviceobjectObjectTaskCountTargetscalingobjectObjectLowerPolicyAF15B713": {
+   "Type": "AWS::ApplicationAutoScaling::ScalingPolicy",
+   "Properties": {
+    "PolicyName": "MegadetectorserviceobjectObjectTaskCountTargetscalingobjectObjectLowerPolicy11813DBD",
+    "PolicyType": "StepScaling",
+    "ScalingTargetId": {
+     "Ref": "serviceobjectObjectTaskCountTargetBB9BB221"
+    },
+    "StepScalingPolicyConfiguration": {
+     "AdjustmentType": "ChangeInCapacity",
+     "Cooldown": 300,
+     "MetricAggregationType": "Average",
+     "StepAdjustments": [
+      {
+       "MetricIntervalUpperBound": 0,
+       "ScalingAdjustment": -1
+      }
+     ]
+    }
+   },
+   "DependsOn": [
+    "DeepSeaAIecstaskexecsqss3logDefaultPolicy9E895914",
+    "DeepSeaAIecstaskexecsqss3log0BADEC52"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "Megadetector/service-[object Object]/TaskCount/Target/scaling-[object Object]/LowerPolicy/Resource"
+   }
+  },
+  "serviceobjectObjectTaskCountTargetscalingobjectObjectLowerAlarmD421C3D9": {
+   "Type": "AWS::CloudWatch::Alarm",
+   "Properties": {
+    "AlarmActions": [
+     {
+      "Ref": "serviceobjectObjectTaskCountTargetscalingobjectObjectLowerPolicyAF15B713"
+     }
+    ],
+    "AlarmDescription": "Lower threshold scaling alarm",
+    "ComparisonOperator": "LessThanOrEqualToThreshold",
+    "Dimensions": [
+     {
+      "Name": "QueueName",
+      "Value": {
+       "Fn::GetAtt": [
+        "videoC740E53C",
+        "QueueName"
+       ]
+      }
+     }
+    ],
+    "EvaluationPeriods": 1,
+    "MetricName": "ApproximateNumberOfMessagesVisible",
+    "Namespace": "AWS/SQS",
+    "Period": 60,
+    "Statistic": "Average",
+    "Threshold": 0
+   },
+   "DependsOn": [
+    "DeepSeaAIecstaskexecsqss3logDefaultPolicy9E895914",
+    "DeepSeaAIecstaskexecsqss3log0BADEC52"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "Megadetector/service-[object Object]/TaskCount/Target/scaling-[object Object]/LowerAlarm/Resource"
+   }
+  },
+  "serviceobjectObjectTaskCountTargetscalingobjectObjectUpperPolicyD7FF12DC": {
+   "Type": "AWS::ApplicationAutoScaling::ScalingPolicy",
+   "Properties": {
+    "PolicyName": "MegadetectorserviceobjectObjectTaskCountTargetscalingobjectObjectUpperPolicyE764BE73",
+    "PolicyType": "StepScaling",
+    "ScalingTargetId": {
+     "Ref": "serviceobjectObjectTaskCountTargetBB9BB221"
+    },
+    "StepScalingPolicyConfiguration": {
+     "AdjustmentType": "ChangeInCapacity",
+     "Cooldown": 300,
+     "MetricAggregationType": "Average",
+     "StepAdjustments": [
+      {
+       "MetricIntervalLowerBound": 0,
+       "ScalingAdjustment": 1
+      }
+     ]
+    }
+   },
+   "DependsOn": [
+    "DeepSeaAIecstaskexecsqss3logDefaultPolicy9E895914",
+    "DeepSeaAIecstaskexecsqss3log0BADEC52"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "Megadetector/service-[object Object]/TaskCount/Target/scaling-[object Object]/UpperPolicy/Resource"
+   }
+  },
+  "serviceobjectObjectTaskCountTargetscalingobjectObjectUpperAlarmBB5F2386": {
+   "Type": "AWS::CloudWatch::Alarm",
+   "Properties": {
+    "AlarmActions": [
+     {
+      "Ref": "serviceobjectObjectTaskCountTargetscalingobjectObjectUpperPolicyD7FF12DC"
+     }
+    ],
+    "AlarmDescription": "Upper threshold scaling alarm",
+    "ComparisonOperator": "GreaterThanOrEqualToThreshold",
+    "Dimensions": [
+     {
+      "Name": "QueueName",
+      "Value": {
+       "Fn::GetAtt": [
+        "videoC740E53C",
+        "QueueName"
+       ]
+      }
+     }
+    ],
+    "EvaluationPeriods": 1,
+    "MetricName": "ApproximateNumberOfMessagesVisible",
+    "Namespace": "AWS/SQS",
+    "Period": 60,
+    "Statistic": "Average",
+    "Threshold": 1
+   },
+   "DependsOn": [
+    "DeepSeaAIecstaskexecsqss3logDefaultPolicy9E895914",
+    "DeepSeaAIecstaskexecsqss3log0BADEC52"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "Megadetector/service-[object Object]/TaskCount/Target/scaling-[object Object]/UpperAlarm/Resource"
+   }
+  },
+  "scaleout9660673C": {
+   "Type": "AWS::CloudWatch::Alarm",
+   "Properties": {
+    "AlarmActions": [
+     {
+      "Ref": "scaleoutaction240431FD"
+     }
+    ],
+    "ComparisonOperator": "GreaterThanOrEqualToThreshold",
+    "Dimensions": [
+     {
+      "Name": "QueueName",
+      "Value": {
+       "Fn::GetAtt": [
+        "videoC740E53C",
+        "QueueName"
+       ]
+      }
+     }
+    ],
+    "EvaluationPeriods": 1,
+    "MetricName": "ApproximateNumberOfMessagesVisible",
+    "Namespace": "AWS/SQS",
+    "Period": 60,
+    "Statistic": "Average",
+    "Threshold": 1,
+    "TreatMissingData": "notBreaching"
+   },
+   "Metadata": {
+    "aws:cdk:path": "Megadetector/scale-out/Resource"
+   }
+  },
+  "scaleoutaction240431FD": {
+   "Type": "AWS::AutoScaling::ScalingPolicy",
+   "Properties": {
+    "AdjustmentType": "ChangeInCapacity",
+    "AutoScalingGroupName": {
+     "Ref": "asgMegadetectorASG7F85179E"
+    },
+    "EstimatedInstanceWarmup": 120,
+    "PolicyType": "StepScaling",
+    "StepAdjustments": [
+     {
+      "MetricIntervalLowerBound": 0,
+      "ScalingAdjustment": 1
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "Megadetector/scale-out-action/Resource"
+   }
+  },
+  "scaleinCAF92544": {
+   "Type": "AWS::CloudWatch::Alarm",
+   "Properties": {
+    "AlarmActions": [
+     {
+      "Ref": "scaleinactionDA2EF43D"
+     }
+    ],
+    "ComparisonOperator": "LessThanOrEqualToThreshold",
+    "Dimensions": [
+     {
+      "Name": "QueueName",
+      "Value": {
+       "Fn::GetAtt": [
+        "videoC740E53C",
+        "QueueName"
+       ]
+      }
+     }
+    ],
+    "EvaluationPeriods": 1,
+    "MetricName": "ApproximateNumberOfMessagesVisible",
+    "Namespace": "AWS/SQS",
+    "Period": 3600,
+    "Statistic": "Average",
+    "Threshold": 0,
+    "TreatMissingData": "breaching"
+   },
+   "Metadata": {
+    "aws:cdk:path": "Megadetector/scale-in/Resource"
+   }
+  },
+  "scaleinactionDA2EF43D": {
+   "Type": "AWS::AutoScaling::ScalingPolicy",
+   "Properties": {
+    "AdjustmentType": "ChangeInCapacity",
+    "AutoScalingGroupName": {
+     "Ref": "asgMegadetectorASG7F85179E"
+    },
+    "PolicyType": "StepScaling",
+    "StepAdjustments": [
+     {
+      "MetricIntervalUpperBound": 0,
+      "ScalingAdjustment": -1
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "Megadetector/scale-in-action/Resource"
+   }
+  },
+  "CDKMetadata": {
+   "Type": "AWS::CDK::Metadata",
+   "Properties": {
+    "Analytics": "v2:deflate64:H4sIAAAAAAAA/41S204CMRD9Ft9LDRgTeUQ0xoREZHk34+wAhW679gIhm/13ewEXlhdf2jNnbp3pGfHxIx/ewcEOsNwNpPjmTeEAd2xBVnuDxILvqwHvtEWQQq15MwlGkY03o33Npit1wxWO6hMxQSe0ilEnYq6lwGPLCEehHaE3wh3/Sl0TM/AKN0uqagmOov+aaZmAijcLLZMz3bl+NDv0rqwDhTQ3eiUkxeaWN1PprSMTA27hFGrA8JCQshclmYm1GgXEYSyb2HXfn1L73CuOlmB3L7QSSpz30Ge0ciAUmQsu5BVk9gIp7yTDuED4lhQLTLVXrmX2J8zx6cmnwAzS2c1+YYb4B948e9yRi66MWib1OpSZ6e5Hz7hlUNchNc19pYPuMWadq/WYCw2cHvMfVaDUvjyAw02QmgRTJX1F0LbpT8FARaev+vCu9qn3WbAtU7okvrX3++GYPwV1b60QAxOWJSrii3z/AiRI8fv5AgAA"
+   },
+   "Metadata": {
+    "aws:cdk:path": "Megadetector/CDKMetadata/Default"
+   }
+  }
+ },
+ "Parameters": {
+  "SsmParameterValueawsserviceecsoptimizedamiamazonlinux2gpurecommendedimageidC96584B6F00A464EAD1953AFF4B05118Parameter": {
+   "Type": "AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>",
+   "Default": "/aws/service/ecs/optimized-ami/amazon-linux-2/gpu/recommended/image_id"
+  },
+  "BootstrapVersion": {
+   "Type": "AWS::SSM::Parameter::Value<String>",
+   "Default": "/cdk-bootstrap/hnb659fds/version",
+   "Description": "Version of the CDK Bootstrap resources in this environment, automatically retrieved from SSM Parameter Store. [cdk:skip]"
+  }
+ },
+ "Outputs": {
+  "videoqueuedeadletter": {
+   "Value": {
+    "Fn::GetAtt": [
+     "dead9A6F9BCE",
+     "QueueName"
+    ]
+   }
+  },
+  "videoqueuedeadletterarn": {
+   "Value": {
+    "Fn::GetAtt": [
+     "dead9A6F9BCE",
+     "Arn"
+    ]
+   }
+  },
+  "videoqueue": {
+   "Value": {
+    "Fn::GetAtt": [
+     "videoC740E53C",
+     "QueueName"
+    ]
+   }
+  },
+  "videoqueuearn": {
+   "Value": {
+    "Fn::GetAtt": [
+     "videoC740E53C",
+     "Arn"
+    ]
+   }
+  },
+  "trackqueue": {
+   "Value": {
+    "Fn::GetAtt": [
+     "trackC8D9330E",
+     "QueueName"
+    ]
+   }
+  },
+  "trackqueuearn": {
+   "Value": {
+    "Fn::GetAtt": [
+     "trackC8D9330E",
+     "Arn"
+    ]
+   }
+  }
+ },
+ "Rules": {
+  "CheckBootstrapVersion": {
+   "Assertions": [
+    {
+     "Assert": {
+      "Fn::Not": [
+       {
+        "Fn::Contains": [
+         [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+         ],
+         {
+          "Ref": "BootstrapVersion"
+         }
+        ]
+       }
+      ]
+     },
+     "AssertDescription": "CDK bootstrap stack version 6 required. Please run 'cdk bootstrap' with a recent version of the CDK CLI."
+    }
+   ]
+  }
+ }
+}

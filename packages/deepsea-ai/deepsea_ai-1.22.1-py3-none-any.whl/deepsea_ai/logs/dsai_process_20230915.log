@@ -1,0 +1,55 @@
+2023-09-14 22:52:46,485 INFO Logging to logs/dsai_process_20230915.log
+2023-09-14 22:52:46,486 INFO =============== Config file /Users/dcline/Dropbox/code/deepsea-ai/deepsea_ai/config/config.ini =================
+2023-09-14 22:52:46,486 INFO [docker]
+2023-09-14 22:52:46,486 INFO yolov5_container = mbari/deepsea-yolov5:1.1.2
+2023-09-14 22:52:46,486 INFO strongsort_container = mbari/strongsort-yolov5:b8c720b
+2023-09-14 22:52:46,486 INFO 
+2023-09-14 22:52:46,486 INFO [aws]
+2023-09-14 22:52:46,486 INFO account_id = 548531997526
+2023-09-14 22:52:46,486 INFO sagemaker_arn = arn:aws:iam::548531997526:role/DeepSeaAI
+2023-09-14 22:52:46,486 INFO model = s3://deepsea-ai-548531997526-models/yolov5x_mbay_benthic_model.tar.gz
+2023-09-14 22:52:46,487 INFO track_config = s3://deepsea-ai-548531997526-track-conf/strong_sort_benthic.yaml
+2023-09-14 22:52:46,487 INFO videos = s3://deepsea-ai-548531997526-videos
+2023-09-14 22:52:46,487 INFO models = s3://deepsea-ai-548531997526-models
+2023-09-14 22:52:46,487 INFO tracks = s3://deepsea-ai-548531997526-tracks
+2023-09-14 22:52:46,487 INFO 
+2023-09-14 22:52:46,487 INFO [aws_public]
+2023-09-14 22:52:46,487 INFO model = s3://902005-public/models/yolov5x_mbay_benthic_model.tar.gz
+2023-09-14 22:52:46,487 INFO track_config = s3://902005-public/models/track-config/strong_sort_benthic.yaml
+2023-09-14 22:52:46,487 INFO video_ex1 = s3://902005-public/video/1sec/V4361_20211006T162656Z_h265_1sec.mp4
+2023-09-14 22:52:46,487 INFO video_ex2 = s3://902005-public/video/1sec/V4361_20211006T163256Z_h265_1sec.mp4
+2023-09-14 22:52:46,487 INFO video_ex3 = s3://902005-public/video/1sec/V4361_20211006T163856Z_h265_1sec.mp4
+2023-09-14 22:52:46,487 INFO 
+2023-09-14 22:52:46,487 INFO [database]
+2023-09-14 22:52:46,487 INFO site = http://localhost:4000
+2023-09-14 22:52:46,487 INFO gql = %(site)s/graphql
+2023-09-14 22:52:46,487 INFO 
+2023-09-14 22:52:46,487 INFO [tags]
+2023-09-14 22:52:46,487 INFO organization = mbari
+2023-09-14 22:52:46,487 INFO project_number = NA
+2023-09-14 22:52:46,487 INFO stage = test
+2023-09-14 22:52:46,487 INFO application = detection
+2023-09-14 22:52:46,487 INFO 
+2023-09-14 22:52:46,487 INFO Initializing job cache database in /Users/dcline/Dropbox/code/deepsea-ai/deepsea_ai/config as sqlite_job_cache_548531997526.db
+2023-09-14 22:52:46,893 INFO Checking tag {'Key': 'mbari:project-number', 'Value': 'NA'}
+2023-09-14 22:52:46,893 INFO Checking tag {'Key': 'mbari:owner', 'Value': 'dcline'}
+2023-09-14 22:52:46,893 INFO Checking tag {'Key': 'mbari:description', 'Value': 'Pycharm Ventana V4361_20211006T163256Z_h265_1sec with 49'}
+2023-09-14 22:52:46,893 INFO Checking tag {'Key': 'mbari:stage', 'Value': 'test'}
+2023-09-14 22:52:46,893 INFO Checking tag {'Key': 'mbari:application', 'Value': 'detection'}
+2023-09-14 22:52:46,893 INFO Checking tag {'Key': 'mbari:deletion-date', 'Value': '20231214T055246Z'}
+2023-09-14 22:52:46,893 INFO Checking tag {'Key': 'mbari:created-by', 'Value': 'dcline'}
+2023-09-14 22:52:46,894 INFO Creating buckets
+2023-09-14 22:52:46,894 INFO Creating bucket deepsea-ai-548531997526-videos...
+2023-09-14 22:52:47,457 INFO Creating bucket deepsea-ai-548531997526-tracks...
+2023-09-14 22:52:47,927 INFO No video file exclusions specified
+2023-09-14 22:52:47,928 INFO Found 1 videos to process
+2023-09-14 22:52:47,972 INFO Checking /Users/dcline/Dropbox/code/deepsea-ai/tests/data/V4361_20211006T163856Z_h265_1sec.mp4 in s3://deepsea-ai-548531997526-videos/dcline/Dropbox/code/deepsea-ai/tests/data/V4361_20211006T163856Z_h265_1sec.mp4...
+2023-09-14 22:52:48,226 INFO Found s3://deepsea-ai-548531997526-videos/dcline/Dropbox/code/deepsea-ai/tests/data/V4361_20211006T163856Z_h265_1sec.mp4 ...skipping upload
+2023-09-14 22:52:48,227 INFO Tagging /Users/dcline/Dropbox/code/deepsea-ai/tests/data/V4361_20211006T163856Z_h265_1sec.mp4 with [{'Key': 'mbari:project-number', 'Value': 'NA'}, {'Key': 'mbari:owner', 'Value': 'dcline'}, {'Key': 'mbari:description', 'Value': 'Pycharm Ventana V4361_20211006T163256Z_h265_1sec with 49'}, {'Key': 'mbari:stage', 'Value': 'test'}, {'Key': 'mbari:application', 'Value': 'detection'}, {'Key': 'mbari:deletion-date', 'Value': '20231214T055246Z'}, {'Key': 'mbari:created-by', 'Value': 'dcline'}]...
+2023-09-14 22:52:48,869 INFO Running with args ['dettrack', '--model-s3=s3://deepsea-ai-548531997526-models/yolov5x_mbay_benthic_model.tar.gz', '--args="--conf-thres=0.01 --iou-thres=0.4 --max-det=100 --agnostic-nms --imgsz 640"']
+2023-09-14 22:52:49,260 INFO Found account 548531997526
+2023-09-14 22:52:49,284 INFO Found region us-west-2
+2023-09-14 22:52:49,338 INFO Start script processor for inputs s3://deepsea-ai-548531997526-videos/dcline/Dropbox/code/deepsea-ai/tests/data/V4361_20211006T163856Z_h265_1sec.mp4
+2023-09-14 22:52:49,338 INFO Job name: strongsort-yolov5-dcline-20230915T055249
+2023-09-14 22:57:21,711 INFO Updating media V4361_20211006T163856Z_h265_1sec.mp4 to SUCCESS
+2023-09-14 22:57:21,712 INFO A new media V4361_20211006T163856Z_h265_1sec.mp4 was added to job strongsort-yolov5-dcline-20230915T055249 kwargs {'processing_job_arn': 'strongsort-yolov5-dcline-2023-09-15-05-52-49-654'}

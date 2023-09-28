@@ -1,0 +1,71 @@
+2023-09-04 16:46:09,047 INFO Logging to logs/dsai_ecsprocess_20230904.log
+2023-09-04 16:46:09,048 INFO =============== Config file /Users/dcline/Dropbox/code/deepsea-ai/deepsea_ai/config/config.ini =================
+2023-09-04 16:46:09,048 INFO [docker]
+2023-09-04 16:46:09,048 INFO yolov5_container = mbari/deepsea-yolov5:1.1.2
+2023-09-04 16:46:09,048 INFO strongsort_container = mbari/strongsort-yolov5:b2a511e
+2023-09-04 16:46:09,048 INFO 
+2023-09-04 16:46:09,048 INFO [aws]
+2023-09-04 16:46:09,048 INFO account_id = 548531997526
+2023-09-04 16:46:09,048 INFO sagemaker_arn = arn:aws:iam::548531997526:role/DeepSeaAI
+2023-09-04 16:46:09,048 INFO model = s3://deepsea-ai-548531997526-models/yolov5x_mbay_benthic_model.tar.gz
+2023-09-04 16:46:09,048 INFO track_config = s3://deepsea-ai-548531997526-track-conf/strong_sort_benthic.yaml
+2023-09-04 16:46:09,048 INFO videos = s3://deepsea-ai-548531997526-videos
+2023-09-04 16:46:09,048 INFO models = s3://deepsea-ai-548531997526-models
+2023-09-04 16:46:09,048 INFO tracks = s3://deepsea-ai-548531997526-tracks
+2023-09-04 16:46:09,048 INFO 
+2023-09-04 16:46:09,048 INFO [aws_public]
+2023-09-04 16:46:09,048 INFO model = s3://902005-public/models/yolov5x_mbay_benthic_model.tar.gz
+2023-09-04 16:46:09,048 INFO track_config = s3://902005-public/models/track-config/strong_sort_benthic.yaml
+2023-09-04 16:46:09,048 INFO video_ex1 = s3://902005-public/video/1sec/V4361_20211006T162656Z_h265_1sec.mp4
+2023-09-04 16:46:09,048 INFO video_ex2 = s3://902005-public/video/1sec/V4361_20211006T163256Z_h265_1sec.mp4
+2023-09-04 16:46:09,048 INFO video_ex3 = s3://902005-public/video/1sec/V4361_20211006T163856Z_h265_1sec.mp4
+2023-09-04 16:46:09,048 INFO 
+2023-09-04 16:46:09,048 INFO [database]
+2023-09-04 16:46:09,048 INFO site = http://localhost:4000
+2023-09-04 16:46:09,048 INFO gql = %(site)s/graphql
+2023-09-04 16:46:09,048 INFO 
+2023-09-04 16:46:09,048 INFO [tags]
+2023-09-04 16:46:09,049 INFO organization = mbari
+2023-09-04 16:46:09,049 INFO project_number = NA
+2023-09-04 16:46:09,049 INFO stage = test
+2023-09-04 16:46:09,049 INFO application = detection
+2023-09-04 16:46:09,049 INFO 
+2023-09-04 16:46:09,049 INFO Initializing job cache database in /Users/dcline/Dropbox/code/deepsea-ai/deepsea_ai/config as sqlite_job_cache_548531997526.db
+2023-09-04 16:46:10,289 INFO No video file exclusions specified
+2023-09-04 16:46:10,292 INFO Found 3 videos to process
+2023-09-04 16:46:10,669 INFO Checking tag {'Key': 'mbari:project-number', 'Value': 'NA'}
+2023-09-04 16:46:10,669 INFO Checking tag {'Key': 'mbari:owner', 'Value': 'dcline'}
+2023-09-04 16:46:10,669 INFO Checking tag {'Key': 'mbari:description', 'Value': 'Video uploaded from /Users/dcline/Dropbox/code/deepsea-ai/tests/data/ by user dcline '}
+2023-09-04 16:46:10,669 INFO Checking tag {'Key': 'mbari:stage', 'Value': 'test'}
+2023-09-04 16:46:10,669 INFO Checking tag {'Key': 'mbari:application', 'Value': 'detection'}
+2023-09-04 16:46:10,669 INFO Checking tag {'Key': 'mbari:deletion-date', 'Value': '20231203T234610Z'}
+2023-09-04 16:46:10,669 INFO Checking tag {'Key': 'mbari:created-by', 'Value': 'dcline'}
+2023-09-04 16:46:10,729 INFO Cleaning s3://yolov5x-mbay-benthic-videod6cc678b-76qtaf48s55g/dcline/Dropbox/code/deepsea-ai/tests/data...
+2023-09-04 16:46:10,976 INFO Checking /Users/dcline/Dropbox/code/deepsea-ai/tests/data/V4361_20211006T163256Z_h265_1sec.mp4 in s3://yolov5x-mbay-benthic-videod6cc678b-76qtaf48s55g/dcline/Dropbox/code/deepsea-ai/tests/data/V4361_20211006T163256Z_h265_1sec.mp4...
+2023-09-04 16:46:11,211 INFO Found s3://yolov5x-mbay-benthic-videod6cc678b-76qtaf48s55g/dcline/Dropbox/code/deepsea-ai/tests/data/V4361_20211006T163256Z_h265_1sec.mp4 ...skipping upload
+2023-09-04 16:46:11,211 INFO Tagging /Users/dcline/Dropbox/code/deepsea-ai/tests/data/V4361_20211006T163256Z_h265_1sec.mp4 with [{'Key': 'mbari:project-number', 'Value': 'NA'}, {'Key': 'mbari:owner', 'Value': 'dcline'}, {'Key': 'mbari:description', 'Value': 'Video uploaded from /Users/dcline/Dropbox/code/deepsea-ai/tests/data/ by user dcline '}, {'Key': 'mbari:stage', 'Value': 'test'}, {'Key': 'mbari:application', 'Value': 'detection'}, {'Key': 'mbari:deletion-date', 'Value': '20231203T234610Z'}, {'Key': 'mbari:created-by', 'Value': 'dcline'}]...
+2023-09-04 16:46:11,543 INFO Message queued to yolov5x-mbay-benthic-videoC740E53C-UVwtJL5IICRK.fifo. MessageId: 0b677bd6-798b-4121-b99c-56f4f8f9aec2
+2023-09-04 16:46:11,548 INFO Added job yolov5x-mbay-benthic-Pycharm test yolov5x-mbay-benthic model from ecsprocess with args-20230904T234609Z running on yolov5x-mbay-benthic to cache.
+2023-09-04 16:46:11,548 INFO Updating media V4361_20211006T163256Z_h265_1sec.mp4 to RUNNING
+2023-09-04 16:46:11,549 INFO A new media V4361_20211006T163256Z_h265_1sec.mp4 was added to job yolov5x-mbay-benthic-Pycharm test yolov5x-mbay-benthic model from ecsprocess with args-20230904T234609Z {'message_id': '0b677bd6-798b-4121-b99c-56f4f8f9aec2'}
+2023-09-04 16:46:11,559 INFO Cleaning s3://yolov5x-mbay-benthic-videod6cc678b-76qtaf48s55g/dcline/Dropbox/code/deepsea-ai/tests/data...
+2023-09-04 16:46:11,744 INFO Deleting dcline/Dropbox/code/deepsea-ai/tests/data/V4361_20211006T163256Z_h265_1sec.mp4 from yolov5x-mbay-benthic-videod6cc678b-76qtaf48s55g
+2023-09-04 16:46:11,803 INFO Checking /Users/dcline/Dropbox/code/deepsea-ai/tests/data/V4361_20211006T162656Z_h265_1sec.mp4 in s3://yolov5x-mbay-benthic-videod6cc678b-76qtaf48s55g/dcline/Dropbox/code/deepsea-ai/tests/data/V4361_20211006T162656Z_h265_1sec.mp4...
+2023-09-04 16:46:12,020 INFO Uploading /Users/dcline/Dropbox/code/deepsea-ai/tests/data/V4361_20211006T162656Z_h265_1sec.mp4 to s3://yolov5x-mbay-benthic-videod6cc678b-76qtaf48s55g/dcline/Dropbox/code/deepsea-ai/tests/data/V4361_20211006T162656Z_h265_1sec.mp4...
+2023-09-04 16:46:13,402 INFO Tagging /Users/dcline/Dropbox/code/deepsea-ai/tests/data/V4361_20211006T162656Z_h265_1sec.mp4 with [{'Key': 'mbari:project-number', 'Value': 'NA'}, {'Key': 'mbari:owner', 'Value': 'dcline'}, {'Key': 'mbari:description', 'Value': 'Video uploaded from /Users/dcline/Dropbox/code/deepsea-ai/tests/data/ by user dcline '}, {'Key': 'mbari:stage', 'Value': 'test'}, {'Key': 'mbari:application', 'Value': 'detection'}, {'Key': 'mbari:deletion-date', 'Value': '20231203T234610Z'}, {'Key': 'mbari:created-by', 'Value': 'dcline'}]...
+2023-09-04 16:46:13,714 INFO Message queued to yolov5x-mbay-benthic-videoC740E53C-UVwtJL5IICRK.fifo. MessageId: a7ef87ce-8192-41cd-9114-87cdec0514d9
+2023-09-04 16:46:13,715 INFO Updating media V4361_20211006T162656Z_h265_1sec.mp4 to RUNNING
+2023-09-04 16:46:13,715 INFO Found 0 media matching V4361_20211006T162656Z_h265_1sec.mp4 and message_id a7ef87ce-8192-41cd-9114-87cdec0514d9 in job yolov5x-mbay-benthic-Pycharm test yolov5x-mbay-benthic model from ecsprocess with args-20230904T234609Z
+2023-09-04 16:46:13,715 INFO Found 0 media matching V4361_20211006T162656Z_h265_1sec.mp4 in job yolov5x-mbay-benthic-Pycharm test yolov5x-mbay-benthic model from ecsprocess with args-20230904T234609Z
+2023-09-04 16:46:13,715 INFO A new media V4361_20211006T162656Z_h265_1sec.mp4 was added to job yolov5x-mbay-benthic-Pycharm test yolov5x-mbay-benthic model from ecsprocess with args-20230904T234609Z {'message_id': 'a7ef87ce-8192-41cd-9114-87cdec0514d9'}
+2023-09-04 16:46:13,724 INFO Cleaning s3://yolov5x-mbay-benthic-videod6cc678b-76qtaf48s55g/dcline/Dropbox/code/deepsea-ai/tests/data...
+2023-09-04 16:46:13,918 INFO Deleting dcline/Dropbox/code/deepsea-ai/tests/data/V4361_20211006T162656Z_h265_1sec.mp4 from yolov5x-mbay-benthic-videod6cc678b-76qtaf48s55g
+2023-09-04 16:46:13,975 INFO Checking /Users/dcline/Dropbox/code/deepsea-ai/tests/data/V4361_20211006T163856Z_h265_1sec.mp4 in s3://yolov5x-mbay-benthic-videod6cc678b-76qtaf48s55g/dcline/Dropbox/code/deepsea-ai/tests/data/V4361_20211006T163856Z_h265_1sec.mp4...
+2023-09-04 16:46:14,185 INFO Uploading /Users/dcline/Dropbox/code/deepsea-ai/tests/data/V4361_20211006T163856Z_h265_1sec.mp4 to s3://yolov5x-mbay-benthic-videod6cc678b-76qtaf48s55g/dcline/Dropbox/code/deepsea-ai/tests/data/V4361_20211006T163856Z_h265_1sec.mp4...
+2023-09-04 16:46:14,689 INFO Tagging /Users/dcline/Dropbox/code/deepsea-ai/tests/data/V4361_20211006T163856Z_h265_1sec.mp4 with [{'Key': 'mbari:project-number', 'Value': 'NA'}, {'Key': 'mbari:owner', 'Value': 'dcline'}, {'Key': 'mbari:description', 'Value': 'Video uploaded from /Users/dcline/Dropbox/code/deepsea-ai/tests/data/ by user dcline '}, {'Key': 'mbari:stage', 'Value': 'test'}, {'Key': 'mbari:application', 'Value': 'detection'}, {'Key': 'mbari:deletion-date', 'Value': '20231203T234610Z'}, {'Key': 'mbari:created-by', 'Value': 'dcline'}]...
+2023-09-04 16:46:15,035 INFO Message queued to yolov5x-mbay-benthic-videoC740E53C-UVwtJL5IICRK.fifo. MessageId: 7e9217cb-1f58-4b13-85f8-9bd8ccf4d1be
+2023-09-04 16:46:15,036 INFO Updating media V4361_20211006T163856Z_h265_1sec.mp4 to RUNNING
+2023-09-04 16:46:15,036 INFO Found 0 media matching V4361_20211006T163856Z_h265_1sec.mp4 and message_id 7e9217cb-1f58-4b13-85f8-9bd8ccf4d1be in job yolov5x-mbay-benthic-Pycharm test yolov5x-mbay-benthic model from ecsprocess with args-20230904T234609Z
+2023-09-04 16:46:15,036 INFO Found 0 media matching V4361_20211006T163856Z_h265_1sec.mp4 in job yolov5x-mbay-benthic-Pycharm test yolov5x-mbay-benthic model from ecsprocess with args-20230904T234609Z
+2023-09-04 16:46:15,036 INFO A new media V4361_20211006T163856Z_h265_1sec.mp4 was added to job yolov5x-mbay-benthic-Pycharm test yolov5x-mbay-benthic model from ecsprocess with args-20230904T234609Z {'message_id': '7e9217cb-1f58-4b13-85f8-9bd8ccf4d1be'}
+2023-09-04 16:46:15,038 INFO ==== Submitted 3 videos to yolov5x-mbay-benthic for processing =====

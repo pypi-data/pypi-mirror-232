@@ -1,0 +1,43 @@
+2023-08-16 16:49:01,150 INFO Logging to logs/deepsea_ai_process_20230816.log
+2023-08-16 16:49:01,151 INFO =============== Config file /Users/dcline/Dropbox/code/deepsea-ai/deepsea_ai/config/config.ini =================
+2023-08-16 16:49:01,151 INFO [aws]
+2023-08-16 16:49:01,151 INFO sagemaker_arn = arn:aws:iam::548531997526:role/DeepSeaAI
+2023-08-16 16:49:01,151 INFO yolov5_ecr = mbari/deepsea-yolov5:1.1.2
+2023-08-16 16:49:01,151 INFO strongsort_ecr = mbari/strongsort-yolov5:addhyperparameters
+2023-08-16 16:49:01,151 INFO yolov5_model_s3 = s3://902005-public/models/yolov5x_mbay_benthic_model.tar.gz
+2023-08-16 16:49:01,151 INFO strongsort_track_config_s3 = s3://902005-public/models/strong_sort_benthic.yaml
+2023-08-16 16:49:01,151 INFO 
+2023-08-16 16:49:01,151 INFO [database]
+2023-08-16 16:49:01,151 INFO site = http://localhost:4000
+2023-08-16 16:49:01,151 INFO gql = %(site)s/graphql
+2023-08-16 16:49:01,151 INFO 
+2023-08-16 16:49:01,151 INFO [tags]
+2023-08-16 16:49:01,151 INFO organization = mbari
+2023-08-16 16:49:01,151 INFO project_number = NA
+2023-08-16 16:49:01,151 INFO stage = test
+2023-08-16 16:49:01,151 INFO application = detection
+2023-08-16 16:49:01,151 INFO 
+2023-08-16 16:49:01,517 INFO Initializing job cache in /Users/dcline/Dropbox/code/deepsea-ai/deepsea_ai
+2023-08-16 16:49:01,517 INFO Using existing job cache database in /Users/dcline/Dropbox/code/deepsea-ai/deepsea_ai
+2023-08-16 16:49:01,899 INFO Checking tag {'Key': 'mbari:project-number', 'Value': 'NA'}
+2023-08-16 16:49:01,899 INFO Checking tag {'Key': 'mbari:owner', 'Value': 'dcline'}
+2023-08-16 16:49:01,899 INFO Checking tag {'Key': 'mbari:description', 'Value': 'Ventana Dive 4263 with 0.5 conf with new mbari315k model'}
+2023-08-16 16:49:01,899 INFO Checking tag {'Key': 'mbari:stage', 'Value': 'test'}
+2023-08-16 16:49:01,899 INFO Checking tag {'Key': 'mbari:application', 'Value': 'detection'}
+2023-08-16 16:49:01,899 INFO Checking tag {'Key': 'mbari:deletion-date', 'Value': '20231114T234901Z'}
+2023-08-16 16:49:01,899 INFO Checking tag {'Key': 'mbari:created-by', 'Value': 'dcline'}
+2023-08-16 16:49:01,899 INFO Creating buckets
+2023-08-16 16:49:01,899 INFO Creating bucket 902005-dev-test...
+2023-08-16 16:49:02,478 INFO Creating bucket 902005-dev-test-out...
+2023-08-16 16:49:02,935 INFO No video file exclusions specified
+2023-08-16 16:49:02,936 INFO Found 3 videos to process
+2023-08-16 16:49:03,189 INFO Found s3://902005-dev-test/dcline/Dropbox/code/deepsea-ai/tests/data/V4361_20211006T163256Z_h265_1sec.mp4 ...skipping upload
+2023-08-16 16:49:03,189 INFO Tagging /Users/dcline/Dropbox/code/deepsea-ai/tests/data/V4361_20211006T163256Z_h265_1sec.mp4 with [{'Key': 'mbari:project-number', 'Value': 'NA'}, {'Key': 'mbari:owner', 'Value': 'dcline'}, {'Key': 'mbari:description', 'Value': 'Ventana Dive 4263 with 0.5 conf with new mbari315k model'}, {'Key': 'mbari:stage', 'Value': 'test'}, {'Key': 'mbari:application', 'Value': 'detection'}, {'Key': 'mbari:deletion-date', 'Value': '20231114T234901Z'}, {'Key': 'mbari:created-by', 'Value': 'dcline'}]...
+2023-08-16 16:49:04,319 INFO ['dettrack', '"None"', '--model-s3=s3://902005-public/models/yolov5x_mbay_benthic_model.tar.gz']
+2023-08-16 16:49:04,703 INFO Found account 548531997526
+2023-08-16 16:49:04,716 INFO Found region us-west-2
+2023-08-16 16:49:04,992 INFO Start script processor for inputs s3://902005-dev-test/dcline/Dropbox/code/deepsea-ai/tests/data/
+2023-08-16 16:49:05,279 INFO Updating job strongsort-yolov5-dcline running on strongsort-yolov5:addhyperparameters in cache status to RUNNING
+2023-08-16 16:49:05,283 INFO Added job strongsort-yolov5-dcline running on strongsort-yolov5:addhyperparameters to cache
+2023-08-16 16:49:05,284 INFO Updating video file V4361_20211006T163256Z_h265_1sec.mp4 to job strongsort-yolov5-dcline in cache with status RUNNING
+2023-08-16 16:53:03,750 ERROR Exiting. Error: Error for Processing job strongsort-yolov5-dcline-2023-08-16-23-49-05-285: Failed. Reason: AlgorithmError: See job logs for more information

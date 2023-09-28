@@ -1,0 +1,82 @@
+2023-08-26 18:05:57,367 INFO Logging to logs/deepsea_ai_process_20230827.log
+2023-08-26 18:05:57,367 INFO =============== Config file /Users/dcline/Dropbox/code/deepsea-ai/deepsea_ai/config/config.ini =================
+2023-08-26 18:05:57,367 INFO [docker]
+2023-08-26 18:05:57,367 INFO yolov5_container = mbari/deepsea-yolov5:1.1.2
+2023-08-26 18:05:57,367 INFO strongsort_container = mbari/strongsort-yolov5:5c05df0
+2023-08-26 18:05:57,368 INFO 
+2023-08-26 18:05:57,368 INFO [aws]
+2023-08-26 18:05:57,368 INFO account_id = 548531997526
+2023-08-26 18:05:57,368 INFO sagemaker_arn = arn:aws:iam::548531997526:role/DeepSeaAI
+2023-08-26 18:05:57,368 INFO model = s3://deepsea-ai-548531997526-models/yolov5x_mbay_benthic_model.tar.gz
+2023-08-26 18:05:57,368 INFO track_config = s3://deepsea-ai-548531997526-track-conf/strong_sort_benthic.yaml
+2023-08-26 18:05:57,368 INFO videos = s3://deepsea-ai-548531997526-videos
+2023-08-26 18:05:57,368 INFO models = s3://deepsea-ai-548531997526-models
+2023-08-26 18:05:57,368 INFO tracks = s3://deepsea-ai-548531997526-tracks
+2023-08-26 18:05:57,368 INFO 
+2023-08-26 18:05:57,368 INFO [aws_public]
+2023-08-26 18:05:57,368 INFO model = s3://902005-public/models/yolov5x_mbay_benthic_model.tar.gz
+2023-08-26 18:05:57,368 INFO track_config = s3://902005-public/models/track-config/strong_sort_benthic.yaml
+2023-08-26 18:05:57,368 INFO video_ex1 = s3://902005-public/video/1sec/V4361_20211006T162656Z_h265_1sec.mp4
+2023-08-26 18:05:57,368 INFO video_ex2 = s3://902005-public/video/1sec/V4361_20211006T163256Z_h265_1sec.mp4
+2023-08-26 18:05:57,368 INFO video_ex3 = s3://902005-public/video/1sec/V4361_20211006T163856Z_h265_1sec.mp4
+2023-08-26 18:05:57,368 INFO 
+2023-08-26 18:05:57,368 INFO [database]
+2023-08-26 18:05:57,368 INFO site = http://localhost:4000
+2023-08-26 18:05:57,368 INFO gql = %(site)s/graphql
+2023-08-26 18:05:57,368 INFO 
+2023-08-26 18:05:57,368 INFO [tags]
+2023-08-26 18:05:57,368 INFO organization = mbari
+2023-08-26 18:05:57,368 INFO project_number = NA
+2023-08-26 18:05:57,368 INFO stage = test
+2023-08-26 18:05:57,368 INFO application = detection
+2023-08-26 18:05:57,368 INFO 
+2023-08-26 18:05:57,745 INFO Initializing job cache in /Users/dcline/Dropbox/code/deepsea-ai/deepsea_ai
+2023-08-26 18:05:57,745 INFO Using existing job cache database in /Users/dcline/Dropbox/code/deepsea-ai/deepsea_ai
+2023-08-26 18:05:58,139 INFO Checking tag {'Key': 'mbari:project-number', 'Value': 'NA'}
+2023-08-26 18:05:58,139 INFO Checking tag {'Key': 'mbari:owner', 'Value': 'dcline'}
+2023-08-26 18:05:58,139 INFO Checking tag {'Key': 'mbari:description', 'Value': 'Ventana test 33k model from scriptprocess'}
+2023-08-26 18:05:58,139 INFO Checking tag {'Key': 'mbari:stage', 'Value': 'test'}
+2023-08-26 18:05:58,139 INFO Checking tag {'Key': 'mbari:application', 'Value': 'detection'}
+2023-08-26 18:05:58,139 INFO Checking tag {'Key': 'mbari:deletion-date', 'Value': '20231125T010558Z'}
+2023-08-26 18:05:58,139 INFO Checking tag {'Key': 'mbari:created-by', 'Value': 'dcline'}
+2023-08-26 18:05:58,139 INFO Creating buckets
+2023-08-26 18:05:58,139 INFO Creating bucket 902005-dev-test...
+2023-08-26 18:05:58,618 INFO Creating bucket 902005-dev-test-out...
+2023-08-26 18:05:59,166 INFO No video file exclusions specified
+2023-08-26 18:05:59,166 INFO Found 1 videos to process
+2023-08-26 18:05:59,224 INFO Checking /Users/dcline/Dropbox/code/deepsea-ai/tests/data/V4361_20211006T163256Z_h265_1sec.mp4 in s3://902005-dev-test/dcline/Dropbox/code/deepsea-ai/tests/data/V4361_20211006T163256Z_h265_1sec.mp4...
+2023-08-26 18:05:59,421 INFO Found s3://902005-dev-test/dcline/Dropbox/code/deepsea-ai/tests/data/V4361_20211006T163256Z_h265_1sec.mp4 ...skipping upload
+2023-08-26 18:05:59,421 INFO Tagging /Users/dcline/Dropbox/code/deepsea-ai/tests/data/V4361_20211006T163256Z_h265_1sec.mp4 with [{'Key': 'mbari:project-number', 'Value': 'NA'}, {'Key': 'mbari:owner', 'Value': 'dcline'}, {'Key': 'mbari:description', 'Value': 'Ventana test 33k model from scriptprocess'}, {'Key': 'mbari:stage', 'Value': 'test'}, {'Key': 'mbari:application', 'Value': 'detection'}, {'Key': 'mbari:deletion-date', 'Value': '20231125T010558Z'}, {'Key': 'mbari:created-by', 'Value': 'dcline'}]...
+2023-08-26 18:06:00,070 INFO Running with args ['dettrack', '--model-s3=s3://902005-public/models/yolov5x_mbay_benthic_model.tar.gz', '--args="--agnostic-nms --iou-thres=0.5 --conf-thres=0.01 --imgsz=640"']
+2023-08-26 18:06:00,448 INFO Found account 548531997526
+2023-08-26 18:06:00,455 INFO Found region us-west-2
+2023-08-26 18:06:00,483 INFO Start script processor for inputs s3://902005-dev-test/dcline/Dropbox/code/deepsea-ai/tests/data/V4361_20211006T163256Z_h265_1sec.mp4
+2023-08-26 18:06:00,766 INFO JobCache: Added video file 2 to job strongsort-yolov5-dcline running on strongsort-yolov5:5c05df0
+2023-08-26 18:06:00,766 INFO JobCache: Added video file 0 to job strongsort-yolov5-dcline running on strongsort-yolov5:5c05df0
+2023-08-26 18:06:00,766 INFO JobCache: Added video file 3 to job strongsort-yolov5-dcline running on strongsort-yolov5:5c05df0
+2023-08-26 18:06:00,766 INFO JobCache: Added video file 8 to job strongsort-yolov5-dcline running on strongsort-yolov5:5c05df0
+2023-08-26 18:06:00,766 INFO JobCache: Added video file 7 to job strongsort-yolov5-dcline running on strongsort-yolov5:5c05df0
+2023-08-26 18:06:00,766 INFO JobCache: Added video file T to job strongsort-yolov5-dcline running on strongsort-yolov5:5c05df0
+2023-08-26 18:06:00,766 INFO JobCache: Added video file 1 to job strongsort-yolov5-dcline running on strongsort-yolov5:5c05df0
+2023-08-26 18:06:00,766 INFO Updating job strongsort-yolov5-dcline running on strongsort-yolov5:5c05df0 in cache status to RUNNING
+2023-08-26 18:06:00,767 INFO Added job strongsort-yolov5-dcline running on strongsort-yolov5:5c05df0 to cache
+2023-08-26 18:06:00,768 INFO Updating video file  to job strongsort-yolov5-dcline in cache with status RUNNING
+2023-08-26 18:06:00,768 INFO Updating video file 2 to job strongsort-yolov5-dcline in cache with status RUNNING
+2023-08-26 18:06:00,768 INFO Updating video file 0 to job strongsort-yolov5-dcline in cache with status RUNNING
+2023-08-26 18:06:00,769 INFO Updating video file 3 to job strongsort-yolov5-dcline in cache with status RUNNING
+2023-08-26 18:06:00,769 INFO Updating video file 8 to job strongsort-yolov5-dcline in cache with status RUNNING
+2023-08-26 18:06:00,769 INFO Updating video file 7 to job strongsort-yolov5-dcline in cache with status RUNNING
+2023-08-26 18:06:00,770 INFO Updating video file T to job strongsort-yolov5-dcline in cache with status RUNNING
+2023-08-26 18:06:00,770 INFO Updating video file 1 to job strongsort-yolov5-dcline in cache with status RUNNING
+2023-08-26 18:10:33,179 INFO JobCache: Added video file 6 to job strongsort-yolov5-dcline running on strongsort-yolov5:5c05df0
+2023-08-26 18:10:33,179 INFO Updating job strongsort-yolov5-dcline running on strongsort-yolov5:5c05df0 in cache status to SUCCESS
+2023-08-26 18:10:33,183 INFO Added job strongsort-yolov5-dcline running on strongsort-yolov5:5c05df0 to cache
+2023-08-26 18:10:33,183 INFO Updating video file  to job strongsort-yolov5-dcline in cache with status SUCCESS
+2023-08-26 18:10:33,184 INFO Updating video file 2 to job strongsort-yolov5-dcline in cache with status SUCCESS
+2023-08-26 18:10:33,185 INFO Updating video file 0 to job strongsort-yolov5-dcline in cache with status SUCCESS
+2023-08-26 18:10:33,186 INFO Updating video file 3 to job strongsort-yolov5-dcline in cache with status SUCCESS
+2023-08-26 18:10:33,188 INFO Updating video file 8 to job strongsort-yolov5-dcline in cache with status SUCCESS
+2023-08-26 18:10:33,189 INFO Updating video file 7 to job strongsort-yolov5-dcline in cache with status SUCCESS
+2023-08-26 18:10:33,191 INFO Updating video file T to job strongsort-yolov5-dcline in cache with status SUCCESS
+2023-08-26 18:10:33,193 INFO Updating video file 1 to job strongsort-yolov5-dcline in cache with status SUCCESS
+2023-08-26 18:10:33,194 INFO Updating video file 6 to job strongsort-yolov5-dcline in cache with status SUCCESS

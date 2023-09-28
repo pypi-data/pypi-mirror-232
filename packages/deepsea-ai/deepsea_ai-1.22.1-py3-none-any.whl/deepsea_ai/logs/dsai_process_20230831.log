@@ -1,0 +1,33 @@
+2023-08-31 13:42:31,320 INFO Logging to logs/dsai_process_20230831.log
+2023-08-31 13:42:31,320 INFO =============== Config file /Users/dcline/Dropbox/code/deepsea-ai/deepsea_ai/config/config.ini =================
+2023-08-31 13:42:31,321 INFO [docker]
+2023-08-31 13:42:31,321 INFO yolov5_container = mbari/deepsea-yolov5:1.1.2
+2023-08-31 13:42:31,321 INFO strongsort_container = mbari/strongsort-yolov5:6f35769
+2023-08-31 13:42:31,321 INFO 
+2023-08-31 13:42:31,321 INFO [aws]
+2023-08-31 13:42:31,321 INFO account_id = 548531997526
+2023-08-31 13:42:31,321 INFO sagemaker_arn = arn:aws:iam::548531997526:role/DeepSeaAI
+2023-08-31 13:42:31,321 INFO model = s3://deepsea-ai-548531997526-models/yolov5x_mbay_benthic_model.tar.gz
+2023-08-31 13:42:31,321 INFO track_config = s3://deepsea-ai-548531997526-track-conf/strong_sort_benthic.yaml
+2023-08-31 13:42:31,321 INFO videos = s3://deepsea-ai-548531997526-videos
+2023-08-31 13:42:31,321 INFO models = s3://deepsea-ai-548531997526-models
+2023-08-31 13:42:31,321 INFO tracks = s3://deepsea-ai-548531997526-tracks
+2023-08-31 13:42:31,321 INFO 
+2023-08-31 13:42:31,321 INFO [aws_public]
+2023-08-31 13:42:31,321 INFO model = s3://902005-public/models/yolov5x_mbay_benthic_model.tar.gz
+2023-08-31 13:42:31,321 INFO track_config = s3://902005-public/models/track-config/strong_sort_benthic.yaml
+2023-08-31 13:42:31,321 INFO video_ex1 = s3://902005-public/video/1sec/V4361_20211006T162656Z_h265_1sec.mp4
+2023-08-31 13:42:31,321 INFO video_ex2 = s3://902005-public/video/1sec/V4361_20211006T163256Z_h265_1sec.mp4
+2023-08-31 13:42:31,321 INFO video_ex3 = s3://902005-public/video/1sec/V4361_20211006T163856Z_h265_1sec.mp4
+2023-08-31 13:42:31,321 INFO 
+2023-08-31 13:42:31,321 INFO [database]
+2023-08-31 13:42:31,321 INFO site = http://localhost:4000
+2023-08-31 13:42:31,321 INFO gql = %(site)s/graphql
+2023-08-31 13:42:31,321 INFO 
+2023-08-31 13:42:31,321 INFO [tags]
+2023-08-31 13:42:31,321 INFO organization = mbari
+2023-08-31 13:42:31,321 INFO project_number = NA
+2023-08-31 13:42:31,322 INFO stage = test
+2023-08-31 13:42:31,322 INFO application = detection
+2023-08-31 13:42:31,322 INFO 
+2023-08-31 13:42:31,322 ERROR Exiting. Error: init_db() missing 1 required positional argument: 'reset'

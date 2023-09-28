@@ -1,0 +1,52 @@
+2023-08-25 07:33:14,377 INFO Logging to logs/deepsea_ai_ecsprocess_20230825.log
+2023-08-25 07:33:14,377 INFO =============== Config file /Users/dcline/Dropbox/code/deepsea-ai/deepsea_ai/config/config.ini =================
+2023-08-25 07:33:14,377 INFO [aws]
+2023-08-25 07:33:14,377 INFO sagemaker_arn = arn:aws:iam::548531997526:role/DeepSeaAI
+2023-08-25 07:33:14,377 INFO yolov5_ecr = mbari/deepsea-yolov5:1.1.2
+2023-08-25 07:33:14,377 INFO strongsort_ecr = mbari/strongsort-yolov5:5c05df0
+2023-08-25 07:33:14,377 INFO yolov5_model_s3 = s3://902005-public/models/yolov5x_mbay_benthic_model.tar.gz
+2023-08-25 07:33:14,378 INFO strongsort_track_config_s3 = s3://902005-public/models/strong_sort_benthic.yaml
+2023-08-25 07:33:14,378 INFO 
+2023-08-25 07:33:14,378 INFO [database]
+2023-08-25 07:33:14,378 INFO site = http://localhost:4000
+2023-08-25 07:33:14,378 INFO gql = %(site)s/graphql
+2023-08-25 07:33:14,378 INFO 
+2023-08-25 07:33:14,378 INFO [tags]
+2023-08-25 07:33:14,378 INFO organization = mbari
+2023-08-25 07:33:14,378 INFO project_number = NA
+2023-08-25 07:33:14,378 INFO stage = test
+2023-08-25 07:33:14,378 INFO application = detection
+2023-08-25 07:33:14,378 INFO 
+2023-08-25 07:33:14,769 INFO Initializing job cache in /Users/dcline/Dropbox/code/deepsea-ai/deepsea_ai
+2023-08-25 07:33:14,770 INFO Using existing job cache database in /Users/dcline/Dropbox/code/deepsea-ai/deepsea_ai
+2023-08-25 07:33:15,803 INFO No video file exclusions specified
+2023-08-25 07:33:15,804 INFO Found 3 videos to process
+2023-08-25 07:33:16,182 INFO Checking tag {'Key': 'mbari:project-number', 'Value': 'NA'}
+2023-08-25 07:33:16,183 INFO Checking tag {'Key': 'mbari:owner', 'Value': 'dcline'}
+2023-08-25 07:33:16,183 INFO Checking tag {'Key': 'mbari:description', 'Value': 'Video uploaded from /Users/dcline/Dropbox/code/deepsea-ai/tests/data/ by user dcline '}
+2023-08-25 07:33:16,183 INFO Checking tag {'Key': 'mbari:stage', 'Value': 'test'}
+2023-08-25 07:33:16,183 INFO Checking tag {'Key': 'mbari:application', 'Value': 'detection'}
+2023-08-25 07:33:16,183 INFO Checking tag {'Key': 'mbari:deletion-date', 'Value': '20231123T143316Z'}
+2023-08-25 07:33:16,183 INFO Checking tag {'Key': 'mbari:created-by', 'Value': 'dcline'}
+2023-08-25 07:33:18,999 INFO Found s3://mbari-mb-benthic-315k-videod6cc678b-r0shad1w1r3p/dcline/Dropbox/code/deepsea-ai/tests/data/V4361_20211006T163256Z_h265_1sec.mp4 ...skipping upload
+2023-08-25 07:33:18,999 INFO Tagging /Users/dcline/Dropbox/code/deepsea-ai/tests/data/V4361_20211006T163256Z_h265_1sec.mp4 with [{'Key': 'mbari:project-number', 'Value': 'NA'}, {'Key': 'mbari:owner', 'Value': 'dcline'}, {'Key': 'mbari:description', 'Value': 'Video uploaded from /Users/dcline/Dropbox/code/deepsea-ai/tests/data/ by user dcline '}, {'Key': 'mbari:stage', 'Value': 'test'}, {'Key': 'mbari:application', 'Value': 'detection'}, {'Key': 'mbari:deletion-date', 'Value': '20231123T143316Z'}, {'Key': 'mbari:created-by', 'Value': 'dcline'}]...
+2023-08-25 07:33:23,019 INFO Message queued to mbari-mb-benthic-315k-videoC740E53C-OKrwmgjm9uJr.fifo. MessageId: de78fc93-e0ab-4db5-8db3-a710f26a435f
+2023-08-25 07:33:23,020 INFO Updating job Ventana test mbari-mb-benthic-315k model from ecsprocess running on mbari-mb-benthic-315k in cache status to QUEUED
+2023-08-25 07:33:26,500 INFO Added job Ventana test mbari-mb-benthic-315k model from ecsprocess running on mbari-mb-benthic-315k to cache
+2023-08-25 07:33:26,500 INFO Updating video file V4361_20211006T163256Z_h265_1sec.mp4 to job Ventana test mbari-mb-benthic-315k model from ecsprocess in cache with status QUEUED
+2023-08-25 07:33:27,863 INFO Uploading /Users/dcline/Dropbox/code/deepsea-ai/tests/data/V4361_20211006T162656Z_h265_1sec.mp4 to s3://mbari-mb-benthic-315k-videod6cc678b-r0shad1w1r3p/dcline/Dropbox/code/deepsea-ai/tests/data/V4361_20211006T162656Z_h265_1sec.mp4...
+2023-08-25 07:33:29,554 INFO Tagging /Users/dcline/Dropbox/code/deepsea-ai/tests/data/V4361_20211006T162656Z_h265_1sec.mp4 with [{'Key': 'mbari:project-number', 'Value': 'NA'}, {'Key': 'mbari:owner', 'Value': 'dcline'}, {'Key': 'mbari:description', 'Value': 'Video uploaded from /Users/dcline/Dropbox/code/deepsea-ai/tests/data/ by user dcline '}, {'Key': 'mbari:stage', 'Value': 'test'}, {'Key': 'mbari:application', 'Value': 'detection'}, {'Key': 'mbari:deletion-date', 'Value': '20231123T143316Z'}, {'Key': 'mbari:created-by', 'Value': 'dcline'}]...
+2023-08-25 07:33:34,920 INFO Message queued to mbari-mb-benthic-315k-videoC740E53C-OKrwmgjm9uJr.fifo. MessageId: 60ccf795-e3fa-4e2e-a7f8-c7760433f3e5
+2023-08-25 07:33:34,920 INFO JobCache: Added video file V4361_20211006T163256Z_h265_1sec.mp4 to job Ventana test mbari-mb-benthic-315k model from ecsprocess running on mbari-mb-benthic-315k
+2023-08-25 07:33:34,920 INFO Updating job Ventana test mbari-mb-benthic-315k model from ecsprocess running on mbari-mb-benthic-315k in cache status to QUEUED
+2023-08-25 07:33:36,461 INFO Added job Ventana test mbari-mb-benthic-315k model from ecsprocess running on mbari-mb-benthic-315k to cache
+2023-08-25 07:33:36,461 INFO Updating video file V4361_20211006T162656Z_h265_1sec.mp4 to job Ventana test mbari-mb-benthic-315k model from ecsprocess in cache with status QUEUED
+2023-08-25 07:33:38,280 INFO Uploading /Users/dcline/Dropbox/code/deepsea-ai/tests/data/V4361_20211006T163856Z_h265_1sec.mp4 to s3://mbari-mb-benthic-315k-videod6cc678b-r0shad1w1r3p/dcline/Dropbox/code/deepsea-ai/tests/data/V4361_20211006T163856Z_h265_1sec.mp4...
+2023-08-25 07:33:39,971 INFO Tagging /Users/dcline/Dropbox/code/deepsea-ai/tests/data/V4361_20211006T163856Z_h265_1sec.mp4 with [{'Key': 'mbari:project-number', 'Value': 'NA'}, {'Key': 'mbari:owner', 'Value': 'dcline'}, {'Key': 'mbari:description', 'Value': 'Video uploaded from /Users/dcline/Dropbox/code/deepsea-ai/tests/data/ by user dcline '}, {'Key': 'mbari:stage', 'Value': 'test'}, {'Key': 'mbari:application', 'Value': 'detection'}, {'Key': 'mbari:deletion-date', 'Value': '20231123T143316Z'}, {'Key': 'mbari:created-by', 'Value': 'dcline'}]...
+2023-08-25 07:33:43,679 INFO Message queued to mbari-mb-benthic-315k-videoC740E53C-OKrwmgjm9uJr.fifo. MessageId: bd2a9fdb-7cf0-4feb-b27f-627704fcbfd3
+2023-08-25 07:33:43,680 INFO JobCache: Added video file V4361_20211006T162656Z_h265_1sec.mp4 to job Ventana test mbari-mb-benthic-315k model from ecsprocess running on mbari-mb-benthic-315k
+2023-08-25 07:33:43,680 INFO JobCache: Added video file V4361_20211006T163256Z_h265_1sec.mp4 to job Ventana test mbari-mb-benthic-315k model from ecsprocess running on mbari-mb-benthic-315k
+2023-08-25 07:33:43,680 INFO Updating job Ventana test mbari-mb-benthic-315k model from ecsprocess running on mbari-mb-benthic-315k in cache status to QUEUED
+2023-08-25 07:33:45,335 INFO Added job Ventana test mbari-mb-benthic-315k model from ecsprocess running on mbari-mb-benthic-315k to cache
+2023-08-25 07:33:45,335 INFO Updating video file V4361_20211006T163856Z_h265_1sec.mp4 to job Ventana test mbari-mb-benthic-315k model from ecsprocess in cache with status QUEUED
+2023-08-25 07:33:45,338 INFO ==== Submitted 3 videos to mbari-mb-benthic-315k for processing =====

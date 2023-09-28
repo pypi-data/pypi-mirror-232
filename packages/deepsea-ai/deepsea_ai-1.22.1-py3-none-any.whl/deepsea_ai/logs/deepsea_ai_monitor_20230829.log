@@ -1,0 +1,87 @@
+2023-08-29 16:57:03,984 INFO Logging to logs/deepsea_ai_monitor_20230829.log
+2023-08-29 16:57:03,985 INFO =============== Config file /Users/dcline/Dropbox/code/deepsea-ai/deepsea_ai/config/config.ini =================
+2023-08-29 16:57:03,985 INFO [docker]
+2023-08-29 16:57:03,985 INFO yolov5_container = mbari/deepsea-yolov5:1.1.2
+2023-08-29 16:57:03,985 INFO strongsort_container = mbari/strongsort-yolov5:6f35769
+2023-08-29 16:57:03,985 INFO 
+2023-08-29 16:57:03,985 INFO [aws]
+2023-08-29 16:57:03,985 INFO account_id = 548531997526
+2023-08-29 16:57:03,985 INFO sagemaker_arn = arn:aws:iam::548531997526:role/DeepSeaAI
+2023-08-29 16:57:03,985 INFO model = s3://deepsea-ai-548531997526-models/yolov5x_mbay_benthic_model.tar.gz
+2023-08-29 16:57:03,985 INFO track_config = s3://deepsea-ai-548531997526-track-conf/strong_sort_benthic.yaml
+2023-08-29 16:57:03,985 INFO videos = s3://deepsea-ai-548531997526-videos
+2023-08-29 16:57:03,985 INFO models = s3://deepsea-ai-548531997526-models
+2023-08-29 16:57:03,985 INFO tracks = s3://deepsea-ai-548531997526-tracks
+2023-08-29 16:57:03,985 INFO 
+2023-08-29 16:57:03,985 INFO [aws_public]
+2023-08-29 16:57:03,985 INFO model = s3://902005-public/models/yolov5x_mbay_benthic_model.tar.gz
+2023-08-29 16:57:03,985 INFO track_config = s3://902005-public/models/track-config/strong_sort_benthic.yaml
+2023-08-29 16:57:03,985 INFO video_ex1 = s3://902005-public/video/1sec/V4361_20211006T162656Z_h265_1sec.mp4
+2023-08-29 16:57:03,985 INFO video_ex2 = s3://902005-public/video/1sec/V4361_20211006T163256Z_h265_1sec.mp4
+2023-08-29 16:57:03,985 INFO video_ex3 = s3://902005-public/video/1sec/V4361_20211006T163856Z_h265_1sec.mp4
+2023-08-29 16:57:03,985 INFO 
+2023-08-29 16:57:03,985 INFO [database]
+2023-08-29 16:57:03,985 INFO site = http://localhost:4000
+2023-08-29 16:57:03,985 INFO gql = %(site)s/graphql
+2023-08-29 16:57:03,985 INFO 
+2023-08-29 16:57:03,985 INFO [tags]
+2023-08-29 16:57:03,985 INFO organization = mbari
+2023-08-29 16:57:03,985 INFO project_number = NA
+2023-08-29 16:57:03,985 INFO stage = test
+2023-08-29 16:57:03,985 INFO application = detection
+2023-08-29 16:57:03,985 INFO 
+2023-08-29 16:57:03,985 INFO ============ You can override these settings by creating a customconfig.ini file and pass that in with --config=customconfig.ini =====
+2023-08-29 16:57:04,631 INFO Getting jobs for cluster yolov5x-mbay-benthic
+2023-08-29 16:57:04,635 INFO Found 0 jobs for cluster yolov5x-mbay-benthic
+2023-08-29 16:57:04,635 WARNING No jobs found for cluster yolov5x-mbay-benthic. Retrying in 60 seconds...
+2023-08-29 16:58:04,640 INFO Getting jobs for cluster yolov5x-mbay-benthic
+2023-08-29 16:58:04,640 INFO Found 0 jobs for cluster yolov5x-mbay-benthic
+2023-08-29 16:58:04,640 WARNING No jobs found for cluster yolov5x-mbay-benthic. Retrying in 60 seconds...
+2023-08-29 16:59:04,646 INFO Getting jobs for cluster yolov5x-mbay-benthic
+2023-08-29 16:59:04,648 INFO Found 0 jobs for cluster yolov5x-mbay-benthic
+2023-08-29 16:59:04,648 WARNING No jobs found for cluster yolov5x-mbay-benthic. Retrying in 60 seconds...
+2023-08-29 17:00:04,653 INFO Getting jobs for cluster yolov5x-mbay-benthic
+2023-08-29 17:00:04,654 INFO Found 0 jobs for cluster yolov5x-mbay-benthic
+2023-08-29 17:00:04,654 WARNING No jobs found for cluster yolov5x-mbay-benthic. Retrying in 60 seconds...
+2023-08-29 17:01:04,659 INFO Getting jobs for cluster yolov5x-mbay-benthic
+2023-08-29 17:01:04,661 INFO Found 0 jobs for cluster yolov5x-mbay-benthic
+2023-08-29 17:01:04,661 WARNING No jobs found for cluster yolov5x-mbay-benthic. Retrying in 60 seconds...
+2023-08-29 17:02:04,666 INFO Getting jobs for cluster yolov5x-mbay-benthic
+2023-08-29 17:02:04,667 INFO Found 0 jobs for cluster yolov5x-mbay-benthic
+2023-08-29 17:02:04,667 WARNING No jobs found for cluster yolov5x-mbay-benthic. Retrying in 60 seconds...
+2023-08-29 17:03:04,673 INFO Getting jobs for cluster yolov5x-mbay-benthic
+2023-08-29 17:03:04,677 INFO Found 0 jobs for cluster yolov5x-mbay-benthic
+2023-08-29 17:03:04,677 WARNING No jobs found for cluster yolov5x-mbay-benthic. Retrying in 60 seconds...
+2023-08-29 17:04:04,679 INFO Getting jobs for cluster yolov5x-mbay-benthic
+2023-08-29 17:04:04,681 INFO Found 0 jobs for cluster yolov5x-mbay-benthic
+2023-08-29 17:04:04,681 WARNING No jobs found for cluster yolov5x-mbay-benthic. Retrying in 60 seconds...
+2023-08-29 17:05:04,698 INFO Getting jobs for cluster yolov5x-mbay-benthic
+2023-08-29 17:05:04,698 INFO Found 0 jobs for cluster yolov5x-mbay-benthic
+2023-08-29 17:05:04,698 WARNING No jobs found for cluster yolov5x-mbay-benthic. Retrying in 60 seconds...
+2023-08-29 17:06:04,700 INFO Getting jobs for cluster yolov5x-mbay-benthic
+2023-08-29 17:06:04,701 INFO Found 0 jobs for cluster yolov5x-mbay-benthic
+2023-08-29 17:06:04,701 WARNING No jobs found for cluster yolov5x-mbay-benthic. Retrying in 60 seconds...
+2023-08-29 17:07:04,705 INFO Getting jobs for cluster yolov5x-mbay-benthic
+2023-08-29 17:07:04,707 INFO Found 0 jobs for cluster yolov5x-mbay-benthic
+2023-08-29 17:07:04,707 WARNING No jobs found for cluster yolov5x-mbay-benthic. Retrying in 60 seconds...
+2023-08-29 17:08:04,712 INFO Getting jobs for cluster yolov5x-mbay-benthic
+2023-08-29 17:08:04,716 INFO Found 0 jobs for cluster yolov5x-mbay-benthic
+2023-08-29 17:08:04,716 WARNING No jobs found for cluster yolov5x-mbay-benthic. Retrying in 60 seconds...
+2023-08-29 17:09:04,718 INFO Getting jobs for cluster yolov5x-mbay-benthic
+2023-08-29 17:09:04,721 INFO Found 0 jobs for cluster yolov5x-mbay-benthic
+2023-08-29 17:09:04,722 WARNING No jobs found for cluster yolov5x-mbay-benthic. Retrying in 60 seconds...
+2023-08-29 17:10:04,722 INFO Getting jobs for cluster yolov5x-mbay-benthic
+2023-08-29 17:10:04,723 INFO Found 0 jobs for cluster yolov5x-mbay-benthic
+2023-08-29 17:10:04,723 WARNING No jobs found for cluster yolov5x-mbay-benthic. Retrying in 60 seconds...
+2023-08-29 17:11:04,729 INFO Getting jobs for cluster yolov5x-mbay-benthic
+2023-08-29 17:11:04,731 INFO Found 0 jobs for cluster yolov5x-mbay-benthic
+2023-08-29 17:11:04,731 WARNING No jobs found for cluster yolov5x-mbay-benthic. Retrying in 60 seconds...
+2023-08-29 17:12:04,736 INFO Getting jobs for cluster yolov5x-mbay-benthic
+2023-08-29 17:12:04,736 INFO Found 0 jobs for cluster yolov5x-mbay-benthic
+2023-08-29 17:12:04,736 WARNING No jobs found for cluster yolov5x-mbay-benthic. Retrying in 60 seconds...
+2023-08-29 17:13:04,741 INFO Getting jobs for cluster yolov5x-mbay-benthic
+2023-08-29 17:13:04,742 INFO Found 0 jobs for cluster yolov5x-mbay-benthic
+2023-08-29 17:13:04,742 WARNING No jobs found for cluster yolov5x-mbay-benthic. Retrying in 60 seconds...
+2023-08-29 17:14:04,743 INFO Getting jobs for cluster yolov5x-mbay-benthic
+2023-08-29 17:14:04,744 INFO Found 0 jobs for cluster yolov5x-mbay-benthic
+2023-08-29 17:14:04,744 WARNING No jobs found for cluster yolov5x-mbay-benthic. Retrying in 60 seconds...

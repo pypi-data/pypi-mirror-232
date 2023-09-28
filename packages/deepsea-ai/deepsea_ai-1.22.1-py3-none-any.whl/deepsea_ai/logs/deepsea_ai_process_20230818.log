@@ -1,0 +1,45 @@
+2023-08-18 15:23:37,559 INFO Logging to logs/deepsea_ai_process_20230818.log
+2023-08-18 15:23:37,560 INFO =============== Config file /Users/dcline/Dropbox/code/deepsea-ai/deepsea_ai/config/config.ini =================
+2023-08-18 15:23:37,560 INFO [aws]
+2023-08-18 15:23:37,560 INFO sagemaker_arn = arn:aws:iam::548531997526:role/DeepSeaAI
+2023-08-18 15:23:37,560 INFO yolov5_ecr = mbari/deepsea-yolov5:1.1.2
+2023-08-18 15:23:37,560 INFO strongsort_ecr = mbari/strongsort-yolov5:addhyperparameters
+2023-08-18 15:23:37,560 INFO yolov5_model_s3 = s3://902005-public/models/yolov5x_mbay_benthic_model.tar.gz
+2023-08-18 15:23:37,560 INFO strongsort_track_config_s3 = s3://902005-public/models/strong_sort_benthic.yaml
+2023-08-18 15:23:37,560 INFO 
+2023-08-18 15:23:37,560 INFO [database]
+2023-08-18 15:23:37,560 INFO site = http://localhost:4000
+2023-08-18 15:23:37,560 INFO gql = %(site)s/graphql
+2023-08-18 15:23:37,560 INFO 
+2023-08-18 15:23:37,561 INFO [tags]
+2023-08-18 15:23:37,561 INFO organization = mbari
+2023-08-18 15:23:37,561 INFO project_number = NA
+2023-08-18 15:23:37,561 INFO stage = test
+2023-08-18 15:23:37,561 INFO application = detection
+2023-08-18 15:23:37,561 INFO 
+2023-08-18 15:23:37,962 INFO Initializing job cache in /Users/dcline/Dropbox/code/deepsea-ai/deepsea_ai
+2023-08-18 15:23:37,962 INFO Using existing job cache database in /Users/dcline/Dropbox/code/deepsea-ai/deepsea_ai
+2023-08-18 15:23:38,350 INFO Checking tag {'Key': 'mbari:project-number', 'Value': 'NA'}
+2023-08-18 15:23:38,350 INFO Checking tag {'Key': 'mbari:owner', 'Value': 'dcline'}
+2023-08-18 15:23:38,350 INFO Checking tag {'Key': 'mbari:description', 'Value': 'Ventana test 33k model from scriptprocess'}
+2023-08-18 15:23:38,350 INFO Checking tag {'Key': 'mbari:stage', 'Value': 'test'}
+2023-08-18 15:23:38,350 INFO Checking tag {'Key': 'mbari:application', 'Value': 'detection'}
+2023-08-18 15:23:38,350 INFO Checking tag {'Key': 'mbari:deletion-date', 'Value': '20231116T222338Z'}
+2023-08-18 15:23:38,350 INFO Checking tag {'Key': 'mbari:created-by', 'Value': 'dcline'}
+2023-08-18 15:23:38,351 INFO Creating buckets
+2023-08-18 15:23:38,351 INFO Creating bucket 902005-dev-test...
+2023-08-18 15:23:38,923 INFO Creating bucket 902005-dev-test-out...
+2023-08-18 15:23:39,420 INFO No video file exclusions specified
+2023-08-18 15:23:39,422 INFO Found 3 videos to process
+2023-08-18 15:23:39,731 INFO Found s3://902005-dev-test/dcline/Dropbox/code/deepsea-ai/tests/data/V4361_20211006T163256Z_h265_1sec.mp4 ...skipping upload
+2023-08-18 15:23:39,731 INFO Tagging /Users/dcline/Dropbox/code/deepsea-ai/tests/data/V4361_20211006T163256Z_h265_1sec.mp4 with [{'Key': 'mbari:project-number', 'Value': 'NA'}, {'Key': 'mbari:owner', 'Value': 'dcline'}, {'Key': 'mbari:description', 'Value': 'Ventana test 33k model from scriptprocess'}, {'Key': 'mbari:stage', 'Value': 'test'}, {'Key': 'mbari:application', 'Value': 'detection'}, {'Key': 'mbari:deletion-date', 'Value': '20231116T222338Z'}, {'Key': 'mbari:created-by', 'Value': 'dcline'}]...
+2023-08-18 15:23:40,746 INFO ['dettrack', '--model-s3=s3://902005-public/models/yolov5x_mbay_benthic_model.tar.gz', '--args="--agnostic-nms --iou-thres=0.5 --conf-thres=0.01 --imgsz=640"']
+2023-08-18 15:23:41,104 INFO Found account 548531997526
+2023-08-18 15:23:41,112 INFO Found region us-west-2
+2023-08-18 15:23:41,139 INFO Start script processor for inputs s3://902005-dev-test/dcline/Dropbox/code/deepsea-ai/tests/data/
+2023-08-18 15:23:41,433 INFO Updating job strongsort-yolov5-dcline running on strongsort-yolov5:addhyperparameters in cache status to RUNNING
+2023-08-18 15:23:41,435 INFO Added job strongsort-yolov5-dcline running on strongsort-yolov5:addhyperparameters to cache
+2023-08-18 15:23:41,435 INFO Updating video file V4361_20211006T163256Z_h265_1sec.mp4 to job strongsort-yolov5-dcline in cache with status RUNNING
+2023-08-18 15:29:15,799 INFO Updating job strongsort-yolov5-dcline running on strongsort-yolov5:addhyperparameters in cache status to SUCCESS
+2023-08-18 15:29:15,803 INFO Added job strongsort-yolov5-dcline running on strongsort-yolov5:addhyperparameters to cache
+2023-08-18 15:29:15,803 INFO Updating video file V4361_20211006T163256Z_h265_1sec.mp4 to job strongsort-yolov5-dcline in cache with status SUCCESS

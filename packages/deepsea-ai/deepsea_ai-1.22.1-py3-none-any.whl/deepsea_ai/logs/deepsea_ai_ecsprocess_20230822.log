@@ -1,0 +1,55 @@
+2023-08-22 16:33:01,953 INFO Logging to logs/deepsea_ai_ecsprocess_20230822.log
+2023-08-22 16:33:01,953 INFO =============== Config file /Users/dcline/Dropbox/code/deepsea-ai/deepsea_ai/config/config.ini =================
+2023-08-22 16:33:01,953 INFO [aws]
+2023-08-22 16:33:01,953 INFO sagemaker_arn = arn:aws:iam::548531997526:role/DeepSeaAI
+2023-08-22 16:33:01,953 INFO yolov5_ecr = mbari/deepsea-yolov5:1.1.2
+2023-08-22 16:33:01,953 INFO strongsort_ecr = mbari/strongsort-yolov5:3b34e07
+2023-08-22 16:33:01,953 INFO yolov5_model_s3 = s3://902005-public/models/yolov5x_mbay_benthic_model.tar.gz
+2023-08-22 16:33:01,953 INFO strongsort_track_config_s3 = s3://902005-public/models/strong_sort_benthic.yaml
+2023-08-22 16:33:01,953 INFO 
+2023-08-22 16:33:01,953 INFO [database]
+2023-08-22 16:33:01,953 INFO site = http://localhost:4000
+2023-08-22 16:33:01,953 INFO gql = %(site)s/graphql
+2023-08-22 16:33:01,953 INFO 
+2023-08-22 16:33:01,954 INFO [tags]
+2023-08-22 16:33:01,954 INFO organization = mbari
+2023-08-22 16:33:01,954 INFO project_number = NA
+2023-08-22 16:33:01,954 INFO stage = test
+2023-08-22 16:33:01,954 INFO application = detection
+2023-08-22 16:33:01,954 INFO 
+2023-08-22 16:33:02,265 INFO Initializing job cache in /Users/dcline/Dropbox/code/deepsea-ai/deepsea_ai
+2023-08-22 16:33:02,265 INFO Using existing job cache database in /Users/dcline/Dropbox/code/deepsea-ai/deepsea_ai
+2023-08-22 16:33:03,225 INFO No video file exclusions specified
+2023-08-22 16:33:03,228 INFO Found 3 videos to process
+2023-08-22 16:33:03,555 INFO Checking tag {'Key': 'mbari:project-number', 'Value': 'NA'}
+2023-08-22 16:33:03,555 INFO Checking tag {'Key': 'mbari:owner', 'Value': 'dcline'}
+2023-08-22 16:33:03,555 INFO Checking tag {'Key': 'mbari:description', 'Value': 'Video uploaded from /Users/dcline/Dropbox/code/deepsea-ai/tests/data/ by user dcline '}
+2023-08-22 16:33:03,555 INFO Checking tag {'Key': 'mbari:stage', 'Value': 'test'}
+2023-08-22 16:33:03,555 INFO Checking tag {'Key': 'mbari:application', 'Value': 'detection'}
+2023-08-22 16:33:03,555 INFO Checking tag {'Key': 'mbari:deletion-date', 'Value': '20231120T233303Z'}
+2023-08-22 16:33:03,555 INFO Checking tag {'Key': 'mbari:created-by', 'Value': 'dcline'}
+2023-08-22 16:33:03,872 INFO Found s3://model33k-videod6cc678b-7m6gvrybsnez/dcline/Dropbox/code/deepsea-ai/tests/data/V4361_20211006T163256Z_h265_1sec.mp4 ...skipping upload
+2023-08-22 16:33:03,872 INFO Tagging /Users/dcline/Dropbox/code/deepsea-ai/tests/data/V4361_20211006T163256Z_h265_1sec.mp4 with [{'Key': 'mbari:project-number', 'Value': 'NA'}, {'Key': 'mbari:owner', 'Value': 'dcline'}, {'Key': 'mbari:description', 'Value': 'Video uploaded from /Users/dcline/Dropbox/code/deepsea-ai/tests/data/ by user dcline '}, {'Key': 'mbari:stage', 'Value': 'test'}, {'Key': 'mbari:application', 'Value': 'detection'}, {'Key': 'mbari:deletion-date', 'Value': '20231120T233303Z'}, {'Key': 'mbari:created-by', 'Value': 'dcline'}]...
+2023-08-22 16:33:04,598 INFO Message queued to model33k-videoC740E53C-kfI5wKMlwVGL.fifo. MessageId: 133a389e-16b5-40f6-825a-2d6eb755d993
+2023-08-22 16:33:04,600 INFO JobCache: Added video file V4361_20211006T163856Z_h265_1sec.mp4 to job Ventana test 33k model from ecsprocess running on model33k
+2023-08-22 16:33:04,600 INFO JobCache: Added video file V4361_20211006T162656Z_h265_1sec.mp4 to job Ventana test 33k model from ecsprocess running on model33k
+2023-08-22 16:33:04,600 INFO Updating job Ventana test 33k model from ecsprocess running on model33k in cache status to QUEUED
+2023-08-22 16:33:04,601 INFO Added job Ventana test 33k model from ecsprocess running on model33k to cache
+2023-08-22 16:33:04,601 INFO Updating video file V4361_20211006T163256Z_h265_1sec.mp4 to job Ventana test 33k model from ecsprocess in cache with status QUEUED
+2023-08-22 16:33:04,767 INFO Found s3://model33k-videod6cc678b-7m6gvrybsnez/dcline/Dropbox/code/deepsea-ai/tests/data/V4361_20211006T162656Z_h265_1sec.mp4 ...skipping upload
+2023-08-22 16:33:04,767 INFO Tagging /Users/dcline/Dropbox/code/deepsea-ai/tests/data/V4361_20211006T162656Z_h265_1sec.mp4 with [{'Key': 'mbari:project-number', 'Value': 'NA'}, {'Key': 'mbari:owner', 'Value': 'dcline'}, {'Key': 'mbari:description', 'Value': 'Video uploaded from /Users/dcline/Dropbox/code/deepsea-ai/tests/data/ by user dcline '}, {'Key': 'mbari:stage', 'Value': 'test'}, {'Key': 'mbari:application', 'Value': 'detection'}, {'Key': 'mbari:deletion-date', 'Value': '20231120T233303Z'}, {'Key': 'mbari:created-by', 'Value': 'dcline'}]...
+2023-08-22 16:33:05,440 INFO Message queued to model33k-videoC740E53C-kfI5wKMlwVGL.fifo. MessageId: 0e3fbac1-a318-45e3-8369-057660d07a5f
+2023-08-22 16:33:05,440 INFO JobCache: Added video file V4361_20211006T163256Z_h265_1sec.mp4 to job Ventana test 33k model from ecsprocess running on model33k
+2023-08-22 16:33:05,440 INFO JobCache: Added video file V4361_20211006T163856Z_h265_1sec.mp4 to job Ventana test 33k model from ecsprocess running on model33k
+2023-08-22 16:33:05,440 INFO Updating job Ventana test 33k model from ecsprocess running on model33k in cache status to QUEUED
+2023-08-22 16:33:05,442 INFO Added job Ventana test 33k model from ecsprocess running on model33k to cache
+2023-08-22 16:33:05,442 INFO Updating video file V4361_20211006T162656Z_h265_1sec.mp4 to job Ventana test 33k model from ecsprocess in cache with status QUEUED
+2023-08-22 16:33:05,624 INFO Found s3://model33k-videod6cc678b-7m6gvrybsnez/dcline/Dropbox/code/deepsea-ai/tests/data/V4361_20211006T163856Z_h265_1sec.mp4 ...skipping upload
+2023-08-22 16:33:05,624 INFO Tagging /Users/dcline/Dropbox/code/deepsea-ai/tests/data/V4361_20211006T163856Z_h265_1sec.mp4 with [{'Key': 'mbari:project-number', 'Value': 'NA'}, {'Key': 'mbari:owner', 'Value': 'dcline'}, {'Key': 'mbari:description', 'Value': 'Video uploaded from /Users/dcline/Dropbox/code/deepsea-ai/tests/data/ by user dcline '}, {'Key': 'mbari:stage', 'Value': 'test'}, {'Key': 'mbari:application', 'Value': 'detection'}, {'Key': 'mbari:deletion-date', 'Value': '20231120T233303Z'}, {'Key': 'mbari:created-by', 'Value': 'dcline'}]...
+2023-08-22 16:33:06,367 INFO Message queued to model33k-videoC740E53C-kfI5wKMlwVGL.fifo. MessageId: dd7c0bf8-9fa0-4cde-b198-0b48b2270d02
+2023-08-22 16:33:06,367 INFO JobCache: Added video file V4361_20211006T162656Z_h265_1sec.mp4 to job Ventana test 33k model from ecsprocess running on model33k
+2023-08-22 16:33:06,367 INFO JobCache: Added video file V4361_20211006T163256Z_h265_1sec.mp4 to job Ventana test 33k model from ecsprocess running on model33k
+2023-08-22 16:33:06,367 INFO Updating job Ventana test 33k model from ecsprocess running on model33k in cache status to QUEUED
+2023-08-22 16:33:06,369 INFO Added job Ventana test 33k model from ecsprocess running on model33k to cache
+2023-08-22 16:33:06,369 INFO Updating video file V4361_20211006T163856Z_h265_1sec.mp4 to job Ventana test 33k model from ecsprocess in cache with status QUEUED
+2023-08-22 16:33:06,370 INFO ==== Submitted 3 videos to model33k for processing =====
