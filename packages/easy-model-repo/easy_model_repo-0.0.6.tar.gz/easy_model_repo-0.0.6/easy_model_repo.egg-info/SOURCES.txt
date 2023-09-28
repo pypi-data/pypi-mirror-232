@@ -1,0 +1,9 @@
+README.md
+setup.py
+easy_model_repo/__init__.py
+easy_model_repo/models_repo_utils.py
+easy_model_repo.egg-info/PKG-INFO
+easy_model_repo.egg-info/SOURCES.txt
+easy_model_repo.egg-info/dependency_links.txt
+easy_model_repo.egg-info/requires.txt
+easy_model_repo.egg-info/top_level.txt
