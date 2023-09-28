@@ -1,0 +1,1 @@
+from .scrap_journey import EcoIndexJourneyScrapper
