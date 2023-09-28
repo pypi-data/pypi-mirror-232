@@ -1,0 +1,2 @@
+[console_scripts]
+run_checks = server_check.run_checks:run_all_checks
