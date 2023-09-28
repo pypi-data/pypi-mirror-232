@@ -1,0 +1,2 @@
+[console_scripts]
+ihk_ausbildungsnachweis_broker = ihk_ausbildungsnachweis_broker.app:start
