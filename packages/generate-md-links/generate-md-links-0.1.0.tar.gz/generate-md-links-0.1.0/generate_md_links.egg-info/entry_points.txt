@@ -1,0 +1,2 @@
+[console_scripts]
+generate-md-links = src.generate_MD_links:main
