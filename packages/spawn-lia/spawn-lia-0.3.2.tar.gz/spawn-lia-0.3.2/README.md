@@ -1,0 +1,152 @@
+# 1. lia
+
+[![Downloads](https://static.pepy.tech/personalized-badge/spawn-lia?period=total&units=international_system&left_color=black&right_color=orange&left_text=Downloads)](https://pepy.tech/project/spawn-lia)
+[![License: GPL v3](https://img.shields.io/badge/License-GPL_v3+-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+![Python Versions](https://img.shields.io/badge/python-3.8%20%7C%203.9%20%7C%203.10%20%7C%203.11%20%7C%20-blue)
+<a href="https://github.com/psf/black"><img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-000000.svg"></a>
+[![PyPI - Version](https://img.shields.io/pypi/v/spawn-lia.svg)](https://pypi.org/project/spawn-lia)
+
+![Lia](lia_2.png)
+
+-----
+**Table of Contents**
+
+- [1. lia](#1-lia)
+  - [1.1. Why?](#11-why)
+  - [1.2. What?](#12-what)
+  - [1.3. Lia](#13-lia)
+  - [1.4. Installation](#14-installation)
+  - [1.5. Usage](#15-usage)
+    - [1.5.1. CI](#151-ci)
+    - [1.5.2. CI in container](#152-ci-in-container)
+    - [1.5.3. About Testing](#153-about-testing)
+    - [1.5.4. Deployments](#154-deployments)
+    - [1.5.5. Git operations](#155-git-operations)
+- [2. Successes](#2-successes)
+- [3. Support the Development](#3-support-the-development)
+
+
+
+## 1.1. Why?
+
+Remember code is poetry. And we write our own story. And for this, we need a support.
+
+Without a support, all your efforts will fail. A support takes care we do all the necessary things we would not find time during battles. We need a support. So we asked `lia` to join us.
+
+She protects us from malicious adversaries, and heals our organization by making our poetry better and thereby our story.
+
+## 1.2. What?
+
+`lia` is the best support you can hope for. She helps us to maintain our ship, fight enemies, and win customers.
+
+## 1.3. Lia
+
+Why did we name the package `lia`?
+
+As a short form of Elisabeth, Lia means "God is fullness", "God is my oath" or "God swears". From Amilia Lia gets the meanings "the zealous", "the imitator" or "the competitor" and from Julia "from the family of the Julii" or "consecrated to Jupiter". Lia is also the Irish word for "healer".
+
+All other meanings do not matter in this context whatsoever.
+
+In fact, the name is so similar to `lua` a common language for creating cyber weapons that altering the name into something more beautiful pays attention to the fact that `lia` is doing more or less the exact opposite of `lua`.
+
+Also check the movie [Warcraft](https://www.imdb.com/title/tt0803096/) for background information about the story. It is going on for some time now. But we decided to not just sit still since the world became full of war recently. Thats why we will grow into our predestined roles. Its destiny.
+
+You can't avoid destiny. It is even waste of time trying to. Surrendering is a proven method for manifestation. You probably know that anyways.
+
+If you read through books about Agile Development, Refactoring and Clean Coding you maybe realize that security, value generation, and awesome products do have a lot to do with these books. `Thus, true developers have one common enemy: The Fel.` 
+
+We hope the tool brings you joy in winning your daily battles against the Fel. 
+
+We built for a better future. And we are excited what the future has prepared for us. ⛵
+
+## 1.4. Installation
+
+```bash
+pip install spawn-lia
+```
+
+If you want to get really fancy (it really makes a lot more fun) create an alias for `pip install`
+
+```bash
+nano ~/.bashrc
+```
+
+And append
+
+```bash
+alias cast='pip install'
+```
+
+After saving run
+
+```bash
+source ~/.bashrc
+```
+
+Then finally,
+
+```bash
+cast spawn-lia
+```
+
+## 1.5. Usage
+
+To get general information about the spells `lia` has to offer run the plain command
+
+```bash
+lia
+```
+
+### 1.5.1. CI 
+
+To improve the quality of your package and doing local CI do:
+
+```bash
+lia heal package
+```
+
+Do not be afraid you will probably see many errors. This behavior is intended and shall raise your attention to all sorts of errors, bugs, technical debt and antipatterns in your code.
+
+Getting rid of everything may be tedious but it is doable. We are going through the same process. It improved everything for us.
+
+If you need more information about typing, then the `mypy` [documentation](https://mypy.readthedocs.io/en/stable/getting_started.html) is a great place to start.
+
+### 1.5.2. CI in container
+
+For all remote CI systems like Drone CI, Woodpecker, Actions, etc. 
+
+```bash
+lia heal package
+```
+
+### 1.5.3. About Testing
+
+We recommend to use `unittest` instead of `pytest`. There is a bug such that pytests are now running very slow. Lia is compatible with both
+
+### 1.5.4. Deployments
+
+To deploy you package do
+
+
+```bash
+lia deploy package 
+```
+
+### 1.5.5. Git operations 
+
+```bash
+lia push origin_name
+```
+where origin name is the name of your remote, e.g. `origin`
+
+# 2. Successes 
+
+Our now deprecated venv mechanics are implemented into Debian 12. Here we clearly demonstrated how our philosphy of free software accelerates businesses all around the world.
+
+It feels nice to have so many supporters and we thus continue with the project and are happy that the virtual environments are handled by someone else at the right point of the operating system.
+
+# 3. Support the Development
+
+To support the development you can
+
+<a href="https://www.buymeacoffee.com/capjmk" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
