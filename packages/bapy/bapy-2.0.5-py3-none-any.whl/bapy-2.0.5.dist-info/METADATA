@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: bapy
+Version: 2.0.5
+Summary: A tool for managing python packages
+License: MIT
+Requires-Python: >=3.10
+License-File: LICENSE
+

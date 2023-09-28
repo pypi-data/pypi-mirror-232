@@ -1,0 +1,61 @@
+[project.optional-dependencies]
+dev = [
+    "black", # pipx
+    "icecream",
+    "ipython", # pipx
+    "ipython-suggestions",
+    "restmagic",
+    "mypy",
+    "pip-tools", # pipx
+    "pyflyby",
+    "python-semantic-release",
+    "ruff", # pipx
+    "ruff-lsp", # pipx
+    "twine", # pipx
+    "vendorize"
+]
+docs = [
+    "docutils", # pipx
+    "sphinx", # pipx
+    "sphinx-click",
+    "sphinx-rtd-theme",
+    "sphinxcontrib-napoleon"
+]
+tests = [
+    "coverage[toml] >=6, <7", # pipx
+    "darglint >=1.8.1, <2", # pipx
+    "environs >=9.5.0, <10",
+    "pydocstyle >=6.3, <7", # pipx
+    "pytest >=7, <8", # pipx
+    "pytest-asyncio >=0.21.1, <1",
+    "pytest-cov >=4, <5",
+    "pytest-doctestplus >=0.13, <1",
+    "pytest-git >= 1.7.0, <2",
+    "pytest-git-fixtures >= 0.1.7, <1",
+    "pytest-github-actions-annotate-failures",
+    "pytest-mock >=3, <4",
+    "pytest-xdist >=2, <3",
+    "pytest-remotedata >=0.4.0, <1",
+    "pytest-lazy-fixture ~=0.6.3",
+    "pytest-sugar >=0.9.7, <1",
+    "responses==0.21.0",
+    "requests-mock >=1.10.0, <2",
+    "ruff >=0.0.282, <0.1", # pipx
+    "tox >=4.6.4, <5", # pipx
+    "types-pytest-lazy-fixture >=0.6.3.3",
+]
+[build-system]
+requires = [
+    "build >=1.0.3, <2",
+    "furl >= 2.1.3, <3",
+    "gitpython >= 3.1.36, <4",
+    "loguru >=0.7.2, <1",
+    "packaging >= 23.1, <24",
+    "rich >= 13.5, <14",
+    "semver >=3.0.1, <4",
+    "setuptools >= 68.2.2, <69",
+    "setuptools_scm >= 8.0.3, <9",
+    "toml >=0.10.2, <1",
+    "twine >= 4.0.2, <5",
+    "typer[all] >= 0.9, <1"
+]
