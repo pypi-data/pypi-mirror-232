@@ -1,0 +1,2 @@
+[console_scripts]
+folder-duration = folder_duration.get_folder_duration:main

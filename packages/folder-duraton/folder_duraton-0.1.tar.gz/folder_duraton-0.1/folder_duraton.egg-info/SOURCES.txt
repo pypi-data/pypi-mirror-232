@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+folder_duration/__init__.py
+folder_duration/get_folder_duration.py
+folder_duraton.egg-info/PKG-INFO
+folder_duraton.egg-info/SOURCES.txt
+folder_duraton.egg-info/dependency_links.txt
+folder_duraton.egg-info/entry_points.txt
+folder_duraton.egg-info/top_level.txt
