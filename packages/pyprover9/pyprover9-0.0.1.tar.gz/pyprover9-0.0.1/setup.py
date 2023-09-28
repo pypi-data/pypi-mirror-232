@@ -1,0 +1,13 @@
+
+from setuptools import setup
+setup(
+    name='pyprover9',
+    version='0.0.1',
+    description='Colab wrapper for the Prover9 theorem prover',
+    long_description='Colab wrapper written by Brandon Bennett for the Prover9 theorem prover by William McCune.',
+    #url='https://bb-ai.net/KARaML/KARaML_Tools.html',
+    author='brandonb',
+    author_email='B.Bennett@leeds.ac.uk',
+    packages=['pyprover9'],
+    classifiers=['Development Status :: 1 - Planning'],
+)
