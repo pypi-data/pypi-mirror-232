@@ -1,0 +1,8 @@
+numpy
+scipy
+matplotlib
+astropy
+healpy
+py3nj
+camb
+numba
