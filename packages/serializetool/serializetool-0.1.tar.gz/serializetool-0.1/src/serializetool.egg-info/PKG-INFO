@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: serializetool
+Version: 0.1
+Summary: Yolo model serialize
+License: MIT License
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# Serialize 
+This tool is designed to improve the performance of YOLO models.

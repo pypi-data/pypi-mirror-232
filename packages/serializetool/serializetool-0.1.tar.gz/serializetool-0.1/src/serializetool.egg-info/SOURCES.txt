@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+src/serializetool/__init__.py
+src/serializetool/serialize.py
+src/serializetool.egg-info/PKG-INFO
+src/serializetool.egg-info/SOURCES.txt
+src/serializetool.egg-info/dependency_links.txt
+src/serializetool.egg-info/top_level.txt
