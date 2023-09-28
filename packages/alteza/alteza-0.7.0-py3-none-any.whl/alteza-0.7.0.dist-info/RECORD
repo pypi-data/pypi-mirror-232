@@ -1,0 +1,10 @@
+alteza/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+alteza/__main__.py,sha256=ueA5edYvRzxRyOjqGiA1yRcdhX2VE5jhx5m1-uKGiWg,257
+alteza/engine.py,sha256=FdCBMo-Vm4Uw7bUNb6YWZOaKE0cFc1m-OYdVEYg7ktE,9380
+alteza/fs_crawl.py,sha256=peHE9xynM8GhpC1UKfrXYhCUIUFrR_qdZFMlCuohYaw,11318
+alteza-0.7.0.dist-info/LICENSE,sha256=hIahDEOTzuHCU5J2nd07LWwkLW7Hko4UFO__ffsvB-8,34523
+alteza-0.7.0.dist-info/METADATA,sha256=FrsB1o9nTFZB_wembgtqRvfv1a0n9Co00h_IMKiuhng,11470
+alteza-0.7.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+alteza-0.7.0.dist-info/entry_points.txt,sha256=M7GnPBSSLX_mIlhUP4pUU8dl4HVsvfxIHIaHATlwvfo,48
+alteza-0.7.0.dist-info/top_level.txt,sha256=XZZSAAi3cE6ztGlkSB9hap2K3Ix5L37-O96KjkMGOTU,7
+alteza-0.7.0.dist-info/RECORD,,
