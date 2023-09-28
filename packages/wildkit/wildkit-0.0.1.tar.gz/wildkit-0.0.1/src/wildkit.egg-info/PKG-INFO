@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: wildkit
+Version: 0.0.1
+Summary: Wildberries Public API usage examples & tools
+Author-email: Grinevich Ilya <grinevichilya2000@gmail.com>, Vinogradov Dmitry <dgrapes@gmail.com>
+Project-URL: Homepage, https://openapi.wb.ru
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# Quick Starts
+
+This python script creates a product card and adds a price to it
+
+Add your api token to the ".env" file, and use "make" command to run
+
+see https://openapi.wb.ru/en/
