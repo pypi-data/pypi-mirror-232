@@ -1,0 +1,2 @@
+[console_scripts]
+g910-gkeys = g910_gkeys.g910_gkeys:main
