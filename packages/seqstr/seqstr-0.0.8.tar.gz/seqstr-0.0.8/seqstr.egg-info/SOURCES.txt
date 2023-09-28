@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+seqstr/__init__.py
+seqstr/seqstr.py
+seqstr/test.py
+seqstr.egg-info/PKG-INFO
+seqstr.egg-info/SOURCES.txt
+seqstr.egg-info/dependency_links.txt
+seqstr.egg-info/entry_points.txt
+seqstr.egg-info/requires.txt
+seqstr.egg-info/top_level.txt
