@@ -1,0 +1,10 @@
+sypht/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sypht/__main__.py,sha256=-Zq-ymtXBZA4As20u2ev1amvxt94QCYzQ3dL10EskaM,1934
+sypht/client.py,sha256=qtPQRu3zsCNrVwpKeq3C14pzy3wXwl5v4BApf1ogsvY,34451
+sypht/util.py,sha256=UqikocamHwuBZ5Mv4X-20bK8oGSUon33o3YQLv7Xy14,2259
+sypht-0.5.19.dist-info/LICENSE,sha256=Y539xgdfGb5riInAPqXWOQPKBOwls2y8Mkg_pHfzXg0,1070
+sypht-0.5.19.dist-info/METADATA,sha256=T4ZjieKfznCeZPl2pIKpd1QaUZDDB5lO6JjbKwZJtBk,395
+sypht-0.5.19.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+sypht-0.5.19.dist-info/entry_points.txt,sha256=us8u5RfooF1dappGGj8HGbxBrnl1Mr21VZ0meqHASe0,46
+sypht-0.5.19.dist-info/top_level.txt,sha256=h0mo14Va0UXws1fdeQt3FPTSfjAV2Vgd67kRRG_S9TQ,6
+sypht-0.5.19.dist-info/RECORD,,
