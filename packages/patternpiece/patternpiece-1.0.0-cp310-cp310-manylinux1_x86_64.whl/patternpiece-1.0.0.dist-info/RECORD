@@ -1,0 +1,11 @@
+patternpiece/__init__.py,sha256=AORsvq3i8CgXhz3lqSlrkYs3zkx91o5uuWyZimclsO8,78
+patternpiece/ac_matcher_nogil.c,sha256=wKO26uk86pHlilE1H19ffquYWRA4YQ3bJr3SgEOw-yw,1251667
+patternpiece/ac_matcher_nogil.cpython-310-x86_64-linux-gnu.so,sha256=7ev-uSOhTPHO58Carc-Iij6qX1GXLlEjdzVHn9k21x4,270192
+patternpiece/matcher.py,sha256=5fUTZhnz48ZeQZzRiFq4Va0ibDYyyAHV8UQ5jcvZlw8,3304
+patternpiece/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+patternpiece/version.py,sha256=-YX9GqcIsBJTB6zhzonNV5ptTyXMQcTbv6lu2Nf5ngg,418
+patternpiece-1.0.0.dist-info/LICENSE,sha256=JDEfOtRu_rQ2AEMeCSBrhJOu9lJmF3D5ztZH0Yripww,11560
+patternpiece-1.0.0.dist-info/METADATA,sha256=AAy-kDWSUV95JfDdSWGLKhNKfZUA7pkHwvhTwnunMr0,16986
+patternpiece-1.0.0.dist-info/WHEEL,sha256=19bJhXs1MGq3pTh0j4vUSn7LWruPAG0SnX2g17bykm0,110
+patternpiece-1.0.0.dist-info/top_level.txt,sha256=ok782KPjzpuXo5awdUPZ12cSnWK66kIBMPTwhH0U8Po,24
+patternpiece-1.0.0.dist-info/RECORD,,
