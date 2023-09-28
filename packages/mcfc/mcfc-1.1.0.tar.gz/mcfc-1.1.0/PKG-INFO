@@ -1,0 +1,64 @@
+Metadata-Version: 2.1
+Name: mcfc
+Version: 1.1.0
+Summary: 🖌 Text formatting using Minecraft color codes.
+Project-URL: Homepage, https://github.com/woidzero/mcfc
+Project-URL: Documentation, https://github.com/woidzero/mcfc#readme
+Project-URL: Issues, https://github.com/woidzero/mcfc/issues
+Project-URL: Source, https://github.com/woidzero/mcfc
+Author: woidzero
+License-Expression: MIT
+License-File: LICENSE
+Keywords: colorization,colors,command-line,console,print,rich,terminal
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# MCFC
+
+[![PyPI - Version](https://img.shields.io/pypi/v/mcfc.svg)](https://pypi.org/project/mcfc)
+[![PyPI - Downloads](https://img.shields.io/pypi/dm/mcfc)](https://pypi.org/project/mcfc)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/mcfc.svg)](https://pypi.org/project/mcfc)
+[![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/charliermarsh/ruff/main/assets/badge/v2.json)](https://beta.ruff.rs/)
+
+🖌 Text formatting using Minecraft color codes.
+
+## Installation
+
+To install MCFC, run the following command:
+
+```
+ pip install mcfc
+```
+
+## Preview
+
+![Preview](images/preview.png)
+
+## Usage
+
+```python
+ import mcfc
+
+ mcfc.echo("&cH&6e&el&al&bo&d!")
+```
+
+### Output
+
+![Output](images/output.png)
+
+## License
+
+`mcfc` is distributed under the terms of the [MIT](LICENSE) license.
