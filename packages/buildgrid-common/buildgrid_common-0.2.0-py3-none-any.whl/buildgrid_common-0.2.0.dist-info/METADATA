@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: buildgrid-common
+Version: 0.2.0
+Summary: Shared Python library for BuildGrid ecosystem
+License: Apache License, Version 2.0
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+License-File: LICENSE
+Requires-Dist: grpcio >=1.33.2
+Requires-Dist: protobuf
+Provides-Extra: all
+Requires-Dist: buildgrid-common[dev,metrics] ; extra == 'all'
+Provides-Extra: dev
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: pytest-cov ; extra == 'dev'
+Requires-Dist: mypy ; extra == 'dev'
+Requires-Dist: mypy-protobuf ; extra == 'dev'
+Requires-Dist: grpc-stubs ; extra == 'dev'
+Requires-Dist: isort ; extra == 'dev'
+Requires-Dist: black ; extra == 'dev'
+Requires-Dist: flake8 ; extra == 'dev'
+Provides-Extra: metrics
+Requires-Dist: statsd ; extra == 'metrics'
+
