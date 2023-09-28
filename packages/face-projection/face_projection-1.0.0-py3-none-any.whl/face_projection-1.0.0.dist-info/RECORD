@@ -1,0 +1,9 @@
+face_projection/__init__.py,sha256=iUhlNspGfToHun3QL7XlBzCN_vzjbG4G-44aMOwogcg,47
+face_projection/consts.py,sha256=27aVsoHt3Zi1QZ6RkBoKGMS1bMcoFGwR6kj0cQsnjfc,12569
+face_projection/core.py,sha256=oMIokcTnmP9L0Nm1twWyoe9B_Tai4PFszKTAkFOAMAc,14804
+face_projection/face_model.py,sha256=lKDgWGMfaGpKiWPCgvtYDY87LMcj-YdCB39DwiM4YrM,3597
+face_projection-1.0.0.dist-info/LICENSE.txt,sha256=y-CEKxFE6o2zyNOoX7a5n5mjy6ym7EHMuswJiC57cMw,1079
+face_projection-1.0.0.dist-info/METADATA,sha256=odp-LQmixWpfXZIG6vzmYDn5T-Se6IYzz1bHG9eTovA,3067
+face_projection-1.0.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+face_projection-1.0.0.dist-info/top_level.txt,sha256=9zHgmpDc-6HcJwW0qSI9fFu2KVEq2sWzh1i1NvOXjbk,16
+face_projection-1.0.0.dist-info/RECORD,,
