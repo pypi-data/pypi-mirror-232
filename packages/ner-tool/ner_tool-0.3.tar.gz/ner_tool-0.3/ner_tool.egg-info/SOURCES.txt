@@ -1,0 +1,9 @@
+setup.py
+ner_tool/__init__.py
+ner_tool/get_metrics.py
+ner_tool/ner.py
+ner_tool.egg-info/PKG-INFO
+ner_tool.egg-info/SOURCES.txt
+ner_tool.egg-info/dependency_links.txt
+ner_tool.egg-info/requires.txt
+ner_tool.egg-info/top_level.txt
