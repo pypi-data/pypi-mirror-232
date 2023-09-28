@@ -1,0 +1,17 @@
+lagrange/_logging.py,sha256=udlHCqNb8tf9DUVnuT9Q4M-DfCBBnnQWxVCsamIM11g,1816
+lagrange/libtbb.12.dylib,sha256=uTBg4bNZYurIh3E3ESw_0s_61l-Mk_yumvePbAIRwPs,413312
+lagrange/lagrange.cpython-39-darwin.so,sha256=eVnHhpXCZQxbTH094S7xXVqQD2anNHeZeuhAVWiEti0,15831648
+lagrange/__init__.py,sha256=ShpiAgX3BU91TQDPxwvyDOTI_lacXpfURAQFJnMHj4o,714
+lagrange/libtbb.12.8.dylib,sha256=uTBg4bNZYurIh3E3ESw_0s_61l-Mk_yumvePbAIRwPs,413312
+lagrange/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+lagrange/libtbb.dylib,sha256=uTBg4bNZYurIh3E3ESw_0s_61l-Mk_yumvePbAIRwPs,413312
+lagrange/lagrange/__init__.pyi,sha256=o5iJEW3r1252vRkbzsD7CuJL9GlMI9xYWjZx71JXgog,100
+lagrange/lagrange/scene.pyi,sha256=ds6_A3IVCkvRNdSdCbBTsJ3JmOexSnrXol-SyWAxvGg,2392
+lagrange/lagrange/core.pyi,sha256=CbuXOY342NbUTYx6ZcaecFXjoiD420ZwdXhCnyRd9cc,36067
+lagrange/lagrange/io.pyi,sha256=I_KW-88cMnJakO0JFhEP8c1sIJOxPfZ-FIlf4KHYnFY,4034
+lagrange_open-6.15.0.dist-info/RECORD,,
+lagrange_open-6.15.0.dist-info/LICENSE,sha256=hr3V2vq3dFEES2_W0u-rI-NBDOZY6wl_BMBPT1Su1i8,11335
+lagrange_open-6.15.0.dist-info/WHEEL,sha256=71PRiL6E40U99kod4-NblNRqdqPDO1pKnoS-hpA6XME,104
+lagrange_open-6.15.0.dist-info/NOTICE.txt,sha256=wXaV4GjfAadjFNYb9ViXR0HxhRx48SAlf_LwACElt1E,11211
+lagrange_open-6.15.0.dist-info/top_level.txt,sha256=GcGmQcuo6E8Kjix93KPeLRJweiuwNT71yOJODH4g3Vo,9
+lagrange_open-6.15.0.dist-info/METADATA,sha256=9yLOyRjN_ojkYR4s9AI_9s-RvUuUx2VzEQchXHkpyEg,1963
