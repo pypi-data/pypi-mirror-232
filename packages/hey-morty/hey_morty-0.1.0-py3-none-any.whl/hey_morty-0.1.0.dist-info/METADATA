@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: hey-morty
+Version: 0.1.0
+Summary: Office boy will get the files like gitignore, readme, license etc. for you and put them in your project.
+Home-page: https://github.com/hasansezertasan/hey-morty.git
+Author: hasansezertasan
+Author-email: hasansezertasan@gmail.com
+Classifier: Development Status :: 1 - Planning
+Classifier: License :: OSI Approved :: MIT License
+License-File: LICENSE
+
+<h1 align="center">
+    <strong>hey-morty</strong>
+</h1>
+<p align="center">
+    <a href="https://github.com/hasansezertasan/hey-morty" target="_blank">
+        <img src="https://img.shields.io/github/last-commit/hasansezertasan/hey-morty" alt="Latest Commit">
+    </a>
+        <img src="https://img.shields.io/github/workflow/status/hasansezertasan/hey-morty/Test">
+        <img src="https://img.shields.io/codecov/c/github/hasansezertasan/hey-morty">
+    <br />
+    <a href="https://pypi.org/project/hey-morty" target="_blank">
+        <img src="https://img.shields.io/pypi/v/hey-morty" alt="Package version">
+    </a>
+    <img src="https://img.shields.io/pypi/pyversions/hey-morty">
+    <img src="https://img.shields.io/github/license/hasansezertasan/hey-morty">
+</p>
+
+## Installation
+
+``` bash
+pip install hey-morty
+```
