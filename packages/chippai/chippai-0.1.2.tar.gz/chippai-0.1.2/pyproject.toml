@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "chippai"
+version = "0.1.2"
+authors = [
+  { name="Andre Lacke", email="andre@chipp.ai" },
+]
+description = "A Python wrapper for Chipp API"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/benchmarkai/chippai-pip"
+"Bug Tracker" = "https://github.com/benchmarkai/chippai-pip/issues"
