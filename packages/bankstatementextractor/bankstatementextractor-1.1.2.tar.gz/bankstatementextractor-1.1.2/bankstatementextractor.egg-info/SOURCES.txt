@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+bankstatementextractor/BanksExtractor.py
+bankstatementextractor/__init__.py
+bankstatementextractor/banks.py
+bankstatementextractor/banks_utils.py
+bankstatementextractor/test.py
+bankstatementextractor.egg-info/PKG-INFO
+bankstatementextractor.egg-info/SOURCES.txt
+bankstatementextractor.egg-info/dependency_links.txt
+bankstatementextractor.egg-info/requires.txt
+bankstatementextractor.egg-info/top_level.txt
+bankstatementextractor/models/best.pt
