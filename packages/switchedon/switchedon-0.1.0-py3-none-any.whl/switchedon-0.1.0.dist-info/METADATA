@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: switchedon
+Version: 0.1.0
+Author-email: William Luke <william@switchedon.world>
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: inquirer
+Requires-Dist: argparse
+Provides-Extra: dev
+Requires-Dist: black ; extra == 'dev'
+Requires-Dist: bumpver ; extra == 'dev'
+Requires-Dist: isort ; extra == 'dev'
+Requires-Dist: pip-tools ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+
