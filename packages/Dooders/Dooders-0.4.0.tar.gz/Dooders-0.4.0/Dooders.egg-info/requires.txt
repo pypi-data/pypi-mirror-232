@@ -1,0 +1,17 @@
+fastapi
+imageio
+matplotlib
+networkx
+pandas
+Pillow
+plotly
+psycopg2-binary
+pydantic
+pygame
+pytest
+python-dotenv
+pyyaml
+scikit-learn
+scipy
+tqdm
+structlog
