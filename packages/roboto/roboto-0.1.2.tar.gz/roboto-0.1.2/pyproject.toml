@@ -1,0 +1,16 @@
+[project]
+name = "roboto"
+requires-python = ">=3.9"
+version = "0.1.2"
+
+[tool.poetry]
+name = "roboto"
+version = "0.1.2"
+description = "Tools for interacting with roboto.ai"
+license = "MIT"
+readme = "README.md"
+authors = ["Roboto <admin@roboto.ai>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+roboto-sdk = "~0.1"
