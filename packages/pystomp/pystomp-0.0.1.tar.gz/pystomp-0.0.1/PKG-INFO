@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: pystomp
+Version: 0.0.1
+Summary: Stomp client via websocket
+Home-page: UNKNOWN
+Author: 
+Author-email: me@yua.sh
+License: UNKNOWN
+Keywords: python,stomp,websocket
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Education
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+
+UNKNOWN
+

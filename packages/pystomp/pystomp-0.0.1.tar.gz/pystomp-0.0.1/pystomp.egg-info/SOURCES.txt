@@ -1,0 +1,7 @@
+setup.py
+pystomp/StompClient.py
+pystomp/__init__.py
+pystomp.egg-info/PKG-INFO
+pystomp.egg-info/SOURCES.txt
+pystomp.egg-info/dependency_links.txt
+pystomp.egg-info/top_level.txt
