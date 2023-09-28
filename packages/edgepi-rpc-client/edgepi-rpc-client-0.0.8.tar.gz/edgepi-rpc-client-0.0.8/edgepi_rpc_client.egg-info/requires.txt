@@ -1,0 +1,5 @@
+protobuf>=3.20.3
+edgepi-rpc-protobuf>=1.0.15
+python-periphery>=2.4.1
+pyzmq>=25.1.0
+edgepi-python-sdk>=1.2.6
