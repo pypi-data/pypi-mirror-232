@@ -1,0 +1,12 @@
+jrpyvis/__init__.py,sha256=35lT0k2nQUrvBjZ9n3up5n1_HZOk5J2Cx01naAFyEA8,123
+jrpyvis/__version__.py,sha256=d4QHYmS_30j0hPN8NmNPnQ_Z0TphDRbu4MtQj9cT9e8,22
+jrpyvis/data/csv_data.csv,sha256=Jf7d54KtDoM0JcT-lSo4QPdu8tnNFaabgihmxr_2NBU,39
+jrpyvis/data/movies.zip,sha256=qivayc0CcavExRtCYDR553KIHA0vp7L2mrtRcu1hGfU,1355247
+jrpyvis/data/tabsep_data.csv,sha256=vTJU8lYeJDEKfAOeq8-wvqutKTxk9MV3NOV0iR5JFls,39
+jrpyvis/data/titanic.xlsx,sha256=ygRpn4wSwNto77xnh7IdGz79MSsxEq-OZHK7_TrrdSw,36829
+jrpyvis/data.py,sha256=H-KsUIWRnigAPBLDNGcF6mf7vzShopbiVzv5NgGJ7ik,838
+jrpyvis/solutions/example_solution.mplstyle,sha256=_xv_jnw2ELhY7k9-Wlu9BNchthx3KXCpGn3lDyWOuZY,90
+jrpyvis/solutions.py,sha256=jes_GjG8CGEMIp78BoRUorJO4zM925owHy_AFehsJZk,413
+jrpyvis-1.0.1.dist-info/METADATA,sha256=eQlyuAcHFKAgY9e-A81BkcmJIOPrgXK1RtTu3XiML6Y,596
+jrpyvis-1.0.1.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+jrpyvis-1.0.1.dist-info/RECORD,,
