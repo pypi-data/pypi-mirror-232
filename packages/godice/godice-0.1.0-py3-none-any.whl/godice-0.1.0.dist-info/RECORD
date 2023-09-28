@@ -1,0 +1,9 @@
+godice/__init__.py,sha256=36rjNqBweg80DDhAVfXmQGkC_MkcqYI5IYck3tZHxUI,254
+godice/demo.py,sha256=CKdg7jZtSXDAA-VKc-Atua7RQp_aa6cWXDKkDgboCx4,2861
+godice/dice.py,sha256=xZ95LwBKRQOjbSROME7jCNc37_u-O77kl3KW9lUVewg,5484
+godice/factory.py,sha256=i8Q5uShA90A4bSsaL-b4mpXk4wx2ndfWr8u5FEiyXDs,1366
+godice/xyzinterpret.py,sha256=yYodRih6XvOHwzt70DwbV_g4DGkL-i1eoGMH_oFIHks,4945
+godice-0.1.0.dist-info/LICENSE.md,sha256=zHZOSX4TjwBABSGXpUlU1W3VOetlXvZ_lELwBEwtTkA,8258
+godice-0.1.0.dist-info/WHEEL,sha256=EZbGkh7Ie4PoZfRQ8I0ZuP9VklN_TvcZ6DSE5Uar4z4,81
+godice-0.1.0.dist-info/METADATA,sha256=O8qfjdrPTgVP07_Mjen4zB3bufa1XuTiuU2uoYAimRY,2898
+godice-0.1.0.dist-info/RECORD,,
