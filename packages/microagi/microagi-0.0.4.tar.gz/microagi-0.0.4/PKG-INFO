@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: microagi
+Version: 0.0.4
+Summary: Predictable, secure and precision tuned command-line assistant that translates natural language into Git commands.
+Home-page: https://github.com/microagi
+Keywords: agi,microagi,git,assistant,agent,AI,GPT
+Author: Sivan Grünberg
+Author-email: sivan@vitakka.co
+Requires-Python: >=3.11,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: autopage (>=0.5.1,<0.6.0)
+Requires-Dist: colorama (>=0.4.6,<0.5.0)
+Requires-Dist: openai (>=0.27.8,<0.28.0)
+Requires-Dist: pydantic (>=2.0.3,<3.0.0)
+Requires-Dist: pyparsing (>=3.1.1,<4.0.0)
+Requires-Dist: python-dotenv (>=1.0.0,<2.0.0)
+Requires-Dist: requests (>=2.31.0,<3.0.0)
+Description-Content-Type: text/markdown
+
+
+# µAGI: Micro AI, Macro Solutions
+
+Welcome to µAGI, where we believe in the power of specialized Artificial Intelligence. In a world that's rapidly advancing towards generalized AI systems, we stand out by focusing on the small, specific challenges that often go unnoticed.
+
+## Philosophy
+
+Our philosophy is simple: "Do one thing, and do it well." We emphasize precision, specificity, and the value of targeted solutions. We are committed to leveraging the finesse of micro-level AI to reshape how developers interact with their toolchains—one task, one solution, one revolution at a time.
+
+To read more of our inspiration see the [Unix Philosophy](https://en.wikipedia.org/wiki/Unix_philosophy).
+
+## Our Tools: ATools
+
+We offer a suite of tools collectively named "ATools," each designed to handle specific tasks with unprecedented efficiency. Our first release, AGit, effortlessly translates natural language into Git commands, making it easier for developers to interact with version control systems without the hassle of learning intricate command-line syntax.
+
+## Contact
+
+Email us at [contact@microagi.dev](mailto:contact@microagi.dev). For bug reports, requests and testing feedback please open a Github issue in the respective respotiroy.
+
+## License
+
+All our tools are open-sourced under the GPLv3 License. If you find it useful in your daily use, we'd appreciate a symoblic contribution via GitHub sponsers 😎
+
+See [LICENSE.md](https://github.com/microagi/.github/blob/main/LICENSE) for more details.
+
+## Copyright
+
+© 2023 [MicroAGI](https://microagi.dev), Sivan Grünberg [Vitakka Consulting](https://vitakka.co) All Rights Reserved.
+
+
