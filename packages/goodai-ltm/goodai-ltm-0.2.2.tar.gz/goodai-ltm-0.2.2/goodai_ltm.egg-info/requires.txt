@@ -1,0 +1,10 @@
+boto3
+datasets
+faiss-cpu
+numpy>=1.19.0
+openai>=0.27.0
+pytest>=7.0.0
+python-dotenv
+sentence-transformers>=2.2.2
+torch>=1.8.0
+transformers>=4.0.0
