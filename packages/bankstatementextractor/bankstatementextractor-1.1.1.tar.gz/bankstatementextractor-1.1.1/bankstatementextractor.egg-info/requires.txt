@@ -1,0 +1,13 @@
+setuptools
+fitz
+numpy
+pandas
+Unidecode
+DateTime
+Pillow
+PyPDF2
+more-itertools
+Python-IO
+pdf2image
+torch
+opencv-python
