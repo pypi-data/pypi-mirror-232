@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: ods-mkdocs-theme
+Version: 0.1.0
+Summary: Orange Design System MkDocs Theme provides a MkDocs theme for Orange.
+Home-page: https://github.com/Orange-OpenSource/ods-mkdocs-theme
+Author: Orange
+Author-email: loic.laussel@orange.com, julien.deramond@orange.com
+License: MIT
+Requires-Python: >=3.7
+License-File: LICENSE
+License-File: NOTICE.txt
+Requires-Dist: mkdocs-material (>=9.0.3)
+
