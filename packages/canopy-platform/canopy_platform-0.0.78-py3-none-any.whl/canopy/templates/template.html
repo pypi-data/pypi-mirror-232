@@ -1,0 +1,379 @@
+$def with (resource)
+$ path = tx.request.uri.path
+$ owner = tx.host.owner
+
+<html lang=en-us class=dark>
+<head>
+<meta charset=utf-8>
+<meta name=viewport
+    content=initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width>
+<meta name=apple-mobile-web-app-capable content=yes>
+<meta name=apple-mobile-web-app-status-bar-style content=black-translucent>
+<!--link rel=icon href=/static/photo.png-->
+$if not tx.request.uri.path:
+    <link rel=manifest href=/manifest.json>
+<link rel=stylesheet href=/chats/mediasoup-demo-app.css>
+<link rel=stylesheet href=/static/screen.css media=screen>
+<title>\
+$if "title" in resource:
+    $:Document(resource.title).doc.text_content()&thinsp;&mdash;&thinsp;\
+$owner["name"][0]</title>
+
+$if not isinstance(resource, str) and "head" in resource:
+    $:resource.head()
+
+<link rel=stylesheet href=/static/asciinema-player.css>
+<script type=module>
+import { _, cookies, go, upgradeLink } from '/static/web.js'
+$if "session" in tx.user and tx.user.session.get("uid", None):
+    let userName = '$tx.user.session["name"][0]'
+$else:
+    let userName = 'Guest'
+// TODO $$.load(...)
+document.addEventListener('DOMContentLoaded', ev => {
+  if (cookies.get('rhythm') == 'on') {
+    document.querySelector('body').style.backgroundImage = 'url(/static/measure.png)'
+  }
+  document.addEventListener('keydown', (e) => {
+    if (e.ctrlKey && e.key == '.') {
+      if (cookies.get('rhythm') == 'on') {
+        document.querySelector('body').style.backgroundImage = 'none'
+        cookies.set('rhythm', 'off')
+      } else {
+        document.querySelector('body').style.backgroundImage = 'url(/static/measure.png)'
+        cookies.set('rhythm', 'on')
+      }
+    }
+  })
+  cookies.set('mediasoup-demo.user', `{"displayName": "$${userName}"}`)
+  // TODO const owner = "$owner['name'][0]"
+  _('a:not(.breakout)').each(upgradeLink)
+  history.pushState({scroll: 0}, 'title', window.location)
+  window.go = go
+})
+</script>
+
+$if tx.user.is_owner:
+    <style>
+    .h-card img {
+        border: .2em solid #007ba7;
+        height: 2.6em; }
+    </style>
+
+</head>
+<body
+$if "body_classes" in resource:
+     class="$' '.join(resource.body_classes)"\
+>
+
+<header>
+<div class=h-card>
+$if "photo" in owner:
+    <img class=u-photo src=/media/$owner["photo"][0]>
+<div class=namedesc>
+<a class=p-name href=/><strong>$owner["name"][0]</strong></a><br>
+$if "note" in owner:
+    <span class=p-note>$owner["note"][0]</span><br>
+<small class=identifiers>
+$if email := get_first(owner, "email"):
+    <a class=u-email
+        href=mailto:$owner["email"][0]><code>$owner["email"][0]</code></a> &bull;
+$if onion := get_onion():
+    $ _stripped_onion = onion.lstrip("x")
+    $ _prefix_length = len(onion) - len(_stripped_onion)
+    <a class=u-url rel=me
+        href=http://$onion><code>@$_stripped_onion[:12-_prefix_length]</code></a> &bull;
+<code><a class="u-url u-uid" rel=me href=/>@$tx.host.name</code>
+&bull; <a href=/owner/actor><code>@$owner["nickname"][0]@$tx.host.name</code></a>
+$if key := get_key():
+    &bull; <a class=p-key href=/owner/keyring><code>$:"&ndash;".join(key.split()[:2])</code></a>
+</small>
+</div>
+</div>
+<div>
+<form id=search action=/search>
+    <input name=q type=text> <button>Search</button>
+</form>
+<div id=assistant>
+    <span class=partial></span>
+    <button>Activate Assistant</button>
+</div>
+</div>
+</header>
+
+$def render_breadcrumbs(breadcrumbs, separator="&#x25b8;", padding="&ensp;"):
+    $ """
+    $ Render a `separator` delimited list of linkified `breadcrumbs`.
+    $
+    $ `breadcrumbs` should be a single tuple that will be read two items at a time:
+    $
+    $     ("path", "Name", "subpath", "Subname", ...)
+    $
+    $ """
+    $ remaining = int(len(breadcrumbs) / 2)
+    $ path = ""
+    $for crumb_path, crumb_title in zip(*(breadcrumbs[i::2] for i in (0, 1))):
+        $ crumb_path = str(crumb_path)
+        $ crumb_icon, crumb_classes = None, None
+        $if isinstance(crumb_title, tuple):
+            $ crumb_icon, crumb_classes, crumb_title = crumb_title
+        $ path = path + "/" + crumb_path
+        $ ups = " ".join(["up"] * remaining)
+        $ remaining = remaining - 1
+        <span>\
+        $if crumb_icon:
+            <span class="crumb-icon-$crumb_icon"></span>&thinsp;\
+        <a href=$path \
+        $if crumb_classes:
+            class="$' '.join(crumb_classes)"
+        rel="$ups">$:crumb_title</a>\
+        $:padding<span class=crumb-sep>$:separator</span></span>\
+
+<article id=content\
+$if "classes" in resource:
+     class="$' '.join(resource.classes)"\
+>
+$if path:
+    $ breadcrumbs = []
+    $ parts = path.split("/")
+    $ app = parts[0]
+    $if len(parts) > 1:
+        $ breadcrumbs += [app, app.capitalize()]
+    $if "breadcrumbs" in resource:
+        $ breadcrumbs += list(resource["breadcrumbs"])
+    $if breadcrumbs:
+        <nav class=breadcrumbs>$:render_breadcrumbs(breadcrumbs)</nav>
+$if "title" in resource:
+    $if getattr(resource, "show_title", True):
+        <header>
+        <h1
+        $if "title_classes" in resource:
+             class="$' '.join(resource.title_classes)"\
+        >$:resource.title</h1>
+        </header>
+$:resource
+$# $if "hide_footer" not in resource:
+$#     <footer>
+$#         <p><small>Content licensed <a
+$#         href=//creativecommons.org/licenses/by-nc-sa/4.0/ rel=license><abbr
+$#         title="Creative Commons Attribution-NonCommercial-ShareAlike">CC
+$#         BY-NC-SA</abbr></a> unless otherwise noted.</small></p>
+$#     <!--p><a href=//indieweb.rocks/$tx.host.name rel=me><img alt="IndieMark score"
+$#         src=//indieweb.rocks/sites/$tx.host.name/scoreboard.svg style=height:4em></a></p-->
+$#     </footer>
+</article>
+
+<nav>
+<a href=/now>Now</a>
+$ public_apps = {"code": "Code"}
+$# , "media": "Media"}
+<ul class=apps>
+$for app_prefix, app_name in public_apps.items():
+    <li>
+    $# XXX $if path.startswith(app_prefix):
+    $# XXX     <strong>$app_name</strong>
+    $# XXX $else:
+    <a href=/$app_prefix>$app_name</a>
+    </li>
+</ul>
+<ul class=dates>
+$for year, months in get_months().items():
+    <li><small><a href=/$year>$year</a></small>\
+    $# <div style=columns:6>
+    $# $for month in range(1, 13):
+    $#     $ MM = f"{month:02}"
+    $#     $if months[month]:
+    $#         <a href=/$year/$MM>\
+    $#     $MM\
+    $#     $if months[month]:
+    $#         </a>\
+    $#     &thinsp;\
+    $# </div>
+    </li>
+</ul>
+<p>
+$for category in get_categories():
+    $category
+</p>
+$if tx.user.is_owner:
+    <ul class=admin>
+    $for mount_name, mount_app in sorted(tx.app.mounts):
+        $if mount_name in public_apps or mount_name == "system":
+            $continue
+        <li><a href=/$mount_app.prefix>$mount_name.capitalize()</a></li>
+    </ul>
+<p class=system><a class=systemtext href=/system
+    title=system><span>System</span></a></p>
+</nav>
+
+<aside>
+$:livestream()
+
+<div id=chat>
+    <button>Enter Room</button>
+    <div id=mediasoup-demo-app-media-query-detector></div>
+    <div id=mediasoup-demo-app-container></div>
+</div>
+
+$if tx.user.is_owner:
+    <form action=/owner/sign-out method=post>
+    <button>Sign Out</button>
+    </form>
+$elif "session" in tx.user and tx.user.session.get("uid", None):
+    <p>Signed in as <a
+    href=$tx.user.session["uid"][0]>$tx.user.session["name"][0]</a>.</p>
+    <form action=/guests/sign-out method=post>
+    <button>Sign Out</button>
+    </form>
+$else:
+    <form action=/guests/sign-in style="margin:1em 0">
+    <input name=me type=text> <button>Sign In</button>
+    </form>
+
+$if "aside" in resource:
+    $:resource.aside()
+</aside>
+
+<footer style=display:none id=loading>loading</footer>
+
+<script src=https://cdn.jsdelivr.net/npm/vosk-browser@0.0.5/dist/vosk.js></script>
+<script>
+async function initAssistant() {
+  const partialContainer = document.querySelector('#assistant .partial')
+
+  partialContainer.textContent = 'Loading...'
+
+  const channel = new MessageChannel()
+  const model = await Vosk.createModel('/static/vosk-model-small-en-us-0.15.tar.gz')
+  model.registerPort(channel.port1)
+
+  const sampleRate = 48000
+
+  const recognizer = new model.KaldiRecognizer(sampleRate)
+  recognizer.setWords(true)
+ 
+  let ownerGivenName = '$owner["name"][0].split()[0]'
+  let wakeWord = `$${ownerGivenName.toLowerCase()} assistant`
+  let readyWord = `Say "$${ownerGivenName} Assistant help".`
+  let state = 'asleep'
+  partialContainer.textContent = readyWord
+
+  recognizer.on('result', message => {
+    let input = message.result.text
+    if (input.slice(0, wakeWord.length) != wakeWord) {
+      partialContainer.textContent = readyWord
+      return
+    }
+    input = input.slice(wakeWord.length + 1)
+    if (input == 'help') {
+      go('/help')
+      return
+    }
+    const response = fetch('/ai/assistant', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({request: input}),
+    })
+    .then(response => response.blob())
+    .then(blob => {
+      const audio = new Audio(URL.createObjectURL(blob));
+      audio.addEventListener('canplaythrough', () => {
+        audio.play()
+        state = 'asleep'
+        partialContainer.textContent = readyWord
+      })
+    })
+    partialContainer.textContent = `$${input}`
+  })
+  recognizer.on('partialresult', message => {
+    const input = message.result.partial
+    if (input.slice(0, wakeWord.length) != wakeWord)
+      return
+    state = 'awake'
+    partialContainer.textContent = input.slice(wakeWord.length)
+  })
+
+  const mediaStream = await navigator.mediaDevices.getUserMedia({
+    video: false,
+    audio: {
+      echoCancellation: true,
+      noiseSuppression: true,
+      channelCount: 1,
+      sampleRate
+    },
+  })
+
+  const audioContext = new AudioContext()
+  await audioContext.audioWorklet.addModule('/static/recognizer-processor.js')
+  const recognizerProcessor = new AudioWorkletNode(
+    audioContext,
+    'recognizer-processor',
+    { channelCount: 1, numberOfInputs: 1, numberOfOutputs: 1 }
+  )
+  recognizerProcessor.port.postMessage(
+    { action: 'init', recognizerId: recognizer.id },
+    [ channel.port2 ]
+  )
+  recognizerProcessor.connect(audioContext.destination)
+
+  const source = audioContext.createMediaStreamSource(mediaStream)
+  source.connect(recognizerProcessor)
+}
+</script>
+
+<script src=/chats/resources/js/antiglobal.js></script>
+<script>
+window.localStorage.setItem('debug', '* -engine* -socket* -RIE* *WARN* *ERROR*')
+if (window.antiglobal) {
+  window.antiglobal('___browserSync___oldSocketIo', 'io', '___browserSync___', '__core-js_shared__')
+  setInterval(window.antiglobal, 180000)
+}
+
+function initChat() {
+  var tag = document.createElement('script')
+  tag.src = '/chats/mediasoup-demo-app.js'
+  document.getElementsByTagName('head')[0].appendChild(tag)
+
+  const autoMuter = setInterval(autoMute, 100)
+  function autoMute() {
+    if (typeof window.CLIENT !== 'undefined' && window.CLIENT._micProducer) {
+      window.CLIENT.muteMic()
+      clearInterval(autoMuter)
+    }
+  }
+}
+</script>
+
+<script>
+window.onload = () => {
+  const assistantTrigger = document.querySelector('#assistant button')
+  assistantTrigger.onmouseup = () => {
+      assistantTrigger.disabled = true
+      assistantTrigger.style.display = 'none'
+      initAssistant()
+  }
+  const chatTrigger = document.querySelector('#chat button')
+  chatTrigger.onmouseup = () => {
+      chatTrigger.disabled = true
+      chatTrigger.style.display = 'none'
+      initChat()
+  }
+}
+</script>
+
+<script src=https://cdn.jsdelivr.net/npm/webtorrent@latest/webtorrent.min.js></script>
+<script src=https://cdn.jsdelivr.net/npm/drag-drop@latest/dragdrop.min.js></script>
+<script type=module>
+const client = new WebTorrent()
+DragDrop('body', (files, pos, fileList, directories) => {
+  console.log(files[0])
+  // client.seed(files, torrent => {
+  //   console.log('Client is seeding ' + torrent.magnetURI)
+  // })
+})
+</script>
+
+</body>
+</html>
