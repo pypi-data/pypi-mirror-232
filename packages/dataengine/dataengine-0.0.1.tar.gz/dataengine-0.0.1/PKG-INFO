@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: dataengine
+Version: 0.0.1
+Summary: General purpose data engineering python package.
+Home-page: https://github.com/leealessandrini/dataengine
+Author: Daniel Lee Alessandrini
+Author-email: alessandrinil@gmail.com
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.9
+License-File: LICENSE
+
+# capsulecorp
+General python utilities package for working with public cloud services and big data
+
+[![codecov](https://codecov.io/gh/leealessandrini/capsulecorp/branch/main/graph/badge.svg)](https://codecov.io/gh/leealessandrini/capsulecorp)
