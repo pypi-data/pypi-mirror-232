@@ -1,0 +1,13 @@
+README.md
+pyproject.toml
+src/fshare/__init__.py
+src/fshare/__main__.py
+src/fshare/cli.py
+src/fshare/filemanager.py
+src/fshare/index.html
+src/fshare/index.js
+src/fshare/main.py
+src/fshare.egg-info/PKG-INFO
+src/fshare.egg-info/SOURCES.txt
+src/fshare.egg-info/dependency_links.txt
+src/fshare.egg-info/top_level.txt
