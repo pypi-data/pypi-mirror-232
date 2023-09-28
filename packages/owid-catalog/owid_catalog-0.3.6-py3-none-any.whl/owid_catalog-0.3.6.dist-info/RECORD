@@ -1,0 +1,16 @@
+owid/catalog/__init__.py,sha256=8Lz2WEd3CViU0uelXKiTIY1Hr080oZA3dRw0MX1iZwY,722
+owid/catalog/catalogs.py,sha256=m_eIFv_pZzh6lcTl702_-EksKYuFC9CpFvcQxjqo770,14728
+owid/catalog/datasets.py,sha256=7IrHGzi0vFCLGqoYO8mNG0CrmwidWncPut6ENk8llXg,11566
+owid/catalog/meta.py,sha256=UbrKcBW3s_7Phdn1bmsrL28rigHwkpL5ODlb4bC3Jz0,19519
+owid/catalog/processing.py,sha256=-Qdgt38PApsH5RJ76VvUjpWZcfvqx3PbEho2N9v--bM,452
+owid/catalog/properties.py,sha256=0YSGoUGusmNRojRHO0W1ZMjgU4yM-toxOqH63h-vijk,449
+owid/catalog/s3_utils.py,sha256=5yto9oMueq2QZhpA_y6lmAJ3RVBMtbKEsB9KMkxoD3E,2991
+owid/catalog/schemas/table.json,sha256=9kngxMHP1bcjKRGK47Lyv1g7EJ5_vJASSwMW_A_vAdA,532
+owid/catalog/schemas/variable.json,sha256=XSw2JOrZ8-nKxtlI_5HrxsNu4J6CuLS4zWmUFmxAhaE,527
+owid/catalog/tables.py,sha256=xdmQ8wTFTBTgJXXyhhW_lMESXdfz9Ky8zNVjx7TuhCc,63266
+owid/catalog/utils.py,sha256=3iJ5DGK6bM_Z30b2SJfnpMjp3G_XAUKxRWageu6UVM4,5064
+owid/catalog/variables.py,sha256=bDLjla-g1RRNMHyESg7rYHFUUvy8AtraQnKV9MngWDw,27889
+owid_catalog-0.3.6.dist-info/LICENSE,sha256=h3W2OEglx2jaOj145JoWav12nVTK1kHQm_vIsHayHyc,1079
+owid_catalog-0.3.6.dist-info/METADATA,sha256=x-a03P3rOehEZZlWvjoix011NRyyCGd928mBLE-Lc7o,9727
+owid_catalog-0.3.6.dist-info/WHEEL,sha256=Zb28QaM1gQi8f4VCBhsUklF61CTlNYfs9YAZn-TOGFk,88
+owid_catalog-0.3.6.dist-info/RECORD,,
