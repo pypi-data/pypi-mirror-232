@@ -1,0 +1,93 @@
+name: Tests
+
+on:
+  push:
+    branches:
+      - main
+      - dev
+  pull_request:
+    branches:
+      - main
+      - dev
+
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        os:
+          - ubuntu-latest
+          - macos-latest
+          - windows-latest
+        python-version:
+          - '3.8'
+          - '3.9'
+          - '3.10'
+          - '3.11'
+          - 'pypy3.8'
+          - 'pypy3.9'
+
+    defaults:
+      # Windows sucks. Force use bash instead of PowerShell
+      run:
+        shell: bash
+
+    runs-on: ${{ matrix.os }}
+
+    env:
+      # We disable some features for PyPy by this environment variable such as:
+      # – Installation of `fast` extras: `uvloop` on PyPy is useless and may be even slower
+      # than the default loop;
+      # – Coverage reports: code introspection disables any optimizations, so tests with
+      # coverage enabled are very slow on PyPy.
+      # More: https://www.pypy.org/performance.html
+      IS_PYPY: ${{ startswith(matrix.python-version, 'pypy') }}
+      # Windows has also some limitations:
+      # – Redis is not supported on GitHub Windows runners;
+      IS_WINDOWS: ${{ startswith(matrix.os, 'windows') }}
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python ${{ matrix.python-version }} on ${{ matrix.os }}
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: "pip"
+          cache-dependency-path: pyproject.toml
+
+      - name: Install project dependencies
+        run: |
+          pip install -e .[test,dev,compiler,runtime]
+
+      - name: Lint code
+        if: "env.IS_PYPY == 'false'"
+        run: |
+          ruff --format=github aiogram_i18n tests
+          black --check --diff aiogram_i18n tests examples
+
+      - name: Run tests
+        run: pytest --cov=aiogram_i18n --cov-config .coveragerc --cov-report=xml
+
+      - name: Check installable
+        if: "env.IS_WINDOWS == 'false'"
+        run: |
+          pip install build
+          python -m build --wheel .
+          mkdir try_install
+          cd try_install
+          virtualenv .venv
+          .venv/bin/pip install ../dist/*.whl
+          .venv/bin/python -c "import aiogram_i18n; print(aiogram_i18n.__version__)"
+
+      - name: Check installable on Windows
+        if: "env.IS_WINDOWS == 'true'"
+        run: |
+          pip install build
+          python -m build --wheel .
+          mkdir try_install
+          cd try_install
+          virtualenv .venv
+          .venv/Scripts/pip install ../dist/*.whl
+          .venv/Scripts/python -c "import aiogram_i18n; print(aiogram_i18n.__version__)"
