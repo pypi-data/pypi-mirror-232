@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_mail_template_attachment_admin,mail.template_related_attachment_category - admin,model_mail_template_related_attachment_category,base.group_system,1,1,1,1
+access_mail_template_attachment_all,mail.template_related_attachment_category - all,model_mail_template_related_attachment_category,,1,0,0,0

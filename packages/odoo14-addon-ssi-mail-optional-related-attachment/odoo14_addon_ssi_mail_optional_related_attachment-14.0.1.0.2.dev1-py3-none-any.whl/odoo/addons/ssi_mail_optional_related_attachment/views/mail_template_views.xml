@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2022 OpenSynergy Indonesia
+     Copyright 2022 PT. Simetri Sinergi Indonesia
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+<record id="mail_template_view_form" model="ir.ui.view">
+    <field name="name">mail.template form</field>
+    <field name="model">mail.template</field>
+    <field name="priority" eval="1" />
+    <field name="inherit_id" ref="mail.email_template_form" />
+    <field name="arch" type="xml">
+        <data>
+            <xpath expr="//page[@name='advanced_settings']/group[1]" position="after">
+                <group
+                        name="related_attachment"
+                        string="Related Attachments"
+                        colspan="4"
+                        col="2"
+                    >
+                    <field name="related_attachment_category_ids" nolabel="1">
+                        <tree editable="top">
+                            <field name="category_id" />
+                            <field name="sent_option" />
+                        </tree>
+                    </field>
+                </group>
+            </xpath>
+        </data>
+    </field>
+</record>
+</odoo>

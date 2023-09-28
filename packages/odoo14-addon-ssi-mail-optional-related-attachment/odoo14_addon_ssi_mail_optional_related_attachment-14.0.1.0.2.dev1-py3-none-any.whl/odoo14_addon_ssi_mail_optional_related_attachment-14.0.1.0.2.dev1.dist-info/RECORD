@@ -1,0 +1,13 @@
+odoo/addons/ssi_mail_optional_related_attachment/README.rst,sha256=Pb_A0m-kZCr5EuscgDJcUcG-5tSjrhg4fJVaVoKVHiI,1256
+odoo/addons/ssi_mail_optional_related_attachment/__init__.py,sha256=VAkFvJXefoz7CVUwbL97HBfpLAYmvQPYXfYs71LOpzU,181
+odoo/addons/ssi_mail_optional_related_attachment/__manifest__.py,sha256=6sKgHMN9oSGx6o-6-l8SqWgY5MNYFS8ndt1U26jQYGE,559
+odoo/addons/ssi_mail_optional_related_attachment/models/__init__.py,sha256=un8lgcs0iMjgnJrGXAtt5THgCmmfGARQR1okfpXd4_k,235
+odoo/addons/ssi_mail_optional_related_attachment/models/mail_template.py,sha256=gWQo-8ceKs4piaFjEQQ95WVJYPbNWRIGVrKsqleTHM0,2246
+odoo/addons/ssi_mail_optional_related_attachment/models/mail_template_related_attachment_category.py,sha256=iNm3o7JeBvTFD-Dfez8e8qJbzj2RHMWYNwKhsMpfKk8,952
+odoo/addons/ssi_mail_optional_related_attachment/security/ir.model.access.csv,sha256=VNUxe7s0XE6PQCnxfh-x9wmTJiD2YqhDBm0m3LGKHG0,380
+odoo/addons/ssi_mail_optional_related_attachment/static/description/icon.png,sha256=lNGJOSg4cMRfwPTfFKVT6d5B2N1N83iVpEEN1blqu1I,48333
+odoo/addons/ssi_mail_optional_related_attachment/views/mail_template_views.xml,sha256=KC-L5CUX5o24qmzWKfFxzVkA65Fx3dvzZje-nIZSt6o,1211
+odoo14_addon_ssi_mail_optional_related_attachment-14.0.1.0.2.dev1.dist-info/METADATA,sha256=ZYur36K6-FazudN-m76f6UtQzRWS-CRxswaFTZzz3pk,1846
+odoo14_addon_ssi_mail_optional_related_attachment-14.0.1.0.2.dev1.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
+odoo14_addon_ssi_mail_optional_related_attachment-14.0.1.0.2.dev1.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
+odoo14_addon_ssi_mail_optional_related_attachment-14.0.1.0.2.dev1.dist-info/RECORD,,
