@@ -1,0 +1,10 @@
+README.md
+setup.py
+cornojob_killer/__init__.py
+cornojob_killer/cli.py
+cornojob_killer.egg-info/PKG-INFO
+cornojob_killer.egg-info/SOURCES.txt
+cornojob_killer.egg-info/dependency_links.txt
+cornojob_killer.egg-info/entry_points.txt
+cornojob_killer.egg-info/requires.txt
+cornojob_killer.egg-info/top_level.txt
