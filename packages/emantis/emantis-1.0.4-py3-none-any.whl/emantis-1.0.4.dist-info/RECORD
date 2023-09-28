@@ -1,0 +1,13 @@
+emantis/__init__.py,sha256=ePlI_c4P8WKx5XFCWBtJsdnaXth_-6m2EiMfR_qekac,44
+emantis/cosmo_params.txt,sha256=NqE7p2Hg8kpeD2okiIisMKXsGtxFlpPQ-ToNCbYdJnE,8309
+emantis/kbins.h5,sha256=XKm_sWRlc6OCIMQ_b1_0g1h_cQAH7oXjro2hKJarPiQ,3496
+emantis/power_boosts_train.h5,sha256=zwN27ltSKrayfKGtAIAfapbX5T-wuSeU5VuRDwJPpUM,1515040
+emantis/powerspectrum_matter.py,sha256=eQylhUGO6fMv9gBR5bhJn2hCtX8huwOHWO2rpKW1jt4,30565
+emantis/data/fofr_matter_power_boost/cosmo_params.txt,sha256=NqE7p2Hg8kpeD2okiIisMKXsGtxFlpPQ-ToNCbYdJnE,8309
+emantis/data/fofr_matter_power_boost/kbins.h5,sha256=XKm_sWRlc6OCIMQ_b1_0g1h_cQAH7oXjro2hKJarPiQ,3496
+emantis/data/fofr_matter_power_boost/power_boosts_train.h5,sha256=zwN27ltSKrayfKGtAIAfapbX5T-wuSeU5VuRDwJPpUM,1515040
+emantis-1.0.4.dist-info/COPYING,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+emantis-1.0.4.dist-info/METADATA,sha256=l8Ep1owSGN12JSOeeWx8rTzjVyqJ2zPdfdB91-eCzws,3689
+emantis-1.0.4.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+emantis-1.0.4.dist-info/top_level.txt,sha256=-DNrmW4VGGslPHEcc_z_x7rJSWvCQKeNw249nUi9ccQ,8
+emantis-1.0.4.dist-info/RECORD,,
