@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: mkdocs-roamlinks-plugin-extra
+Version: 0.3.5
+Summary: Fork of @Jackiexiao mkdocs-roamlinks-plugin package with added support for special chars.
+Home-page: https://github.com/harttraveller/mkdocs-roamlinks-plugin-extra
+Author: harttraveller
+License: MIT
+Keywords: mkdocs
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: mkdocs >=1.0.4
+Provides-Extra: dev
+Requires-Dist: pytest ; extra == 'dev'
+
+# MkDocs Roamlinks Plugin + Extra
+
+**This is a fork of the original [mkdocs-roamlinks-plugin](https://github.com/Jackiexiao/mkdocs-roamlinks-plugin).**
+
+An MkDocs plugin that simplifies relative linking between documents and convert [[roamlinks]] for [vscode-foam](https://github.com/foambubble/foam) & [obsidian](https://obsidian.md)
+
+## Links
+
+- [PyPi](https://pypi.org/project/mkdocs-roamlinks-plugin-extra)
+- [Forked Repository](https://github.com/Jackiexiao/mkdocs-roamlinks-plugin)
+
+## Changes
+
+This plugin adds functionality to convert special characters like `>` to proper links.
+
+## Setup
+
+Install the plugin using pip:
+
+`pip install mkdocs-roamlinks-plugin-extra`
+
+## Usage
+
+Activate the plugin in `mkdocs.yml`:
+
+```yaml
+plugins:
+  - roamlinks_extra
+```
