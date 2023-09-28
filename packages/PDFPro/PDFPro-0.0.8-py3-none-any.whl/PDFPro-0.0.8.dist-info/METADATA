@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: PDFPro
+Version: 0.0.8
+Summary: Package for parsing a PDF file and extracting data from it
+Author: Maaz Musa
+Author-email: maazbin-musa@uiowa.edu
+Keywords: python,PDF
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Education
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+
+Package for parsing a PDF file and extracting data from it
