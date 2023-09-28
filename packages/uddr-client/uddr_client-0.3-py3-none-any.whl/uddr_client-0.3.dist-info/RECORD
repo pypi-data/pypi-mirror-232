@@ -1,0 +1,16 @@
+uddr_client/__init__.py,sha256=lmIHX_VAjVMhOgemtUwZQesQhFl9GwHT-YoVkQc_ppA,37
+uddr_client/client.py,sha256=JbnMhBAT5b-nBicMlrC_t7eADGrdOzeTh4dpMd6R_yw,2682
+uddr_client/connection.py,sha256=HTkNws9xENVNfNwAHBZc0WkV56hRz3l3_ttpV4e-saQ,3028
+uddr_client/response.py,sha256=hnp5jdiucEN94N7Gp9AavgxKhkz880gBEQ8Oqte9nCw,1571
+uddr_client/api/__init__.py,sha256=Maphlal9MpFlCV2sm56UyD08murtT-RgY6kZo3FvWYQ,33
+uddr_client/api/account.py,sha256=Ck-1kcbr_O2H1B69SkINsYItk4Qea_iou4lmjk3cz2o,1542
+uddr_client/api/api_client.py,sha256=t8LzAhfgXldyQP23pvetfYiZ3tBfUxmT889ghwju1ls,20080
+uddr_client/api/decision.py,sha256=1eoiWWa-53Jis3LlnF7G_CfCUJR3PmQgK_RJA1PgFDY,650
+uddr_client/doh/__init__.py,sha256=IjXtq337_7zE_gk201t-JThT_BHVZZn6vwVppWSZevA,33
+uddr_client/doh/doh_client.py,sha256=hdDfeWtlaBeQ8PTDcpc2wKsgPw83bKnwH1XvitN-h1Y,10487
+uddr_client/doh/ioc_parser.py,sha256=9NInhW4Go3AB75hp7F9zKrR1e8HOUfNZ_wS7hRcEC_c,1916
+uddr_client-0.3.dist-info/LICENSE.md,sha256=x-UJQbl7jlwXJ5PvLh_f43ttcgMepFzi3tfWYqWbTgg,1071
+uddr_client-0.3.dist-info/METADATA,sha256=z-Ts9xT7IklUFldW6aFe4gfKJv4rZ_O5khS89CzsmWo,4829
+uddr_client-0.3.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+uddr_client-0.3.dist-info/top_level.txt,sha256=Qst6AnUcIcIC9AAeq75pKJnzJgnXwvR6WtDnf_IX_DM,12
+uddr_client-0.3.dist-info/RECORD,,
