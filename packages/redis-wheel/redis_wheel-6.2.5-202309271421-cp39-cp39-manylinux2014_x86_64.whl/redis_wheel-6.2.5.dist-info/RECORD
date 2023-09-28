@@ -1,0 +1,7 @@
+redis_wheel/__init__.py,sha256=1uxYGmegNAhJ4W-vr-Ti3D8zachsRAj3Yi86a_xW9uA,209
+redis_wheel/bin/redis-cli,sha256=2R7kg9NNsQ_so_KFoB3pEE16zn89gYE9GiPXfGk8aEY,6590168
+redis_wheel/bin/redis-server,sha256=BKWOxjVPkuaEXWqBbjE9kce-bGEAqSqZmUsKE9makRM,12160016
+redis_wheel-6.2.5.dist-info/LICENSE,sha256=BItjMjO-EMYE1aZLJCldPIf_o6lly8fGSx2AKYsNVP4,1157
+redis_wheel-6.2.5.dist-info/METADATA,sha256=XuY-vszFSs3969XoTY-YG_1sY44d9_ucuKH_j-k-lKQ,1373
+redis_wheel-6.2.5.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+redis_wheel-6.2.5.dist-info/RECORD,,
