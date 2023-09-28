@@ -1,0 +1,10 @@
+gr_aggregation/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gr_aggregation/aggregation.py,sha256=bSo9qeJJ3hd7Z3UWQ_1fXNP0W0shpfAmrlafkQpEBkc,187
+gr_aggregation/borda_count.py,sha256=I-4gvPo0fMSfYUUl8tPdVthdix_k0ODJQKpynpC2lq4,1726
+gr_aggregation/ranking.py,sha256=ZFL3dCvuOuWygweMbT0SJTO4S3rxvwvx8Dqw4-rA5Rc,748
+gr_aggregation/user_items.py,sha256=m1WSZ0tZaFlc7gHuAXD5UK3XMthl9QvNQUS1wTtExrQ,1062
+gr_aggregation-0.0.1.dist-info/LICENSE,sha256=-tmnCPaYDp9kb0fE_0Mj3btP4m4FhUdL7M6tnZSDGNk,1064
+gr_aggregation-0.0.1.dist-info/METADATA,sha256=IDADY2IOBnwx9uX9TcWrphiebkMnm9rnfaiDWO4zzU4,416
+gr_aggregation-0.0.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+gr_aggregation-0.0.1.dist-info/top_level.txt,sha256=eJ6bGWkfHdMB583A6xBJ1bjSiBKm8nPBX24yVeo6XDQ,15
+gr_aggregation-0.0.1.dist-info/RECORD,,
