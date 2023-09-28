@@ -1,0 +1,5 @@
+setup.py
+blocket_franz_kafka.egg-info/PKG-INFO
+blocket_franz_kafka.egg-info/SOURCES.txt
+blocket_franz_kafka.egg-info/dependency_links.txt
+blocket_franz_kafka.egg-info/top_level.txt
