@@ -1,0 +1,4 @@
+[console_scripts]
+aiconsole=aiconsole.app:start
+backend=aiconsole.app:start_backend
+
