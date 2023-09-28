@@ -1,0 +1,25 @@
+[build-system]
+requires = [
+    "setuptools>=61.0",
+    "requests~=2.31.0",
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "soundingcenter"
+version = "0.0.2"
+authors = [
+    { name = "Niklas Wildenburg", email = "niklas.wildenburg@graw.de" },
+]
+description = "A python lib to use the sounding center api"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/GrawRadiosondes/sounding-center-python-api"
+"Bug Tracker" = "https://github.com/GrawRadiosondes/sounding-center-python-api/issues"
