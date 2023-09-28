@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: ARS_Test
+Version: 0.0.1
+Summary: Python package for ARS pass/fail test
+Home-page: https://github.com/NCATSTranslator/ARS_Test
+Author: Shervin Abdollahi, Mark Williams
+Author-email: shervin.abdollahi@Nih.gov, mark.williams5@nih.gov
+License: Public Domain
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+
+Translator Autonomous Relay System (ARS) Pass/Fail Testing 
+==========================================================
+
+This testing framework performs single level ARS pass/Fail test based on inputs from test runner. 
+
+# ARS_Test Implementation
+```bash
+pip install ARS_Test 
+```
+
+
+
+
+
+
