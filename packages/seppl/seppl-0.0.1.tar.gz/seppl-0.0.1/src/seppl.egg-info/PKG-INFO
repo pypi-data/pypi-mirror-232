@@ -1,0 +1,25 @@
+Metadata-Version: 1.1
+Name: seppl
+Version: 0.0.1
+Summary: Python3 library for parsing pipeline components with their own options.
+Home-page: https://github.com/waikato-datamining/seppl
+Author: Peter Reutemann
+Author-email: fracpete@waikato.ac.nz
+License: MIT License
+Description: Simple Entry Point PipeLines (seppl). Python library for parsing pipeline components with their own options. 
+        
+        
+        Changelog
+        =========
+        
+        0.0.1 (2023-09-28)
+        ------------------
+        
+        - initial release
+        
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Utilities
+Classifier: Programming Language :: Python :: 3
