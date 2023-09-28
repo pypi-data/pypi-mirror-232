@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+scr/AcrylicTK/AcrylicTK.py
+scr/AcrylicTK/__init__.py
+scr/AcrylicTK/_bkp.py
+scr/AcrylicTK.egg-info/PKG-INFO
+scr/AcrylicTK.egg-info/SOURCES.txt
+scr/AcrylicTK.egg-info/dependency_links.txt
+scr/AcrylicTK.egg-info/top_level.txt
