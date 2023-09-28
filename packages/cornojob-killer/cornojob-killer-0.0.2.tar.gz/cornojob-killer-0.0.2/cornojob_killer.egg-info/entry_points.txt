@@ -1,0 +1,3 @@
+[console_scripts]
+cornojob = cornojob_killer.cli:main
+
