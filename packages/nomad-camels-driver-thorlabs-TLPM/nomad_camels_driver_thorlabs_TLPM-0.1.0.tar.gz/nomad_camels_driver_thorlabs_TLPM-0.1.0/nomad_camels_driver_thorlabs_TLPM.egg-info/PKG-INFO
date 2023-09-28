@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: nomad-camels-driver-thorlabs-TLPM
+Version: 0.1.0
+Summary: Instrument driver for Thorlabs powermeters for NOMAD-CAMELS
+Author-email: FAIRmat - HU Berlin <nomad-camels@fau.de>
+Project-URL: GitHub Page, https://github.com/FAU-LAP/NOMAD-CAMELS
+Project-URL: GitHub Drivers, https://github.com/FAU-LAP/CAMELS_drivers
+Project-URL: Documentation, https://fau-lap.github.io/NOMAD-CAMELS/doc/instruments/instruments.html
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v2 (LGPLv2)
+Requires-Python: >=3.9.6
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: pylablib
+Requires-Dist: nomad-camels
+
+# NOMAD-CAMELS Driver for Thorlabs TLPM
+
+Driver for Thorlabs USB power-meters written for the measurement software [NOMAD-CAMELS](https://fau-lap.github.io/NOMAD-CAMELS/).
+
+## Installation
+To use this driver, files from Thorlabs are needed. You can download the software provided by Thorlabs on [their website](https://www.thorlabs.com/software_pages/ViewSoftwarePage.cfm?Code=OPM). If the driver does not work right away after installing the software, locate the files "TLPM.py" and "TLPM_64.dll" and copy them to driver's directory. Make sure you use the TLPM drivers in the Thorlabs Driver Switcher.
+
+## Features
+The wavelength can be set and the power can be read.
+
+
+## Documentation
+
+For more information visit the [documentation](https://fau-lap.github.io/NOMAD-CAMELS/doc/instruments/instruments.html).
