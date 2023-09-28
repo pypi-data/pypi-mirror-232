@@ -1,0 +1,14 @@
+strangeworks_remote_job/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+strangeworks_remote_job/app/__init__.py,sha256=v51GxLKmtoBEQxvUJtYQygKYen4bufeEwh_j4qD5n6g,3372
+strangeworks_remote_job/app/main.py,sha256=vuWWYMzGS8_tzLztXFniEu1MeYpvWpfRKc8poZHiLxM,1257
+strangeworks_remote_job/app/middleware.py,sha256=eEcYO5Pe2Sym6P1-1_PCq9qhdi9nwml0G50Ahx8d0P8,2022
+strangeworks_remote_job/app/routers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+strangeworks_remote_job/app/routers/backends.py,sha256=AhaHuQ2FVCb8IVale4kutbCrmMHLF7IOeOnaVrzZZ-g,601
+strangeworks_remote_job/app/routers/jobs.py,sha256=KY4qN_YiVuAlBOu3o7cV0MjdvxkFU5GxgCKMM3lvwLo,1755
+strangeworks_remote_job/app/routers/types/job.py,sha256=mELN09-1j7f5NoA7RAqYZb8YTy9I02nDiQFtTDmbn_E,745
+strangeworks_remote_job/artifact.py,sha256=drVCeU0KekTNBrcL6lOc2YFZI3QULuWrF8cMZ837nfM,1896
+strangeworks_remote_job/basic.py,sha256=JXiY5e5r6Jg1nVPVv2s8kLCaMo9oRqBql85xHzr3Hds,7608
+strangeworks_remote_job/remote.py,sha256=lREVx6L88dEH-shZ0FOQwZKsJ8TJjX8TrJOa-U_uABY,1589
+remote_job_app-0.1.0.dist-info/METADATA,sha256=XQtHGYjBiWXQhG97BDrF3S52yA6NGTo3QJJ3mocau4M,618
+remote_job_app-0.1.0.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+remote_job_app-0.1.0.dist-info/RECORD,,
