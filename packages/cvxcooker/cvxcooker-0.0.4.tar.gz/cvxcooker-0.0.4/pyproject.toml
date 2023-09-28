@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "cvxcooker"
+version = "v0.0.4"
+description = "..."
+authors = ["Thomas Schmelzer"]
+readme = "README.md"
+repository = "https://github.com/cvxgrp/boilerplate"
+packages = [{include = "cvx"}]
+homepage = "https://www.cvxgrp.com/boilerplate"
+
+[tool.poetry.dependencies]
+python = ">=3.9.0,<3.12"
+jinja2= "*"
+toml = "*"
+fire = "*"
+loguru = "*"
+
+[tool.poetry.dev-dependencies]
+pytest = "*"
+pytest-cov = "*"
+
+[tool.poetry.scripts]
+cook = "cvx.cook:main"
+
+[build-system]
+requires = ["poetry>=1.6.0"]
+build-backend = "poetry.masonry.api"
