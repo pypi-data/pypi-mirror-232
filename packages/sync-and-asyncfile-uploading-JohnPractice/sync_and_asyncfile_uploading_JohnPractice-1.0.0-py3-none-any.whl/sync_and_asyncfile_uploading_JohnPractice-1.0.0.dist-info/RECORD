@@ -1,0 +1,9 @@
+src/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+src/async_upload.py,sha256=jjlV7l5JFp5gvgdSG1ue-iRn4WiERtc1NKN8UVwuqbo,702
+src/sync_upload.py,sha256=mqY8ow2l6szbxmWiMtvROkgyw5_-_xACRu4NsFurY9A,573
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sync_and_asyncfile_uploading_JohnPractice-1.0.0.dist-info/LICENSE,sha256=9e-S1L18vi94-p-jh4ue8kMydihT4O_71BbZIP0DhQY,1068
+sync_and_asyncfile_uploading_JohnPractice-1.0.0.dist-info/METADATA,sha256=Tx8M570fEpwthLiKP1M8q-5FjxK2T3ZpKPFpUz2ARSk,537
+sync_and_asyncfile_uploading_JohnPractice-1.0.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+sync_and_asyncfile_uploading_JohnPractice-1.0.0.dist-info/top_level.txt,sha256=KW3xgkz9NLMTcmmzgKvW8RFpCFkRIQ085qzq2diFf68,10
+sync_and_asyncfile_uploading_JohnPractice-1.0.0.dist-info/RECORD,,
