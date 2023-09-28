@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: online-policy-adaptation-using-rollout
+Version: 1.0.0
+Summary: NOMS2024 paper: Online Policy Adaptation for Networked Systems Using Rollout
+Author: Forough Shahabsamani and Kim Hammar
+Author-email: hammar.kim@gmail.com
+License: Creative Commons Attribution-ShareAlike 4.0 International
+Keywords: Reinforcement-Learning Markov-Decision-Processes Rollout Networked Systems Resource Management
+Platform: unix
+Platform: linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Intended Audience :: Science/Research
+Requires-Python: >=3.8
+Requires-Dist: numpy >=1.23.5
+Requires-Dist: gym ==0.21.0
+Requires-Dist: gymnasium ==0.29.1
+Requires-Dist: joblib ==1.2.0
+Requires-Dist: matplotlib ==3.7.2
+Requires-Dist: pandas ==2.0.3
+Requires-Dist: requests ==2.31.0
+Requires-Dist: sb3-contrib ==1.7.0
+Requires-Dist: scikit-learn ==1.1.2
+Requires-Dist: scipy ==1.10.1
+Requires-Dist: stable-baselines3 ==1.7.0
+Requires-Dist: torch ==2.0.1
+Requires-Dist: torchvision ==0.15.2
+Provides-Extra: testing
+Requires-Dist: flake8 >=6.1.0 ; extra == 'testing'
+Requires-Dist: tox >=3.24 ; extra == 'testing'
+Requires-Dist: twine >=4.0.2 ; extra == 'testing'
+Requires-Dist: build >=0.10.0 ; extra == 'testing'
+
