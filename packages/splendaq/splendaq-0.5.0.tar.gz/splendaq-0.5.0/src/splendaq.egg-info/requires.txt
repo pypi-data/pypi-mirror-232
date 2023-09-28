@@ -1,0 +1,6 @@
+numpy
+scipy
+matplotlib
+moku>=3.0.0
+h5py
+pyyaml
