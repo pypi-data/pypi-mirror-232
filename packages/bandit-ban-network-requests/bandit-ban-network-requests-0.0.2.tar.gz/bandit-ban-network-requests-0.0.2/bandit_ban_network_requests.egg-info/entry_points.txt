@@ -1,0 +1,2 @@
+[bandit.plugins]
+ban_network_requests = bandit_plugins.ban_network_requests:ban_network_requests

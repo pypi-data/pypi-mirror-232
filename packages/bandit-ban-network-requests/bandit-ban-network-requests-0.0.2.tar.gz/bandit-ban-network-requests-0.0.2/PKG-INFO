@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: bandit-ban-network-requests
+Version: 0.0.2
+Summary: Ban all network requests.
+Author: Asad Iqbal
+License-File: AUTHORS
+Requires-Dist: bandit
+
+A bandit plugin that will ban all network requests.
