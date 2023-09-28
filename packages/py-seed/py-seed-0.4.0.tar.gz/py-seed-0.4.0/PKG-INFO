@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: py-seed
+Version: 0.4.0
+Summary: A Python API client for the SEED Platform
+Home-page: https://github.com/seed-platform/py-seed
+Author: Nicholas Long, Katherine Fleming, Fable Turas, Paul Munday
+Author-email: nicholas.long@nrel.gov, fable@raintechpdx.com, paul@paulmunday.net
+Maintainer: NREL
+Maintainer-email: nicholas.long@nrel.gov
+Keywords: seed,api
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+License-File: LICENSE
