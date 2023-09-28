@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: skip-types
+Version: 0.1.0
+Summary: A helper library to interact with block-sdk.
+Home-page: http://packages.python.org/an_example_pypi_project
+Author: Jan Fabián
+Author-email: jan@skip.money
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+License-File: LICENCE.txt
+Requires-Dist: setuptools>=61.0
+Requires-Dist: cosmpy==0.6.0
