@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+src/pyucc/__init__.py
+src/pyucc/cli.py
+src/pyucc/colors.py
+src/pyucc/console.py
+src/pyucc/errors.py
+src/pyucc/symbols.py
+src/pyucc.egg-info/PKG-INFO
+src/pyucc.egg-info/SOURCES.txt
+src/pyucc.egg-info/dependency_links.txt
+src/pyucc.egg-info/entry_points.txt
+src/pyucc.egg-info/top_level.txt
