@@ -1,0 +1,28 @@
+{
+  "_lib-03c8c438.js": {
+    "file": "lib-03c8c438.js"
+  },
+  "_lib-f37c6196.cjs": {
+    "file": "lib-f37c6196.cjs"
+  },
+  "src/lib.ts": {
+    "file": "lib.cjs",
+    "imports": [
+      "_lib-f37c6196.cjs"
+    ],
+    "isEntry": true,
+    "src": "src/lib.ts"
+  },
+  "src/main.tsx": {
+    "file": "main.cjs",
+    "imports": [
+      "_lib-f37c6196.cjs"
+    ],
+    "isEntry": true,
+    "src": "src/main.tsx"
+  },
+  "style.css": {
+    "file": "style.css",
+    "src": "style.css"
+  }
+}
