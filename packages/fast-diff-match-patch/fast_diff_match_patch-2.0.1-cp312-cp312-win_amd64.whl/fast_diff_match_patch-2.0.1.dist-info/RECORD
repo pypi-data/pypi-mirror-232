@@ -1,0 +1,9 @@
+fast_diff_match_patch.cp312-win_amd64.pyd,sha256=M0qsR1iCnUkNNsO77NitpE6_P0r79peCVMPj8QY0A1s,147456
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_diff.py,sha256=yKbKLcU_4MRMI38t8ETF0TcVC6Sq15NByMHgx0lLwGk,3666
+tests/test_match.py,sha256=ThOAmCVgrp6OQNVMPlxlZfFCYfanMHwbROkhUR0gGJk,1160
+fast_diff_match_patch-2.0.1.dist-info/LICENSE,sha256=3B9dLUPFUx3-Csr06VDqXb4-YeGFDPDpg72n78ENZpM,10464
+fast_diff_match_patch-2.0.1.dist-info/METADATA,sha256=CmAWQDKLHc_MH8zWlwh_Dr502NJ1gcl1nTwTAKLKLKI,5910
+fast_diff_match_patch-2.0.1.dist-info/WHEEL,sha256=aDrgWfEd5Ac7WJzHsr90rcMGiH4MHbAXoCWpyP5CEBc,102
+fast_diff_match_patch-2.0.1.dist-info/top_level.txt,sha256=O-qxb1cRfJa9JwTEFY4gqzq6cIdKWCKsZ9-JCZa7ang,28
+fast_diff_match_patch-2.0.1.dist-info/RECORD,,
