@@ -1,0 +1,2 @@
+[console_scripts]
+email_forwarding_checker = email_forwarding_checker:__main__
