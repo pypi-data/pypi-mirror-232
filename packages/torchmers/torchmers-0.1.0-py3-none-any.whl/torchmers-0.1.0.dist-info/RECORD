@@ -1,0 +1,9 @@
+torchmers/__init__.py,sha256=41_MnqkIGAL01fn8V-p3bESbkHzVhrySF5-ujIc43Xs,87
+torchmers/constants.py,sha256=X_nlZpLS74tHI_B6ZR-tyo8IVNrkMjH8pJ3veCAbd0A,21
+torchmers/counting.py,sha256=uO58mtLeZQhrtSFlh5k70fV1jVN8oFGXrLHkXvQ6GP4,3103
+torchmers/modules.py,sha256=L4iUM56zRnJTDwIxTEPCg7t2coXWDYQao7uM8qhcdHU,2369
+torchmers/tokenizers.py,sha256=Hmsf7d0_sze1Zp4op5eiuju7Ga0F7K82vQvAe_vmC7c,1727
+torchmers/utils.py,sha256=OE_VmHJAKQNVDIkBD89jg6akR3RTv1JdjxGaisZOPJw,377
+torchmers-0.1.0.dist-info/METADATA,sha256=--T1H6h_0_yHVsPIkJoSNo0zgCzyR4xDgdbM4P3zYeo,5333
+torchmers-0.1.0.dist-info/WHEEL,sha256=Zb28QaM1gQi8f4VCBhsUklF61CTlNYfs9YAZn-TOGFk,88
+torchmers-0.1.0.dist-info/RECORD,,
