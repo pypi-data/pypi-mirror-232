@@ -1,0 +1,35 @@
+Copyright (c) 2012-2018, SINTEF Industry and Department of Materials
+Science and Engineering, Norwegian University of Science and
+Engineering (NTNU)
+All rights reserved.
+
+This software may be used, brought in as project background
+independently by the copyright owners or, if agreed on by both
+copyright owners, made available with or without royalties, for
+in-house use by other partners provided that the following conditions
+are met:
+
+    * The source code and modified versions of it must retain the
+      above copyright notice, this list of conditions and the
+      following disclaimer.  This does not include code that uses this
+      software as a library.
+
+    * The source code and modified versions of it, including compiled
+      binaries, should not be redistributed to third parties without
+      specific prior written permission.
+
+    * The names of its contributors may not be used to endorse or
+      promote products derived from this software without specific
+      prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
