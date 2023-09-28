@@ -1,0 +1,9 @@
+mitmproxy_macos/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mitmproxy_macos/macos-certificate-truster.app/Contents/Info.plist,sha256=xMt4v9fvXmu66CElVbkPvCHd6nY0jT0ZWVCRmd9g8jA,957
+mitmproxy_macos/macos-certificate-truster.app/Contents/Resources/mitmproxy.icns,sha256=E5rSIoq3prXFOkgmt1GC19aLw36NWjkIZ4SfOCG_Isg,154566
+version-info.toml,sha256=Qu4XIw5z15Fnx3vBMDueI4rySzEcqKUSfJxdLhBuShQ,2236
+mitmproxy_macos/Mitmproxy Redirector.app.tar,sha256=EWX3tiPolCoR5ocpIrbtJ_JA5bd7mR5jsM2f4Cx59R0,6793216
+mitmproxy_macos/macos-certificate-truster.app/Contents/MacOS/macos-certificate-truster,sha256=ymCiRv4q_Xj8jFXQJmHMHJuihGhHPCvgXV1RCljkkrE,912631
+mitmproxy_macos-0.3.10.dist-info/METADATA,sha256=N6KGna4OBQaPm6d2X_Yva8A2fCRyLbP2pK3qkYUa6T0,518
+mitmproxy_macos-0.3.10.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+mitmproxy_macos-0.3.10.dist-info/RECORD,,
