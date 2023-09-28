@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: nastranio
+Version: 0.16.0
+Summary: Efficient Nastran Parser
+Home-page: UNKNOWN
+Author: Nicolas Cordier
+Author-email: nicolas.cordier@numeric-gmbh.ch
+License: UNKNOWN
+Keywords: nastranio
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.8
+License-File: LICENSE
+License-File: AUTHORS.rst
+
+=========
+NastranIO
+=========
+
+
+
+
+Efficient Nastran Parser
+
+
+
+Features
+--------
+
+* TODO
+
+
+
+=======
+History
+=======
+
+0.1.0 (2019-11-20)
+------------------
+
+* First release on PyPI.
+
+

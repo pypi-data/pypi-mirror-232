@@ -1,0 +1,121 @@
+{
+    "format": 2,
+    "exec": {
+        "SOL": "SESTATIC"
+    },
+    "params": {
+        "PRGPST": "YES",
+        "POST": -1,
+        "OGEOM": "NO",
+        "AUTOSPC": "YES",
+        "K6ROT": 100.0,
+        "GRDPNT": 0,
+        "SKIPMGG": "YES",
+        "CHKGRDS": "NO"
+    },
+    "cases": {
+        "default": {
+            "id": -1,
+            "TITLE": "LCID1",
+            "ECHO": "NONE",
+            "DISPLACEMENT(PLOT)": "ALL",
+            "$ SPC": 1,
+            "$ LOAD": 1
+        }
+    },
+    "attributes": {
+        "materials": {
+            "1": {
+                "card": "MAT1",
+                "params": {
+                    "E": 7000000.0,
+                    "NU": 0.33,
+                    "RHO": 5000.5
+                }
+            },
+            "2": {
+                "card": "MAT1",
+                "params": {
+                    "E": 8000000.0,
+                    "NU": 0.33,
+                    "RHO": 5000.5
+                }
+            }
+        },
+        "properties": {
+            "1": {
+                "card": "PBAR",
+                "params": {
+                    "MID": 1,
+                    "A": 50.0,
+                    "I1": 18.0,
+                    "I2": 18.0,
+                    "J": 0.1,
+                    "I12": 0.0
+                }
+            },
+            "2": {
+                "card": "PBUSH",
+                "params": {
+                    "K": "K",
+                    "K1": 10000.0,
+                    "K2": 10000.0,
+                    "K3": 10000.0,
+                    "K4": 10000.0,
+                    "K5": 10000.0,
+                    "K6": 10000.0
+                }
+            }
+
+        },
+        "affectations": {
+            "bot_rectangle": {
+                "PID": 1,
+                "GO/X1": 0.0,
+                "CID": 0,
+                "X2": 0.0,
+                "X3": 1.0
+            },
+            "montants": {
+                "PID": 1,
+                "GO/X1": 1.0,
+                "CID": 0,
+                "X2": 0.0,
+                "X3": 0.0
+            },
+            "top_rectangle": {
+                "PID": 1,
+                "GO/X1": 0.0,
+                "CID": 0,
+                "X2": 0.0,
+                "X3": 1.0
+            }
+        },
+        "boundaries": {
+            "1": {
+                "SPC": {
+                    "card": "SPC1",
+                    "params": {
+                        "C": "123456"
+                    }
+                }
+            }
+        },
+        "loading": {
+            "1": {
+                "LOADING": {
+                    "card": "FORCE",
+                    "params": {
+                        "CID": 0,
+                        "F": 1.0,
+                        "N1": 100.0,
+                        "N2": 0.0,
+                        "N3": 0.0,
+                        "as_sum": false,
+                        "exclusive": false
+                    }
+                }
+            }
+        }
+    }
+}

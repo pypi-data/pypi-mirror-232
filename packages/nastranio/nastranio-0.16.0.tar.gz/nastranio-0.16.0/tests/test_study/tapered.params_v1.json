@@ -1,0 +1,161 @@
+{
+  "format": 1,
+  "exec": {
+    "SOL": "STATICS"
+  },
+  "params": {
+    "PRGPST": "YES",
+    "POST": -1,
+    "OGEOM": "NO",
+    "AUTOSPC": "YES",
+    "K6ROT": 100.0,
+    "GRDPNT": 0
+  },
+  "cases": {
+    "default": {
+      "id": -1,
+      "TITLE": "LCID1",
+      "ECHO": "NONE",
+      "DISPLACEMENT(PLOT)": "ALL",
+      "SPCFORCE(PLOT)": "ALL",
+      "OLOAD(PLOT)": "ALL",
+      "FORCE(PLOT,CORNER)": "ALL",
+      "STRESS(PLOT,CORNER)": "ALL",
+      "SPC": 1,
+      "LOAD": 1
+    }
+  },
+  "attributes": {
+    "materials": {
+      "1": [
+        "MAT1",
+        {
+          "E": 27000.0,
+          "NU": 1.33
+        }
+      ]
+    },
+    "properties": {
+      "4": [
+        "PCOMP",
+        {
+          "NSM": 0.0
+        }
+      ],
+      "3": [
+        "PSHELL",
+        {
+          "MID1": 1,
+          "T": 0.03,
+          "MID2": 1,
+          "MID3": 1
+        }
+      ],
+      "2": [
+        "PSHELL",
+        {
+          "MID1": 1,
+          "T": 0.08,
+          "MID2": 1,
+          "MID3": 1
+        }
+      ],
+      "1": [
+        "PBAR",
+        {
+          "MID": 1,
+          "A": 1.0,
+          "I1": 12.0,
+          "I2": 13.0
+        }
+      ]
+    },
+    "affectations": {
+      "flanges": {
+        "PID": 3,
+        "ZOFFS": 0.1
+      },
+      "web": {
+        "PID": 4
+      },
+      "cs#1": {
+        "PID": 1,
+        "GO/X1": 1.0,
+        "X2": 0.0,
+        "X3": 0.0
+      }
+    },
+    "boundaries": {
+      "1": {
+        "cs#3": [
+          "SPC1",
+          {
+            "C": "123"
+          }
+        ],
+        "cs#5": [
+          "SPC1",
+          {
+            "C": "123456"
+          }
+        ]
+      },
+      "2": {
+        "cs#3": [
+          "SPC1",
+          {
+            "C": "1234"
+          }
+        ]
+      }
+    },
+    "loading": {
+      "1": {
+        "cs#2": [
+          "FORCE",
+          {
+            "CID": 0,
+            "F": 1.0,
+            "N1": 0.0,
+            "N2": 1500.2,
+            "N3": 0.0,
+            "as_sum": true
+          }
+        ],
+        "cs#4": [
+          "MOMENT",
+          {
+            "CID": 0,
+            "M": 1.0,
+            "N1": 0.0,
+            "N2": 1500.2,
+            "N3": 0.0,
+            "as_sum": true
+          }
+        ],
+        "*": [
+          "GRAV",
+          {
+            "CID": 0,
+            "A": 1.0,
+            "N1": 0.0,
+            "N2": -9.0,
+            "N3": 0.0
+          }
+        ]
+      },
+      "2": {
+        "cs#4": [
+          "FORCE",
+          {
+            "CID": 0,
+            "F": 1.0,
+            "N1": 0.0,
+            "N2": 1500.2,
+            "N3": 0.0
+          }
+        ]
+      }
+    }
+  }
+}
