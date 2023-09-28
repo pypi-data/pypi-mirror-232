@@ -1,0 +1,3 @@
+[console_scripts]
+schnitsum=schnitsum.bin.summarize:cli
+

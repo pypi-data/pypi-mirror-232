@@ -1,0 +1,8 @@
+schnitsum/__init__.py,sha256=24p9M7Ygs_NQSizPWRWwyRO9UnyC1PRoDdqIyvYuj34,37
+schnitsum/bin/summarize.py,sha256=sKnjF3TUpXojwH0Tk4tolA-bHlGxvQq-1Bax1GRUw-4,693
+schnitsum/main.py,sha256=5V0yst0YYOzaCAKHGetJrqoSJY2ACiXSnyEEzFUyXEQ,2709
+schnitsum-0.4.10.dist-info/entry_points.txt,sha256=N761-PNSTgCEGheUAVWoZ-RZflSxL4gMpa7cfrjuKcE,57
+schnitsum-0.4.10.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+schnitsum-0.4.10.dist-info/WHEEL,sha256=vxFmldFsRN_Hx10GDvsdv1wroKq8r5Lzvjp6GZ4OO8c,88
+schnitsum-0.4.10.dist-info/METADATA,sha256=N4RmwxjAq5Iq4gpDFQdiQ1C7XHhVTT5UZXL3V2giR3Q,3172
+schnitsum-0.4.10.dist-info/RECORD,,
