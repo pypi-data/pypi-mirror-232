@@ -1,0 +1,74 @@
+Post-processing-library-llm
+===========================
+
+Post-processing-library-llm is a Python library for Named Entity Recognition (NER) and text matching tasks. It provides a set of functions and classes to perform NER and text matching with various algorithms and options.
+
+Features
+--------
+
+- **Named Entity Recognition (NER):**
+  - Identify entities in text documents.
+  - Support for fuzzy matching to handle minor text variations.
+  - Evaluate and compare predicted entities with ground truth.
+
+- **Text Matching:**
+  - Compare two text strings using different algorithms.
+  - Options for direct matching, token overlap, and cosine similarity.
+  - Calculate precision, recall, F1 score, and other metrics for text matching.
+
+Installation
+------------
+
+You can install Post-processing-library-llm  library using pip:
+
+.. code-block:: shell
+
+   pip install Post-processing-library-llm
+
+Named Entity Recognition (NER)
+-------------------------------
+
+Named Entity Recognition (NER) is a common task in natural language processing (NLP) where you identify and classify entities in text data.
+
+In this example, we'll use the Post-processing-library-llm to perform NER on a set of documents and evaluate the results.
+
+.. code-block:: python
+
+   from post_processing_library_llm.ner import ner
+
+   # Define ground truth and prediction dictionaries
+   truth_dict = {
+       'airplane': ["Boeing B-52 Stratofortress", "predator drone"]
+   }
+   prediction_dict = {
+       'airplane': ["drone", "sparrow"]
+   }
+
+   # Perform NER and get results
+   ner_results = ner.named_entity_recognition(truth_dict, prediction_dict, fuzzy_threshold)
+
+   # Print the results
+   print(results)
+
+Text Matching Example
+----------------------
+
+Here's an example of how to perform Text Matching using the `Post-processing-library-llm` library:
+
+Text Matching involves comparing two text strings and determining how similar or different they are. The post_processing_library_llm provides various text matching algorithms, including direct matching, token overlap, and cosine similarity.
+
+In this example, we'll use the Text Matcher to compare a list of ground truth texts with predicted texts and calculate matching metrics.
+
+.. code-block:: python
+
+   from post_processing_library_llm.get_metrics import TextMatcher
+
+   # Define ground truth and prediction lists
+   truth_list = ["this is a ball", "cat", "Toyota Camry"]
+   pred_list = ["this is a ball", "Ford Mustang", "Toyota Corolla"]
+
+   # Perform text matching with cosine similarity
+   metrics = text_matcher.match_texts(truth_list, pred_list, match_type='cosine_similarity')
+
+   # Print the metrics
+   print(metrics)
