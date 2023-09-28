@@ -1,0 +1,17 @@
+CLA.md
+License.txt
+README.md
+legal_notices.txt
+pyproject.toml
+setup.cfg
+src/opentip/__init__.py
+src/opentip/__main__.py
+src/opentip/check_iocs.py
+src/opentip/client.py
+src/opentip/crontab.py
+src/opentip/linux.py
+src/opentip.egg-info/PKG-INFO
+src/opentip.egg-info/SOURCES.txt
+src/opentip.egg-info/dependency_links.txt
+src/opentip.egg-info/entry_points.txt
+src/opentip.egg-info/top_level.txt
