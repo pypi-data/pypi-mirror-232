@@ -1,0 +1,11 @@
+.gitignore
+LICENSE
+README.md
+pyproject.toml
+yamlstore.py
+tests/test_yamlstore.py
+yamlstore.egg-info/PKG-INFO
+yamlstore.egg-info/SOURCES.txt
+yamlstore.egg-info/dependency_links.txt
+yamlstore.egg-info/requires.txt
+yamlstore.egg-info/top_level.txt
