@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+./montu/__init__.py
+./montu/version.py
+./montu/data/montu.png
+montu.egg-info/PKG-INFO
+montu.egg-info/SOURCES.txt
+montu.egg-info/dependency_links.txt
+montu.egg-info/entry_points.txt
+montu.egg-info/requires.txt
+montu.egg-info/top_level.txt
