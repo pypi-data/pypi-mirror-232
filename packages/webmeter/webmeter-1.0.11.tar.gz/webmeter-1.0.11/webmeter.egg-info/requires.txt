@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+requests
+loguru
+fire
+pyfiglet
+psutil
+pyyaml
+python-multipart
+sqlalchemy

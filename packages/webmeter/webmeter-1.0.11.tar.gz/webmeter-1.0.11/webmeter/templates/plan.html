@@ -1,0 +1,1415 @@
+
+
+<!doctype html>
+<!--
+* WebMeter - A web api-performance tool based on jmeter.
+* @Author - Rafa Chen
+* Copyright ©2023 WebMeter
+-->
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link rel="icon" href="/static/image/logo.png">
+
+    <title>WebMeter -  TEST PLAN</title>
+    <!-- CSS files -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/core@latest/dist/css/tabler.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/element-plus/dist/index.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css">
+</head>
+<body class="Body">
+<div class="page" id="app">
+    <header class="navbar navbar-expand-md navbar-light d-print-none">
+        <div class="container-xl">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <h1 class="navbar-brand navbar-brand-autodark d-none-navbar-horizontal pe-0 pe-md-3">
+                <a href=".">
+                    <img src="/static/image/logo.png" width="110" height="32" alt="WebMeter" class="navbar-brand-image">
+                </a>
+            </h1>
+            <div class="collapse navbar-collapse" id="navbar-menu" style="margin-left: 20px;">
+                <div class="d-flex flex-column flex-md-row flex-fill align-items-stretch align-items-md-center">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active" style="margin-left: 20px;font-weight: bolder;">
+                            <a class="nav-link" href="/plan" >
+                                <span class="nav-link-icon d-md-none d-lg-inline-block">
+                                    <svg t="1691481964005" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="11530" width="320" height="320"><path d="M874.15 750.71L623.92 311.53V72.4H400.09v239.13L149.86 750.71c-51.04 89.59 13.65 200.92 116.77 200.92h490.76c103.11 0 167.81-111.33 116.76-200.92z" fill="#FFFFFF" p-id="11531"></path><path d="M881.44 746.61l-249.09-437.3V80.8h79.14c4.66 0 8.4-3.77 8.4-8.4s-3.74-8.4-8.4-8.4H312.52c-4.66 0-8.4 3.77-8.4 8.4s3.74 8.4 8.4 8.4h79.2v228.54L142.56 746.61c-25.46 44.69-25.26 97.9 0.59 142.33 25.85 44.49 71.98 71.07 123.5 71.07h490.77c51.45 0 97.58-26.58 123.43-71.07 25.85-44.43 26.05-97.65 0.59-142.33zM615.55 80.8v222.32H408.52V80.8h207.03z m250.79 799.73c-22.84 39.24-63.52 62.67-108.93 62.67H266.65c-45.41 0-86.16-23.43-108.99-62.67-22.77-39.24-22.97-86.22-0.52-125.66l247.84-434.96H619.1l247.78 434.96c22.43 39.44 22.23 86.42-0.54 125.66z" fill="#252526" p-id="11532"></path><path d="M157.66 880.52c22.84 39.31 63.59 62.73 108.99 62.73h490.77c45.41 0 86.09-23.43 108.93-62.67 22.77-39.31 22.97-86.29 0.52-125.73l-27.23-47.8c-90.01 21.45-184.12 19.64-272.63-8.88l-55-17.72c-96.99-37-202.42-42.38-302.39-17.72l-52.49 92.12c-22.43 39.44-22.24 86.43 0.53 125.67z" fill="#4FAEC9" p-id="11533"></path></svg>
+                                </span>
+                                <span class="nav-link-title strong-text" v-text="language.plan_page_title"></span>
+                            </a>
+                        </li>
+                        <li class="nav-item"  style="margin-left: 20px;font-weight: bolder;">
+                            <a class="nav-link" href="/result" >
+                                <span class="nav-link-icon d-md-none d-lg-inline-block">
+                                    <svg t="1690875909592" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="26542" width="320" height="320"><path d="M244.224 370.78016h526.336c48.64 0 87.552 39.424 87.552 87.552v292.352c0 48.64-39.424 87.552-87.552 87.552H244.224c-48.64 0-87.552-39.424-87.552-87.552v-292.352c-0.512-48.128 38.912-87.552 87.552-87.552z" fill="#CAE4FF" p-id="26543"></path><path d="M760.832 983.30624H245.76c-114.176 0-206.848-92.672-206.848-206.848v-357.888c0-114.176 92.672-206.336 206.848-206.848h515.072c114.176 0 206.336 92.672 206.848 206.848v357.888c0 114.176-92.672 206.848-206.848 206.848zM245.76 270.09024c-81.92 0-148.48 66.56-148.48 148.48v357.888c0 81.92 66.56 148.48 148.48 148.48h515.072c81.92 0 148.48-66.56 148.48-148.48v-357.888c0-81.92-66.56-148.48-148.48-148.48H245.76z" fill="#0972E7" p-id="26544"></path><path d="M303.616 748.29824c0.512 14.848-11.264 27.648-26.112 28.16-14.848 0.512-27.648-11.264-28.16-26.112v-291.328c0.512-14.848 13.312-26.624 28.16-26.112 14.336 0.512 25.6 11.776 26.112 26.112v289.28z" fill="#0972E7" p-id="26545"></path><path d="M742.912 758.53824c0 13.824-11.264 25.088-25.088 25.088H274.432c-13.824 0.512-25.6-9.728-26.112-23.552-0.512-13.824 9.728-25.6 23.552-26.112h446.464c13.312 0 24.576 11.264 24.576 24.576z m-261.12-224.768c-9.728-10.24-26.112-10.24-36.352-0.512l-78.848 79.36c-10.24 10.24-10.24 26.624 0 36.864 9.728 10.24 26.112 10.24 36.352 0.512l79.36-78.848c9.728-10.752 9.728-27.136-0.512-37.376z" fill="#0972E7" p-id="26546"></path><path d="M564.736 648.97024c10.24-9.728 10.24-26.112 0-36.352l-79.36-78.848c-10.24-10.24-26.624-10.24-36.864 0-10.24 9.728-10.24 26.112 0 36.352l78.848 78.848c10.752 10.24 27.136 10.24 37.376 0z" fill="#0972E7" p-id="26547"></path><path d="M649.216 533.77024c-9.728-10.24-26.112-10.24-36.352-0.512l-79.36 78.848c-10.24 10.24-10.24 26.624 0 36.864 9.728 10.24 26.112 10.24 36.352 0.512l79.36-78.848c9.728-10.24 9.728-26.624 0-36.864z" fill="#0972E7" p-id="26548"></path><path d="M714.24 468.74624c-9.728-10.24-26.112-10.24-36.352-0.512l-79.36 78.848c-10.24 10.24-10.24 26.624 0 36.864 9.728 10.24 26.112 10.24 36.352 0.512l79.36-78.848c10.24-10.24 10.24-27.136 0-36.864zM97.792 404.74624H39.936c0-51.2-0.512-120.832-0.512-120.832 0-112.128 91.136-203.264 203.264-203.264h136.704c123.392 0 194.56 66.56 194.56 182.784h-57.856c0-83.968-44.544-124.928-136.192-124.928H242.688c-80.384 0-145.408 65.024-145.408 145.408 0 0 0.512 69.632 0.512 120.832z" fill="#0972E7" p-id="26549"></path></svg>
+                                </span>
+                                <span class="nav-link-title strong-text" v-text="language.task_page_title"></span>
+                                <span class="status-dot status-dot-animated bg-red d-block" style="margin-left: 5px;" v-if="redPointer"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="nav-item dropdown d-none d-md-flex me-3">
+                <a  class="btn  btn-pill w-100" data-bs-toggle="offcanvas" href="#offcanvasBottom" role="button" aria-controls="offcanvasBottom">
+                    <svg t="1692319746964"  class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="51522" width="320" height="320"><path d="M815.2576 795.3408H208.7424c-73.4208 0-133.12-59.6992-133.12-133.12V218.624c0-73.4208 59.6992-133.12 133.12-133.12h606.5664c73.4208 0 133.12 59.6992 133.12 133.12v443.5968c-0.0512 73.4208-59.7504 133.12-133.1712 133.12zM208.7424 146.944c-39.5264 0-71.68 32.1536-71.68 71.68v443.5968c0 39.5264 32.1536 71.68 71.68 71.68h606.5664c39.5264 0 71.68-32.1536 71.68-71.68V218.624c0-39.5264-32.1536-71.68-71.68-71.68H208.7424zM706.2016 945.4592H317.7984c-16.9472 0-30.72-13.7728-30.72-30.72s13.7728-30.72 30.72-30.72h388.4032c16.9472 0 30.72 13.7728 30.72 30.72s-13.7728 30.72-30.72 30.72z" fill="#303135" p-id="51523"></path><path d="M256.6144 563.0976a30.6176 30.6176 0 0 1-22.3232-9.6256 30.67904 30.67904 0 0 1 1.2288-43.4176l162.7648-153.9072a30.72512 30.72512 0 0 1 41.8304-0.3584l129.7408 118.784 176.2816-169.2672c12.2368-11.7248 31.6928-11.3664 43.4176 0.8704s11.3664 31.6928-0.8704 43.4176l-197.0688 189.2352a30.77632 30.77632 0 0 1-42.0352 0.512L419.6864 420.4032l-141.9776 134.2976a30.7456 30.7456 0 0 1-21.0944 8.3968z" fill="#FF623E" p-id="51524"></path></svg>
+                    <label v-text="language.monitor"></label>
+                </a>
+            </div>
+            <div class="nav-item dropdown d-none d-md-flex me-3">
+                <a href="https://github.com/rafa0128/webmeter" target="_blank" class="btn  btn-pill w-100">
+                    <svg t="1692672213633" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="11694" width="320" height="320"><path d="M688.8 873.2c-20.8 0-40.8-6.6-57.7-19.1L512 766.2l-119.1 87.9c-16.9 12.5-36.9 19.1-57.7 19.1-44 0-82.7-29.8-94.3-72.4-4.8-17.9-4-37.3 2.5-57.7l45.3-141.8-121.3-89.6c-37.7-27.8-50.2-78.7-29.7-121 16.1-33.2 51.6-54.6 90.6-54.6h145.1l45.8-143.3c12.9-40.5 50.2-67.7 92.7-67.7s79.8 27.2 92.7 67.7l45.8 143.3h148.2c46.8 0 87.1 33.5 95.7 79.7 6.8 36.2-9.1 74.6-40.4 97.7l-118.8 87.7 45.7 143c6 18.7 6.9 37.7 2.6 54.7-10.9 43.8-49.8 74.3-94.6 74.3zM512 694.4c6.7 0 13.4 2.1 19 6.3l138.1 102c5.9 4.3 12.7 6.6 19.7 6.6 15.4 0 28.9-10.6 32.7-25.8 1.4-5.5 0.9-12.3-1.5-19.6L667.3 599c-4.2-13.1 0.4-27.3 11.5-35.5L816 462.1c11.7-8.7 17.8-22.2 15.5-34.5-3-16.2-16.5-27.5-32.8-27.5H627.1c-13.9 0-26.2-9-30.5-22.3l-52.9-165.5c-4.4-13.9-17.2-23.2-31.7-23.2s-27.3 9.3-31.7 23.2l-52.9 165.5c-4.2 13.3-16.6 22.3-30.5 22.3H228.4c-14.6 0-27.5 7.3-33 18.5-7.2 14.8-3 31.9 10.1 41.6l139.7 103.2c11 8.1 15.6 22.4 11.5 35.5l-52.3 163.6c-2.7 8.3-3.3 15.7-1.7 21.5 4 14.8 17.4 25.2 32.5 25.2 7 0 13.9-2.3 19.7-6.6l138.1-102c5.6-4.1 12.3-6.2 19-6.2z" p-id="11695"></path></svg>
+                    <label v-text="language.star_me"></label> 
+                </a>
+            </div>
+            <div class="nav-item dropdown  d-none d-md-flex me-3">
+                <a  class="cursor-pointer" id="tanslate" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button" aria-expanded="false">
+                    <svg t="1677481883820" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2905" width="50" height="50"><path d="M608 416h288c35.36 0 64 28.48 64 64v416c0 35.36-28.48 64-64 64H480c-35.36 0-64-28.48-64-64v-288H128c-35.36 0-64-28.48-64-64V128c0-35.36 28.48-64 64-64h416c35.36 0 64 28.48 64 64v288z m0 64v64c0 35.36-28.48 64-64 64h-64v256.032c0 17.664 14.304 31.968 31.968 31.968H864a31.968 31.968 0 0 0 31.968-31.968V512a31.968 31.968 0 0 0-31.968-31.968H608zM128 159.968V512c0 17.664 14.304 31.968 31.968 31.968H512a31.968 31.968 0 0 0 31.968-31.968V160A31.968 31.968 0 0 0 512.032 128H160A31.968 31.968 0 0 0 128 159.968z m64 244.288V243.36h112.736V176h46.752c6.4 0.928 9.632 1.824 9.632 2.752a10.56 10.56 0 0 1-1.376 4.128c-2.752 7.328-4.128 16.032-4.128 26.112v34.368h119.648v156.768h-50.88v-20.64h-68.768v118.272H306.112v-118.272H238.752v24.768H192z m46.72-122.368v60.48h67.392V281.92H238.752z m185.664 60.48V281.92h-68.768v60.48h68.768z m203.84 488H576L668.128 576h64.64l89.344 254.4h-54.976l-19.264-53.664h-100.384l-19.232 53.632z m33.024-96.256h72.864l-34.368-108.608h-1.376l-37.12 108.608zM896 320h-64a128 128 0 0 0-128-128V128a192 192 0 0 1 192 192zM128 704h64a128 128 0 0 0 128 128v64a192 192 0 0 1-192-192z" fill="#333333" p-id="2906"></path></svg>
+                </a>
+                <div class="dropdown-menu">
+                    <a  class="dropdown-item" @click="setLanguage('chinese')">中文</a>
+                    <a  class="dropdown-item" @click="setLanguage('english')">English</a>
+                  </div>
+            </div>
+            
+            <div class="nav-item dropdown d-none d-md-flex me-3">
+                <a  class="cursor-pointer" href="/config">
+                    <svg t="1647500420751" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="42025" width="2000" height="2000"><path d="M520.567467 779.776c29.354667 0 57.924267 11.093333 78.4384 30.4128l8.942933 9.5232c11.1616 11.946667 33.792 17.6128 49.834667 11.8784 0 0 14.062933-5.188267 45.090133-22.869333 30.583467-17.5104 42.052267-27.067733 42.154667-27.170134 13.141333-10.990933 19.592533-32.802133 14.677333-48.878933l-2.9696-9.693867c-7.2704-30.378667-2.901333-60.279467 11.912533-85.7088a115.3024 115.3024 0 0 1 65.467734-52.3264l12.9024-3.003733c16.384-3.754667 32.221867-20.206933 35.259733-36.693333 0-0.2048 2.594133-14.813867 2.594133-50.449067-0.170667-35.4304-2.730667-50.107733-2.730666-50.2784l26.453333-4.778667-26.487467 4.7104c-2.935467-16.315733-18.944-33.0752-34.952533-36.5568l-11.9808-2.798933a115.370667 115.370667 0 0 1-66.798933-52.462933 114.176 114.176 0 0 1-12.731734-83.0464l0.682667-2.491734 3.515733-10.4448c4.778667-15.428267-1.706667-37.341867-14.677333-48.3328-0.068267-0.068267-11.5712-9.557333-42.530133-27.374933-30.993067-17.681067-44.782933-22.801067-44.919467-22.869333-15.189333-5.5296-38.434133 0.1024-49.7664 12.049066l-8.055467 8.567467c-21.367467 20.1728-49.493333 31.266133-79.223466 31.266133-29.320533 0-57.856-11.025067-78.267734-30.242133l-9.1136-9.6256c-11.332267-12.117333-34.133333-17.578667-49.834666-11.946667-1.160533 0.4096-15.121067 5.802667-45.124267 22.9376-30.583467 17.646933-41.984 27.170133-42.120533 27.272534-13.141333 10.9568-19.592533 32.768-14.677334 48.810666l3.413334 11.0592a114.688 114.688 0 0 1-12.356267 84.343467 114.449067 114.449067 0 0 1-65.399467 52.224l-13.141333 3.037867c-16.384 3.720533-32.221867 20.206933-35.259733 36.6592-0.068267 0.341333-2.594133 14.779733-2.594134 50.346666 0 35.4304 2.525867 49.937067 2.56 50.0736 3.003733 16.861867 18.705067 33.314133 35.054934 36.898134l9.557333 2.116266c30.378667 8.874667 54.272 27.648 69.12 53.384534 14.609067 25.361067 19.2512 55.569067 12.629333 82.909866l-3.4816 11.946667c-5.0176 16.2816 1.467733 38.229333 14.404267 49.152 0 0 11.5712 9.6256 42.496 27.374933 30.651733 17.544533 44.475733 22.7328 45.056 22.9376 15.0528 5.461333 38.331733-0.136533 49.698133-12.117333l7.611734-8.123733a115.8144 115.8144 0 0 1 79.6672-31.607467zM643.584 887.466667c-28.672 0-56.695467-11.707733-75.025067-31.300267l-7.7824-8.328533c-9.386667-8.8064-24.507733-14.5408-40.209066-14.5408-15.633067 0-30.549333 5.802667-42.0864 16.384l-5.802667 6.314666c-26.282667 27.716267-72.430933 38.7072-107.7248 25.838934-4.334933-1.604267-20.855467-8.192-53.282133-26.760534-33.723733-19.3536-47.9232-30.8224-50.449067-32.904533-29.320533-24.8832-42.325333-69.188267-31.095467-105.472l3.072-10.308267c3.072-12.834133 0.477867-28.808533-7.406933-42.427733a60.962133 60.962133 0 0 0-35.908267-28.228267l-7.748266-1.672533c-37.410133-8.192-69.563733-41.642667-76.322134-79.530667-0.273067-1.4336-3.413333-18.773333-3.413333-59.6992 0-41.0624 3.140267-58.436267 3.549867-60.279466 6.826667-37.102933 38.843733-70.417067 76.117333-78.916267l11.502933-2.594133c12.151467-3.652267 24.576-13.755733 32.494934-27.306667 7.714133-13.312 10.069333-29.047467 6.690133-44.407467l-2.628267-8.430933c-11.264-36.6592 1.9456-80.896 31.232-105.335467 1.024-0.887467 14.6432-12.424533 50.0736-32.8704 32.290133-18.432 49.083733-25.156267 53.4528-26.794666 36.522667-13.038933 81.681067-2.218667 107.758934 25.668266l7.918933 8.430934c9.352533 8.772267 24.405333 14.4384 40.106667 14.4384 15.598933 0 30.378667-5.666133 41.642666-16.042667l6.314667-6.826667c26.282667-27.648 72.430933-38.570667 107.588267-25.770666 2.901333 1.058133 19.319467 7.3728 53.248 26.760533 34.577067 19.831467 48.264533 31.061333 50.688 33.0752 29.149867 24.746667 42.154667 69.051733 30.9248 105.301333l-3.208534 9.728c-3.072 14.6432-0.580267 29.934933 7.099734 43.2128 7.714133 13.2096 20.138667 23.074133 34.952533 27.7504l8.977067 2.048c37.205333 8.123733 69.358933 41.506133 76.151466 79.36 0.6144 3.310933 3.413333 20.923733 3.618134 59.630934 0 39.799467-2.935467 57.2416-3.4816 60.347733-6.894933 37.2736-38.912 70.587733-76.117334 79.086933l-10.171733 2.321067a61.0304 61.0304 0 0 0-33.655467 27.648 60.757333 60.757333 0 0 0-6.587733 44.9536l2.56 8.055467c11.127467 36.522667-2.048 80.759467-31.300267 105.233066-1.058133 0.9216-14.779733 12.526933-50.244266 32.836267-33.9968 19.3536-50.619733 25.736533-53.589334 26.794667a96.256 96.256 0 0 1-32.4608 5.5296h-0.034133zM520.533333 393.898667c-60.416 0-109.568 49.152-109.568 109.568s49.152 109.568 109.568 109.568 109.568-49.152 109.568-109.568-49.152-109.568-109.568-109.568z m0 271.701333a162.304 162.304 0 0 1-162.133333-162.133333c0-89.429333 72.704-162.133333 162.133333-162.133334 89.3952 0 162.133333 72.704 162.133334 162.133334 0 89.3952-72.738133 162.133333-162.133334 162.133333z" p-id="42026"></path></svg>
+                </a>
+                <span class="status-dot status-dot-animated bg-red d-block" style="margin-left: 5px;"></span>
+            </div>
+        </div>
+    </header>
+    <div class="page-wrapper sceen-body" v-loading="loading">
+        <div class="page-header d-print-none" v-show="planVisable">
+            <div class="container-xl">
+              <div class="row g-2 align-items-center">
+                <div class="col">
+                  <h2 class="page-title">
+                    <div class="btn-list">
+                        <a class="btn  d-none d-sm-inline-block" data-bs-toggle="modal" data-bs-target="#modal-create-plan">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 5l0 14" /><path d="M5 12l14 0" /></svg>
+                            <label v-text="language.new"></label>
+                        </a>
+                        <a class="btn  d-none d-sm-inline-block" data-bs-toggle="modal" data-bs-target="#modal-import-plan">
+                            <svg t="1690960933893" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4519" width="320" height="320"><path d="M750.933333 119.466667H290.133333c-65.877333 0-119.466667 53.589333-119.466666 119.466666v119.466667h68.266666v-119.466667c0-28.16 23.04-51.2 51.2-51.2h460.8c18.773333 0 34.133333 15.36 34.133334 34.133334v597.333333c0 18.773333-15.36 34.133333-34.133334 34.133333H290.133333c-28.16 0-51.2-23.04-51.2-51.2v-153.6h-68.266666v153.6c0 65.877333 53.589333 119.466667 119.466666 119.466667h460.8c56.490667 0 102.4-45.909333 102.4-102.4V221.866667c0-56.490667-45.909333-102.4-102.4-102.4z" fill="#231815" p-id="4520"></path><path d="M396.117333 641.194667l48.298667 48.128L630.272 503.466667 444.416 317.610667l-48.298667 48.128L508.245333 477.866667H136.533333v68.266666h354.645334z" fill="#231815" p-id="4521"></path></svg>
+                            <label v-text="language.import"></label>
+                        </a>
+                    </div>
+                  </h2>
+                  
+                </div>
+                <div class="col-auto ms-auto d-print-none">
+                    <div class="btn-list">
+                        <a  class="btn  d-none d-sm-inline-block" @click="run()" v-if="startBtn">
+                            <svg t="1692612614001" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="118121" width="320" height="320"><path d="M510.3 98.2c-229.2 0-415.1 185.8-415.1 415S281 928.3 510.3 928.3s415.1-185.8 415.1-415.1c0-229.2-185.9-415-415.1-415z m163.8 448.1L446.5 679.1c-3.3 1.9-6.7 2.8-10.1 2.8-10.5 0-20.1-8.4-20.1-20.1V396.2c0-11.7 9.6-20.1 20.1-20.1 3.4 0 6.8 0.9 10.1 2.8l227.6 132.8c13.3 7.7 13.3 26.9 0 34.6z" fill="#3259CE" p-id="118122"></path></svg>
+                            <label v-text="language.start"></label>
+                        </a>
+                        <a  class="btn  d-none d-sm-inline-block disabled" v-if="runningBtn">
+                            <span class="spinner-border spinner-border-sm me-2" role="status"></span>
+                            <label v-text="runningPlanName"></label> is runing
+                        </a>
+                        <!-- <a  class="btn  d-none d-sm-inline-block" @click="stop()"  v-if="stopBtn">
+                            <svg t="1692694684479" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="25736" width="320" height="320"><path d="M510.171429 919.771429c-226.742857 0-411.428571-184.685714-411.428572-411.428572S283.428571 96.914286 510.171429 96.914286 921.6 281.6 921.6 508.342857 736.914286 919.771429 510.171429 919.771429zM548.571429 230.4h-74.971429v266.971429H548.571429V230.4z m230.4 213.942857c-5.485714-21.942857-12.8-42.057143-23.771429-62.171428-10.971429-20.114286-21.942857-38.4-36.571429-54.857143-14.628571-16.457143-42.057143-40.228571-42.057142-40.228572s0 1.828571-40.228572 43.885715c64 40.228571 98.742857 104.228571 98.742857 184.685714 0 122.514286-100.571429 223.085714-223.085714 223.085714s-223.085714-100.571429-223.085714-223.085714c0-76.8 38.4-144.457143 98.742857-184.685714L347.428571 288.914286s-32.914286 27.428571-47.542857 43.885714c-14.628571 16.457143-25.6 34.742857-34.742857 53.028571s-16.457143 38.4-21.942857 60.342858c-5.485714 20.114286-7.314286 42.057143-7.314286 64 0 38.4 7.314286 74.971429 21.942857 107.885714 14.628571 32.914286 34.742857 62.171429 60.342858 87.771428s54.857143 43.885714 87.771428 60.342858 69.485714 21.942857 107.885714 21.942857c38.4 0 74.971429-7.314286 107.885715-21.942857 32.914286-14.628571 62.171429-34.742857 87.771428-60.342858s43.885714-54.857143 60.342857-87.771428c14.628571-32.914286 21.942857-69.485714 21.942858-107.885714-5.485714-21.942857-7.314286-45.714286-12.8-65.828572z" fill="#99163d" p-id="25737" data-spm-anchor-id="a313x.search_index.0.i5.1fa53a8151ttue" class="selected"></path></svg>
+                            <label v-text="language.stop"></label>
+                        </a>
+                        <a  class="btn  d-none d-sm-inline-block disabled"  v-if="stoppingBtn">
+                            <svg t="1692694684479" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="25736" width="320" height="320"><path d="M510.171429 919.771429c-226.742857 0-411.428571-184.685714-411.428572-411.428572S283.428571 96.914286 510.171429 96.914286 921.6 281.6 921.6 508.342857 736.914286 919.771429 510.171429 919.771429zM548.571429 230.4h-74.971429v266.971429H548.571429V230.4z m230.4 213.942857c-5.485714-21.942857-12.8-42.057143-23.771429-62.171428-10.971429-20.114286-21.942857-38.4-36.571429-54.857143-14.628571-16.457143-42.057143-40.228571-42.057142-40.228572s0 1.828571-40.228572 43.885715c64 40.228571 98.742857 104.228571 98.742857 184.685714 0 122.514286-100.571429 223.085714-223.085714 223.085714s-223.085714-100.571429-223.085714-223.085714c0-76.8 38.4-144.457143 98.742857-184.685714L347.428571 288.914286s-32.914286 27.428571-47.542857 43.885714c-14.628571 16.457143-25.6 34.742857-34.742857 53.028571s-16.457143 38.4-21.942857 60.342858c-5.485714 20.114286-7.314286 42.057143-7.314286 64 0 38.4 7.314286 74.971429 21.942857 107.885714 14.628571 32.914286 34.742857 62.171429 60.342858 87.771428s54.857143 43.885714 87.771428 60.342858 69.485714 21.942857 107.885714 21.942857c38.4 0 74.971429-7.314286 107.885715-21.942857 32.914286-14.628571 62.171429-34.742857 87.771428-60.342858s43.885714-54.857143 60.342857-87.771428c14.628571-32.914286 21.942857-69.485714 21.942858-107.885714-5.485714-21.942857-7.314286-45.714286-12.8-65.828572z" fill="#99163d" p-id="25737" data-spm-anchor-id="a313x.search_index.0.i5.1fa53a8151ttue" class="selected"></path></svg>
+                            <label v-text="language.stop"></label>
+                        </a> -->
+                        <a class="btn d-none d-sm-inline-block" data-bs-toggle="modal" data-bs-target="#modal-remove-one" @click="removeClick">
+                            <svg t="1692612504132" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="115440" width="320" height="320"><path d="M512 512m-384 0a384 384 0 1 0 768 0 384 384 0 1 0-768 0Z" fill="#F44336" p-id="115441"></path><path d="M640.064 320l63.957333 63.957333-319.936 319.957334-63.957333-63.978667z" fill="#FDFDFD" p-id="115442"></path><path d="M704 640.064l-63.957333 63.957333-319.957334-319.936 63.978667-63.957333z" fill="#FDFDFD" p-id="115443"></path></svg>
+                            <label v-text="language.remove"></label>
+                        </a>
+                        <a class="btn d-none d-sm-inline-block" data-bs-toggle="modal" data-bs-target="#modal-remove-all">
+                            <svg t="1692612504132" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="115440" width="320" height="320"><path d="M512 512m-384 0a384 384 0 1 0 768 0 384 384 0 1 0-768 0Z" fill="#F44336" p-id="115441"></path><path d="M640.064 320l63.957333 63.957333-319.936 319.957334-63.957333-63.978667z" fill="#FDFDFD" p-id="115442"></path><path d="M704 640.064l-63.957333 63.957333-319.957334-319.936 63.978667-63.957333z" fill="#FDFDFD" p-id="115443"></path></svg>
+                            <label v-text="language.remove_all"></label>
+                        </a>
+                    </div>
+                  </div>
+                <!-- Page title actions -->
+              </div>
+            </div>
+          </div>
+        <div class="page-body">
+            <div class="container-xl">
+                <div class="card"   v-show="planVisable">
+                    <div class="row g-0">
+                        <div class="col-2 d-none d-md-block border-end">
+                            <div class="card-header d-none d-md-block">
+                                <div class="input-icon">
+                                    <span class="input-icon-addon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" /><path d="M21 21l-6 -6" /></svg>
+                                    </span>
+                                    <input type="text" value="" class="form-control form-control-sm" placeholder="Search…" aria-label="Search" />
+                                </div>
+                              </div>
+                            <div class="card-body scrollable">
+                                <div class="btn-group-vertical w-100 mb-2 "role="group" v-for="item in planList" :key="item">
+                                    <input type="radio" class="btn-check" name="btn-radio-vertical" :id="item.name" :checked="item.checked" @click="clickPlan(item.name)">
+                                    <label type="button" class="btn"  v-text="item.name" :for="item.name"></label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col d-flex flex-column">
+                            <div class="card">
+                                <div class="card-header">
+                                    <ul class="nav nav-tabs card-header-tabs" data-bs-toggle="tabs">
+                                        <li class="nav-item">
+                                            <a href="#tabs-test-plan" class="nav-link active" data-bs-toggle="tab" v-text="language.plan_info"></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#tabs-thread-group" class="nav-link" data-bs-toggle="tab" v-text="language.thread_group"></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#tabs-sampler" class="nav-link" data-bs-toggle="tab" v-text="language.samplers"></a>
+                                        </li>
+                                        <li class="nav-item ms-auto">
+                                            <a href="#tabs-plan-log" class="nav-link" data-bs-toggle="tab">
+                                                <svg t="1692320167305" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="55332" width="320" height="320"><path d="M861.44 1013.76H162.56A101.76 101.76 0 0 1 64 912.64V119.68A101.76 101.76 0 0 1 162.56 18.56h698.88a101.76 101.76 0 0 1 101.76 101.12v792.96a101.76 101.76 0 0 1-101.76 101.12zM162.56 94.08a25.6 25.6 0 0 0-26.24 25.6v792.96a25.6 25.6 0 0 0 26.24 25.6h698.88a25.6 25.6 0 0 0 26.24-25.6V119.68a25.6 25.6 0 0 0-26.24-25.6z" fill="#323333" p-id="55333"></path><path d="M750.08 280.96H262.4a37.76 37.76 0 0 1-37.76-37.76 38.4 38.4 0 0 1 37.76-37.76h487.68a37.76 37.76 0 0 1 37.76 37.76 37.12 37.12 0 0 1-37.76 37.76zM576 414.08H262.4a37.76 37.76 0 0 1-37.76-37.76 38.4 38.4 0 0 1 37.76-37.76H576a37.76 37.76 0 0 1 37.76 37.76 37.12 37.12 0 0 1-37.76 37.76zM407.68 539.52H262.4a32 32 0 0 1-32-32 32.64 32.64 0 0 1 32-32h145.28a32 32 0 0 1 32 32 32 32 0 0 1-32 32zM598.4 888.32h-6.4a172.16 172.16 0 0 1-67.84-37.12 21.12 21.12 0 0 1-8.32-19.2 23.68 23.68 0 0 1 8.96-18.56 21.12 21.12 0 0 0-22.4-35.84 24.96 24.96 0 0 1-33.92-15.36 163.2 163.2 0 0 1-7.04-47.36 186.24 186.24 0 0 1 5.76-44.16 26.24 26.24 0 0 1 12.16-15.36 22.4 22.4 0 0 1 19.2 0 17.92 17.92 0 0 0 7.04 0 21.12 21.12 0 0 0 14.72-37.76 26.24 26.24 0 0 1-8.32-18.56 28.16 28.16 0 0 1 7.68-17.92 186.24 186.24 0 0 1 72.96-40.32 23.04 23.04 0 0 1 29.44 16 22.4 22.4 0 0 0 20.48 15.36 20.48 20.48 0 0 0 20.48-15.36 23.68 23.68 0 0 1 29.44-16 179.2 179.2 0 0 1 75.52 40.32 21.76 21.76 0 0 1 7.68 17.92 23.04 23.04 0 0 1-7.68 17.92 21.12 21.12 0 0 0 14.72 37.76 17.92 17.92 0 0 0 7.04 0 22.4 22.4 0 0 1 19.2 0 26.24 26.24 0 0 1 12.16 15.36 186.24 186.24 0 0 1 5.76 44.16 167.68 167.68 0 0 1-6.4 44.8 23.04 23.04 0 0 1-11.52 15.36 22.4 22.4 0 0 1-19.2 0 21.12 21.12 0 0 0-29.44 20.48 20.48 20.48 0 0 0 7.68 16 25.6 25.6 0 0 1 7.68 17.28 23.68 23.68 0 0 1-8.32 17.92 186.24 186.24 0 0 1-69.12 39.68 24.32 24.32 0 0 1-19.84 0 23.68 23.68 0 0 1-10.88-16 21.76 21.76 0 0 0-42.24 0 21.12 21.12 0 0 1-10.88 16.64 23.04 23.04 0 0 1-16 1.92z m-24.32-64l10.88 5.76a68.48 68.48 0 0 1 58.24-32A69.12 69.12 0 0 1 704 832l14.08-7.68a64 64 0 0 1-6.4-28.8 69.76 69.76 0 0 1 64-69.76 81.92 81.92 0 0 0 0-12.16 69.76 69.76 0 0 0 0-11.52 69.76 69.76 0 0 1-64-69.76 76.16 76.16 0 0 1 6.4-29.44l-17.92-10.24a72.32 72.32 0 0 1-109.44 0l-19.2 10.24a64 64 0 0 1 4.48 30.08A69.76 69.76 0 0 1 512 704a104.32 104.32 0 0 0 0 23.04 71.68 71.68 0 0 1 71.68 70.4 64 64 0 0 1-7.68 30.08z" fill="#323333" p-id="55334"></path><path d="M640 778.24a64 64 0 1 1 64-64 64 64 0 0 1-64 64z m0-80.64a16.64 16.64 0 0 0-16.64 16.64c0 17.92 32.64 17.92 32.64 0a16 16 0 0 0-16-16.64z" fill="#323333" p-id="55335"></path></svg>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="card-body">
+                                    <div class="tab-content">
+                                        <div class="tab-pane active show" id="tabs-test-plan">
+                                            <div class="mb-3 row">
+                                                <label class="col-2 col-form-label required" v-text="language.name"></label>
+                                                <div class="col">
+                                                  <input  class="form-control"  placeholder="Enter plan name" v-model="planName">
+                                                </div>
+                                            </div>
+                                            <div class="mb-3 row">
+                                                <label class="col-2 col-form-label" v-text="language.comments"></label>
+                                                <div class="col">
+                                                  <input  class="form-control" placeholder="Enter comments" v-model="planComments">
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <label class="form-check">
+                                                    <input class="form-check-input" type="checkbox" v-model="serialize_threadgroups_checked">
+                                                    <span class="form-check-label" v-text="language.serialize_threadgroups"></span>
+                                                </label>
+                                                <label class="form-check">
+                                                    <input class="form-check-input" type="checkbox" v-model="tearDown_on_shutdown_checked">
+                                                    <span class="form-check-label" v-text="language.tearDown_on_shutdown"></span>
+                                                </label>
+                                                <label class="form-check">
+                                                    <input class="form-check-input" type="checkbox" v-model="functional_mode_checked">
+                                                    <span class="form-check-label" v-text="language.functional_mode"></span>
+                                                    <span class="form-check-description">
+                                                        <label v-text="language.functional_mode_tips"></label>
+                                                    </span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane" id="tabs-thread-group">
+                                            <div class="mb-3 row">
+                                                <label class="col-2 col-form-label required"  v-text="language.name"></label>
+                                                <div class="col">
+                                                  <input  class="form-control"  placeholder="Enter Thread Group Name" v-model="threadgroupName">
+                                                </div>
+                                            </div>
+                                            <div class="mb-3 row">
+                                                <label class="col-2 col-form-label" v-text="language.comments"></label>
+                                                <div class="col">
+                                                  <input  class="form-control" placeholder="Enter comments" v-model="threadgroupComments">
+                                                </div>
+                                            </div>
+                                            <div class="hr-text hr-text-left" v-text="language.sampler_error_title"></div>
+                                            <div>
+                                                <label class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="radios-inline"  v-model="smplerAction" value="continue">
+                                                    <span class="form-check-label" v-text="language.continue"></span>
+                                                </label>
+                                                <label class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="radios-inline" v-model="smplerAction" value="startnextloop">
+                                                    <span class="form-check-label" v-text="language.start_next_thread_loop"></span>
+                                                </label>
+                                                <label class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="radios-inline" v-model="smplerAction" value="stopthread">
+                                                    <span class="form-check-label" v-text="language.stop_thread"></span>
+                                                </label>
+                                                <label class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="radios-inline" v-model="smplerAction" value="stoptest">
+                                                    <span class="form-check-label" v-text="language.stop_test"></span>
+                                                </label>
+                                                <label class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="radios-inline" v-model="smplerAction" value="stoptestnow">
+                                                    <span class="form-check-label" v-text="language.stop_test_now"></span>
+                                                </label>
+                                            </div>
+                                            <div class="hr-text hr-text-left" v-text="language.thread_properties"></div>
+                                            <div class="mb-3 row">
+                                                <label class="col-3 col-form-label required" v-text="language.number_of_threads"></label>
+                                                <div class="col">
+                                                  <input  class="form-control" v-model="threadNum">
+                                                </div>
+                                            </div>
+                                            <div class="mb-3 row">
+                                                <label class="col-3 col-form-label" v-text="language.ramp_up_period"></label>
+                                                <div class="col">
+                                                  <input  class="form-control" v-model="rampTime">
+                                                </div>
+                                            </div>
+                                            <div class="mb-3 row">
+                                                <label class="col-3 col-form-label" v-text="language.loop_count"></label>
+                                                <div class="col">
+                                                  <input  class="form-control" v-model="loopCount">
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <label class="form-check">
+                                                    <input class="form-check-input" type="checkbox" v-model="iterationChecked">
+                                                    <span class="form-check-label" v-text="language.same_user_on_each_iteration"></thead></span>
+                                                </label>
+                                                <label class="form-check">
+                                                    <input class="form-check-input" type="checkbox" v-model="delayedChecked">
+                                                    <span class="form-check-label" v-text="language.delay_thread_creation_until_needed"></span>
+                                                </label>
+                                                <label class="form-check">
+                                                    <input class="form-check-input" type="checkbox" v-model="schedulerChecked" @click="clickScheduler()">
+                                                    <span class="form-check-label" v-text="language.specify_thread_lifetime"></span>
+                                                </label>
+                                            </div>
+                                            <div class="mb-3 row">
+                                                <label class="col-3 col-form-label" v-text="language.duration"></label>
+                                                <div class="col">
+                                                  <input  class="form-control"  :disabled="schedulerDisabled" v-model="duration">
+                                                </div>
+                                            </div>
+                                            <div class="mb-3 row">
+                                                <label class="col-3 col-form-label" v-text="language.startup_delay"></label>
+                                                <div class="col">
+                                                  <input  class="form-control" :disabled="schedulerDisabled" v-model="delay">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane" id="tabs-sampler">
+                                            <div class="mb-3 row">
+                                                <label class="col-2 col-form-label required" v-text="language.name"></label>
+                                                <div class="col">
+                                                  <input  class="form-control"  placeholder="Enter name" v-model="samplerName">
+                                                </div>
+                                            </div>
+                                            <div class="mb-3 row">
+                                                <label class="col-2 col-form-label" v-text="language.comments"></label>
+                                                <div class="col">
+                                                  <input  class="form-control" placeholder="Enter comments" v-model="samplerComment">
+                                                </div>
+                                            </div>
+                                            <div class="hr-text hr-text-left" v-text="language.web_server"></div>
+                                            <div class="row row-cards">
+                                                <div class="col-sm-6 col-md-4">
+                                                    <div class="mb-3">
+                                                        <label class="form-label required" v-text="language.protocol"></label>
+                                                        <input type="text" class="form-control" v-model="samplerProtocol" placeholder="Enter protocol">
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6 col-md-4">
+                                                    <div class="mb-3">
+                                                        <label class="form-label required" v-text="language.server_name_or_ip"></label>
+                                                        <input type="test" class="form-control" v-model="samplerIP" placeholder="Enter server name or ip">
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6 col-md-4">
+                                                    <div class="mb-3">
+                                                      <label class="form-label" v-text="language.port_number"></label>
+                                                      <input type="test" class="form-control" v-model="samplerPort" placeholder="Enter port number">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="hr-text hr-text-left" v-text="language.http_request"></div>
+                                            <div class="row row-cards">
+                                                <div class="col-sm-6 col-md-4">
+                                                    <div class="mb-3">
+                                                        <label class="form-label" v-text="language.method"></label>
+                                                        <select class="form-control form-select" v-model="selectedMethod">
+                                                            <option v-for="method in methodList" :key="method" :text="method"></option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6 col-md-4">
+                                                    <div class="mb-3">
+                                                        <label class="form-label required" v-text="language.path"></label>
+                                                        <input type="text" class="form-control" v-model="requestPath" placeholder="Enter path">
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6 col-md-4">
+                                                    <div class="mb-3">
+                                                        <label class="form-label" v-text="language.content_encoding"></label>
+                                                        <input type="test" class="form-control" v-model="requestEncode" placeholder="Enter content encoding">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="checkbox" v-model="autoRedirectChecked">
+                                                    <span class="form-check-label" v-text="language.redirect_automatically"></span>
+                                                </label>
+                                                <label class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="checkbox" v-model="followRedirectChecked">
+                                                    <span class="form-check-label" v-text="language.follow_redirect"></span>
+                                                </label>
+                                                <label class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="checkbox" v-model="useKeepAliveChecked">
+                                                    <span class="form-check-label" v-text="language.use_keepAlive"></span>
+                                                </label>
+                                                <label class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="checkbox" v-model="useKeepMultipartChecked">
+                                                    <span class="form-check-label" v-text="language.use_multipart_formdata"></span>
+                                                </label>
+                                                <label class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="checkbox" v-model="browserComatibleChecked">
+                                                    <span class="form-check-label" v-text="language.browser_compatible_headers"></span>
+                                                </label>
+                                            </div>
+                                            <div class="card-tabs">
+                                                <ul class="nav nav-tabs">
+                                                    <li class="nav-item"><a href="#parameter" v-show="parametersVisable" class="nav-link active" data-bs-toggle="tab" v-text="language.parameters"></a></li>
+                                                    <li class="nav-item"><a href="#body-data" v-show="bodydataVisavle" class="nav-link active" data-bs-toggle="tab" v-text="language.body_data"></a></li>
+                                                    <!-- <li class="nav-item"><a href="#files-upload" class="nav-link" data-bs-toggle="tab">Files Upload</a></li> -->
+                                                </ul>
+                                                <div class="tab-content">
+                                                    <div id="parameter" v-show="parametersVisable" class="card tab-pane active">
+                                                        
+                                                        <div class="card-body">
+                                                            <div class="btn-list">
+                                                                <a  class="btn btn-sm d-none d-sm-inline-block">
+                                                                    Add
+                                                                </a>
+                                                                <a class="btn btn-sm d-none d-sm-inline-block">
+                                                                    Delete
+                                                                </a>
+                                                            </div>
+                                                            <div class="table-responsive text-center">
+                                                                <table class="table mb-0">
+                                                                  <thead>
+                                                                    <tr>
+                                                                      <th><input class="form-check-input" type="checkbox"></th>
+                                                                      <th>Name</th>
+                                                                      <th>Value</th>
+                                                                      <th>Url-Encode</th>
+                                                                      <th>Content-Type</th>
+                                                                    </tr>
+                                                                  </thead>
+                                                                  <tbody>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <input class="form-check-input" type="checkbox">
+                                                                        </td>
+                                                                        <td>
+                                                                            <input type="text" class="form-control form-control-sm"></td>
+                                                                        </td>
+                                                                        <td>
+                                                                            <input type="text" class="form-control form-control-sm"></td>
+                                                                        <td>
+                                                                            <input class="form-check-input" type="checkbox">
+                                                                        </td>
+                                                                        <td>
+                                                                            <input type="text" class="form-control form-control-sm" value="text/plain">
+                                                                        </td>
+                                                                    </tr>
+                                                                  </tbody>
+                                                                </table>
+                                                              </div>
+                                                            </div>
+                                                    </div>
+                                                    <div id="body-data" v-show="bodydataVisavle" class="card tab-pane active">
+                                                        <div class="card-body">
+                                                            <textarea v-model="bodyDataContent" class="form-control" name="example-textarea" placeholder="Enter json data"></textarea>
+                                                        </div>
+                                                    </div>
+                                                    <!-- <div id="files-upload" class="card tab-pane">
+                                                        <div class="card-body">
+                                                        </div>
+                                                    </div> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane" id="tabs-plan-log">
+                                            <h4>
+                                                <select @change="showLog()" class="form-control form-select form-select-sm" v-model="selectedLog" style="width: 170px;">
+                                                    <option v-for="log in Logs" :key="log" :text="log"></option>
+                                                </select>
+                                            </h4>
+                                            <pre style="height: 700px;" v-if="taskLog" v-text="taskLog">
+                                                <!-- <code class="language-java" v-text="taskLog"></code> -->
+                                            </pre>
+                                            <el-empty v-else description="No log found." />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-transparent mt-auto">
+                                <div class="btn-list justify-content-end">
+                                    <a  class="btn" @click="editPlan()">
+                                        <svg t="1692672026903" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="7786" width="320" height="320"><path d="M904 1024H120c-66.168 0-120-53.832-120-120V120C0 53.832 53.832 0 120 0h784c66.168 0 120 53.832 120 120v784c0 66.168-53.832 120-120 120zM120 4C56.038 4 4 56.038 4 120v784c0 63.962 52.038 116 116 116h784c63.962 0 116-52.038 116-116V120c0-63.962-52.038-116-116-116H120z" fill="#D8DDE3" p-id="7787"></path><path d="M732 832H292c-55.14 0-100-44.86-100-100V292c0-55.14 44.86-100 100-100h440c55.14 0 100 44.86 100 100v440c0 55.14-44.86 100-100 100zM292 252c-22.056 0-40 17.944-40 40v440c0 22.056 17.944 40 40 40h440c22.056 0 40-17.944 40-40V292c0-22.056-17.944-40-40-40H292z" fill="#20263B" p-id="7788"></path><path d="M642 442H382c-44.112 0-80-35.888-80-80v-110c0-33.084 26.916-60 60-60h300c33.084 0 60 26.916 60 60v110c0 44.112-35.888 80-80 80z m-280-190v110c0 11.028 8.972 20 20 20h260c11.028 0 20-8.972 20-20v-110H362z" fill="#20263B" p-id="7789"></path><path d="M572.928 275h60v80.174h-60z" fill="#FF4B07" p-id="7790"></path></svg>
+                                        <label v-text="language.save"></label>
+                                    </a>
+                                </div>
+                            </div>
+                      </div>
+                    </div>
+                </div>
+                <!--empty content-->
+                <div class="empty mt-5" v-show="emptyVisable">
+                    <div class="empty-img">
+                        <img src="/static/image/empty.png">
+                    </div>
+                    <p class="empty-title" v-text="language.no_results_found"></p>
+                    <div class="empty-action">
+                        <a  class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-create-plan" >
+                            <svg t="1690879968452" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2274" width="320" height="320"><path d="M810.666667 469.333333h-256V213.333333a42.666667 42.666667 0 0 0-85.333334 0v256H213.333333a42.666667 42.666667 0 0 0 0 85.333334h256v256a42.666667 42.666667 0 0 0 85.333334 0v-256h256a42.666667 42.666667 0 0 0 0-85.333334z" p-id="2275" fill="#ffffff"></path></svg>
+                            <label v-text="language.create_your_first_test_plan"></label>
+                        </a>
+                    </div>
+                    <label class="mt-3"><strong v-text="language.or"></strong></label>
+                    <div class="empty-action">
+                        <a  class="btn btn-orange" data-bs-toggle="modal" data-bs-target="#modal-import-plan" >
+                            <svg t="1693382701142" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1631" width="320" height="320"><path d="M739.530598 294.52799l0 435.029978c0 24.048719-20.48045 43.594891-44.444235 43.594891L303.417963 773.152858l0 43.425022c0 23.963785 19.800975 43.508933 43.807738 43.508933l434.795641 0c24.006763 0 44.360324-19.545148 44.360324-43.508933L826.381665 207.551056c0-24.048719-20.35356-43.636846-44.360324-43.636846L347.224678 163.91421c-24.006763 0-43.807738 19.588127-43.807738 43.636846l0 44.147476 391.669424 0C719.051171 251.698532 739.530598 270.521227 739.530598 294.52799zM588.693218 556.539402 463.561289 674.320922c-17.334807 16.315594-44.699038 15.551184-61.142545-1.86958-16.315594-17.419741-15.508205-44.783972 1.86958-61.099566l59.357899-55.916521L241.086335 555.435255c-24.006763 0-43.468001-18.951631-43.468001-43.00035 0-24.049742 19.461237-43.020816 43.468001-43.020816l222.559888 0-59.357899-56.257282c-17.377786-16.35755-18.185174-43.934628-1.86958-61.312414 8.583492-9.007141 20.055778-13.680581 31.528064-13.680581 10.621918 0 21.24486 3.823072 29.65746 11.68411l125.08895 117.653607c12.32163 11.535731 19.37528 27.767414 19.37528 44.593638C608.068498 528.836457 601.014848 545.06814 588.693218 556.539402z" fill="#ffffff" p-id="1632" data-spm-anchor-id="a313x.search_index.0.i0.62903a81VCJFTq" class="selected"></path></svg>
+                            <label v-text="language.import_your_first_test_plan"></label>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer footer-transparent d-print-none">
+        <div class="container-xl">
+            <div class="row text-center align-items-center flex-row-reverse">
+                <div class="col-lg-auto ms-lg-auto">
+                    <ul class="list-inline list-inline-dots mb-0">
+                        <li class="list-inline-item">
+                            <a href="/docs" target="_blank" class="link-secondary">
+                                 API 
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a  target="_blank" class="link-secondary" v-text="language.documentation">
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <svg t="1691475851430" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4000" width="320" height="320"><path d="M512 42.666667A464.64 464.64 0 0 0 42.666667 502.186667 460.373333 460.373333 0 0 0 363.52 938.666667c23.466667 4.266667 32-9.813333 32-22.186667v-78.08c-130.56 27.733333-158.293333-61.44-158.293333-61.44a122.026667 122.026667 0 0 0-52.053334-67.413333c-42.666667-28.16 3.413333-27.733333 3.413334-27.733334a98.56 98.56 0 0 1 71.68 47.36 101.12 101.12 0 0 0 136.533333 37.973334 99.413333 99.413333 0 0 1 29.866667-61.44c-104.106667-11.52-213.333333-50.773333-213.333334-226.986667a177.066667 177.066667 0 0 1 47.36-124.16 161.28 161.28 0 0 1 4.693334-121.173333s39.68-12.373333 128 46.933333a455.68 455.68 0 0 1 234.666666 0c89.6-59.306667 128-46.933333 128-46.933333a161.28 161.28 0 0 1 4.693334 121.173333A177.066667 177.066667 0 0 1 810.666667 477.866667c0 176.64-110.08 215.466667-213.333334 226.986666a106.666667 106.666667 0 0 1 32 85.333334v125.866666c0 14.933333 8.533333 26.88 32 22.186667A460.8 460.8 0 0 0 981.333333 502.186667 464.64 464.64 0 0 0 512 42.666667" fill="#231F20" p-id="4001"></path></svg>
+                            <a href="https://github.com/smart-test-ti/webmeter" target="_blank" class="link-secondary" rel="noopener" v-text="language.source_code">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12 col-lg-auto mt-3 mt-lg-0">
+                    <ul class="list-inline list-inline-dots mb-0">
+                        <li class="list-inline-item">
+                            Copyright &copy; <label id="curYear"></label>
+                            <a href="https://github.com/smart-test-ti/webmeter" class="link-secondary">
+                                <svg t="1693808129991" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="16172" width="320" height="320"><path d="M148.92 14.97h737.33c57.99 23.94 98.95 64.9 122.89 122.89v737.33c-39.85 103.89-113.76 143.96-225.8 140-183.17-6.48-366.77 0.46-550.13-2.42-163.62-2.56-219.3-58.25-221.87-221.87-2.87-183.36 4.07-366.96-2.42-550.13-3.95-112.04 36.12-185.95 140-225.8z" fill="#E713BC" p-id="16173"></path><path d="M417.87 350.37c52.42-88.29 115.51-143.7 193.21-30.33 45.46 66.33 51.2 17.59 79.75-9.94 80.34-77.48 149.52-62.16 180 41.94 33.37 113.97 12.71 232.59 13.43 349.15 0.39 63.67-51.87 50.6-89.48 50.07-37.03-0.51-85.61 15.43-92.31-48.42-4.6-43.75 12.67-91.52-22.59-132.3-63.61 9.73-41.47 62.41-39.53 94.05 5.05 82-39.92 87.28-103.9 89.35-70.46 2.29-89.2-28.58-82.78-90.82 4.95-48.02-3.53-91.62-50.29-118.28-16.45-4.28-29.46-13.44-39.03-27.48-26.37-69.84-18.15-128.59 53.52-166.99z" fill="#FEFDFE" p-id="16174"></path><path d="M403.37 544.84c-21.26 102.48 19.41 247-180.11 211.21-114.73-20.58-80.8-99.5-70.18-147.16 23.49-105.44-85.67-248.85 68.93-311.68 45.4-18.45 146.64-53.49 175.06 55.72-6.54 61.73-69 123.04-1.37 185.32l7.67 6.59z" fill="#FEFBFD" p-id="16175"></path><path d="M395.71 538.25H211.53c93.12-59.08 154.72-109.08 185.54-185.32 6.65-3.17 13.58-4.02 20.79-2.55-7.37 62.62-14.76 125.24-22.15 187.87z" fill="#ED4ECC" p-id="16176"></path></svg>
+                                WebMeter
+                            </a>. All rights reserved 
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://github.com/smart-test-ti/webmeter/releases" target="_blank" class="link-secondary" rel="noopener">
+                                <a href="https://pypi.org/project/webmeter/" target="__blank"><img src="https://img.shields.io/pypi/v/webmeter" alt="webmeter preview"></a>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- dialog -->
+    <div class="modal modal-blur fade" id="modal-create-plan" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Create Plan</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="text" class="form-control" v-model="inputPlanName" placeholder="Enter plan name" />
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn me-auto" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" @click="createPlan()">Create</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal modal-blur fade" id="modal-import-plan" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Import JMX</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="file" class="form-control mb-3" id="jmx-file" accept=".jmx"/>
+                    <input type="text" class="form-control" v-model="importPlanName" placeholder="Enter plan name" />
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn me-auto" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" @click="importPlan()">Create</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal modal-blur fade" id="modal-remove-one" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-status bg-danger"></div>
+            <div class="modal-body text-center py-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon mb-2 text-danger icon-lg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10.24 3.957l-8.422 14.06a1.989 1.989 0 0 0 1.7 2.983h16.845a1.989 1.989 0 0 0 1.7 -2.983l-8.423 -14.06a1.989 1.989 0 0 0 -3.4 0z" /><path d="M12 9v4" /><path d="M12 17h.01" /></svg>
+              <h3>Are you sure?</h3>
+              <div class="text-secondary">If you confirm, you will delete <label class="text-danger" v-text="remove_plan_name"></label>.</div>
+            </div>
+            <div class="modal-footer">
+              <div class="w-100">
+                <div class="row">
+                  <div class="col"><a class="btn w-100" data-bs-dismiss="modal">
+                      Cancel
+                    </a></div>
+                  <div class="col"><a class="btn btn-danger w-100" data-bs-dismiss="modal" @click="removePlan">
+                      Delete
+                    </a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="modal modal-blur fade" id="modal-remove-all" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-status bg-danger"></div>
+            <div class="modal-body text-center py-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon mb-2 text-danger icon-lg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10.24 3.957l-8.422 14.06a1.989 1.989 0 0 0 1.7 2.983h16.845a1.989 1.989 0 0 0 1.7 -2.983l-8.423 -14.06a1.989 1.989 0 0 0 -3.4 0z" /><path d="M12 9v4" /><path d="M12 17h.01" /></svg>
+              <h3>Are you sure?</h3>
+              <div class="text-secondary">If you confirm, you will delete all plans.</div>
+            </div>
+            <div class="modal-footer">
+              <div class="w-100">
+                <div class="row">
+                  <div class="col"><a class="btn w-100" data-bs-dismiss="modal">
+                      Cancel
+                    </a></div>
+                  <div class="col"><a class="btn btn-danger w-100" data-bs-dismiss="modal" @click="removeAllPlan()">
+                      Delete
+                    </a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel" style="height: 100%;">
+        <div class="offcanvas-header">
+            <h2 class="offcanvas-title" id="offcanvasBottomLabel">
+                <svg t="1692319746964"  class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="51522" width="320" height="320"><path d="M815.2576 795.3408H208.7424c-73.4208 0-133.12-59.6992-133.12-133.12V218.624c0-73.4208 59.6992-133.12 133.12-133.12h606.5664c73.4208 0 133.12 59.6992 133.12 133.12v443.5968c-0.0512 73.4208-59.7504 133.12-133.1712 133.12zM208.7424 146.944c-39.5264 0-71.68 32.1536-71.68 71.68v443.5968c0 39.5264 32.1536 71.68 71.68 71.68h606.5664c39.5264 0 71.68-32.1536 71.68-71.68V218.624c0-39.5264-32.1536-71.68-71.68-71.68H208.7424zM706.2016 945.4592H317.7984c-16.9472 0-30.72-13.7728-30.72-30.72s13.7728-30.72 30.72-30.72h388.4032c16.9472 0 30.72 13.7728 30.72 30.72s-13.7728 30.72-30.72 30.72z" fill="#303135" p-id="51523"></path><path d="M256.6144 563.0976a30.6176 30.6176 0 0 1-22.3232-9.6256 30.67904 30.67904 0 0 1 1.2288-43.4176l162.7648-153.9072a30.72512 30.72512 0 0 1 41.8304-0.3584l129.7408 118.784 176.2816-169.2672c12.2368-11.7248 31.6928-11.3664 43.4176 0.8704s11.3664 31.6928-0.8704 43.4176l-197.0688 189.2352a30.77632 30.77632 0 0 1-42.0352 0.512L419.6864 420.4032l-141.9776 134.2976a30.7456 30.7456 0 0 1-21.0944 8.3968z" fill="#FF623E" p-id="51524"></path></svg>
+                Monitor
+            </h2>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="btn-list">
+                <a  class="btn  d-none d-sm-inline-block" @click="startMonitor()" v-if="monitorStartBtn">
+                    <svg t="1692612614001" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="118121" width="320" height="320"><path d="M510.3 98.2c-229.2 0-415.1 185.8-415.1 415S281 928.3 510.3 928.3s415.1-185.8 415.1-415.1c0-229.2-185.9-415-415.1-415z m163.8 448.1L446.5 679.1c-3.3 1.9-6.7 2.8-10.1 2.8-10.5 0-20.1-8.4-20.1-20.1V396.2c0-11.7 9.6-20.1 20.1-20.1 3.4 0 6.8 0.9 10.1 2.8l227.6 132.8c13.3 7.7 13.3 26.9 0 34.6z" fill="#3259CE" p-id="118122"></path></svg>
+                    <label v-text="language.start"></label>
+                </a>
+                <a  class="btn  d-none d-sm-inline-block" @click="stopMonitor()"  v-if="monitorStopBtn">
+                    <svg t="1692694684479" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="25736" width="320" height="320"><path d="M510.171429 919.771429c-226.742857 0-411.428571-184.685714-411.428572-411.428572S283.428571 96.914286 510.171429 96.914286 921.6 281.6 921.6 508.342857 736.914286 919.771429 510.171429 919.771429zM548.571429 230.4h-74.971429v266.971429H548.571429V230.4z m230.4 213.942857c-5.485714-21.942857-12.8-42.057143-23.771429-62.171428-10.971429-20.114286-21.942857-38.4-36.571429-54.857143-14.628571-16.457143-42.057143-40.228571-42.057142-40.228572s0 1.828571-40.228572 43.885715c64 40.228571 98.742857 104.228571 98.742857 184.685714 0 122.514286-100.571429 223.085714-223.085714 223.085714s-223.085714-100.571429-223.085714-223.085714c0-76.8 38.4-144.457143 98.742857-184.685714L347.428571 288.914286s-32.914286 27.428571-47.542857 43.885714c-14.628571 16.457143-25.6 34.742857-34.742857 53.028571s-16.457143 38.4-21.942857 60.342858c-5.485714 20.114286-7.314286 42.057143-7.314286 64 0 38.4 7.314286 74.971429 21.942857 107.885714 14.628571 32.914286 34.742857 62.171429 60.342858 87.771428s54.857143 43.885714 87.771428 60.342858 69.485714 21.942857 107.885714 21.942857c38.4 0 74.971429-7.314286 107.885715-21.942857 32.914286-14.628571 62.171429-34.742857 87.771428-60.342858s43.885714-54.857143 60.342857-87.771428c14.628571-32.914286 21.942857-69.485714 21.942858-107.885714-5.485714-21.942857-7.314286-45.714286-12.8-65.828572z" fill="#99163d" p-id="25737" data-spm-anchor-id="a313x.search_index.0.i5.1fa53a8151ttue" class="selected"></path></svg>
+                    <label v-text="language.stop"></label>
+                </a>
+            </div>
+            <div class="card mt-2">
+                <div class="card-body">
+                    <div id="cpu" style="height: 330px;"></div>
+                </div>
+            </div>
+            <div class="card mt-3">
+                <div class="card-body">
+                    <div id="memory" style="height: 330px;"></div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/@tabler/core@latest/dist/js/tabler.min.js"></script>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script src="https://unpkg.com/element-plus"></script>
+<script src="https://unpkg.com/@element-plus/icons-vue"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/go.min.js"></script>
+<script src="/static/js/highstock.js"></script>
+<script src="/static/js/gray.js"></script>
+<script src="/static/js/lan.js"></script>
+
+<script>
+
+const { 
+    createApp, 
+    ref, 
+    onMounted, 
+    onBeforeMount, 
+    reactive, 
+    nextTick 
+} = Vue
+ 
+const app = createApp({
+    
+    setup() {
+        const loading = ref(false)
+        const redPointer = ref(false)
+        const isReload = ref(true)
+        const language = ref({})
+        const planList = reactive([])
+        const inputPlanName = ref('')
+        const importPlanName = ref('')
+        const planVisable = ref(false)
+        const emptyVisable = ref(true)
+        const checkedPlan = ref('')
+        const remove_plan_name = ref('')
+        const startBtn = ref(true)
+        const runningBtn = ref(false)
+        const stopBtn = ref(false)
+        const stoppingBtn = ref(true)
+        const runningPlanName = ref('')
+        
+        //plan base info
+        const planName = ref('')
+        const planComments = ref('')
+        const tearDown_on_shutdown_checked = ref(false)
+        const serialize_threadgroups_checked = ref(false)
+        const functional_mode_checked = ref(false)
+        
+        //thread group info
+        const threadgroupName = ref('')
+        const threadgroupComments = ref('')
+        const smplerAction = ref('continue')
+        const threadNum = ref('1')
+        const rampTime = ref('1')
+        const loopCount = ref('1')
+        const iterationChecked = ref(true)
+        const delayedChecked = ref(false)
+        const schedulerChecked = ref(false)
+        const schedulerDisabled = ref(true)
+        const duration = ref('')
+        const delay = ref('')
+
+        //sampler info
+        const samplerName = ref('')
+        const samplerComment = ref('')
+        const samplerProtocol = ref('')
+        const samplerIP = ref('')
+        const samplerPort = ref('')
+        const requestPath = ref('')
+        const requestEncode = ref('')
+        const autoRedirectChecked = ref(false)
+        const followRedirectChecked = ref(true)
+        const useKeepAliveChecked = ref(true)
+        const useKeepMultipartChecked = ref(false)
+        const browserComatibleChecked = ref(false)
+        const selectedMethod = ref('GET')
+        const methodList = ['GET', 'POST', 'PUT']
+        const bodyDataContent = ref('{}')
+        const parametersVisable = ref(false)
+        const bodydataVisavle = ref(true)
+
+        // Log
+        const selectedLog = ref('')
+        const log = ref('')
+        const Logs = reactive([])
+        const taskLog = ref('')
+
+        //monitor
+        const cpuChart = ref()
+        const memoryChart = ref()
+        const monitorStatus = ref(false)
+        const monitorStartBtn = ref(true)
+        const monitorStopBtn = ref(false)
+
+        const rangeSelector =  {
+            buttons: [{
+                count: 1,
+                type: 'minute',
+                text: '1min'
+            }, {
+                count: 5,
+                type: 'minute',
+                text: '5min'
+            }, {
+                type: 'all',
+                text: 'All'
+            }],
+            inputEnabled: false,
+            selected: 1
+        };
+        
+        const series =  [{
+            name : 'value',
+            pointInterval: 120 * 1000,
+            data : (function () {
+                var data = [], time = (new Date()).getTime(), i;
+                for (i = -999; i <= 0; i += 1) {
+                    data.push([
+                        time + i * 1000,
+                        Math.round(0)
+                    ]);
+                }
+                return data;
+            }())
+        }];
+        
+        onBeforeMount(() => {
+            hljs.highlightAll();
+            keyList = ref([{"key":"language","value":"english"}])
+            initKey(keyList.value)
+            Highcharts.setOptions({
+                global : {
+                    useUTC : false
+                }
+            });
+        });
+
+        onMounted(() => {
+            getLanguage()
+            initPlan();
+            cpuChart.value = chartsInitialize('cpu', 'CPU (%)')
+            memoryChart.value = chartsInitialize('memory', 'Memory (%)')
+        });
+
+        async function reload() {
+            this.isReload = false;
+            await nextTick();
+            this.isReload = true;
+        };
+
+        const chartsInitialize = (target,title) => {
+            let seriesFinal = series;
+            let legend = false;
+            let yAxis = {
+                opposite:false,
+            };
+            let charts = Highcharts.stockChart(target, {
+                rangeSelector: rangeSelector,
+                title : {
+                    text : title
+                },
+                tooltip: {
+                    split: false
+                },
+                legend: {
+                    enabled:legend
+                },
+                credits:{
+                    enabled: false
+                },
+                scrollbar : {
+                    enabled : true
+                },
+                navigator : {
+                    enabled : false
+                },
+                exporting: {
+                    enabled: false
+                },
+                yAxis: yAxis,
+                series : seriesFinal
+            });
+            return charts
+        };
+        
+        const startMonitor = () => {
+            monitorStatus.value = true
+            monitorStopBtn.value = true
+            monitorStartBtn.value = false
+            monitorMachineCPU()
+            monitorMachineMemory()
+        }
+        const monitorMachineCPU = () => {
+            axios.post('/api/monitor/cpu', {})
+            .then(function (response) {
+                if(response['data']['status'] == 1 && monitorStatus.value == true){
+                    var series = cpuChart.value.series[0]
+                    var x = (new Date()).getTime()
+                    var y = response['data']['data']
+                    series.addPoint([x, y], true, true)
+                    setTimeout(monitorMachineCPU(), 2000)
+                }
+                console.log(response);
+            }).catch(function (error) {
+                console.log(error);
+            });
+        }
+
+        const monitorMachineMemory = () => {
+            axios.post('/api/monitor/memory', {})
+            .then(function (response) {
+                if(response['data']['status'] == 1 && monitorStatus.value == true){
+                    var series = memoryChart.value.series[0]
+                    var x = (new Date()).getTime()
+                    var y = response['data']['data']
+                    series.addPoint([x, y], true, true)
+                    setTimeout(monitorMachineMemory(), 2000)
+                }
+                console.log(response);
+            }).catch(function (error) {
+                console.log(error);
+            });
+        }
+
+
+        const stopMonitor = () => {
+            monitorStatus.value = false
+            monitorStopBtn.value = false
+            monitorStartBtn.value = true
+        }
+
+        const initKey = (formList) => {
+            formList.forEach(form =>{
+                axios.post('/api/initialize', form)
+                .then(function (response) {
+                    console.log(response);
+                })
+                .catch(function (error) {
+                    console.log(error);
+                    elMessage('error', error)
+                });
+            })
+        }
+
+        const setLanguage = (language) => {
+            loading.value = true
+            axios.post('/api/language/set', {
+                key: 'language',
+                value: language
+            })
+            .then(function (response) {
+                if(response['data']['status'] == 1){
+                    elMessage('success', response['data']['msg'])
+                    getLanguage()
+                }else{
+                    elMessage('error', response['data']['msg'])
+                }
+                console.log(response);
+            })
+            .catch(function (error) {
+                console.log(error);
+                elMessage('error', error)
+            });
+            loading.value = false
+        }
+
+        const getLanguage = () => {
+            loading.value = true
+            axios.post('/api/language/get', {
+                key: 'language'
+            })
+            .then(function (response) {
+                if(response['data']['status'] == 1){
+                    if(response['data']['language'] == 'chinese'){
+                        language.value = CHINESE
+                    }else{
+                        language.value = ENGLISH
+                    }                
+                }else{
+                    elMessage('error', response['data']['msg'])
+                    language.value = ENGLISH
+                }
+                console.log(response);
+            })
+            .catch(function (error) {
+                console.log(error);
+                elMessage('error', error)
+                language.value = ENGLISH
+            });
+            loading.value = false
+        }
+
+        const clickPlan = (name) => {
+            loading.value = true
+            Logs.length = 0
+            axios.post('/api/plan/info', {
+                plan_name: name
+            })
+            .then(function (response) {
+                plan_data = response['data']
+                if(plan_data['status'] == 1){
+                    //plan base info
+                    planName.value = plan_data['plan_info']['name']
+                    planComments.value = plan_data['plan_info']['comments']
+                    tearDown_on_shutdown_checked.value = plan_data['plan_info']['tearDown_on_shutdown']
+                    serialize_threadgroups_checked.value = plan_data['plan_info']['serialize_threadgroups']
+                    functional_mode_checked.value = plan_data['plan_info']['functional_mode']
+                    //thread group info
+                    threadgroupName.value = plan_data['plan_info']['thread_group_name']
+                    threadgroupComments.value = plan_data['plan_info']['thread_group_comment']
+                    smplerAction.value = plan_data['plan_info']['on_sample_error']
+                    threadNum.value = plan_data['plan_info']['num_threads']
+                    rampTime.value = plan_data['plan_info']['ramp_time']
+                    loopCount.value = plan_data['plan_info']['loops']
+                    iterationChecked.value = plan_data['plan_info']['same_user_on_next_iteration']
+                    delayedChecked.value = plan_data['plan_info']['delayedStart']
+                    schedulerChecked.value = plan_data['plan_info']['scheduler']
+                    duration.value = plan_data['plan_info']['duration']
+                    delay.value = plan_data['plan_info']['delay']
+                    //sampler info
+                    samplerName.value = plan_data['plan_info']['http_request_name']
+                    samplerProtocol.value = plan_data['plan_info']['protocol']
+                    samplerIP.value = plan_data['plan_info']['domain']
+                    samplerPort.value = plan_data['plan_info']['port']
+                    requestPath.value = plan_data['plan_info']['path']
+                    selectedMethod.value = plan_data['plan_info']['method']
+                    requestEncode.value = plan_data['plan_info']['contentEncoding']
+                    autoRedirectChecked.value = plan_data['plan_info']['auto_redirects']
+                    followRedirectChecked.value = plan_data['plan_info']['follow_redirects']
+                    useKeepAliveChecked.value = plan_data['plan_info']['use_keepalive']
+                    useKeepMultipartChecked.value = plan_data['plan_info']['DO_MULTIPART_POST']
+                    browserComatibleChecked.value = plan_data['plan_info']['BROWSER_COMPATIBLE_MULTIPART']
+                    if(plan_data['plan_info']['postBodyRaw']){
+                        bodyDataContent.value = plan_data['plan_info']['body_data']
+                    }
+                    if(schedulerChecked.value){
+                        schedulerDisabled.value = false
+                    }
+
+                    //log
+                    plan_data['plan_info']['tasks'].forEach(i =>{
+                        Logs.push(i)
+                    })
+                    selectedLog.value = Logs[0]
+                    showLog()
+                    loading.value = false
+                }else{
+                    loading.value = false
+                    elMessage('error', response['data']['msg'])
+                }
+                console.log(response);
+            })
+            .catch(function (error) {
+                loading.value = false
+                console.log(error);
+                elMessage('error', error)
+            });
+            checkedPlan.value = name
+        }
+
+        const createPlan = () => {
+            loading.value = true
+            const new_plan = inputPlanName.value.trim()
+            if(new_plan){
+                axios.post('/api/plan/create', {
+                    plan_name: new_plan
+                }).then(function (response) {
+                    if(response['data']['status'] == 1){
+                        elMessage('success', response['data']['msg'])
+                        initPlan()
+                    }else{
+                        elMessage('error', response['data']['msg'])
+                    }
+                    console.log(response);
+                    loading.value = false
+                }).catch(function (error) {
+                    loading.value = false
+                    console.log(error);
+                    elMessage('error', error)
+                });
+            }else{
+                loading.value = false
+                elMessage('error', 'plan is empty')
+            }
+            inputPlanName.value = ''
+        };
+
+        const importPlan = () => {
+            loading.value = true
+            const new_plan = importPlanName.value.trim()
+            const file = document.querySelector('input[type=file]').files[0]
+            if(!file){
+                elMessage('error', 'No file seleted')
+                loading.value = false
+                return
+            }
+            if(new_plan){
+                const formData = new FormData()
+                formData.append('file', file)
+                formData.append('plan_name', new_plan)
+                axios.post('/api/plan/import', formData
+                ).then(function (response) {
+                    if(response['data']['status'] == 1){
+                        elMessage('success', response['data']['msg'])
+                        initPlan()
+                    }else{
+                        elMessage('error', response['data']['msg'])
+                    }
+                    loading.value = false
+                    console.log(response);
+                }).catch(function (error) {
+                    loading.value = false
+                    console.log(error);
+                    elMessage('error', error)
+                });
+            }else{
+                loading.value = false
+                elMessage('error', 'Plan name is empty')
+            }
+            importPlanName.value = ''
+        };
+
+        const initPlan = () => {
+            loading.value = true
+            planList.length = 0 // 置空，避免叠加
+            axios.post('/api/plan/all', {})
+            .then(function (response) {
+                if(response['data']['status'] == 1){
+                    response['data']['plan_list'].forEach(i =>{
+                        planList.push(i)
+                    })
+                    if(response['data']['length'] > 0){
+                        planVisable.value = true
+                        emptyVisable.value = false
+                        checkedPlan.value = planList[0]['name']
+                        clickPlan(planList[0]['name'])
+                    }else{
+                        planVisable.value = false
+                        emptyVisable.value = true
+                    }
+                    loading.value = false
+                }else{
+                    loading.value = false
+                    elMessage('error', response['data']['msg'])
+                }
+                console.log(response);
+            })
+            .catch(function (error) {
+                loading.value = false
+                console.log(error);
+                elMessage('error', error)
+            });
+        };
+
+        const editPlan = () => {
+            loading.value = true
+            const new_plan_name = planName.value.trim()
+            // const body_data = bodyDataContent.value
+            if(new_plan_name){
+                axios.post('/api/plan/save', {
+                    old_plan_name: checkedPlan.value,
+                    new_plan_name: new_plan_name,
+                    plan_comment: planComments.value,
+                    functional_mode: functional_mode_checked.value,
+                    tearDown_on_shutdown: tearDown_on_shutdown_checked.value,
+                    serialize_threadgroups: serialize_threadgroups_checked.value,
+                    thread_group_name: threadgroupName.value,
+                    on_sample_error: smplerAction.value,
+                    num_threads: threadNum.value,
+                    ramp_time: rampTime.value,
+                    loops: loopCount.value,
+                    same_user_on_next_iteration: iterationChecked.value,
+                    delayedStart: delayedChecked.value,
+                    scheduler: schedulerChecked.value,
+                    loodurationps: duration.value,
+                    delay: delay.value,
+                    http_request_name: samplerName.value,
+                    protocol: samplerProtocol.value,
+                    domain: samplerIP.value,
+                    port: samplerPort.value,
+                    path: requestPath.value,
+                    method: selectedMethod.value,
+                    contentEncoding: requestEncode.value,
+                    follow_redirects: followRedirectChecked.value,
+                    auto_redirects: autoRedirectChecked.value,
+                    use_keepalive: useKeepAliveChecked.value,
+                    DO_MULTIPART_POST: useKeepMultipartChecked.value,
+                    BROWSER_COMPATIBLE_MULTIPART: browserComatibleChecked.value,
+                    body_data: bodyDataContent.value
+                }).then(function (response) {
+                    if(response['data']['status'] == 1){
+                        elMessage('success', response['data']['msg'])
+                        initPlan()
+                        clickPlan(planName.value.trim())
+                    }else{
+                        elMessage('error', response['data']['msg'])
+                    }
+                    console.log(response);
+                }).catch(function (error) {
+                    console.log(error);
+                    elMessage('error', error)
+                });
+            }else{
+                elMessage('error', 'plan is empty')
+            }
+            loading.value = false
+            inputPlanName.value = ''
+        };
+
+        const run = () => {
+            runningPlanName.value = checkedPlan.value
+            runningBtn.value = true
+            startBtn.value = false
+            stoppingBtn.value = false
+            stopBtn.value = true
+            axios.post('/api/plan/run', {
+                plan_name: checkedPlan.value,
+                threads: threadNum.value
+            })
+            .then(function (response) {
+                plan_data = response['data']
+                if(plan_data['status'] == 1){
+                    console.log(response)
+                    redPointer.value = true
+                    clickPlan(checkedPlan.value)
+                }else{
+                    elMessage('error', plan_data['msg'])
+                }
+                console.log(response);
+                runningBtn.value = false
+                startBtn.value = true
+                stoppingBtn.value = true
+                stopBtn.value = false
+            })
+            .catch(function (error) {
+                runningBtn.value = false
+                startBtn.value = true
+                stoppingBtn.value = true
+                stopBtn.value = false
+                console.log(error);
+                elMessage('error', error)
+            });
+            
+        }
+
+        const stop = () => {
+            runningBtn.value = false
+            startBtn.value = true
+            stoppingBtn.value = true
+            stopBtn.value = false
+            axios.post('/api/plan/stop', {})
+            .then(function (response) {
+                plan_data = response['data']
+                if(plan_data['status'] == 1){
+                    console.log(response)
+                    clickPlan(checkedPlan.value)
+                }else{
+                    elMessage('error', plan_data['msg'])
+                }
+                console.log(response);
+                runningBtn.value = true
+                startBtn.value = false
+                stoppingBtn.value = false
+                stopBtn.value = true
+            })
+            .catch(function (error) {
+                runningBtn.value = true
+                startBtn.value = false
+                stoppingBtn.value = false
+                stopBtn.value = true
+                console.log(error);
+                elMessage('error', error)
+            });
+        }
+
+        const removeClick = () => {
+            remove_plan_name.value = checkedPlan.value
+        }
+
+        const removePlan = () => {
+            loading.value = true
+            axios.post('/api/plan/remove', {
+                plan_name: checkedPlan.value
+            })
+            .then(function (response) {
+                if(response['data']['status'] == 1){
+                    initPlan()
+                }else{
+                    elMessage('error', response['data']['msg'])
+                }
+                console.log(response);
+                loading.value = false
+            })
+            .catch(function (error) {
+                loading.value = false
+                console.log(error);
+                elMessage('error', error)
+            });
+        }
+
+        const removeAllPlan = () => {
+            loading.value = true
+            axios.post('/api/plan/removeall', {
+            })
+            .then(function (response) {
+                if(response['data']['status'] == 1){
+                    initPlan()
+                }else{
+                    elMessage('error', response['data']['msg'])
+                }
+                loading.value = false
+                console.log(response);
+            })
+            .catch(function (error) {
+                loading.value = false
+                console.log(error);
+                elMessage('error', error)
+            });
+        }
+
+        const clickScheduler = () => {
+            schedulerDisabled.value = schedulerChecked.value ? true : false
+        }
+        
+        const showLog = () => {
+            loading.value = true
+            axios.post('/api/task/log', {
+                plan: checkedPlan.value,
+                task: selectedLog.value
+            })
+            .then(function (response) {
+                if(response['data']['status'] == 1){
+                    taskLog.value = response['data']['data']
+                }else{
+                    elMessage('error', response['data']['msg'])
+                }
+                console.log(response);
+            })
+            .catch(function (error) {
+                console.log(error);
+                elMessage('error', error)
+            });
+            loading.value = false
+        }
+
+        const elMessage = (type, message) => {
+            switch(type){
+                case 'success':
+                    ElementPlus.ElMessage({
+                        showClose: true,
+                        message: message,
+                        type: 'success',
+                    })
+                    break;
+                case 'warning':
+                    ElementPlus.ElMessage({
+                        showClose: true,
+                        message: message,
+                        type: 'warning',
+                    })
+                    break;
+                case 'error':
+                    ElementPlus.ElMessage({
+                        showClose: true,
+                        message: message,
+                        type: 'error',
+                    })
+                    break;
+                default:
+                    ElementPlus.ElMessage({
+                        showClose: true,
+                        message: message,
+                    })         
+            };
+        }
+
+        return {
+            loading,
+            redPointer,
+            language,
+            planList,
+            planVisable,
+            emptyVisable,
+            checkedPlan,
+            inputPlanName,
+            importPlanName,
+            remove_plan_name,
+            startBtn,
+            runningBtn,
+            stopBtn,
+            stoppingBtn,
+            runningPlanName,
+
+            //plan base info
+            planName,
+            planComments,
+            tearDown_on_shutdown_checked,
+            serialize_threadgroups_checked,
+            functional_mode_checked,
+
+            //thread group info
+            threadgroupName,
+            threadgroupComments,
+            smplerAction,
+            threadNum,
+            rampTime,
+            loopCount,
+            iterationChecked,
+            delayedChecked,
+            schedulerChecked,
+            schedulerDisabled,
+            duration,
+            delay,
+
+            //sampler info
+            samplerName,
+            samplerComment,
+            samplerProtocol,
+            samplerIP,
+            samplerPort,
+            requestPath,
+            requestEncode,
+            autoRedirectChecked,
+            followRedirectChecked,
+            useKeepAliveChecked,
+            useKeepMultipartChecked,
+            browserComatibleChecked,
+            methodList,
+            selectedMethod,
+            bodyDataContent,
+            parametersVisable,
+            bodydataVisavle,
+
+            // Log
+            selectedLog,
+            log,
+            Logs,
+            taskLog,
+
+            //monitor
+            monitorStartBtn,
+            monitorStopBtn,
+            
+            // founction
+            createPlan,
+            importPlan,
+            elMessage,
+            removePlan,
+            removeAllPlan,
+            clickPlan,
+            setLanguage,
+            removeClick,
+            clickScheduler,
+            editPlan,
+            run,
+            stop,
+            showLog,
+            startMonitor,
+            stopMonitor
+        };
+    }
+});
+for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
+    app.component(key, component)
+};
+app.use(ElementPlus);
+app.mount('#app');
+</script>
+</body>
+</html>
