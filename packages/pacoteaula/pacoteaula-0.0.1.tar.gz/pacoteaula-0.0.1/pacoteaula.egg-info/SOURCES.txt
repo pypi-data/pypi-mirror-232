@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+pacoteaula/__init__.py
+pacoteaula/modulo.py
+pacoteaula.egg-info/PKG-INFO
+pacoteaula.egg-info/SOURCES.txt
+pacoteaula.egg-info/dependency_links.txt
+pacoteaula.egg-info/requires.txt
+pacoteaula.egg-info/top_level.txt
