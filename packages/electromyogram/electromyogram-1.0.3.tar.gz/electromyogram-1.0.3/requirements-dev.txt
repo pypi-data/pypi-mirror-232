@@ -1,0 +1,3 @@
+gradio
+jupyter
+matplotlib
