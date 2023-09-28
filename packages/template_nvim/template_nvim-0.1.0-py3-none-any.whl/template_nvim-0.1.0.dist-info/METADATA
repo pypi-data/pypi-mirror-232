@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: template_nvim
+Version: 0.1.0
+Summary: Main Python package for the template.nvim plugin.
+Author-email: Juan Lara <julara@unal.edu.co>
+Requires-Python: >3.10
+Requires-Dist: pynvim
+Requires-Dist: pydantic
+Requires-Dist: black ; extra == "dev"
+Requires-Dist: ruff ; extra == "dev"
+Requires-Dist: ruff-lsp ; extra == "dev"
+Requires-Dist: flit ; extra == "dev"
+Provides-Extra: dev
