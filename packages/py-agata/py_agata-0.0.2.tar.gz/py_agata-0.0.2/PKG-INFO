@@ -1,0 +1,83 @@
+Metadata-Version: 2.1
+Name: py_agata
+Version: 0.0.2
+Summary: AGATA (Automated Glucose dATa Analysis): a toolbox to analyse glucose data.
+Author-email: Giacomo Cappon <cappongiacomo@gmail.com>
+Project-URL: Homepage, https://github.com/gcappon/py_agata
+Project-URL: Bug Tracker, https://github.com/gcappon/py_agata/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: COPYING.md
+Requires-Dist: build==1.0.3
+Requires-Dist: certifi==2023.7.22
+Requires-Dist: charset-normalizer==3.2.0
+Requires-Dist: codecov==2.1.13
+Requires-Dist: contourpy==1.1.1
+Requires-Dist: coverage==7.3.1
+Requires-Dist: cycler==0.11.0
+Requires-Dist: docutils==0.20.1
+Requires-Dist: exceptiongroup==1.1.3
+Requires-Dist: fonttools==4.42.1
+Requires-Dist: idna==3.4
+Requires-Dist: importlib-metadata==6.8.0
+Requires-Dist: importlib-resources==6.1.0
+Requires-Dist: iniconfig==2.0.0
+Requires-Dist: jaraco.classes==3.3.0
+Requires-Dist: keyring==24.2.0
+Requires-Dist: kiwisolver==1.4.5
+Requires-Dist: markdown-it-py==3.0.0
+Requires-Dist: matplotlib==3.8.0
+Requires-Dist: mdurl==0.1.2
+Requires-Dist: more-itertools==10.1.0
+Requires-Dist: nh3==0.2.14
+Requires-Dist: numpy==1.26.0
+Requires-Dist: packaging==23.1
+Requires-Dist: pandas==2.1.1
+Requires-Dist: Pillow==10.0.1
+Requires-Dist: pkginfo==1.9.6
+Requires-Dist: pluggy==1.3.0
+Requires-Dist: Pygments==2.16.1
+Requires-Dist: pyparsing==3.1.1
+Requires-Dist: pyproject-hooks==1.0.0
+Requires-Dist: pytest==7.4.2
+Requires-Dist: pytest-cov==4.1.0
+Requires-Dist: python-dateutil==2.8.2
+Requires-Dist: pytz==2023.3.post1
+Requires-Dist: readme-renderer==42.0
+Requires-Dist: requests==2.31.0
+Requires-Dist: requests-toolbelt==1.0.0
+Requires-Dist: rfc3986==2.0.0
+Requires-Dist: rich==13.5.3
+Requires-Dist: seaborn==0.12.2
+Requires-Dist: six==1.16.0
+Requires-Dist: tomli==2.0.1
+Requires-Dist: twine==4.0.2
+Requires-Dist: tzdata==2023.3
+Requires-Dist: urllib3==2.0.5
+Requires-Dist: zipp==3.17.0
+
+# PYAGATA
+
+<img src="https://i.postimg.cc/G3YXvWWh/agata-logo.png" width="250" height="250">
+
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://github.com/gcappon/py_agata/COPYING)
+[![GitHub commit](https://img.shields.io/github/last-commit/gcappon/py_agata)](https://github.com/gcappon/py_agata/commits/master)
+[![CircleCI](https://circleci.com/gh/gcappon/py_agata.svg?style=shield)](https://circleci.com/gh/gcappon/py_agata)
+[![codecov](https://codecov.io/gh/gcappon/py_agata/graph/badge.svg?token=RR39WKLDIK)](https://codecov.io/gh/gcappon/py_agata)
+
+Official Python porting of AGATA (Automated Glucose dATa Analysis): a toolbox to analyse glucose data. 
+
+## Citing
+
+If you are using AGATA in your research, please cite it:  
+```
+Cappon G, Sparacino G, Facchinetti A. AGATA: A toolbox for automated glucose data analysis.  
+J Diabetes Sci Technol. 2023. DOI: 10.1177/19322968221147570
+```
+
+Link to the paper --> [here](https://doi.org/10.1177/19322968221147570)
