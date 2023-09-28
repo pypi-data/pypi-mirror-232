@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: mini-judge
+Version: 0.3.0
+Summary: 
+Author: mrcabbage972
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: loguru (>=0.7.2,<0.8.0)
+Requires-Dist: openai (>=0.28.1,<0.29.0)
+Requires-Dist: python-dotenv (>=1.0.0,<2.0.0)
+Requires-Dist: python-fire (>=0.1.0,<0.2.0)
+Requires-Dist: tqdm (>=4.66.1,<5.0.0)
+Description-Content-Type: text/markdown
+
+# mini-judge
+Simple implementation of LLM-As-Judge for pairwise evaluation of Q&A models.
+
+# Usage
+Install the package using pip:
+```pip install mini-judge```
+
+Then, you can use the package as follows.
+First, set the OPENAI_API_KEY environment variable to your OpenAI API key.
+Then, you can run the following command to evaluate the candidate answers in `candidate_answers_path` against the reference answers in `ref_answers_path` using `judge_model` as the judge model.
+```
+mini-judge \
+--judge_model <judge_model> \
+--questions_path <questions_path> \
+--candidate_answers_path <candidate_answers_path> \
+--ref_answers_path <ref_answers_path> \
+--output_path <output_path>
+```
+
+To run a quick demo, use the following command to evaluate the candidate answers in `example_data/candidate_answers.jsonl` against the reference answers in `example_data/ref_answers.jsonl` using GPT-4 as the judge model.
+```
+mini_judge --output_path <output_path>
+```
+
