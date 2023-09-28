@@ -1,0 +1,3 @@
+include byquant/pyarmor_runtime_000000/pyarmor_runtime.pyd
+exclude byquant/bybot/compile.py
+prune dist
