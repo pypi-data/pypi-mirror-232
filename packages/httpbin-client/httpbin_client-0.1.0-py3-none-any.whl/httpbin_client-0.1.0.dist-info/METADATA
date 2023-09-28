@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: httpbin-client
+Version: 0.1.0
+Summary: A simple httpbin client for python, mostly for educational purposes.
+Home-page: https://github.com/hasansezertasan/httpbin-client.git
+Author: Hasan Sezer Taşan
+Author-email: hasansezertasan@gmail.com
+Classifier: Development Status :: 1 - Planning
+Classifier: License :: OSI Approved :: MIT License
+License-File: LICENSE
+
+<h1 align="center">
+    <strong>httobin-client</strong>
+</h1>
+<p align="center">
+    <a href="https://github.com/hasansezertasan/httpbin-client" target="_blank">
+        <img src="https://img.shields.io/github/last-commit/hasansezertasan/httpbin-client" alt="Latest Commit">
+    </a>
+        <img src="https://img.shields.io/github/workflow/status/hasansezertasan/httpbin-client/Test">
+        <img src="https://img.shields.io/codecov/c/github/hasansezertasan/httpbin-client">
+    <br />
+    <a href="https://pypi.org/project/httpbin-client" target="_blank">
+        <img src="https://img.shields.io/pypi/v/httpbin-client" alt="Package version">
+    </a>
+    <img src="https://img.shields.io/pypi/pyversions/httpbin-client">
+    <img src="https://img.shields.io/github/license/hasansezertasan/httpbin-client">
+</p>
+
+## Installation
+
+``` bash
+pip install httpbin-client
+```
