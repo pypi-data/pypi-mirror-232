@@ -1,0 +1,2 @@
+[console_scripts]
+mamp-sql-import = MAMPSQLImport.main:main_function

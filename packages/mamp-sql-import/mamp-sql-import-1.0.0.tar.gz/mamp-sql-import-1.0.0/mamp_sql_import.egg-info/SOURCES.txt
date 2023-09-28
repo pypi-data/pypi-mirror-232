@@ -1,0 +1,12 @@
+LICENSE.txt
+setup.py
+MAMPSQLImport/__init__.py
+MAMPSQLImport/configs.py
+MAMPSQLImport/functions.py
+MAMPSQLImport/main.py
+mamp_sql_import.egg-info/PKG-INFO
+mamp_sql_import.egg-info/SOURCES.txt
+mamp_sql_import.egg-info/dependency_links.txt
+mamp_sql_import.egg-info/entry_points.txt
+mamp_sql_import.egg-info/requires.txt
+mamp_sql_import.egg-info/top_level.txt
