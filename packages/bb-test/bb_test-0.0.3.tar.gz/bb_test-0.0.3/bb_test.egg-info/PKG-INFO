@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: bb-test
+Version: 0.0.3
+Summary: Brandon's test package
+Author: brandonb
+Author-email: B.Bennett@leeds.ac.uk
+Classifier: Development Status :: 1 - Planning
+
+There's not a lot to say about it
