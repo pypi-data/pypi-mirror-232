@@ -1,0 +1,11 @@
+__init__.py,sha256=GgAjq3_-a6oG_UQLwmNLedrB4GeNYuP3AEivurqz9Wo,41
+parserproxy.py,sha256=EPTm3NI150bTAzVhnr0RxelDB_RZ3-A98guonjT26-o,2297
+requestsgarant.py,sha256=iewT9qEAAKQcMg5aISMEKyMXZGhN8EqEnqpLlhIlcoE,5641
+test_parserproxy.py,sha256=NFrI2xhf5jDL8QGHwsTrSqxlrNK0reZZGBYhFKeupEE,3227
+test_watsapp.py,sha256=lJGs0txkcPfmedVZCEytjUs4lWSsURtfCTf69GL_7To,2029
+watsapp.py,sha256=5OvKnThl_WIY5X9mAJ9m6MO3qvF2VYUeTw81Fea69ng,1499
+requestsgarant-0.1.16.dist-info/LICENSE,sha256=2bm9uFabQZ3Ykb_SaSU_uUbAj2-htc6WJQmS_65qD00,1073
+requestsgarant-0.1.16.dist-info/METADATA,sha256=eyRurO0I5RWwQ9zzfAHdMnu4yYF83SX4J8lL_8PxqlA,6772
+requestsgarant-0.1.16.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+requestsgarant-0.1.16.dist-info/top_level.txt,sha256=oQKpiJrKkuBqoQws5VTQ4f9o_XJpPuwJbMH7F3tXCqc,74
+requestsgarant-0.1.16.dist-info/RECORD,,
