@@ -1,0 +1,8 @@
+nomad_camels_driver_thorlabs_K10CR1/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nomad_camels_driver_thorlabs_K10CR1/thorlabs_K10CR1.py,sha256=NCA9NhBEsXpq4dRVMAaH3oyc9t3AMBd2PNy-Dtp2kLY,1618
+nomad_camels_driver_thorlabs_K10CR1/thorlabs_K10CR1_ophyd.py,sha256=EzZhX0Nt7fVFyGTQ1on_psDWLsZLmRVY4ZNp_LtIuOk,1751
+nomad_camels_driver_thorlabs_K10CR1-0.1.0.dist-info/LICENSE.txt,sha256=ixuiBLtpoK3iv89l7ylKkg9rs2GzF9ukPH7ynZYzK5s,35148
+nomad_camels_driver_thorlabs_K10CR1-0.1.0.dist-info/METADATA,sha256=l7A4QKZ7tj0AvvYH7P9rlGB5YkPh0qByTvYW2k84Cso,1183
+nomad_camels_driver_thorlabs_K10CR1-0.1.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+nomad_camels_driver_thorlabs_K10CR1-0.1.0.dist-info/top_level.txt,sha256=ENj6q4LwW_7geUedCHLDkzMAxlZmpnEBM-DOobb9jUQ,36
+nomad_camels_driver_thorlabs_K10CR1-0.1.0.dist-info/RECORD,,
