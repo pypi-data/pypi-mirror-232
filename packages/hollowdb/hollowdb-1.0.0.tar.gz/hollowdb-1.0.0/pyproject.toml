@@ -1,0 +1,29 @@
+# pyproject.toml
+
+[build-system]
+requires      = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hollowdb"
+version = "1.0.0"
+description = "HollowDB client is the simplest way to use HollowDB, a decentralized & privacy-preserving key-value database."
+readme = "README.md"
+authors = [{ name = "HollowDB", email = "developer@firstbatch.xyz" }]
+license = { file = "LICENSE" }
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+]
+keywords = ["database", "key-value", "decentralized", "privacy-preserving", "hollowdb", "hollowdb-client", "hollowdb-client-python"]
+dependencies = [
+    "requests >= 2.27.1",
+]
+requires-python = ">=3.8"
+
+[project.optional-dependencies]
+dev = ["pip-tools", "pytest"]
+
+[project.urls]
+Homepage = "https://github.com/firstbatchxyz/hollowdb"

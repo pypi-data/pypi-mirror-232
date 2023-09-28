@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/hollowdb.egg-info/PKG-INFO
+src/hollowdb.egg-info/SOURCES.txt
+src/hollowdb.egg-info/dependency_links.txt
+src/hollowdb.egg-info/requires.txt
+src/hollowdb.egg-info/top_level.txt
+tests/tests.py
