@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+chippai/__init__.py
+chippai/core.py
+chippai/user.py
+chippai.egg-info/PKG-INFO
+chippai.egg-info/SOURCES.txt
+chippai.egg-info/dependency_links.txt
+chippai.egg-info/top_level.txt
