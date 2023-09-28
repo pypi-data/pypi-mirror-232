@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+metasynth.egg-info/PKG-INFO
+metasynth.egg-info/SOURCES.txt
+metasynth.egg-info/dependency_links.txt
+metasynth.egg-info/requires.txt
+metasynth.egg-info/top_level.txt
