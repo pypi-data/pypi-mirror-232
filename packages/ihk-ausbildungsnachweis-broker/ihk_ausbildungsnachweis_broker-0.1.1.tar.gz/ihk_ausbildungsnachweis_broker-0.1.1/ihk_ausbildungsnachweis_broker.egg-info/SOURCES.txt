@@ -1,0 +1,15 @@
+README.md
+setup.cfg
+setup.py
+versioneer.py
+ihk_ausbildungsnachweis_broker/__init__.py
+ihk_ausbildungsnachweis_broker/_version.py
+ihk_ausbildungsnachweis_broker/app.py
+ihk_ausbildungsnachweis_broker/azubi_repo.py
+ihk_ausbildungsnachweis_broker.egg-info/PKG-INFO
+ihk_ausbildungsnachweis_broker.egg-info/SOURCES.txt
+ihk_ausbildungsnachweis_broker.egg-info/dependency_links.txt
+ihk_ausbildungsnachweis_broker.egg-info/entry_points.txt
+ihk_ausbildungsnachweis_broker.egg-info/requires.txt
+ihk_ausbildungsnachweis_broker.egg-info/top_level.txt
+tests/__init__.py
