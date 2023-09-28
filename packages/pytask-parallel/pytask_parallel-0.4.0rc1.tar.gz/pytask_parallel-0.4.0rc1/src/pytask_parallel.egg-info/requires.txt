@@ -1,0 +1,5 @@
+click
+cloudpickle
+loky
+optree>=0.9.0
+pytask>=0.4.0rc2
