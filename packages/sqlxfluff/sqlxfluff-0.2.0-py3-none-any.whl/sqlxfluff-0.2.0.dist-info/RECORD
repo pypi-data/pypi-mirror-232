@@ -1,0 +1,15 @@
+sqlxfluff/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sqlxfluff/constants.py,sha256=SwFIGmibnU9wRT8eX-auXzH83BQeS-AuuDX16VdxDLM,46
+sqlxfluff/formatters/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sqlxfluff/formatters/base.py,sha256=bsiQgkViNN3mbFsQKpEUwGoxQF29Q8OQWQz1ukqguTI,748
+sqlxfluff/formatters/indent.py,sha256=IP1k8Tr2kP-m8eKYqqnUpMZpBgSMzST1Jx3xivZ7Syg,1594
+sqlxfluff/formatters/javascript.py,sha256=nx-4FT6bEvevaPiKmgKkA9p-ICUmJtNAIjuuCwF0U-o,1010
+sqlxfluff/formatters/sqlx.py,sha256=hz8fwklzVSR6VbqE_4_1_5deUFUXtcHDi--2Gc9nIy0,873
+sqlxfluff/linting.py,sha256=qzt5Ur2N5GgI5UISrLcehGiyvMXYNkLUv7cdyMrdxks,848
+sqlxfluff/main.py,sha256=kDpqzXlQmVPnCzpLz3fpIwDY-STpHZQBGbJjKRkfQcM,2627
+sqlxfluff/parsing.py,sha256=ZBx9HWZZgIR-mghLYhF5Zm9WrUNoWYZ1GUjjDE4FR-c,3024
+sqlxfluff-0.2.0.dist-info/LICENSE.md,sha256=oH3xvnYGsdsXobtJnzlBoxL8XHD6rfPpiAJwC7vA-Xw,1056
+sqlxfluff-0.2.0.dist-info/METADATA,sha256=wUt0Rd5-g6firh8Tae7z9N-BKAMTjObEppRkApPKWzc,375
+sqlxfluff-0.2.0.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+sqlxfluff-0.2.0.dist-info/entry_points.txt,sha256=4jtynAynb0KXMqHPY-WdSstSXyeTh2VtiKHAA7QeHo0,49
+sqlxfluff-0.2.0.dist-info/RECORD,,
