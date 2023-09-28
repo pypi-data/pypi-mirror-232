@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+fastsetup/__init__.py
+fastsetup/orchestrator_api.py
+fastsetup/tools.py
+fastsetup.egg-info/PKG-INFO
+fastsetup.egg-info/SOURCES.txt
+fastsetup.egg-info/dependency_links.txt
+fastsetup.egg-info/top_level.txt
