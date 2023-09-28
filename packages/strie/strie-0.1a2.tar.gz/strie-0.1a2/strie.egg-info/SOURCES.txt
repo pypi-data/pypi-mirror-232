@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.cfg
+strie/__init__.py
+strie/cache.py
+strie/trie.py
+strie.egg-info/PKG-INFO
+strie.egg-info/SOURCES.txt
+strie.egg-info/dependency_links.txt
+strie.egg-info/requires.txt
+strie.egg-info/top_level.txt
+strie.egg-info/zip-safe
+strie/utils/__init__.py
+strie/utils/vkey.py
+test/test.py
