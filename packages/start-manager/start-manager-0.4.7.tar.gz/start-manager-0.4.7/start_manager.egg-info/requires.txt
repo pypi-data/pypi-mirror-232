@@ -1,0 +1,8 @@
+colorama
+fire
+rtoml
+
+[dev]
+flake8
+black
+isort
