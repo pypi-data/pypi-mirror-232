@@ -1,0 +1,13 @@
+README.md
+pyproject.toml
+setup.py
+PyLectorManga.egg-info/PKG-INFO
+PyLectorManga.egg-info/SOURCES.txt
+PyLectorManga.egg-info/dependency_links.txt
+PyLectorManga.egg-info/requires.txt
+PyLectorManga.egg-info/top_level.txt
+pylectormanga/__init__.py
+pylectormanga/lectormanga.py
+pylectormanga/model.py
+pylectormanga/network.py
+pylectormanga/page.py
