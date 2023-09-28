@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: mamp-sql-import
+Version: 1.0.0
+Summary: A tool to quickly import databases in MAMP SQL
+Author: AutomateAlley
+Author-email: automatealley@gmail.com
+License: MIT
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: mysql-connector-python
+
