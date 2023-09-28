@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: quicker
+Version: 0.1.1
+Summary: Quicker: Schema, Specification and Definition based Python UI Framework.
+Home-page: https://github.com/hasansezertasan/quicker.git
+Author: hasansezertasan
+Author-email: hasansezertasan@gmail.com
+Classifier: Development Status :: 1 - Planning
+Classifier: License :: OSI Approved :: MIT License
+License-File: LICENSE
+
+<h1 align="center">
+    <strong>quicker</strong>
+</h1>
+<p align="center">
+    <a href="https://github.com/hasansezertasan/quicker" target="_blank">
+        <img src="https://img.shields.io/github/last-commit/hasansezertasan/quicker" alt="Latest Commit">
+    </a>
+        <img src="https://img.shields.io/github/workflow/status/hasansezertasan/quicker/Test">
+        <img src="https://img.shields.io/codecov/c/github/hasansezertasan/quicker">
+    <br />
+    <a href="https://pypi.org/project/quicker" target="_blank">
+        <img src="https://img.shields.io/pypi/v/quicker" alt="Package version">
+    </a>
+    <img src="https://img.shields.io/pypi/pyversions/quicker">
+    <img src="https://img.shields.io/github/license/hasansezertasan/quicker">
+</p>
+
+## Installation
+
+``` bash
+pip install quicker
+```
