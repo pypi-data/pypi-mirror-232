@@ -1,0 +1,9 @@
+fast_diff_match_patch.cpython-312-i386-linux-gnu.so,sha256=KIk4JDBTTz1iK2_4UW1L4fvhchr_qq0O9k5QPV4hSv8,2652764
+tests/test_diff.py,sha256=NBUQH9SWLykZZDi4YfGIXhPzlMg0Z7CGujmg57Pi-wQ,3530
+tests/test_match.py,sha256=iEpSV3Ye5xeCWQEDf_GR5T9H6P4X0gGeqtFlpsiwtJ8,1123
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fast_diff_match_patch-2.0.1.dist-info/METADATA,sha256=7qIcCc9QZ-Q_LkaKlef4IyW5m6QNia31RzTHhOeHsMI,5766
+fast_diff_match_patch-2.0.1.dist-info/LICENSE,sha256=c7p036pSC0mkAbXSFFmoUjoUbzt1GKgz7qXvqFEwv2g,10273
+fast_diff_match_patch-2.0.1.dist-info/WHEEL,sha256=A7hIKQQXXFLGXniNcQ83p8JyaKHpooKf94U_EUUle9c,148
+fast_diff_match_patch-2.0.1.dist-info/RECORD,,
+fast_diff_match_patch-2.0.1.dist-info/top_level.txt,sha256=O-qxb1cRfJa9JwTEFY4gqzq6cIdKWCKsZ9-JCZa7ang,28
