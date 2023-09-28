@@ -1,0 +1,90 @@
+[project]
+name = "ssmdevices"
+version = "0.18"
+description = "a collection of lab automation drivers implemented with labbench"
+authors = [
+    { name = "Dan Kuester", email = "daniel.kuester@nist.gov" },
+    { name = "Paul Blanchard" },
+    { name = "Alex Curtin" },
+    { name = "Keith Forsyth", email = "keith.forsyth@nist.gov" },
+    { name = "Ryan Jacobs" },
+    { name = "John Ladbury", email = "john.ladbury@nist.gov" },
+    { name = "Yao Ma", email = "yao.ma@nist.gov" },
+    { name = "Duncan McGillivray", email = "duncan.a.mcgillivray@nist.gov" },
+    { name = "Andre Rosete", email = "andre.rosete@nist.gov" },
+    { name = "Audrey Puls" },
+    { name = "Michael Voecks" },
+]
+maintainers = [
+    { name = "Dan Kuester", email = "daniel.kuester@nist.gov" },
+]
+dependencies = [
+    "labbench >= 0.29.1",
+    "hidapi",
+    "pywifi",
+    "brainstem>=2.9.26",
+]
+requires-python = ">=3.8,<3.12"
+readme = "README.md"
+
+[project.license]
+file = "LICENSE.md"
+
+[project.urls]
+homepage = "https://github.com/usnistgov/ssmdevices"
+repository = "https://github.com/usnistgov/ssmdevices"
+documentation = "https://pages.nist.gov/ssmdevices"
+
+[build-system]
+requires = [
+    "pdm-pep517>=1.0",
+]
+build-backend = "pdm.pep517.api"
+
+[tool.pdm.version]
+source = "scm"
+write_to = "ssmdevices/_version.py"
+write_template = "__version__ = '{}'"
+
+[tool.pdm.dev-dependencies]
+dev = [
+    "black[jupyter]",
+    "ipython",
+    "flake8",
+    "ast_decompiler",
+    "mypy",
+    "pytest",
+    "pytest-cov",
+    "sphinx>=7",
+    "ipywidgets",
+    "matplotlib>=3.6.0",
+    "seaborn>=0.11",
+    "toml>=0.10",
+    "jupytext>=1.6.0",
+    "myst-nb @ git+https://github.com/executablebooks/MyST-NB@master",
+]
+
+[tool.pdm.scripts.doc-html]
+cmd = "sphinx-build -b html doc doc/html"
+
+[tool.pdm.scripts.doc-latex]
+cmd = "sphinx-build -b latex doc doc/latex"
+
+[tool.pdm.scripts.doc-pdf]
+cmd = "pdflatex doc/latex/ssmdevices-api.tex --output-directory=doc"
+
+[tool.pdm.scripts.doc-pdf.env]
+TEXINPUTS = "doc/latex"
+
+[tool.pdm.scripts.doc-rst]
+cmd = "sphinx-apidoc -F . -o doc"
+
+[tool.black]
+line-length = 88
+target-version = [
+    "py38",
+    "py39",
+    "py310",
+    "py311",
+]
+include = "\\.pyi?$"
