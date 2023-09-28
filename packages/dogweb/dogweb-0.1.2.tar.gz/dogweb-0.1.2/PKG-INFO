@@ -1,0 +1,59 @@
+Metadata-Version: 2.1
+Name: dogweb
+Version: 0.1.2
+Summary: O DogWeb é um framework web minimalista desenvolvido em Python.
+Author: Bruno Ragner
+Author-email: brunooragnner@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: jinja2 (>=2.11,<3.0)
+Requires-Dist: werkzeug (>=2.0,<3.0)
+Description-Content-Type: text/markdown
+
+
+DogWeb Framework
+O DogWeb é um framework web minimalista desenvolvido em Python, projetado para simplificar o processo de criação de aplicativos web com eficiência e simplicidade. O nome "DogWeb" representa a ideia de um "companheiro leal" para desenvolvedores web, facilitando a construção de aplicativos web.
+
+Principais Características
+Facilidade de Uso: O DogWeb foi projetado com a simplicidade em mente. Ele fornece uma estrutura leve e intuitiva para desenvolver aplicativos web sem a necessidade de aprender complexas abstrações.
+
+Flexibilidade: O framework é altamente flexível e permite que você crie aplicativos web de qualquer tamanho, desde pequenos projetos até aplicativos de grande escala.
+
+Extensibilidade: É fácil estender o DogWeb para atender às suas necessidades específicas. Você pode adicionar novas funcionalidades e personalizar o comportamento conforme necessário.
+
+Roteamento Simples: O sistema de roteamento permite definir rotas facilmente e associá-las a funções de manipulação de solicitações.
+
+Integração com Jinja2: O DogWeb integra-se perfeitamente com a popular biblioteca de templates Jinja2 para simplificar a geração de conteúdo dinâmico.
+
+Recursos Estáticos: Você pode servir recursos estáticos, como CSS, JavaScript e imagens, de forma eficiente usando o DogWeb.
+
+Configuração Flexível: O framework oferece suporte à configuração flexível, permitindo que você defina opções de forma rápida e fácil.
+
+Uso Básico
+Para começar a usar o DogWeb, você pode seguir estas etapas simples:
+
+Instale o DogWeb Framework usando o gerenciador de pacotes Python de sua escolha (por exemplo, pip).
+
+Crie um aplicativo DogWeb, defina rotas e funções de manipulação de solicitações.
+
+Configure templates Jinja2 para renderização de conteúdo dinâmico.
+
+Execute seu aplicativo DogWeb e comece a receber solicitações HTTP.
+
+Documentação
+Para obter informações detalhadas sobre como usar o DogWeb, consulte a documentação oficial em https://www.dogwebframework.com/docs.
+
+Contribuições
+O DogWeb é um projeto de código aberto e incentivamos contribuições da comunidade. Sinta-se à vontade para relatar problemas, enviar solicitações de pull e ajudar a melhorar este framework.
+
+Licença
+O DogWeb Framework é distribuído sob a licença MIT, tornando-o livre para uso, modificação e distribuição em projetos pessoais e comerciais.
+
+Contato
+Para entrar em contato com a equipe do DogWeb, envie um e-mail para contato@dogwebframework.com.
+
+

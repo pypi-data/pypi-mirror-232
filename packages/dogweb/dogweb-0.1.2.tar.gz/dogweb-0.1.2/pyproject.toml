@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "dogweb"
+version = "0.1.2"
+description = "O DogWeb é um framework web minimalista desenvolvido em Python."
+authors = ["Bruno Ragner <brunooragnner@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+jinja2 = "^2.11"
+werkzeug = "^2.0"
+
+
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
