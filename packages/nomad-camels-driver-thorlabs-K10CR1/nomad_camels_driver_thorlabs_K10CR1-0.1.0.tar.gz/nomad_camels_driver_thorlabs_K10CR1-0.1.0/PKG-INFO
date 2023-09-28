@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: nomad_camels_driver_thorlabs_K10CR1
+Version: 0.1.0
+Summary: Instrument driver for the Thorlabs K10CR1 rotation mount for NOMAD-CAMELS
+Author-email: FAIRmat - HU Berlin <nomad-camels@fau.de>
+Project-URL: GitHub Page, https://github.com/FAU-LAP/NOMAD-CAMELS
+Project-URL: GitHub Drivers, https://github.com/FAU-LAP/CAMELS_drivers
+Project-URL: Documentation, https://fau-lap.github.io/NOMAD-CAMELS/doc/instruments/instruments.html
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Requires-Python: >=3.9.6
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: pylablib
+Requires-Dist: nomad-camels
+
+# NOMAD-CAMELS Driver for Thorlabs K10CR1
+
+Driver for the Thorlabs K10CR1 motorized rotation mount written for the measurement software [NOMAD-CAMELS](https://fau-lap.github.io/NOMAD-CAMELS/).
+
+
+## Features
+The position can be set and read, together with acceleration and maximum velocity.
+
+
+## Documentation
+
+For more information visit the [documentation](https://fau-lap.github.io/NOMAD-CAMELS/doc/instruments/instruments.html).

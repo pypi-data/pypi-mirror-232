@@ -1,0 +1,11 @@
+LICENSE.txt
+README.md
+pyproject.toml
+nomad_camels_driver_thorlabs_K10CR1/__init__.py
+nomad_camels_driver_thorlabs_K10CR1/thorlabs_K10CR1.py
+nomad_camels_driver_thorlabs_K10CR1/thorlabs_K10CR1_ophyd.py
+nomad_camels_driver_thorlabs_K10CR1.egg-info/PKG-INFO
+nomad_camels_driver_thorlabs_K10CR1.egg-info/SOURCES.txt
+nomad_camels_driver_thorlabs_K10CR1.egg-info/dependency_links.txt
+nomad_camels_driver_thorlabs_K10CR1.egg-info/requires.txt
+nomad_camels_driver_thorlabs_K10CR1.egg-info/top_level.txt
