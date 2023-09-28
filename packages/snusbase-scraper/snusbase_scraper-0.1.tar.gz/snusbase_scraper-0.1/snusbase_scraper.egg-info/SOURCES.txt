@@ -1,0 +1,8 @@
+setup.py
+snusbase_scraper/__init__.py
+snusbase_scraper/scraper.py
+snusbase_scraper.egg-info/PKG-INFO
+snusbase_scraper.egg-info/SOURCES.txt
+snusbase_scraper.egg-info/dependency_links.txt
+snusbase_scraper.egg-info/requires.txt
+snusbase_scraper.egg-info/top_level.txt

@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: snusbase_scraper
+Version: 0.1
+Summary: a scraper for snusbase that returns results in a dictionary
+Home-page: https://github.com/SnusbaseScraper/SnusbaseScraper
+Author: Deagan
+Author-email: deaganm656@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+
+a scraper for snusbase that returns results in a dictionary
+
