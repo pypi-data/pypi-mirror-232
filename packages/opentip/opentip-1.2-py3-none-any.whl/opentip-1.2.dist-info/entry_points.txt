@@ -1,0 +1,3 @@
+[console_scripts]
+check_iocs = opentip.check_iocs:main
+opentip = opentip.__main__:main
