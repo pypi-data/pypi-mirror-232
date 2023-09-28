@@ -1,0 +1,7 @@
+six>=1.10
+flatdict
+requests
+requests_ntlm
+requests-kerberos
+pandas>=0.20.3
+setuptools>=21.0.0
