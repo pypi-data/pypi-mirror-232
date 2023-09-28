@@ -1,0 +1,7 @@
+setup.py
+competition/__init__.py
+competition/packageTest.py
+competition.egg-info/PKG-INFO
+competition.egg-info/SOURCES.txt
+competition.egg-info/dependency_links.txt
+competition.egg-info/top_level.txt
