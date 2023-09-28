@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "template_nvim"
+version = "0.1.0"
+authors = [{name = "Juan Lara", email = "julara@unal.edu.co"}]
+description = "Main Python package for the template.nvim plugin."
+requires-python = ">3.10"
+dependencies = [
+    "pynvim", "pydantic"
+]
+
+[project.optional-dependencies]
+dev = ["black", "ruff", "ruff-lsp", "flit"]
