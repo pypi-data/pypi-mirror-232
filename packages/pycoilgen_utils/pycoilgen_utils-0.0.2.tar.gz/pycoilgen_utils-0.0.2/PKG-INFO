@@ -1,0 +1,67 @@
+Metadata-Version: 2.1
+Name: pycoilgen_utils
+Version: 0.0.2
+Summary: Extra utilities for pyCoilGen, the Open Source Magnetic Resonance Coil Generator.
+Keywords: Utility,STL
+Author-email: Kevin Meyer <kevin@kmz.co.za>
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Healthcare Industry
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Scientific/Engineering
+Project-URL: Bug tracker, https://github.com/kev-m/pyCoilGen/issues
+Project-URL: Changelog, https://github.com/kev-m/pyCoilGen/blob/master/utilities/CHANGELOG.md
+Project-URL: Code of Conduct, https://github.com/kev-m/pyCoilGen/blob/master/CODE_OF_CONDUCT.md
+Project-URL: Contributing, https://github.com/kev-m/pyCoilGen/blob/master/CONTRIBUTING.md
+Project-URL: Documentation, https://pycoilgen.readthedocs.io/
+Project-URL: Home, https://github.com/kev-m/pyCoilGen
+Project-URL: Source, https://github.com/kev-m/pyCoilGen/tree/master/utilities
+
+# pyCoilGen Utilities
+
+[pyCoilGen](https://github.com/kev-m/pyCoilGen) is an application for generating coil layouts within the MRI/NMR environment. 
+
+This package provides optional extra utilities that users may find useful:
+- stl_asc2bin: Convert [ASCII STL](https://en.wikipedia.org/wiki/STL_(file_format)#ASCII) files to binary.
+
+## Installation
+
+Install **pyCoilGen Utilities** using pip:
+```bash
+$ pip install pycoilgen_utils
+```
+
+## Usage
+
+### stl_asc2bin
+```bash
+usage: stl_asc2bin [-h] input_file output_file
+
+Convert ASCII STL to Binary STL
+
+positional arguments:
+  input_file   Path to the input ASCII STL file
+  output_file  Path for the output binary STL file
+
+optional arguments:
+  -h, --help   show this help message and exit
+```
+
+## License
+
+See [`LICENSE.txt`](https://github.com/kev-m/pyCoilGen/blob/master/LICENSE.txt) for more information.
+
+
