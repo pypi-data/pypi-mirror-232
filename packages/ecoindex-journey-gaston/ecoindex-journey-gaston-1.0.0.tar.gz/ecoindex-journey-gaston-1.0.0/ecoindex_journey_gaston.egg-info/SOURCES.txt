@@ -1,0 +1,8 @@
+setup.py
+ecoindex_journey_gaston.egg-info/PKG-INFO
+ecoindex_journey_gaston.egg-info/SOURCES.txt
+ecoindex_journey_gaston.egg-info/dependency_links.txt
+ecoindex_journey_gaston.egg-info/requires.txt
+ecoindex_journey_gaston.egg-info/top_level.txt
+scraper/__init__.py
+scraper/scrap_journey.py
