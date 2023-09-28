@@ -1,0 +1,8 @@
+seaborn
+scikit-learn
+pandas
+matplotlib
+adjustText
+tqdm
+schema
+pytest
