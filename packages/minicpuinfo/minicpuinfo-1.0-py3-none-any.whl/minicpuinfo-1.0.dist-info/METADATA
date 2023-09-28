@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: minicpuinfo
+Version: 1.0
+Summary: minicpu is cpuinfo mini version tool
+Author: sahayavalan
+Author-email: sahayavalanj1@gmail.com
+Requires-Dist: setuptools (==66.1.1)
+
