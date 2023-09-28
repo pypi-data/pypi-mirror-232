@@ -1,0 +1,8 @@
+itk
+matplotlib
+numpy
+pandas
+pydicom
+requests
+scikit-image
+SimpleITK
