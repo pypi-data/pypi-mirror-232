@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: itpaysdk
+Version: 0.1.0
+Summary: 
+Author: JMURv
+Author-email: architect.lock@outlook.com
+Requires-Python: >=3.11,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: aiohttp (>=3.8.5,<4.0.0)
+Description-Content-Type: text/markdown
+
+
+
