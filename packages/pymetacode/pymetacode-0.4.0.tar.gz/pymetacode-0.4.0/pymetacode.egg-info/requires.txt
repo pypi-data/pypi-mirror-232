@@ -1,0 +1,17 @@
+jinja2
+platformdirs
+pyyaml
+
+[deployment]
+twine
+wheel
+
+[dev]
+bandit
+prospector
+pyroma
+
+[docs]
+sphinx
+sphinx-multiversion
+sphinx-rtd-theme
