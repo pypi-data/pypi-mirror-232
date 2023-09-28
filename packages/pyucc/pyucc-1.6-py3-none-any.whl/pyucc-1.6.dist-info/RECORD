@@ -1,0 +1,12 @@
+pyucc/__init__.py,sha256=FttnvFJ-H-PbIEcHiujjlZNbrGu09zFh8qqHpRYV-88,28
+pyucc/__main__.py,sha256=mrnjMbNWb7OShBc-GUEQ52p9xxglR8rmEmgoBFrNJ-s,20
+pyucc/cli.py,sha256=LDdoL8Vte38S9XTBQaOFYxgjBmZT4zaMj8j3GBIc8E4,659
+pyucc/colors.py,sha256=3EYKDGBYjE1EbiaxTQlZFeTZ_cOChbPHybHGgNrVED8,3202
+pyucc/console.py,sha256=NKC02IX2hyWFA4UYt4GecvZhBTCORfm3pmu2DjrXN1c,6479
+pyucc/errors.py,sha256=IFbB7NiRLX-Hp0UNEFTn6Nib4uU7muv8F5963tlPPmY,1305
+pyucc/symbols.py,sha256=0VUDgXQmLAI1Df8f_K-vXH1cpSePB6YsamRpkjfd_Qo,19
+pyucc-1.6.dist-info/LICENSE,sha256=-PfBqkEqw_yVkuzT2nhs2UAv_4COW2tsoKDe-k56Jz8,1094
+pyucc-1.6.dist-info/METADATA,sha256=jJBV4uauIm-BNqySHUdO1_mmyp6rJ1vpS472uqk0vK4,2307
+pyucc-1.6.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+pyucc-1.6.dist-info/top_level.txt,sha256=p2jIvVme92j4r2xkLDuqIQj4yXSm32cZtlulYPMLMxo,6
+pyucc-1.6.dist-info/RECORD,,
