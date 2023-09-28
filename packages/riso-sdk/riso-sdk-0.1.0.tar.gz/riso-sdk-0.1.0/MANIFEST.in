@@ -1,0 +1,3 @@
+include README.md
+recursive-include sdk/static *
+recursive-include sdk/templates *
