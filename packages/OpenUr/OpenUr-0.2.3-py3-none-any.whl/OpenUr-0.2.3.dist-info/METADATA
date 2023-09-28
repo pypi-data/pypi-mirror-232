@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: OpenUr
+Version: 0.2.3
+Summary: All in one package for complete control of your UR robot.
+Home-page: https://github.com/Jp-Beck
+Author: Beck Isakov
+Author-email: jp-beck@outlook.com
+License: GNU GPLv3 License
+Classifier: Programming Language :: Python :: 3
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: System :: Hardware :: Hardware Drivers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Provides: openur
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: math3d
+
+# OpenUR
+# This is the all in one package to control or get data from the Universal robots.
+
+
+For full documentation visit [Documentation](https://jp-beck.github.io/learnur/OpenUr/).
+
+## Commands
+
+* `openur make .` - Create a new rtde_configuartion.xml file in your directory to enable the use of RTDE.
+
+
+## Project layout
+
+    rtde_configuration.xml    # The configuration file neccessary for the RTDE data exchange.
+    docs/
+        index.md  # The documentation homepage.
+        ...       # Metadata and other files.
