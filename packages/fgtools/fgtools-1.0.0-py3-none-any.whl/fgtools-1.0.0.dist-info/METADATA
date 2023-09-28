@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: fgtools
+Version: 1.0.0
+Summary: Tools for FlightGear scenery generation and aircraft development
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: scipy
+Requires-Dist: plum-dispatch
+
+UNKNOWN
+
+
