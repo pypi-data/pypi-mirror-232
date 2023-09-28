@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: PlantLidar
+Version: 1.0.0
+Summary: PointCloud analysis focus on solving 3D phenotypes of plants and remote sensing problems
+Author: ThreeCats
+Author-email: s1729041183@gmail.com
+Keywords: point cloud,lidar,plant,phenotypes,data analysis,remote sensing
