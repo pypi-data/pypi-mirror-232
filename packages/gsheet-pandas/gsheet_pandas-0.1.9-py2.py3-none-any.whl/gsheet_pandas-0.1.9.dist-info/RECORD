@@ -1,0 +1,13 @@
+gsheet-pandas/__init__.py,sha256=LnPSCrDgCldOxMTiwaCEkgaefmq0rNOvo5RZDfIbrX8,107
+gsheet-pandas/test.py,sha256=Bk6ZTYqfMcJMQ_PUuRzI2JvQjaa6O5GI8lHu9aN12Ko,1733
+gsheet-pandas/adapter/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gsheet-pandas/adapter/connection.py,sha256=8R-jAefZtHYLdZ5vU8Lb-dgYinq0crWtcR0FzlyGgII,4658
+gsheet_pandas/__init__.py,sha256=soxnzRbQJ5R3ooKsQZEBauHs4sQKRY2kyQ2TNj1ho8U,108
+gsheet_pandas/test.py,sha256=Qof4vInzAtyyOxuyQhfdcLLQ_lPdw_9O4yTsHI0SH2Y,2116
+gsheet_pandas/adapter/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gsheet_pandas/adapter/connection.py,sha256=afbrCOvbhzMnGIfSTQfe9THn6b5sWmmtV7IM9VAVcg8,5152
+gsheet_pandas-0.1.9.dist-info/LICENSE,sha256=Kg_CXBAeAdV7W_m3E0e5Sz2o5iWS5Q1ScDK0xc0xO4w,1069
+gsheet_pandas-0.1.9.dist-info/METADATA,sha256=ZbUFW9vRFcYabqH3o3kRTvk2hqe0mrbyevug6AHBnvM,3890
+gsheet_pandas-0.1.9.dist-info/WHEEL,sha256=z9j0xAa_JmUKMpmz72K0ZGALSM_n-wQVmGbleXx2VHg,110
+gsheet_pandas-0.1.9.dist-info/top_level.txt,sha256=BLKUjpwfbwdlf0izS5f0DquvijpB0t9cSSskEBDjV14,14
+gsheet_pandas-0.1.9.dist-info/RECORD,,
