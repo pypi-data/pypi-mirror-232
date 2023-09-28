@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: markdown-url-validator
+Version: 1.0.0
+Summary: This package can be used to validate URLs present in markdown content. It checks the status of the url and requires an internet connection to work.
+Author-email: Akshat Jaimini <destrex271@gmail.com>
+Project-URL: Homepage, https://github.com/destrex271/markdown_url_validator
+Project-URL: Bug Tracker, https://github.com/destrex271/markdown_url_validator/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Markdown URL Validator
+
+This package can be used to check Markup content for valid URLs.
+We are currently using a regex expression to filter out anchor tags but changes are to be made to this approach.
+
+To contribute to this project do raise an issue if you feel like this can be improved with any new features.
