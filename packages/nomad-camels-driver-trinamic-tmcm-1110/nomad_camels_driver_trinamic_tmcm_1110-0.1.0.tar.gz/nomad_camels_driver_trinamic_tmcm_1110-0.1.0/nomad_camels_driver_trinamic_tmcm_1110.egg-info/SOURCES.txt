@@ -1,0 +1,11 @@
+LICENSE.txt
+README.md
+pyproject.toml
+nomad_camels_driver_trinamic_tmcm_1110/__init__.py
+nomad_camels_driver_trinamic_tmcm_1110/trinamic_tmcm_1110.py
+nomad_camels_driver_trinamic_tmcm_1110/trinamic_tmcm_1110_ophyd.py
+nomad_camels_driver_trinamic_tmcm_1110.egg-info/PKG-INFO
+nomad_camels_driver_trinamic_tmcm_1110.egg-info/SOURCES.txt
+nomad_camels_driver_trinamic_tmcm_1110.egg-info/dependency_links.txt
+nomad_camels_driver_trinamic_tmcm_1110.egg-info/requires.txt
+nomad_camels_driver_trinamic_tmcm_1110.egg-info/top_level.txt
