@@ -1,0 +1,33 @@
+[tool.pyright]
+include = []
+exclude = ["**/node_modules", "**/__pycache__"]
+stubPath = "./stubs"
+
+pythonVersion = "3.10"
+pythonPlatform = "Darwin"
+
+[tool.poetry]
+name = "cppygen"
+version = "0.1.8"
+description = "A simple c++ code generator for pybind11"
+readme = "README.md"
+authors = ["Gen740 <keener_slimier_0m@icloud.com>"]
+
+[tool.poetry.scripts]
+cppygen = 'cppygen.__main__:run'
+
+[tool.setuptools.packages.find]
+where = ["."]
+
+[tool.poetry-dynamic-versioning]
+enable = true
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pytest = "^7.1.3"
+toml = "^0.10.2"
+colorlog = "^6.7.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
