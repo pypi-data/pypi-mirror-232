@@ -1,0 +1,8 @@
+dogweb/ static/style.css,sha256=-VhZc5dzaGeYWeSVJ5sxjWDKQL1X6owwAzlZ3YRn-PA,391
+dogweb/ templates/base.html,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dogweb/ templates/index.html,sha256=socfXBvhUIyFij9dpEt2PM_6b6iGDev-ZdMHGbK2ix4,880
+dogweb/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dogweb/app.py,sha256=Hv09oOJb9yajkQUKjti_u1VLjk-bXD_SUrjwoG7wTzM,1921
+dogweb-0.1.6.dist-info/METADATA,sha256=JLVP0ncPputkuIhw8fj0btlTuiGbuo1vW1xzf7e3ebg,3113
+dogweb-0.1.6.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+dogweb-0.1.6.dist-info/RECORD,,
