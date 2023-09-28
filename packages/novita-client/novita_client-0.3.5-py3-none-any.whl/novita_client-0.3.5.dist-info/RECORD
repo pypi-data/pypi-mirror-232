@@ -1,0 +1,12 @@
+novita_client/__init__.py,sha256=W4erlvVh0Xu7Wmb5ThSTUtxZ1E1Nk50jJW4c3s0f5nA,111
+novita_client/exceptions.py,sha256=nZ7NxGF31Hf_CBWUriJSzLWxM4X9u0JEaqyzAryJ4Mk,187
+novita_client/novita.py,sha256=ZDi2jefxU7OR-dYin2ItCFtIZP6074BkRPX44H8Jgy0,10770
+novita_client/proto.py,sha256=sSSs2lT0BXBPvjqKvI3sXqMFO0NAPcClzpdfnq5m07I,14431
+novita_client/serializer.py,sha256=3lg0sbuNHHYT0kFzh0O9n8JZWSEXQIjxPMjjYUIy2RE,263
+novita_client/settings.py,sha256=jaPYyNcDZ7ghg9b6UJciQgAXkHBB9sQ0kLjgx1NCOOg,180
+novita_client/utils.py,sha256=lrWQ1XuQ-xqyQ98KiyZR-zAp72KYl0kxovahAB1jrvA,1764
+novita_client/version.py,sha256=RbCoYNLzQFQqDApy8BAzeLzDVLh7q0x4BzRSUw88x8A,69
+novita_client-0.3.5.dist-info/METADATA,sha256=Xdatn4TGSc-hklgoguGVC-uNnXOMUwgNksbwjXKIbeg,7773
+novita_client-0.3.5.dist-info/WHEEL,sha256=KGYbc1zXlYddvwxnNty23BeaKzh7YuoSIvIMO4jEhvw,87
+novita_client-0.3.5.dist-info/licenses/LICENSE,sha256=kiHEBN0xIXRTmdJRnYljwUO4nUOuWX5aEIyouq0DnRQ,1065
+novita_client-0.3.5.dist-info/RECORD,,
