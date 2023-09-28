@@ -1,0 +1,2 @@
+[mkdocs.themes]
+ods-mkdocs-theme = ods_mkdocs_theme
