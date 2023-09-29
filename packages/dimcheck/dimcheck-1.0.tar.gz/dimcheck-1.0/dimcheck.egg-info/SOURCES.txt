@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+dimcheck.egg-info/PKG-INFO
+dimcheck.egg-info/SOURCES.txt
+dimcheck.egg-info/dependency_links.txt
+dimcheck.egg-info/requires.txt
+dimcheck.egg-info/top_level.txt
