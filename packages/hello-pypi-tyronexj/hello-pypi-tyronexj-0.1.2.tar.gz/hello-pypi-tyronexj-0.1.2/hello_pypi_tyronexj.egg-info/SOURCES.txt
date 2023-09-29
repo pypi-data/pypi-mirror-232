@@ -1,0 +1,11 @@
+.gitignore
+README.md
+notebook.py
+setup.py
+.github/workflows/publish.yml
+.github/workflows/tag_version.yml
+hello_pypi_tyronexj.egg-info/PKG-INFO
+hello_pypi_tyronexj.egg-info/SOURCES.txt
+hello_pypi_tyronexj.egg-info/dependency_links.txt
+hello_pypi_tyronexj.egg-info/top_level.txt
+hello_pypi_tyronexj/hello/__init__.py

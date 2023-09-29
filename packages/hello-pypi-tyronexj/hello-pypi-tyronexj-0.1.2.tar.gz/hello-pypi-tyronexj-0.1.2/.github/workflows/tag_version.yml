@@ -1,0 +1,31 @@
+name: Auto tag version
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  tag_version:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out code
+      uses: actions/checkout@v2
+      with:
+        fetch-depth: 0  # Important to fetch all tags and branches
+
+    - name: Calculate version
+      id: calc_version
+      run: echo "::set-output name=version::$(docker run --rm -v "${PWD}:/repo" gittools/gitversion:latest /repo | jq -r .SemVer)"
+
+    - name: Set up Git user
+      run: |
+        git config user.name "github-actions[bot]"
+        git config user.email "github-actions[bot]@users.noreply.github.com"
+
+    - name: Create Git tag
+      run: git tag ${{ steps.calc_version.outputs.version }}
+
+    - name: Push Git tags
+      run: |
+        git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/tyronexj/hello-pypi.git --tags
