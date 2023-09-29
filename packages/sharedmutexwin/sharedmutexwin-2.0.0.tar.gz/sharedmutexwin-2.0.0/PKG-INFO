@@ -1,0 +1,4 @@
+Metadata-Version: 2.1
+Name: sharedmutexwin
+Version: 2.0.0
+Summary: InterlockedCompareExchange64 wrapper for windows
