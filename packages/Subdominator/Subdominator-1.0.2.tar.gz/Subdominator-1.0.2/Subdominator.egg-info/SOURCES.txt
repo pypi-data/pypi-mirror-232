@@ -1,0 +1,10 @@
+setup.py
+Subdominator.egg-info/PKG-INFO
+Subdominator.egg-info/SOURCES.txt
+Subdominator.egg-info/dependency_links.txt
+Subdominator.egg-info/entry_points.txt
+Subdominator.egg-info/requires.txt
+Subdominator.egg-info/top_level.txt
+subdominator/__init__.py
+subdominator/config_keys.yaml
+subdominator/subdominator.py
