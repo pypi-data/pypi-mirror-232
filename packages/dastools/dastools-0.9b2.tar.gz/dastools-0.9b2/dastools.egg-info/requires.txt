@@ -1,0 +1,9 @@
+obspy
+numpy
+fastapi
+uvicorn
+pydantic
+tqdm
+h5py
+pytest-cov
+httpx
