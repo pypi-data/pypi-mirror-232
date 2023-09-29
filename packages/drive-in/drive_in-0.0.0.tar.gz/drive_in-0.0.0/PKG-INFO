@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: drive-in
+Version: 0.0.0
+Summary: Minimalistic Google Drive Library for Python
+Project-URL: Documentation, https://github.com/unknown/drive-in#readme
+Project-URL: Issues, https://github.com/unknown/drive-in/issues
+Project-URL: Source, https://github.com/unknown/drive-in
+Author-email: Robin van der Noord <robinvandernoord@gmail.com>
+License-Expression: MIT
+License-File: LICENSE
+License-File: LICENSE.txt
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.10
+Requires-Dist: yayarl
+Provides-Extra: dev
+Requires-Dist: hatch; extra == 'dev'
+Requires-Dist: su6[all]; extra == 'dev'
+Requires-Dist: types-requests; extra == 'dev'
+Description-Content-Type: text/markdown
+
+# drive_in
+
+Minimalistic Google Drive Library for Python.
+
+[![PyPI - Version](https://img.shields.io/pypi/v/drive-in.svg)](https://pypi.org/project/drive-in)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/drive-in.svg)](https://pypi.org/project/drive-in)
+
+-----
+
+**Table of Contents**
+
+- [Installation](#installation)
+- [License](#license)
+
+## Installation
+
+```console
+pip install drive-in
+```
+
+## License
+
+`drive-in` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
