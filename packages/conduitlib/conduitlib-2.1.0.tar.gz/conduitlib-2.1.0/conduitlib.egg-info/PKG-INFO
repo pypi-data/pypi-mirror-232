@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: conduitlib
+Version: 2.1.0
+Summary: A library containing common elements to Conduit and Conduit plugins.
+Author: Eric Frechette
+Author-email: eric@softwarefactorylabs.com
+Classifier: Programming Language :: Python
+Classifier: Intended Audience :: Developers
+Requires-Python: >=3.8,<4
+Description-Content-Type: text/markdown
+Requires-Dist: cryptography==41.0.4
+Requires-Dist: pyyaml==6.0.1
+Provides-Extra: dev
+Requires-Dist: pytest==7.4.2; extra == "dev"
+Requires-Dist: pytest-cov==4.1.0; extra == "dev"
+Requires-Dist: codecov==2.1.13; extra == "dev"
+Requires-Dist: pylint==2.17.6; extra == "dev"
+Requires-Dist: mypy==1.5.1; extra == "dev"
+Requires-Dist: mypy-extensions==1.0.0; extra == "dev"
+Requires-Dist: lxml==4.9.3; extra == "dev"
+Requires-Dist: types-PyYAML==6.0.12.12; extra == "dev"
+
+# conduitlib
+
+A library containing common elements to Conduit and Conduit plugins.
