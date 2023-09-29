@@ -1,0 +1,10 @@
+README.md
+setup.py
+cpuinfo/__init__.py
+cpuinfo/minicpuinfo.py
+minicpuinfo.egg-info/PKG-INFO
+minicpuinfo.egg-info/SOURCES.txt
+minicpuinfo.egg-info/dependency_links.txt
+minicpuinfo.egg-info/entry_points.txt
+minicpuinfo.egg-info/requires.txt
+minicpuinfo.egg-info/top_level.txt
