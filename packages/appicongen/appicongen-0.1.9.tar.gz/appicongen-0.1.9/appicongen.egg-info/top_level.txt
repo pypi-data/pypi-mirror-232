@@ -1,0 +1,3 @@
+appicongen
+dist
+scripts
