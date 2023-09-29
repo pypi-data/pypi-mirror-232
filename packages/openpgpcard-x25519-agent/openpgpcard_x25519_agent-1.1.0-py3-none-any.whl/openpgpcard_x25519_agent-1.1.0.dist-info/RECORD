@@ -1,0 +1,15 @@
+openpgpcard_x25519_agent/__init__.py,sha256=_zhaTKeiJ7EPzPgeDylsJd_As0hP4cjBiiRr98Lletk,466
+openpgpcard_x25519_agent/card.py,sha256=RW3U9ejsw0I4EQ1HCB-XqLRHgOZLOGEgehWfp5q1bcw,15062
+openpgpcard_x25519_agent/cli.py,sha256=QqtVSUEvEmXxCP7QoOs-I7TOHi9jVYgZ5a6IhsFwvYw,2487
+openpgpcard_x25519_agent/client.py,sha256=ZDnMafn6K4Lpy9jo5KJyS_YXCbunfRH5xye6MDLfnoA,11252
+openpgpcard_x25519_agent/client_cli.py,sha256=0Rbmdh0Jaqiq9JdjWY88f0sAeQ_W-K31z5jxt7gtjUQ,4980
+openpgpcard_x25519_agent/cnf.py,sha256=fc7XC9ppfNOQ384gKv9antOhlWzNyYdaUA1Jx_oOdzY,1748
+openpgpcard_x25519_agent/kdf.py,sha256=Nx7zRndffJoMoehy5CnRJQlBXu8q6K824K2pwuqMJSs,4844
+openpgpcard_x25519_agent/msg.py,sha256=VTCAg9V5um1ye8BRvyU3r1K7Noulpu1UPDeBnb75NhY,28646
+openpgpcard_x25519_agent/server.py,sha256=PB7H1FupvbDhKO_oBy7lPo59Y3cUvPuJl0b-VivEKOA,14104
+openpgpcard_x25519_agent-1.1.0.dist-info/LICENSE,sha256=GzeCzK17hhQQDNow0_r0L8OfLpeTKQjFQwBQU7ZUymg,32473
+openpgpcard_x25519_agent-1.1.0.dist-info/METADATA,sha256=e9tLaF0BDTxTE2uilfcDDaAaqHpwtrqeQ_GTIKw3p3E,5027
+openpgpcard_x25519_agent-1.1.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+openpgpcard_x25519_agent-1.1.0.dist-info/entry_points.txt,sha256=uGG-_qk0uQC_I7lwzOjXVGdR6YQT_x3CjP8wAh7gsqk,148
+openpgpcard_x25519_agent-1.1.0.dist-info/top_level.txt,sha256=4Eq9quQC4PIaZekt7Sx1IbsDr6Q87WcrMZcrrmBUWdc,25
+openpgpcard_x25519_agent-1.1.0.dist-info/RECORD,,
