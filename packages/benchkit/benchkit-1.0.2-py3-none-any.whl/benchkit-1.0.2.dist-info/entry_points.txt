@@ -1,0 +1,3 @@
+[console_scripts]
+benchkit=benchkit.misc.benchkit:main
+
