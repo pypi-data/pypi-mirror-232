@@ -1,0 +1,3 @@
+[console_scripts]
+shai=yash_ai.__main__:main
+
