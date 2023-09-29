@@ -1,0 +1,9 @@
+phylokrr/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+phylokrr/core.py,sha256=H3NDHarm5XtDXm4QjRYEuMvkCw6-mDkRJb60hpYAuas,6739
+phylokrr/kernels.py,sha256=jbi5OUEUdT5q0rXrQDJT_NtMgKS2R2HeCEt8DoLCuJk,2445
+phylokrr/tests.py,sha256=MKUYupXUGg3Py-JzwlQ2g_BfMD0RX1AohAY-Buop4Kc,1742
+phylokrr/utils.py,sha256=MlOm2H1Ua0ltbxcNLYSHqJ8UHxSMN46txWmr4iPeQS8,2820
+phylokrr-0.1.dist-info/METADATA,sha256=9NPYO8wQcitxRjRLU9rSJwpgG_1dbJJD40n7NTkyRT4,287
+phylokrr-0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+phylokrr-0.1.dist-info/top_level.txt,sha256=gyp9MU2Iwi5zIHLsBIDB00ziEHV46U7611jSaZtIXME,9
+phylokrr-0.1.dist-info/RECORD,,
