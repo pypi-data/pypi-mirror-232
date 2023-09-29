@@ -1,0 +1,36 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Enheten \u00e4r redan konfigurerad"
+        },
+        "error": {
+            "cannot_connect": "Det gick inte att ansluta.",
+            "unknown": "Ov\u00e4ntat fel"
+        },
+        "step": {
+            "user": {
+                "data": {
+                    "host": "V\u00e4rd"
+                }
+            }
+        }
+    },
+    "entity": {
+        "button": {
+            "cancel_job": {
+                "name": "Avbryt jobb"
+            },
+            "pause_job": {
+                "name": "Pausa jobb"
+            },
+            "resume_job": {
+                "name": "\u00c5teruppta jobbet"
+            }
+        },
+        "sensor": {
+            "host": {
+                "name": "V\u00e4rd"
+            }
+        }
+    }
+}
