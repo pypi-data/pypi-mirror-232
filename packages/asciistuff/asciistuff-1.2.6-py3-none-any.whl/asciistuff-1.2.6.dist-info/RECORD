@@ -1,0 +1,17 @@
+asciistuff/VERSION.txt,sha256=ImMER7jZUE9DR3IuAAPErh8kMRe1p44u1ilM0LL7JJM,7
+asciistuff/__common__.py,sha256=p_QRDnOInmqY0JOwPsbLRHq2Uhdnp5gj8jCpJ-Wv3Dg,1422
+asciistuff/__info__.py,sha256=dpea8aA4CB_zeAc0yuSldEink1g9WunHI1dMgarJe8w,324
+asciistuff/__init__.py,sha256=1GkHVi_wYsP8-VODRD__RfKlqmk0vQm-Aeh_1Wl8cK4,4308
+asciistuff/banner.py,sha256=A161PHUpmPU7f-GCv9b7YMwg95aXnqmRWaOf8K0JhZw,5010
+asciistuff/cowsay.py,sha256=NqssHlUuF6qG-ni-y6OH-Y-RMBfEMK8sU4uatFROngM,3446
+asciistuff/file.py,sha256=5QsdifKB4CSLycIlAxsz5MGi17kU0RdcL4uJq1aKdz4,7954
+asciistuff/fonts.txt,sha256=f2hfMwIlpBhb_OnXCE5Hb20-8t3gcg6rxyOrjtXM1hU,1599
+asciistuff/image.py,sha256=kdD-d0ji7peDtxPEHqzqMrXhSRYNLTcLTFpAsF2SNbI,5944
+asciistuff/lolcat.py,sha256=iord8QgQs7QPhsft3YPgK88vEvaYj-bAE4ZQA4YV3sw,3633
+asciistuff/quote.py,sha256=AQDILkplBfCsVP3KqMhMv0eB0w09SaTEvi-BSslWhqE,1725
+asciistuff-1.2.6.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+asciistuff-1.2.6.dist-info/METADATA,sha256=cmaWdWjkL7NG7DMgtEkmFHNEiRJA0Ryre1e4USoW-4A,48416
+asciistuff-1.2.6.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+asciistuff-1.2.6.dist-info/entry_points.txt,sha256=fFW0fDaEiipOeAjCuSQiE9iOG6eVAZJo9H_w2GYSLKE,47
+asciistuff-1.2.6.dist-info/top_level.txt,sha256=nVKdyjHpM1tRNSAu2uPoPsuh7Edm61TBsZ8p4-gKPb8,11
+asciistuff-1.2.6.dist-info/RECORD,,
