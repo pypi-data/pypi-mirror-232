@@ -1,0 +1,36 @@
+cli_cache/*
+**/cli_cache/*
+*.tar
+
+tools/simple-certificates/certificates/*
+.DS_Store
+
+logs/*
+**/logs/*
+
+# Editor files
+*.sw[po]
+vm/.vagrant
+
+# JMeter results
+tools/performance-tests/jmeter/jmeter_reports/*
+tools/performance-tests/jmeter/jmeter.log
+
+**/backup/*
+
+files/haproxy/master/haproxy.cfg
+
+# Generated Certificates
+**/certificates/ca-chain.pem
+**/certificates/dap_follower/
+**/certificates/dap_master/
+**/certificates/intermediate_ca/
+**/certificates/root_ca/
+
+# Versions plugin backup file (use git history instead)
+**/pom.xml.versionsBackup
+
+# Ignore HAProxy SSL files
+system/haproxy/certs/**
+
+.env
