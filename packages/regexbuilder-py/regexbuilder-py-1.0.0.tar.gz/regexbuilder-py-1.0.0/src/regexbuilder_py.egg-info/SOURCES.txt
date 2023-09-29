@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/regexbuilder/__init__.py
+src/regexbuilder_py.egg-info/PKG-INFO
+src/regexbuilder_py.egg-info/SOURCES.txt
+src/regexbuilder_py.egg-info/dependency_links.txt
+src/regexbuilder_py.egg-info/top_level.txt
+tests/tests.py
