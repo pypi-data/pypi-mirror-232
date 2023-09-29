@@ -1,0 +1,14 @@
+LICENSE.rst
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+a_pandas_ex_split_on_common_char/README.MD
+a_pandas_ex_split_on_common_char/__init__.py
+a_pandas_ex_split_on_common_char/requirements.txt
+a_pandas_ex_split_on_common_char/thirdparty.json
+a_pandas_ex_split_on_common_char.egg-info/PKG-INFO
+a_pandas_ex_split_on_common_char.egg-info/SOURCES.txt
+a_pandas_ex_split_on_common_char.egg-info/dependency_links.txt
+a_pandas_ex_split_on_common_char.egg-info/requires.txt
+a_pandas_ex_split_on_common_char.egg-info/top_level.txt
