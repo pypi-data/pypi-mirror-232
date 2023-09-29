@@ -1,0 +1,51 @@
+[tool.poetry]
+name = "SWoTTeD"
+version = "1.0"
+description = "A tensor decomposition model extracting temporal phenotypes"
+authors = ["Hana Sebia, Thomas Guyet"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+ipykernel = "^6.18.3"
+pytorch-lightning = "^2.0.1.post0"
+lightning = "^2.0.1.post0"
+fastapi = "^0.80"
+black = "^23.3.0"
+hydronaut = "^2023.11"
+jupyter = "^1.0.0"
+
+[tool.poetry.dev-dependencies]
+torch = "^1.13.0"
+munkres = "^1.1.4"
+numpy = "^1.23.5"
+DateTime = "^4.7"
+seaborn = "^0.12.1"
+matplotlib = "^3.6.2"
+pandas = "^1.5.2"
+psycopg = "^3.1.4"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+
+[project]
+name = "swotted"
+version = "0.0.1"
+authors = [
+  { name="Hana Sebia", email="hana.sebia@inria.fr" },
+  { name="Thomas Guyet", email="thomas.guyet@inria.fr" },
+  { name="Mike Rye", email="jan-michael.rye@inria.fr" },
+]
+description = "SWoTTeD model for temporal phenotyping from irregular temporal tensors."
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://gitlab.inria.fr/hsebia/swotted"
+"Bug Tracker" = "https://github.com/pypa/sampleproject/issues"
