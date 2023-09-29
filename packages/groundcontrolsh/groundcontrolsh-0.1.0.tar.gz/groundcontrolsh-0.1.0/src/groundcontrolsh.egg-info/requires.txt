@@ -1,0 +1,6 @@
+requests<3.0.0dev,>=2.5.0
+
+[dev]
+pylint~=2.14.0
+toml~=0.10.2
+yapf~=0.32.0
