@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: yapsched
+Version: 0.4.0
+Summary: Yet Another Python Scheduler
+Author: Software Factory Labs
+Author-email: eric@softwarefactorylabs.com
+Classifier: Programming Language :: Python
+Classifier: Intended Audience :: Developers
+Requires-Python: >= 3.9, < 4
+Description-Content-Type: text/markdown
+Requires-Dist: wheel ==0.41.2
+Requires-Dist: croniter ==1.4.1
+Requires-Dist: sqlalchemy ==2.0.21
+Requires-Dist: tzdata ==2023.3
+Provides-Extra: dev
+Requires-Dist: pytest ==7.4.2 ; extra == 'dev'
+Requires-Dist: pytest-cov ==4.1.0 ; extra == 'dev'
+Requires-Dist: pylint ==2.17.6 ; extra == 'dev'
+Requires-Dist: mypy ==1.5.1 ; extra == 'dev'
+Requires-Dist: types-croniter ==1.4.0.1 ; extra == 'dev'
+Requires-Dist: sqlalchemy-stubs ==0.4 ; extra == 'dev'
+Requires-Dist: lxml ==4.9.3 ; extra == 'dev'
+Requires-Dist: mock-alchemy ==0.2.6 ; extra == 'dev'
+
+# Yet Another Python Scheduler (YAPS)
+
+A scheduler based on multiprocessing.
