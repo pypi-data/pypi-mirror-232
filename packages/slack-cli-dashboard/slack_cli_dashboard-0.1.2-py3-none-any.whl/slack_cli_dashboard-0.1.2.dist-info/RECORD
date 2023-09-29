@@ -1,0 +1,9 @@
+slack_cli_dashboard/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+slack_cli_dashboard/asynchronous/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+slack_cli_dashboard/asynchronous/threads.py,sha256=ZVgFPSfwPHMNP2QxnGqFsEhAPcugJ_TR-uQXZz4VI-s,2252
+slack_cli_dashboard/main.py,sha256=4Q-Ie56MicEA9PwrPkRQYjn9AlhjdxiFYt-ygLl8PCE,1320
+slack_cli_dashboard/slack_data.py,sha256=6my3kZeHR1NCsnLCEByzCIyFCmtP3pglUiz0G0kuyyY,16835
+slack_cli_dashboard-0.1.2.dist-info/WHEEL,sha256=vVCvjcmxuUltf8cYhJ0sJMRDLr1XsPuxEId8YDzbyCY,88
+slack_cli_dashboard-0.1.2.dist-info/entry_points.txt,sha256=NfhbMv8hHIMu7oJ025UuG6I0bvNtc1D83fSReoPESFc,59
+slack_cli_dashboard-0.1.2.dist-info/METADATA,sha256=NlUG-k6iAJ6Uw9ggCobPfGMkmJoeXz2QpmYnQYYY_r8,532
+slack_cli_dashboard-0.1.2.dist-info/RECORD,,
