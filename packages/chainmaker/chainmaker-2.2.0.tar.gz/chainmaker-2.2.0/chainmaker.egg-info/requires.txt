@@ -1,0 +1,8 @@
+protobuf
+grpcio
+pyyaml
+cryptography
+pysha3
+pymysql
+eth-abi<=2.6
+asn1
