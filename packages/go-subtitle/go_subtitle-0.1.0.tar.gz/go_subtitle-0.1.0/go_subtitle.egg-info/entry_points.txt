@@ -1,0 +1,2 @@
+[console_scripts]
+go_subtitle = subtitler.__main__:main
