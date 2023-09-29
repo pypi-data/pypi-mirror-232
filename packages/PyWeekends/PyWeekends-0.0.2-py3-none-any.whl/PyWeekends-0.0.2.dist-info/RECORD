@@ -1,0 +1,12 @@
+PyWeekends/__init__.py,sha256=y41muZi0V5BC-3MYz6cIB7AbBlZxgugBNwF12M5sEiU,92
+PyWeekends/__version__.py,sha256=ZAw2ffPpQuHlfL42RZE8HglDj8JXqJaoP6eIxcLSoDM,49
+PyWeekends/output_formatter.py,sha256=_mMKA9qSbeaelrXjnAa4cZAB6At1uRO3lIUIwno3Iqo,1656
+PyWeekends/weekend.py,sha256=f-Ewaa-ujgPE1nMVXUaamJTmai2KpL5WQKekllXv8U4,3919
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_output_formatter.py,sha256=5Jx9LPA2ZRlgwtaxKorE-pK3ppWuv2_CF7S7nlbJcic,772
+tests/test_weekend.py,sha256=QdBSJhqL9Op5eF-sIHjZ7JP7_spTg-nUC5ZlXNSq5UI,2237
+PyWeekends-0.0.2.dist-info/LICENSE,sha256=fY56viESnxeD2p73iMN-dpJYgdVcbRZKKzvDC7JZWLo,1052
+PyWeekends-0.0.2.dist-info/METADATA,sha256=tD87mgyBImxq_o9gYU36-RgGSVPtxLIyTgOoyD-hqQA,2243
+PyWeekends-0.0.2.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+PyWeekends-0.0.2.dist-info/top_level.txt,sha256=KNPpEGqSV4JAJP-EZjz506UjIUVUGLjMT4jJgAz43hU,17
+PyWeekends-0.0.2.dist-info/RECORD,,
