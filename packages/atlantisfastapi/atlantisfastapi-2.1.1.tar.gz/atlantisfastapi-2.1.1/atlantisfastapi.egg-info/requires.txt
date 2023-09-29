@@ -1,0 +1,4 @@
+coderfastapi~=2.3.1
+
+[dev]
+black~=22.10.0
