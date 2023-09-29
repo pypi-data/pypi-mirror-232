@@ -1,0 +1,15 @@
+.jp-hmi-dashboard{
+    position: relative;
+    height: 80vh;
+    width: 100%;
+}
+
+.jp-hmi-dashboard iframe{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border: 0;
+}

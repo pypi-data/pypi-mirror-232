@@ -1,0 +1,61 @@
+
+.jp-hmi-table {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.jp-hmi-table__auto-sizer {
+    flex-grow: 1;
+}
+
+.jp-hmi-table__placeholder {
+    margin: auto;
+}
+
+.jp-hmi-table__row {
+    display: flex;
+    padding: 0 24px;
+    box-sizing: border-box;
+}
+
+.jp-hmi-table__row .ReactVirtualized__Table__headerColumn {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
+
+.jp-hmi-table__row .ReactVirtualized__Table__rowColumn {
+    display: flex;
+    align-items: center;
+}
+
+.jp-hmi-table__checkbox {
+    margin: 0;
+}
+
+.jp-hmi-table__table .ReactVirtualized__Table__headerRow {
+    border-bottom: 1px solid var(--jp-border-color2);
+}
+
+.jp-hmi-table__selected-container {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    padding: 0 24px;
+    color: var(--jp-ui-font-color2);
+    font-size: var(--jp-ui-font-size1);
+}
+
+.jp-hmi-table__selected-container_with-selected-items {
+    background-color: var(--jp-brand-color3);
+    color: var(--jp-content-link-color);
+}
+
+.jp-hmi-table__no-data-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--jp-ui-font-color2);
+}
