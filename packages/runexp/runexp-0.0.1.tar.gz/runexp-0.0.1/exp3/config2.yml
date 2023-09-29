@@ -1,0 +1,4 @@
+base_config:
+  learning_rate: 1.0e-3
+sweep:
+  num_epochs: [1, 2]

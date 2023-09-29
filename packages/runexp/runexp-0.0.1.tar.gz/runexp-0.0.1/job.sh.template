@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+#
+# Slurm arguments
+#
+#SBATCH --job-name={runexp-job-name}
+#SBATCH --mail-type=END
+#SBATCH --mail-user=my.name@domain.my
+#SBATCH --cpus-per-task=4
+#SBATCH --gres=gpu:1
+#SBATCH --partition=2080ti,quadro,tesla
+#SBATCH --time=24:00:00
+{runexp-sbatch-options}
+
+conda activate vae-st
+
+srun {runexp-command}

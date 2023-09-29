@@ -1,0 +1,9 @@
+{
+    "base_config": {
+        "learning_rate": 1.0e-3
+    },
+    "sweep": {
+        "num_epochs": [3, 4, 5],
+        "train_modalities": [["a"], ["a", "b"], ["a", "b", "c"]]
+    }
+}

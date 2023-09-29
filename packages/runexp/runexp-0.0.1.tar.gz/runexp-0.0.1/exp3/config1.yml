@@ -1,0 +1,5 @@
+base_config:
+  learning_rate: 1.0e-3
+  num_epochs: 5
+  train_modalities: ["a"]
+sweep:
