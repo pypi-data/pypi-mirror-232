@@ -1,0 +1,9 @@
+hexachromix/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hexachromix/api.py,sha256=bmpdHlDmUUEgqXdWnhOHiEtFnd-m3SCqqjVSpYlLWqw,331
+hexachromix/cli.py,sha256=YSyG-V7Oz8dv4FqK_4tm8_03B1mR-10aY65OEOUT-bo,9317
+hexachromix/gamestate.cpython-39-darwin.so,sha256=WIehIOUZkRqxadELQZ-tY6dTI5u0AijUIVP7DgqdxIo,341728
+hexachromix-0.2.0.dist-info/METADATA,sha256=fgTsy8L7pEh_wwJKHLt1Py_sIdKn3dUIMn9-_gLNkkU,314
+hexachromix-0.2.0.dist-info/WHEEL,sha256=5oVAcMeLDIh-o6T1c198ED7FPfUDusKMPVuKsxICWpw,113
+hexachromix-0.2.0.dist-info/entry_points.txt,sha256=hgtD4M9em58lMBHPoKtbbmX45HW-wk5rpz53lS3W9gE,58
+hexachromix-0.2.0.dist-info/top_level.txt,sha256=FcRii12D706H8d0Gi39Fj_sSSrmnzC4oLZUMUE7WYMc,12
+hexachromix-0.2.0.dist-info/RECORD,,
