@@ -1,0 +1,6 @@
+regex
+
+[dev]
+black
+bumpver
+isort

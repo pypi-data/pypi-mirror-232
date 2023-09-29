@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/labautomation_utils.egg-info/PKG-INFO
+src/labautomation_utils.egg-info/SOURCES.txt
+src/labautomation_utils.egg-info/dependency_links.txt
+src/labautomation_utils.egg-info/requires.txt
+src/labautomation_utils.egg-info/top_level.txt
+src/labautomation_utils/coordconversion/__init__.py
+src/labautomation_utils/coordconversion/wellplate.py
+tests/test_coordconversion.py

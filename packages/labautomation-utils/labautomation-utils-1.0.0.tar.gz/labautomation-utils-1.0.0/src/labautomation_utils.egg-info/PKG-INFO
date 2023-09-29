@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: labautomation-utils
+Version: 1.0.0
+Summary: Lab automation utility package
+Author-email: Erik Trygg <etrg@novonordisk.com>
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: regex
+Provides-Extra: dev
+Requires-Dist: black; extra == "dev"
+Requires-Dist: bumpver; extra == "dev"
+Requires-Dist: isort; extra == "dev"
+
+# labautomation-utils
+Python package providing various helper functions when working with lab automation
