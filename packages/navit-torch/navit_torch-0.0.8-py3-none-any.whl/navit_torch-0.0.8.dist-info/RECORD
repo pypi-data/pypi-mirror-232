@@ -1,0 +1,6 @@
+navit/__init__.py,sha256=KEyfYRQHSKhVCNGwKZWjsL1bVK5PC4SYyqyCtJ1Vaxo,29
+navit/main.py,sha256=lRaLE5VIXfrnZbwJTotltAVqW4N7Zqtpl7VdPZYBs9s,12449
+navit_torch-0.0.8.dist-info/LICENSE,sha256=GHYD0Vn7cqu6O1FibXB1ix_cx8js09uZI1rKjCjW5sY,1074
+navit_torch-0.0.8.dist-info/WHEEL,sha256=vVCvjcmxuUltf8cYhJ0sJMRDLr1XsPuxEId8YDzbyCY,88
+navit_torch-0.0.8.dist-info/METADATA,sha256=TPHnWdpSNaBgT_gQtBH1JH0reRaIAHoNrtDGG14-QU0,2357
+navit_torch-0.0.8.dist-info/RECORD,,
