@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: random-wiki
+Version: 0.3.0
+Summary: Display extracts from random Wikipedia articles
+Home-page: https://yourname.dev/projects/random-wikipedia-article
+License: MIT
+Keywords: wikipedia
+Author: Your Name
+Author-email: you@example.com
+Requires-Python: >=3.8
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Games/Entertainment :: Fortune Cookies
+Requires-Dist: httpx[http2] (>=0.25.0,<0.26.0)
+Requires-Dist: rich (>=13.5.3,<14.0.0)
+Requires-Dist: setuptools (>=68.2.2,<69.0.0)
+Project-URL: Documentation, https://readthedocs.io/random-wikipedia-article
+Project-URL: Issues, https://github.com/yourname/random-wikipedia-article/issues
+Project-URL: Repository, https://github.com/yourname/random-wikipedia-article
+Description-Content-Type: text/markdown
+
+
