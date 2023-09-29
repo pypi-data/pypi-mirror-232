@@ -1,0 +1,2 @@
+[console_scripts]
+dumb_udev = dumb_udev.service:main

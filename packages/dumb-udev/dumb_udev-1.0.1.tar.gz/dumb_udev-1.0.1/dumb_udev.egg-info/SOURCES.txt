@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+dumb_udev/__init__.py
+dumb_udev/__main__.py
+dumb_udev/metadata.py
+dumb_udev/service.py
+dumb_udev.egg-info/PKG-INFO
+dumb_udev.egg-info/SOURCES.txt
+dumb_udev.egg-info/dependency_links.txt
+dumb_udev.egg-info/entry_points.txt
+dumb_udev.egg-info/not-zip-safe
+dumb_udev.egg-info/requires.txt
+dumb_udev.egg-info/top_level.txt
