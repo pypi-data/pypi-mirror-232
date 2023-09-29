@@ -1,0 +1,3 @@
+[console_scripts]
+combine_csv = combine_csv.merge:main
+split_csv = combine_csv.split:main
