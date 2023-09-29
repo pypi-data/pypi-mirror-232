@@ -1,0 +1,2 @@
+[keystone.auth.password]
+rxt = keystone_rxt.rackspace:RXT
