@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+src/Badger_Config_Handler_publishing_test.egg-info/PKG-INFO
+src/Badger_Config_Handler_publishing_test.egg-info/SOURCES.txt
+src/Badger_Config_Handler_publishing_test.egg-info/dependency_links.txt
+src/Badger_Config_Handler_publishing_test.egg-info/requires.txt
+src/Badger_Config_Handler_publishing_test.egg-info/top_level.txt
+src/badger_config_handler/__init__.py
+src/badger_config_handler/badger_config_handler.py
+tests/test_json_config.py
+tests/test_yaml_config.py
