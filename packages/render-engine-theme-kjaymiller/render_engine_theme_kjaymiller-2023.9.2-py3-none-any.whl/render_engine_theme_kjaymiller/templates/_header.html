@@ -1,0 +1,38 @@
+{% set COLOR_MAIN_1 = theme.colors.main1 or "gray-600" %}
+
+<nav role="navigation"><div class="
+  bg-gradient-to-br    
+from-{{COLOR_MAIN_1}}
+{{COLOR_MAIN_1 | theme_gradient_to(100) }}
+  flex
+  flex-wrap
+  items-baseline
+  px-5
+  py-2
+  ">
+    <h1 class="title mx-3 text-5xl font-bold text-gray-200">
+      <a class="no-underline" href="/">{{SITE_TITLE}}</a>
+    </h1>
+    </div>
+    <div class="my-2 p-2 flex justify-center">
+    {% for link in HEADER_LINKS %}
+      <a class="
+            p-3
+            mx-3
+            rounded-lg
+            hover:bg-gray-100
+            opacity-75
+            hover:opacity-100
+            hover:text-indigo-800
+            font-semibold
+            text-xl
+            hover:font-bold
+            dark:text-slate-200
+            text-slate-800
+            no-underline
+          " href="{{link.url}}">
+        {{link.text}}
+      </a>
+      {% endfor %}
+  </div>
+</nav>
