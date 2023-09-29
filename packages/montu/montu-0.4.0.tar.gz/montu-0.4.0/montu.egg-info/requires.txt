@@ -1,0 +1,9 @@
+scipy
+ipython
+matplotlib
+tqdm
+numpy
+astroquery
+plotly
+numpy
+spiceypy

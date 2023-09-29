@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+./montu/__init__.py
+./montu/version.py
+./montu/data/montu-python-logo-complete.png
+./montu/data/montu-toro-estatua.jpeg
+./montu/data/montu-toro.png
+./montu/data/montu.png
+./montu/data/stars.csv
+montu.egg-info/PKG-INFO
+montu.egg-info/SOURCES.txt
+montu.egg-info/dependency_links.txt
+montu.egg-info/entry_points.txt
+montu.egg-info/requires.txt
+montu.egg-info/top_level.txt
