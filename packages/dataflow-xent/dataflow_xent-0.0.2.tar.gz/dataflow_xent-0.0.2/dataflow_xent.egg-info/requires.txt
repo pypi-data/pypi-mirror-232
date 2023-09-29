@@ -1,0 +1,5 @@
+apache-beam[gcp]==2.50.0
+pandas
+EntropyHub==0.2
+db-dtypes
+scikit-learn
