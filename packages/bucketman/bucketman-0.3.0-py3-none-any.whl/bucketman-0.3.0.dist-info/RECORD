@@ -1,0 +1,14 @@
+bucketman/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bucketman/app.py,sha256=NSXD1mFPXbxqC5NtIogl5NlJBNQvvk2pUwFtZuaeGVg,10848
+bucketman/cli.py,sha256=MkiqzZOR8bbSTKI8xe_i6icr73Tx9PobYziOMGSjkGc,2220
+bucketman/constants.py,sha256=J_QZ02A-wsVl8NZxEXIhZhCi2mtpfXa2ldiLSllmjpw,31
+bucketman/modals.py,sha256=5cLKfT3Cqu7rVqY4iHDR6v-NkIcWxLwk93EvU9NOjHg,3838
+bucketman/widgets/__init__.py,sha256=bELEYL1RarSaIUTd9Wp3GCLIYhPtky8A3tEsUplda-M,81
+bucketman/widgets/common.py,sha256=f8d7Crg2H4ob896B5ay5y7qFTZgXpizf72hNltz2nV4,71
+bucketman/widgets/localtree.py,sha256=hk_nLk_VFo99oezlNlR6fvKzwuUOvr3KmrcoNKw03xY,1052
+bucketman/widgets/s3tree.py,sha256=RaS5Nx9cIv8kTnT30H-30DigMGre5TR_bZgQAYc28sk,5228
+bucketman-0.3.0.dist-info/METADATA,sha256=j5plLDEmiI25KHfQGlkuEv_EyvsEcIj9BUp90qGuRjA,1608
+bucketman-0.3.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+bucketman-0.3.0.dist-info/entry_points.txt,sha256=JH7LGEapgMfx8dx0bUZwzu27KGl8Ex5k3XmHDSP1aI4,68
+bucketman-0.3.0.dist-info/top_level.txt,sha256=-SHkJKF48Ngi4EvezuqTyVzRgzhY-i_2W0S2fhszY54,10
+bucketman-0.3.0.dist-info/RECORD,,

@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        bucketman=bucketman.cli:main
+    
