@@ -1,0 +1,13 @@
+rpq/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+rpq/nn.py,sha256=Ry6jmuf8uBwTpain44ozAwX8aFYeLRc2wy-N4CQaVEI,9530
+rpq/utils.py,sha256=7NIwzjd19bSb8xGRyjC2fVFIGLFAoA9r-G8P_2Y03Jg,693
+rpq/models/__init__.py,sha256=Dc8hz8DH1DpCZfHUDNBFBCZhxCfrArfSrBgrml1X6Q8,77
+rpq/models/rpqopt.py,sha256=QBhssuc4EKiV1CZCTmdIGzRkMJ2meaLzPqMQ2JQ3UiU,57623
+rpq/models/rpqopt_sc.py,sha256=SHxo4tN-OFTLtnZAhrT8wY3EUer-2DWKljTYHA_93BA,59815
+rpq/models/rpqvit.py,sha256=0DVTQpIQY9qZoOvNuiTIaqI9SbhdCsq_RLzNuNeBxsA,4548
+rpq/models/rpqvit_sc.py,sha256=b_gjTp0E-wUdtceUL8PmlvzeWEYG2MnL-Qkg8LCgniU,6131
+RPQ_pytorch-0.0.34.dist-info/LICENSE,sha256=5iiF8p22eGJw5V8Af3lBQC-sJbfn6A-yD6j-JrS1Fok,1063
+RPQ_pytorch-0.0.34.dist-info/METADATA,sha256=gCHqZ5kckeTx17UKc2uWyOAGVPSDkI10wGW7atBWvGo,7759
+RPQ_pytorch-0.0.34.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+RPQ_pytorch-0.0.34.dist-info/top_level.txt,sha256=ZmcJWeRYK4gUuLSCGjTkJ1qrFSHeHUU3uemT-ljjXts,4
+RPQ_pytorch-0.0.34.dist-info/RECORD,,
