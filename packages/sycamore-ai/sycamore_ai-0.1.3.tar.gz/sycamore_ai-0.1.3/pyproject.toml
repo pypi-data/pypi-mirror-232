@@ -1,0 +1,65 @@
+[tool.poetry]
+name = "sycamore-ai"
+version = "0.1.3"
+description = "Sycamore is an LLM-powered semantic data preparation system for building search applications."
+authors = ["aryn.ai <opensource@aryn.ai>"]
+readme = "README.md"
+repository = "https://github.com/aryn-ai/sycamore.git"
+packages = [{include = "sycamore"}]
+
+
+[tool.poetry.urls]
+"Repository" = "https://github.com/aryn-ai/sycamore.git"
+"Documentation" = "https://sycamore.readthedocs.io"
+
+[tool.poetry.dependencies]
+python = ">=3.9,<4.0"
+opensearch-py = "^2.2.0"
+pandas = "2.0.3"
+pdf2image = "^1.16.3"
+ray = { extras = ["default"], version = "^2.6.3" }
+sentence-transformers = "2.2.2"
+pyarrow = "12.0.1"
+unstructured = "0.8.0"
+beautifulsoup4 = "^4.12.2"
+guidance = "^0.0.64"
+tenacity = "8.2.3"
+amazon-textract-textractor = "^1.3.2"
+
+# Skip 2.0.1 to address a Pytorch bug.
+# See https://stackoverflow.com/a/76647180
+torch = ">=2.0.0, !=2.0.1"
+
+[tool.poetry.group.test.dependencies]
+flake8 = "4.0.1"
+pytest = "7.4.0"
+pytest-mock = "3.11.1"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.0.287"
+black = "^23.7.0"
+pre-commit = "^3.4.0"
+mypy = "^1.5.1"
+
+[tool.poetry.group.notebook.dependencies]
+jupyterlab = "^4.0.5"
+ipywidgets = "^8.1.0"
+
+[tool.poetry.group.docs.dependencies]
+furo = "^2023.9.10"
+myst-parser = "2.0.0"
+sphinx = "^7.2.5"
+
+[tool.ruff]
+line-length = 120
+
+[tool.black]
+line-length = 120
+
+[tool.mypy]
+exclude = ["notebooks", "docs"]
+ignore_missing_imports = true
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
