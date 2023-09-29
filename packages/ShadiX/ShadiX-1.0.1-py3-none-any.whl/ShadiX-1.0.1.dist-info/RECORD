@@ -1,0 +1,14 @@
+ShadiX/__init__.py,sha256=2-q0emqXpbe3KWriDoJ75uAKYrcTeCbWXbkZ3sjP-vc,30
+ShadiX/clientData.py,sha256=jfjr6ML-uZpDYNGipbl891-rsz9UlfnbB-ILSFq93H8,196
+ShadiX/creator.py,sha256=dt793DGudNXYnzPv9O_YkvlGjl5vHqWAUB9gHCz4EcE,776
+ShadiX/encrypt.py,sha256=b-z_fUPKNxMvG2B2pj5sYSfM8mdm5aqAshGVfz2J6KI,1370
+ShadiX/getServer.py,sha256=0ffEdG0rin-tHtl4JjnOjzsKv-tOn6L1FDZTaDeNv5U,417
+ShadiX/message.py,sha256=7k8EUX-HcnMkCVofNe2_bEwtRasIgaxkBWWW0gbhrLw,3844
+ShadiX/method.py,sha256=auT3HGBuX41z3yN0JX7lhrdc--3SSo4VAGYEc6wWIJs,19107
+ShadiX/requestMaker.py,sha256=6TlPsgAIHnx_nNCCGvu02wyv2ziUX-Y4hgAkzZ_Q6F4,3909
+ShadiX/socketHandler.py,sha256=PISqAK1YvOKwfMGL6yiX7IxomO-U5f5YuZQAduoWXrM,846
+ShadiX-1.0.1.dist-info/LICENCE,sha256=oCed0QmkWtYdwT8XoZuYhRoTZn8wth9gvfpKdIPtmXc,1083
+ShadiX-1.0.1.dist-info/METADATA,sha256=3dysuUipOCBWsMsms8HHWgr6KS0kjT2hgxdvwoMkxR0,917
+ShadiX-1.0.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+ShadiX-1.0.1.dist-info/top_level.txt,sha256=7iudxrLeqa8LTMeUVBKtiA-WnW_3hVIeZHn7eAjDjx4,7
+ShadiX-1.0.1.dist-info/RECORD,,

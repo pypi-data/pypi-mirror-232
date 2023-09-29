@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: ShadiX
+Version: 1.0.1
+Summary: ShadiX is a simple and fast Bale Messenger library built for you
+Home-page: https://shad.ir
+Author: X_CODER
+Author-email: x.coder.2721@gmail.com
+License: MIT
+Keywords: ShadiX_library,messenger,python2,python,python3,api,self,ShadiX,Shad,shadix,SHADIX,Shad X,shad,bot,robot,library,shadlib,shadlibrary,shad.ir,ShadBot,Shad Api
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: ~=3.7
+Description-Content-Type: text/x-rst
+License-File: LICENCE
+Requires-Dist: requests
+Requires-Dist: websocket-client
+
+Personal project
