@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+exPython.egg-info/PKG-INFO
+exPython.egg-info/SOURCES.txt
+exPython.egg-info/dependency_links.txt
+exPython.egg-info/requires.txt
+exPython.egg-info/top_level.txt
