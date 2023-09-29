@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+inoio/__init__.py
+inoio/errors.py
+inoio/serial_connection.py
+inoio.egg-info/PKG-INFO
+inoio.egg-info/SOURCES.txt
+inoio.egg-info/dependency_links.txt
+inoio.egg-info/requires.txt
+inoio.egg-info/top_level.txt
+tests/test_connect_disconnect.py
+tests/test_read_write.py
+tests/test_round_trip.py
