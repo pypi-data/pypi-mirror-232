@@ -1,0 +1,5 @@
+azimuth-sdk
+easysemver
+jsonschema-default
+robotframework-pythonlibcore
+selenium
