@@ -1,0 +1,14 @@
+ifm3dpy.cp311-win_amd64.pyd,sha256=EEHWJBNsMdaQ5ykilX_lVmdoALnxiyVx7QIGZC7YXeU,2613248
+ifm3dpy/__init__.pyi,sha256=jR13DPvqmuV1vzFDSovrZstBU7m2nJFqD2JsiB--WlU,6042
+ifm3dpy/deserialize/__init__.pyi,sha256=PANih1_kCsSaCJU1ScKZLEM8OFBdnVBF5vlpqTvxpRM,12703
+ifm3dpy/device/__init__.pyi,sha256=w9rVWIC8jkqRDgWaLEjUMqbZlEWkKa74WjoM2oc0FRM,43304
+ifm3dpy/framegrabber/__init__.pyi,sha256=6GOVa0gixb5oDB-SVjmozQ2FRPDA-ITR9zM6m8LplVo,12345
+ifm3dpy/logging/__init__.pyi,sha256=aeJe7-I7zZ_2_EKxZIMbaLJ0V9_QA6NU4JxgwoE7-ZU,3364
+ifm3dpy/swupdater/__init__.pyi,sha256=jvQykKYV5L3XxnzKUgmu5_taajY-peDuTQvBUFH9Pj4,2323
+ifm3dpy-1.4.3.dist-info/LICENSE,sha256=SbvpEU5JIU3yzMMkyzrI0dGqHDoJR_lMKGdl6GZHsy4,11558
+ifm3dpy-1.4.3.dist-info/LICENSE-thirdparty,sha256=xtwGNKBa1phVW-SDA8hWI_n98t4Yw-xu9Cvudt3j25Y,47590
+ifm3dpy-1.4.3.dist-info/METADATA,sha256=mppr6agUvovkIwIl3VDCPFHIQSy0fx9yHVsSX8G4nlU,4880
+ifm3dpy-1.4.3.dist-info/WHEEL,sha256=9wvhO-5NhjjD8YmmxAvXTPQXMDOZ50W5vklzeoqFtkM,102
+ifm3dpy-1.4.3.dist-info/entry_points.txt,sha256=pqInrNlpgzWo5AF8JaFVA0f-3viBOfZ1MaW_jKNQh2k,49
+ifm3dpy-1.4.3.dist-info/top_level.txt,sha256=14HBGAbWOrqlPHpP6qJsqIy1QTcnxt44R8E5pQ6wIMA,15
+ifm3dpy-1.4.3.dist-info/RECORD,,
