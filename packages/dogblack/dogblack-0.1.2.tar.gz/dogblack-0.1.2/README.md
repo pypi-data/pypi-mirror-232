@@ -1,0 +1,13 @@
+DogBlack é um framework web Python que permite criar aplicativos da web com suporte a autenticação, banco de dados MongoDB, servir arquivos estáticos e renderizar templates Jinja2. Ele também fornece um sistema de roteamento simples.
+
+Este framework é configurável através de middleware, permitindo que você adicione funcionalidades personalizadas à cadeia de processamento de solicitações HTTP. O AuthMiddleware incluído oferece suporte à autenticação por token.
+
+A estrutura do projeto inclui diretórios templates e static para armazenar arquivos de modelo HTML e recursos estáticos, como CSS e JavaScript.
+
+A classe Database oferece uma interface para interagir com um banco de dados MongoDB, permitindo inserir e consultar documentos.
+
+A função json_response auxiliar facilita a criação de respostas JSON personalizadas.
+
+O framework pode ser configurado por meio do arquivo pyproject.toml, que lista as dependências necessárias, e você pode usar a ferramenta Poetry para gerenciar o projeto.
+
+Em resumo, o DogBlack é uma estrutura flexível que facilita a criação de aplicativos web em Python, fornecendo recursos essenciais e permitindo a extensão com middleware personalizado.
