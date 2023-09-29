@@ -1,0 +1,12 @@
+napari_conference/__init__.py,sha256=EsCRZ3vJT1NQlQLO-4M4wxN3ZZnG0Vp6z4iDq-vTk9w,101
+napari_conference/_widget.py,sha256=vgtkEXcOrtfONLGzMmilzb0p6GCjimWgPZlHx_XrA54,5358
+napari_conference/cli.py,sha256=O1YGti8NTmkzCQGCXcs7k0hRUwEYG-ujTgD6EWLCYBY,860
+napari_conference/napari.yaml,sha256=qfXSX6JjBHc7uinrFB7XviZiT3reCWXq7B_8ekpgptU,318
+napari_conference/_tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+napari_conference/_tests/test_widget.py,sha256=RA2yOOem-XC1huwH4YZ-HaY-PuSLTo2SVWUPILHwVZY,292
+napari_conference-0.1.0.dist-info/LICENSE,sha256=J-KumcohP5g1V8sGkRvy9S0DwFxONpP-D7Jw6-T0bFY,1490
+napari_conference-0.1.0.dist-info/METADATA,sha256=MGrDTxsna9x4CHeNEokFehXdIGwijAUJn7T2eQFR-Rw,5206
+napari_conference-0.1.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+napari_conference-0.1.0.dist-info/entry_points.txt,sha256=pbieUl2tE_UQ42b8zpo623osaWeJsW4szc0k3rzNtz0,68
+napari_conference-0.1.0.dist-info/top_level.txt,sha256=tzjxYMrhCtbmL7G5fM2lQeW-5ROUA2ngGPp7rIBp7pU,18
+napari_conference-0.1.0.dist-info/RECORD,,

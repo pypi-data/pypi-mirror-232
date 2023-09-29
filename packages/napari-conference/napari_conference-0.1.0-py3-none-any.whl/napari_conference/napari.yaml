@@ -1,0 +1,10 @@
+name: napari-conference
+display_name: Napari Conference
+contributions:
+  commands:
+    - id: napari-conference.make_widget
+      python_name: napari_conference._widget:conference_widget
+      title: Make example magic widget
+  widgets:
+    - command: napari-conference.make_widget
+      display_name: start conference
