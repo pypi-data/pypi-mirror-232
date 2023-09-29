@@ -1,0 +1,9 @@
+LICENSE
+README.md
+programaA.py
+setup.py
+pacote0770.egg-info/PKG-INFO
+pacote0770.egg-info/SOURCES.txt
+pacote0770.egg-info/dependency_links.txt
+pacote0770.egg-info/requires.txt
+pacote0770.egg-info/top_level.txt
