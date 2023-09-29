@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: mod-hashtable
+Version: 0.0.3
+Summary: HashTable Data Structure Custom
+Home-page: 
+Download-URL: 
+Author: Pangya Mod
+Author-email: panyakorn130547@gmail.com
+License: MIT
+Keywords: Pangya Mod
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+License-File: LICENSE.txt

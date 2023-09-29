@@ -1,0 +1,11 @@
+LICENSE.txt
+README
+README.md
+setup.cfg
+setup.py
+mod_hashtable/ModHashTable.py
+mod_hashtable/__init__.py
+mod_hashtable.egg-info/PKG-INFO
+mod_hashtable.egg-info/SOURCES.txt
+mod_hashtable.egg-info/dependency_links.txt
+mod_hashtable.egg-info/top_level.txt
