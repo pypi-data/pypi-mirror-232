@@ -1,0 +1,14 @@
+click
+
+[azure-blob]
+azure-storage-blob
+
+[google-cloud-storage]
+google-cloud-storage
+google-oauth
+
+[sftp]
+pysftp
+
+[test]
+pytest
