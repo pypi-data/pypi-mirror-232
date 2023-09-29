@@ -1,0 +1,9 @@
+com.castsoftware.uc.python.common
+et-xmlfile
+numpy
+openpyxl
+pandas
+psycopg2
+python-dateutil
+pytz
+six
