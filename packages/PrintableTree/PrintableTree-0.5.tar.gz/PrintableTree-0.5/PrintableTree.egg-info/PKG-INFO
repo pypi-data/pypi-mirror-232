@@ -1,0 +1,11 @@
+Metadata-Version: 1.1
+Name: PrintableTree
+Version: 0.5
+Summary: It has an implementation of a tree in python and methods that print the tree to an image through OpenCV / É uma implementação de uma árvore em python com métodos que permitem imprimir a árvore através do OpenCV
+Home-page: https://github.com/klingerkrieg/PrintableTree
+Author: Alan Klinger
+Author-email: klingerkrieg@gmail.com
+License: MIT
+Download-URL: https://github.com/klingerkrieg/PrintableTree/archive/refs/tags/0.5.tar.gz
+Description: Visit the <a href="https://github.com/klingerkrieg/PrintableTree">homepage</a> for more details.
+Platform: UNKNOWN

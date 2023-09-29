@@ -1,0 +1,12 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+PrintableTree/PrintableTree.py
+PrintableTree/__init__.py
+PrintableTree.egg-info/PKG-INFO
+PrintableTree.egg-info/SOURCES.txt
+PrintableTree.egg-info/dependency_links.txt
+PrintableTree.egg-info/not-zip-safe
+PrintableTree.egg-info/requires.txt
+PrintableTree.egg-info/top_level.txt
