@@ -1,0 +1,8 @@
+boxfs/__init__.py,sha256=AVEsb5UqptSTn4DOulbI9ipVFu-lqkrJZWHx0yoSeTY,34
+boxfs/_upath.py,sha256=hz4OO29vJEoFRhKuzhkvNUq1_5bK-rUBeAkWn_fd8gE,1348
+boxfs/boxfs.py,sha256=j9f4QRlHiCKVZDFG8KPKLV3r3YA8_vlwgzszMHRvx7w,20662
+boxfs-0.2.2rc1.dist-info/entry_points.txt,sha256=Gb1IFjffDaDYA0gkHzsGjbo6Zqq2JQwU8t8s0mO_2FY,46
+boxfs-0.2.2rc1.dist-info/LICENSE,sha256=h3fWJ2rO6Es4aqZBmYhiXc82qEhxtLM3JAcKKoXTicA,1109
+boxfs-0.2.2rc1.dist-info/METADATA,sha256=W8D3sT9GWnTXdK-5vFb3yt2B5wGsqDAfNeE9Us5Z698,4807
+boxfs-0.2.2rc1.dist-info/WHEEL,sha256=vVCvjcmxuUltf8cYhJ0sJMRDLr1XsPuxEId8YDzbyCY,88
+boxfs-0.2.2rc1.dist-info/RECORD,,
