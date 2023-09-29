@@ -1,0 +1,8 @@
+README.md
+setup.py
+TestLibrary/MyLib.py
+TestLibrary/__init__.py
+TestLibraryOsa.egg-info/PKG-INFO
+TestLibraryOsa.egg-info/SOURCES.txt
+TestLibraryOsa.egg-info/dependency_links.txt
+TestLibraryOsa.egg-info/top_level.txt
