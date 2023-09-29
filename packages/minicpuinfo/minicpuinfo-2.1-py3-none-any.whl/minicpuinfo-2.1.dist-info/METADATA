@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: minicpuinfo
+Version: 2.1
+Summary: minicpu is cpuinfo mini version tool
+Author: sahayavalan
+Author-email: sahayavalanj1@gmail.com
+Description-Content-Type: text/markdown
+Requires-Dist: OptionParser
+Requires-Dist: psutils
+Requires-Dist: pyfiglet
+Requires-Dist: setuptools
+
+
+### mini tool for cpu-info
+
+
+$ minicpuinfo -h
+
+
+#### Options
+
+-h, --help      show this help menu
+  -c, --cpu       shows how many cpu's available
+  -d, --disk      disk partitions
+  -D, --dpercent  disk percentage
+  -m, --memusage  all memory usages
+  -C, --cpuload   cpu load percentage
+
+
+##### about me
+
+-[sahayavalan](https://github.com/sahayavalan/)
+
+
+...
+
+...
