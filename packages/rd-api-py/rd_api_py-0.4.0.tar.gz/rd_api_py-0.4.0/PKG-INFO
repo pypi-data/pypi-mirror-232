@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: rd_api_py
+Version: 0.4.0
+Summary: Real Debrid API Library for Python
+Author: $krilla
+Project-URL: Homepage, https://github.com/s-krilla/rd_api_py
+Project-URL: Bug Tracker, https://github.com/s-krilla/rd_api_py/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests~=2.31.0
+Requires-Dist: python-dotenv~=1.0.0
+
+# rd_api_py
+
+Real Debrid API Library for Python
+
+## Installation
+
+Install the package
+
+```bash
+python -m pip install rd_api_py
+```
+
+Set environment variables in `.env` in `rd_refresh` or your script
+
+```bash
+RD_APITOKEN="your_token_here"
+SLEEP=100 # Delay (ms) between requests - optional, default recommended
+LONG_SLEEP=5000 # Long delay (ms) every 500 requests - optional, default recommended
+```
+
+## Usage
+
+All operations are supported - see examples directory
+
+```python
+from rdapi import RD
+
+RD = RD()
+
+print(RD.system.time().content)
+print(RD.user.get().json())
+print(RD.torrents.get(limit=10, page=1).json())
+
+import os
+filepath = '/path/to/bbb.torrent'
+print(RD.torrents.add_file(filepath=filepath).json())
+
+# etc...
+```
