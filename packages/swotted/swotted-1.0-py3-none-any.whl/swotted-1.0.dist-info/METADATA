@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: swotted
+Version: 1.0
+Summary: A tensor decomposition model extracting temporal phenotypes
+Author: Hana Sebia, Thomas Guyet
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: black (>=23.3.0,<24.0.0)
+Requires-Dist: fastapi (>=0.80,<0.81)
+Requires-Dist: hydronaut (>=2023.11,<2024.0)
+Requires-Dist: ipykernel (>=6.18.3,<7.0.0)
+Requires-Dist: jupyter (>=1.0.0,<2.0.0)
+Requires-Dist: lightning (>=2.0.1.post0,<3.0.0)
+Requires-Dist: pytorch-lightning (>=2.0.1.post0,<3.0.0)
