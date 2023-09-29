@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: hivemind-webchat
+Version: 0.3.2a1
+Summary: local hivemind webchat
+Home-page: https://github.com/JarbasHiveMind/HiveMind-webchat
+Author: jarbasAI
+Author-email: jarbasai@mailfence.com
+License: Apache-2.0
+Platform: UNKNOWN
+Requires-Dist: tornado
+
+UNKNOWN
+
+
