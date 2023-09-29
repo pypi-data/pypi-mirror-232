@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+ElegansBot.egg-info/PKG-INFO
+ElegansBot.egg-info/SOURCES.txt
+ElegansBot.egg-info/dependency_links.txt
+ElegansBot.egg-info/requires.txt
+ElegansBot.egg-info/top_level.txt
+elegansbot/__init__.py
+elegansbot/elegansbot.py
