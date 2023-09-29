@@ -1,0 +1,96 @@
+# FinOptim package 
+
+The best python package to help you optimise your cloud spendings
+
+### Instalation
+
+The package is available [on PyPI](https://pypi.org/project/finoptim/), it is possible to install it directly with pip. 
+
+```sh
+pip install finoptim
+```
+
+It requires at least Python 3.10. The documentation is available on [readthedoc](https://finoptim.readthedocs.io/en/latest/)
+
+
+### Usage example
+
+
+```python
+import finoptim as fp
+import pandas as pd
+
+
+past_usage = pd.DataFrame(...) # some query of yours
+prices = fp.prices.aws()
+print(prices_df.iloc[:, :4].to_markdown(
+    tablefmt='rounded_outline',
+    numalign='center'))
+>>>
+╭──────┬────────────┬──────────────┬─────────────────┬──────────────╮
+│      │  Arlequin  │  Moratorium  │  Anthropophage  │  Apophtegme  │
+├──────┼────────────┼──────────────┼─────────────────┼──────────────┤
+│ OD   │   0.167    │    0.122     │     0.0056      │    0.0058    │
+│ RI3Y │ 0.0637352  │  0.0476682   │    0.0022035    │  0.00234155  │
+│ RI1Y │ 0.0981063  │  0.0716404   │   0.00330824    │  0.00330824  │
+│ SP1Y │   0.115    │     0.09     │     0.0038      │    0.0039    │
+│ SP3Y │   0.073    │    0.054     │     0.0025      │    0.0026    │
+╰──────┴────────────┴──────────────┴─────────────────┴──────────────╯
+```
+All the prices are per hours.
+
+Proceeding to the optimisation is made with the `optimise` function
+```
+res = fp.optimise(past_usage, prices)
+```
+The `optimise` function can take as input lots of different predictions, and also current commitments. The optimisation is made with all the pricing models found in the `prices` object
+
+```python
+predictions = [pd.DataFrame(...), ...] # some query of yours
+
+res = fp.optimise(
+    predictions,
+    prices,
+    current_commitments={"type" : "RI3Y", "level" : 10 * 32, 'guid' : 'Moule à gaufres', "end_date" : date(2024, 12, 21), 'price_key' : .0123},
+    convergence_details=True
+    )
+```
+
+Now the `res` object hold the best levels of commitment on the time period.
+
+```python
+guid_to_instance_name = {"K7YHHNFGTNN2DP28" : 'i3.large', 'SAHHHV5TXVX4DCTS' : 'r5.large'}
+res.format(instance_type=guid_to_instance_name)
+print(res)
+>>>
+╭─────────────────┬──────────────────────────┬───────────────╮
+│ instance_type   │  three_year_commitments  │ price_per_day │
+├─────────────────┼──────────────────────────┼───────────────┤
+│ i3.large        │           1338           │     2,886     │
+│ r5.large        │           1570           │     2,564     │
+│ savings plans   │           1937           │     1,937     │
+╰─────────────────┴──────────────────────────┴───────────────╯
+```
+
+
+### TODO
+
+#### lib convenience
+
+- allow for long DataFrame as input
+- the cost function should return a gradient when evaluated (save some compute)(the function is a nightmare : abort the mission)
+- listening to keyboard interupt from Rust is harder than expected with multi threading
+- logging instead of printing, both in the ython and Rust sides
+
+#### actual problems
+
+- find a real stop condition for the inertial optimiser
+- can we guess the "eigenvectors" of the problem ? if we have estimations, we can set great parameters for the inertial optimiser
+- problem is highly non linear and this will require more thinking
+
+
+### Project size
+
+`wc -l src/finoptim/*.py rust/src/*.rs src/finoptim/prices/*.py tests/*.py`
+
+is around 3k lines of code
