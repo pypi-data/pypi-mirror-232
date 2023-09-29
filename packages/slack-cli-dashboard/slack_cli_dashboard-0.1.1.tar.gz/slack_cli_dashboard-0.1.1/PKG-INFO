@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: slack-cli-dashboard
+Version: 0.1.1
+Summary: 
+Author: Jeff McGehee
+Author-email: jlmcgehee21@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: colorful (>=0.5.4,<0.6.0)
+Requires-Dist: fabulous (>=0.3.0,<0.4.0)
+Requires-Dist: slack_sdk (>=3.0.0,<4.0.0)
