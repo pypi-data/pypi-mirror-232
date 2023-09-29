@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: tikkie-api
+Version: 2.0.0
+Summary: Tikkie API client
+Home-page: https://github.com/new10com/python-tikkie-api
+Author: New10
+Author-email: pypi-admin@new10.com
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.9.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests >=2
+Requires-Dist: pydantic >=2
+Requires-Dist: typing-extensions
+Provides-Extra: tests
+Requires-Dist: black ==21.5b2 ; extra == 'tests'
+Requires-Dist: bump2version ==1.0.1 ; extra == 'tests'
+Requires-Dist: flake8 ==3.9.2 ; extra == 'tests'
+Requires-Dist: isort ==5.8.0 ; extra == 'tests'
+Requires-Dist: mypy ==0.902 ; extra == 'tests'
+Requires-Dist: pre-commit ==2.13.0 ; extra == 'tests'
+Requires-Dist: pytest-cov ==2.12.1 ; extra == 'tests'
+Requires-Dist: pytest-dotenv ==0.5.2 ; extra == 'tests'
+Requires-Dist: pytest-pythonpath ==0.7.3 ; extra == 'tests'
+Requires-Dist: pytest ==6.2.4 ; extra == 'tests'
+Requires-Dist: types-requests ==0.1.9 ; extra == 'tests'
+
+# Deprecated
+This project is no longer maintained and has been archived/deprecated
+
+## tikkie-api
+Python Tikkie API
