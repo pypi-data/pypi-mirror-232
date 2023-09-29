@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: gify-plot
+Version: 0.0.4
+Summary: A basic package to turn plots into gifs
+Home-page: UNKNOWN
+Author: Francesco Di Cursi
+Author-email: <f.dicursi@studenti.unipi.it>
+License: UNKNOWN
+Keywords: gif,plot,seaborn,matplotlib,plotly
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+
+A package to turn plots into gifs (matplotlib.pyplot, seaborn, plotly.express)
+
