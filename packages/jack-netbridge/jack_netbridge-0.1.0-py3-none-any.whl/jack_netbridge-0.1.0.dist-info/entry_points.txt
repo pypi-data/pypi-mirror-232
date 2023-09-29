@@ -1,0 +1,3 @@
+[console_scripts]
+jack_netbridge=jack_netbridge.jack_netbridge:main
+
