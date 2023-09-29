@@ -1,0 +1,12 @@
+dask_glm/__init__.py,sha256=CEY-Y2sMyfznQUzoQQ4vFdh1XEa3gv9zA2QypA3pZ7E,162
+dask_glm/algorithms.py,sha256=w-Bczic9MHPxShro-Q8UQfTvO_atC3Y4O0_QZWXwyUU,13336
+dask_glm/datasets.py,sha256=khoSHW74jS8ZkME4taGVOncPuRZbhBWrLXGk18aeggE,4549
+dask_glm/estimators.py,sha256=qEcSWrQL2Uz9GdSLUGNp_umYx3UWd_M7YKe7l4fpRW8,7671
+dask_glm/families.py,sha256=y4p7oT6XrEF9LEGBv4qo4fGE5pRzkyP7y3L30L5YcjA,3160
+dask_glm/regularizers.py,sha256=Bz65IpPb0LW9-R8ifmo-nkv6rz_uwaO7M9RAaJcivaI,5656
+dask_glm/utils.py,sha256=SjWVUf07OLDsmpiEPqLMecNQs0TEBa1qnQNaxpUp8Vc,5210
+dask_glm-0.3.0.dist-info/LICENSE.txt,sha256=7Cxxr_ILpXLPDRiruM01aMppguDPzTRY1wbcQLVSmXk,1494
+dask_glm-0.3.0.dist-info/METADATA,sha256=4Tz4n3QTcpzu_14QBbd4a1pCkJPiJ5NOq6THq-G3NCo,1523
+dask_glm-0.3.0.dist-info/WHEEL,sha256=iYlv5fX357PQyRT2o6tw1bN-YcKFFHKqB_LwHO5wP-g,110
+dask_glm-0.3.0.dist-info/top_level.txt,sha256=QbQ0lcX8fvbyIL8hqgbg8n3ba4e8fziDQ74ZRrWUrzc,9
+dask_glm-0.3.0.dist-info/RECORD,,
