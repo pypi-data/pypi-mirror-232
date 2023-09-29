@@ -1,0 +1,13 @@
+montu/__init__.py,sha256=sAHdkqIUbZp_kfJvj2JXc4KAtukLOSuytONQ7BdUxnM,11836
+montu/version.py,sha256=oa-4RrMgexZC4mIb7ovFgKJij15qqFFtuczJifkJeU0,16
+montu/data/montu-python-logo-complete.png,sha256=HZ-V8PmYn9-Zz2gwa5U8nTBYqdw7MeVy3L--6TO-6lU,33491
+montu/data/montu-toro-estatua.jpeg,sha256=WMUttf6vrVLtgslY1nnu23YB4XrTflV9_GaoT-9TBSk,55496
+montu/data/montu-toro.png,sha256=x2MTw-z3L7MkwN5w8ULGrBZ7SIvcmIuecqhdbDC9hGI,5682
+montu/data/montu.png,sha256=MXSQ3k164LSnF9P2SOreSE74CdFw0KYkR_ZsJ6UpHmY,10087
+montu/data/stars.csv,sha256=e_hAb1Z5np255fl9dDrcZu0QPSpkeKLB5yoo-gTFVmI,8479962
+montu-0.4.0.dist-info/LICENSE,sha256=0Tc6siCc4xCHqDV8rQib2813MdiK6mzzSqGEW-bQ8rA,1134
+montu-0.4.0.dist-info/METADATA,sha256=dLuDyDf862OZHWkM6sxZ0Bn5aTuYkAJ5_L0cIlq7BZc,2573
+montu-0.4.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+montu-0.4.0.dist-info/entry_points.txt,sha256=IcLlDYD_WundUsKnJnY8yJ65Nbw_mIAugfWqzFyphQo,47
+montu-0.4.0.dist-info/top_level.txt,sha256=CyHZvIjMfiHVm8QDfmZcC2qLHSKJxFsJgOAbQa8c8qk,6
+montu-0.4.0.dist-info/RECORD,,
