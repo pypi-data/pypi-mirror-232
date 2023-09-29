@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: winner
+Version: 0.0.1
+Summary: A python package for data-centric MLOps for data cleaning and feature engineering
+Home-page: https://github.com/CleanML/clean_ml.git
+Author: CleanML
+Author-email: support@astutic.com
+License: UNKNOWN
+Project-URL: Documentation, https://winner.readthedocs.io/en/latest/
+Project-URL: Source Code, https://github.com/CleanML/clean_ml.git
+Keywords: data cleaning,feature engineering,data science,machine learning,mlops,ner,token classification,text-annotation,data-centric reports
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: PyYAML (==6.0.1)
+Requires-Dist: grpcio (==1.57.0)
+Requires-Dist: protobuf (==4.24.1)
+Requires-Dist: setuptools (==45.2.0)
+Requires-Dist: typer (==0.9.0)
+Requires-Dist: typing-extensions (==4.7.1)
+
+# Winner
+A python library of CleanML Data-centric MLOps suite for Named entity recognition
+
+
