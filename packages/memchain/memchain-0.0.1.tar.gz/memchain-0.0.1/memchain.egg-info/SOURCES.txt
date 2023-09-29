@@ -1,0 +1,9 @@
+setup.py
+memchain/__init__.py
+memchain/modules.py
+memchain/prompts.py
+memchain.egg-info/PKG-INFO
+memchain.egg-info/SOURCES.txt
+memchain.egg-info/dependency_links.txt
+memchain.egg-info/requires.txt
+memchain.egg-info/top_level.txt
