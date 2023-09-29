@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/umdsubmit/__init__.py
+src/umdsubmit/umdsubmitscript.py
+src/umdsubmit.egg-info/PKG-INFO
+src/umdsubmit.egg-info/SOURCES.txt
+src/umdsubmit.egg-info/dependency_links.txt
+src/umdsubmit.egg-info/top_level.txt
