@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "ing0-spawn"
+version = "0.2.0"
+description = "Build, test, and run your code on any GNU/Linux distribution with ease"
+authors = ["Amirouche Boubekki <amirouche@hyper.dev>"]
+license = "CC0"
+readme = "README.md"
+packages = [
+    { include = "ing0.py" },
+]
+
+[tool.poetry.scripts]
+ing0 = "ing0:main"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+requests = "^2.31.0"
+lxml = "^4.9.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
