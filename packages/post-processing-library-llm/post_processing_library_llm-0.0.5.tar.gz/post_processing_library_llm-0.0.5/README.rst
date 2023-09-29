@@ -1,0 +1,63 @@
+Post-processing-library-llm
+===========================
+
+Installation
+------------
+
+You can install Post-processing-library-llm library using pip:
+
+.. code-block:: shell
+
+   pip install Post-processing-library-llm
+
+Named Entity Recognition (NER)
+-------------------------------
+
+In this example, we'll use the Post-processing-library-llm to perform NER on a set of documents and evaluate the results.
+
+.. code-block:: python
+
+   from post_processing_library_llm.ner import ner
+
+   # Define ground truth and prediction dictionaries
+   truth_dict = {
+       'airplane': ["Boeing B-52 Stratofortress", "predator drone"]
+   }
+   prediction_dict = {
+       'airplane': ["drone", "sparrow"]
+   }
+
+   # Perform NER and get results
+   ner_results = ner.named_entity_recognition(truth_dict, prediction_dict, fuzzy_threshold)
+
+   # Print the results
+   print(ner_results)
+
+NER Output:
+   {'Correct Entities': 1, 'Missed Entities': 1, 'False Positive Entities': 1}
+
+Text Matching Example
+----------------------
+
+Here's an example of how to perform Text Matching using the `Post-processing-library-llm` library:
+
+Text Matching involves comparing two text strings and determining how similar or different they are. The post_processing_library_llm provides various text matching algorithms, including direct matching, token overlap, and cosine similarity, and gives all the metrics as output.
+
+In this example, we'll use the Text Matcher to compare a list of ground truth texts with predicted texts and calculate matching metrics.
+
+.. code-block:: python
+
+   from post_processing_library_llm.get_metrics import TextMatcher
+
+   # Define ground truth and prediction lists
+   truth_list = ["this is a ball", "cat", "Toyota Camry"]
+   pred_list = ["this is a ball", "Ford Mustang", "Toyota Corolla"]
+
+   # Perform text matching with cosine similarity
+   metrics = text_matcher.match_texts(truth_list, pred_list, match_type='cosine_similarity')
+
+   # Print the metrics
+   print(metrics)
+
+Text Matching Output:
+   {'Precision': 1.0, 'Recall': 0.3333333333333333, 'Specificity': nan, 'F1 Score': 0.5, 'Negative Predictive Value (NPV)': 0.0, 'False Positive Rate (FPR)': nan, 'False Negative Rate (FNR)': 0.6666666666666666, 'False Discovery Rate (FDR)': 0.0, 'Accuracy': 0.3333333333333333, 'True Positive Rate (TPR)': 0.3333333333333333, 'Positive Predictive Value (PPV)': 1.0, 'True Negative Rate (TNR)': nan, 'Macro Average Precision': 0.5, 'Macro Average Recall': 0.16666666666666666, 'Macro Average F1 Score': 0.25, 'Weighted Average Precision': 1.0, 'Weighted Average Recall': 0.3333333333333333, 'Weighted Average F1 Score': 0.5}
