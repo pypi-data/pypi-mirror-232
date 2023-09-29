@@ -1,0 +1,10 @@
+yayarl/__init__.py,sha256=OjE66Chgp7fMcEWwSPVuiPb1ESqDgNPcZrqqSfWkmmo,154
+yayarl/_quoting.py,sha256=KRrgpEUE7A7FiV7N4sXqLf-VAvtOexKg9C-l6wNDsLI,537
+yayarl/_quoting_py.py,sha256=K419wlfyIlGM7-UbxobWv8lOkger8Ut7rrgoJ4xDgAU,6370
+yayarl/_requests.py,sha256=gWWIvmEofxObNQt-qmFOz9dSjs0Y3RRKJwd3ycNGwG4,1638
+yayarl/_url.py,sha256=lqzuWF1EqrdDz6Lj9nuJKvBP4nxBywpqPsPV4WYBjeM,38123
+yayarl-2.0.0.dist-info/LICENSE,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+yayarl-2.0.0.dist-info/METADATA,sha256=KkeIaKyn5vAOr5j2mw0zqC8mdT9NhLZqENmyB78uNS4,25216
+yayarl-2.0.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+yayarl-2.0.0.dist-info/top_level.txt,sha256=GS5feVaQ3s1hfKtvyA7KJXz1APmbQ1k8a3cLL3kinuU,7
+yayarl-2.0.0.dist-info/RECORD,,
