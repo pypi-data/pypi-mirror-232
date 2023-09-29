@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: cariuska
+Version: 0.0.5
+Summary: Cariuska Package
+Author-email: Thiago Cariuska <tcariuska@gmail.com>
+Project-URL: Homepage, https://github.com/cariuska/cariuska_pkg
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Cariuska 
+
+
+## Installation
+
+$ pip install cariuska
+
+
+## Example
+
+#### Create it
+ - Create a file main.py with:
+
+``` python
+from cariuska import calc
+```
