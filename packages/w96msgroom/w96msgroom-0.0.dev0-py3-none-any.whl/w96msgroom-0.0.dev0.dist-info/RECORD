@@ -1,0 +1,9 @@
+w96msgroom/__init__.py,sha256=Hh83zJOnbRxJ4VS4MgwjWLeam6D6G49QVrROGmEdSWI,66
+w96msgroom/client.py,sha256=qk96uBDBg5p87r5bnPV0n6nmVPN4PS39tB_S83Lw3vc,5764
+w96msgroom/constants.py,sha256=ueo9dsZd9ohZXl1I_--cZ-WzhfbNL01Y2pWr0AfGTfk,48
+w96msgroom/message.py,sha256=RBzHs6G4tBYKqsHk2LOREtVSxykrvqNokpKPADWK1xg,926
+w96msgroom/user.py,sha256=wZB93gkdxjE0Ntd5MkC0tniBySTXf83qfcos9m3Z6g8,1244
+w96msgroom-0.0.dev0.dist-info/METADATA,sha256=0eO0ia6BMygYcxyWuybqAdeJ2Ps3YUp1Psgl-lDStqM,961
+w96msgroom-0.0.dev0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+w96msgroom-0.0.dev0.dist-info/top_level.txt,sha256=FF6N7QbxvZvJ3VdTqhkPn6iQnYcNWXkjbmsOye6tK30,11
+w96msgroom-0.0.dev0.dist-info/RECORD,,
