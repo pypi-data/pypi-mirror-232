@@ -1,0 +1,8 @@
+setup.py
+gify_plot/__init__.py
+gify_plot/gify_plot.py
+gify_plot.egg-info/PKG-INFO
+gify_plot.egg-info/SOURCES.txt
+gify_plot.egg-info/dependency_links.txt
+gify_plot.egg-info/requires.txt
+gify_plot.egg-info/top_level.txt
