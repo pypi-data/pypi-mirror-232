@@ -1,0 +1,13 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+ARS_Test/__init__.py
+ARS_Test/cli.py
+ARS_Test/semantic_test.py
+ARS_Test.egg-info/PKG-INFO
+ARS_Test.egg-info/SOURCES.txt
+ARS_Test.egg-info/dependency_links.txt
+ARS_Test.egg-info/entry_points.txt
+ARS_Test.egg-info/requires.txt
+ARS_Test.egg-info/top_level.txt
