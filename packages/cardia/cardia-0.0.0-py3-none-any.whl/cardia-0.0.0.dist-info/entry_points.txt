@@ -1,0 +1,2 @@
+[console_scripts]
+cardia = cardia.__main__:main
