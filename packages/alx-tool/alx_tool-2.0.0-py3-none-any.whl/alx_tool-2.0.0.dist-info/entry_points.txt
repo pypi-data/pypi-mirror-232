@@ -1,0 +1,2 @@
+[console_scripts]
+alx-tool = alx_tool.__main__:main

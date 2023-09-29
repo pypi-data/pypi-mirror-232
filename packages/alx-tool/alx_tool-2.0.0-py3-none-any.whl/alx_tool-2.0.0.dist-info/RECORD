@@ -1,0 +1,13 @@
+alx_tool/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+alx_tool/__main__.py,sha256=P5CcyZacjdFrCN6PSb63hwTzuNrYiO-gDoDGVjNBFG0,2736
+alx_tool/config.py,sha256=78yYhpNoH5b-u8QsYGXv7Qv-Iu8J6uqUAMI6P4mHYjk,2884
+alx_tool/spider.py,sha256=Nw8IXz8CQ9mQrVeMQ5-mOSZRf3KKOO8eO3Vy-zMxdug,3806
+alx_tool/utils.py,sha256=6wHmuiB7oK7WoC9ImAfcJZTQOrwu09jfr96zDYVSmrw,15289
+alx_tool/version.py,sha256=msmg7OJ6lj0hAAKHvxvC_1tsEuPlwWFNGNYpJ4jZSso,384
+alx_tool-2.0.0.dist-info/AUTHORS,sha256=Ps1rkNzy5agjZd1t9mtM7rzBim1cU1oXiWnre5SHXS8,11
+alx_tool-2.0.0.dist-info/LICENSE,sha256=mnNSy1yTYxUNIDoYmemWxxGCAYcULrn-0KZhrrerWeQ,1092
+alx_tool-2.0.0.dist-info/METADATA,sha256=-nbdnWU5zQDOmJ1dcNTbEjRmvj7WmaiYC2bT0nZXbF8,4422
+alx_tool-2.0.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+alx_tool-2.0.0.dist-info/entry_points.txt,sha256=9BMSg-YdytQSaeMMHBxjhRqHcG-D-1Vd3n-z1jRflcY,52
+alx_tool-2.0.0.dist-info/top_level.txt,sha256=8tqnxyJ_yWGXEXY0Zuw6is36O6DFq8-3xPSqH6gE_xo,9
+alx_tool-2.0.0.dist-info/RECORD,,
