@@ -1,0 +1,3 @@
+easykube
+httpx
+pyyaml
