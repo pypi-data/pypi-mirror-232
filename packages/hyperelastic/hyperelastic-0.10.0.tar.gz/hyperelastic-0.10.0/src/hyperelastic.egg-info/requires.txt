@@ -1,0 +1,8 @@
+numpy
+scipy
+matplotlib
+
+[test]
+felupe
+sympy
+torch
