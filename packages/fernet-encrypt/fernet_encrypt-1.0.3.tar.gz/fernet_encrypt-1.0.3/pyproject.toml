@@ -1,0 +1,46 @@
+[tool.black]
+line-length = 119
+experimental_string_processing = true
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = "--strict-markers --strict-config"
+norecursedirs = [
+    ".git",
+    ".tox",
+    ".env",
+    ".venv",
+]
+testpaths = [
+    "pytests",
+]
+pythonpath = [
+    "pysrc",
+]
+
+[tool.poetry]
+name = "fernet-encrypt"
+version = "1.0.3"
+description = "Fernet Encryption CLI tool"
+authors = ["Tyson Holub <tyson@tysonholub.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "fernet_encrypt", from="pysrc"}]
+include = ["LICENSE"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+cryptography = "^39.0.2"
+typer = "^0.9"
+
+[tool.poetry.group.dev.dependencies]
+coverage = "^6.4.0"
+pytest = "^7.1.0"
+twine = "^4.0.2"
+
+[tool.poetry.scripts]
+fernet-encrypt = { callable = "fernet_encrypt:cli" }
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
