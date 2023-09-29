@@ -1,0 +1,7 @@
+charm_gems/__init__.py,sha256=hXuXaNory25iG17gbH6_bdk-UPgnGa0LdhqYzyEeNTY,29
+charm_gems/gemsbindings.cp311-win_amd64.pyd,sha256=e25hLiQQw2weoZ8cRck8D5T9ohGvhzKnpE4_bdhQ528,7852544
+charm_gems-1.3.3.dist-info/LICENSE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+charm_gems-1.3.3.dist-info/METADATA,sha256=zWkFewwQRUM2a09XnhrnLG8ii7KxgKev2IB8m_ZO8JY,2748
+charm_gems-1.3.3.dist-info/WHEEL,sha256=badvNS-y9fEq0X-qzdZYvql_JFjI7Xfw-wR8FsjoK0I,102
+charm_gems-1.3.3.dist-info/top_level.txt,sha256=eHzod4TftPqItWlmb3etHtJfRuXUZaUGwc8PcAFeZ3o,11
+charm_gems-1.3.3.dist-info/RECORD,,
