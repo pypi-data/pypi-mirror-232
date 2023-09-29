@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+src/MeTA_Neuro.egg-info/PKG-INFO
+src/MeTA_Neuro.egg-info/SOURCES.txt
+src/MeTA_Neuro.egg-info/dependency_links.txt
+src/MeTA_Neuro.egg-info/requires.txt
+src/MeTA_Neuro.egg-info/top_level.txt
+src/Neuro-MeTA/__init__.py
+src/Neuro-MeTA/hello.py

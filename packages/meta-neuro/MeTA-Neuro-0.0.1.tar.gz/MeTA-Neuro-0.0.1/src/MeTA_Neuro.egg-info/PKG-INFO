@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: MeTA-Neuro
+Version: 0.0.1
+Summary: Medial Tractography Analysis (MeTA) for White Matter Population Analyses Across Datasets
+Home-page: https://github.com/USCLoBeS/NeuroMeTA
+Author: Iyad Ba Gari, Shayan Javid,
+Author-email: bagari@usc.edu, javidyaz@usc.edu
+License: MIT
+Requires-Python: >=3.9
+License-File: LICENSE
