@@ -1,0 +1,13 @@
+streamlit_local_storage/__init__.py,sha256=32tspVgmi4hMl8ADkf8EuRCUodkgDBs8JAw5KDSVr3k,3028
+streamlit_local_storage/example.py,sha256=eWkGXqaShcb6rhSXDaKURWRhHWz8ieeliRtScll88fk,1070
+streamlit_local_storage/frontend/build/asset-manifest.json,sha256=MqY5asNpKMo9RWEl3AnXznd6H5YpqKl-dLJ65xZ5JJU,221
+streamlit_local_storage/frontend/build/bootstrap.min.css,sha256=X9ITP3t3djkRs4SffIkA1Q2WMy-oYl6au5HFYTVShe0,206960
+streamlit_local_storage/frontend/build/index.html,sha256=xQE0JeGMmY6_kGExgkYAPaZ43vKRNizEWBKGIQFvUdk,492
+streamlit_local_storage/frontend/build/static/js/main.6ae74233.js,sha256=_8CkkyBOGgICs4NFE1lX_w5oRT2dBX3I9Ajli0rHZGo,380117
+streamlit_local_storage/frontend/build/static/js/main.6ae74233.js.LICENSE.txt,sha256=exOXYutzLwXRW-bBK7BpKHfmRqtlSgP_zSIJF-7epPs,1443
+streamlit_local_storage/frontend/build/static/js/main.6ae74233.js.map,sha256=o2wWhP04W9dIac1gE6_EPDeiuiBLiFXn0uxX0VA4XYQ,1351351
+streamlit_local_storage-0.0.3.dist-info/LICENSE,sha256=SHkHX-qiNZt-ACArrZP67jppVYPvF8xuUDRjJw_E3L0,1082
+streamlit_local_storage-0.0.3.dist-info/METADATA,sha256=hPubljHjJoxI6oEFBE-Wliu6vl1bFcMGgS7ixJE5SCk,1841
+streamlit_local_storage-0.0.3.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
+streamlit_local_storage-0.0.3.dist-info/top_level.txt,sha256=X348i4KW7eKsGfiAmz8AoeMRJhdiXoremxs0k_70Xww,24
+streamlit_local_storage-0.0.3.dist-info/RECORD,,
