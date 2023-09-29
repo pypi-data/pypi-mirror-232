@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+src/qec/__init__.py
+src/qec/codes.py
+src/qec/css.py
+src/qec/hgp.py
+src/qec/stab_code.py
+src/qec/util.py
+src/qec.egg-info/PKG-INFO
+src/qec.egg-info/SOURCES.txt
+src/qec.egg-info/dependency_links.txt
+src/qec.egg-info/requires.txt
+src/qec.egg-info/top_level.txt
+tests/test.py
+tests/test_stabiliser_code.py
+tests/test_util.py

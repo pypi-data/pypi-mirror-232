@@ -1,0 +1,26 @@
+[project]
+name = "qec"
+
+description = "Python Tools for Quantum Error Correction"
+readme = "README.md"
+authors = [
+    { name = "Joschka Roffe", email = "joschka@roffe.eu" }
+]
+license = { file = "LICENSE" }
+
+classifiers = [
+    "Development Status :: 4 - Beta",
+]
+requires-python = ">=3.8"
+dependencies = [
+    "udlr",
+    "numpy>=1.24.0",
+    "scipy>=1.9.3",
+]
+version = "0.1"
+
+[tool.setuptools.packages.find]
+where = ["src"]  
+include = ["qec","qec.*"]
+
+
