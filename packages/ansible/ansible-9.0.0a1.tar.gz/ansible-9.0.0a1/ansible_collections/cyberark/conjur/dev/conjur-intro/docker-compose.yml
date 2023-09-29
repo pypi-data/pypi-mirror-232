@@ -1,0 +1,221 @@
+version: "3"
+services:
+  conjur-master.mycompany.local:
+    image: haproxy:2.2-alpine
+    networks:
+      dap_net:
+        ipv4_address: 12.16.23.10
+    ports:
+      - "${CONJUR_MASTER_PORT:-443}:443"
+      - "7000:7000"
+    expose:
+      - "1999"
+      - "5432"
+    volumes:
+      - ./system/haproxy/certs:/etc/ssl/certs
+      - ./files/haproxy/master:/usr/local/etc/haproxy
+
+  conjur-master-1.mycompany.local:
+    image: registry.tld/conjur-appliance:${VERSION}
+    networks:
+      dap_net:
+        ipv4_address: 12.16.23.11
+    ports:
+      - "444:443"
+    expose:
+      - "443"
+      - "444"
+      - "1999"
+      - "5432"
+    environment:
+      TRUSTED_PROXIES: 123.123.1.1,123.5.1.1
+      CONJUR_AUTHENTICATORS: "${CONJUR_AUTHENTICATORS:-authn}"
+    security_opt:
+        - "seccomp:unconfined"
+    volumes:
+      - seeds:/opt/cyberark/dap/seeds
+      - ./system/backup:/opt/conjur/backup:Z
+      - ./system/configuration:/opt/cyberark/dap/configuration:Z
+      - ./system/logs/master-1:/var/log/conjur:Z
+      - ./files:/conjur_files
+
+  conjur-master-2.mycompany.local:
+    image: registry.tld/conjur-appliance:${VERSION}
+    networks:
+      dap_net:
+        ipv4_address: 12.16.23.12
+    ports:
+      - "445:443"
+    expose:
+      - "443"
+      - "444"
+      - "1999"
+      - "5432"
+    security_opt:
+        - "seccomp:unconfined"
+    volumes:
+      - seeds:/opt/cyberark/dap/seeds
+      - ./system/backup:/opt/conjur/backup:Z
+      - ./system/configuration:/opt/cyberark/dap/configuration:Z
+      - ./system/logs/master-2:/var/log/conjur:Z
+      - ./files:/conjur_files
+
+  conjur-master-3.mycompany.local:
+    image: registry.tld/conjur-appliance:${VERSION}
+    networks:
+      dap_net:
+        ipv4_address: 12.16.23.13
+    ports:
+      - "446:443"
+    expose:
+      - "443"
+      - "444"
+      - "1999"
+      - "5432"
+    security_opt:
+        - "seccomp:unconfined"
+    volumes:
+      - seeds:/opt/cyberark/dap/seeds
+      - ./system/backup:/opt/conjur/backup:Z
+      - ./system/configuration:/opt/cyberark/dap/configuration:Z
+      - ./system/logs/master-3:/var/log/conjur:Z
+      - ./files:/conjur_files
+
+  conjur-master-4.mycompany.local:
+    image: registry.tld/conjur-appliance:${VERSION}
+    networks:
+      dap_net:
+        ipv4_address: 12.16.23.14
+    ports:
+      - "447:443"
+    expose:
+      - "443"
+      - "444"
+      - "1999"
+      - "5432"
+    security_opt:
+        - "seccomp:unconfined"
+    volumes:
+      - seeds:/opt/cyberark/dap/seeds
+      - ./system/backup:/opt/conjur/backup:Z
+      - ./system/configuration:/opt/cyberark/dap/configuration:Z
+      - ./system/logs/master-4:/var/log/conjur:Z
+      - ./files:/conjur_files
+
+  conjur-master-5.mycompany.local:
+    image: registry.tld/conjur-appliance:${VERSION}
+    networks:
+      dap_net:
+        ipv4_address: 12.16.23.15
+    ports:
+      - "448:443"
+    expose:
+      - "443"
+      - "444"
+      - "1999"
+      - "5432"
+    security_opt:
+        - "seccomp:unconfined"
+    volumes:
+      - seeds:/opt/cyberark/dap/seeds
+      - ./system/backup:/opt/conjur/backup:Z
+      - ./system/configuration:/opt/cyberark/dap/configuration:Z
+      - ./system/logs/master-5:/var/log/conjur:Z
+      - ./files:/conjur_files
+
+  conjur-follower.mycompany.local:
+    image: haproxy:2.2-alpine
+    networks:
+      dap_net:
+        ipv4_address: 12.16.23.16
+    ports:
+      - "80:80"
+      - "449:443"
+      - "7001:7000"
+    volumes:
+      - follower-certs:/etc/ssl/certs
+      - ./files/haproxy/follower:/usr/local/etc/haproxy
+
+  conjur-follower-1.mycompany.local:
+    image: registry.tld/conjur-appliance:${VERSION}
+    networks:
+      dap_net:
+        ipv4_address: 12.16.23.17
+    ports:
+      - "${CONJUR_FOLLOWER_PORT:-450}:443"
+    expose:
+      - "443"
+      - "444"
+    environment:
+      CONJUR_AUTHENTICATORS: "${CONJUR_AUTHENTICATORS:-authn}"
+    security_opt:
+        - "seccomp:unconfined"
+    volumes:
+      - seeds:/opt/cyberark/dap/seeds
+      - follower-certs:/opt/conjur/etc/ssl/
+      - ./system/backup:/opt/conjur/backup:Z
+      - ./system/configuration:/opt/cyberark/dap/configuration:Z
+      - ./system/logs/follower:/var/log/conjur:Z
+      - ./files:/conjur_files
+
+  client:
+    image: cyberark/conjur-cli:8
+    networks:
+      dap_net:
+        ipv4_address: 12.16.23.18
+    working_dir:  /src/cli
+    environment:
+      CONJUR_APPLIANCE_URL: https://conjur-master.mycompany.local
+      CONJUR_ACCOUNT: demo
+      CONJUR_AUTHN_LOGIN: admin
+    volumes:
+      - .:/src/cli
+      - ./cli_cache/master:/root
+
+  follower-client:
+    image: cyberark/conjur-cli:8
+    networks:
+      dap_net:
+        ipv4_address: 12.16.23.19
+    working_dir:  /src/cli
+    environment:
+      CONJUR_APPLIANCE_URL: https://conjur-follower.mycompany.local
+      CONJUR_ACCOUNT: demo
+      CONJUR_AUTHN_LOGIN: admin
+    volumes:
+      - .:/src/cli
+      - ./cli_cache/follower:/root
+
+  api-client:
+    build:
+      context: ./artifacts/api-client
+    networks:
+      dap_net:
+        ipv4_address: 12.16.23.20
+    working_dir: /src/
+    volumes:
+      - ./artifacts/api-client/api-script:/src/bin/api
+      - ./policy:/src/policy
+
+  certificate-generator:
+    build:
+      context: ./artifacts/certificate-generator
+    volumes:
+      - ./system/configuration/certificates:/src/certificates
+
+  jmeter:
+    build:
+      context: ./tools/performance-tests
+    volumes:
+      - ./tools/performance-tests/jmeter:/opt/jmeter_data
+    networks:
+      dap_net:
+        ipv4_address: 12.16.23.21
+
+volumes:
+  seeds:
+  follower-certs:
+
+networks:
+  dap_net:
+    external: true
