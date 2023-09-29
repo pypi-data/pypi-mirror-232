@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: MicroPythonHttp
+Version: 0.1
+Summary: An small http server for micro python
+Home-page: https://github.com/user/filtastisch
+Download-URL: https://github.com/filtastisch/MicroHttp/archive/refs/tags/development.tar.gz
+Author: F. Senier
+Author-email: filtastisch@gmail.com
+License: MIT
+Keywords: HTTPSERVER,SERVER,MICROPYTHON
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.5
+License-File: LICENSE.txt
