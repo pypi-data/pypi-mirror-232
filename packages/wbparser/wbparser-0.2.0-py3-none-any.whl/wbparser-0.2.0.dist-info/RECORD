@@ -1,0 +1,16 @@
+wbparser/__init__.py,sha256=N3tF1vBMAE3jLapZghGPxSwrAuPEGVC7eKtTrWWcSYU,26
+wbparser/main.py,sha256=zhJat83gs7vPv9JiHidJdzythPG6GYxG3sU3j12Pf7Q,5877
+wbparser/wildberries/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+wbparser/wildberries/wildberries/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+wbparser/wildberries/wildberries/items.py,sha256=WiNp52z7TWPIejElgYUM2c2eKTx8orxVnvx9bvROFQU,392
+wbparser/wildberries/wildberries/middlewares.py,sha256=e9EX6233A-FZxvS3RkRfF1wcsK9NchkTXFs-vjqZvc0,3658
+wbparser/wildberries/wildberries/pipelines.py,sha256=EqJFGmC8lh6cTnsedu446dh1eOdvmr1l8Zrx0Uc2mjY,365
+wbparser/wildberries/wildberries/settings.py,sha256=IsKJssIjFXvqDbd9mzbeskACWmiRkCnBzkh7AQpoBkg,3113
+wbparser/wildberries/wildberries/spiders/__init__.py,sha256=ULwecZkx3_NTphkz7y_qiazBeUoHFnCCWnKSjoDCZj0,161
+wbparser/wildberries/wildberries/spiders/goods.py,sha256=yBvFNCfap2cF0cpxOTB6BwliEip4weKJ5z3W8zoHOao,2893
+wbparser/wildberries/wildberries/spiders/sitemap.py,sha256=b_jq3a3d4dwdqoOgLPxplHjrlDFBwenxWrV0D532dUc,1205
+wbparser-0.2.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+wbparser-0.2.0.dist-info/METADATA,sha256=O8VjDvn2eC-bUaeSjjYwSVa2BwE95GWm5w2zXIrmCkc,688
+wbparser-0.2.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+wbparser-0.2.0.dist-info/top_level.txt,sha256=XC-0i7CWEdeW8BXbTSxn42_hd0R09ypAhKPejUHzkAY,9
+wbparser-0.2.0.dist-info/RECORD,,
