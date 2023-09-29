@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: test280920230915
+Version: 1.27.5.2a1
+Summary: 
+Author: Mateusz Żebrak
+Author-email: mzebrak@syncad.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11

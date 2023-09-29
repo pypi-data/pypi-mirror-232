@@ -1,0 +1,6 @@
+pypi_deploy_test/__init__.py,sha256=9NveZ5OFX2AaQ5i1hHa_XsuMQhIAUi70HvuIGR1aebU,568
+pypi_deploy_test/main.py,sha256=XTBPkjscVVbcXhfqggLacP8lTdRKbF_iXaUBxzGgjmA,275
+test280920230915-1.27.5.2a1.dist-info/METADATA,sha256=1dvpbdwOENcv-_IJ38oByhJDtKvfNR2nyKYJxvuC3kw,311
+test280920230915-1.27.5.2a1.dist-info/WHEEL,sha256=GtC8UQlUHJfECgWLmHEYzq2Bp-zVoA6nGGK7Qeo3mzk,110
+test280920230915-1.27.5.2a1.dist-info/entry_points.txt,sha256=gnriAKO2tAFBJr_Bn0_IqFmP2n277jHYbk6MI-pjpyo,63
+test280920230915-1.27.5.2a1.dist-info/RECORD,,
