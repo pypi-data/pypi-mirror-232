@@ -1,0 +1,71 @@
+# ALX Tool 2.0.0
+
+## Overview
+
+The ALX Tool is a robust and user-friendly utility designed to enhance the experience of ALX students when retrieving project files from the ALX intranet student dashboard. With the ALX Tool, students can effortlessly retrieve project files by simply pasting the project link from the dashboard. The tool automatically fetches the names of the task files and creates them on the student's local machine.
+
+## Features
+
+- **Automated Retrieval**: Say goodbye to manual file creation. ALX Tool automates the process for you, saving you valuable time.
+
+- **Configuration Wizard**: Set up your ALX student email for easy access to your projects using the `configure` command.
+
+- **Initialization**: Quickly initialize your projects using the `init` command, and the tool fetches project data for you.
+
+- **List Project Tasks**: See a clear list of your project tasks with the `list` command.
+
+## Installation
+
+You can install the ALX Tool using pip. Open your terminal and run:
+
+```bash
+pip install alx-tool
+```
+
+This command will download and install the ALX Tool package from the Python Package Index (PyPI).
+
+## Usage
+
+### Configuration Wizard
+Set up your ALX student email for easy access:
+
+```bash
+alx-tool configure
+```
+
+### Initialization
+Initialize your project:
+
+```bash
+alx-tool init <project_name>
+```
+
+### Fetching Project Files
+
+Fetch project files with ease:
+
+```bash
+alx-tool init <project_name_or_url>
+```
+
+### Listing Project Tasks
+
+List your project tasks:
+
+```bash
+alx-tool list
+```
+
+## Feedback and Contributions
+
+We welcome feedback and contributions to improve the ALX Tool. If you encounter any issues or have ideas for enhancements, please [create an issue](https://github.com/AmonMunyai/alx-tool/issues) on the project's GitHub repository.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Disclaimer
+
+The ALX Tool is a personal project created to aid ALX students in managing their project files efficiently. It is not officially affiliated with ALX or any educational institution. Please use it responsibly and in compliance with your institution's policies.
+
+**Note**: This documentation is for informational purposes and will be updated as the ALX Tool continues to evolve.
