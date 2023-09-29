@@ -1,0 +1,14 @@
+dolomite_matrix/__init__.py,sha256=6uQCWoD9IWoiL7YVcg7v_5wf_bmz6L8kr-VW-SdBgSA,942
+dolomite_matrix/_utils.py,sha256=asbnsMdVuhtpjOY4jaVPTR66up6kI6ggYTzpmR4J3o0,1606
+dolomite_matrix/choose_dense_chunk_sizes.py,sha256=CT3xpUZpxDzm9TMQJPmrLjrs1CwEmHau14NEW9OSoN8,1653
+dolomite_matrix/load_hdf5_dense_array.py,sha256=GLJE1CyGFxGXyGNxp1q8CfzXsby5tiD2L1x-fxv0uNQ,1062
+dolomite_matrix/load_hdf5_sparse_matrix.py,sha256=_grovJFPBBkfFpy3wvrxNtJ3vXrAe8Vc9B1qAJubJzE,1138
+dolomite_matrix/stage_DelayedArray.py,sha256=-BGViwjbbDDwVlKi79uPANwXGIwpcG2H650wuVpbuFU,6101
+dolomite_matrix/stage_ndarray.py,sha256=-_UFotOmxSkBD-dLbpd57ogJ_t26NLsZkbc30rSh_70,2386
+dolomite_matrix/stage_sparse.py,sha256=ysWHamdkZebGe4pNryHCa-LsvqHQNk0TzTwWEly4O1U,3597
+dolomite_matrix/write_sparse_matrix.py,sha256=0KRUW3nRslIqLuSEiud1cc32q6I8UqpkOjgsD44eG1Q,11631
+dolomite_matrix-0.0.1.dist-info/LICENSE.txt,sha256=RIPdBQEJwWOOJRmpXhEoW-hpkid8PbhtdBskBXyNkq0,1071
+dolomite_matrix-0.0.1.dist-info/METADATA,sha256=ZzexiZG7jsINt9a41Emol-dyVvb3f_O2ltUbn40_ygs,5001
+dolomite_matrix-0.0.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+dolomite_matrix-0.0.1.dist-info/top_level.txt,sha256=Qfwk0wqjBsE4PkUDxCyDliQstULv1TvCZKjcMoFanh8,16
+dolomite_matrix-0.0.1.dist-info/RECORD,,
