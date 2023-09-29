@@ -1,0 +1,21 @@
+[project]
+name = "binance-ohlcv"
+version = "0.0.0"
+description = "Fetch binance OHLCV data"
+authors = [
+    { name = "Meng Xiangzhuo", email = "aumo@foxmail.com" },
+]
+dependencies = []
+requires-python = ">=3.11"
+readme = "README.md"
+
+[project.license]
+text = "MIT"
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool]
