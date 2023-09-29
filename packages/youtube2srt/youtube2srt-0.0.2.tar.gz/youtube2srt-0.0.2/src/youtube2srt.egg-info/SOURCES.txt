@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/youtube2srt/__init__.py
+src/youtube2srt/youtube2srt.py
+src/youtube2srt.egg-info/PKG-INFO
+src/youtube2srt.egg-info/SOURCES.txt
+src/youtube2srt.egg-info/dependency_links.txt
+src/youtube2srt.egg-info/requires.txt
+src/youtube2srt.egg-info/top_level.txt
