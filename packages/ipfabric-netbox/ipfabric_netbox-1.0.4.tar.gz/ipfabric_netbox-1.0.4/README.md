@@ -1,0 +1,29 @@
+# Overview
+
+This plugin allows the intrgration and data syncronization between IP Fabric and Netbox.
+
+The plugin is built to leaverage the IP Fabric API to pull data from IP Fabric and push it into Netbox using the [IP Fabric Python SDK](https://gitlab.com/ip-fabric/integrations/python-ipfabric). It also leversages multiple features of Netbox such as [Staged Changes](https://docs.netbox.dev/en/stable/plugins/development/staged-changes/) and [Background Tasks](https://docs.netbox.dev/en/stable/plugins/development/background-tasks/).
+
+- Multiple IP Fabric Sources
+- Transform Maps
+- Scheduled Syncronization
+- Diff Visualization
+
+## Screenshots
+
+Sources.
+
+Snapshots.
+
+Transform Maps.
+
+Ingestion.
+
+Diff Visualization.
+
+## Documentation
+
+Full documentation for this plugin can be found at [IP Fabric Docs](https://docs.ipfabric.io/main/integrations/netbox/).
+
+- User Guide
+- Administrator Guide
