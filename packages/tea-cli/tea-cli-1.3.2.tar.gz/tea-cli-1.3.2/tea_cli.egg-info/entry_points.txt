@@ -1,0 +1,2 @@
+[console_scripts]
+tea = tea.__main__:main

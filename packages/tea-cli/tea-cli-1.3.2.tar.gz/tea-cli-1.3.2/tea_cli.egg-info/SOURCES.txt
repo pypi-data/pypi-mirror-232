@@ -1,0 +1,17 @@
+LICENSE
+README.md
+setup.py
+tea/__init__.py
+tea/__main__.py
+tea/config.py
+tea/exceptions.py
+tea/hooks.py
+tea/ignore.py
+tea/tea.py
+tea_cli.egg-info/PKG-INFO
+tea_cli.egg-info/SOURCES.txt
+tea_cli.egg-info/dependency_links.txt
+tea_cli.egg-info/entry_points.txt
+tea_cli.egg-info/requires.txt
+tea_cli.egg-info/top_level.txt
+tests/test_tea.py
