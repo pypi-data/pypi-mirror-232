@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: econnect
+Version: 0.0.1
+Summary: Un paquete de Python hecho para cubanos que quieran interactuar con la red Nauta del Portal Cautivo de Etecsa.
+Author-email: Alejandro Pérez Santana <alejandroperezsantana55@gmail.com>
+Project-URL: Homepage, https://github.com/TheMrAleX/ecconect
+Project-URL: Bug Tracker, https://github.com/TheMrAleX/ecconect/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# EConnect-module
+
+Esto es un paquete de Python que permite a los desarrolladores cubanos interactuar de manera facil y sencilla con el Portal Cautivo de Etecsa.
+
+# Caracteristicas
+- Verificación de conexión.
+- Inicio de Sesión.
+- Obtención de tiempo disponible.
+- Cierre de sesión.
+
+[Repositorio del proyecto aqui](https://guides.github.com/features/mastering-markdown/)
+para los que se interesen en el código.<br>
+[Documentacion del paquete](https://github.com/TheMrAleX/econnect/blob/main/README.md) para una ayuda de como usar el paquete correctamente.
