@@ -1,0 +1,10 @@
+multimcts/__init__.py,sha256=56UXJyA8j4A9qXJBRTLjgB_Vy9u6p8ChFxHOUOBqsHc,34
+multimcts/gamestate.pxd,sha256=vbD-azNnTF5SvxzVujhQ5D3QZav9sCh0zGTR5CHTJhY,187
+multimcts/mcts.cpython-39-darwin.so,sha256=Zko3Ixoqv8NhEZfiEaf4Ck_IvMfBcygrIncTeTvRWYI,474912
+multimcts/mcts.py,sha256=xTVy4BIPSoBYiAICD6WtAMqL3BCFHXT4o2Tg1HP6yHQ,10793
+multimcts/mcts.pyx,sha256=oN5OX7FA9HSWRddAsUkz8LYXaFsZMCAxDiEgrbANV74,15573
+multimcts-0.6.2.dist-info/LICENSE,sha256=uoeGVoXJjTLJS-CGM5kBOeF-CbsGkjFc8pYTTMuSsSs,1069
+multimcts-0.6.2.dist-info/METADATA,sha256=gvECJgXwRbN3MB04_Of8cwYKRUlxFXb4IFcJB4bRsu0,2989
+multimcts-0.6.2.dist-info/WHEEL,sha256=5oVAcMeLDIh-o6T1c198ED7FPfUDusKMPVuKsxICWpw,113
+multimcts-0.6.2.dist-info/top_level.txt,sha256=RY42d1s2mbOcbJ2rXLzIgRuOLWE4D28G0pGiUP6E0po,10
+multimcts-0.6.2.dist-info/RECORD,,
