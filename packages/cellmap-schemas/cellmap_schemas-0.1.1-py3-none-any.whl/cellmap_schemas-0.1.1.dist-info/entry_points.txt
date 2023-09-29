@@ -1,0 +1,3 @@
+[console_scripts]
+schematize=cellmap_schemas.cli:schematize
+
