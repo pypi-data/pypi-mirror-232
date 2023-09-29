@@ -1,0 +1,8 @@
+# C/cython source files
+include hydrotrack/src/*
+
+include README.rst
+include LICENSE
+include tests/*.*
+include requirements.txt
+recursive-include hydrotrack *.c
