@@ -1,0 +1,7 @@
+[distutils.commands]
+bdist_clynton = clynton.distutils.DistutilCommands:bdist_clynton
+build_clynton = clynton.distutils.DistutilCommands:build
+install_clynton = clynton.distutils.DistutilCommands:install
+
+[distutils.setup_keywords]
+build_with_clynton = clynton.distutils.DistutilCommands:setupClyntonDistutilsCommands
