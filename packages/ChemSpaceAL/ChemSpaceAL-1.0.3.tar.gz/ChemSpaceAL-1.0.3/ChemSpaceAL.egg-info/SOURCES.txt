@@ -1,0 +1,17 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+ChemSpaceAL/Configuration.py
+ChemSpaceAL/CreateSetForAL.py
+ChemSpaceAL/Dataset.py
+ChemSpaceAL/Generation.py
+ChemSpaceAL/Model.py
+ChemSpaceAL/SamplingForDocking.py
+ChemSpaceAL/Scoring.py
+ChemSpaceAL/Training.py
+ChemSpaceAL.egg-info/PKG-INFO
+ChemSpaceAL.egg-info/SOURCES.txt
+ChemSpaceAL.egg-info/dependency_links.txt
+ChemSpaceAL.egg-info/requires.txt
+ChemSpaceAL.egg-info/top_level.txt
