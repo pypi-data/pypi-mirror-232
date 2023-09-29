@@ -1,0 +1,2 @@
+[console_scripts]
+verbe-irregulier = verbe_irregulier.verbes_irreg:main

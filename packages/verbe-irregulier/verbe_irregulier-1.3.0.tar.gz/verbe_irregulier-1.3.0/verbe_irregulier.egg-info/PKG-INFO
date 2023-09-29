@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: verbe-irregulier
+Version: 1.3.0
+Summary: Programme de revision des verbe irregulier
+Author-email: Timecraft122 <timecraft122@gmail.com>
+Project-URL: Homepage, https://github.com/Timecraft122/Verbe-irregulier
+Keywords: verbe_irregulier
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.0
+Description-Content-Type: text/x-rst
+
+=================
+Verbe irregulier
+=================
+------------------------------------------------
+Un programme pour apprendre les verbe irregulier
+------------------------------------------------
+
+Instalation
+============
+faire la commande dans un terminal ::
+    
+    python3 -m pip install verbe-irregulier
