@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: ihk-ausbildungsnachweis-broker
+Version: 0.1.3
+Summary: IHK Ausbildungsnachweise workflow broker
+Home-page: https://github.com/twyleg/ausbildungsnachweis_utils
+Author: Torsten Wylegala
+Author-email: mail@twyleg.de
+License: GPL 3.0
+Keywords: ihk ausbildungsnachweis pdf signature
+Description-Content-Type: text/markdown
+Requires-Dist: ihk-ausbildungsnachweis-utilities
+Requires-Dist: PyGithub ~=1.59.1
+Requires-Dist: pygit2 ~=1.13.1
+Requires-Dist: flask ~=2.3.3
+Requires-Dist: werkzeug ~=2.3.7
+
+[![Build status](https://github.com/vw-wob-it-edu-ngitl/ihk_ausbildungsnachweis_broker/actions/workflows/checks.yml/badge.svg)]()
+[![GitHub latest commit](https://badgen.net/github/last-commit/vw-wob-it-edu-ngitl/ihk_ausbildungsnachweis_broker)](https://GitHub.com/vw-wob-it-edu-ngitl/ihk_ausbildungsnachweis_broker/commit/)
+[![PyPI download month](https://img.shields.io/pypi/dm/ihk_ausbildungsnachweis_broker)](https://pypi.python.org/pypi/ihk_ausbildungsnachweis_broker/)
+[![PyPi version](https://badgen.net/pypi/v/ihk_ausbildungsnachweis_broker/)](https://pypi.org/project/ihk_ausbildungsnachweis_broker)
+
+IHK Ausbildungsnachweis Broker
+===============
+
+Broker to integrate IHK Ausbildungsnachweise Utilities into github actions workflows.
+
+Installation
+============
+
+    pip install ihk_ausbildungsnachweis_broker
+
+Usage
+=====
+
+ToDo
+
+Documentation
+=============
+
+ToDO
