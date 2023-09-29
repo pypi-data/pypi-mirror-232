@@ -1,0 +1,8 @@
+torch<2.1,>=1.10
+accelerate<0.23,>=0.21
+peft<0.5,>=0.4
+bitsandbytes==0.40.2
+transformers<5.1,>=4.31
+trl==0.4.7
+scipy
+black
