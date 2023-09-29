@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: statistical_iv
+Version: 0.2
+Summary: UNKNOWN
+Home-page: https://github.com/Nicerova7/statistical_iv
+Author:  Nilton Rojas, Helder Rojas, Cirilo Alvarez
+Maintainer: Nilton Rojas Vales
+Maintainer-email: nrojasv@uni.pe
+License: MIT
+Keywords: information_value,woe,data science,hypothesis test
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Information Technology
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Description-Content-Type: text/plain
+License-File: LICENSE.txt
+
+Statistical_IV: J-Divergence Hypothesis Test for the Information Value (IV)
+
