@@ -1,0 +1,7 @@
+README.md
+setup.py
+wivi_graph_client.egg-info/PKG-INFO
+wivi_graph_client.egg-info/SOURCES.txt
+wivi_graph_client.egg-info/dependency_links.txt
+wivi_graph_client.egg-info/requires.txt
+wivi_graph_client.egg-info/top_level.txt
