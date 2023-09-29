@@ -1,0 +1,20 @@
+{
+  "title": "Energy Machines jupyterlab extension settings",
+  "description": "Energy Machines jupyterlab extension settings",
+  "properties": {
+    "accessToken": {
+      "type": "string",
+      "title": "Access token",
+      "description": "Energy Machines public API access token, provided by your administrator.",
+      "default": ""
+    },
+    "domain": {
+      "type": "string",
+      "title": "Domain",
+      "description": "Domain for public API.",
+      "default": ""
+    }
+  },
+  "additionalProperties": false,
+  "type": "object"
+}
