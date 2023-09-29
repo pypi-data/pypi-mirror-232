@@ -1,0 +1,16 @@
+homeassistant_satellite/VERSION,sha256=FXXhr0qV8S9wtO5qatzoFglT2T6hfcJhG5CIPMw607g,6
+homeassistant_satellite/__init__.py,sha256=ceq5IzYxXC6WJWsHoIZ-6Yropr7r96gm1sYMVmoZl8Y,46
+homeassistant_satellite/__main__.py,sha256=UjeXA4x-gtx-qqS-3yraqJPpgMQhJ6qoSU3F-ZLHu_A,13423
+homeassistant_satellite/mic.py,sha256=MZ-V-3RzCWG15eboTurHANX7-RMPHFySeXH29l4W5rQ,2037
+homeassistant_satellite/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+homeassistant_satellite/remote.py,sha256=cHq7N1VzhbrR-aKW7RI3KnmJN98Ox8UAgzaTGQyIVkA,5644
+homeassistant_satellite/snd.py,sha256=Od6KubEa-5gzULJlwyRtAX1PKhFjJu5Eq8HOh4_-c8I,2119
+homeassistant_satellite/state.py,sha256=IUiEhNrXDWd5rbGYLQ50PpERB7nzCxx4THmgdXhY0H4,327
+homeassistant_satellite/util.py,sha256=YnRCie-9jcf35dxTN4bqaln1gaHUof7_KHDoZI4p7HE,424
+homeassistant_satellite/vad.py,sha256=SaDbhdjDUCF0paQoCOkNgfZo_m8F-WYIi7F9PeY8wMQ,1909
+homeassistant_satellite/models/silero_vad.onnx,sha256=o16_Uv085fFGmyo2FY26dhvEe5c-ozgrMYbKFbH1ryg,1807522
+homeassistant_satellite-1.1.0.dist-info/LICENSE.md,sha256=TNcd7OcDfx1tk8znVwxXq3XqmsVm_UmQvi86sI0VtH8,1071
+homeassistant_satellite-1.1.0.dist-info/METADATA,sha256=4M4i58oCZ6mx4QwIaZsE1iIRWHsfQ7M_F8y5EVpkpLc,3902
+homeassistant_satellite-1.1.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+homeassistant_satellite-1.1.0.dist-info/top_level.txt,sha256=R61tZjPMbG2XO_417orve0MZH4PG-NjERab4XQ744d4,24
+homeassistant_satellite-1.1.0.dist-info/RECORD,,
