@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: commonocean-drivability-checker
+Version: 2023.1
+Summary: Drivability checker for CommonOcean scenarios.
+Home-page: https://commonocean.cps.cit.tum.de
+Author: Technical University of Munich
+Author-email: commonocean@lists.lrz.de
+License: BSD
+Classifier: Programming Language :: C++
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: MacOS
+Requires-Python: >=3.8
+License-File: LICENSE
