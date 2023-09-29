@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: tap-looker
+Version: 0.1.0
+Summary: Singer.io tap for extracting data/metadata from the Looker API
+Author: jeff.huth@bytecode.io
+Classifier: Programming Language :: Python :: 3 :: Only
+License-File: LICENSE
+Requires-Dist: backoff==1.8.0
+Requires-Dist: requests==2.31.0
+Requires-Dist: singer-python==5.13.0
+Provides-Extra: dev
+Requires-Dist: pylint; extra == "dev"
