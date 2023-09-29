@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: cornojob-killer
+Version: 0.0.3
+Summary: No more cornojobs
+Home-page: https://github.com/abstra-app/cornojob-killer
+License: MIT
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: abstra
+Requires-Dist: requests
+
+# Cornojob Killer
+
+Cornojob
+
+*noun*
+
+1. An extremely repetitive and boring task that no one likes doing.
+2. Killer of innovation and scale
+3. A symptom of bad tooling
+
+
+## Install
+```python
+pip install cornojob-killer
+```
+
+## Usage
+```python
+cornojob kill
+```
+
+
