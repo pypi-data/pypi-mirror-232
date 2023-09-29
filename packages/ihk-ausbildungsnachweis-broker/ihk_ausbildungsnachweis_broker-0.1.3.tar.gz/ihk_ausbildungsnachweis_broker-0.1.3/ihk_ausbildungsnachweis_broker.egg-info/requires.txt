@@ -1,0 +1,5 @@
+ihk-ausbildungsnachweis-utilities
+PyGithub~=1.59.1
+pygit2~=1.13.1
+flask~=2.3.3
+werkzeug~=2.3.7
