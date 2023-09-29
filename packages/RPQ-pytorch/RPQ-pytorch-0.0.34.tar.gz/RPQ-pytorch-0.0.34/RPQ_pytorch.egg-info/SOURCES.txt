@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.py
+RPQ_pytorch.egg-info/PKG-INFO
+RPQ_pytorch.egg-info/SOURCES.txt
+RPQ_pytorch.egg-info/dependency_links.txt
+RPQ_pytorch.egg-info/requires.txt
+RPQ_pytorch.egg-info/top_level.txt
+rpq/__init__.py
+rpq/nn.py
+rpq/utils.py
+rpq/models/__init__.py
+rpq/models/rpqopt.py
+rpq/models/rpqopt_sc.py
+rpq/models/rpqvit.py
+rpq/models/rpqvit_sc.py

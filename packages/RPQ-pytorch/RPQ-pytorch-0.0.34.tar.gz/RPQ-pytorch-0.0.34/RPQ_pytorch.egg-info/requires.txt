@@ -1,0 +1,4 @@
+torch>=1.6
+einops>=0.6
+transformers>=4.0
+vit-pytorch>=0.40
