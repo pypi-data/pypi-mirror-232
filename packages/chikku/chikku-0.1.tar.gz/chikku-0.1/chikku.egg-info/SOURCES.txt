@@ -1,0 +1,10 @@
+README.md
+setup.py
+chikku/__init__.py
+chikku/chikku.py
+chikku.egg-info/PKG-INFO
+chikku.egg-info/SOURCES.txt
+chikku.egg-info/dependency_links.txt
+chikku.egg-info/entry_points.txt
+chikku.egg-info/requires.txt
+chikku.egg-info/top_level.txt
