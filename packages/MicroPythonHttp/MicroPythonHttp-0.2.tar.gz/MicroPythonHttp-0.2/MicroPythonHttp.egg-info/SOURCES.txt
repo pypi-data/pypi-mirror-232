@@ -1,0 +1,11 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+MicroPythonHttp/__init__.py
+MicroPythonHttp/server.py
+MicroPythonHttp.egg-info/PKG-INFO
+MicroPythonHttp.egg-info/SOURCES.txt
+MicroPythonHttp.egg-info/dependency_links.txt
+MicroPythonHttp.egg-info/requires.txt
+MicroPythonHttp.egg-info/top_level.txt
