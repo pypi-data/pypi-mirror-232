@@ -1,0 +1,6 @@
+matplotlib>=3.5.2
+networkx>=2.8.4
+
+[:platform_system == "Windows"]
+requests>=2.28.0
+py-dss-interface>=2.0.2
