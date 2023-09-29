@@ -1,0 +1,6 @@
+sympy
+black
+nrpylatex
+appdirs
+multiprocess
+py-cpuinfo
