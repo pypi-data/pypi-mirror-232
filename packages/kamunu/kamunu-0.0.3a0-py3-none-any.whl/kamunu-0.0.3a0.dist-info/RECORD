@@ -1,0 +1,16 @@
+kamunu/Kamunu.py,sha256=cfN9x7ucBt30vW1qt-6R7F7VZu_tCre8-2M7oFPUBok,19458
+kamunu/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+kamunu/_version.py,sha256=B2UuY8FtmNrU2g-gXNKrmPcy0a0P7GTzcAgeMDJXp0I,87
+kamunu/cat_scrapper.py,sha256=HMG4o8oblzghtgrdB3Vo37Pcj3L8CRvQxwiNF-8MbHY,7696
+kamunu/db.py,sha256=kVUvuvwq3x0jECxRwrZe1iSf9BM4EP8w_W94xb1a5fM,496
+kamunu/enrichment.py,sha256=cni1QKL4Fv-9UbqCeXR6F2JsTOibEL_lJvwjwpye3Y0,6072
+kamunu/extract_data.py,sha256=Ixl5OVNgrGj7fYmhnOmR52XelYjemiNLoOx2N5pna_8,3282
+kamunu/id_input.py,sha256=jdtbjuixvEpp2DlB6YQPJZUqsdRUwJHYgMp_l2-qd7c,1328
+kamunu/kamunu_main.py,sha256=sP3SNxpuzhYhwO6MAGCg3uucHPLfYkuFrXFgqsUWG44,9836
+kamunu/local_search.py,sha256=Bh3v55kDxzozr9Wnq71KD-FllBjLezjh_y0kB0138Mk,8659
+kamunu/utils/wiki_ids.py,sha256=0wpy0FJv4NB1Ne4iomwxg3GlTat8Y6QrkMBxNPsHD94,3538
+kamunu-0.0.3a0.data/scripts/kamunu_run,sha256=vO2d6hNP7Af40a-09JKyrNN7W6xmpl6ro1nuhL475so,1193
+kamunu-0.0.3a0.dist-info/METADATA,sha256=C1vxwINfQ4o5NZH9NTz7qkT3uvuMtJtsfxVz8kcX1A4,1466
+kamunu-0.0.3a0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+kamunu-0.0.3a0.dist-info/top_level.txt,sha256=4_01KkMkPIabTKkhkF-i01zTiyNbv-ik0JNrFZ_Vc98,7
+kamunu-0.0.3a0.dist-info/RECORD,,
