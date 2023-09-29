@@ -1,0 +1,96 @@
+[build-system]
+requires = ["setuptools>=64", "setuptools_scm[toml]>=3.4"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sigal"
+description = "Simple static gallery generator"
+readme = "README.rst"
+authors = [{name = "Simon Conseil", email = "contact@saimon.org"}]
+keywords = ["gallery", "static", "generator", "image", "video", "galleria"]
+license = {text = "MIT License"}
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Internet :: WWW/HTTP",
+    "Topic :: Multimedia :: Graphics :: Viewers",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+requires-python = ">=3.8"
+dependencies = [
+    "blinker",
+    "click",
+    "Jinja2>=2.7",
+    "Markdown",
+    "Pillow>=8.0.0",
+    "pilkit",
+    "natsort",
+]
+dynamic = ["version"]
+
+[project.optional-dependencies]
+all = ["boto", "brotli", "feedgenerator", "zopfli", "cryptography"]
+tests = ["pytest", "pytest-cov"]
+docs = ["Sphinx>=4.1.0", "alabaster", "cryptography"]
+
+[project.scripts]
+sigal = "sigal.__main__:main"
+
+[project.urls]
+repository = "https://github.com/saimn/sigal"
+documentation = "http://sigal.saimon.org/en/latest/"
+
+[tool.setuptools]
+include-package-data = true
+license-files = ["LICENSE"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+namespaces = true
+
+[tool.setuptools_scm]
+write_to = "src/sigal/version.py"
+
+[tool.black]
+line-length = 88
+target-version = ['py38']
+
+[tool.ruff]
+target-version = "py38"
+select = [
+  "E", "F", "W", # flake8
+  "I",           # isort
+  "UP",          # pyupgrade
+]
+ignore = ["E731"]
+unfixable = [
+  "F841", # Removes unused variables
+]
+
+[tool.ruff.isort]
+known-first-party = ["sigal"]
+
+[tool.coverage.run]
+source = ["sigal"]
+omit = ["/tmp/*", "tests/*"]
+
+[tool.coverage.paths]
+source = ["src", "*/site-packages"]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "if __name__ == .__main__.:",
+    "except KeyboardInterrupt",
+    "except ImportError",
+]
