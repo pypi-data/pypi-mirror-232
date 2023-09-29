@@ -1,0 +1,27 @@
+from typing import List
+
+from ......Internal.Core import Core
+from ......Internal.CommandsGroup import CommandsGroup
+from ......Internal.Types import DataType
+from ......Internal.ArgSingleList import ArgSingleList
+from ......Internal.ArgSingle import ArgSingle
+
+
+# noinspection PyPep8Naming,PyAttributeOutsideInit,SpellCheckingInspection
+class RxCls:
+	"""Rx commands group definition. 1 total commands, 0 Subgroups, 1 group commands"""
+
+	def __init__(self, core: Core, parent):
+		self._core = core
+		self._cmd_group = CommandsGroup("rx", core, parent)
+
+	def set(self, name_signal_path: str, correction_table: List[str]) -> None:
+		"""SCPI: ADD:TENVironment:SPATh:CTABle:RX \n
+		Snippet: driver.add.tenvironment.spath.correctionTable.rx.set(name_signal_path = '1', correction_table = ['1', '2', '3']) \n
+		Assigns one or more correction tables to the TX direction or RX direction of a signal path. If there is an existing
+		assignment, the old assignment is kept and the new assignment is added. \n
+			:param name_signal_path: Name of the signal path
+			:param correction_table: At least one name of a correction table. To assign several tables, use a comma-separated list of strings.
+		"""
+		param = ArgSingleList().compose_cmd_string(ArgSingle('name_signal_path', name_signal_path, DataType.String), ArgSingle.as_open_list('correction_table', correction_table, DataType.StringList, None))
+		self._core.io.write(f'ADD:TENVironment:SPATh:CTABle:RX {param}'.rstrip())
