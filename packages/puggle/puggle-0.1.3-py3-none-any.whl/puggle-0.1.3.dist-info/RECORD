@@ -1,0 +1,11 @@
+puggle/__init__.py,sha256=GfDdRuN5PTOomSv3mX8kGlHv32IBwtCIWJ-76LfmxF4,98
+puggle/Annotation.py,sha256=MaCljirQemRcZsrZbGiJd7L_sKOZjsSpQXS3gd-ZrXY,7773
+puggle/Dataset.py,sha256=RmLmDHStmQNV_Au-GLEImVkh2zfNHYJhYQtYh2VN64M,9705
+puggle/Document.py,sha256=N5FhKnSO0jgUEQsh3O73wfEgYjJ7oZlwIFEzGrLDu04,1735
+puggle/Mention.py,sha256=qYmol3hcOv-LCryOEvhpTpWnmFatjgq9ZDmWl0wgAzk,1196
+puggle/Relation.py,sha256=58uXXvg6EiLdR9_W58fcYt9OuYRHWPIvtLUc2GolhOg,1163
+puggle/size_limits.py,sha256=HU-raXlrorYSz-xtksN8L5j0MgQ_EGaVMqNm7RToTAM,269
+puggle/utils.py,sha256=2UJEFOF4lOmph2M7PYO7e-wEhNEaorkh5dKOW08DFtk,1852
+puggle-0.1.3.dist-info/METADATA,sha256=92_ZVvjS7d06evREEgyc7bdz8ebrqUfOuC74-8U9-ZQ,9223
+puggle-0.1.3.dist-info/WHEEL,sha256=Zb28QaM1gQi8f4VCBhsUklF61CTlNYfs9YAZn-TOGFk,88
+puggle-0.1.3.dist-info/RECORD,,
