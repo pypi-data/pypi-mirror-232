@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+lionpm.egg-info/PKG-INFO
+lionpm.egg-info/SOURCES.txt
+lionpm.egg-info/dependency_links.txt
+lionpm.egg-info/requires.txt
+lionpm.egg-info/top_level.txt
+pypluginmanager/__init__.py
