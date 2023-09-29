@@ -1,0 +1,80 @@
+Metadata-Version: 2.1
+Name: reaxpro-workflow-service
+Version: 2.0.0
+Summary: A package running semantically enriched workflows with SimPhoNy and Celery
+Author: Matthias Büschelberger, Kiran Kumaraswamy
+Author-email: matthias.bueschelberger@iwm.fraunhofer.de
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+License-File: LICENSE
+Requires-Dist: shieldapi>=1.0.0
+Requires-Dist: celery<6,>=5.2.3
+Requires-Dist: fastapi-plugins~=0.11.0
+Requires-Dist: osp-core<4,>=3.8.0
+Requires-Dist: fastapi==0.92.0
+Requires-Dist: python-multipart
+Requires-Dist: httpx>=0.23.3
+Requires-Dist: minio>=7.1.15
+Requires-Dist: uvicorn
+Requires-Dist: typing-extensions
+Requires-Dist: click
+Requires-Dist: boto3
+Requires-Dist: arcp
+Provides-Extra: dev
+Requires-Dist: bumpver==2021.1114; extra == "dev"
+Requires-Dist: dunamai==1.7.0; extra == "dev"
+Provides-Extra: pre-commit
+Requires-Dist: pre-commit==2.15.0; extra == "pre-commit"
+Requires-Dist: pylint; extra == "pre-commit"
+Provides-Extra: tests
+Requires-Dist: pytest==6.2.5; extra == "tests"
+Requires-Dist: pytest-celery; extra == "tests"
+Requires-Dist: pytest-mock; extra == "tests"
+Provides-Extra: wrappers
+Requires-Dist: simphony-catalytic>=1.2.0; extra == "wrappers"
+
+# ReaxPro Workflow Service
+
+A simple [FastAPI-framework](https://fastapi.tiangolo.com/) for running asynchronous tasks through [python-celery](https://pypi.org/project/celery/). This app is targeted to be a high-level API for the workflow-orchestration of the [ReaxPro-platform](https://www.reaxpro.eu/).
+
+## Authors
+
+[Matthias Büschelberger](mailto:matthias.bueschelberger@iwm.fraunhofer.de) (Fraunhofer Institute for Mechanics of Materials IWM)
+[Kiran Kumaraswamy](mailto:kiran.kumaraswamy@iwm.fraunhofer.de) (Fraunhofer Institute for Mechanics of Materials IWM)
+
+## Documentation
+
+Please refer to the [ReadTheDocs-pages](https://reaxpro.pages.fraunhofer.de/docs/) for the overall installation procedure, tutorials and use case documentation.
+
+## Python dependencies
+
+First of all, you will need to install OSP-core
+
+```shell
+(env) user@computer:~$ pip install osp-core
+```
+
+Then, install the wrapper. Simply type:
+
+```shell
+(env) user@computer:~$ pip install reaxpro-workflow-service
+```
+
+... or if you are installing from source (cloning of the repository needed before):
+
+
+```shell
+(env) user@computer:~/reaxpro-workflow-service$ pip install .
+```
+
+## License
+
+This project is licensed under the BSD 3-Clause. See the LICENSE file for more information.
+
+## Disclaimer
+
+Copyright (c) 2014-2023, Fraunhofer-Gesellschaft zur Förderung der angewandten Forschung e.V. acting on behalf of its Fraunhofer IWM.
+
+Contact: [SimPhoNy](mailto:simphony@iwm.fraunhofer.de)
