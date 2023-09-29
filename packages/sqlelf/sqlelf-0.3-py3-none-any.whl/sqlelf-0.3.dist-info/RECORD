@@ -1,0 +1,13 @@
+sqlelf/__init__.py,sha256=Ic_jDlX8Ywy1hpEgDj13iIQnc8e7j2623cLuIgHwXMU,324
+sqlelf/__main__.py,sha256=T9VLUt50I892D57FUJgV16quA6SVRbDSatGBkWLLBpU,62
+sqlelf/_version.py,sha256=DvHhu7jVvX3mKGaRicASBqZQsuJhmccCLj30qO4Ziro,269
+sqlelf/cli.py,sha256=O7KFfkk3lXW-r-z9ZFIoBwrffc-OAHE4DypMlb9GZB4,2377
+sqlelf/elf.py,sha256=7RXsxqViaoOy3cv0ozV3EPLdH8r3kY0Sfceyqd0B7uo,17689
+sqlelf/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sqlelf/sql.py,sha256=pVQa12IK-vGvHtotYzdPXmWAioDGVvI7Y7rcEuqbP2Q,3699
+sqlelf-0.3.dist-info/LICENSE,sha256=24M2W6zTVSyTN6y3DV6W6cfhZna_vXNtpScHifj_0_4,1070
+sqlelf-0.3.dist-info/METADATA,sha256=C6XFW8NgdLoCCMGcBn05sxvE1IFebMtl0KGUjtI57Ak,24219
+sqlelf-0.3.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+sqlelf-0.3.dist-info/entry_points.txt,sha256=hQ97JYaOFAPyeXpKsBRGec1mqqr42JvBRjwgxj1rGP8,44
+sqlelf-0.3.dist-info/top_level.txt,sha256=rbbBdYo32Ci3LR8spuxLEnj33onGEMEpD2vQOoCV88w,7
+sqlelf-0.3.dist-info/RECORD,,
