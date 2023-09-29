@@ -1,0 +1,12 @@
+attr
+gunicorn
+flask_gordon~=0.20.0
+connexion[flask,swagger-ui]<3.0.0,>=2.14.2
+flask~=2.2.0
+werkzeug~=2.2.0
+dash
+dash_bootstrap_components
+
+[celery]
+celery
+redis
