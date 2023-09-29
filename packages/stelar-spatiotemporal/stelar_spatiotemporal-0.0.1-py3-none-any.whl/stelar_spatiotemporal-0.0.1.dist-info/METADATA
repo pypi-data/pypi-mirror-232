@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: stelar-spatiotemporal
+Version: 0.0.1
+Summary: Spatiotemporal data processing for the STELAR project
+Home-page: UNKNOWN
+Author: Jens d'Hondt
+Author-email: j.e.d.hondt@tue.nl
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+License-File: LICENSE
+Requires-Dist: pystac
+Requires-Dist: pystac-client
+Requires-Dist: shapely
+Requires-Dist: opencv-python
+Requires-Dist: numpy
+Requires-Dist: sentinelhub
+Requires-Dist: pandas
+Requires-Dist: rasterio
+Requires-Dist: geopandas >=0.8.1
+Requires-Dist: decorator
+Requires-Dist: scikit-image
+Requires-Dist: fs
+Requires-Dist: fs-s3fs
+Requires-Dist: tqdm
+Requires-Dist: boto3
+Requires-Dist: matplotlib
+
+This package is part of the EU STELAR project and provides tools for processing spatiotemporal data. The package includes functionality for field delineation (i.e., segmentation) of satellite images, extracting LAI timseries out of the images, and interpolating cloud covers, among others.
+
