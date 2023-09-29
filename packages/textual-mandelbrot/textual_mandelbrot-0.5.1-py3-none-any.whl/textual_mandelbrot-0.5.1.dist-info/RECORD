@@ -1,0 +1,9 @@
+textual_mandelbrot/__init__.py,sha256=hkleD_-dWgpTXktPcHKNHOXykJtPWJLc9PStyJm98OY,782
+textual_mandelbrot/__main__.py,sha256=pkMgbomqwukpCkGO8o6-2MaEXT8kG-F62HMWDY0r7a8,4737
+textual_mandelbrot/colouring.py,sha256=YSM8y6tq_rcbzvGCMdIA7tVWiXN9retEQLk5q0Kw5Rk,2082
+textual_mandelbrot/mandelbrot.py,sha256=Fdkkto94s9TN5vipRWIA2hGp0Ckyxfu75SkdzEPYMB8,12362
+textual_mandelbrot-0.5.1.dist-info/METADATA,sha256=nC8ng9Hqu2_Td-PPXOjkHnc4cuGQCkR_8UWHp7vbmyo,4201
+textual_mandelbrot-0.5.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+textual_mandelbrot-0.5.1.dist-info/entry_points.txt,sha256=ImTrqm24RSWdZlFEIaUm-3GmQ0e7tbp9lfUa6MryQ8Q,63
+textual_mandelbrot-0.5.1.dist-info/top_level.txt,sha256=0UZylDJ02xdTPvAncyTvP2OOM8mA0htH1U83e5BIKWQ,19
+textual_mandelbrot-0.5.1.dist-info/RECORD,,
