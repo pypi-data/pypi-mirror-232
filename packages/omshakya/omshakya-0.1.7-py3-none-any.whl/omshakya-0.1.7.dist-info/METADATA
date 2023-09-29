@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: omshakya
+Version: 0.1.7
+Summary: A python package named as "omshakya", it is providing most used generic python code utilities. This package modularize re-usable code and exposes as utility functions and the developer can focus on the main business logics.
+Author-email: om shakya <ommshakya@gmail.com>
+Project-URL: Homepage, https://www.linkedin.com/company/omshakya-a-python-package/?viewAsMember=true
+Project-URL: Bug Tracker, https://www.linkedin.com/company/omshakya-a-python-package/?viewAsMember=true
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.1
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+A python package named as "omshakya", it providing most used generic python code utilities.
