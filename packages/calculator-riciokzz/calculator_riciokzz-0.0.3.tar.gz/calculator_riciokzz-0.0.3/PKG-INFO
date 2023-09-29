@@ -1,0 +1,118 @@
+Metadata-Version: 2.1
+Name: calculator_riciokzz
+Version: 0.0.3
+Summary: A calculator which can perform simple algebra.
+Author-email: Ričardas Poskrebyševas <ricardas.poskrebysev@gmail.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+
+# Calculator Package
+
+The "*Calculator*" package is simple 
+calculator with functions that able 
+to perform these actions:
+- [Addition](#addition)
+- [Subtraction](#subtraction)
+- [Multiplication](#multiplication)
+- [Division](#division)
+- [Take (n) root of a number](#root)
+- [Reset memory](#reset)
+
+## Installation
+
+You can install this package using pip:
+
+```commandline
+pip install -i https://test.pypi.org/simple/ calculator-riciokzz
+```
+
+## Usage
+After package installation you need to import Calculator 
+from calculator_riciokzz.calculator.
+
+```commandline
+from calculator_riciokzz.calculator import Calculator
+```
+
+Calculator 
+have **six** main functions which can perform actions 
+with value inside **memory**. 
+- add
+- sub
+- multi
+- div
+- root
+- reset_memory
+
+Create an instance for calculator and you are ready for some calculations.
+```commandline
+calc = Calculator()
+```
+
+### Functions usage examples:
+
+#### Addition
+calc.add(3) - will add 3 to memory and print Memory: 3.000.
+```
+calc.add(3)
+Memory: 3.000
+```
+
+#### Subtraction
+calc.sub(1) - will subtract 1 from memory and print Memory: 2.000.
+```
+Memory: 3.000
+calc.sub(1)
+Memory: 2.000
+```
+
+#### Multiplication
+calc.multi(3) - will multiply memory by 3 and print Memory: 9.000.
+```
+Memory: 3.000
+calc.multi(3)
+Memory: 9.000
+```
+
+#### Division
+calc.div(3) - will divide memory by 3 and print Memory: 3.000.
+```
+Memory: 9.000
+calc.add(3)
+Memory: 3.000
+```
+
+#### Root
+calc.root(2) - will take (2) root of memory and print Memory: 3.000.
+```
+Memory: 9.000
+calc.root(2)
+Memory: 3.000
+```
+
+#### Reset
+calc.reset_memory() - will clear memory and set it to default 0.
+```
+Memory: 3.000
+calc.reset_memory()
+Memory: 0.000
+```
+
+## Testing
+
+Testing with unittest, pyflakes and mypy show no warnings or errors.
+```commandline
+============================== 2 passed in 0.02s ==============================
+```
+```commandline
+Success: no issues found in 1 source file
+```
+
+## License
+
+This project is licensed under the MIT License - 
+see the **LICENSE** file for details.

@@ -1,0 +1,18 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "calculator_riciokzz"
+version = "0.0.3"
+authors = [
+  { name="Ričardas Poskrebyševas", email="ricardas.poskrebysev@gmail.com" },
+]
+description = "A calculator which can perform simple algebra."
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: Microsoft :: Windows :: Windows 10",
+]
