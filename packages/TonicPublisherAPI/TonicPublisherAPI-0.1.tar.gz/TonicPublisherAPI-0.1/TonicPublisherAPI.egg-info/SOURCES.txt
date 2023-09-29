@@ -1,0 +1,8 @@
+README.md
+setup.py
+TonicPublisher/__init__.py
+TonicPublisherAPI.egg-info/PKG-INFO
+TonicPublisherAPI.egg-info/SOURCES.txt
+TonicPublisherAPI.egg-info/dependency_links.txt
+TonicPublisherAPI.egg-info/requires.txt
+TonicPublisherAPI.egg-info/top_level.txt
