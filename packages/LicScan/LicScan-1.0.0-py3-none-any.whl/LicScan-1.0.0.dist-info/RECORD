@@ -1,0 +1,10 @@
+licscan/__init__.py,sha256=c8HJUvoH2mLg9OKs77mvJAaql4XuPaPcgnNIA7FVyyA,198
+licscan/default_lic_list.py,sha256=_lXoXweKG5Jvk9COquacYULlp2KQSIE4BX14-yPNCmc,305
+licscan/main.py,sha256=A4pG-M6Gf-T4UbJp0pTq0msguwKzDAeZnvF3_w4lrwk,2457
+licscan/unthreaded.py,sha256=XKh84Wx8MgqfTVrMgVm6dvVlk-0Dj4eN54rmHuWG6I0,2308
+LicScan-1.0.0.dist-info/LICENSE,sha256=1vm483PFDMUaN37pmV7ec1I6mZX-urWefgRDKzyAHno,4397
+LicScan-1.0.0.dist-info/METADATA,sha256=nSxW_lcqRvjcW3EQIYELDEBWFReYPoLqLYPDWPSzPoE,1070
+LicScan-1.0.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+LicScan-1.0.0.dist-info/entry_points.txt,sha256=hfrmq7J9d9k_VORIpkKGBpwl23P9xmXEVa7-Dfaj7PE,46
+LicScan-1.0.0.dist-info/top_level.txt,sha256=Kx7LQBIcNlTMJM0icvIVOKHFNvyg2r6nOMy6lEwzCNk,8
+LicScan-1.0.0.dist-info/RECORD,,

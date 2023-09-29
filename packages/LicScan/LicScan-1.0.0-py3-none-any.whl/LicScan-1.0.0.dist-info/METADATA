@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: LicScan
+Version: 1.0.0
+Summary: Check your requirements to make sure your requirements have the correct licenses.
+Home-page: https://github.com/fakerybakery/licscan
+Author: GitHub @fakerybakery
+Author-email: me@mrfake.name
+License: NOSCL-C-2.0 - Copyright (c) 2023 mrfakename. All rights reserved. Please read the full NOSCL-C-2.0 license, available at: https://github.com/fakerybakery/licscan
+Platform: Any
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requirements-parser
+Requires-Dist: tqdm
+
+# LicScan
+
+A python package to check the licenses of your dependencies. Automate your license compliance! Fast, free, and open-sourced!
+
+## Install
+
+```
+pip install licscan
+```
+
+## Usage
+
+Use the default list of licenses:
+
+```bash
+licscan -f requirements.txt
+```
+
+Or a custom list:
+
+```bash
+licscan -f requirements.txt -a MIT ISC Apache
+```
+
+## License
+
+NOSCL-C-2.0, a permissive copyleft license.
