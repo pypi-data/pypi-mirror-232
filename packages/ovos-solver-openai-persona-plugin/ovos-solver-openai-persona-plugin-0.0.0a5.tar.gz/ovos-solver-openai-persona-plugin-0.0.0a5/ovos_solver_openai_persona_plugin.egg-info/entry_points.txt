@@ -1,0 +1,3 @@
+[neon.plugin.solver]
+ovos-solver-openai-persona-plugin=ovos_solver_openai_persona:OpenAIPersonaSolver
+
