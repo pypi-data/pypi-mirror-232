@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: clipman
+Version: 1.0.1
+Summary: Python3 module for working with clipboard. Currently read-only interaction. Created because pyperclip is discontinued.
+Author-email: NikitaBeloglazov <nnikita.beloglazov@gmail.com>
+License: MPL 2.0 License
+Project-URL: Homepage, https://github.com/NikitaBeloglazov/clipman
+Project-URL: Bug Tracker, https://github.com/NikitaBeloglazov/clipman/issues
+Keywords: clipman,clipboard,copy,paste,xclip
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
