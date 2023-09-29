@@ -1,0 +1,14 @@
+latloncover/CDL_subcategories.csv,sha256=wZd9D8X0SjhSnJsR-LqshGZCuI2mXuxPoaI9eNPP1PA,4033
+latloncover/LatLonConv.py,sha256=IFSvVlC1U_bufHRJyKyDWRc8c6DTPxq4RvNKm1eI9rY,1363
+latloncover/__init__.py,sha256=h_Xn3dIeVWct71A-NduAeU12cGZnWP75L22NHQ-tp2g,129
+latloncover/classify.py,sha256=RETHbppsfj8lR4A009idqDnRmxj6Q_gJ7M9ORHgTjIo,3720
+latloncover/main.py,sha256=_qqhBNyHQGP5gF-lp2US-uJgirQVGNOa0UeX1pgJUQU,895
+latloncover/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+latloncover/tests/test_LatLonConv.py,sha256=MnqJq42ltEaTsBJEEYT55KfN6TFvhdVwnkhYZqcVQlM,731
+latloncover/tests/test_classify.py,sha256=3KOI0BYqkPy1Ferh71MH_CDM5kr6TvtvBSiX0zjDJf0,2718
+latloncover-0.1.0.dist-info/LICENSE,sha256=j_5pRi3n3pwhG9ns2U-qMwn1lpTEO_96pJBkv8tyTg8,1077
+latloncover-0.1.0.dist-info/METADATA,sha256=NCcAXU8aw8jaQZnOJlMir8UNCSxL_m0jIWGZ4RWTzMg,10376
+latloncover-0.1.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+latloncover-0.1.0.dist-info/entry_points.txt,sha256=tee5M_4C1Xsk2nHnRDcqlBzWnJrvl5Si6mx4Kdblxmk,54
+latloncover-0.1.0.dist-info/top_level.txt,sha256=Xoy9m88l3SzUNbc5-E2MMaTvs5sEpY2oSzso7Nz-yyg,12
+latloncover-0.1.0.dist-info/RECORD,,
