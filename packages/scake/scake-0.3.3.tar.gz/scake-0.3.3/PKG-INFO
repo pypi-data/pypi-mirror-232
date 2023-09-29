@@ -1,0 +1,72 @@
+Metadata-Version: 2.1
+Name: scake
+Version: 0.3.3
+Summary: A flexible framework for Python
+Home-page: https://github.com/kyzas/scake
+Download-URL: https://github.com/kyzas/scake/tarball/master
+Author: kyzas
+Author-email: kyznano@gmail.com
+Maintainer: kyzas
+Maintainer-email: kyznano@gmail.com
+License: MIT
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: Implementation
+Requires-Python: <4,>=3.5
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+<img src='https://img.shields.io/pypi/l/scake.svg'> <img src='https://img.shields.io/pypi/v/scake.svg'> <img src='https://codecov.io/gh/kyzas/scake/branch/master/graph/badge.svg'> <img src='https://img.shields.io/pypi/dm/scake.svg'> <img src='https://img.shields.io/pypi/pyversions/scake.svg'> <img src='https://img.shields.io/badge/code%20style-black-000000.svg'>
+
+# scake
+A flexible framework for Python
+
+# NOTE
+
+Scake version from v0.3.0+ is not compatible to older version (v0.2.4-). Accepted annotation of Scake has the following format:
+
+```
+a:
+    b: 10
+c: /a/b         # 10
+
+instead of this in the older Scake version:
+
+a:
+    b: 10
+c: =/a/b         # 10
+```
+
+# USAGE
+
+Update later
+
+# CONTRIBUTING
+
+* Step 1. Fork on **master** branch.
+* Step 2. Install **pre-commit** on the local dev environment.
+
+```
+pip install pre-commit
+pre-commit install
+#pre-commit autoupdate
+```
+
+* Step 3. Write test case(s) for the new feature or the bug.
+* Step 4. Write code to pass the tests.
+* Step 5. Make sure that the new code passes all the pre-commmit conditions.
+
+```
+pre-commit run -a
+```
+
+* Step 6. Create pull request.

@@ -1,0 +1,2 @@
+plazy>=0.1.6
+omegaconf
