@@ -1,0 +1,2 @@
+[console_scripts]
+kuberos = kuberoscli.kuberoscli:main
