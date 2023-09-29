@@ -1,0 +1,8 @@
+mgqa/__init__.py,sha256=BK6WHySTXcfdDSbass7NpHyonLv3hqvcqLmm3lcOq1Y,129
+mgqa/attention.py,sha256=_9W6YO3oGiZwNxCuklC3jF2hMLNrSnW9C1nW63Gym-E,54967
+mgqa/mgqa_triton.py,sha256=HG0bUtDpamWfHzGdpMqmK0O3FeWWsUeXb9TT5Q6qVeo,11620
+mgqa/transformer.py,sha256=rOS4Q2gg7X9f8MX3R_VHiYQozn1hKOobBZSP6uEXtVg,6964
+mgqa-0.0.5.dist-info/LICENSE,sha256=GHYD0Vn7cqu6O1FibXB1ix_cx8js09uZI1rKjCjW5sY,1074
+mgqa-0.0.5.dist-info/WHEEL,sha256=vVCvjcmxuUltf8cYhJ0sJMRDLr1XsPuxEId8YDzbyCY,88
+mgqa-0.0.5.dist-info/METADATA,sha256=NcAKAPHp7_BhPRN0fKHso7ntK1HwjijONDgUEtOxmpc,13994
+mgqa-0.0.5.dist-info/RECORD,,
