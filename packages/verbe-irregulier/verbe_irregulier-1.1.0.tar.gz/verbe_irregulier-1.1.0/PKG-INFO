@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: verbe_irregulier
+Version: 1.1.0
+Summary: Programme de revision des verbe irregulier
+Author-email: Timecraft122 <timecraft122@gmail.com>
+Project-URL: Homepage, https://example.com
+Keywords: verbe_irregulier
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.0
+Description-Content-Type: text/x-rst
+
+=================
+Verbe irregulier
+=================
+------------------------------------------------
+Un programme pour apprendre les verbe irregulier
+------------------------------------------------
+
+Instalation
+============
+
+a venir
