@@ -1,0 +1,216 @@
+Metadata-Version: 2.1
+Name: promptflow
+Version: 0.1.0b7.post1
+Summary: Prompt flow Python SDK - build high-quality LLM apps
+Home-page: https://github.com/microsoft/promptflow
+Author: Microsoft Corporation
+Author-email: aml-pt-eng@microsoft.com
+License: MIT License
+Project-URL: Bug Reports, https://github.com/microsoft/promptflow/issues
+Project-URL: Source, https://github.com/microsoft/promptflow
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: <4.0,>=3.8
+Description-Content-Type: text/markdown
+License-File: NOTICE.txt
+Requires-Dist: psutil
+Requires-Dist: openai <0.28.0,>=0.27.8
+Requires-Dist: flask <3.0.0,>=2.2.3
+Requires-Dist: dataset <2.0.0,>=1.6.0
+Requires-Dist: sqlalchemy <2.0.0,>=1.4.48
+Requires-Dist: pandas <3.0.0,>=1.5.3
+Requires-Dist: python-dotenv <2.0.0,>=1.0.0
+Requires-Dist: keyring <25.0.0,>=24.2.0
+Requires-Dist: pydash <6.0.0,>=5.1.2
+Requires-Dist: cryptography <42.0.0,>=41.0.3
+Requires-Dist: colorama <0.5.0,>=0.4.6
+Requires-Dist: tabulate <1.0.0,>=0.9.0
+Requires-Dist: filelock <4.0.0,>=3.4.0
+Requires-Dist: marshmallow <4.0.0,>=3.5
+Requires-Dist: pyyaml <7.0.0,>=5.1.0
+Requires-Dist: gitpython <4.0.0,>=3.1.24
+Requires-Dist: tiktoken >=0.4.0
+Requires-Dist: strictyaml <2.0.0,>=1.5.0
+Requires-Dist: waitress <3.0.0,>=2.1.2
+Requires-Dist: opencensus-ext-azure <2.0.0
+Provides-Extra: azure
+Requires-Dist: azure-core <2.0.0,>=1.26.4 ; extra == 'azure'
+Requires-Dist: azure-storage-blob <13.0.0,>=12.13.0 ; extra == 'azure'
+Requires-Dist: azure-identity <2.0.0,>=1.12.0 ; extra == 'azure'
+Requires-Dist: azure-ai-ml <2.0.0,>=1.9.0 ; extra == 'azure'
+Requires-Dist: pyjwt <3.0.0,>=2.4.0 ; extra == 'azure'
+
+
+# Prompt flow
+
+[![Python package](https://img.shields.io/pypi/v/promptflow)](https://pypi.org/project/promptflow/)
+[![Python](https://img.shields.io/pypi/pyversions/promptflow.svg?maxAge=2592000)](https://pypi.python.org/pypi/promptflow/) 
+[![PyPI - Downloads](https://img.shields.io/pypi/dm/promptflow)](https://pypi.org/project/promptflow/)
+[![CLI](https://img.shields.io/badge/CLI-reference-blue)](https://microsoft.github.io/promptflow/reference/pf-command-reference.html)
+[![vsc extension](https://img.shields.io/visual-studio-marketplace/i/prompt-flow.prompt-flow?logo=Visual%20Studio&label=Extension%20)](https://marketplace.visualstudio.com/items?itemName=prompt-flow.prompt-flow)
+
+[![Doc](https://img.shields.io/badge/Doc-online-green)](https://microsoft.github.io/promptflow/index.html)
+[![Issue](https://img.shields.io/github/issues/microsoft/promptflow)](https://github.com/microsoft/promptflow/issues/new/choose)
+[![Discussions](https://img.shields.io/github/discussions/microsoft/promptflow)](https://github.com/microsoft/promptflow/issues/new/choose)
+[![CONTRIBUTING](https://img.shields.io/badge/Contributing-8A2BE2)](https://github.com/microsoft/promptflow/blob/main/CONTRIBUTING.md)
+[![License: MIT](https://img.shields.io/github/license/microsoft/promptflow)](https://github.com/microsoft/promptflow/blob/main/LICENSE)
+
+> Welcome to join us to make Prompt flow better by
+> participating [discussions](https://github.com/microsoft/promptflow/discussions),
+> opening [issues](https://github.com/microsoft/promptflow/issues/new/choose),
+> submitting [PRs](https://github.com/microsoft/promptflow/pulls).
+
+**Prompt flow** is a suite of development tools designed to streamline the end-to-end development cycle of LLM-based AI applications, from ideation, prototyping, testing, evaluation to production deployment and monitoring. It makes prompt engineering much easier and enables you to build LLM apps with production quality.
+
+With prompt flow, you will be able to:
+
+- **Create and iteratively develop flow**
+    - Create executable [flows](https://microsoft.github.io/promptflow/concepts/concept-flows.html) that link LLMs, prompts, Python code and other [tools](https://microsoft.github.io/promptflow/concepts/concept-tools.html) together.
+    - Debug and iterate your flows, especially the [interaction with LLMs](https://microsoft.github.io/promptflow/concepts/concept-connections.html) with ease.
+- **Evaluate flow quality and performance**
+    - Evaluate your flow's quality and performance with larger datasets.
+    - Integrate the testing and evaluation into your CI/CD system to ensure quality of your flow.
+- **Streamlined development cycle for production**
+    - Deploy your flow to the serving platform you choose or integrate into your app's code base easily.
+    - (Optional but highly recommended) Collaborate with your team by leveraging the cloud version of [Prompt flow in Azure AI](https://learn.microsoft.com/en-us/azure/machine-learning/prompt-flow/overview-what-is-prompt-flow?view=azureml-api-2).
+
+------
+
+## Installation
+
+Ensure you have a python environment, `python=3.9` is recommended.
+
+```sh
+pip install promptflow promptflow-tools
+```
+
+## Quick Start ⚡
+
+**Create a chatbot with prompt flow**
+
+Run the command to initiate a prompt flow from a chat template, it creates folder named `my_chatbot` and generates required files within it:
+
+```sh
+pf flow init --flow ./my_chatbot --type chat
+```
+
+**Setup a connection for your API key**
+
+For OpenAI key, establish a connection by running the command, using the `openai.yaml` file in the `my_chatbot` folder, which stores your OpenAI key:
+
+```sh
+# Override keys with --set to avoid yaml file changes
+pf connection create --file ./my_chatbot/openai.yaml --set api_key=<your_api_key> --name open_ai_connection
+```
+
+For Azure OpenAI key, establish the connection by running the command, using the `azure_openai.yaml` file:
+
+```sh
+pf connection create --file ./my_chatbot/azure_openai.yaml --set api_key=<your_api_key> api_base=<your_api_base> --name open_ai_connection
+```
+
+**Chat with your flow**
+
+In the `my_chatbot` folder, there's a `flow.dag.yaml` file that outlines the flow, including inputs/outputs, nodes,  connection, and the LLM model, etc
+
+> Note that in the `chat` node, we're using a connection named `open_ai_connection` (specified in `connection` field) and the `gpt-35-turbo` model (specified in `deployment_name` field). The deployment_name filed is to specify the OpenAI model, or the Azure OpenAI deployment resource.
+
+Interact with your chatbot by running: (press `Ctrl + C` to end the session)
+
+```sh
+pf flow test --flow ./my_chatbot --interactive
+```
+
+#### Continue to delve deeper into [Prompt flow](https://github.com/microsoft/promptflow).
+
+
+# Release History
+
+## 0.1.0b7.post1 (2023.09.28)
+
+### Bug Fixed
+- Fix extra dependency bug when importing `promptflow` without `azure-ai-ml` installed.
+
+## 0.1.0b7 (2023.09.27)
+
+### Features Added
+
+- **pf flow validate**: support validate flow
+- **pf config set**: support set user-level promptflow config.
+  - Support workspace connection provider, usage: `pf config set connection.provider=azureml:/subscriptions/<subscription_id>/resourceGroups/<resource_group>/providers/Microsoft.MachineLearningServices/workspaces/<workspace_name>`
+- Support override openai connection's model when submitting a flow. For example: `pf run create --flow ./ --data ./data.jsonl --connection llm.model=xxx`
+
+### Bugs Fixed
+- [Flow build] Fix flow build file name and environment variable name when connection name contains space.
+- Reserve `.promptflow` folder when dump run snapshot.
+- Read/write log file with encoding specified.
+- Avoid inconsistent error message when executor exits abnormally.
+- Align inputs & outputs row number in case partial completed run will break `pfazure run show-details`.
+- Fix bug that failed to parse portal url for run data when the form is an asset id.
+- Fix the issue of process hanging for a long time when running the batch run.
+
+### Improvements
+- [Executor][Internal] Improve error message with more details and actionable information.
+- [SDK/CLI] `pf/pfazure run show-details`:
+  - Add `--max-results` option to control the number of results to display.
+  - Add `--all-results` option to display all results.
+- Add validation for azure `PFClient` constructor in case wrong parameter is passed.
+
+## 0.1.0b6 (2023.09.15)
+
+### Features Added
+
+- [promptflow][Feature] Store token metrics in run properties
+
+### Bugs Fixed
+
+- Refine error message body for flow_validator.py
+- Refine error message body for run_tracker.py
+- [Executor][Internal] Add some unit test to improve code coverage of log/metric
+- [SDK/CLI] Update portal link to remove flight.
+- [Executor][Internal] Improve inputs mapping's error message.
+- [API] Resolve warnings/errors of sphinx build
+
+## 0.1.0b5 (2023.09.08)
+
+### Features Added
+
+- **pf run visualize**: support lineage graph & display name in visualize page
+
+### Bugs Fixed
+
+- Add missing requirement `psutil` in `setup.py`
+
+## 0.1.0b4 (2023.09.04)
+
+### Features added
+
+- Support `pf flow build` commands
+
+## 0.1.0b3 (2023.08.30)
+
+- Minor bug fixes.
+
+## 0.1.0b2 (2023.08.29)
+
+- First preview version with major CLI & SDK features.
+
+### Features added
+
+- **pf flow**: init/test/serve/export
+- **pf run**: create/update/stream/list/show/show-details/show-metrics/visualize/archive/restore/export
+- **pf connection**: create/update/show/list/delete
+- Azure AI support:
+    - **pfazure run**: create/list/stream/show/show-details/show-metrics/visualize
+
+
+## 0.1.0b1 (2023.07.20)
+
+- Stub version in Pypi.
