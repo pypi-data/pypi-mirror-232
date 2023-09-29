@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+src/napari_conference/__init__.py
+src/napari_conference/_widget.py
+src/napari_conference/cli.py
+src/napari_conference/napari.yaml
+src/napari_conference.egg-info/PKG-INFO
+src/napari_conference.egg-info/SOURCES.txt
+src/napari_conference.egg-info/dependency_links.txt
+src/napari_conference.egg-info/entry_points.txt
+src/napari_conference.egg-info/requires.txt
+src/napari_conference.egg-info/top_level.txt
+src/napari_conference/_tests/__init__.py
+src/napari_conference/_tests/test_widget.py
