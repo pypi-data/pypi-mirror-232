@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+hashcracker/__init__.py
+hashcracker/crdt.py
+hashcracker/hashcracker.py
+hashcracker.egg-info/PKG-INFO
+hashcracker.egg-info/SOURCES.txt
+hashcracker.egg-info/dependency_links.txt
+hashcracker.egg-info/entry_points.txt
+hashcracker.egg-info/requires.txt
+hashcracker.egg-info/top_level.txt

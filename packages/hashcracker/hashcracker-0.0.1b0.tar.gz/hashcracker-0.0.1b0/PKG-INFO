@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: hashcracker
+Version: 0.0.1b0
+Summary: A Python tool for analyzing and cracking hashes.
+Home-page: https://github.com/SHAYKHUL/hashcracker
+Author: Md. Shaykhul Islam
+Author-email: shaykhul@2004.com
+License: MIT
+License-File: LICENSE
