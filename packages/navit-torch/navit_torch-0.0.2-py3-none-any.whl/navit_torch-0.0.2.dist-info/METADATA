@@ -1,0 +1,62 @@
+Metadata-Version: 2.1
+Name: navit-torch
+Version: 0.0.2
+Summary: navit - Pytorch
+Home-page: https://github.com/kyegomez/navit
+License: MIT
+Keywords: artificial intelligence,deep learning,optimizers,Prompt Engineering
+Author: Kye Gomez
+Author-email: kye@apac.ai
+Requires-Python: >=3.6,<4.0
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Dist: einops
+Requires-Dist: torch
+Requires-Dist: zetascale
+Project-URL: Repository, https://github.com/kyegomez/navit
+Description-Content-Type: text/markdown
+
+[![Multi-Modality](agorabanner.png)](https://discord.gg/qUtxnK2NMf)
+
+# NaViT
+My implementation of "Patch n’ Pack: NaViT, a Vision Transformer for any Aspect Ratio and Resolution"
+
+[Paper Link](https://arxiv.org/pdf/2307.06304.pdf)
+
+# Appreciation
+* Lucidrains
+* Agorians
+
+# Install
+`pip install na-vit`
+
+# Usage
+
+# Architecture
+
+# Todo
+
+
+# License
+MIT
+
+# Citations
+```
+@misc{2307.06304,
+Author = {Mostafa Dehghani and Basil Mustafa and Josip Djolonga and Jonathan Heek and Matthias Minderer and Mathilde Caron and Andreas Steiner and Joan Puigcerver and Robert Geirhos and Ibrahim Alabdulmohsin and Avital Oliver and Piotr Padlewski and Alexey Gritsenko and Mario Lučić and Neil Houlsby},
+Title = {Patch n' Pack: NaViT, a Vision Transformer for any Aspect Ratio and Resolution},
+Year = {2023},
+Eprint = {arXiv:2307.06304},
+}
+```
+
