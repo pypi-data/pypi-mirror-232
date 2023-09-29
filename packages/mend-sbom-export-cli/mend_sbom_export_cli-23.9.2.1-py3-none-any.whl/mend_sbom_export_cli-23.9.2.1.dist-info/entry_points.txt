@@ -1,0 +1,3 @@
+[console_scripts]
+sbom_export_cli = mend_sbom_export_cli.sbom_export_cli:main
+
