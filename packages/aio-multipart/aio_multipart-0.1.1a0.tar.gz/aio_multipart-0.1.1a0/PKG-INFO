@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: aio-multipart
+Version: 0.1.1a0
+Summary: 
+Author: Abbas
+Author-email: realabja@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: fastapi (>=0.103.1,<0.104.0)
+Description-Content-Type: text/markdown
+
+# multipart-stream
+

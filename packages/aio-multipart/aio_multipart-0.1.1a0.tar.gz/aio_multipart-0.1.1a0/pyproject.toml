@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "aio-multipart"
+version = "0.1.1a0"
+description = ""
+authors = ["Abbas <realabja@gmail.com>"]
+readme = "README.md"
+packages = [{ include = "multipart", from = "src" }]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+fastapi = "^0.103.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
