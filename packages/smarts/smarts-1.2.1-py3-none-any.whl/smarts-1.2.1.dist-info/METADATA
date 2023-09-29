@@ -1,0 +1,221 @@
+Metadata-Version: 2.1
+Name: smarts
+Version: 1.2.1
+Summary: UNKNOWN
+Home-page: https://github.com/huawei-noah/SMARTS
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: setuptools (!=50.0,>=41.0.0)
+Requires-Dist: click (>=7.1.2)
+Requires-Dist: numpy (<1.24.0,>=1.19.5)
+Requires-Dist: psutil (>=5.4.8)
+Requires-Dist: shapely (>=2.0.0)
+Requires-Dist: tableprint (>=0.9.1)
+Requires-Dist: trimesh (==3.9.29)
+Requires-Dist: yattag (>=1.14.0)
+Requires-Dist: PyYAML (>=3.13)
+Requires-Dist: twisted (>=21.7.0)
+Requires-Dist: gymnasium (==0.27.0)
+Requires-Dist: pybullet (<4.0,>=3)
+Requires-Dist: gym (<=0.19.0,>=0.17.3)
+Requires-Dist: cloudpickle (<=2.1.0,>=1.3.0)
+Requires-Dist: scipy
+Provides-Extra: all
+Requires-Dist: av2 (>=0.2.1) ; extra == 'all'
+Requires-Dist: Rtree (>=0.9.7) ; extra == 'all'
+Requires-Dist: Panda3D (==1.10.9) ; extra == 'all'
+Requires-Dist: panda3d-gltf (==0.13) ; extra == 'all'
+Requires-Dist: black[jupyter] (==22.6.0) ; extra == 'all'
+Requires-Dist: ipython (<8.13.0,>=7.8.0) ; extra == 'all'
+Requires-Dist: grpcio-tools (==1.32.0) ; extra == 'all'
+Requires-Dist: isort (==5.7.0) ; extra == 'all'
+Requires-Dist: pre-commit (==2.16.0) ; extra == 'all'
+Requires-Dist: pylint (>=2.12.2) ; extra == 'all'
+Requires-Dist: pytype (==2023.04.18) ; extra == 'all'
+Requires-Dist: py-cpuinfo (==9.0.0) ; extra == 'all'
+Requires-Dist: mdutils (==1.4.0) ; extra == 'all'
+Requires-Dist: gym (<=0.19.0,>=0.17.3) ; extra == 'all'
+Requires-Dist: matplotlib (>=3.2.2) ; extra == 'all'
+Requires-Dist: myst-parser (>=0.18.1) ; extra == 'all'
+Requires-Dist: sphinx (>=5.3.0) ; extra == 'all'
+Requires-Dist: sphinxcontrib-apidoc (>=0.3.0) ; extra == 'all'
+Requires-Dist: sphinxcontrib-spelling (>=8.0.0) ; extra == 'all'
+Requires-Dist: sphinx-click (>=4.4.0) ; extra == 'all'
+Requires-Dist: sphinx-rtd-theme (>=1.1.1) ; extra == 'all'
+Requires-Dist: tornado (>=5.1.1) ; extra == 'all'
+Requires-Dist: websocket-client (>=1.2.1) ; extra == 'all'
+Requires-Dist: ijson (>=3.1.4) ; extra == 'all'
+Requires-Dist: pynput (>=1.7.4) ; extra == 'all'
+Requires-Dist: moviepy (==1.0.3) ; extra == 'all'
+Requires-Dist: opendrive2lanelet (>=1.2.1) ; extra == 'all'
+Requires-Dist: grpcio (==1.32.0) ; extra == 'all'
+Requires-Dist: opencv-python (==4.1.2.30) ; extra == 'all'
+Requires-Dist: opencv-python-headless (==4.1.2.30) ; extra == 'all'
+Requires-Dist: ray[rllib] (==1.4.0) ; extra == 'all'
+Requires-Dist: catkin-pkg ; extra == 'all'
+Requires-Dist: rospkg ; extra == 'all'
+Requires-Dist: eclipse-sumo (>=1.12.0) ; extra == 'all'
+Requires-Dist: pytest (>=6.2.5) ; extra == 'all'
+Requires-Dist: pytest-benchmark (>=3.4.1) ; extra == 'all'
+Requires-Dist: pytest-cov (>=3.0.0) ; extra == 'all'
+Requires-Dist: pytest-xdist (>=2.4.0) ; extra == 'all'
+Requires-Dist: pytest-forked (>=1.4.0) ; extra == 'all'
+Requires-Dist: ipykernel (>=4.10.1) ; extra == 'all'
+Requires-Dist: jupyter-client (>=7.1.2) ; extra == 'all'
+Requires-Dist: pytest-notebook (>=0.7.0) ; extra == 'all'
+Requires-Dist: torch (==1.4.0) ; extra == 'all'
+Requires-Dist: torchvision (==0.5.0) ; extra == 'all'
+Requires-Dist: tensorflow (>=2.4.0) ; extra == 'all'
+Requires-Dist: visdom (>=0.1.8.9) ; extra == 'all'
+Requires-Dist: protobuf (<4.0.0,>=3.17.3) ; extra == 'all'
+Provides-Extra: argoverse
+Requires-Dist: av2 (>=0.2.1) ; extra == 'argoverse'
+Requires-Dist: Rtree (>=0.9.7) ; extra == 'argoverse'
+Provides-Extra: camera_obs
+Requires-Dist: Panda3D (==1.10.9) ; extra == 'camera_obs'
+Requires-Dist: panda3d-gltf (==0.13) ; extra == 'camera_obs'
+Provides-Extra: dev
+Requires-Dist: black[jupyter] (==22.6.0) ; extra == 'dev'
+Requires-Dist: ipython (<8.13.0,>=7.8.0) ; extra == 'dev'
+Requires-Dist: grpcio-tools (==1.32.0) ; extra == 'dev'
+Requires-Dist: isort (==5.7.0) ; extra == 'dev'
+Requires-Dist: pre-commit (==2.16.0) ; extra == 'dev'
+Requires-Dist: pylint (>=2.12.2) ; extra == 'dev'
+Requires-Dist: pytype (==2023.04.18) ; extra == 'dev'
+Provides-Extra: diagnostic
+Requires-Dist: py-cpuinfo (==9.0.0) ; extra == 'diagnostic'
+Requires-Dist: mdutils (==1.4.0) ; extra == 'diagnostic'
+Requires-Dist: gym (<=0.19.0,>=0.17.3) ; extra == 'diagnostic'
+Requires-Dist: matplotlib (>=3.2.2) ; extra == 'diagnostic'
+Provides-Extra: doc
+Requires-Dist: myst-parser (>=0.18.1) ; extra == 'doc'
+Requires-Dist: sphinx (>=5.3.0) ; extra == 'doc'
+Requires-Dist: sphinxcontrib-apidoc (>=0.3.0) ; extra == 'doc'
+Requires-Dist: sphinxcontrib-spelling (>=8.0.0) ; extra == 'doc'
+Requires-Dist: sphinx-click (>=4.4.0) ; extra == 'doc'
+Requires-Dist: sphinx-rtd-theme (>=1.1.1) ; extra == 'doc'
+Provides-Extra: envision
+Requires-Dist: tornado (>=5.1.1) ; extra == 'envision'
+Requires-Dist: websocket-client (>=1.2.1) ; extra == 'envision'
+Requires-Dist: ijson (>=3.1.4) ; extra == 'envision'
+Provides-Extra: extras
+Requires-Dist: pynput (>=1.7.4) ; extra == 'extras'
+Provides-Extra: gym
+Requires-Dist: moviepy (==1.0.3) ; extra == 'gym'
+Provides-Extra: opendrive
+Requires-Dist: opendrive2lanelet (>=1.2.1) ; extra == 'opendrive'
+Requires-Dist: Rtree (>=0.9.7) ; extra == 'opendrive'
+Provides-Extra: ray
+Requires-Dist: ray (~=2.2.0) ; extra == 'ray'
+Provides-Extra: remote_agent
+Requires-Dist: grpcio (==1.32.0) ; extra == 'remote_agent'
+Provides-Extra: rllib
+Requires-Dist: opencv-python (==4.1.2.30) ; extra == 'rllib'
+Requires-Dist: opencv-python-headless (==4.1.2.30) ; extra == 'rllib'
+Requires-Dist: ray[rllib] (==1.4.0) ; extra == 'rllib'
+Provides-Extra: ros
+Requires-Dist: catkin-pkg ; extra == 'ros'
+Requires-Dist: rospkg ; extra == 'ros'
+Provides-Extra: sumo
+Requires-Dist: eclipse-sumo (>=1.12.0) ; extra == 'sumo'
+Requires-Dist: Rtree (>=0.9.7) ; extra == 'sumo'
+Provides-Extra: test
+Requires-Dist: pytest (>=6.2.5) ; extra == 'test'
+Requires-Dist: pytest-benchmark (>=3.4.1) ; extra == 'test'
+Requires-Dist: pytest-cov (>=3.0.0) ; extra == 'test'
+Requires-Dist: pytest-xdist (>=2.4.0) ; extra == 'test'
+Requires-Dist: pytest-forked (>=1.4.0) ; extra == 'test'
+Provides-Extra: test_notebook
+Requires-Dist: ipykernel (>=4.10.1) ; extra == 'test_notebook'
+Requires-Dist: jupyter-client (>=7.1.2) ; extra == 'test_notebook'
+Requires-Dist: pytest-notebook (>=0.7.0) ; extra == 'test_notebook'
+Provides-Extra: torch
+Requires-Dist: torch (==1.4.0) ; extra == 'torch'
+Requires-Dist: torchvision (==0.5.0) ; extra == 'torch'
+Provides-Extra: train
+Requires-Dist: tensorflow (>=2.4.0) ; extra == 'train'
+Provides-Extra: visdom
+Requires-Dist: visdom (>=0.1.8.9) ; extra == 'visdom'
+Provides-Extra: waymo
+Requires-Dist: matplotlib (>=3.2.2) ; extra == 'waymo'
+Requires-Dist: protobuf (<4.0.0,>=3.17.3) ; extra == 'waymo'
+Requires-Dist: Rtree (>=0.9.7) ; extra == 'waymo'
+
+# SMARTS
+[![SMARTS CI Base Tests Linux](https://github.com/huawei-noah/SMARTS/actions/workflows/ci-base-tests-linux.yml/badge.svg?branch=master)](https://github.com/huawei-noah/SMARTS/actions/workflows/ci-base-tests-linux.yml?query=branch%3Amaster) 
+[![SMARTS CI Format](https://github.com/huawei-noah/SMARTS/actions/workflows/ci-format.yml/badge.svg?branch=master)](https://github.com/huawei-noah/SMARTS/actions/workflows/ci-format.yml?query=branch%3Amaster)
+[![Documentation Status](https://readthedocs.org/projects/smarts/badge/?version=latest)](https://smarts.readthedocs.io/en/latest/?badge=latest)
+![Code style](https://img.shields.io/badge/code%20style-black-000000.svg) 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+SMARTS (Scalable Multi-Agent Reinforcement Learning Training School) is a simulation platform for multi-agent reinforcement learning (RL) and research on autonomous driving. Its focus is on realistic and diverse interactions. It is part of the [XingTian](https://github.com/huawei-noah/xingtian/) suite of RL platforms from Huawei Noah's Ark Lab.
+
+Check out the paper at [SMARTS: Scalable Multi-Agent Reinforcement Learning Training School for Autonomous Driving](https://arxiv.org/abs/2010.09776).
+
+![](docs/_static/smarts_envision.gif)
+
+# Documentation
+:rotating_light: :bell: Read the docs :notebook_with_decorative_cover: at [smarts.readthedocs.io](https://smarts.readthedocs.io/) . :bell: :rotating_light:
+
+# Examples 
+### Egoless
+Simulate a SMARTS environment without any ego agents, but with only background traffic.
+1. [Egoless](examples/egoless.py) example.
+
+### Control Theory
+Several agent control policies and agent [action types](smarts/core/controllers/__init__.py) are demonstrated.
+
+1. Chase Via Points
+   + script: [control/chase_via_points.py](examples/control/chase_via_points.py)
+   + Multi agent
+   + ActionSpaceType: LaneWithContinuousSpeed
+1. Trajectory Tracking
+   + script: [control/trajectory_tracking.py](examples/control/trajectory_tracking.py)
+   + ActionSpaceType: Trajectory
+1. OpEn Adaptive Control
+   + script: [control/ego_open_agent.py](examples/control/ego_open_agent.py)
+   + ActionSpaceType: MPC
+1. Laner
+   + script: [control/laner.py](examples/control/laner.py)
+   + Multi agent
+   + ActionSpaceType: Lane
+1. Parallel environments
+   + script: [control/parallel_environment.py](examples/control/parallel_environment.py)
+   + Multiple SMARTS environments in parallel
+   + ActionSpaceType: LaneWithContinuousSpeed
+
+### RL Model
+1. [Drive](examples/rl/drive). See [Driving SMARTS 2023.1 & 2023.2](https://smarts.readthedocs.io/en/latest/benchmarks/driving_smarts_2023_1.html) for more info.
+1. [VehicleFollowing](examples/rl/platoon). See [Driving SMARTS 2023.3](https://smarts.readthedocs.io/en/latest/benchmarks/driving_smarts_2023_3.html) for more info.
+
+### RL Environment
+1. [ULTRA](https://github.com/smarts-project/smarts-project.rl/blob/master/ultra) provides a gym-based environment built upon SMARTS to tackle intersection navigation, specifically the unprotected left turn.
+
+# Issues, Bugs, Feature Requests 
+1. First, read how to communicate issues, report bugs, and request features [here](./docs/resources/contributing.rst#communication).
+1. Next, raise them using appropriate tags at [https://github.com/huawei-noah/SMARTS/issues](https://github.com/huawei-noah/SMARTS/issues).
+
+# Cite this work
+If you use SMARTS in your research, please cite the [paper](https://arxiv.org/abs/2010.09776). In BibTeX format:
+
+```bibtex
+@misc{SMARTS,
+    title={SMARTS: Scalable Multi-Agent Reinforcement Learning Training School for Autonomous Driving},
+    author={Ming Zhou and Jun Luo and Julian Villella and Yaodong Yang and David Rusu and Jiayu Miao and Weinan Zhang and Montgomery Alban and Iman Fadakar and Zheng Chen and Aurora Chongxi Huang and Ying Wen and Kimia Hassanzadeh and Daniel Graves and Dong Chen and Zhengbang Zhu and Nhat Nguyen and Mohamed Elsayed and Kun Shao and Sanjeevan Ahilan and Baokuan Zhang and Jiannan Wu and Zhengang Fu and Kasra Rezaee and Peyman Yadmellat and Mohsen Rohani and Nicolas Perez Nieves and Yihan Ni and Seyedershad Banijamali and Alexander Cowen Rivers and Zheng Tian and Daniel Palenicek and Haitham bou Ammar and Hongbo Zhang and Wulong Liu and Jianye Hao and Jun Wang},
+    url={https://arxiv.org/abs/2010.09776},
+    primaryClass={cs.MA},
+    booktitle={Proceedings of the 4th Conference on Robot Learning (CoRL)},
+    year={2020},
+    month={11}
+}
+```
+
+
