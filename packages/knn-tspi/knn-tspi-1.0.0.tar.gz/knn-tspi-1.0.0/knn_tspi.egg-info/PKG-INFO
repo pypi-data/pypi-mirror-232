@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: knn-tspi
+Version: 1.0.0
+Summary: K-Nearest Neighbors Time Series Prediction with Invariances (KNN-TSPI)
+Author: Gabriel Dalforno, Moisés Rocha
+Author-email: gdalforno7@gmail.com, moises0rocha@gmail.com
+License: MIT
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: numpy>=1.26.0
+
+Implementation of K-Nearest Neighbors Time Series Prediction with Invariances (KNN-TSPI) algorithm for univariate time series forecasting
