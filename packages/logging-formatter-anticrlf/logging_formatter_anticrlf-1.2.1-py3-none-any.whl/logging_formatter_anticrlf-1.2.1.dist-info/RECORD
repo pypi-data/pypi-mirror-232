@@ -1,0 +1,11 @@
+anticrlf/__init__.py,sha256=hVgICKxosyuw29FMl8VrQOPerDrKltJv0lDXT7kXbEQ,2553
+anticrlf/exception.py,sha256=oZvu2BbIeV7qTRIIoykPitQqnZnh3Xm9pjaaOYgdysk,51
+anticrlf/types.py,sha256=6xChangPT-05NAvd0oi9lAwe2Yebljy7liqId8wemhE,2409
+anticrlf/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+anticrlf/tests/test_formatter.py,sha256=EmJ70S3y_fMD_zQom-WAxxbGAOg2u9XWipSA3X_54o4,2056
+anticrlf/tests/test_substitutionmap.py,sha256=THnH1fOqCs8H4IFYFgdVEq7uaB8W9pqIE2j05Z7BzA0,1220
+logging_formatter_anticrlf-1.2.1.dist-info/LICENSE,sha256=tD0UDeidc9lvrlSnzpGhPGXL-ncwb8eCI1PB9klbBAs,1319
+logging_formatter_anticrlf-1.2.1.dist-info/METADATA,sha256=uckvWrOOHsalLoKc5WtiD5CevFF0gs1mx2A_1KvawyY,4289
+logging_formatter_anticrlf-1.2.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+logging_formatter_anticrlf-1.2.1.dist-info/top_level.txt,sha256=k4jIUYS9lRgmGPV7HEblOXDoI9PJgBGxnJTF1LDcLR0,9
+logging_formatter_anticrlf-1.2.1.dist-info/RECORD,,
