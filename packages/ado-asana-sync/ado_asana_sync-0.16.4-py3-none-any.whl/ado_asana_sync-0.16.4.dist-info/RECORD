@@ -1,0 +1,14 @@
+ado_asana_sync/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ado_asana_sync/sync/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ado_asana_sync/sync/__main__.py,sha256=vGmvOH9onP28gGDOz6lOY-FueqhPzh55Qd2aiI0npug,510
+ado_asana_sync/sync/app.py,sha256=ow8L51toEhlyN7qE7f5KgGRNoaReKVB5feLi-7PzsZs,4488
+ado_asana_sync/sync/asana.py,sha256=h0le817ADyf_6cGwaBnq8_1jn-hvKIHMUdZLDzwUr4U,1562
+ado_asana_sync/sync/sync.py,sha256=Lu3aUSeaT1dmdh6cC8dkkl_rjOWHb6_jkcrpG_KchJ0,23055
+ado_asana_sync/sync/task_item.py,sha256=KOxGlNhl5n3R5xAwde9HUwOFWVOyDv7dgy_prdeL-l8,6439
+ado_asana_sync/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ado_asana_sync/utils/date.py,sha256=SofypF0YMTx0dVDo3a4KR-A9bmJtAo9s5_6Y18egFO0,760
+ado_asana_sync/utils/utils.py,sha256=RBMdaLvNJkw1fM8CUZ0pTbEarzRk0OMQbCsxY0DW0FE,648
+ado_asana_sync-0.16.4.dist-info/LICENSE,sha256=zviG-ql08liZUu3uFb9lZz7e4QxxMfCKRlci_Wexi-U,1088
+ado_asana_sync-0.16.4.dist-info/METADATA,sha256=tW10EFXZDqKs_I-foJSxK1n7Ui-syPepwBWYaTIyp4s,3337
+ado_asana_sync-0.16.4.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+ado_asana_sync-0.16.4.dist-info/RECORD,,
