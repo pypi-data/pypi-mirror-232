@@ -1,0 +1,353 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+# Copyright (C) THL A29 Limited, a Tencent company. All rights reserved.
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+# @FileName     :   keys.py
+# @Function     :   默认参数及常量
+from collections import namedtuple
+
+RechargeGasItem = namedtuple('RechargeGasItem', 'address amount')
+
+UserConfig = namedtuple('UserConfig', 'org_id user_key_file_path user_crt_file_path user_sign_key_file_path user_sign_crt_file_path crypto auth_type, alias', defaults=[None]*8)
+ArchiveConfig = namedtuple('ArchiveConfig', 'type dest secret_key', defaults=[None]*3)
+RPCClientConfig = namedtuple('RPCClientConfig', 'max_receive_message_size max_send_message_size', defaults=[None]*2)
+PKCS11Config = namedtuple('PKCS11Config', 'enabled library label password session_cache_size hash', defaults=[None]*6)
+
+class AuthType:
+    PermissionedWithCert = 'PermissionedWithCert'
+    PermissionedWithKey = 'PermissionedWithKey'
+    Public = 'Public'
+
+
+class HashType:
+    SHA256 = 'SHA256'
+    SHA3 = 'SHA3'
+    SM3 = 'SM3'
+
+
+class Defaults:
+    SEQ = 0
+    TX_ID = ''
+    ENDORSE_USERS = []
+    PARAMS = None
+    LIMIT = None
+    NODE_INDEX = 0
+    AUTH_TYPE = AuthType.PermissionedWithCert
+    HASH_TYPE = HashType.SHA256
+    
+    ENABLED_ALIAS = False
+    ENABLED_CRT_HASH = False
+    
+    REQUEST_TIMEOUT = 3  # 秒
+    SUBSCRIBE_TIMEOUT = 60  # 秒
+    WITH_SYNC_RESULT = False  # 必须默认为False, 否则像get_chain_info这种也会轮询交易
+    WITH_RWSET = False
+    
+    TX_CHECK_INTERVAL = 0.5  # 秒
+    TX_CHECK_TIMEOUT = 30
+    RETRY_LIMIT = 4
+    RETRY_INTERVAL = 0.5  # 毫秒
+    
+    GRPC_MAX_SEND_MESSAGE_LENGTH = 16
+    GRPC_MAX_RECEIVE_MESSAGE_LENGTH = 16
+
+class Rule:
+    ALL = 'ALL'
+    ANY = 'ANY'
+    MAJORITY = 'MAJORITY'
+    SELF = 'SELF'
+    FORBIDDEN = 'FORBIDDEN'
+
+class Role:
+    client = 'client'
+    admint = 'admin'
+    
+    
+class RuntimeType:
+    WASMER = 'WASMER'
+    WXVM = 'WXVM'
+    GASM = 'GASM'
+    EVM = 'EVM'
+    DOCKER_GO = 'DOCKER_GO'
+    DOCKER_JAVA = 'DOCKER_JAVA'
+
+
+    
+class ContractStatus:
+  NORMAL = 0
+  FROZEN = 1
+  REVOKED = 2
+  
+
+class AddrType:
+  CHAINMAKER = 0
+  ZXL = 1
+  ETHEREUM = 2
+  
+  
+class ChainConfigMethods:
+    GET_CHAIN_CONFIG = "GET_CHAIN_CONFIG"
+    GET_CHAIN_CONFIG_AT = "GET_CHAIN_CONFIG_AT"
+    CORE_UPDATE = "CORE_UPDATE"
+    BLOCK_UPDATE = "BLOCK_UPDATE"
+    TRUST_ROOT_ADD = "TRUST_ROOT_ADD"
+    TRUST_ROOT_UPDATE = "TRUST_ROOT_UPDATE"
+    TRUST_ROOT_DELETE = "TRUST_ROOT_DELETE"
+    NODE_ADDR_ADD = "NODE_ADDR_ADD"
+    NODE_ADDR_UPDATE = "NODE_ADDR_UPDATE"
+    NODE_ADDR_DELETE = "NODE_ADDR_DELETE"
+    NODE_ORG_ADD = "NODE_ORG_ADD"
+    NODE_ORG_UPDATE = "NODE_ORG_UPDATE"
+    NODE_ORG_DELETE = "NODE_ORG_DELETE"
+    CONSENSUS_EXT_ADD = "CONSENSUS_EXT_ADD"
+    CONSENSUS_EXT_UPDATE = "CONSENSUS_EXT_UPDATE"
+    CONSENSUS_EXT_DELETE = "CONSENSUS_EXT_DELETE"
+    PERMISSION_ADD = "PERMISSION_ADD"
+    PERMISSION_UPDATE = "PERMISSION_UPDATE"
+    PERMISSION_DELETE = "PERMISSION_DELETE"
+    NODE_ID_ADD = "NODE_ID_ADD"
+    NODE_ID_UPDATE = "NODE_ID_UPDATE"
+    NODE_ID_DELETE = "NODE_ID_DELETE"
+    TRUST_MEMBER_ADD = "TRUST_MEMBER_ADD"
+    TRUST_MEMBER_UPDATE = "TRUST_MEMBER_UPDATE"
+    TRUST_MEMBER_DELETE = "TRUST_MEMBER_DELETE"
+    ALTER_ADDR_TYPE = "ALTER_ADDR_TYPE"
+    ENABLE_OR_DISABLE_GAS = "ENABLE_OR_DISABLE_GAS"
+
+
+class ChainQueryMethods:
+    GET_BLOCK_BY_TX_ID = "GET_BLOCK_BY_TX_ID"
+    GET_TX_BY_TX_ID = "GET_TX_BY_TX_ID"
+    GET_BLOCK_BY_HEIGHT = "GET_BLOCK_BY_HEIGHT"
+    GET_CHAIN_INFO = "GET_CHAIN_INFO"
+    GET_LAST_CONFIG_BLOCK = "GET_LAST_CONFIG_BLOCK"
+    GET_BLOCK_BY_HASH = "GET_BLOCK_BY_HASH"
+    GET_NODE_CHAIN_LIST = "GET_NODE_CHAIN_LIST"
+    GET_GOVERNANCE_CONTRACT = "GET_GOVERNANCE_CONTRACT"
+    GET_BLOCK_WITH_TXRWSETS_BY_HEIGHT = "GET_BLOCK_WITH_TXRWSETS_BY_HEIGHT"
+    GET_BLOCK_WITH_TXRWSETS_BY_HASH = "GET_BLOCK_WITH_TXRWSETS_BY_HASH"
+    GET_LAST_BLOCK = "GET_LAST_BLOCK"
+    GET_FULL_BLOCK_BY_HEIGHT = "GET_FULL_BLOCK_BY_HEIGHT"
+    GET_BLOCK_HEIGHT_BY_TX_ID = "GET_BLOCK_HEIGHT_BY_TX_ID"
+    GET_BLOCK_HEIGHT_BY_HASH = "GET_BLOCK_HEIGHT_BY_HASH"
+    GET_BLOCK_HEADER_BY_HEIGHT = "GET_BLOCK_HEADER_BY_HEIGHT"
+    GET_ARCHIVED_BLOCK_HEIGHT = "GET_ARCHIVED_BLOCK_HEIGHT"
+    GET_ALL_CONTRACTS = "GET_ALL_CONTRACTS"
+    GET_MERKLE_PATH_BY_TX_ID = "GET_MERKLE_PATH_BY_TX_ID"
+
+
+class CertManageMethods:
+    CERT_ADD = "CERT_ADD"
+    CERTS_DELETE = "CERTS_DELETE"
+    CERTS_QUERY = "CERTS_QUERY"
+    CERTS_FREEZE = "CERTS_FREEZE"
+    CERTS_UNFREEZE = "CERTS_UNFREEZE"
+    CERTS_REVOKE = "CERTS_REVOKE"
+    CERT_ALIAS_ADD = "CERT_ALIAS_ADD"
+    CERT_ALIAS_UPDATE = "CERT_ALIAS_UPDATE"
+    CERTS_ALIAS_DELETE = "CERTS_ALIAS_DELETE"
+    CERTS_ALIAS_QUERY = "CERTS_ALIAS_QUERY"
+
+
+class GovernanceMethods: ...
+
+
+class MultiSignMethods:
+    REQ = "REQ"
+    VOTE = "VOTE"
+    QUERY = "QUERY"
+
+
+class ContractManageMethods:
+    INIT_CONTRACT = "INIT_CONTRACT"
+    UPGRADE_CONTRACT = "UPGRADE_CONTRACT"
+    FREEZE_CONTRACT = "FREEZE_CONTRACT"
+    UNFREEZE_CONTRACT = "UNFREEZE_CONTRACT"
+    REVOKE_CONTRACT = "REVOKE_CONTRACT"
+    GRANT_CONTRACT_ACCESS = "GRANT_CONTRACT_ACCESS"
+    REVOKE_CONTRACT_ACCESS = "REVOKE_CONTRACT_ACCESS"
+    VERIFY_CONTRACT_ACCESS = "VERIFY_CONTRACT_ACCESS"
+    INIT_NEW_NATIVE_CONTRACT = "INIT_NEW_NATIVE_CONTRACT"
+    # ContractQuery
+    GET_CONTRACT_INFO = "GET_CONTRACT_INFO"
+    GET_CONTRACT_BYTECODE = "GET_CONTRACT_BYTECODE"
+    GET_CONTRACT_LIST = "GET_CONTRACT_LIST"
+    GET_DISABLED_CONTRACT_LIST = "GET_DISABLED_CONTRACT_LIST"
+
+
+class PrivateComputeMethods:
+    GET_CONTRACT = "GET_CONTRACT"
+    GET_DATA = "GET_DATA"
+    SAVE_CA_CERT = "SAVE_CA_CERT"
+    SAVE_DIR = "SAVE_DIR"
+    SAVE_DATA = "SAVE_DATA"
+    SAVE_ENCLAVE_REPORT = "SAVE_ENCLAVE_REPORT"
+    GET_ENCLAVE_PROOF = "GET_ENCLAVE_PROOF"
+    GET_CA_CERT = "GET_CA_CERT"
+    GET_DIR = "GET_DIR"
+    CHECK_CALLER_CERT_AUTH = "CHECK_CALLER_CERT_AUTH"
+    GET_ENCLAVE_VERIFICATION_PUB_KEY = "GET_ENCLAVE_VERIFICATION_PUB_KEY"
+    GET_ENCLAVE_REPORT = "GET_ENCLAVE_REPORT"
+    GET_ENCLAVE_CHALLENGE = "GET_ENCLAVE_CHALLENGE"
+    GET_ENCLAVE_SIGNATURE = "GET_ENCLAVE_SIGNATURE"
+    SAVE_REMOTE_ATTESTATION = "SAVE_REMOTE_ATTESTATION"
+
+
+class DposErc20Methods:
+    GET_OWNER = "GET_OWNER"
+    GET_DECIMALS = "GET_DECIMALS"
+    TRANSFER = "TRANSFER"
+    TRANSFER_FROM = "TRANSFER_FROM"
+    GET_BALANCEOF = "GET_BALANCEOF"
+    APPROVE = "APPROVE"
+    GET_ALLOWANCE = "GET_ALLOWANCE"
+    BURN = "BURN"
+    MINT = "MINT"
+    TRANSFER_OWNERSHIP = "TRANSFER_OWNERSHIP"
+    GET_TOTAL_SUPPLY = "GET_TOTAL_SUPPLY"
+
+
+class DposStakeMethods:
+    GET_ALL_CANDIDATES = "GET_ALL_CANDIDATES"
+    GET_VALIDATOR_BY_ADDRESS = "GET_VALIDATOR_BY_ADDRESS"
+    DELEGATE = "DELEGATE"
+    GET_DELEGATIONS_BY_ADDRESS = "GET_DELEGATIONS_BY_ADDRESS"
+    GET_USER_DELEGATION_BY_VALIDATOR = "GET_USER_DELEGATION_BY_VALIDATOR"
+    UNDELEGATE = "UNDELEGATE"
+    READ_EPOCH_BY_ID = "READ_EPOCH_BY_ID"
+    READ_LATEST_EPOCH = "READ_LATEST_EPOCH"
+    SET_NODE_ID = "SET_NODE_ID"
+    GET_NODE_ID = "GET_NODE_ID"
+    UPDATE_MIN_SELF_DELEGATION = "UPDATE_MIN_SELF_DELEGATION"
+    READ_MIN_SELF_DELEGATION = "READ_MIN_SELF_DELEGATION"
+    UPDATE_EPOCH_VALIDATOR_NUMBER = "UPDATE_EPOCH_VALIDATOR_NUMBER"
+    READ_EPOCH_VALIDATOR_NUMBER = "READ_EPOCH_VALIDATOR_NUMBER"
+    UPDATE_EPOCH_BLOCK_NUMBER = "UPDATE_EPOCH_BLOCK_NUMBER"
+    READ_EPOCH_BLOCK_NUMBER = "READ_EPOCH_BLOCK_NUMBER"
+    READ_COMPLETE_UNBOUNDING_EPOCH_NUMBER = "READ_COMPLETE_UNBOUNDING_EPOCH_NUMBER"
+    READ_SYSTEM_CONTRACT_ADDR = "READ_SYSTEM_CONTRACT_ADDR"
+
+
+class SubscribeManageMethods:
+    SUBSCRIBE_BLOCK = "SUBSCRIBE_BLOCK"
+    SUBSCRIBE_TX = "SUBSCRIBE_TX"
+    SUBSCRIBE_CONTRACT_EVENT = "SUBSCRIBE_CONTRACT_EVENT"
+
+
+class ArchiveManageMethods:
+    ARCHIVE_BLOCK = "ARCHIVE_BLOCK"
+    RESTORE_BLOCK = "RESTORE_BLOCK"
+
+
+class CrossTransactionMethods:
+    COMMIT = "COMMIT"
+    ROLLBACK = "ROLLBACK"
+    READ_STATE = "READ_STATE"
+    SAVE_PROOF = "SAVE_PROOF"
+    READ_PROOF = "READ_PROOF"
+    ARBITRATE = "ARBITRATE"
+
+
+class PubkeyManageMethods:
+    PUBKEY_ADD = "PUBKEY_ADD"
+    PUBKEY_DELETE = "PUBKEY_DELETE"
+    PUBKEY_QUERY = "PUBKEY_QUERY"
+
+
+class AccountManagerMethods:
+    SET_ADMIN = "SET_ADMIN"
+    GET_ADMIN = "GET_ADMIN"
+    RECHARGE_GAS = "RECHARGE_GAS"
+    GET_BALANCE = "GET_BALANCE"
+    CHARGE_GAS = "CHARGE_GAS"
+    FROZEN_ACCOUNT = "FROZEN_ACCOUNT"
+    UNFROZEN_ACCOUNT = "UNFROZEN_ACCOUNT"
+    ACCOUNT_STATUS = "ACCOUNT_STATUS"
+    REFUND_GAS = "REFUND_GAS"
+    REFUND_GAS_VM = "REFUND_GAS_VM"
+    RESTORE_BLOCK = "RESTORE_BLOCK"
+
+
+class TMethods:
+    P = "P"
+    G = "G"
+    N = "N"
+    D = "D"
+
+
+class SystemContractNames:
+    CHAIN_CONFIG = 'CHAIN_CONFIG'
+    CHAIN_QUERY = 'CHAIN_QUERY'
+    CERT_MANAGE = 'CERT_MANAGE'
+    GOVERNANCE = 'GOVERNANCE'
+    MULTI_SIGN = 'MULTI_SIGN'
+    CONTRACT_MANAGE = 'CONTRACT_MANAGE'
+    PRIVATE_COMPUTE = 'PRIVATE_COMPUTE'
+    DPOS_ERC20 = 'DPOS_ERC20'
+    DPOS_STAKE = 'DPOS_STAKE'
+    SUBSCRIBE_MANAGE = 'SUBSCRIBE_MANAGE'
+    ARCHIVE_MANAGE = 'ARCHIVE_MANAGE'
+    CROSS_TRANSACTION = 'CROSS_TRANSACTION'
+    PUBKEY_MANAGE = 'PUBKEY_MANAGE'
+    ACCOUNT_MANAGER = 'ACCOUNT_MANAGER'
+    T = 'T'
+
+
+class ParamKeys:
+    block_height = 'block_height'
+    org_id = 'org_id'
+    root = 'root'
+    node_id = 'node_id'
+    new_node_id = 'new_node_id'
+    node_ids = 'node_ids'
+    member_info = 'member_info'
+    role = 'role'
+    tx_scheduler_timeout = 'tx_scheduler_timeout'
+    tx_scheduler_validate_timeout = 'tx_scheduler_validate_timeout'
+    tx_timestamp_verify = 'tx_timestamp_verify'
+    tx_timeout = 'tx_timeout'
+    block_tx_capacity = 'block_tx_capacity'
+    block_size = 'block_size'
+    block_interval = 'block_interval'
+    tx_parameter_size = 'tx_parameter_size'
+    addr_type = 'addr_type'
+    
+    NATIVE_CONTRACT_NAME = 'NATIVE_CONTRACT_NAME'
+    CONTRACT_NAME = 'CONTRACT_NAME'
+    txId = 'txId'
+    blockHeight = 'blockHeight'
+    blockHash = 'blockHash'
+    withRWSet = 'withRWSet'
+    START_BLOCK = 'START_BLOCK'
+    END_BLOCK = 'END_BLOCK'
+    WITH_RWSET = 'WITH_RWSET'
+    ONLY_HEADER = 'ONLY_HEADER'
+    TX_IDS = 'TX_IDS'
+    TOPIC = 'TOPIC'
+    VOTE_INFO = 'VOTE_INFO'
+    TX_ID = 'TX_ID'
+    SYS_CONTRACT_NAME = 'SYS_CONTRACT_NAME'
+    SYS_METHOD = 'SYS_METHOD'
+    CONTRACT_VERSION = 'CONTRACT_VERSION'
+    CONTRACT_BYTECODE = 'CONTRACT_BYTECODE'
+    CONTRACT_RUNTIME_TYPE = 'CONTRACT_RUNTIME_TYPE'
+    BLOCK_HEIGHT = 'BLOCK_HEIGHT'
+    FULL_BLOCK = 'FULL_BLOCK'
+    
+    batch_recharge = 'batch_recharge'
+    address_key = 'address_key'
+    charge_gas_amount = 'charge_gas_amount'
+    
+    
+class VoteStatus:
+    AGREE = 'AGREE'
+    REJECT = 'REJECT'
+
+
+class ArchiveDB:
+    MysqlDBNamePrefix = "cm_archived_chain"
+    MysqlTableNamePrefix = "t_block_info"
+    RowsPerBlockInfoTable = 100000
+    QUERY_FULL_BLOCK_BY_HEIGHT_SQL = 'SELECT Fblock_with_rwset, Fhmac from %s WHERE Fblock_height=%s'
