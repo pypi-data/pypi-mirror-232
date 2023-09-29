@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: theborg
+Version: 1.0.5
+Summary: Artificial Neural Network routines
+Home-page: https://github.com/dnidever/theborg
+Author: David Nidever, Yuan-Sen Ting
+Author-email: dnidever@montana.edu
+License: MIT
+Requires-Python: >=3.6
+Description-Content-Type: text/x-rst
+Provides-Extra: test
+Provides-Extra: docs
+License-File: LICENSE
+
+
+The Borg
+=========
+
+Artificial Neural Network routines.
+
+Authors
+-------
+
+- **David Nidever** (Montana State University)
+- **Yuan-Sen Ting** (ANU)
+  
+Installation
+------------
+
+To install the latest version::
+
+    pip install git+https://github.com/dnidever/theborg
+
+    
+Documentation
+-------------
+
+.. image:: https://readthedocs.org/projects/theborg/badge/?version=latest
+        :target: http://theborg.readthedocs.io/
+
+See `the documentation <http://theborg.readthedocs.io>`_ for information on how
+to install and use The Borg.
+
+License
+-------
+
+.. image:: http://img.shields.io/badge/license-MIT-blue.svg?style=flat
+        :target: https://github.com/dnidever/theborg/blob/main/LICENSE
