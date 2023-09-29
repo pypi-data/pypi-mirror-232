@@ -1,0 +1,8 @@
+.gitignore,sha256=zbyuFRBda3geYggTx5x-hodA1OnMU85vX8u8Ejh630s,2
+asgi_etags.cpython-311-x86_64-linux-gnu.so,sha256=_wSqDupNIcMeOjhe6f9NVtXdACDEL9H8bov2AkxxUFg,326472
+asgi_etags/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+asgi_etags/__init__.py,sha256=_20SuQdEK_LmF_hgilF2c8Nsro3glRQCNDnixSMuKgI,4641
+asgi_etags-0.1.1.dist-info/WHEEL,sha256=zmw1dFwaAmeoda794XsuvDlzUXttsBlCFDuB5R6uNQk,190
+asgi_etags-0.1.1.dist-info/RECORD,,
+asgi_etags-0.1.1.dist-info/METADATA,sha256=rCSS6OZWt6EJxL0V4_EbhqW4lZI1TQ9OXucQlzm0RUE,1226
+asgi_etags-0.1.1.dist-info/licenses/LICENSE,sha256=ASpelLXJW65CwjuEsCKoHUAv8GKp8haqNR2-8Wldvqk,1072
