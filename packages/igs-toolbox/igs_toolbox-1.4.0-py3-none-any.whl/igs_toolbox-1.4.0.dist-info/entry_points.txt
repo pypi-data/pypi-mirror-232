@@ -1,0 +1,3 @@
+[console_scripts]
+jsonChecker = igs_toolbox.formatChecker.jsonChecker:main
+readQR = igs_toolbox.extractor.readQR:main
