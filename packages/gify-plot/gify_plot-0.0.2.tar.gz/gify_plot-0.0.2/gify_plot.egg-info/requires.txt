@@ -1,0 +1,6 @@
+pandas
+tqdm
+PIL
+matplotlib
+seaborn
+plotly
