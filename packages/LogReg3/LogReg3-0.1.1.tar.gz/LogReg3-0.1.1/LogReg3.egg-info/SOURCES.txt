@@ -1,0 +1,11 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+LogReg3.egg-info/PKG-INFO
+LogReg3.egg-info/SOURCES.txt
+LogReg3.egg-info/dependency_links.txt
+LogReg3.egg-info/requires.txt
+LogReg3.egg-info/top_level.txt
+Regression/LogReg.py
+Regression/__init__.py

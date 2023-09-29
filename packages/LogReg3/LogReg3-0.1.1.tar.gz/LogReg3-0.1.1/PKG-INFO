@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: LogReg3
+Version: 0.1.1
+Author: Alexander Nazimov
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+License-File: LICENSE.txt
