@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: gallery_thief
+Version: 0.1.0a0
+Home-page: https://github.com/viktor-akusoff/GalleryThief
+Author: Kirill Voloshin
+Author-email: kirill.voloshin.98@ya.ru
+License: MIT
+Keywords: images,scraping,parsing,search engines
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: bs4
+Requires-Dist: fake-useragent
+Requires-Dist: numpy

@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+src/GalleryThief/__init__.py
+src/GalleryThief/mask.py
+src/GalleryThief/performer.py
+src/GalleryThief/strategies.py
+src/gallery_thief.egg-info/PKG-INFO
+src/gallery_thief.egg-info/SOURCES.txt
+src/gallery_thief.egg-info/dependency_links.txt
+src/gallery_thief.egg-info/requires.txt
+src/gallery_thief.egg-info/top_level.txt
