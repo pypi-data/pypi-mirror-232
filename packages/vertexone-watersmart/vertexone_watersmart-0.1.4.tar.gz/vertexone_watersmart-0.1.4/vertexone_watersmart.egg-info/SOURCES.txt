@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+vertexone_watersmart/__init__.py
+vertexone_watersmart/client.py
+vertexone_watersmart/exceptions.py
+vertexone_watersmart/parsers.py
+vertexone_watersmart/providers.py
+vertexone_watersmart/sqlite.py
+vertexone_watersmart/storage_class.py
+vertexone_watersmart.egg-info/PKG-INFO
+vertexone_watersmart.egg-info/SOURCES.txt
+vertexone_watersmart.egg-info/dependency_links.txt
+vertexone_watersmart.egg-info/requires.txt
+vertexone_watersmart.egg-info/top_level.txt
