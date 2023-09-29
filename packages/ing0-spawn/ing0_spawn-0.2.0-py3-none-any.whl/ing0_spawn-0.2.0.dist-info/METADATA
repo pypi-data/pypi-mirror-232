@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: ing0-spawn
+Version: 0.2.0
+Summary: Build, test, and run your code on any GNU/Linux distribution with ease
+License: CC0
+Author: Amirouche Boubekki
+Author-email: amirouche@hyper.dev
+Requires-Python: >=3.9,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: lxml (>=4.9.3,<5.0.0)
+Requires-Dist: requests (>=2.31.0,<3.0.0)
+Description-Content-Type: text/markdown
+
+# ing0's spawn
+
+## Usage
+
+```s
+Usage:
+
+  ing0 available
+  ing0 create NAME DISTRIBUTION RELEASE ARCH
+  ing0 exec NAME [EXTRA ...]
+```
+
+## Getting started
+
+```s
+sudo apt install systemd-container qemu-user-static
+sudo ing0 create my-arch-arm64-release-env arch current arm64
+sudo ing0 exec my-arch-arm64-release-env pacman -Sy --noconfirm base-devel git lz4 util-linux-libs zlib
+sudo ing0 exec my-arch-arm64-release-env --chdir=/mnt ./configure'
+sudo ing0 exec my-arch-arm64-release-env --chdir=/mnt make -j7
+```
+
