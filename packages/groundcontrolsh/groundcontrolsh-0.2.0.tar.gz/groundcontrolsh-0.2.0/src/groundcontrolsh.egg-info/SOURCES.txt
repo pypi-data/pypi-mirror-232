@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+src/__init__.py
+src/groundcontrolsh.py
+src/groundcontrolsh.egg-info/PKG-INFO
+src/groundcontrolsh.egg-info/SOURCES.txt
+src/groundcontrolsh.egg-info/dependency_links.txt
+src/groundcontrolsh.egg-info/requires.txt
+src/groundcontrolsh.egg-info/top_level.txt

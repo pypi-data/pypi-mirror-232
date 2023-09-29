@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: groundcontrolsh
+Version: 0.2.0
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+
+![GroundControl](https://github.com/groundcontrolsh/groundcontrol/raw/main/images/hero.png)
+
+# GroundControl
+
+Python SDK for [GroundControl](https://groundcontrol.sh/).
+
+## Installing
+
+```shell
+pip install groundcontrolsh
+```
+
+## Usage
+
+```python
+from groundcontrolsh import GroundControl
+
+client = GroundControl(
+  project_id="YOUR_PROJECT_ID",
+  api_key="YOUR_API_KEY",
+  cache=60) # Optional cache ttl in seconds
+
+enabled = client.is_feature_flag_enabled("csv-export") # You can pass a symbol or a string
+```
