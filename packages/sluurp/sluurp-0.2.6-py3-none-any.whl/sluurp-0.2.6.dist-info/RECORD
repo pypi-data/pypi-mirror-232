@@ -1,0 +1,9 @@
+sluurp/__init__.py,sha256=jEUPhmnkk0Vx4weK00b8hNdQazxuSRgC8DPdtVHfFvE,65
+sluurp/executor.py,sha256=JAFqUCmUPpU8mVSIBOVyTv65LuOiNbsGzxsMGpIt8yw,1200
+sluurp/job.py,sha256=k-2xlkncLbBehXWQFLxvkEdvwtVaw6nZ8VfF_MzwCLc,13536
+sluurp/utils.py,sha256=HgIvsEJXGBimFGgxmshIz-gJ8rzVXMTKKwGOFQdbu-U,1509
+sluurp-0.2.6.dist-info/LICENSE.md,sha256=2OkPl4F5J299dR1IEfcXUMrDsY_ke7n8pnOyyF2ATR4,1102
+sluurp-0.2.6.dist-info/METADATA,sha256=7qRbfxnllBZrZthQBCVs1EbD-pGiBRyd5LecrXBz5Qk,996
+sluurp-0.2.6.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
+sluurp-0.2.6.dist-info/top_level.txt,sha256=dfh6_xDQ9qQlYSmENhNjosuSRzHXlbdrkr_UCgCDpdA,7
+sluurp-0.2.6.dist-info/RECORD,,
