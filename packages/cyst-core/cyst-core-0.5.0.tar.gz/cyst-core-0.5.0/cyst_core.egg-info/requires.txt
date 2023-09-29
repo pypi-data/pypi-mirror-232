@@ -1,0 +1,9 @@
+netaddr
+py-flags
+semver
+rejson
+networkx
+cachetools
+pyserde
+importlib_metadata
+jsonpickle
