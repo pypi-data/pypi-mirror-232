@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+src/emtvlcapi/__init__.py
+src/emtvlcapi/__main__.py
+src/emtvlcapi/emtvlcapi.py
+src/emtvlcapi.egg-info/PKG-INFO
+src/emtvlcapi.egg-info/SOURCES.txt
+src/emtvlcapi.egg-info/dependency_links.txt
+src/emtvlcapi.egg-info/requires.txt
+src/emtvlcapi.egg-info/top_level.txt
+tests/test1.py
