@@ -1,0 +1,7 @@
+setup.py
+NewtonMathSolver/__init__.py
+NewtonMathSolver/solve.py
+NewtonMathSolver.egg-info/PKG-INFO
+NewtonMathSolver.egg-info/SOURCES.txt
+NewtonMathSolver.egg-info/dependency_links.txt
+NewtonMathSolver.egg-info/top_level.txt
