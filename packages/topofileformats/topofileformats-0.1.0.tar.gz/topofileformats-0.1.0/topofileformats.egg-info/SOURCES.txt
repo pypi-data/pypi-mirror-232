@@ -1,0 +1,12 @@
+LICENSE.md
+README.md
+pyproject.toml
+tests/test_asd.py
+topofileformats/__init__.py
+topofileformats/asd.py
+topofileformats/io.py
+topofileformats.egg-info/PKG-INFO
+topofileformats.egg-info/SOURCES.txt
+topofileformats.egg-info/dependency_links.txt
+topofileformats.egg-info/requires.txt
+topofileformats.egg-info/top_level.txt
