@@ -1,0 +1,6 @@
+colorama
+cowpy
+pillow>=10.0.1
+PyFiglet
+termcolor
+terminaltables
