@@ -1,0 +1,10 @@
+customtkinter
+numpy
+pandas
+scikit-learn
+CTkMessagebox
+scipy
+matplotlib
+tifffile
+tensorflow
+openpyxlsdtfile
