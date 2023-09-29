@@ -1,0 +1,39 @@
+[build-system]
+requires = [
+    'setuptools>=61.0',
+    'wheel>=0.41.2',
+]
+build-backend = 'setuptools.build_meta'
+
+[project]
+name = 'pycellino'
+version = '0.2.0'
+authors = [
+    {name='Piotr Wierzgała', email='piotr.wierzgala@gmail.com'},
+]
+description = 'A package with helper functions for data processing.'
+readme = 'README.rst'
+requires-python = '>=3.7'
+classifiers = [
+    'Programming Language :: Python :: 3',
+    'License :: OSI Approved :: MIT License',
+    'Operating System :: OS Independent',
+]
+dependencies = [
+    'pandas>=2.1.0',
+    'numpy>=1.26.0',
+    'scikit-learn>=1.3.1',
+    'scipy>=1.11.2',
+]
+
+[project.optional-dependencies]
+dev = [
+    'pytest>=7.4.2',
+    'pdbpp>=0.10.3',
+    'isort>=5.12.0',
+]
+
+[project.urls]
+'Homepage' = 'https://github.com/pwierzgala/pycellino'
+'Bug Tracker' = 'https://github.com/pwierzgala/pycellino/issues'
+'Changelog' = 'https://github.com/pwierzgala/pycellino/releases'
