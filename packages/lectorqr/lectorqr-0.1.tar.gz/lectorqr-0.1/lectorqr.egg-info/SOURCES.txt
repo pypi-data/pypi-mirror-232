@@ -1,0 +1,6 @@
+setup.py
+lectorqr.egg-info/PKG-INFO
+lectorqr.egg-info/SOURCES.txt
+lectorqr.egg-info/dependency_links.txt
+lectorqr.egg-info/requires.txt
+lectorqr.egg-info/top_level.txt

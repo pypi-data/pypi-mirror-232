@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: lectorqr
+Version: 0.1
+Summary: as un import lectorqr y listo
+Author: aslskks
+Author-email: davikenat@gmail.com
+Requires-Dist: opencv-python
+Requires-Dist: pyzbar
