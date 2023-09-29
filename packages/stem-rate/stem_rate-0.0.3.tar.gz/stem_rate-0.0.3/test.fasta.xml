@@ -1,0 +1,239 @@
+<?xml version="1.0" ?>
+<beast version="1.10.4">
+    <taxa id="taxa">
+        <taxon id="A|2023">
+            <date value="2023" direction="forwards" units="years"/>
+        </taxon>
+        <taxon id="B|2023">
+            <date value="2023" direction="forwards" units="years"/>
+        </taxon>
+        <taxon id="C|2023">
+            <date value="2023" direction="forwards" units="years"/>
+        </taxon>
+        <taxon id="D|2023">
+            <date value="2023" direction="forwards" units="years"/>
+        </taxon>
+    </taxa>
+    <alignment id="alignment" dataType="nucleotide">
+        <sequence>
+            ATG
+            <taxon idref="A|2023"/>
+        </sequence>
+        <sequence>
+            ATG
+            <taxon idref="B|2023"/>
+        </sequence>
+        <sequence>
+            ATG
+            <taxon idref="C|2023"/>
+        </sequence>
+        <sequence>
+            ATG
+            <taxon idref="D|2023"/>
+        </sequence>
+    </alignment>
+    <patterns id="patterns" from="1" strip="false">
+        <alignment idref="alignment"/>
+    </patterns>
+    <exponentialGrowth id="exponential" units="years">
+        <populationSize>
+            <parameter id="exponential.popSize" value="1.0" lower="0.0"/>
+        </populationSize>
+        <growthRate>
+            <parameter id="exponential.growthRate" value="0.0"/>
+        </growthRate>
+    </exponentialGrowth>
+    <coalescentSimulator id="startingTree">
+        <taxa idref="taxa"/>
+        <exponentialGrowth idref="exponential"/>
+    </coalescentSimulator>
+    <treeModel id="treeModel">
+        <coalescentTree idref="startingTree"/>
+        <rootHeight>
+            <parameter id="treeModel.rootHeight"/>
+        </rootHeight>
+        <nodeHeights internalNodes="true">
+            <parameter id="treeModel.internalNodeHeights"/>
+        </nodeHeights>
+        <nodeHeights internalNodes="true" rootNode="true">
+            <parameter id="treeModel.allInternalNodeHeights"/>
+        </nodeHeights>
+    </treeModel>
+    <treeLengthStatistic id="treeLength">
+        <treeModel idref="treeModel"/>
+    </treeLengthStatistic>
+    <tmrcaStatistic id="age(root)" absolute="true">
+        <treeModel idref="treeModel"/>
+    </tmrcaStatistic>
+    <coalescentLikelihood id="coalescent">
+        <model>
+            <exponentialGrowth idref="exponential"/>
+        </model>
+        <populationTree>
+            <treeModel idref="treeModel"/>
+        </populationTree>
+    </coalescentLikelihood>
+    <strictClockBranchRates id="branchRates">
+        <rate>
+            <parameter id="clock.rate" value="1.0" lower="0.0"/>
+        </rate>
+    </strictClockBranchRates>
+    <rateStatistic id="meanRate" name="meanRate" mode="mean" internal="true" external="true">
+        <treeModel idref="treeModel"/>
+        <strictClockBranchRates idref="branchRates"/>
+    </rateStatistic>
+    <gtrModel id="gtr">
+        <frequencies>
+            <frequencyModel dataType="nucleotide">
+                <frequencies>
+                    <parameter id="frequencies" value="0.25 0.25 0.25 0.25"/>
+                </frequencies>
+            </frequencyModel>
+        </frequencies>
+        <rates>
+            <parameter id="gtr.rates" dimension="6" value="1.0" lower="0.0"/>
+        </rates>
+    </gtrModel>
+    <siteModel id="siteModel">
+        <substitutionModel>
+            <gtrModel idref="gtr"/>
+        </substitutionModel>
+        <gammaShape gammaCategories="4">
+            <parameter id="alpha" value="0.5" lower="0.0"/>
+        </gammaShape>
+    </siteModel>
+    <statistic id="mu" name="mu">
+        <siteModel idref="siteModel"/>
+    </statistic>
+    <treeDataLikelihood id="treeLikelihood" useAmbiguities="false">
+        <partition>
+            <patterns idref="patterns"/>
+            <siteModel idref="siteModel"/>
+        </partition>
+        <treeModel idref="treeModel"/>
+        <strictClockBranchRates idref="branchRates"/>
+    </treeDataLikelihood>
+    <operators id="operators" optimizationSchedule="default">
+        <deltaExchange delta="0.01" weight="1">
+            <parameter idref="gtr.rates"/>
+        </deltaExchange>
+        <deltaExchange delta="0.01" weight="1">
+            <parameter idref="frequencies"/>
+        </deltaExchange>
+        <scaleOperator scaleFactor="0.75" weight="1">
+            <parameter idref="alpha"/>
+        </scaleOperator>
+        <scaleOperator scaleFactor="0.75" weight="3">
+            <parameter idref="clock.rate"/>
+        </scaleOperator>
+        <upDownOperator scaleFactor="0.75" weight="3">
+            <up>
+                <parameter idref="treeModel.allInternalNodeHeights"/>
+            </up>
+            <down>
+                <parameter idref="clock.rate"/>
+            </down>
+        </upDownOperator>
+        <subtreeSlide size="1.0" gaussian="true" weight="30">
+            <treeModel idref="treeModel"/>
+        </subtreeSlide>
+        <narrowExchange weight="30">
+            <treeModel idref="treeModel"/>
+        </narrowExchange>
+        <wideExchange weight="3">
+            <treeModel idref="treeModel"/>
+        </wideExchange>
+        <wilsonBalding weight="3">
+            <treeModel idref="treeModel"/>
+        </wilsonBalding>
+        <scaleOperator scaleFactor="0.75" weight="3">
+            <parameter idref="treeModel.rootHeight"/>
+        </scaleOperator>
+        <uniformOperator weight="30">
+            <parameter idref="treeModel.internalNodeHeights"/>
+        </uniformOperator>
+        <scaleOperator scaleFactor="0.75" weight="3">
+            <parameter idref="exponential.popSize"/>
+        </scaleOperator>
+        <randomWalkOperator windowSize="1.0" weight="3">
+            <parameter idref="exponential.growthRate"/>
+        </randomWalkOperator>
+    </operators>
+    <mcmc id="mcmc" chainLength="10000000" autoOptimize="true">
+        <joint id="joint">
+            <prior id="prior">
+                <dirichletPrior alpha="1.0" sumsTo="6.0">
+                    <parameter idref="gtr.rates"/>
+                </dirichletPrior>
+                <dirichletPrior alpha="1.0" sumsTo="1.0">
+                    <parameter idref="frequencies"/>
+                </dirichletPrior>
+                <exponentialPrior mean="0.5" offset="0.0">
+                    <parameter idref="alpha"/>
+                </exponentialPrior>
+                <gammaPrior shape="0.5" scale="0.1" offset="0.0">
+                    <parameter idref="clock.rate"/>
+                </gammaPrior>
+                <exponentialPrior mean="100.0" offset="0.0">
+                    <parameter idref="exponential.popSize"/>
+                </exponentialPrior>
+                <laplacePrior mean="0.0" scale="10.0">
+                    <parameter idref="exponential.growthRate"/>
+                </laplacePrior>
+                <coalescentLikelihood idref="coalescent"/>
+                <strictClockBranchRates idref="branchRates"/>
+            </prior>
+            <likelihood id="likelihood">
+                <treeDataLikelihood idref="treeLikelihood"/>
+            </likelihood>
+        </joint>
+        <operators idref="operators"/>
+        <log id="screenLog" logEvery="1000">
+            <column label="Joint" dp="4" width="12">
+                <joint idref="joint"/>
+            </column>
+            <column label="Prior" dp="4" width="12">
+                <prior idref="prior"/>
+            </column>
+            <column label="Likelihood" dp="4" width="12">
+                <likelihood idref="likelihood"/>
+            </column>
+            <column label="age(root)" sf="6" width="12">
+                <tmrcaStatistic idref="age(root)"/>
+            </column>
+            <column label="clock.rate" sf="6" width="12">
+                <parameter idref="clock.rate"/>
+            </column>
+        </log>
+        <log id="fileLog" logEvery="1000" fileName="nextstrain_ba.2.86.filtered.afa.log" overwrite="false">
+            <joint idref="joint"/>
+            <prior idref="prior"/>
+            <likelihood idref="likelihood"/>
+            <parameter idref="treeModel.rootHeight"/>
+            <tmrcaStatistic idref="age(root)"/>
+            <treeLengthStatistic idref="treeLength"/>
+            <parameter idref="exponential.popSize"/>
+            <parameter idref="exponential.growthRate"/>
+            <parameter idref="gtr.rates"/>
+            <parameter idref="frequencies"/>
+            <parameter idref="alpha"/>
+            <parameter idref="clock.rate"/>
+            <rateStatistic idref="meanRate"/>
+            <treeDataLikelihood idref="treeLikelihood"/>
+            <strictClockBranchRates idref="branchRates"/>
+            <coalescentLikelihood idref="coalescent"/>
+        </log>
+        <logTree id="treeFileLog" logEvery="1000" nexusFormat="true" fileName="nextstrain_ba.2.86.filtered.afa.trees" sortTranslationTable="true">
+            <treeModel idref="treeModel"/>
+            <trait name="rate" tag="rate">
+                <strictClockBranchRates idref="branchRates"/>
+            </trait>
+            <joint idref="joint"/>
+        </logTree>
+    </mcmc>
+    <report>
+        <property name="timer">
+            <mcmc idref="mcmc"/>
+        </property>
+    </report>
+</beast>
