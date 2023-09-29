@@ -1,0 +1,11 @@
+dumb_udev/__init__.py,sha256=tPKTBQRCpb4Cwlvb6Mu08kbUF71POm7D9PGHpckmBVA,1749
+dumb_udev/__main__.py,sha256=4F57UhyxQ-RmizBd6BRzN74Vd3GMYuYAsLLSpywlOno,1521
+dumb_udev/metadata.py,sha256=b84RVOe_ZGfE9otlxsN6jouE36HIR4WH-kh86Mbgo2E,3570
+dumb_udev/service.py,sha256=qxwjCxHb7ksn7evklw9_bhHCSTJw_8gxeoeGoIWn7QE,17735
+dumb_udev/version,sha256=kD2T0YRUMmISpdEUwBQtdhc1J_afAjwLqyEIVn8RNDo,43
+dumb_udev-1.0.2.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+dumb_udev-1.0.2.dist-info/METADATA,sha256=gKNeecX-SIf9XhmriS22w60fW7ifODL2xAtcYRp0H54,36692
+dumb_udev-1.0.2.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+dumb_udev-1.0.2.dist-info/entry_points.txt,sha256=YBSXNtfJgU1KiW2pa3Hisk2c6w-8fV_9f0N-6Gc7MkU,53
+dumb_udev-1.0.2.dist-info/top_level.txt,sha256=nEipVsVAE1P5UgMfuGutvXNCySx1_TJfjPUV_3jIvKo,10
+dumb_udev-1.0.2.dist-info/RECORD,,
