@@ -1,0 +1,3 @@
+[console_scripts]
+gdmicro = GDmicro.GDmicro:main
+
