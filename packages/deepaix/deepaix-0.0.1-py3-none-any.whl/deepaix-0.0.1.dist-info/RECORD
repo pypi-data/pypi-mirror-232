@@ -1,0 +1,11 @@
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/common/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/common/test_datetime.py,sha256=C5hYcR3T61hSc4LNB7rqKj0tUHOtVwJ8wJRTfnhs3cQ,1036
+tests/common/test_driver.py,sha256=KZ5cIP5jQmBVsBiFmPRSjvqTIL9rtbeuQGhIPB_I3B4,543
+tests/common/test_secure_requests.py,sha256=Vy7_yx4QXlMzTLq78l67WuSiYTaG_Yz5e0yjRCELykw,583
+tests/common/test_utils.py,sha256=qzTN5dLq09aYRBZSb7iTI99U5I-IARrfF9Fvd-MLIE0,1170
+deepaix-0.0.1.dist-info/LICENSE,sha256=mxJXTYrt5DiP5rXjg69vM8wIvbCaK_o7UURCx0mFnFI,1064
+deepaix-0.0.1.dist-info/METADATA,sha256=n1k34baKoF5OAH63SZJFtxrwsmjX1KXS4m4OdZdwXxg,74
+deepaix-0.0.1.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
+deepaix-0.0.1.dist-info/top_level.txt,sha256=EdW7283x-lr_cbuivW8Ij7ANAP-ZJ9sLtILQseEPxXg,6
+deepaix-0.0.1.dist-info/RECORD,,
