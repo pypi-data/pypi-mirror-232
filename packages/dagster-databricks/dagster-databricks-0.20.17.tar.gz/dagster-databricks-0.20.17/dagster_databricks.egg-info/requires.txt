@@ -1,0 +1,6 @@
+dagster==1.4.17
+dagster-ext-process==1.4.17
+dagster-pyspark==0.20.17
+databricks-cli~=0.17
+databricks_api
+databricks-sdk<0.9
