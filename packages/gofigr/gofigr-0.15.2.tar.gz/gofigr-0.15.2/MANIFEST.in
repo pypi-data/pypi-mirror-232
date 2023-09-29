@@ -1,0 +1,6 @@
+# MANIFEST.in
+
+include *.toml
+include gofigr/resources/*.ttf
+include gofigr/resources/*.js
+include README.rst
