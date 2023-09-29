@@ -1,0 +1,2 @@
+[console_scripts]
+fpdataviewer = fpdataviewer.cli.main:main

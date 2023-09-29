@@ -1,0 +1,10 @@
+numpy
+pandas
+matplotlib
+seaborn
+numba
+scikit-learn
+dscribe
+ovito
+pyside6
+pillow
