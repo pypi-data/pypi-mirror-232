@@ -1,0 +1,14 @@
+dolomite-base
+h5py
+delayedarray>=0.3.2
+numpy
+filebackedarray
+
+[:python_version < "3.8"]
+importlib-metadata
+
+[testing]
+setuptools
+pytest
+pytest-cov
+scipy
