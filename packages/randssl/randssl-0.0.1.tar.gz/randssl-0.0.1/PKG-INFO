@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: randssl
+Version: 0.0.1
+Summary: A Python library for generating random SSL.
+Author: lanXuage
+Author-email: lanxuage@gmail.com
+License: MIT
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# randssl
+A Python library for generating random SSL. 
