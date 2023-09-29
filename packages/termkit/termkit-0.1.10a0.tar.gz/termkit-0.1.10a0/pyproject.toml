@@ -1,0 +1,29 @@
+# Copyright 2023, Thomas Mahé <contact@tmahe.dev>
+# SPDX-License-Identifier: MIT
+
+[tool.poetry]
+name = "termkit"
+version = "0.1.10a0"
+description = "Python command line application framework"
+authors = ["Thomas Mahé <contact@tmahe.dev>"]
+license = "MIT"
+readme = "README.md"
+
+include = [
+    { path = "termkit.tes", format = ["sdist", "wheel"] }
+]
+
+[tool.poetry.scripts]
+test-soft = 'termkit.main:main'
+
+[tool.poetry.dependencies]
+python = "^3.8"
+requests = "^2.31.0"
+
+[tool.black]
+line-length = 120
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
