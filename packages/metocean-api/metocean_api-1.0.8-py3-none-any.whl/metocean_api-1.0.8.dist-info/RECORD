@@ -1,0 +1,13 @@
+metocean_api/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+metocean_api/ts/__init__.py,sha256=BJgQEsUxxzXUWsFb26vHIFBQGb_XMDqTIO_y3cDeth0,531
+metocean_api/ts/aux_funcs.py,sha256=fnCgAI-mkStT4g3TA7b2sFyAEYl322gQ8AYhbrhYKPM,7207
+metocean_api/ts/read_ec.py,sha256=VO0X3_PsWa9xOIaKZUdcglO3kAJi0DA_K5cxJ20YYlY,2226
+metocean_api/ts/read_metno.py,sha256=yOE3UssNB_MhX5fv4chMCsZzem7d--8PpTWGSi0qcH0,5533
+metocean_api/ts/ts_mod.py,sha256=84sO0aZzEpnELwJgXsDss-5wuEg9HIfdrV0prejkahQ,2504
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_extract_data.py,sha256=y-kHxQcyq4VswYHotxqSWKkjPrOo-CE4M8CAP0nbhNE,873
+metocean_api-1.0.8.dist-info/LICENSE.txt,sha256=gXf5dRMhNSbfLPYYTY_5hsZ1r7UU1OaKQEAQUhuIBkM,18092
+metocean_api-1.0.8.dist-info/METADATA,sha256=wPvBpegVINVJ6z7NxYmWFa1D-HhclCi4Fu5xhnS9fr8,575
+metocean_api-1.0.8.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+metocean_api-1.0.8.dist-info/top_level.txt,sha256=a3QbQi4w_yIR1WDKmfGgEq6PIB0OSB-54h5FtMbf58o,19
+metocean_api-1.0.8.dist-info/RECORD,,
