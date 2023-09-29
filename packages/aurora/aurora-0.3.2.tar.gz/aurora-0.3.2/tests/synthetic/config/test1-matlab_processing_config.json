@@ -1,0 +1,548 @@
+{
+    "processing": {
+        "band_setup_file": "/home/kkappler/software/irismt/aurora/aurora/config/emtf_band_setup/bs_256_26.cfg",
+        "band_specification_style": "EMTF",
+        "channel_nomenclature": {
+            "ex": "ex",
+            "ey": "ey",
+            "hx": "hx",
+            "hy": "hy",
+            "hz": "hz"
+        },
+        "decimations": [
+            {
+                "decimation_level": {
+                    "anti_alias_filter": "default",
+                    "bands": [
+                        {
+                            "band": {
+                                "center_averaging_type": "geometric",
+                                "closed": "left",
+                                "decimation_level": 0,
+                                "frequency_max": 0.216796875,
+                                "frequency_min": 0.181640625,
+                                "index_max": 55,
+                                "index_min": 47
+                            }
+                        },
+                        {
+                            "band": {
+                                "center_averaging_type": "geometric",
+                                "closed": "left",
+                                "decimation_level": 0,
+                                "frequency_max": 0.181640625,
+                                "frequency_min": 0.150390625,
+                                "index_max": 46,
+                                "index_min": 39
+                            }
+                        },
+                        {
+                            "band": {
+                                "center_averaging_type": "geometric",
+                                "closed": "left",
+                                "decimation_level": 0,
+                                "frequency_max": 0.146484375,
+                                "frequency_min": 0.119140625,
+                                "index_max": 37,
+                                "index_min": 31
+                            }
+                        },
+                        {
+                            "band": {
+                                "center_averaging_type": "geometric",
+                                "closed": "left",
+                                "decimation_level": 0,
+                                "frequency_max": 0.119140625,
+                                "frequency_min": 0.095703125,
+                                "index_max": 30,
+                                "index_min": 25
+                            }
+                        },
+                        {
+                            "band": {
+                                "center_averaging_type": "geometric",
+                                "closed": "left",
+                                "decimation_level": 0,
+                                "frequency_max": 0.095703125,
+                                "frequency_min": 0.076171875,
+                                "index_max": 24,
+                                "index_min": 20
+                            }
+                        },
+                        {
+                            "band": {
+                                "center_averaging_type": "geometric",
+                                "closed": "left",
+                                "decimation_level": 0,
+                                "frequency_max": 0.076171875,
+                                "frequency_min": 0.060546875,
+                                "index_max": 19,
+                                "index_min": 16
+                            }
+                        },
+                        {
+                            "band": {
+                                "center_averaging_type": "geometric",
+                                "closed": "left",
+                                "decimation_level": 0,
+                                "frequency_max": 0.060546875,
+                                "frequency_min": 0.048828125,
+                                "index_max": 15,
+                                "index_min": 13
+                            }
+                        },
+                        {
+                            "band": {
+                                "center_averaging_type": "geometric",
+                                "closed": "left",
+                                "decimation_level": 0,
+                                "frequency_max": 0.048828125,
+                                "frequency_min": 0.037109375,
+                                "index_max": 12,
+                                "index_min": 10
+                            }
+                        },
+                        {
+                            "band": {
+                                "center_averaging_type": "geometric",
+                                "closed": "left",
+                                "decimation_level": 0,
+                                "frequency_max": 0.037109375,
+                                "frequency_min": 0.029296875,
+                                "index_max": 9,
+                                "index_min": 8
+                            }
+                        },
+                        {
+                            "band": {
+                                "center_averaging_type": "geometric",
+                                "closed": "left",
+                                "decimation_level": 0,
+                                "frequency_max": 0.029296875,
+                                "frequency_min": 0.021484375,
+                                "index_max": 7,
+                                "index_min": 6
+                            }
+                        },
+                        {
+                            "band": {
+                                "center_averaging_type": "geometric",
+                                "closed": "left",
+                                "decimation_level": 0,
+                                "frequency_max": 0.021484375,
+                                "frequency_min": 0.017578125,
+                                "index_max": 5,
+                                "index_min": 5
+                            }
+                        }
+                    ],
+                    "decimation": {
+                        "level": 0,
+                        "factor": 1.0,
+                        "method": "default",
+                        "sample_rate": 1.0
+                    },
+                    "estimator": {
+                        "engine": "RME",
+                        "estimate_per_channel": true
+                    },
+                    "extra_pre_fft_detrend_type": "linear",
+                    "input_channels": [
+                        "hx",
+                        "hy"
+                    ],
+                    "method": "fft",
+                    "min_num_stft_windows": 2,
+                    "output_channels": [
+                        "ex",
+                        "ey",
+                        "hz"
+                    ],
+                    "pre_fft_detrend_type": "linear",
+                    "prewhitening_type": "first difference",
+                    "recoloring": true,
+                    "reference_channels": [],
+                    "regression": {
+                        "minimum_cycles": 10,
+                        "max_iterations": 10,
+                        "max_redescending_iterations": 2
+                    },
+                    "save_fcs": false,
+                    "save_fcs_type": null,
+                    "window": {
+                        "num_samples": 256,
+                        "overlap": 64,
+                        "type": "hamming",
+                        "clock_zero_type": "ignore",
+                        "clock_zero": "1980-01-01T00:00:00+00:00"
+                    }
+                }
+            },
+            {
+                "decimation_level": {
+                    "anti_alias_filter": "default",
+                    "bands": [
+                        {
+                            "band": {
+                                "center_averaging_type": "geometric",
+                                "closed": "left",
+                                "decimation_level": 1,
+                                "frequency_max": 0.01708984375,
+                                "frequency_min": 0.01318359375,
+                                "index_max": 17,
+                                "index_min": 14
+                            }
+                        },
+                        {
+                            "band": {
+                                "center_averaging_type": "geometric",
+                                "closed": "left",
+                                "decimation_level": 1,
+                                "frequency_max": 0.01318359375,
+                                "frequency_min": 0.01025390625,
+                                "index_max": 13,
+                                "index_min": 11
+                            }
+                        },
+                        {
+                            "band": {
+                                "center_averaging_type": "geometric",
+                                "closed": "left",
+                                "decimation_level": 1,
+                                "frequency_max": 0.01025390625,
+                                "frequency_min": 0.00830078125,
+                                "index_max": 10,
+                                "index_min": 9
+                            }
+                        },
+                        {
+                            "band": {
+                                "center_averaging_type": "geometric",
+                                "closed": "left",
+                                "decimation_level": 1,
+                                "frequency_max": 0.00830078125,
+                                "frequency_min": 0.00634765625,
+                                "index_max": 8,
+                                "index_min": 7
+                            }
+                        },
+                        {
+                            "band": {
+                                "center_averaging_type": "geometric",
+                                "closed": "left",
+                                "decimation_level": 1,
+                                "frequency_max": 0.00634765625,
+                                "frequency_min": 0.00537109375,
+                                "index_max": 6,
+                                "index_min": 6
+                            }
+                        },
+                        {
+                            "band": {
+                                "center_averaging_type": "geometric",
+                                "closed": "left",
+                                "decimation_level": 1,
+                                "frequency_max": 0.00537109375,
+                                "frequency_min": 0.00439453125,
+                                "index_max": 5,
+                                "index_min": 5
+                            }
+                        }
+                    ],
+                    "decimation": {
+                        "level": 1,
+                        "factor": 4.0,
+                        "method": "default",
+                        "sample_rate": 0.25
+                    },
+                    "estimator": {
+                        "engine": "RME",
+                        "estimate_per_channel": true
+                    },
+                    "extra_pre_fft_detrend_type": "linear",
+                    "input_channels": [
+                        "hx",
+                        "hy"
+                    ],
+                    "method": "fft",
+                    "min_num_stft_windows": 2,
+                    "output_channels": [
+                        "ex",
+                        "ey",
+                        "hz"
+                    ],
+                    "pre_fft_detrend_type": "linear",
+                    "prewhitening_type": "first difference",
+                    "recoloring": true,
+                    "reference_channels": [],
+                    "regression": {
+                        "minimum_cycles": 10,
+                        "max_iterations": 10,
+                        "max_redescending_iterations": 2
+                    },
+                    "save_fcs": false,
+                    "save_fcs_type": null,
+                    "window": {
+                        "num_samples": 256,
+                        "overlap": 64,
+                        "type": "hamming",
+                        "clock_zero_type": "ignore",
+                        "clock_zero": "1980-01-01T00:00:00+00:00"
+                    }
+                }
+            },
+            {
+                "decimation_level": {
+                    "anti_alias_filter": "default",
+                    "bands": [
+                        {
+                            "band": {
+                                "center_averaging_type": "geometric",
+                                "closed": "left",
+                                "decimation_level": 2,
+                                "frequency_max": 0.0042724609375,
+                                "frequency_min": 0.0032958984375,
+                                "index_max": 17,
+                                "index_min": 14
+                            }
+                        },
+                        {
+                            "band": {
+                                "center_averaging_type": "geometric",
+                                "closed": "left",
+                                "decimation_level": 2,
+                                "frequency_max": 0.0032958984375,
+                                "frequency_min": 0.0025634765625,
+                                "index_max": 13,
+                                "index_min": 11
+                            }
+                        },
+                        {
+                            "band": {
+                                "center_averaging_type": "geometric",
+                                "closed": "left",
+                                "decimation_level": 2,
+                                "frequency_max": 0.0025634765625,
+                                "frequency_min": 0.0020751953125,
+                                "index_max": 10,
+                                "index_min": 9
+                            }
+                        },
+                        {
+                            "band": {
+                                "center_averaging_type": "geometric",
+                                "closed": "left",
+                                "decimation_level": 2,
+                                "frequency_max": 0.0020751953125,
+                                "frequency_min": 0.0015869140625,
+                                "index_max": 8,
+                                "index_min": 7
+                            }
+                        },
+                        {
+                            "band": {
+                                "center_averaging_type": "geometric",
+                                "closed": "left",
+                                "decimation_level": 2,
+                                "frequency_max": 0.0015869140625,
+                                "frequency_min": 0.0013427734375,
+                                "index_max": 6,
+                                "index_min": 6
+                            }
+                        },
+                        {
+                            "band": {
+                                "center_averaging_type": "geometric",
+                                "closed": "left",
+                                "decimation_level": 2,
+                                "frequency_max": 0.0013427734375,
+                                "frequency_min": 0.0010986328125,
+                                "index_max": 5,
+                                "index_min": 5
+                            }
+                        }
+                    ],
+                    "decimation": {
+                        "level": 2,
+                        "factor": 4.0,
+                        "method": "default",
+                        "sample_rate": 0.0625
+                    },
+                    "estimator": {
+                        "engine": "RME",
+                        "estimate_per_channel": true
+                    },
+                    "extra_pre_fft_detrend_type": "linear",
+                    "input_channels": [
+                        "hx",
+                        "hy"
+                    ],
+                    "method": "fft",
+                    "min_num_stft_windows": 2,
+                    "output_channels": [
+                        "ex",
+                        "ey",
+                        "hz"
+                    ],
+                    "pre_fft_detrend_type": "linear",
+                    "prewhitening_type": "first difference",
+                    "recoloring": true,
+                    "reference_channels": [],
+                    "regression": {
+                        "minimum_cycles": 10,
+                        "max_iterations": 10,
+                        "max_redescending_iterations": 2
+                    },
+                    "save_fcs": false,
+                    "save_fcs_type": null,
+                    "window": {
+                        "num_samples": 256,
+                        "overlap": 64,
+                        "type": "hamming",
+                        "clock_zero_type": "ignore",
+                        "clock_zero": "1980-01-01T00:00:00+00:00"
+                    }
+                }
+            },
+            {
+                "decimation_level": {
+                    "anti_alias_filter": "default",
+                    "bands": [
+                        {
+                            "band": {
+                                "center_averaging_type": "geometric",
+                                "closed": "left",
+                                "decimation_level": 3,
+                                "frequency_max": 0.001373291015625,
+                                "frequency_min": 0.001068115234375,
+                                "index_max": 22,
+                                "index_min": 18
+                            }
+                        },
+                        {
+                            "band": {
+                                "center_averaging_type": "geometric",
+                                "closed": "left",
+                                "decimation_level": 3,
+                                "frequency_max": 0.001068115234375,
+                                "frequency_min": 0.000823974609375,
+                                "index_max": 17,
+                                "index_min": 14
+                            }
+                        },
+                        {
+                            "band": {
+                                "center_averaging_type": "geometric",
+                                "closed": "left",
+                                "decimation_level": 3,
+                                "frequency_max": 0.000823974609375,
+                                "frequency_min": 0.000579833984375,
+                                "index_max": 13,
+                                "index_min": 10
+                            }
+                        }
+                    ],
+                    "decimation": {
+                        "level": 3,
+                        "factor": 4.0,
+                        "method": "default",
+                        "sample_rate": 0.015625
+                    },
+                    "estimator": {
+                        "engine": "RME",
+                        "estimate_per_channel": true
+                    },
+                    "extra_pre_fft_detrend_type": "linear",
+                    "input_channels": [
+                        "hx",
+                        "hy"
+                    ],
+                    "method": "fft",
+                    "min_num_stft_windows": 2,
+                    "output_channels": [
+                        "ex",
+                        "ey",
+                        "hz"
+                    ],
+                    "pre_fft_detrend_type": "linear",
+                    "prewhitening_type": "first difference",
+                    "recoloring": true,
+                    "reference_channels": [],
+                    "regression": {
+                        "minimum_cycles": 10,
+                        "max_iterations": 10,
+                        "max_redescending_iterations": 2
+                    },
+                    "save_fcs": false,
+                    "save_fcs_type": null,
+                    "window": {
+                        "num_samples": 256,
+                        "overlap": 64,
+                        "type": "hamming",
+                        "clock_zero_type": "ignore",
+                        "clock_zero": "1980-01-01T00:00:00+00:00"
+                    }
+                }
+            }
+        ],
+        "id": "test1-matlab",
+        "stations": {
+            "remote": [],
+            "local": {
+                "id": "test1",
+                "mth5_path": "/home/kkappler/software/irismt/aurora/tests/synthetic/data/test1.h5",
+                "remote": false,
+                "runs": [
+                    {
+                        "run": {
+                            "id": "001",
+                            "input_channels": [
+                                {
+                                    "channel": {
+                                        "id": "hx",
+                                        "scale_factor": 1.0
+                                    }
+                                },
+                                {
+                                    "channel": {
+                                        "id": "hy",
+                                        "scale_factor": 1.0
+                                    }
+                                }
+                            ],
+                            "output_channels": [
+                                {
+                                    "channel": {
+                                        "id": "ex",
+                                        "scale_factor": 1.0
+                                    }
+                                },
+                                {
+                                    "channel": {
+                                        "id": "ey",
+                                        "scale_factor": 1.0
+                                    }
+                                },
+                                {
+                                    "channel": {
+                                        "id": "hz",
+                                        "scale_factor": 1.0
+                                    }
+                                }
+                            ],
+                            "sample_rate": 1.0,
+                            "time_periods": [
+                                {
+                                    "time_period": {
+                                        "end": "1980-01-01T11:06:39+00:00",
+                                        "start": "1980-01-01T00:00:00+00:00"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}
