@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: ChemSpaceAL
+Version: 1.0.0
+Summary: ChemSpaceAL Python package: an efficient active learning methodology applied to protein-specific molecular generation
+Home-page: https://github.com/gregory-kyro/ChemSpaceAL/tree/main
+Download-URL: https://github.com/gregory-kyro/ChemSpaceAL/archive/refs/tags/v1.0.0.tar.gz
+Author: Gregory W. Kyro, Anton Morgunov & Rafael I. Brent
+Author-email: gregory.kyro@yale.edu
+Keywords: active learning,artificial intelligence,deep learning,machine learning,molecular generation,drug discovery
+License-File: LICENSE
