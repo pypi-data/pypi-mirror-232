@@ -1,0 +1,14 @@
+worklab/__init__.py,sha256=J83dau65uO5eCeLryV_JTRvlkOjT73ffqmiN2y_4eDg,350
+worklab/ana.py,sha256=JzGPx2k5_kDKyaSuZCehC6A6M0iVjoaNmJ-Vpr-DvcY,19747
+worklab/com.py,sha256=eKh3iQnGX-X6WGOG-PcSsQgzeIBgoCKfEAz3bfHKRy0,38324
+worklab/imu.py,sha256=m6hMsgSE2HYoRFkpb35kDTzXkNMGVZ_VgMsL1AbKJck,14541
+worklab/kin.py,sha256=BXrCqvYL5vxK8XkP-FtvYQdVSADHX4qP7kid1Yk6zGM,22058
+worklab/move.py,sha256=o-6wAmMaIPfvmVabdi23Dg0SP329XZUAW0iA9fKsn6M,25681
+worklab/physio.py,sha256=MnXbsQTa8QKhq93cG9gt9baR9ntpdweh4WBxBEraT1w,21270
+worklab/plots.py,sha256=3735CxNV-7x4sANTKWywyQIrWwtzaAl4KuJoAS8lbNA,18752
+worklab/utils.py,sha256=XYQ121dhk51rDLHPI8OVY4nescCQzJ--_JpPNt13MpE,21171
+worklab-2.0.0.dist-info/LICENSE,sha256=COdnPCCsy4DtgUBFwHEmolpXP_NpVM9AINUJPuTm2Ss,35073
+worklab-2.0.0.dist-info/METADATA,sha256=fSBtgi5Xp814haeAh9IgmtYL7-keE85m-pAXUjfD0kY,43430
+worklab-2.0.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+worklab-2.0.0.dist-info/top_level.txt,sha256=GdK5RQavtcrCOMpnG6vwju-24A3xOOZBEWxFbXJNcsg,8
+worklab-2.0.0.dist-info/RECORD,,
