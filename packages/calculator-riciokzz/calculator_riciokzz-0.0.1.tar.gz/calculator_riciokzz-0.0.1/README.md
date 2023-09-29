@@ -1,0 +1,89 @@
+# Calculator Package
+
+The "*Calculator*" package is simple 
+calculator with functions that able 
+to perform these actions:
+- [Addition](#addition)
+- [Subtraction](#subtraction)
+- [Multiplication](#multiplication)
+- [Division](#division)
+- [Take (n) root of a number](#root)
+- [Reset memory](#reset)
+
+## Installation
+
+You can install this package using pip:
+
+```commandline
+pip install ##########
+```
+
+## Usage
+From calculator module import functions to 
+calculate simple algebra. Calculator have **six** 
+main functions which can perform actions with 
+value inside **memory**.
+```commandline
+from calculator import add, sub, multi, div, root, reset_memory
+```
+
+### Functions usage examples:
+
+#### Addition
+calc.add(3) - will add 3 to memory and print Memory: 3.000.
+```
+calc.add(3)
+Memory: 3.000
+```
+
+#### Subtraction
+calc.sub(1) - will subtract 1 from memory and print Memory: 2.000.
+```
+Memory: 3.000
+calc.sub(1)
+Memory: 2.000
+```
+
+#### Multiplication
+calc.multi(3) - will multiply memory by 3 and print Memory: 9.000.
+```
+Memory: 3.000
+calc.multi(3)
+Memory: 9.000
+```
+
+#### Division
+calc.div(3) - will divide memory by 3 and print Memory: 3.000.
+```
+Memory: 9.000
+calc.add(3)
+Memory: 3.000
+```
+
+#### Root
+calc.root(2) - will take (2) root of memory and print Memory: 3.000.
+```
+Memory: 9.000
+calc.root(2)
+Memory: 3.000
+```
+
+#### Reset
+calc.reset_memory() - will clear memory and set it to default 0.
+```
+Memory: 3.000
+calc.reset_memory()
+Memory: 0.000
+```
+
+## Testing
+
+To run the tests, use the following command:
+```commandline
+python test_calculator.py
+```
+
+## License
+
+This project is licensed under the MIT License - 
+see the **LICENSE** file for details.
