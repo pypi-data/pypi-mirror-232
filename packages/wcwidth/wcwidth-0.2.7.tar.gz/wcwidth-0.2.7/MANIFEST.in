@@ -1,0 +1,5 @@
+include LICENSE
+include tox.ini
+recursive-include bin *.py
+recursive-include code_templates *.j2
+recursive-include docs *.py *.rst
