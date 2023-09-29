@@ -1,0 +1,24 @@
+.jp-hmi-select-tags-from-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.jp-hmi-select-tags-from-list__title-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.jp-hmi-select-tags-from-list__table {
+    flex-grow: 1;
+}
+
+.jp-hmi-select-tags-from-list__button {
+    align-self: flex-end;
+}
+
+.jp-hmi-select-tags-from-list__button_cancel {
+    margin-right: 8px;
+}
+
+

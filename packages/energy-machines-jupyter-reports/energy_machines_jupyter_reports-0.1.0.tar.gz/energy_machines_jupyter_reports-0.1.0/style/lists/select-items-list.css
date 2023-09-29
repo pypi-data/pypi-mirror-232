@@ -1,0 +1,44 @@
+.jp-hmi-select-items-list {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.jp-hmi-select-items-list, .jp-hmi-select-items-list * {
+    box-sizing: border-box;
+}
+
+.jp-hmi-select-items-list__auto-sizer-container {
+    flex-grow: 1;
+}
+
+.jp-hmi-select-items-list__placeholder {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.jp-hmi-select-items-list__item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid transparent;
+    overflow: hidden;
+    padding: 0 24px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.jp-hmi-select-items-list__item.jp-hmi-select-items-list__item_active {
+    background-color: var(--jp-brand-color1);
+    color: white;
+    border: 1px solid var(--jp-brand-color1);
+}
+
+.jp-hmi-select-items-list__list_empty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

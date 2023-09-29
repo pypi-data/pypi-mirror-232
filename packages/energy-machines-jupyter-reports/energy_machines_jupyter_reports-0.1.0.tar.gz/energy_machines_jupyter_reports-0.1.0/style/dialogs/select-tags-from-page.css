@@ -1,0 +1,21 @@
+.jp-hmi-select-tags-from-page {
+
+}
+
+.jp-hmi-select-tags-from-page__title-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.jp-hmi-select-tags-from-page__title-container .jp-hmi-modal__title {
+    padding-bottom: 0;
+}
+
+.jp-hmi-select-tags-from-page__button_cancel {
+    margin-right: 8px;
+}
+.jp-hmi-select-tags-from-page__button_prev {
+    margin-right: 8px;
+}

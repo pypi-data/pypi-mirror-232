@@ -1,0 +1,73 @@
+Metadata-Version: 2.1
+Name: energy-machines-jupyter-reports
+Version: 0.1.0
+Summary: A JupyterLab extension developed by Energy Machines for use with reports from THMI.
+Home-page: https://github.com/cybermental/thmi-jupyter-reports
+Author: energymachines.cloud
+License: BSD-3-Clause
+Keywords: Jupyter,JupyterLab,JupyterLab3
+Platform: Linux
+Platform: Mac OS X
+Platform: Windows
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Framework :: Jupyter
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: jupyterlab==3.*,>=3.0.0rc13
+
+# energy_machines_jupyter_reports
+
+A JupyterLab extension.
+
+## Requirements
+
+- JupyterLab >= 3.0
+
+## Install
+
+```bash
+pip install energy_machines_jupyter_reports
+```
+
+## Contributing
+
+### Development install
+
+Note: You will need NodeJS to build the extension package.
+
+The `jlpm` command is JupyterLab's pinned version of
+[yarn](https://yarnpkg.com/) that is installed with JupyterLab. You may use
+`yarn` or `npm` in lieu of `jlpm` below.
+
+```bash
+# Clone the repo to your local environment
+# Change directory to the energy_machines_jupyter_reports directory
+# Install package in development mode
+pip install -e .
+
+# Rebuild extension Typescript source after making changes
+jlpm run build
+```
+
+You can watch the source directory and run JupyterLab at the same time in different terminals to watch for changes in the extension's source and automatically rebuild the extension.
+
+```bash
+# Watch the source directory in one terminal, automatically rebuilding when needed
+jlpm run watch
+# Then run JupyterLab in another terminal
+jupyter lab
+```
+
+With the watch command running, every saved change will immediately be built locally and available in your running JupyterLab. Refresh JupyterLab to load the change in your browser (you may need to wait several seconds for the extension to be rebuilt).
+
+### Uninstall
+
+```bash
+pip uninstall energy_machines_jupyter_reports
+```
