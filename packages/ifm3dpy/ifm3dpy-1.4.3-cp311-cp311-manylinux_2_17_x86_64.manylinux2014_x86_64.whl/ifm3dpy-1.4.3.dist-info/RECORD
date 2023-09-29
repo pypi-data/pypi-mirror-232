@@ -1,0 +1,14 @@
+ifm3dpy.cpython-311-x86_64-linux-gnu.so,sha256=rcv-r7Fcz6GaCkQCBlG1b6t26bKLFslq2p2dVUH9rAU,5306496
+ifm3dpy-1.4.3.dist-info/METADATA,sha256=YGc02h83XCBDeYpywcYFUDRTk4AMKuI7lGuEmbzuBgo,4794
+ifm3dpy-1.4.3.dist-info/top_level.txt,sha256=14HBGAbWOrqlPHpP6qJsqIy1QTcnxt44R8E5pQ6wIMA,15
+ifm3dpy-1.4.3.dist-info/WHEEL,sha256=48wUIcZcdQ2pWN7qt0HP02Cvv6HIQZGsSgx3PsepNj8,152
+ifm3dpy-1.4.3.dist-info/LICENSE,sha256=WNHhf_5RCaeuKWyq_K39vmp9F28LxKsB4SpomwSZ2L0,11357
+ifm3dpy-1.4.3.dist-info/entry_points.txt,sha256=pqInrNlpgzWo5AF8JaFVA0f-3viBOfZ1MaW_jKNQh2k,49
+ifm3dpy-1.4.3.dist-info/RECORD,,
+ifm3dpy-1.4.3.dist-info/LICENSE-thirdparty,sha256=7ZrsjFbOgiDKdtVUEt0YwEhDocS-0ffpHldTyTYYm_I,46704
+ifm3dpy/__init__.pyi,sha256=u9Yb6gXIhsNEfpTEgIkMYaFoQo0waMj4lye_Qb1H6hM,5871
+ifm3dpy/logging/__init__.pyi,sha256=_84BrORnKbE1YGFi8UD04_oPw0uGHHqHBlsnVqAq-EA,3238
+ifm3dpy/device/__init__.pyi,sha256=7DSoMDDwzcA-zHpEyIzZksBRdkYax-py5feC4KbBybU,41973
+ifm3dpy/swupdater/__init__.pyi,sha256=InVqiXfbUt_SKMhMEqYkTI3DVQOizbOMLgMJQ4Owjmw,2234
+ifm3dpy/framegrabber/__init__.pyi,sha256=aztWIYMzTFnFV3QDGq2bo49c0aBbze-sYAQfPM2URU0,12061
+ifm3dpy/deserialize/__init__.pyi,sha256=8_I1TnFha4IDg4LM7YNIjoYOshmBLHpmQHZL1ZwyhSo,12186
