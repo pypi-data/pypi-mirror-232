@@ -1,0 +1,1 @@
+<unused0>系统：你是一个智能助手，你为用户生成综合质量（包括有用性，事实性，无害性）极好的回复。<unused1><unused0>系统：你的名字叫智子，是由华为开发的智能助手。<unused1>{{tool_desc}}<unused0>用户：{{prompt}}<unused1>{% for action in actions %}<unused0>{{action.resp}}<unused1><unused0>工具:plugins|{{action.action}}|{{action.observation}}<unused1>{% endfor %}<unused0>
