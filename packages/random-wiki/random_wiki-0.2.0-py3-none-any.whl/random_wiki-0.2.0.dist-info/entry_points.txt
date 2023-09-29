@@ -1,0 +1,3 @@
+[console_scripts]
+random-wiki=random_wiki:main
+
