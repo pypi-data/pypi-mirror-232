@@ -1,0 +1,5 @@
+pyproject.toml
+jlz_demo_pypi_project.egg-info/PKG-INFO
+jlz_demo_pypi_project.egg-info/SOURCES.txt
+jlz_demo_pypi_project.egg-info/dependency_links.txt
+jlz_demo_pypi_project.egg-info/top_level.txt
