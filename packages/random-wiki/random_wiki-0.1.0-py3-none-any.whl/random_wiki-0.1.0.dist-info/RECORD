@@ -1,0 +1,6 @@
+test_poetry/__init__.py,sha256=vXGtUG22nX8OYAND0jCGMgT-Zr8BtTAu5oxTLfDDYbI,669
+test_poetry/__main__.py,sha256=T0tNUoCc08D4P1lzobJcsW8FPnUR4wtosm958vmwu5k,145
+random_wiki-0.1.0.dist-info/METADATA,sha256=ovi22P68YAHtoVSqBTrdpzABpJ-hFzBay1CqCIvWaU8,1130
+random_wiki-0.1.0.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+random_wiki-0.1.0.dist-info/entry_points.txt,sha256=I9QdxNng5UdRqjITFfjAJxUzbIjxdxwts8peJpUmwHA,48
+random_wiki-0.1.0.dist-info/RECORD,,
