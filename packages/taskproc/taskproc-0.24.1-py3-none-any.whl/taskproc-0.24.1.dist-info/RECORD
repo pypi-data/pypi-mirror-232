@@ -1,0 +1,12 @@
+taskproc-0.24.1.dist-info/METADATA,sha256=U07jk4Z2xqjElxW6nLJXhFvtM54Ndz7LfzTEwqB1Vac,12794
+taskproc-0.24.1.dist-info/WHEEL,sha256=1D4d-_ODszlK6-qFybc5BLF-ZhZvee-uKVh2hLa3IIc,90
+taskproc-0.24.1.dist-info/entry_points.txt,sha256=hW04r87t3_XLuEOLBGzkpqcqZ2_SJ5LGB1B0Y6AqxvQ,53
+taskproc/__init__.py,sha256=lQcuUCsWC3o1dQTwZb0pKPJO3PAF79OM3uhtK9QRFgA,631
+taskproc/__main__.py,sha256=p7KXhIEDb8zFWMBTeoVnhutU0PtzRez_hAiyINdZngc,638
+taskproc/database.py,sha256=F4MLlXFBlqDCnMtlmrK_TuYsYJJ7crL_4OI1_Y7JwQM,6169
+taskproc/executors.py,sha256=ygBMexRS94_tRZVNYbrUhq3IoXCFLv85bbmKQMFdY8U,667
+taskproc/future.py,sha256=f1bF8CqGXucAf4a6iWlTYvs16KyXFk2BDHGBFok-ae8,3915
+taskproc/graph.py,sha256=3pMESesi43_EG9lmpgE_lBseIGXyUhsLts-egup1mCQ,12081
+taskproc/task.py,sha256=yZuZKrINoAAVWoAStKhR4sxGXvTtToEM8HRhPfIX3hI,18819
+taskproc/types.py,sha256=Td6FZ3kVRvRH_4Lps4anxjzQLUJCrrQYRg15DVzkyws,188
+taskproc-0.24.1.dist-info/RECORD,,
