@@ -1,0 +1,119 @@
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "python-jose_aws-kms-extension"
+version = "1.0.1"
+description = "AWS KMS extension for 'python-jose' library."
+
+license = "Apache-2.0"
+
+authors = [
+    "Lynx Tech <lynx-tech@amazon.com>",
+]
+
+readme = ["README.md"]
+
+packages = [{include = "jose_aws_kms_extension"}]
+
+[tool.poetry.dependencies]
+# Compatible Python versions
+python = ">=3.8,<4"
+# Python JOSE
+python-jose = {extras = ["cryptography"], version = "3.3.0"}
+# Boto AWS SDK
+boto3 = {extras = ["kms"], version = "^1.26.155"}
+boto3-stubs = {extras = ["kms"], version = "^1.26.155"}
+
+[tool.poetry.group.dev.dependencies]
+# PyTest (Test runner)
+pytest = "^7.1.2"
+pytest-cov = "^4.1.0"
+# MyPy (for type checking)
+mypy = "^1.3.0"
+# Flake8 (For style checks)
+pyproject-flake8 = "^5.0.4"
+# Poe the Poet (For enhancing Peotry capabilities)
+poethepoet = "^0.20.0"
+# IPython (Interactive Python shell)
+ipython = "^8.12"
+
+[tool.mypy]
+# See https://mypy.readthedocs.io/en/latest/config_file.html for more mypy options.
+
+# Enables the type-checker on the interior of functions without type annotations.
+check_untyped_defs = true
+
+# Displaying specific error codes makes it easier to silence specific errors
+# See also https://mypy.readthedocs.io/en/latest/error_codes.html
+show_error_codes = true
+
+# Show source code snippets and location markers in error messages
+pretty = true
+
+# Suppresses errors about packages which do not implement type-hint sharing.
+# See also https://mypy.readthedocs.io/en/latest/running_mypy.html#missing-imports.
+ignore_missing_imports = true
+
+# Disallows defining functions without type annotations or with incomplete type annotations.
+# See also https://mypy.readthedocs.io/en/stable/config_file.html#confval-disallow_untyped_defs
+disallow_untyped_defs = true
+
+[tool.flake8]
+max-line-length = 120
+
+[tool.coverage.report]
+# Regexes for lines to exclude from consideration
+exclude_also = [
+    # Don't complain about missing debug-only code:
+    "def __repr__",
+    "if self\\.debug",
+
+    # Don't complain if tests don't hit defensive assertion code:
+    "raise NotImplementedError",
+
+    # Don't complain if non-runnable code isn't run:
+    "if 0:",
+    "if __name__ == .__main__.:",
+
+    # Don't complain about abstract methods, they aren't run:
+    "@(abc\\.)?abstractmethod",
+]
+fail_under = 100
+
+[tool.coverage.run]
+branch = true
+parallel = true
+omit = [
+    "*_tmp.py",
+]
+
+[tool.pytest.ini_options]
+addopts = [
+    "--color=yes",
+    "--cov=jose_aws_kms_extension/",
+    "--cov-report=html:htmlcov/coverage",
+    "--cov-report=term-missing",
+    "--cov-report=xml:coverage.xml",
+    "--durations=5",
+]
+python_files = [
+    "*_test.py"
+]
+
+[tool.poe.tasks]
+env38 = "poetry env use 3.8"
+lock = "poetry lock"
+install = "poetry install"
+build = "poetry build"
+type-check = "poetry run mypy ."
+style-check = "poetry run pflake8"
+test = "poetry run pytest"
+
+# Release command with Python verison 3.8.
+release = ["env38", "lock", "install", "type-check", "style-check", "test", "build"]
+
+# Release command with no Python version enforcment.
+# The 'env-' preffix suggests that you can use your own Python env for the release.
+env-release = ["lock", "install", "type-check", "style-check", "test", "build"]
