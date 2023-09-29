@@ -1,0 +1,10 @@
+llamachat/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+llamachat/_version.py,sha256=fKNJfpf_JYKQY0jG7WLl7GeDn0Cgl8klTERjJ_w6XJw,274
+llamachat/app.py,sha256=nyelwivo-v2gdS20QbrrexryiIxE1MWr_TwUUO9Bd5I,5180
+llamachat/cli.py,sha256=Pb1901FNYesFe-dvRlDv-J3r-32G2xeA8s3UH4KQHrU,473
+llamachat/utils.py,sha256=edyd0LgG0BYIcvlQhyBA0ZEm_dlngESpHtQeYHFXYJI,323
+llamachat-0.1.0.dist-info/METADATA,sha256=TwoMZtV_cH6vXuL8kRnXCv-bAS9d2Fa6gB6fRwiAekw,416
+llamachat-0.1.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+llamachat-0.1.0.dist-info/entry_points.txt,sha256=xlMKcmhrqVVsj-77aUlBqDfnJWhWeNuhM7jV1EmJA9s,48
+llamachat-0.1.0.dist-info/top_level.txt,sha256=i744EOkdjA77wGl32NuKiGLS3bJDlbKvP2VQiNM7raE,10
+llamachat-0.1.0.dist-info/RECORD,,
