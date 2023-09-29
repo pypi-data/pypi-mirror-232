@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: py-request-nacos
+Version: 0.0.7
+Summary: request service from nacos
+Author: lidaning
+Author-email: 453882101@qq.com
+Requires-Dist: requests
+Requires-Dist: numpy
+
