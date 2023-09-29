@@ -1,0 +1,11 @@
+scipy>=1.2.0
+numpy
+pandas
+matplotlib
+xlrd
+
+[dev]
+pytest
+Flake8-pyproject
+black
+jupyter-book
