@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: radiflow-folder-upload
+Version: 0.0.1
+Summary: Streamlit component that allows you to do upload folders using a simple websocket connection.
+Home-page: UNKNOWN
+Author: Sander Hummerich
+Author-email: sander.hummerich@med.uni-heidelberg.de
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Provides-Extra: devel
+License-File: LICENSE
+
+# streamlit-custom-component
+
+Streamlit component that allows you to do X
+
+## Installation instructions
+
+```sh
+pip install streamlit-custom-component
+```
+
+## Usage instructions
+
+```python
+import streamlit as st
+
+from radiflow_folder_upload import radiflow_folder_upload
+
+value = radiflow_folder_upload()
+
+st.write(value)
+```
+
