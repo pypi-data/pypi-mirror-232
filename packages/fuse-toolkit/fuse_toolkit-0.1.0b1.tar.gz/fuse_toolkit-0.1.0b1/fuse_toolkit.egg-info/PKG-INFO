@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: fuse-toolkit
+Version: 0.1.0b1
+Summary: FUSE toolkit supports fluorescent cell image alignment and analysis.
+Author: Shani Zuniga
+Author-email: shani.zuniga@gmail.com
+License: MIT
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering
+License-File: LICENSE
