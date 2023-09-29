@@ -1,0 +1,8 @@
+selenium_assist/__init__.py,sha256=aNQZBkmZIbj5zak9ht45WMKWk93JPJEYbqTKk4HeSFg,499
+selenium_assist/helpers.py,sha256=n8DoG_IwSrFrh5kr-U7s75RM--LzSa1hORvZHU5wcZA,1308
+selenium_assist/managers.py,sha256=haVgI7BliLeGj_U-0dtLzPuLpwJDlCuDx_ejRpsoURU,1232
+selenium_assist/wrappers.py,sha256=BMfchLMduP4SKZbcNLSoW7hCdQP0wg2q3ADh90qDseg,6347
+selenium_assist-0.3.2.dist-info/METADATA,sha256=tP6Lfrq1e3gwm7BZTZAmsv8NHC4Vzkklg5f5LBb2HcA,2514
+selenium_assist-0.3.2.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+selenium_assist-0.3.2.dist-info/licenses/LICENSE,sha256=FMFqZzh_QjkCS4FeVoNyzwmkieCOdafLqV2eNB6v75Q,1071
+selenium_assist-0.3.2.dist-info/RECORD,,
