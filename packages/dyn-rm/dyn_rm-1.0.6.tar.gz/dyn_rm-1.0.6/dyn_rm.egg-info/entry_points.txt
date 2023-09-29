@@ -1,0 +1,3 @@
+[console_scripts]
+dyn_rm = dyn_rm.dynamic_resource_manager:main
+
