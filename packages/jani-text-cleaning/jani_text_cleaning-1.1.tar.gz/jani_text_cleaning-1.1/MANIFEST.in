@@ -1,0 +1,3 @@
+include *.py
+include jani_text_cleaning/*.py
+include jani_text_cleaning/cleaning/*.py
