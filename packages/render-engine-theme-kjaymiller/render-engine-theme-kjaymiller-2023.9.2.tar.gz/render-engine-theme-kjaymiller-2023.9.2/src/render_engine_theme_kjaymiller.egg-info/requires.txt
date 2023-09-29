@@ -1,0 +1,12 @@
+jinja2
+render-engine-tailwindcss==2023.7.1a2
+
+[dev]
+pytest
+pytest-mock
+pytest-cov
+pytest-playwright
+axe-playwright-python
+playwright
+ruff
+black
