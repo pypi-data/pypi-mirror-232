@@ -1,0 +1,10 @@
+LICENSE
+LICENSE.txt
+README.md
+setup.py
+r503/__init__.py
+r503.egg-info/PKG-INFO
+r503.egg-info/SOURCES.txt
+r503.egg-info/dependency_links.txt
+r503.egg-info/requires.txt
+r503.egg-info/top_level.txt
