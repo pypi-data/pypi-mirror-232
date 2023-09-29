@@ -1,0 +1,42 @@
+* {
+    scrollbar-size: 1 1;
+}
+
+#main {
+    height: 100%;
+    width: 100%;
+}
+
+#left {
+    height: 100%;
+    width: 50%;
+}
+
+#right {
+    height: 100%;
+    width: 50%;
+    border-left: outer white 100%;
+}
+
+#status_log {
+    height: 15%;
+}
+
+Header {
+    dock: top;
+    height: 1;
+    content-align: center middle;
+}
+
+Footer {
+    dock: bottom;
+    height: 1;
+}
+
+#no_bucket {
+    width: auto;
+}
+
+ToastRack {
+    padding-bottom: 1;
+}
