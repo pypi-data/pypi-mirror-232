@@ -1,0 +1,14 @@
+Changelog
+=========
+
+
+1.0.0a2 (2023-09-28)
+--------------------
+
+- Disable csrf protection on acs (callback view). [mathias.leimgruber]
+
+
+1.0.0a1 (2023-09-28)
+--------------------
+
+- Init release [mathias.leimgruber]
