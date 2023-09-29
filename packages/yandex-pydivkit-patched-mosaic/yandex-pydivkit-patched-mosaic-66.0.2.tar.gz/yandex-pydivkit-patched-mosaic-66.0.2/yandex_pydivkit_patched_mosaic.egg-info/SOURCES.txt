@@ -1,0 +1,6 @@
+README.md
+setup.py
+yandex_pydivkit_patched_mosaic.egg-info/PKG-INFO
+yandex_pydivkit_patched_mosaic.egg-info/SOURCES.txt
+yandex_pydivkit_patched_mosaic.egg-info/dependency_links.txt
+yandex_pydivkit_patched_mosaic.egg-info/top_level.txt
