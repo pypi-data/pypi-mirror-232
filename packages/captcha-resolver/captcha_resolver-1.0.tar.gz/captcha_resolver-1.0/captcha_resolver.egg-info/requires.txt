@@ -1,0 +1,6 @@
+shutil
+requests
+cv2
+re
+numpy
+ultralytics
