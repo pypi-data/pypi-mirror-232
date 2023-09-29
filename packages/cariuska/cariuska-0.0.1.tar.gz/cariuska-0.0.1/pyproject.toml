@@ -1,0 +1,17 @@
+[project]
+name = "cariuska"
+version = "0.0.1"
+authors = [
+  { name="Thiago Cariuska", email="tcariuska@gmail.com" },
+]
+description = "Cariuska Package"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/cariuska/cariuska_pkg"
