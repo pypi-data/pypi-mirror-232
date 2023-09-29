@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+systux/__init__.py
+systux/cli.py
+systux/version.py
+systux.egg-info/PKG-INFO
+systux.egg-info/SOURCES.txt
+systux.egg-info/dependency_links.txt
+systux.egg-info/entry_points.txt
+systux.egg-info/top_level.txt
+systux.egg-info/zip-safe
