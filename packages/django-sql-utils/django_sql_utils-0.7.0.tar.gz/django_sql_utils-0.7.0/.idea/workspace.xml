@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8cbf6c5c-e7c0-42a4-bb08-fa0ef1167aab" name="Changes" comment="Fix issue with ForeignKeys that have a different related_name and related_query_name">
+      <change afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 6
+}]]></component>
+  <component name="ProjectId" id="2Vz4AY2Ymc0CYyIQ23WdIhCxLiN" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "/home/bmarts/projects/django-sql-utils",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/sql_util/tests" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8cbf6c5c-e7c0-42a4-bb08-fa0ef1167aab" name="Changes" comment="" />
+      <created>1695825432189</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1695825432189</updated>
+      <workItem from="1695825433236" duration="18589000" />
+    </task>
+    <task id="LOCAL-00001" summary="Remove travis.yml">
+      <option name="closed" value="true" />
+      <created>1695825496919</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1695825496919</updated>
+    </task>
+    <task id="LOCAL-00002" summary="clean up the test runner">
+      <option name="closed" value="true" />
+      <created>1695828481306</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1695828481306</updated>
+    </task>
+    <task id="LOCAL-00003" summary="update the test matrix">
+      <option name="closed" value="true" />
+      <created>1695828625723</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1695828625723</updated>
+    </task>
+    <task id="LOCAL-00004" summary="update readme badges">
+      <option name="closed" value="true" />
+      <created>1695828689426</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1695828689426</updated>
+    </task>
+    <task id="LOCAL-00005" summary="remove ordering from test, remove skipIf check for django less than version 3.">
+      <option name="closed" value="true" />
+      <created>1695829320616</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1695829320616</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Add coverage to github workflows">
+      <option name="closed" value="true" />
+      <created>1695830616211</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1695830616211</updated>
+    </task>
+    <task id="LOCAL-00007" summary="fix coverage command">
+      <option name="closed" value="true" />
+      <created>1695830814849</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1695830814849</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Add default ordering to test models so that we catch issues that arise from default ordering.&#10;&#10;Split test files into two logical groups.&#10;&#10;Fix bug that prevented use of SubqueryAggregates in updates.">
+      <option name="closed" value="true" />
+      <created>1695846612462</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1695846612462</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Fix issue with ForeignKeys that have a different related_name and related_query_name">
+      <option name="closed" value="true" />
+      <created>1695875053666</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1695875053666</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Remove travis.yml" />
+    <MESSAGE value="clean up the test runner" />
+    <MESSAGE value="update the test matrix" />
+    <MESSAGE value="update readme badges" />
+    <MESSAGE value="remove ordering from test, remove skipIf check for django less than version 3." />
+    <MESSAGE value="Add coverage to github workflows" />
+    <MESSAGE value="fix coverage command" />
+    <MESSAGE value="Add default ordering to test models so that we catch issues that arise from default ordering.&#10;&#10;Split test files into two logical groups.&#10;&#10;Fix bug that prevented use of SubqueryAggregates in updates." />
+    <MESSAGE value="Fix issue with ForeignKeys that have a different related_name and related_query_name" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix issue with ForeignKeys that have a different related_name and related_query_name" />
+  </component>
+</project>
