@@ -1,0 +1,10 @@
+runtests.py,sha256=pEfqssIzjQN8GEUuKGTaZx1hRIKLWyduorYCXbDdvQ4,863
+sql_util/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sql_util/aggregates.py,sha256=LEjDNWvMTux78MsT_9Vgwz5nwMpRhTyIzHa-q7yhOHA,11421
+sql_util/apps.py,sha256=SyGnFbl1TRJ8wehLVLjMUrbQRZUQYeatSyQ-xEnHJ58,90
+sql_util/debug.py,sha256=d9CXRc8D7YBzjyn8riCEV2eOVbtBLlOH3vB1K2GK7j4,151
+sql_util/utils.py,sha256=mB5XIh9Q_1oBZwEbFwha8LvFM9-VWlizU78QxwtOsN8,124
+django_sql_utils-0.7.0.dist-info/METADATA,sha256=tTMejuzXKsHl90pks3VgpWbGmio8knz8GPKNFNNPi-0,4388
+django_sql_utils-0.7.0.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+django_sql_utils-0.7.0.dist-info/licenses/LICENSE,sha256=mQaJbSelOp3Sqz0x6VN7VGpEkf6Q-fN6jfX92ugqvs4,1073
+django_sql_utils-0.7.0.dist-info/RECORD,,
