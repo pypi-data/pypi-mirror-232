@@ -1,0 +1,8 @@
+rdapi/__init__.py,sha256=CCm1E4J8sQDFwuijmKzQAs8s2pO2YfIqx8HRzjrIIy4,21
+rdapi/error_codes.json,sha256=Vfxs1mEah6R7C1spT__M9ZUHff8f31Yo0M01QuOBxSs,1207
+rdapi/rdapi.py,sha256=k4qY8JUmlfuUJHsuClmtacnX-ky9PFc9HoSv2PVNc64,7985
+rd_api_py-0.4.0.dist-info/LICENSE,sha256=c0FMFUtkGehfd3BPDYhlzuqxefHFrtVWV3lP3PNbFac,1067
+rd_api_py-0.4.0.dist-info/METADATA,sha256=XDKWYvqpBKmZumQadSKyGSGEUPo5uq72AjBIeSD7o2U,1276
+rd_api_py-0.4.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+rd_api_py-0.4.0.dist-info/top_level.txt,sha256=lXsLEvEDLP5eNr5gKna9X3gGhyE-bt8Ncb3ngBQrUW0,6
+rd_api_py-0.4.0.dist-info/RECORD,,
