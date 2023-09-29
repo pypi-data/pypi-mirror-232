@@ -1,0 +1,88 @@
+Metadata-Version: 2.1
+Name: FileScanner
+Version: 1.1.4
+Summary: Scans files based on input array
+Author-email: Ryan Sanders <rasanders22@gmail.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# FileScanner Version History
+
+-Future Enhancements
+  - filtered results based on various methods
+  - sorted results by various methods.
+
+###Examples
+```python
+#searches c:\test and all subfolders for .txt files
+from FileScanner import Scanner
+df = Scanner.scan(fr'c:\test',['txt'],True)
+for index,row in df.iterrows():
+    print(row)
+
+# searches c:\test for all all pb in c:\test only
+for index, row in Scanner.scan(path=fr'C:\Users\user\Downloads',file_type_array= ['pb']).iterrows():
+    print(row)
+#Passing keyword arguments
+df = Scanner.scan(path=fr'c:\test', 
+                  file_type_array=['jpg'],
+                  recursive=True)
+
+df = Scanner.scan(path=fr'C:\Users\user\Downloads',file_type_array=['pb'],recursive=True)
+for index, row in df.iterrows():
+    print(row)
+
+
+"""
+Example returned pandas dataframe row
+file               C:\Users\user\Downloads\saved_model.pb
+file_name                                   saved_model.pb
+file_type                                               pb
+file_path                         C:\Users\user\Downloads
+file_name_no_ext                                saved_model
+file_size                                          9263838
+file_accessed                   2023-09-03 17:49:41.942508
+file_modified                          2020-08-03 17:15:55
+file_created                    2023-09-03 17:49:41.942508
+Name: 0, dtype: object
+"""
+
+```
+###Example return pandas dataframe row
+
+## Newest Version: 1.04
+
+- Status: **Newest Version**
+- Description: The latest version, 1.04, is now available. It includes bug fixes and new features.
+- Updates and Changes
+  - Added more data.
+  - Added file size.
+  - Added File created,modified, and last accessed date
+- Added error handling and input requirements
+  - path must be valid
+  - file types must be in array
+  - recursive flag if passed must be a bool.  
+
+
+## Version 1.03
+
+- Status: **Updated**
+- Description: Version 1.03
+    - First working release
+
+## Version 1.02
+
+- Status: **Did Not Work**
+- Description: Similar to version 1.01, this version also faced issues and could not be used.
+
+
+## Version 1.01
+
+- Status: **Did Not Work**
+- Description: This version encountered critical issues and was not functional.
+
+
