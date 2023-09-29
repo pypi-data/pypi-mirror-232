@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: pacote0770
+Version: 0.0.1
+Summary: Pacote Teste
+Author: Jefferson Figueiredo Dantas
+Author-email: jeffersonfdantas95@gmail.com
+License: MIT License
+Keywords: Pacote
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+
+# README
+Teste de pacote 0770.
+
+
+
