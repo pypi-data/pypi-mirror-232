@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: openai-function-calling-aeolin
+Version: 0.0.6
+Summary: OpenAI wrapper around function calls
+Author-email: Aeolin Ferjünnoz <aeolin@aeol.in>
+Project-URL: Homepage, https://github.com/Aeolin/openai_function_calling.git
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: Public Domain
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: openai>=0.28.1
+Requires-Dist: pydantic>=2.4.0
+Requires-Dist: tiktoken>=0.5.1
