@@ -1,0 +1,14 @@
+chainer~=7.8
+chainercv~=0.13
+chainercv2
+# cupy version 7.8.0.post1
+-e git+https://github.com/cupy/cupy.git@3e3635d802eda54a4b8c96d0126c646e97c3d239#egg=cupy
+sacred==0.8.1
+#jupyter==1.0.0
+
+# chainer-addons~=0.9
+# cvdatasets~=0.9
+# cvargparse~=0.3
+# cvfinetune~=0.5
+# cvplotlib~=0.1
+# fve-layer==0.1.0

@@ -1,0 +1,4 @@
+chainer~=7.8
+chainercv~=0.13
+chainercv2
+sacred==0.8.1

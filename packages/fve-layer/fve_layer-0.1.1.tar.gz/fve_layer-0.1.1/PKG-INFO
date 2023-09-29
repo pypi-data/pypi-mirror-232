@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: fve_layer
+Version: 0.1.1
+Summary: Deep Fisher Vector Layer Implementation
+Author: Dimitri Korsch
+Author-email: korschdima@gmail.com
+License: MIT License
+Requires-Python: >3.7
+License-File: LICENSE
