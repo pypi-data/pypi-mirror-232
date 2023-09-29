@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: binance-ohlcv
+Version: 0.0.0
+Summary: Fetch binance OHLCV data
+Author-Email: Meng Xiangzhuo <aumo@foxmail.com>
+License: MIT
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+
+# binance-ohlcv
