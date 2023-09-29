@@ -1,0 +1,3 @@
+[console_scripts]
+seqstr = seqstr.seqstr:main
+
