@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: mugs
+Version: 0.0.1
+Summary: An efficient data structure
+Home-page: https://github.com/lingfeiwang/mugs
+Author: Lingfei Wang
+Author-email: Lingfei.Wang.github@outlook.com
+License: BSD-3-Clause
+Classifier: Development Status :: 1 - Planning
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Environment :: GPU :: NVIDIA CUDA
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Description-Content-Type: text/x-rst
+Requires-Dist: numpy
+Requires-Dist: torch
+
+=========
+MUGS☕️
+=========
+This is a python module of an efficient data structure.

@@ -1,0 +1,8 @@
+README.rst
+setup.py
+mugs.egg-info/PKG-INFO
+mugs.egg-info/SOURCES.txt
+mugs.egg-info/dependency_links.txt
+mugs.egg-info/requires.txt
+mugs.egg-info/top_level.txt
+src/mugs/__init__.py
