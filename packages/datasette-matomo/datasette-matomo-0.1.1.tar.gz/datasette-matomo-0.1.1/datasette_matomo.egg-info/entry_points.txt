@@ -1,0 +1,2 @@
+[datasette]
+matomo = datasette_matomo

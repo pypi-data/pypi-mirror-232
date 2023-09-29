@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+datasette_matomo/__init__.py
+datasette_matomo.egg-info/PKG-INFO
+datasette_matomo.egg-info/SOURCES.txt
+datasette_matomo.egg-info/dependency_links.txt
+datasette_matomo.egg-info/entry_points.txt
+datasette_matomo.egg-info/requires.txt
+datasette_matomo.egg-info/top_level.txt
+tests/test_matomo.py
