@@ -1,0 +1,1 @@
+A python package named as "omshakya", it providing most used generic python code utilities.
