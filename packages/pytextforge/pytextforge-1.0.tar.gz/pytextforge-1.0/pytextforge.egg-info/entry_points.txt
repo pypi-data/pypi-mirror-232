@@ -1,0 +1,3 @@
+[console_scripts]
+pytextforge = src.__main__:main
+

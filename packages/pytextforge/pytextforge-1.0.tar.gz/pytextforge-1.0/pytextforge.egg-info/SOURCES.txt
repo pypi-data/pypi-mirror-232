@@ -1,0 +1,14 @@
+setup.py
+pytextforge.egg-info/PKG-INFO
+pytextforge.egg-info/SOURCES.txt
+pytextforge.egg-info/dependency_links.txt
+pytextforge.egg-info/entry_points.txt
+pytextforge.egg-info/requires.txt
+pytextforge.egg-info/top_level.txt
+src/__init__.py
+src/__main__.py
+src/file.py
+src/forge.py
+src/inputs.py
+src/messages.py
+src/metadata.py
