@@ -1,0 +1,23 @@
+metatab
+metatabdecl
+rowgenerators
+geoid
+tableintuit
+markdown
+nameparser
+pybtex
+jinja2
+terminaltables
+boto3
+bs4
+unicodecsv
+pyyaml
+colored
+semantic_version
+
+[:python_version < "3.8"]
+importlib-metadata
+
+[testing]
+pytest
+pytest-cov

@@ -1,0 +1,16 @@
+version: '3'
+services:
+  metapack:
+    image: metapack:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+          CONFIG_FILE: ${CONFIG_FILE}
+    env_file:
+        environment-private.env
+    environment:
+        - AWS_ACCESS_KEY_ID=AKIAIOSFODNN7EXAMPLE
+        - AWS_SECRET_ACCESS_KEY=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+        #- AWS_DEFAULT_REGION= us-west-2
+
