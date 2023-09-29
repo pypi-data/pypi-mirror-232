@@ -1,0 +1,161 @@
+Metadata-Version: 2.1
+Name: alx-tool
+Version: 2.0.0
+Summary: A Python package for automating ALX School tasks.
+Home-page: https://github.com/AmonMunyai/alx-tool
+Author: Amon Munyai
+Author-email: Amonmunyai11@gmail.com
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+License-File: AUTHORS
+Requires-Dist: scrapy==2.5.1
+Requires-Dist: cryptography==3.4.8
+
+# ALX Tool 2.0.0
+
+## Overview
+
+The ALX Tool is a robust and user-friendly utility designed to enhance the experience of ALX students when retrieving project files from the ALX intranet student dashboard. With the ALX Tool, students can effortlessly retrieve project files by simply pasting the project link from the dashboard. The tool automatically fetches the names of the task files and creates them on the student's local machine.
+
+## Features
+
+- **Automated Retrieval**: Say goodbye to manual file creation. ALX Tool automates the process for you, saving you valuable time.
+
+- **Configuration Wizard**: Set up your ALX student email for easy access to your projects using the `configure` command.
+
+- **Initialization**: Quickly initialize your projects using the `init` command, and the tool fetches project data for you.
+
+- **List Project Tasks**: See a clear list of your project tasks with the `list` command.
+
+## Installation
+
+If you're new to Python or using a new Linux system, follow these installation steps carefully:
+
+### Step 1: Install Python
+
+Before using ALX Tool, you need to have Python installed on your system. If Python is not already installed, follow these steps:
+
+#### For Linux (Ubuntu):
+
+Open your terminal and run the following commands:
+
+```bash
+sudo apt update
+sudo apt install python3
+```
+
+#### For Linux (Fedora):
+Open your terminal and run the following commands:
+
+```bash
+sudo dnf install python3
+```
+#### For macOS:
+macOS usually comes with Python pre-installed. Open your terminal and check the installed Python version:
+
+```bash
+python3 --version
+```
+
+### Step 2: Install Git
+
+To clone the ALX Tool repository, you need Git. If Git is not already installed, follow these steps:
+
+#### For Linux (Ubuntu):
+
+```bash
+sudo apt update
+sudo apt install git
+```
+#### For Linux (Fedora):
+
+```bash
+sudo dnf install git
+```
+#### For macOS:
+
+You can install Git via Homebrew. First, install Homebrew if you don't have it:
+
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+Then, install Git:
+
+```bash
+brew install git
+```
+### Step 3: Clone the ALX Tool Repository
+
+Now that you have Python and Git installed, you can clone the ALX Tool repository:
+
+```bash
+git clone https://github.com/AmonMunyai/alx-tool.git
+```
+
+### Step 4: Install ALX Tool
+
+Navigate to the project directory:
+
+```bash
+cd alx-tool
+```
+Install the ALX Tool package using pip:
+
+```bash
+pip install .
+```
+
+(Note the dot at the end, which specifies the current directory as the installation source.)
+
+## Usage
+
+### Configuration Wizard
+Set up your ALX student email for easy access:
+
+```bash
+alx-tool configure
+```
+
+### Initialization
+Initialize your project:
+
+```bash
+alx-tool init <project_name>
+```
+
+### Fetching Project Files
+
+Fetch project files with ease:
+
+```bash
+alx-tool init <project_name_or_url>
+```
+
+### Listing Project Tasks
+
+List your project tasks:
+
+```bash
+alx-tool list
+```
+
+## Feedback and Contributions
+
+We welcome feedback and contributions to improve the ALX Tool. If you encounter any issues or have ideas for enhancements, please [create an issue](https://github.com/AmonMunyai/alx-tool/issues) on the project's GitHub repository.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Disclaimer
+
+The ALX Tool is a personal project created to aid ALX students in managing their project files efficiently. It is not officially affiliated with ALX or any educational institution. Please use it responsibly and in compliance with your institution's policies.
+
+**Note**: This documentation is for informational purposes and will be updated as the ALX Tool continues to evolve.

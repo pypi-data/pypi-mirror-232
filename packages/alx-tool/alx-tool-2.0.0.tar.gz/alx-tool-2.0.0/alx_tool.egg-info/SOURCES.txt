@@ -1,0 +1,16 @@
+AUTHORS
+LICENSE
+README.md
+setup.py
+alx_tool/__init__.py
+alx_tool/__main__.py
+alx_tool/config.py
+alx_tool/spider.py
+alx_tool/utils.py
+alx_tool/version.py
+alx_tool.egg-info/PKG-INFO
+alx_tool.egg-info/SOURCES.txt
+alx_tool.egg-info/dependency_links.txt
+alx_tool.egg-info/entry_points.txt
+alx_tool.egg-info/requires.txt
+alx_tool.egg-info/top_level.txt

@@ -1,0 +1,2 @@
+scrapy==2.5.1
+cryptography==3.4.8
