@@ -1,0 +1,8 @@
+cellmap_schemas/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cellmap_schemas/annotation.py,sha256=rLTxPv-y2P6HEsrp2K7DFEt9SsPEsky9kiwaLxAZRuA,14048
+cellmap_schemas/cli.py,sha256=0kE2GqNPcUIvWR1gS-uKfANmei7eh_9kqm95dSqa0c8,128
+cellmap_schemas-0.1.0.dist-info/LICENSE,sha256=GypaXv-WNch3Dhm4_HxwJagHJ_YxvYRkFcW19P7rORI,1466
+cellmap_schemas-0.1.0.dist-info/METADATA,sha256=4JLfKsXTrtCyS31mpd29RedroCv2ye5dzSviu_iJiWY,468
+cellmap_schemas-0.1.0.dist-info/WHEEL,sha256=Zb28QaM1gQi8f4VCBhsUklF61CTlNYfs9YAZn-TOGFk,88
+cellmap_schemas-0.1.0.dist-info/entry_points.txt,sha256=o1VBVAGGt2le4X-RZM1-In32cQsKtKO-C1IQ9EIVXCs,61
+cellmap_schemas-0.1.0.dist-info/RECORD,,
