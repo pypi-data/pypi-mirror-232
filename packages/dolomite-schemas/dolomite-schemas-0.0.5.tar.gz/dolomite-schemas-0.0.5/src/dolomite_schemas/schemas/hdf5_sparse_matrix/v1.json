@@ -1,0 +1,95 @@
+{
+    "$id": "hdf5_sparse_matrix/v1.json",
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "_attributes": {
+        "format": "application/x-hdf5",
+        "restore": {
+            "R": "alabaster.matrix::loadArray",
+            "python": "dolomite_matrix.load_hdf5_sparse_matrix"
+        }
+    },
+    "additionalProperties": false,
+    "description": "Sparse matrix, saved in compressed sparse format inside a group of a HDF5 file. The HDF5 group should contain the typical contents of the compressed sparse matrix, i.e., `indices`, `indptr` and `data`. Specifically, `data` should be a 1-dimensional integer or numeric dataset contains the values of the non-zero elements; `indices` should be a 1-dimensional integer dataset containing the 0-based row/column index for each non-zero element in `data`; and `indptr` should be a 1-dimensional integer dataset of length equal to the number of columns/rows plus 1, containing pointers to the start and end of each column/row. The exact interpretation depends on the format specified in `format`.\n\nThe `array.dimensions` property should have exactly two elements. The first entry should be the number of rows, while the second entry should be the number of columns.\n\nDimnames may also be saved inside the same HDF5 file, as string datasets in another group. In such cases, the `hdf5_sparse_matrix.dimnames` property should be present and contain the name of that group.\n\nBoolean `data` are stored as integer HDF5 datasets, where a value of 1 is truthy and a value of zero is falsey. These can be distinguished from integer columns by inspecting the `array.type` property.\n\nInteger `data` can be represented by any integer HDF5 datatype at the discretion of the data generator. However, it is advisable to use a data type that is representable by a 32-bit signed integer, for maximum compatibility with downstream clients.\n\nIf `data` is stored as an integer HDF5 dataset, missing values are represented by -2147483648.\n\nDerived from `array/v1.json`: some kind of multi-dimensional array, where we store metadata about the dimensions and type of data. The exact implementation of the array is left to concrete subclasses.",
+    "properties": {
+        "$schema": {
+            "description": "The schema to use.",
+            "type": "string"
+        },
+        "array": {
+            "additionalProperties": false,
+            "properties": {
+                "dimensions": {
+                    "description": "Dimensions of an n-dimensional array.",
+                    "items": {
+                        "type": "integer"
+                    },
+                    "maxItems": 2,
+                    "minItems": 2,
+                    "type": "array"
+                },
+                "type": {
+                    "description": "Type of data stored in this array.",
+                    "enum": [
+                        "boolean",
+                        "number",
+                        "integer",
+                        "string",
+                        "other"
+                    ],
+                    "type": "string"
+                }
+            },
+            "required": [
+                "dimensions"
+            ],
+            "type": "object"
+        },
+        "hdf5_sparse_matrix": {
+            "additionalProperties": false,
+            "properties": {
+                "dimnames": {
+                    "description": "Name of the group containing the dimnames. This group should contain zero or one string datasets for each dimension. The name of each string dataset is based on its dimension - `\"0\"` for rows, `\"1\"` for columns - and should have length equal to the extent of that dimension. If this property is not present, it can be assumed that no dimnames are available. Each dataset should not contain any missing values, so each string can be interpreted as-is.",
+                    "type": "string"
+                },
+                "format": {
+                    "description": "Format of the sparse matrix.\n\nThe `tenx_matrix` is a compressed sparse column format where `indices` contains row indices and `indptr` contains the column index pointers. The group should contain a `shape` dataset, an integer vector of length 2 containing the number of rows and columns.",
+                    "enum": [
+                        "tenx_matrix"
+                    ],
+                    "type": "string"
+                },
+                "group": {
+                    "description": "Name of the group inside the HDF5 file that contains the sparse matrix's data.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "format",
+                "group"
+            ],
+            "type": "object"
+        },
+        "is_child": {
+            "default": false,
+            "description": "Is this a child document, only to be interpreted in the context of the parent document from which it is linked? This may have implications for search and metadata requirements.",
+            "type": "boolean"
+        },
+        "md5sum": {
+            "description": "MD5 checksum for the file.",
+            "type": "string"
+        },
+        "path": {
+            "description": "Path to the file in the project directory.",
+            "type": "string"
+        }
+    },
+    "required": [
+        "$schema",
+        "array",
+        "hdf5_sparse_matrix",
+        "md5sum",
+        "path"
+    ],
+    "title": "HDF5 sparse matrix",
+    "type": "object"
+}
