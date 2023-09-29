@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: zerogpu
+Version: 0.1.0
+Summary: Helpers for Hugging Face ZeroGPU Spaces
+Author: cbensimon
+Author-email: charles@huggingface.co
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Description-Content-Type: text/markdown
+
+## Hugging Face ZeroGPU Spaces
+
