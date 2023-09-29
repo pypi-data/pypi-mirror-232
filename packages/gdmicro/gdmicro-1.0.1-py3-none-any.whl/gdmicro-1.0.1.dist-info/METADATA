@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: gdmicro
+Version: 1.0.1
+Summary: GDmicro - Use GCN and Deep adaptation network to classify host disease status based on human gut microbiome data
+Home-page: https://github.com/liaoherui/GDmicro
+Author: Liao Herui
+Author-email: heruiliao2-c@my.cityu.edu.hk
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: ~=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: numpy (==1.17.3)
+Requires-Dist: pandas (==1.0.1)
+Requires-Dist: scipy (==1.5.2)
+Requires-Dist: scikit-learn (==1.0.2)
+Requires-Dist: pytorch (==1.12.0)
+Requires-Dist: hiddenlayer (==0.3)
+Requires-Dist: networkx (==2.4)
+Requires-Dist: higra (==0.6.4)
+Requires-Dist: matplotlib (==3.1.2)
+
+GDmicro takes microbial compositional abundance data as input, then it can classify disease status for your test samples, return disease-related microbes (potential biomarkers), and return the microbes' contribution to the hosts' disease status.
+
