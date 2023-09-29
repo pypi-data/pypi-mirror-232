@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.py
+sms_message_aws_local_python_package.egg-info/PKG-INFO
+sms_message_aws_local_python_package.egg-info/SOURCES.txt
+sms_message_aws_local_python_package.egg-info/dependency_links.txt
+sms_message_aws_local_python_package.egg-info/top_level.txt
+sms_message_aws_local_python_package/src/SendAwsSms.py
+sms_message_aws_local_python_package/src/__init__.py
