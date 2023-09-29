@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "kitcolors"
+version = "1.6.0"
+description = "Colors of the corporate design of the KIT."
+authors = ["Thomas <0milieux_member@icloud.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.8"
+
+
+[tool.poetry.group.dev.dependencies]
+matplotlib = "^3.6.0"
+pytest = "^7.4.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
