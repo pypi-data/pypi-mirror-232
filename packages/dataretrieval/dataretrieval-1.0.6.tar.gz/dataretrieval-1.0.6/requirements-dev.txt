@@ -1,0 +1,16 @@
+numpy<2
+pandas==2.*
+scipy
+python-dateutil
+requests
+requests-mock
+coverage
+pytest
+flake8
+sphinx
+sphinx-rtd-theme
+ipython
+ipykernel
+nbsphinx
+nbsphinx_link
+matplotlib
