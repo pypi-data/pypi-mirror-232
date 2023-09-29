@@ -1,0 +1,63 @@
+Metadata-Version: 2.1
+Name: swotted
+Version: 1.0.1
+Summary: A tensor decomposition model extracting temporal phenotypes
+Author: Hana Sebia
+Author-email: hana.sebia@inria.fr
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: LGPL v3
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: black (>=23.3.0,<24.0.0)
+Requires-Dist: fastapi (>=0.80,<0.81)
+Requires-Dist: hydronaut (>=2023.11,<2024.0)
+Requires-Dist: ipykernel (>=6.18.3,<7.0.0)
+Requires-Dist: jupyter (>=1.0.0,<2.0.0)
+Requires-Dist: lightning (>=2.0.1.post0,<3.0.0)
+Requires-Dist: munkres (>=1.1.4,<2.0.0)
+Requires-Dist: pytorch-lightning (>=2.0.1.post0,<3.0.0)
+Description-Content-Type: text/markdown
+
+# SWoTTeD : An Extension of Tensor Decomposition to Temporal Phenotyping
+
+This repository contains the implementation of **SWoTTeD** (**S**liding **W**ind**o**w for **T**emporal **Te**nsor **D**ecomposition)
+  
+![Illustration of SwoTTeD Decomposition](./sliding_window_temporal_phenotyping.png)
+
+
+### Authors
+
+* Hana Sebia, Inria, AIstroSight
+* Thomas Guyet, Inria, AIstroSight
+* Mike Rye, Inria, AIstroSight
+
+### Overview
+
+***SWoTTeD*** is a tensor decomposition framework to extract temporal phenotypes from structured data. Most recent decomposition models allow extracting phenotypes that only describe snapshots of typical profiles, also called daily phenotypes. However, ***SWoTTeD*** extends the notion of daily phenotype into temporal phenotype describing an arrangement of features over a time window.
+
+The capabilities of the SWoTTeD model are illustrated in the [example notebook](./notebooks/SWoTTeD_module_example.ipynb).
+
+
+This code implements the SWoTTeD as a [PyTorch Lightning](http://lightning.ai) module that you can embed in you own architecture. The `SWoTTeD` module enables:
+* to discover phenotypes through the decomposition of a *3D tensor* (with dimensions: patients, features and time). To deal with patient' data having different duration, the dataset is a collection of pathways (2D matrices);
+* to project new patient pathways on discovered phenotypes;
+* to predict next events in a pathways.
+
+More documentation about this project and how to use the model is available here: [https://hsebia.gitlabpages.inria.fr/swotted/](https://hsebia.gitlabpages.inria.fr/swotted/).
+
+### How to install
+
+The `pyproject.toml` is the project configuration file for [poetry](https://python-poetry.org/) which enables to create and set up a virtual environment suitable to run ***SWoTTeD***.
+
+```bash
+git clone https://gitlab.inria.fr/hsebia/swotted
+
+## In case of the use of poetry
+poetry install
+poetry shell
+```
+

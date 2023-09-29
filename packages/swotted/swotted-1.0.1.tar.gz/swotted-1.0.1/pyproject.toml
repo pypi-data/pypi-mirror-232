@@ -1,0 +1,43 @@
+[tool.poetry]
+name = "SWoTTeD"
+version = "1.0.1"
+description = "A tensor decomposition model extracting temporal phenotypes"
+authors = [
+  "Hana Sebia <hana.sebia@inria.fr>",
+  "Thomas Guyet <thomas.guyet@inria.fr>",
+  "Mike Rye <jan-michael.rye@inria.fr>",
+]
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: LGPL v3",
+    "Operating System :: OS Independent",
+]
+
+
+[tool.poetry.dependencies]
+python = "^3.8"
+ipykernel = "^6.18.3"
+pytorch-lightning = "^2.0.1.post0"
+lightning = "^2.0.1.post0"
+fastapi = "^0.80"
+black = "^23.3.0"
+hydronaut = "^2023.11"
+jupyter = "^1.0.0"
+munkres = "^1.1.4"
+
+[tool.poetry.dev-dependencies]
+torch = "^1.13.0"
+munkres = "^1.1.4"
+numpy = "^1.23.5"
+DateTime = "^4.7"
+seaborn = "^0.12.1"
+matplotlib = "^3.6.2"
+pandas = "^1.5.2"
+psycopg = "^3.1.4"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+
