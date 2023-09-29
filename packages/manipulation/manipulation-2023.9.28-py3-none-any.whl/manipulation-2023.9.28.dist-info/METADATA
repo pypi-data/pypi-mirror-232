@@ -1,0 +1,58 @@
+Metadata-Version: 2.1
+Name: manipulation
+Version: 2023.9.28
+Summary: MIT 6.421 - Robotic Manipulation
+Author-email: Russ Tedrake <russt@mit.edu>
+License: Copyright (c) 2020-2023, Massachusetts Institute of Technology.
+        Copyright (c) 2020-2023, Russ Tedrake.
+        All rights reserved.
+        
+        Redistribution and use in source and binary forms, with or without
+        modification, are permitted provided that the following conditions are met:
+        
+        * Redistributions of source code must retain the above copyright notice, this
+          list of conditions and the following disclaimer.
+        
+        * Redistributions in binary form must reproduce the above copyright notice,
+          this list of conditions and the following disclaimer in the documentation
+          and/or other materials provided with the distribution.
+        
+        * Neither the name of the copyright holder nor the names of its contributors
+          may be used to endorse or promote products derived from  this software
+          without specific prior written permission.
+        
+        THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+        AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+        IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+        DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+        FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+        DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+        SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+        CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+        OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+        OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+        
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: BSD License
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE.TXT
+Requires-Dist: cloudpickle >=1.6.0
+Requires-Dist: drake >=1.21.0
+Requires-Dist: gradescope-utils >=0.4.0
+Requires-Dist: mpld3 >=0.5.1
+Requires-Dist: timeout-decorator >=0.4.1
+
+<!-- Remember, this produces the front page on github, dockerhub, and pypi. -->
+
+# Robotic Manipulation
+
+*Perception, Planning, and Control*
+
+This is the companion software for the textbook available at:
+https://manipulation.mit.edu/
+
+To cite this software (or the corresponding textbook), please use:
+
+Russ Tedrake. _Robotic Manipulation: Perception, Planning, and Control (Course
+Notes for MIT 6.421)._ Downloaded on [date] from <https://manipulation.mit.edu/>.
