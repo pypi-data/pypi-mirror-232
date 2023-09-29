@@ -1,0 +1,3 @@
+[console_scripts]
+pe-demo = patternengine.demos:main
+pe-example = patternengine.example:main
