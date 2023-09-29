@@ -1,0 +1,5 @@
+setuptools
+pyparsing>=2.0.1
+typing_extensions
+numpy
+fonttools
