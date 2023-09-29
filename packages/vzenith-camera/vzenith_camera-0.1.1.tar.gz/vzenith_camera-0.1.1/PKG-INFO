@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: vzenith-camera
+Version: 0.1.1
+Summary: A Python library for VisionZenith Smart Camera SDK in TCP protocol.
+Home-page: https://github.com/garrett-he/vzenith-camera
+License: BSD-3-Clause
+Keywords: smart-camera,license-plate-recognition,intelligent-video-system,vision-zenith
+Author: Garrett HE
+Author-email: garrett.he@hotmail.com
+Requires-Python: >=3.8,<3.12
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Project-URL: Repository, https://github.com/garrett-he/vzenith-camera.git
+Description-Content-Type: text/markdown
+
+# vzenith-camera
+
+A Python library for VisionZenith Smart Camera SDK in TCP protocol.
+
+## License
+
+Copyright (C) 2023 Garrett HE <garrett.he@hotmail.com>
+
+The BSD 3-Clause License, see [LICENSE](./LICENSE).
+
