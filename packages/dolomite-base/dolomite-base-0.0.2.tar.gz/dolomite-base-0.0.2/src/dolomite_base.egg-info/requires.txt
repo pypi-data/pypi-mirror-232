@@ -1,0 +1,14 @@
+biocutils
+biocframe>=0.3.11
+numpy
+jsonschema
+assorthead
+dolomite-schemas>=0.0.5
+
+[:python_version < "3.8"]
+importlib-metadata
+
+[testing]
+setuptools
+pytest
+pytest-cov
