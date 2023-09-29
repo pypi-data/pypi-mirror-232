@@ -1,0 +1,28 @@
+
+[tool.poetry]
+name = "yash-ai"
+version = "0.0.2a0"
+description = "Just ask what shell should do for you"
+authors = ["Bohdan Snisar <bogdan.sns@gmail.com>"]
+license = "MIT"
+homepage = "https://github.com/bsnisar/shai"
+readme = "README.md"
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+]
+keywords = ["ai", "cohere", "shell"]
+
+
+[tool.poetry.dependencies]
+python = " >=3.7,<4.0"
+rich = "^11.0"
+cohere = "^4.27"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+shai = "yash_ai.__main__:main"
