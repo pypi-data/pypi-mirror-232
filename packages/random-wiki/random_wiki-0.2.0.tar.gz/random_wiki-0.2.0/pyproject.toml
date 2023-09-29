@@ -1,0 +1,44 @@
+[tool.poetry]
+name = "random-wiki"
+version = "0.2.0"
+description = "Display extracts from random Wikipedia articles"
+keywords = ["wikipedia"]
+license = "MIT"
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Topic :: Games/Entertainment :: Fortune Cookies",
+]
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+homepage = "https://yourname.dev/projects/random-wikipedia-article"
+repository = "https://github.com/yourname/random-wikipedia-article"
+documentation = "https://readthedocs.io/random-wikipedia-article"
+packages = [{include = "random_wiki", from = "src"}]
+
+# Including the test suite in source distributions
+# include  = [{path = "tests", format = "sdist"}]
+
+[tool.poetry.urls]
+Issues = "https://github.com/yourname/random-wikipedia-article/issues"
+
+[tool.poetry.scripts]
+random-wiki = "random_wiki:main"
+
+[tool.poetry.dependencies]
+python = ">=3.8"
+rich = "^13.5.3"
+httpx = {version = "^0.25.0", extras = ["http2"]}
+setuptools = "^68.2.2"
+
+
+[tool.poetry.group.tests.dependencies]
+pytest = "^7.4.2"
+
+[tool.poetry.group.docs.dependencies]
+sphinx =">=7.1.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
