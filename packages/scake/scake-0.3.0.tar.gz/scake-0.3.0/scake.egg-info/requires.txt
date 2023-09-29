@@ -1,0 +1,3 @@
+omegaconf==2.3.0
+ray==2.5.1
+plazy==0.1.6
