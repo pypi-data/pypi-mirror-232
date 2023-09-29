@@ -1,0 +1,10 @@
+README.rst
+pyproject.toml
+hilcat/__init__.py
+hilcat/_dist_ver.py
+hilcat/core.py
+hilcat/sqlite.py
+hilcat/version.py
+hilcat.egg-info/PKG-INFO
+hilcat.egg-info/SOURCES.txt
+hilcat.egg-info/dependency_links.txt
