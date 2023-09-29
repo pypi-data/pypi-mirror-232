@@ -1,0 +1,11 @@
+scipy
+numpy
+networkx
+seaborn
+scikit-learn
+prettytable
+yfinance==0.2.28
+tqdm
+dtaidistance>=2.3.10
+tensorflow
+tensorflow-probability
