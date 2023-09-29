@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: vqa-package
+Version: 0.1.0
+Summary: Visual Question Answering (VQA) package
+Author: Your Name
+Author-email: andreialexbunea@yahoo.com
+Keywords: visual-question-answering vqa deep-learning
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Dist: torch >=1.8.0
+Requires-Dist: torchvision >=0.9.0
+Requires-Dist: transformers >=4.0.0
+Requires-Dist: Pillow >=8.0.0
+Requires-Dist: scikit-learn >=0.24.0
+Requires-Dist: matplotlib >=3.4.0
+
