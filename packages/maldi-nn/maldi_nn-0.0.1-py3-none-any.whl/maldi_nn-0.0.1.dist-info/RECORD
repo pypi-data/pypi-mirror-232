@@ -1,0 +1,10 @@
+maldi_nn/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+maldi_nn/models.py,sha256=A_VdEtlNvFjbJ2vSZAv8dAttlpFDXJL66pyg4Cy-5YE,16147
+maldi_nn/nn.py,sha256=bIbnCJKv3lBYGgCSlYLMETtv-MNdE4M0cY_D5Y-79Lc,2501
+maldi_nn/spectrum.py,sha256=yd0jnI9YDSdhRIhZHPp4jHrlea9NPLT22QwVvOcwVCA,16427
+maldi_nn-0.0.1.dist-info/LICENSE,sha256=o84LFXaNd11HN8n7hkxr7P0zw3-vTYWQmEIOCGD3Nb8,1072
+maldi_nn-0.0.1.dist-info/METADATA,sha256=k6-vhssZzp0QG0tOcGYK8FhokspyHJhRgY2ZJ1ajuew,9769
+maldi_nn-0.0.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+maldi_nn-0.0.1.dist-info/entry_points.txt,sha256=A9Sk54ytPRhqnkQz7yXo1Sruqj7bsVLFDHDAhmclZks,443
+maldi_nn-0.0.1.dist-info/top_level.txt,sha256=KRgTrWYgBbd27GIjC0qu-xpWQ-JrlVSZXglsL5TJlkI,9
+maldi_nn-0.0.1.dist-info/RECORD,,
