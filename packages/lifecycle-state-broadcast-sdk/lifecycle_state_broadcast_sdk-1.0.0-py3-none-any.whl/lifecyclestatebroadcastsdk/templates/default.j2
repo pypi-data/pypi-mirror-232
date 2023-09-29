@@ -1,0 +1,55 @@
+{% macro extract_recursive(data) %}
+    {% for key, value in data.items() %}
+        {% if value is mapping %}
+            {% if 'context' in key.lower() %}
+            {
+                "id": "{{ value.get('id', '') }}",
+                "endpoint": "{{ value.get('endpoint', value.get('Endpoint', '')) }}"
+            },
+            {% endif %}
+            {{ extract_recursive(value) }}
+        {% endif %}
+    {% endfor %}
+{% endmacro %}
+
+{
+    "id":   {% if settings.id %}
+                "{{ settings.id }}"
+            {% elif settings.app and settings.app.id %}
+                "{{ settings.app.id }}"
+            {% elif settings.application and settings.application.id %}
+                "{{ settings.application.id }}"
+            {% else %}
+                "{{ fallbacks.id }}"
+            {% endif %},
+    "name": {% if settings.name %}
+                "{{ settings.name }}"
+            {% elif settings.app and settings.app.name %}
+                "{{ settings.app.name }}"
+            {% elif settings.application and settings.application.name %}
+                "{{ settings.application.name }}"
+            {% else %}
+                "-"
+            {% endif %},
+    "description": "TBD",
+    "ipAddress":    {% if fallbacks.ipV4Address %}
+                        "{{ fallbacks.ipV4Address }}"
+                    {% else %}
+                        "127.0.0.1"
+                    {% endif %},
+    "httpHealthCheck": {
+        "onPortNumber": {% if settings.httpHealthCheck and settings.httpHealthCheck.onPortNumber %}
+                            {{ settings.httpHealthCheck.onPortNumber }}
+                        {% else %}
+                            {{ -1 }}
+                        {% endif %},
+        "onUrl":    {% if settings.httpHealthCheck and settings.httpHealthCheck.onUrl %}
+                        "{{ settings.httpHealthCheck.onUrl }}"
+                    {% else %}
+                        ""
+                    {% endif %}
+    },
+    "dependsOn": [
+        {{ extract_recursive(settings) }}
+    ]
+}
