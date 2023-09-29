@@ -1,0 +1,9 @@
+numpy
+pandas
+pytest
+nilearn
+nibabel
+scipy
+seaborn
+scikit-learn
+hypothesis
