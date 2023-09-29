@@ -1,0 +1,2 @@
+[console_scripts]
+licscan = licscan.main:main

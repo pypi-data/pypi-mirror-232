@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+LicScan.egg-info/PKG-INFO
+LicScan.egg-info/SOURCES.txt
+LicScan.egg-info/dependency_links.txt
+LicScan.egg-info/entry_points.txt
+LicScan.egg-info/requires.txt
+LicScan.egg-info/top_level.txt
+licscan/__init__.py
+licscan/default_lic_list.py
+licscan/main.py
+licscan/unthreaded.py
