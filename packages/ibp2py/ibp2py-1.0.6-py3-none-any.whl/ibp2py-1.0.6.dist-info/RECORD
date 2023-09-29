@@ -1,0 +1,12 @@
+API/Ibp2py.py,sha256=QBEocz7aLhB5IwWxEhCLLzAI1KtXoX88-0MuvZ-kgNg,21802
+API/__init__.py,sha256=ReMFcep4L7fCEM8pVO5bMtgK3EcNC1YYjKDftxU5ZjE,52
+API/teste.py,sha256=B5yqD3gcqDaeZYDI6tai5F5PVPD2pb0lSRDKwqUKbDI,1924
+ibp2py/__init__.py,sha256=f70yu0RpxidHaKc_N7m004oAldmbcW9dvnoV7qxPUYc,28
+ibp2py/ibp2py.py,sha256=O9Dh-XFNni_vwh3LO0ciz1DOGHCW-6eWkNlzLQsARdw,21803
+ibp2py/joblogs.py,sha256=MYG8ks7kdsol7HfI9PRGiIrDSv60_zQvDichcuNo3Fw,8067
+ibp2py/teste.py,sha256=B5yqD3gcqDaeZYDI6tai5F5PVPD2pb0lSRDKwqUKbDI,1924
+ibp2py-1.0.6.dist-info/LICENSE,sha256=F96EzotgWhhpnQTW2TcdoqrMDir1jyEo6H915tGQ-QE,11524
+ibp2py-1.0.6.dist-info/METADATA,sha256=bsc9aYWnyagKPM0Z8mO20ywt-LdSdKNLeDs4BIYYh6o,3311
+ibp2py-1.0.6.dist-info/WHEEL,sha256=AtBG6SXL3KF_v0NxLf0ehyVOh0cold-JbJYXNGorC6Q,92
+ibp2py-1.0.6.dist-info/top_level.txt,sha256=8aN0ar2gx3IxJT2xWoKUxg_9sEQkay1WODZ-Yv3AF58,7
+ibp2py-1.0.6.dist-info/RECORD,,
