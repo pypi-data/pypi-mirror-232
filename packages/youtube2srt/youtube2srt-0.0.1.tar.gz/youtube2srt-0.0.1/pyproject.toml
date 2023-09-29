@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools==68.2.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "youtube2srt"
+version = "0.0.1"
+authors = [
+  { name="Arda Akdere", email="ardaakdere@gmail.com" },
+]
+description = "Generates high-quality subtitles in SRT format for YouTube videos using openai-whisper by processing the audio content. Provides an option to translate the generated subtitles into English."
+readme = "README.md"
+requires-python = ">=3.7"
+dependencies = ["yt-dlp", "openai-whisper"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Multimedia :: Video",
+    "Topic :: Multimedia :: Sound/Audio :: Speech",
+]
