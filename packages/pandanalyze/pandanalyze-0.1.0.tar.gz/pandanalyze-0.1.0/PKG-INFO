@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: pandanalyze
+Version: 0.1.0
+Summary: 
+Author: Kallin Nagelberg
+Author-email: kallin.nagelberg@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Description-Content-Type: text/markdown
+
+
