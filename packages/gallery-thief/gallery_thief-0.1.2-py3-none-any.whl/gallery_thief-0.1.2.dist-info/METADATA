@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: gallery-thief
+Version: 0.1.2
+Summary: Simple python package for scraping images from different search engines by prompt.
+Author-email: Kirill Voloshin <kirill.voloshin.98@ya.ru>
+Project-URL: Homepage, https://github.com/viktor-akusoff/GalleryThief
+Project-URL: Bug Tracker, https://github.com/viktor-akusoff/GalleryThief/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Gallery Thief
+
+
+![Gallery Thief Logo](https://i.imgur.com/j3TgyZc.png)
+
+> Gallery Thief, an artful liar\
+> Cunningly steals your heart's desire.\
+> Python library, so refined,\
+> Your digital treasures are its' prize.
+
+*YandexGPT2, 2023*
+
+## Quick Start
+
+```
+from GalleryThief.performer import Thief
+from GalleryThief.strategies import StealingFromYandex
+
+strategy = StealingFromYandex()  # Creating strategy for getting images
+thief = Thief(strategy)  # Creating thief using this strategy
+
+# Ordering thief to get one image of Pluto from yandex images
+result = thief.get_images_list(['Photo of Pluto', 1])
+
+print(result)
+```
+
+## Guide
+
+Work in progress...
