@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: delta_sdk
+Version: 0.0.11
+Summary: A small package to help authenticate and use dulms api
+Project-URL: Homepage, https://github.com/HqNw/dulms_sdk
+Project-URL: Bug Tracker, https://github.com/HqNw/dulms_sdk/issues
+Author-email: "HqNw(ahmed reda)" <redalabeb166@gmail.com>
+License-File: LICENSE
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.7
+Requires-Dist: beautifulsoup4
+Requires-Dist: requests
+Description-Content-Type: text/markdown
+
+# DULMS SDK
+
+this package is a simple non official SDK for [DULMS](https://dulms.deltauniv.edu.eg/login.aspx)
+
+```note
+this package is still in development and the responses are pure from the server without any sanitization
+
+```
+
+
+
+# usage
+## login
+```python
+from delta_sdk import delta_auth
+
+auth = delta_auth.login("https://dulms.deltauniv.edu.eg")
+auth.auth("USERNAME", "PASSWORD")
+```
+
+## get user data
+```python
+from delta_sdk import delta_auth
+
+auth = delta_auth.login("https://dulms.deltauniv.edu.eg")
+auth.auth("USERNAME", "PASSWORD")
+
+data = auth.get_user_data()
+print(data)
+```
+
+
+
