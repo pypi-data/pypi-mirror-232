@@ -1,0 +1,7 @@
+
+[dev]
+pre-commit
+
+[test]
+pytest
+hypothesis
