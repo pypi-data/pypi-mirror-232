@@ -1,0 +1,8 @@
+fluvio/__init__.py,sha256=0fHHO_LwHCa2QzUxM7nKlSJuR_sEq-ypoJRxXayF6oc,11948
+fluvio/_fluvio_python.abi3.so,sha256=QQRTuDLYE7ULgr-owRko07ppnrVXpvajyfbFZd0PNoA,14884084
+fluvio/cloud.py,sha256=3j4TbV9C8m70Md3vqzRVChy2Hia92rQtF22rFe3lPCc,894
+fluvio-0.15.7.dist-info/LICENSE-APACHE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+fluvio-0.15.7.dist-info/METADATA,sha256=UbVe-6PLZWsSxk1wJ7eGcGlBaSUeoIi7W5mM1MtqSVQ,4026
+fluvio-0.15.7.dist-info/WHEEL,sha256=v85UZtj2-a8yNAHQ1bRjeAQ0JHQxozGMcUPF7JVPRCU,103
+fluvio-0.15.7.dist-info/top_level.txt,sha256=fN57NkB-eSSJnbRWb-6w1PrK0hDpZh3_6VsnksrSGxA,7
+fluvio-0.15.7.dist-info/RECORD,,
