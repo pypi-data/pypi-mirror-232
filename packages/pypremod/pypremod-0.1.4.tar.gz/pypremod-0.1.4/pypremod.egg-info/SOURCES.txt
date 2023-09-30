@@ -1,0 +1,14 @@
+README.md
+setup.py
+premod/__init__.py
+premod/io.py
+premod/parser_generic.py
+premod/plot.py
+premod/read_results.py
+premod/solver.py
+premod/strength.py
+pypremod.egg-info/PKG-INFO
+pypremod.egg-info/SOURCES.txt
+pypremod.egg-info/dependency_links.txt
+pypremod.egg-info/requires.txt
+pypremod.egg-info/top_level.txt
