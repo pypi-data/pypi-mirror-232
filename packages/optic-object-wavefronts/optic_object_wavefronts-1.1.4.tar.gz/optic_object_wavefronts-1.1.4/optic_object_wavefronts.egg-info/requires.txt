@@ -1,0 +1,3 @@
+shapely
+scipy
+json-numpy-sebastian-achim-mueller>=0.1.1
