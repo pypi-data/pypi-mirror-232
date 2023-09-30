@@ -1,0 +1,9 @@
+LICENSE,sha256=EavhXoJ2QFMSUSMI5E32W5UmzuSlbRyxz0StVXXZmU0,1071
+pytest_xdist_worker_stats/__init__.py,sha256=OjiaaTNjiwqCcaQLCai3UPwuxIS9ZK3EpY1dhLn4_1s,75
+pytest_xdist_worker_stats/options.py,sha256=BpQPynSBFubSB-M9jRZgu4Hm1j36GD0Uu2c23TjBzhw,937
+pytest_xdist_worker_stats/plugin.py,sha256=RkI0uYd4u1k6yrX6RJhBZSym3CJedo4PL9Yx-J-_zOA,3639
+pytest_xdist_worker_stats-0.1.4.dist-info/LICENSE,sha256=EavhXoJ2QFMSUSMI5E32W5UmzuSlbRyxz0StVXXZmU0,1071
+pytest_xdist_worker_stats-0.1.4.dist-info/METADATA,sha256=1IXaSmpsUyx8qR_-Ftw91AjeA7K54WkNsQLrimuf400,3303
+pytest_xdist_worker_stats-0.1.4.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+pytest_xdist_worker_stats-0.1.4.dist-info/entry_points.txt,sha256=0GiPE7ekGAUEF3CfSZ3-Im7I2zkvkqhdBDIb-x2a51w,64
+pytest_xdist_worker_stats-0.1.4.dist-info/RECORD,,
