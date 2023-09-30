@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: finetune
+Version: 0.10.0
+Summary: UNKNOWN
+Home-page: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Provides-Extra: tf
+Provides-Extra: tf_gpu
+License-File: LICENSE
+
+UNKNOWN
+
