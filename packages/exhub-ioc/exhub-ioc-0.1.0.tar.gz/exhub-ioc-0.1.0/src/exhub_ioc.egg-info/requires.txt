@@ -1,0 +1,10 @@
+caproto
+emmi>=0.1.4
+schema
+parse
+pyvisa_py
+
+[test]
+pytest
+pytest-cov
+pytest-asyncio

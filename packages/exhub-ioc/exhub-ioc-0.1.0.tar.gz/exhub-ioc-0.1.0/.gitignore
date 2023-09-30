@@ -1,0 +1,6 @@
+*~
+\#*
+*.egg-info
+__pycache__
+src/exhub/_version.py
+build/*
