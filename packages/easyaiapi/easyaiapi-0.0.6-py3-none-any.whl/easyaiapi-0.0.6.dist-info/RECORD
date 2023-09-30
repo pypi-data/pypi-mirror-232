@@ -1,0 +1,14 @@
+easyaiapi/__init__.py,sha256=lBLiAIDlArHeia2WFXjZQVH2Ixj1G3sottqzRFOeaII,23
+easyaiapi/model_endpoint.py,sha256=f_VD9Y2TQSi_ml3duQilpqsZteCS2fc8FoFcLiika0w,2212
+easyaiapi/utils.py,sha256=SKFtsH_ZONZn5UEeidnEPYV-DuFLqcquH8e7R6ZwuOQ,1538
+easyaiapi/client/__init__.py,sha256=4KL_rQ3tvWhTrB7Ql7uF81cEDpOrlMC86zzvajn33dI,890
+easyaiapi/client/client.py,sha256=VTl1f3cSPs0vQx06ppZgVhVQoxf5U3TkTKEMPR8VYZA,1625
+easyaiapi/client/source.py,sha256=dlThsyhnr68KPbpRXCheUzVMQO0LL1AB_ht7_fvQGW8,935
+easyaiapi/server/__init__.py,sha256=rvOynfTdpOcnc2AEN1DFlvSP_5C1beNP5DgX4VCthmI,48
+easyaiapi/server/server.py,sha256=K6uBexqhKE0Si0qM7X6U1FSWxRshs4EG6pyGES-Id7k,4526
+easyaiapi/server/wss.py,sha256=kR7j3SvIi4N-2IZtje02dHf7sUVI85EiXTI-c7hMnd0,5031
+easyaiapi-0.0.6.dist-info/LICENSE,sha256=eYBoQ-DecmsuthqlWs_HOKGpUqOxCeLBrf5-ajvkTis,1067
+easyaiapi-0.0.6.dist-info/METADATA,sha256=qoaCbAkv1mdJpRyOWDKC8hPDrsTtWvTHQHHoliux5Nc,1041
+easyaiapi-0.0.6.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+easyaiapi-0.0.6.dist-info/top_level.txt,sha256=Pbw1QqHItxs6kh-ENN2tPttoaqwFpni4ERXG4xW16w4,10
+easyaiapi-0.0.6.dist-info/RECORD,,
