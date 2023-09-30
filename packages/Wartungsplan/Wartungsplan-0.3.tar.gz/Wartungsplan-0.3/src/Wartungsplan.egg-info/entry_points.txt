@@ -1,0 +1,3 @@
+[console_scripts]
+Wartungsplan = Wartungsplan:main
+addEventToIcal = addEventToIcal:main
