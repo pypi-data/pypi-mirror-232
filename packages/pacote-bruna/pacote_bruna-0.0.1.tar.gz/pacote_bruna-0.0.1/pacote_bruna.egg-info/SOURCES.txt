@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+pacote_bruna/__init__.py
+pacote_bruna/modulo.py
+pacote_bruna.egg-info/PKG-INFO
+pacote_bruna.egg-info/SOURCES.txt
+pacote_bruna.egg-info/dependency_links.txt
+pacote_bruna.egg-info/requires.txt
+pacote_bruna.egg-info/top_level.txt
