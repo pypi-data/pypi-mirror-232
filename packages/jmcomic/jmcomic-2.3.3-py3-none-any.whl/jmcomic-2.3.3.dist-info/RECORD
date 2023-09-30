@@ -1,0 +1,17 @@
+jmcomic/__init__.py,sha256=ObOY0pvU__WGalt-xhKo7Px0Z8Kg6lt33hbIwXYTaNU,200
+jmcomic/api.py,sha256=QpiuVmj8CDGflko3h3XaFsl0rEb6VGe1_87pGmVOr68,2463
+jmcomic/cl.py,sha256=ZcN0J3z6msAZVOspM2A9xTFofNCjeYf_6VYrrViUPl4,3492
+jmcomic/jm_client_impl.py,sha256=_Gf6yVQAGFjCgiS7bta4YmGNxUqGzOhKbMKmhY_Yq2s,17301
+jmcomic/jm_client_interface.py,sha256=PoKdLvbehuiACvW948n3mMEGmLK6_i5VnqoKduqkaZk,10860
+jmcomic/jm_config.py,sha256=4MbIGNCd7tG93ISf6B65ctryLwILlwkz1lZ_PF0AeQ4,10503
+jmcomic/jm_downloader.py,sha256=iDeSp4NbmSP_7QoB6pguIlRMRt5cYvJOnONvicVvyQU,7125
+jmcomic/jm_entity.py,sha256=1-6FqFNj4aZnjJp7WwNZekJGNkBqzEjoZd4cWmxxC6A,14469
+jmcomic/jm_option.py,sha256=lIAYbyf7978FJtGjjIbVB-_GmQ9c40pKE26iTTzGqT8,14119
+jmcomic/jm_plugin.py,sha256=87Ruw9YDFdFjZU-m-FKHB3T4txkHjstUXFrpNOeRolM,10764
+jmcomic/jm_toolkit.py,sha256=WdZWeo30-5uMZ0bcMOxGCziu62jiZRS927er-bs30AU,21260
+jmcomic-2.3.3.dist-info/LICENSE,sha256=kz4coTxZxuGxisK3W00tjK57Zh3RcMGq-EnbXrK7-xA,1064
+jmcomic-2.3.3.dist-info/METADATA,sha256=rFi4O_Xvaw12rpsJKE76yYkLHjb5sraqxsBAX98Kwdc,5304
+jmcomic-2.3.3.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+jmcomic-2.3.3.dist-info/entry_points.txt,sha256=tRbQltaGSBjejI0c9jYt-4SXQMd5nSDHcMvHmuTy4ow,44
+jmcomic-2.3.3.dist-info/top_level.txt,sha256=puvVMFYJqIbd6NOTMEvOyugMTT8woBfSQyxEBan3zY4,8
+jmcomic-2.3.3.dist-info/RECORD,,
