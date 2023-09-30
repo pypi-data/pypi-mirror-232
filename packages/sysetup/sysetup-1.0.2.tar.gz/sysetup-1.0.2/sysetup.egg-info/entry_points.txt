@@ -1,0 +1,3 @@
+[console_scripts]
+exportcrontab = sysetup.files:move_crontab
+sysetup = sysetup:main
