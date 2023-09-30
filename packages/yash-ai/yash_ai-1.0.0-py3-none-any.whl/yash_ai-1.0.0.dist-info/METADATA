@@ -1,0 +1,56 @@
+Metadata-Version: 2.1
+Name: yash-ai
+Version: 1.0.0
+Summary: Just ask what shell should do for you
+Home-page: https://github.com/bsnisar/shai
+License: MIT
+Keywords: ai,cohere,shell
+Author: Bohdan Snisar
+Author-email: bogdan.sns@gmail.com
+Requires-Python: >=3.7.2,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: cohere (>=4.27,<5.0)
+Requires-Dist: rich (>=11.0,<12.0)
+Requires-Dist: rich-argparse (>=1.3.0,<2.0.0)
+Description-Content-Type: text/markdown
+
+```shell
+$ yashi
+  /\_/\
+ ( o.o )
+ /  |  \
+```
+
+## Yashi: Yet Another SHell aI Command-Line Companion
+
+[![PyPI version](https://badge.fury.io/py/yash-ai.svg)](https://pypi.org/project/yash-ai/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+Are you a person who had trouble remembering shell commands and flags for all shell commands? This is yet another helper that 
+can make the shell more human-friendly. Just say what to do, not remember. Simply input what you want to do in natural language, and `yashi` will suggest single-line commands that achieve your intent.
+
+
+![](https://raw.githubusercontent.com/bsnisar/yashi/main/assets/example.gif)
+
+## Usage
+You can install Shell-AI directly from PyPI using pip:
+```
+pip install yash-ai
+```
+
+After installation, you can use `yashi` cli.
+
+## Keys
+
+This tool based on [Cohere](https://cohere.com/) LLM service. To enable CLI working you should expose [api key](https://dashboard.cohere.com/api-keys) as env variable and enjoy.
+```
+export YASHI_COHERE_KEY='gYjIU2+....'
+```
+ 
+
