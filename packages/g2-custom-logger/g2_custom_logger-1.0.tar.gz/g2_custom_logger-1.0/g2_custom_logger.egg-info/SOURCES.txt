@@ -1,0 +1,8 @@
+README.md
+setup.py
+g2_custom_logger/__init__.py
+g2_custom_logger/logger.py
+g2_custom_logger.egg-info/PKG-INFO
+g2_custom_logger.egg-info/SOURCES.txt
+g2_custom_logger.egg-info/dependency_links.txt
+g2_custom_logger.egg-info/top_level.txt
