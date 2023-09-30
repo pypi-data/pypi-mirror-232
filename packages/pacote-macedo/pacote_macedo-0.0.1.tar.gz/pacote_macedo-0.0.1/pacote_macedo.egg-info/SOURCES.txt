@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+pacote_macedo/__init__.py
+pacote_macedo/modulo.py
+pacote_macedo.egg-info/PKG-INFO
+pacote_macedo.egg-info/SOURCES.txt
+pacote_macedo.egg-info/dependency_links.txt
+pacote_macedo.egg-info/requires.txt
+pacote_macedo.egg-info/top_level.txt
