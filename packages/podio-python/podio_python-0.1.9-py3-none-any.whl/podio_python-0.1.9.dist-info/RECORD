@@ -1,0 +1,7 @@
+podio/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+podio/client.py,sha256=CJsVhjR3MIqwW9jMJS4NsgTU_Sti4Je6ts6E1fQkgJU,5032
+podio/exceptions.py,sha256=PKcKQm9g3jgZB6bU-aGXoFqDI7TSO332kWcqf0xEM4s,191
+podio_python-0.1.9.dist-info/LICENSE,sha256=k9wlyK1rcyGVMVP0TtbzfwQaI9v9g4pjI06OdkpWrE0,1065
+podio_python-0.1.9.dist-info/METADATA,sha256=rZmffiHlZ9H6e7yktcGPQBGpbcKVGxH2w_QjpLxFJuI,3320
+podio_python-0.1.9.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+podio_python-0.1.9.dist-info/RECORD,,
