@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The P2PD REST API &mdash; P2PD 0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Using P2PD from Python" href="python/index.html" />
+    <link rel="prev" title="How P2PD works" href="how.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            P2PD
+          </a>
+              <div class="version">
+                0.1.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="problems.html">The problem with P2P networking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="how.html">How P2PD works</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">The P2PD REST API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#starting-the-server">Starting the server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#making-your-first-request">Making your first request</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#looking-up-your-peer-s-address">Looking up your peer’s address</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#now-lets-try-connect-to-it">Now lets try connect to it</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#text-based-send-and-receive">Text-based send and receive</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#binary-send-and-receive">Binary send and receive</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#bidirectional-relay-pipes">Bidirectional relay pipes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#publish-subscribe">Publish-subscribe</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="python/index.html">Using P2PD from Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="built/index.html">Awesome stuff built with P2PD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="future_work.html">Future work</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">P2PD</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">The P2PD REST API</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/rest_api.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="the-p2pd-rest-api">
+<h1>The P2PD REST API<a class="headerlink" href="#the-p2pd-rest-api" title="Permalink to this heading"></a></h1>
+<section id="starting-the-server">
+<h2>Starting the server<a class="headerlink" href="#starting-the-server" title="Permalink to this heading"></a></h2>
+<dl class="simple">
+<dt>Start the REST API server::</dt><dd><p>python3 -m p2pd.rest_api</p>
+</dd>
+</dl>
+<p>Running this command will start the server on <a class="reference external" href="http://127.0.0.1:12333/">http://127.0.0.1:12333/</a>
+The server has no password and will only allow requests from
+an ‘origin’ of 127.0.0.1 or null. The null origin occurs when
+a HTML document is opened locally. If a website you visit tries
+to use the P2PD API your browser will include the domain name as
+an origin which the server will reject.</p>
+</section>
+<section id="making-your-first-request">
+<h2>Making your first request<a class="headerlink" href="#making-your-first-request" title="Permalink to this heading"></a></h2>
+<p>To check the server you can visit the version resource.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span>http://localhost:12333/version
+</pre></div>
+</div>
+<p>You should see a JSON response.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">   </span><span class="s2">&quot;author&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Matthew@Roberts.PM&quot;</span><span class="p">,</span>
+<span class="w">   </span><span class="s2">&quot;title&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;P2PD&quot;</span><span class="p">,</span>
+<span class="w">   </span><span class="s2">&quot;version&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;0.1.0&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="looking-up-your-peer-s-address">
+<h2>Looking up your peer’s address<a class="headerlink" href="#looking-up-your-peer-s-address" title="Permalink to this heading"></a></h2>
+<p>You’ll want to know how to get your peers address. The address is
+used to try connect to a peer.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span>http://localhost:12333/p2p/addr
+</pre></div>
+</div>
+<p>Sample JSON response.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">   </span><span class="s2">&quot;addr&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;[0,1.3.3.7,192.168.21.21,58959,3,2,0]-0-looongcatislong&quot;</span><span class="p">,</span>
+<span class="w">   </span><span class="s2">&quot;error&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="now-lets-try-connect-to-it">
+<h2>Now lets try connect to it<a class="headerlink" href="#now-lets-try-connect-to-it" title="Permalink to this heading"></a></h2>
+<p>Peer addresses will be passed to the ‘open’ resource. A number of strategies
+are used to try establish connections. The order of success will define
+how fast connections can be opened.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span><span class="s2">&quot;http://localhost:12333/p2p/open/name_for_new_con/addr_of_node&quot;</span>
+</pre></div>
+</div>
+<p>Please note how the connection is given a name. The name is used to identify
+connections rather than using IDs. You will need to remember names
+for later API calls. Should you wish to test P2P connections you can
+also use ‘self’ to connect to yourself.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span>http://localhost:12333/p2p/open/con_name/self
+</pre></div>
+</div>
+<p>The JSON response shows information on the new connection.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">   </span><span class="s2">&quot;fd&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">1060</span><span class="p">,</span>
+<span class="w">   </span><span class="s2">&quot;if&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Intel(R) Wi-Fi 6 AX200 160MHz&quot;</span>
+<span class="w">      </span><span class="s2">&quot;offset&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span>
+<span class="w">   </span><span class="p">},</span>
+<span class="w">   </span><span class="s2">&quot;laddr&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">      </span><span class="s2">&quot;192.168.21.21&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="mf">58537</span>
+<span class="w">   </span><span class="p">],</span>
+<span class="w">   </span><span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;con_name&quot;</span><span class="p">,</span>
+<span class="w">   </span><span class="s2">&quot;raddr&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">      </span><span class="s2">&quot;192.168.21.21&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="mf">58959</span>
+<span class="w">   </span><span class="p">],</span>
+<span class="w">   </span><span class="s2">&quot;route&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="s2">&quot;af&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span>
+<span class="w">      </span><span class="s2">&quot;ext_ips&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">               </span><span class="s2">&quot;af&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span>
+<span class="w">               </span><span class="s2">&quot;cidr&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">32</span><span class="p">,</span>
+<span class="w">               </span><span class="s2">&quot;ip&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;1.3.3.7&quot;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">      </span><span class="p">],</span>
+<span class="w">      </span><span class="s2">&quot;nic_ips&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">               </span><span class="s2">&quot;af&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span>
+<span class="w">               </span><span class="s2">&quot;cidr&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">32</span><span class="p">,</span>
+<span class="w">               </span><span class="s2">&quot;ip&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;192.168.21.21&quot;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">      </span><span class="p">]</span>
+<span class="w">   </span><span class="p">},</span>
+<span class="w">   </span><span class="s2">&quot;strategy&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;direct connect&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>You can see the information includes details like the file descriptor
+number of the socket, your external address for the socket, and
+the technique that worked to establish the connection.</p>
+</section>
+<section id="text-based-send-and-receive">
+<h2>Text-based send and receive<a class="headerlink" href="#text-based-send-and-receive" title="Permalink to this heading"></a></h2>
+<p>Let’s start with something simple. For these examples I’ll assume you
+want to work with a simple text-based protocol. In reality you may be
+building something far more complex and require more flexibility
+but this is a good starting point.</p>
+<p><strong>Sending text:</strong></p>
+<p>The node server has a built-in echo server. We’ll be using this
+protocol to test out some commands.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span><span class="s2">&quot;http://localhost:12333/p2p/send/con_name/ECHO%20hello,%20world!&quot;</span>
+</pre></div>
+</div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">   </span><span class="s2">&quot;error&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span>
+<span class="w">   </span><span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;con_name&quot;</span><span class="p">,</span>
+<span class="w">   </span><span class="s2">&quot;sent&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">18</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Receiving text:</strong></p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span><span class="s2">&quot;http://localhost:12333/p2p/recv/con_name&quot;</span>
+</pre></div>
+</div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">   </span><span class="s2">&quot;data&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;hello, world!&quot;</span><span class="p">,</span>
+<span class="w">   </span><span class="s2">&quot;error&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span>
+<span class="w">   </span><span class="s2">&quot;client_tup&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">      </span><span class="s2">&quot;192.168.21.200&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="mf">54925</span>
+<span class="w">   </span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="binary-send-and-receive">
+<h2>Binary send and receive<a class="headerlink" href="#binary-send-and-receive" title="Permalink to this heading"></a></h2>
+<p>So far all API methods have used the GET method. GET is ideal for regular,
+text-based data where you don’t have to worry too much about encoding.
+But if you want a more flexible approach that can also deal with binary
+data it’s necessary to visit the POST method. These next examples
+will be written in Javascript using the Jquery library.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">binary_push</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">   </span><span class="c1">// Binary data to send -- outside printable ASCII.</span>
+<span class="w">   </span><span class="c1">// Will send an echo request to the Node server.</span>
+<span class="w">   </span><span class="kd">var</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Uint8Array</span><span class="p">(</span><span class="mf">9</span><span class="p">);</span>
+<span class="w">   </span><span class="nx">x</span><span class="p">[</span><span class="mf">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">69</span><span class="p">;</span><span class="w"> </span><span class="c1">// &#39;E&#39;</span>
+<span class="w">   </span><span class="nx">x</span><span class="p">[</span><span class="mf">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">67</span><span class="p">;</span><span class="w"> </span><span class="c1">// &#39;C&#39;</span>
+<span class="w">   </span><span class="nx">x</span><span class="p">[</span><span class="mf">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">72</span><span class="p">;</span><span class="w"> </span><span class="c1">// &#39;H&#39;</span>
+<span class="w">   </span><span class="nx">x</span><span class="p">[</span><span class="mf">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">79</span><span class="p">;</span><span class="w"> </span><span class="c1">// &#39;O&#39;</span>
+<span class="w">   </span><span class="nx">x</span><span class="p">[</span><span class="mf">4</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">32</span><span class="p">;</span><span class="w"> </span><span class="c1">// &#39; &#39;</span>
+<span class="w">   </span><span class="nx">x</span><span class="p">[</span><span class="mf">5</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">200</span><span class="p">;</span><span class="w"> </span><span class="c1">// ... binary codes,</span>
+<span class="w">   </span><span class="nx">x</span><span class="p">[</span><span class="mf">6</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">201</span><span class="p">;</span>
+<span class="w">   </span><span class="nx">x</span><span class="p">[</span><span class="mf">7</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">202</span><span class="p">;</span>
+<span class="w">   </span><span class="nx">x</span><span class="p">[</span><span class="mf">8</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">203</span><span class="p">;</span>
+
+<span class="w">   </span><span class="c1">// Send as encoded binary data using POST to API.</span>
+<span class="w">   </span><span class="c1">// This demonstrates that binary POST works.</span>
+<span class="w">   </span><span class="kd">var</span><span class="w"> </span><span class="nx">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;http://localhost/p2p/binary/con_name&#39;</span><span class="p">;</span>
+<span class="w">   </span><span class="kd">var</span><span class="w"> </span><span class="nx">out</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
+<span class="w">      </span><span class="nx">url</span><span class="o">:</span><span class="w"> </span><span class="nx">url</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;POST&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">data</span><span class="o">:</span><span class="w"> </span><span class="nx">x</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">contentType</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;application/octet-stream&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">dataType</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;text&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">processData</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="w">   </span><span class="p">});</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">   </span><span class="s2">&quot;error&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span>
+<span class="w">   </span><span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;con_name&quot;</span><span class="p">,</span>
+<span class="w">   </span><span class="s2">&quot;sent&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">9</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Here’s what it looks like to receive the binary back again.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">binary_pull</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">   </span><span class="c1">// Receive back binary buffer.</span>
+<span class="w">   </span><span class="c1">// Node server should echo back the last 4 bytes.</span>
+<span class="w">   </span><span class="kd">var</span><span class="w"> </span><span class="nx">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;http://localhost/p2p/binary/con_name&#39;</span><span class="p">;</span>
+<span class="w">   </span><span class="nx">out</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
+<span class="w">      </span><span class="nx">url</span><span class="o">:</span><span class="w"> </span><span class="nx">url</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;GET&#39;</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">processData</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;false&#39;</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">dataType</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;binary&#39;</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">xhrFields</span><span class="o">:</span><span class="p">{</span>
+<span class="w">         </span><span class="nx">responseType</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;blob&#39;</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="nx">headers</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s1">&#39;X-Requested-With&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;XMLHttpRequest&#39;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">   </span><span class="p">});</span>
+
+<span class="w">   </span><span class="c1">// Convert output blob to array buffer.</span>
+<span class="w">   </span><span class="c1">// Then convert that to a Uint8Array.</span>
+<span class="w">   </span><span class="nx">mem_view</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">out</span><span class="p">.</span><span class="nx">arrayBuffer</span><span class="p">();</span>
+<span class="w">   </span><span class="nx">out_bytes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Uint8Array</span><span class="p">(</span><span class="nx">mem_view</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>By the way: these examples use el8 async await syntax. This avoids callback
+hell which is low IQ. If you don’t understand async-style code it’s time
+for you to learn! All code in P2PD is async.</p>
+</section>
+<section id="bidirectional-relay-pipes">
+<h2>Bidirectional relay pipes<a class="headerlink" href="#bidirectional-relay-pipes" title="Permalink to this heading"></a></h2>
+<p>Theses simple send/receive calls are examples of push and pull APIs. In
+other words – its up to you to check whether messages are available.
+Such an approach might be fine for simple scripts but it’s a
+little inefficient having to constantly check or ‘poll’ for new
+messages. Fortunately, P2PD has you covered. There is a special API
+method that converts a HTTP connection into a two-way relay.</p>
+<p>What I mean by this is if you make a HTTP request to a named
+connection P2PD will relay data you send to that connection
+to the named connection and back again. This is very useful because
+it allows you to write asynchronous code that only has to handle data
+when it’s available. Almost like a regular connection you made yourself.</p>
+<p>The catch is I can’t write the code for you exactly as
+I don’t know what language you’ll be using with the API – but
+so long as you know how to make a connection and send a HTTP request
+the process is quite straight-forwards.</p>
+<ol class="arabic simple">
+<li><p>Make a <strong>SOCK_STREAM</strong> socket. Choose <strong>AF_INET</strong> for the address
+family.</p></li>
+<li><p>Connect the socket to <strong>localhost</strong> on port <strong>12333</strong>.</p></li>
+<li><p>Send a HTTP GET request to /p2p/pipe/con_name. Data to send:</p></li>
+</ol>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>GET /p2p/pipe/con_name HTTP/1.1\r\n
+Origin: null\r\n\r\n
+</pre></div>
+</div>
+<p>The connection is closed on error. You can test it works by
+sending ‘ECHO hello world’ down the connection and checking for
+the response. As this is a relay between an associated connection
+to a peer’s node server which implements echo.</p>
+</section>
+<section id="publish-subscribe">
+<h2>Publish-subscribe<a class="headerlink" href="#publish-subscribe" title="Permalink to this heading"></a></h2>
+<p>To learn about how to use the REST API for topic filtering please read the <a class="reference internal" href="python/queues.html"><span class="doc">Queues</span></a> page.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="how.html" class="btn btn-neutral float-left" title="How P2PD works" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="python/index.html" class="btn btn-neutral float-right" title="Using P2PD from Python" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

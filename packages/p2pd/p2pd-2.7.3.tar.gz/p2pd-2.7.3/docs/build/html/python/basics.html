@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Basics &mdash; P2PD 0.1 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Pipes" href="pipes.html" />
+    <link rel="prev" title="Using P2PD from Python" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            P2PD
+          </a>
+              <div class="version">
+                0.1.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../problems.html">The problem with P2P networking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../how.html">How P2PD works</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rest_api.html">The P2PD REST API</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Using P2PD from Python</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Basics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#running-async-examples">Running async examples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#network-interface-cards">Network interface cards</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-addressing-problem">The addressing problem</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#routes-to-the-rescue">Routes to the rescue</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#a-first-networking-program">A first networking program</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pipes.html">Pipes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="queues.html">Queues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="daemons.html">Daemons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples.html">Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../built/index.html">Awesome stuff built with P2PD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../future_work.html">Future work</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">P2PD</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Using P2PD from Python</a></li>
+      <li class="breadcrumb-item active">Basics</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/python/basics.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="basics">
+<h1>Basics<a class="headerlink" href="#basics" title="Permalink to this heading"></a></h1>
+<section id="running-async-examples">
+<h2>Running async examples<a class="headerlink" href="#running-async-examples" title="Permalink to this heading"></a></h2>
+<p>Alr1ght people, P2PD uses Python’s ‘asynchronous’ features to run
+everything in an event loop. You might want to use the special ‘REPL’
+that the asyncio module provides to run these examples. It’s available
+on (very) recent versions of Python like 3.8 or higher. Otherwise,
+P2PD has a function called async_test(name_of_async_func, arg_tup)
+that can be used to run async code.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>python3<span class="w"> </span>-m<span class="w"> </span>asyncio
+</pre></div>
+</div>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">asyncio</span> <span class="n">REPL</span> <span class="mf">3.11.0</span>
+<span class="n">Use</span> <span class="s2">&quot;await&quot;</span> <span class="n">directly</span> <span class="n">instead</span> <span class="n">of</span> <span class="s2">&quot;asyncio.run()&quot;</span><span class="o">.</span>
+<span class="n">Type</span> <span class="s2">&quot;help&quot;</span><span class="p">,</span> <span class="s2">&quot;copyright&quot;</span><span class="p">,</span> <span class="s2">&quot;credits&quot;</span> <span class="ow">or</span> <span class="s2">&quot;license&quot;</span> <span class="k">for</span> <span class="n">more</span> <span class="n">information</span><span class="o">.</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">asyncio</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">p2pd</span> <span class="kn">import</span> <span class="o">*</span>
+</pre></div>
+</div>
+<p>Now you can simply type <cite>await some_function()</cite> in the REPL to execute it.
+If you experience errors in the REPL you’ll have to use a regular Python
+file for the examples.</p>
+</section>
+<section id="network-interface-cards">
+<h2>Network interface cards<a class="headerlink" href="#network-interface-cards" title="Permalink to this heading"></a></h2>
+<p>All network programming in P2PD starts with the network interface card. Usually
+your computer will have a ‘default’ interface that all traffic is sent
+down based on various routing methods. Let’s start by loading this default
+interface and interacting with it. Starting the interface looks up all
+its internal and external addresses, builds basic routing tables, and
+enumerates the NAT qualities of associated gateways.</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">p2pd</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">example</span><span class="p">():</span>
+    <span class="c1"># Start the default interface.</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="k">await</span> <span class="n">Interface</span><span class="p">()</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+    <span class="c1">#</span>
+    <span class="c1"># Load additional NAT details.</span>
+    <span class="c1"># Restrict, random port NAT assumed by default.</span>
+    <span class="k">await</span> <span class="n">i</span><span class="o">.</span><span class="n">load_nat</span><span class="p">()</span>
+    <span class="c1">#</span>
+    <span class="c1"># Show the interface details.</span>
+    <span class="nb">repr</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">async_test</span><span class="p">(</span><span class="n">example</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Interface.from_dict({
+    &quot;name&quot;: &quot;Intel(R) Wi-Fi 6 AX200 160MHz&quot;,
+    &quot;nat&quot;: {
+        &quot;type&quot;: 5,
+        &quot;nat_info&quot;: &quot;restrict port&quot;,
+        &quot;delta&quot;: {
+            &quot;type&quot;: 6,
+            &quot;value&quot;: 0
+        },
+        &quot;delta_info&quot;: &quot;random delta (local port == rand port)&quot;
+    },
+    &quot;rp&quot;: {
+        &quot;2&quot;: [
+            {
+                &quot;af&quot;: 2,
+                &quot;nic_ips&quot;: [
+                    {
+                        &quot;ip&quot;: &quot;192.168.21.21&quot;,
+                        &quot;cidr&quot;: 32,
+                        &quot;af&quot;: 2
+                    }
+                ],
+                &quot;ext_ips&quot;: [
+                    {
+                        &quot;ip&quot;: &quot;1.3.3.7&quot;,
+                        &quot;cidr&quot;: 32,
+                        &quot;af&quot;: 2
+                    }
+                ]
+            }
+        ],
+        &quot;23&quot;: []
+    }
+})
+</pre></div>
+</div>
+<p>Repr shows a serializable dict representation of the interface after it’s
+been loaded. You can see a list of interfaces available on your machine
+by using the <strong>Interface.list()</strong> function. Interfaces may be virtual,
+contain loopback devices, and other adapters that aren’t directly
+useful for networking. Often we are only interested in the adapters
+that are usable for WAN or LAN networking.</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">p2pd</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">example</span><span class="p">():</span>
+    <span class="c1"># Returns a list of Interface objects for Inter/networking.</span>
+    <span class="n">ifs</span> <span class="o">=</span> <span class="k">await</span> <span class="n">load_interfaces</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">async_test</span><span class="p">(</span><span class="n">example</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Now you know how to lookup interfaces and start them. It’s time to
+learn about ‘routes.’</p>
+</section>
+<section id="the-addressing-problem">
+<h2>The addressing problem<a class="headerlink" href="#the-addressing-problem" title="Permalink to this heading"></a></h2>
+<p>Modern network programming with event loops makes it incredibly easy to write
+high-performance networking code. The engineers of today are spoiled by such
+elegant features compared to the tools available in the early days. But there
+is still something very basic missing from the networking toolbelt:</p>
+<p><strong>The ability to easily know your external addressing information</strong></p>
+<p>There are many cases where this information is needed. For example imagine
+a server that listens on multiple IPs such that it is available on more
+than one external IP. The server may wish to know what external IPs are
+available to it in case it needs to refer a client to another server. The
+STUN protocol is an example of just this case where a client can
+request a connection back ‘from a different IP address’ in order to
+determine what type of NAT they have.</p>
+<p>P2PD makes all external addressing information available to the programmer
+so that servers and clients can be aware of their own addresses.</p>
+</section>
+<section id="routes-to-the-rescue">
+<h2>Routes to the rescue<a class="headerlink" href="#routes-to-the-rescue" title="Permalink to this heading"></a></h2>
+<p>P2PD solves the addressing problem by introducing mappings called ‘Routes’
+to describe how interface-assigned addresses relate to external addresses.
+Each route is indexed by address family. Either IPv4 or IPv6. A Route
+has the following basic form.</p>
+<blockquote>
+<div><p><strong>[NIC IPR, …] -&gt; [external IPR]</strong></p>
+</div></blockquote>
+<p><strong>Example 1 – IPv4 routes</strong></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>NIC IPs:
+    192.168.0.20/32 (1 IP)
+    193.168.0.0/16 (65024 IPs)
+    7.7.7.7/32 (1 IP)
+    8.8.0.0/16 (65024 IPs)
+
+EXT IPs:
+    1.3.3.7/32 (1 IP)
+    8.8.0.0/16 (65024 IPs)
+
+---------------------------------------------------------------
+Routes:
+    [...20, 193..., 7.7.7.7] -&gt; [1.3.3.7]
+    [8.8.0.0] -&gt; [8.8.0.0]
+
+Explanation:
+    1.  The software starts by grouping all private addresses for a NIC.
+        It then binds to one of the addresses and checks the external IP
+        using STUN. The result is saved as the external address and this
+        becomes a new route. When it finds a public IP for a NIC address
+        it binds to the first IP in it&#39;s range and checks the external
+        IP. Here it finds that 7.7.7.7 results in the same external
+        address as the other private IPs and groups them into the same
+        route. This demonstrates that public IPs can be assigned to NICs
+        and they don&#39;t necessarily mean that an IP is externally routable.
+
+    2.  The software finds that when processing the block of IPs &#39;8.8.0.0/16&#39;
+        that the external address matches. It assumes that this means the
+        whole block is valid without checking every IP. This becomes another
+        route. This example shows how some machines set their NIC IPs to
+        their external addresses. It also demonstrates how ranges work.
+</pre></div>
+</div>
+<p><strong>Example 2 – IPv6 routes</strong></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>NIC IPS:
+    2020:DEED:BEEF::0000/128 (global scope) (1 IP)
+    2020:DEED:DEED::0000/64 (global scope) (a lot of IPs)
+    FE80:DEED:BEEF::0000/128 (link-local) (1 IP)
+
+EXT IPS:
+    2020:DEED:BEEF::0000/128 (global scope) (1 IP)
+    2020:DEED:DEED::0000/64 (global scope) (a lot of IPs)
+
+---------------------------------------------------------------
+Routes:
+    [FE80:DEED:BEEF::0000/128] -&gt; [2020:DEED:BEEF::0000/128]
+    [FE80:DEED:BEEF::0000/128] -&gt; [2020:DEED:DEED::0000/64]
+
+Explanation:
+    1.  The algorithm for building routes in IPv6 is slightly different to IPv4.
+        All link-local addresses for a list and are copied to the NIC
+        section of the route. While every global address -- whether it&#39;s a
+        single IP or a block -- creates a new route.
+    2.  P2PD uses the EXT portion of routes for IPv6 servers. While it uses
+        the NIC portion for IPv4. It is assumed that all servers should be
+        publicly reachable. Though this can be bypassed by specifying IPs
+        directly for bind code which is indeed what the P2PD REST server does.
+</pre></div>
+</div>
+<p>The reason why routes are important is they are used in bind() code to instruct
+what external addresses to use for servers or what external addresses will be
+visible for outbound traffic. In other words when you bind in P2PD you are
+selecting what external addresses to use.</p>
+</section>
+<section id="a-first-networking-program">
+<h2>A first networking program<a class="headerlink" href="#a-first-networking-program" title="Permalink to this heading"></a></h2>
+<p>Connect to Google.com and get a response from it.</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">p2pd</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">example</span><span class="p">():</span>
+    <span class="c1">#</span>
+    <span class="c1"># Load default interface.</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="k">await</span> <span class="n">Interface</span><span class="p">()</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+    <span class="c1">#</span>
+    <span class="c1"># Get first supported address family.</span>
+    <span class="c1"># E.g. if the NIC only supports IPv4 this will == [AF_INET].</span>
+    <span class="c1"># If it supports both families it will == [AF_INET, AF_INET6].</span>
+    <span class="c1"># If no AF for route and address specified = use i.supported()[0].</span>
+    <span class="n">af</span> <span class="o">=</span> <span class="n">i</span><span class="o">.</span><span class="n">supported</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="c1">#</span>
+    <span class="c1"># Get a route to use for sockets.</span>
+    <span class="c1"># This will give you a copy of the first route for that address family.</span>
+    <span class="c1"># Routes belong to an interface and include a reference to it.</span>
+    <span class="n">route</span> <span class="o">=</span> <span class="k">await</span> <span class="n">i</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="n">af</span><span class="p">)</span><span class="o">.</span><span class="n">bind</span><span class="p">()</span>
+    <span class="c1">#</span>
+    <span class="c1"># Lookup Google.com&#39;s IP address -- specify a specific address family.</span>
+    <span class="c1"># Most websites support IPv4 but not always IPv6.</span>
+    <span class="c1"># Interface is needed to resolve some specialty edge-cases.</span>
+    <span class="n">dest</span> <span class="o">=</span> <span class="k">await</span> <span class="n">Address</span><span class="p">(</span><span class="s2">&quot;8.8.8.8&quot;</span><span class="p">,</span> <span class="mi">53</span><span class="p">,</span> <span class="n">route</span><span class="p">)</span><span class="o">.</span><span class="n">res</span><span class="p">()</span>
+    <span class="c1">#</span>
+    <span class="c1"># Now open a TCP connection to that the destination.</span>
+    <span class="n">pipe</span> <span class="o">=</span> <span class="k">await</span> <span class="n">pipe_open</span><span class="p">(</span><span class="n">TCP</span><span class="p">,</span> <span class="n">route</span><span class="p">,</span> <span class="n">dest</span><span class="p">)</span>
+    <span class="c1">#</span>
+    <span class="c1"># Send it a malformed HTTP request.</span>
+    <span class="n">buf</span> <span class="o">=</span> <span class="sa">b</span><span class="s2">&quot;Test</span><span class="se">\r\n\r\n</span><span class="s2">&quot;</span>
+    <span class="k">await</span> <span class="n">pipe</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">buf</span><span class="p">)</span>
+    <span class="c1">#</span>
+    <span class="c1"># Wait for any message response.</span>
+    <span class="n">out</span> <span class="o">=</span> <span class="k">await</span> <span class="n">pipe</span><span class="o">.</span><span class="n">recv</span><span class="p">(</span><span class="n">timeout</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+    <span class="c1">#</span>
+    <span class="c1"># Cleanup.</span>
+    <span class="k">await</span> <span class="n">pipe</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">async_test</span><span class="p">(</span><span class="n">example</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>You can see from this example that P2PD supports duel-stack networking,
+multiple network interface cards, external addressing, DNS / IP / target parsing,
+and publish-subscribe. But there are many more useful features for
+network programming.</p>
+<p>In the next section we’ll be taking a closer look at pipes.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Using P2PD from Python" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="pipes.html" class="btn btn-neutral float-right" title="Pipes" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

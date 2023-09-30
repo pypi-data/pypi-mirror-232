@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Examples &mdash; P2PD 0.1 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Awesome stuff built with P2PD" href="../built/index.html" />
+    <link rel="prev" title="Daemons" href="daemons.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            P2PD
+          </a>
+              <div class="version">
+                0.1.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../problems.html">The problem with P2P networking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../how.html">How P2PD works</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rest_api.html">The P2PD REST API</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Using P2PD from Python</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="basics.html">Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pipes.html">Pipes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="queues.html">Queues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="daemons.html">Daemons</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Examples</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#rest-apis">REST APIs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../built/index.html">Awesome stuff built with P2PD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../future_work.html">Future work</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">P2PD</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Using P2PD from Python</a></li>
+      <li class="breadcrumb-item active">Examples</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/python/examples.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="examples">
+<h1>Examples<a class="headerlink" href="#examples" title="Permalink to this heading"></a></h1>
+<p>Here is a collection of example(s) that use P2PD in some form.</p>
+<section id="rest-apis">
+<h2>REST APIs<a class="headerlink" href="#rest-apis" title="Permalink to this heading"></a></h2>
+<p>There exists various Python frameworks for building REST APIs. But
+what many people don’t realize is the Python standard library already
+supports enough of HTTP that a library isn’t often isn’t required.
+Python is able to parse HTTP requests and responses into objects
+that are quite easy to use - though the location of these features
+in the standard library isn’t that intuitive.</p>
+<p>I’ve built a simple module that accesses these features. Using this
+module you can now easily build a TCP / UDP / IPv4 / IPv6 async
+REST API in Python. Here’s an example of that.</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">p2pd</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="k">class</span> <span class="nc">NetInfoServer</span><span class="p">(</span><span class="n">Daemon</span><span class="p">):</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">msg_cb</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="p">,</span> <span class="n">client_tup</span><span class="p">,</span> <span class="n">pipe</span><span class="p">):</span>
+        <span class="c1"># Parse HTTP message and handle CORS.</span>
+        <span class="n">req</span> <span class="o">=</span> <span class="k">await</span> <span class="n">rest_service</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">client_tup</span><span class="p">,</span> <span class="n">pipe</span><span class="p">)</span>
+        <span class="c1">#</span>
+        <span class="k">async</span> <span class="k">def</span> <span class="nf">get_response</span><span class="p">():</span>
+            <span class="c1"># Show information of the connection to the peer.</span>
+            <span class="n">p</span> <span class="o">=</span> <span class="n">req</span><span class="o">.</span><span class="n">api</span><span class="p">(</span><span class="s2">&quot;/mapping&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">p</span><span class="p">:</span>
+                <span class="n">sock</span> <span class="o">=</span> <span class="n">pipe</span><span class="o">.</span><span class="n">sock</span>
+                <span class="k">return</span> <span class="p">{</span>
+                    <span class="s2">&quot;error&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                    <span class="s2">&quot;fd&quot;</span><span class="p">:</span> <span class="n">sock</span><span class="o">.</span><span class="n">fileno</span><span class="p">(),</span>
+                    <span class="s2">&quot;laddr&quot;</span><span class="p">:</span> <span class="n">sock</span><span class="o">.</span><span class="n">getsockname</span><span class="p">(),</span>
+                    <span class="s2">&quot;raddr&quot;</span><span class="p">:</span> <span class="n">sock</span><span class="o">.</span><span class="n">getpeername</span><span class="p">(),</span>
+                    <span class="s2">&quot;route&quot;</span><span class="p">:</span> <span class="n">pipe</span><span class="o">.</span><span class="n">route</span><span class="o">.</span><span class="n">to_dict</span><span class="p">(),</span>
+                    <span class="s2">&quot;if&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">pipe</span><span class="o">.</span><span class="n">route</span><span class="o">.</span><span class="n">interface</span><span class="o">.</span><span class="n">name</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+            <span class="c1">#</span>
+            <span class="c1"># Fallback and serve all other purposes.</span>
+            <span class="k">return</span> <span class="p">{</span>
+                <span class="s2">&quot;error&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+                <span class="s2">&quot;msg&quot;</span><span class="p">:</span> <span class="s2">&quot;method not implemented&quot;</span>
+            <span class="p">}</span>
+        <span class="c1">#</span>
+        <span class="n">resp</span> <span class="o">=</span> <span class="k">await</span> <span class="n">get_response</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">resp</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">await</span> <span class="n">send_json</span><span class="p">(</span>
+                <span class="n">resp</span><span class="p">,</span>
+                <span class="n">req</span><span class="p">,</span>
+                <span class="n">client_tup</span><span class="p">,</span>
+                <span class="n">pipe</span>
+            <span class="p">)</span>
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">example</span><span class="p">():</span>
+    <span class="c1"># Default interface of your machine.</span>
+    <span class="c1"># netifaces.interfaces() for names</span>
+    <span class="c1"># or await load_interfaces() for a started list.</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="k">await</span> <span class="n">Interface</span><span class="p">()</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+    <span class="c1">#</span>
+    <span class="c1"># Server object inherits from a standard Daemon.</span>
+    <span class="n">server</span> <span class="o">=</span> <span class="n">NetInfoServer</span><span class="p">()</span>
+    <span class="c1">#</span>
+    <span class="c1"># Makes a Route aware of all Routes used for the server.</span>
+    <span class="c1"># Might do this automatically in the future.</span>
+    <span class="n">server</span><span class="o">.</span><span class="n">set_rp</span><span class="p">(</span><span class="n">i</span><span class="o">.</span><span class="n">rp</span><span class="p">)</span>
+    <span class="c1">#</span>
+    <span class="c1"># Defines addresses and protocols to listen on.</span>
+    <span class="c1"># Feel free to switch this up.</span>
+    <span class="k">await</span> <span class="n">server</span><span class="o">.</span><span class="n">listen_all</span><span class="p">(</span>
+        <span class="c1"># Listen on all routes for IP4 and IPv6.</span>
+        <span class="p">[</span><span class="n">i</span><span class="o">.</span><span class="n">rp</span><span class="p">[</span><span class="n">IP4</span><span class="p">],</span> <span class="n">i</span><span class="o">.</span><span class="n">rp</span><span class="p">[</span><span class="n">IP6</span><span class="p">]],</span>
+        <span class="c1">#</span>
+        <span class="c1"># Port(s) to listen on.</span>
+        <span class="p">[</span><span class="mi">20000</span><span class="p">],</span>
+        <span class="c1">#</span>
+        <span class="c1"># Interested in TCP and UDP.</span>
+        <span class="p">[</span><span class="n">TCP</span><span class="p">,</span> <span class="n">UDP</span><span class="p">]</span>
+    <span class="p">)</span>
+    <span class="c1"># Do a while sleep loop ...</span>
+    <span class="c1"># Instead we&#39;ll just close.</span>
+    <span class="k">await</span> <span class="n">server</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">async_test</span><span class="p">(</span><span class="n">example</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="daemons.html" class="btn btn-neutral float-left" title="Daemons" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../built/index.html" class="btn btn-neutral float-right" title="Awesome stuff built with P2PD" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

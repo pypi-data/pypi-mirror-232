@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>P2PD Learning Portal &mdash; P2PD 0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="The problem with P2P networking" href="problems.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="#" class="icon icon-home">
+            P2PD
+          </a>
+              <div class="version">
+                0.1.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="problems.html">The problem with P2P networking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="how.html">How P2PD works</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rest_api.html">The P2PD REST API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python/index.html">Using P2PD from Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="built/index.html">Awesome stuff built with P2PD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="future_work.html">Future work</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">P2PD</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">P2PD Learning Portal</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="p2pd-learning-portal">
+<h1>P2PD Learning Portal<a class="headerlink" href="#p2pd-learning-portal" title="Permalink to this heading"></a></h1>
+<section id="contents">
+<h2>Contents<a class="headerlink" href="#contents" title="Permalink to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="problems.html">The problem with P2P networking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="how.html">How P2PD works</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="how.html#addresses">Addresses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how.html#naming">Naming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how.html#signaling">Signaling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how.html#methodology">Methodology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how.html#next-steps">Next Steps</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="rest_api.html">The P2PD REST API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="rest_api.html#starting-the-server">Starting the server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rest_api.html#making-your-first-request">Making your first request</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rest_api.html#looking-up-your-peer-s-address">Looking up your peer’s address</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rest_api.html#now-lets-try-connect-to-it">Now lets try connect to it</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rest_api.html#text-based-send-and-receive">Text-based send and receive</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rest_api.html#binary-send-and-receive">Binary send and receive</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rest_api.html#bidirectional-relay-pipes">Bidirectional relay pipes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rest_api.html#publish-subscribe">Publish-subscribe</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="python/index.html">Using P2PD from Python</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="python/basics.html">Basics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="python/basics.html#running-async-examples">Running async examples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="python/basics.html#network-interface-cards">Network interface cards</a></li>
+<li class="toctree-l3"><a class="reference internal" href="python/basics.html#the-addressing-problem">The addressing problem</a></li>
+<li class="toctree-l3"><a class="reference internal" href="python/basics.html#routes-to-the-rescue">Routes to the rescue</a></li>
+<li class="toctree-l3"><a class="reference internal" href="python/basics.html#a-first-networking-program">A first networking program</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="python/pipes.html">Pipes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="python/pipes.html#tcp-echo-server-example">TCP echo server example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="python/pipes.html#udp-await-example">UDP await example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="python/pipes.html#pipe-methods">Pipe methods</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="python/pipes.html#def-subscribe-self-sub-sub-all-handler-none">def subscribe(self, sub=SUB_ALL, handler=None)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="python/pipes.html#def-unsubscribe-self-sub">def unsubscribe(self, sub)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="python/pipes.html#async-def-recv-self-sub-sub-all-timeout-2-full-false">async def recv(self, sub=SUB_ALL, timeout=2, full=False)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="python/pipes.html#async-def-send-self-data-dest-tup-none">async def send(self, data, dest_tup=None)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="python/pipes.html#def-add-msg-cb-self-msg-cb">def add_msg_cb(self, msg_cb)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="python/pipes.html#def-del-msg-cb-self-msg-cb">def del_msg_cb(self, msg_cb)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="python/pipes.html#def-add-end-cb-self-end-cb">def add_end_cb(self, end_cb)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="python/pipes.html#def-del-end-cb-self-end-cb">def del_end_cb(self, end_cb)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="python/pipes.html#def-add-pipe-self-pipe">def add_pipe(self, pipe)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="python/pipes.html#def-del-pipe-self-pipe">def del_pipe(self, pipe)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="python/pipes.html#async-def-close-self">async def close(self)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="python/pipes.html#additional-pipe-options">Additional pipe options</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="python/queues.html">Queues</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="python/queues.html#javascript-subscription-example">Javascript subscription example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="python/queues.html#python-subscription-example">Python subscription example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="python/queues.html#last-words-on-queues">Last words on queues</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="python/daemons.html">Daemons</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="python/daemons.html#listen-all">listen_all</a></li>
+<li class="toctree-l3"><a class="reference internal" href="python/daemons.html#listen-specific">listen_specific</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="python/examples.html">Examples</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="python/examples.html#rest-apis">REST APIs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="built/index.html">Awesome stuff built with P2PD</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="built/stun.html">STUN client for address lookups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="built/turn.html">TURN client for proxying</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="built/turn.html#udp-is-a-little-better">UDP is a little better</a></li>
+<li class="toctree-l3"><a class="reference internal" href="built/turn.html#using-turn-as-a-fall-back-option">Using TURN as a fall-back option</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="built/netifaces.html">More portable netifaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="built/http_client.html">Hyper-usable HTTP client</a></li>
+<li class="toctree-l2"><a class="reference internal" href="built/http_framework.html">Lightweight web framework</a></li>
+<li class="toctree-l2"><a class="reference internal" href="built/toxiproxy.html">Toxiproxy client and server</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="built/toxiproxy.html#toxiproxy">Toxiproxy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="built/toxiproxy.html#adding-a-toxic">Adding a toxic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="built/toxiproxy.html#add-latency-ms-jitter">add_latency(ms, jitter)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="built/toxiproxy.html#add-bandwidth-limit-kb">add_bandwidth_limit(kb)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="built/toxiproxy.html#add-slow-close-ms">add_slow_close(ms)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="built/toxiproxy.html#add-timeout-ms">add_timeout(ms)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="built/toxiproxy.html#add-reset-peer-ms">add_reset_peer(ms)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="built/toxiproxy.html#add-limit-data-n">add_limit_data(n)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="built/toxiproxy.html#add-slicer-n-v-ug">add_slicer(n, v, ug)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="future_work.html">Future work</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="future_work.html#network-changes">Network changes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="future_work.html#firewall-bypass">Firewall bypass</a></li>
+<li class="toctree-l2"><a class="reference internal" href="future_work.html#pushing-sockets">Pushing sockets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="future_work.html#error-recovery-code">Error recovery code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="future_work.html#other-ideas">Other ideas</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="problems.html" class="btn btn-neutral float-right" title="The problem with P2P networking" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

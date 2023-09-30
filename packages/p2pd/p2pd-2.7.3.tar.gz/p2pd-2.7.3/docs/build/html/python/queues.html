@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Queues &mdash; P2PD 0.1 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Daemons" href="daemons.html" />
+    <link rel="prev" title="Pipes" href="pipes.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            P2PD
+          </a>
+              <div class="version">
+                0.1.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../problems.html">The problem with P2P networking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../how.html">How P2PD works</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rest_api.html">The P2PD REST API</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Using P2PD from Python</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="basics.html">Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pipes.html">Pipes</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Queues</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#javascript-subscription-example">Javascript subscription example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#python-subscription-example">Python subscription example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#last-words-on-queues">Last words on queues</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="daemons.html">Daemons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples.html">Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../built/index.html">Awesome stuff built with P2PD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../future_work.html">Future work</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">P2PD</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Using P2PD from Python</a></li>
+      <li class="breadcrumb-item active">Queues</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/python/queues.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="queues">
+<h1>Queues<a class="headerlink" href="#queues" title="Permalink to this heading"></a></h1>
+<p>If you want to use the push and pull APIs over the relay pipes
+there are some additional details that you might find useful. In order
+to support pull API usage the software must be able to save messages.
+It does this by using in memory queues which for now have no set limit.
+What hasn’t been mentioned is that these queues are organized around
+subscriptions – regex patterns that match messages and remote peers.</p>
+<p>These queues only exist when a subscription is made. <strong>By default P2PD
+subscribes to all messages when a destination is provided for a pipe and
+so does the REST API.</strong> This has the special format of a blank message pattern
+and a blank peer address pattern to match everything. The reason why this
+feature exists is because of the way UDP is designed.</p>
+<blockquote>
+<div><p><strong>(Disclaimer: UDP really sucks.)</strong></p>
+</div></blockquote>
+<p>You may know that UDP offers no ordered delivery or indeed any
+kind of reliable delivery guarantee at all. In practice this means
+that UDP-focused protocols (like STUN) end up using randomized IDs in
+requests and responses as kind of an asynchronous form of ‘ordering.’
+There is also the case that UDP is ‘connectionless.’ This means that
+you can have a single socket that you can use to send packets
+to multiple destinations.</p>
+<p>What ends up happening is you get back messages [on the same socket] that:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p><strong>… Are from multiple different hosts and or ports.</strong></p></li>
+<li><p><strong>… Are from multiple different requests.</strong></p></li>
+</ol>
+</div></blockquote>
+<p>And it’s just a mess. So I had the idea of being able to sort messages
+and remote (IP + port) tuples using regex. Such an approach is flexible
+enough for any kind of protocol and is already in use in my STUN client.
+Now here’s what that looks like in practice. First for API then Python.</p>
+<section id="javascript-subscription-example">
+<h2>Javascript subscription example<a class="headerlink" href="#javascript-subscription-example" title="Permalink to this heading"></a></h2>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">en</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">encodeURIComponent</span><span class="p">;</span>
+<span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">p2pd_test</span><span class="p">(</span><span class="nx">server</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="c1">// Do these in order to test some P2PD APIs.</span>
+<span class="w">    </span><span class="nx">msg_p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">en</span><span class="p">(</span><span class="s2">&quot;[hH]e[l]+o&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">addr_p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">en</span><span class="p">(</span><span class="s2">&quot;[\s\S]+&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">paths</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="s2">&quot;/version&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;/p2p/open/con_name/self&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;/p2p/sub/con_name/msg_p/&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">msg_p</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot;addr_p&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">addr_p</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;/p2p/send/con_name/&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">en</span><span class="p">(</span><span class="s2">&quot;ECHO Hello, world!&quot;</span><span class="p">),</span>
+<span class="w">        </span><span class="s2">&quot;/p2p/recv/con_name/msg_p/&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">msg_p</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot;addr_p&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">addr_p</span><span class="p">,</span>
+<span class="w">    </span><span class="p">];</span>
+
+<span class="w">    </span><span class="c1">// Make requests to the API.</span>
+<span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">paths</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Make API request.</span>
+<span class="w">        </span><span class="nx">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;http://localhost:12333&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">paths</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+<span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">out</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
+<span class="w">            </span><span class="nx">url</span><span class="o">:</span><span class="w"> </span><span class="nx">url</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;GET&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">dataType</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;text&quot;</span>
+<span class="w">        </span><span class="p">});</span>
+
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">out</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// Subscribe.</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="s2">&quot;error&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;con_name&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;sub&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;[b&#39;[hH]e[l]+o&#39;, b&#39;[\s\S]+&#39;]&quot;</span>
+<span class="p">}</span>
+
+<span class="c1">// Send data.</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="s2">&quot;error&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;con_name&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;sent&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">18</span>
+<span class="p">}</span>
+
+<span class="c1">// Receive data.</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="s2">&quot;data&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Hello, world!&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;error&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;client_tup&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="s2">&quot;192.168.21.200&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="mf">54925</span>
+<span class="w">    </span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The URL encode method is used to make the data ‘safe’ to pass in a URL.
+A subscription consists of two regex patterns. The first regex matches
+a message while the second matches an ‘IP:port’. Message queues are
+assigned to each subscription. When receiving messages from a queue the
+full subscription / regex pair must be included. In the example above
+a message pattern matches hello, Hello, helo, or Hello. The regex method
+is ‘find_all’ so any instance of the pattern returns a match. But
+you can always use the caret ^ and dollar $ characters to match a
+whole string:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Checkout https://regex101.com/ if you need help with your regexes!
+</pre></div>
+</div>
+</section>
+<section id="python-subscription-example">
+<h2>Python subscription example<a class="headerlink" href="#python-subscription-example" title="Permalink to this heading"></a></h2>
+<p>For brevity I won’t go into using the library in this section.
+This is just an example to get a sense of what subscriptions look like
+from Python code.</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">p2pd</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">example</span><span class="p">():</span>
+    <span class="c1">#</span>
+    <span class="c1"># Start default interface.</span>
+    <span class="c1"># Don&#39;t bother resolving external addresses.</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="k">await</span> <span class="n">Interface</span><span class="p">()</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+    <span class="c1">#</span>
+    <span class="c1"># Echo server address.</span>
+    <span class="n">route</span> <span class="o">=</span> <span class="k">await</span> <span class="n">i</span><span class="o">.</span><span class="n">route</span><span class="p">()</span><span class="o">.</span><span class="n">bind</span><span class="p">()</span>
+    <span class="n">echo_dest</span> <span class="o">=</span> <span class="k">await</span> <span class="n">Address</span><span class="p">(</span><span class="s2">&quot;tcpbin.com&quot;</span><span class="p">,</span> <span class="mi">4242</span><span class="p">,</span> <span class="n">route</span><span class="p">)</span><span class="o">.</span><span class="n">res</span><span class="p">()</span>
+    <span class="c1">#</span>
+    <span class="c1"># Open a connection to the echo server.</span>
+    <span class="n">pipe</span> <span class="o">=</span> <span class="k">await</span> <span class="n">pipe_open</span><span class="p">(</span><span class="n">TCP</span><span class="p">,</span> <span class="n">route</span><span class="p">,</span> <span class="n">echo_dest</span><span class="p">)</span>
+    <span class="c1"># No need to call pipe.subscribe(SUB_ALL).</span>
+    <span class="c1"># This is done automatically if a destination is provided.</span>
+    <span class="c1"># Call pipe.unsubscribe(SUB_ALL) to turn this off.</span>
+    <span class="c1">#</span>
+    <span class="c1"># Send data down the pipe.</span>
+    <span class="n">msg</span> <span class="o">=</span> <span class="sa">b</span><span class="s2">&quot;do echo test&quot;</span>
+    <span class="k">await</span> <span class="n">pipe</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">msg</span> <span class="o">+</span> <span class="sa">b</span><span class="s2">&quot;</span><span class="se">\r\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">echo_dest</span><span class="o">.</span><span class="n">tup</span><span class="p">)</span>
+    <span class="c1">#</span>
+    <span class="c1"># Receive data back.</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="k">await</span> <span class="n">pipe</span><span class="o">.</span><span class="n">recv</span><span class="p">(</span><span class="n">SUB_ALL</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+    <span class="k">assert</span><span class="p">(</span><span class="n">msg</span> <span class="ow">in</span> <span class="n">data</span><span class="p">)</span>
+    <span class="c1">#</span>
+    <span class="c1"># Close the sockets.</span>
+    <span class="k">await</span> <span class="n">pipe</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="c1"># Utility function to run an async function.</span>
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">async_test</span><span class="p">(</span><span class="n">example</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="last-words-on-queues">
+<h2>Last words on queues<a class="headerlink" href="#last-words-on-queues" title="Permalink to this heading"></a></h2>
+<p>What you should understand about subscriptions and queues is messages are
+delivered to all matching subscription queues. So if you subscribe to
+SUB_ALL / any message and a more specific subscription you will end up
+with copies of every message on the ALL queue with only the matching
+messages on the second one. You may only be interested in a specific
+message but if you subscribe to everything it will mean these messages
+are still duplicated there. So you may have to flush messages you’ve
+already processed should you want to use that queue.</p>
+<p><strong>Recall that by default P2PD will subscribe to SUB_ALL if a pipe has a destination
+set.</strong> If you don’t want to queue such messages you will have to call unsubscribe.
+The way to unsubscribe is to use the delete method.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span>-X<span class="w"> </span>DELETE<span class="w"> </span><span class="s2">&quot;http://localhost:12333/p2p/sub/con_name/msg_p/regex/addr_p/regex&quot;</span>
+</pre></div>
+</div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">p2pd_test</span><span class="p">(</span><span class="nx">server</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">out</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
+<span class="w">        </span><span class="nx">url</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;http://localhost:12333/p2p/sub/con_name/msg_p/regex/addr_p/regex&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;DELETE&#39;</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">dataType</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;text&quot;</span>
+<span class="w">    </span><span class="p">});</span>
+
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">out</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="s2">&quot;error&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;con_name&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;unsub&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;[b&#39;regex&#39;, b&#39;regex&#39;]&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>By default the msg_p and addr_p are set to blank if they’re not included.
+Therefore to unsubscribe from ‘all messages’ don’t include them.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span>-X<span class="w"> </span>DELETE<span class="w"> </span><span class="s2">&quot;http://localhost:12333/p2p/sub/con_name&quot;</span>
+</pre></div>
+</div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="s2">&quot;error&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;con_name&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;unsub&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;[b&#39;&#39;, b&#39;&#39;]&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="pipes.html" class="btn btn-neutral float-left" title="Pipes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="daemons.html" class="btn btn-neutral float-right" title="Daemons" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

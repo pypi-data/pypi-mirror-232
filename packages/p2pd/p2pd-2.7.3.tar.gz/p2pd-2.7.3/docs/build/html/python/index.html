@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Using P2PD from Python &mdash; P2PD 0.1 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Basics" href="basics.html" />
+    <link rel="prev" title="The P2PD REST API" href="../rest_api.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            P2PD
+          </a>
+              <div class="version">
+                0.1.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../problems.html">The problem with P2P networking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../how.html">How P2PD works</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rest_api.html">The P2PD REST API</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Using P2PD from Python</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="basics.html">Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pipes.html">Pipes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="queues.html">Queues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="daemons.html">Daemons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples.html">Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../built/index.html">Awesome stuff built with P2PD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../future_work.html">Future work</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">P2PD</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Using P2PD from Python</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/python/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="using-p2pd-from-python">
+<h1>Using P2PD from Python<a class="headerlink" href="#using-p2pd-from-python" title="Permalink to this heading"></a></h1>
+<p>Before we get started all Python examples assume:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>The ‘selector’ event loop is being used.</p></li>
+<li><p>The ‘spawn’ method is used as the multiprocessing start method.</p></li>
+<li><p>You are familiar with how to run asynchronous code.</p></li>
+<li><p>The string encoding is “UTF-8.”</p></li>
+</ol>
+</div></blockquote>
+<p>This keeps the code consistent across platforms. The package sets
+these by default so if your application is using a different configuration
+it may not work properly with P2PD.</p>
+<div class="line-block">
+<div class="line"><strong>Let’s start with how to connect to another peer.</strong></div>
+</div>
+<p>The code has two functions that simulate what two different computers might
+run (<strong>computer_a</strong> and <strong>computer_b</strong>.) They both need to know each others ‘names’
+and addressing information is shared over PDNS (a simple API provided by
+a PHP script that implements a key-value store.)</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">uuid</span>
+<span class="kn">from</span> <span class="nn">p2pd</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="n">PDNS_NAME</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">uuid</span><span class="o">.</span><span class="n">uuid4</span><span class="p">())</span>
+
+<span class="c1"># Put your custom protocol code here.</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">msg_cb</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">client_tup</span><span class="p">,</span> <span class="n">pipe</span><span class="p">):</span>
+    <span class="c1"># E.G. add a ping feature to your protocol.</span>
+    <span class="k">if</span> <span class="sa">b</span><span class="s2">&quot;PING&quot;</span> <span class="ow">in</span> <span class="n">msg</span><span class="p">:</span>
+        <span class="k">await</span> <span class="n">pipe</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;PONG&quot;</span><span class="p">)</span>
+
+<span class="c1"># Computer a and b code can run on different</span>
+<span class="c1"># computers -- for demo they&#39;re just on the same.</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">computer_a</span><span class="p">():</span>
+    <span class="c1"># Start our main node server.</span>
+    <span class="c1"># The node implements your protocol.</span>
+    <span class="n">node</span> <span class="o">=</span> <span class="k">await</span> <span class="n">start_p2p_node</span><span class="p">(</span>
+        <span class="c1"># Set to true for port forwarding + pin holes.</span>
+        <span class="n">enable_upnp</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="c1">#</span>
+        <span class="c1"># Make sure node server uses different port.</span>
+        <span class="n">port</span><span class="o">=</span><span class="n">NODE_PORT</span> <span class="o">+</span> <span class="mi">50</span> <span class="o">+</span> <span class="mi">1</span>
+        
+    <span class="p">)</span>
+    <span class="n">node</span><span class="o">.</span><span class="n">add_msg_cb</span><span class="p">(</span><span class="n">msg_cb</span><span class="p">)</span>
+    <span class="c1">#</span>
+    <span class="c1"># Register a human readable name for this peer.</span>
+    <span class="c1"># NOTE: for demo only -- use your own unique name!</span>
+    <span class="k">await</span> <span class="n">node</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">PDNS_NAME</span><span class="p">)</span>
+    <span class="c1">#</span>
+    <span class="k">return</span> <span class="n">node</span>
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">computer_b</span><span class="p">():</span>
+    <span class="c1"># Start our main node server.</span>
+    <span class="c1"># The node implements your protocol.</span>
+    <span class="n">node</span> <span class="o">=</span> <span class="k">await</span> <span class="n">start_p2p_node</span><span class="p">(</span>
+        <span class="c1"># Set to true for port forwarding + pin holes.</span>
+        <span class="n">enable_upnp</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="c1">#</span>
+        <span class="c1"># Make sure node server uses different port</span>
+        <span class="c1"># to computer_a.</span>
+        <span class="n">port</span><span class="o">=</span><span class="n">NODE_PORT</span> <span class="o">+</span> <span class="mi">50</span> <span class="o">+</span> <span class="mi">2</span>
+    <span class="p">)</span>
+    <span class="c1">#</span>
+    <span class="c1"># Location of computer a&#39;s p2p address.</span>
+    <span class="n">pdns</span> <span class="o">=</span> <span class="n">PDNS</span><span class="p">(</span><span class="n">PDNS_NAME</span><span class="p">)</span>
+    <span class="c1">#</span>
+    <span class="c1"># Spawn a new pipe from a P2P con.</span>
+    <span class="c1"># Connect to their node server.</span>
+    <span class="n">pipe</span><span class="p">,</span> <span class="n">success_type</span> <span class="o">=</span> <span class="k">await</span> <span class="n">node</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">pdns</span><span class="p">)</span>
+    <span class="c1">#</span>
+    <span class="c1"># Test send / receive.</span>
+    <span class="n">msg</span> <span class="o">=</span> <span class="sa">b</span><span class="s2">&quot;test send&quot;</span>
+    <span class="k">await</span> <span class="n">pipe</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;ECHO &quot;</span> <span class="o">+</span> <span class="n">msg</span><span class="p">)</span>
+    <span class="n">out</span> <span class="o">=</span> <span class="k">await</span> <span class="n">pipe</span><span class="o">.</span><span class="n">recv</span><span class="p">()</span>
+    <span class="c1">#</span>
+    <span class="c1"># Cleanup.</span>
+    <span class="k">assert</span><span class="p">(</span><span class="n">msg</span> <span class="ow">in</span> <span class="n">out</span><span class="p">)</span>
+    <span class="k">await</span> <span class="n">pipe</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="c1">#</span>
+    <span class="k">return</span> <span class="n">node</span>
+    
+<span class="c1"># Warning: startup is slow - be patient.</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">example</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    (1) Computer A starts a node server and uses &#39;pseudo dns&#39;</span>
+<span class="sd">    to store its address at a given name.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">node_a</span> <span class="o">=</span> <span class="k">await</span> <span class="n">computer_a</span><span class="p">()</span>
+    <span class="c1">#</span>
+    <span class="c1">#</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    (2) Computer B starts a node server and uses &#39;pseudo dns&#39;</span>
+<span class="sd">    to lookup the p2p address of computer a to connect to it.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">node_b</span> <span class="o">=</span> <span class="k">await</span> <span class="n">computer_b</span><span class="p">()</span>
+    <span class="c1">#</span>
+    <span class="c1">#</span>
+    <span class="c1"># Cleanup / shut down node servers.</span>
+    <span class="k">await</span> <span class="n">node_a</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="k">await</span> <span class="n">node_b</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="c1"># Run the coroutine.</span>
+<span class="c1"># Or await example() if in async REPL.</span>
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">async_test</span><span class="p">(</span><span class="n">example</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>You can use this library as a black box if you want. The code handles loading network interfaces, enumerating routers, bypassing NATs,
+and establishing connections. But even more is possible.</p>
+<p>It can be used as a way to do network programming in general. Whether
+you want to write multi-protocol, multi-address clients or servers.
+Using P2PD makes this simple. And it supports either using async or sync
+callbacks  or a pull / push style API. Something like the Python
+equivalent of ‘protocol classes’ versus ‘stream reader / writers’
+but with more control.</p>
+<div class="line-block">
+<div class="line"><strong>If you were to use Python by itself for network programming you would likely</strong></div>
+<div class="line"><strong>have to implement some of these features:</strong></div>
+</div>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>IPv6-specific socket bind code</dt><dd><ul>
+<li><p>Link-local address logic</p></li>
+<li><p>Global-address logic</p></li>
+<li><p>Platform-specific logic</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Interface-specific connection addresses</dt><dd><ul>
+<li><p>Different for IPv6 link local addresses</p></li>
+<li><p>Different for IPv6 global addresses</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>Interface support (in general)</p></li>
+<li><p>External address support</p></li>
+<li><dl class="simple">
+<dt>Whether to use ‘protocol’ classes or ‘streams’</dt><dd><ul>
+<li><p>Protocols = events; streams = async push and pull.</p></li>
+<li><p>Python doesn’t have an async push and pull API for UDP at all
+because Guido van Rossum thought it was a bad idea.
+I don’t agree. P2PD can do async awaits on UDP.
+Or it can do event-based programming like the protocol class.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>Message filtering (useful for UDP protocols)</p></li>
+<li><p>Multiplexing-specific logic for UDP</p></li>
+<li><dl class="simple">
+<dt>Some very smart hacks to reuse message handling code</dt><dd><ul>
+<li><p>Python has radically different approaches for TCP cons and servers.</p></li>
+<li><p>While it does not provide the same methods for UDP.</p></li>
+<li><p>I’ve created software that provides the same API features
+whether its a server or connection; TCP or UDP; IPv4 or IPv6</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+<div class="line-block">
+<div class="line">Fortunately I’ve done this already!</div>
+<div class="line">The next topics teach you more about network programming with P2PD.</div>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="basics.html">Basics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="basics.html#running-async-examples">Running async examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basics.html#network-interface-cards">Network interface cards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basics.html#the-addressing-problem">The addressing problem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basics.html#routes-to-the-rescue">Routes to the rescue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basics.html#a-first-networking-program">A first networking program</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pipes.html">Pipes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pipes.html#tcp-echo-server-example">TCP echo server example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pipes.html#udp-await-example">UDP await example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pipes.html#pipe-methods">Pipe methods</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pipes.html#def-subscribe-self-sub-sub-all-handler-none">def subscribe(self, sub=SUB_ALL, handler=None)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pipes.html#def-unsubscribe-self-sub">def unsubscribe(self, sub)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pipes.html#async-def-recv-self-sub-sub-all-timeout-2-full-false">async def recv(self, sub=SUB_ALL, timeout=2, full=False)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pipes.html#async-def-send-self-data-dest-tup-none">async def send(self, data, dest_tup=None)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pipes.html#def-add-msg-cb-self-msg-cb">def add_msg_cb(self, msg_cb)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pipes.html#def-del-msg-cb-self-msg-cb">def del_msg_cb(self, msg_cb)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pipes.html#def-add-end-cb-self-end-cb">def add_end_cb(self, end_cb)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pipes.html#def-del-end-cb-self-end-cb">def del_end_cb(self, end_cb)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pipes.html#def-add-pipe-self-pipe">def add_pipe(self, pipe)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pipes.html#def-del-pipe-self-pipe">def del_pipe(self, pipe)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pipes.html#async-def-close-self">async def close(self)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pipes.html#additional-pipe-options">Additional pipe options</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="queues.html">Queues</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="queues.html#javascript-subscription-example">Javascript subscription example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="queues.html#python-subscription-example">Python subscription example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="queues.html#last-words-on-queues">Last words on queues</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="daemons.html">Daemons</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="daemons.html#listen-all">listen_all</a></li>
+<li class="toctree-l2"><a class="reference internal" href="daemons.html#listen-specific">listen_specific</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="examples.html#rest-apis">REST APIs</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../rest_api.html" class="btn btn-neutral float-left" title="The P2PD REST API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="basics.html" class="btn btn-neutral float-right" title="Basics" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daemons &mdash; P2PD 0.1 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Examples" href="examples.html" />
+    <link rel="prev" title="Queues" href="queues.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            P2PD
+          </a>
+              <div class="version">
+                0.1.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../problems.html">The problem with P2P networking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../how.html">How P2PD works</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rest_api.html">The P2PD REST API</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Using P2PD from Python</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="basics.html">Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pipes.html">Pipes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="queues.html">Queues</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Daemons</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#listen-all">listen_all</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#listen-specific">listen_specific</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="examples.html">Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../built/index.html">Awesome stuff built with P2PD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../future_work.html">Future work</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">P2PD</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Using P2PD from Python</a></li>
+      <li class="breadcrumb-item active">Daemons</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/python/daemons.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="daemons">
+<h1>Daemons<a class="headerlink" href="#daemons" title="Permalink to this heading"></a></h1>
+<p>In the <a class="reference internal" href="pipes.html"><span class="doc">Pipes</span></a> section I showed some simple examples of how servers
+can be built using the <cite>pipe_open</cite> function. Such an approach is fine if
+you only want to use one protocol or address type. But real-world servers
+may need to run on multiple routes, address, and interfaces. The
+Daemon class offers a way to build such servers.</p>
+<p>To use it you sub class it and define your own msg_cb function.</p>
+<section id="listen-all">
+<h2>listen_all<a class="headerlink" href="#listen-all" title="Permalink to this heading"></a></h2>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">p2pd</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="k">class</span> <span class="nc">EchoServer</span><span class="p">(</span><span class="n">Daemon</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+    <span class="c1">#</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">msg_cb</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="p">,</span> <span class="n">client_tup</span><span class="p">,</span> <span class="n">pipe</span><span class="p">):</span>
+        <span class="k">await</span> <span class="n">pipe</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">client_tup</span><span class="p">)</span>
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">example</span><span class="p">():</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="k">await</span> <span class="n">Interface</span><span class="p">()</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+    <span class="c1">#</span>
+    <span class="c1"># Daemon instance.</span>
+    <span class="n">server_port</span> <span class="o">=</span> <span class="mi">10126</span>
+    <span class="n">echod</span> <span class="o">=</span> <span class="k">await</span> <span class="n">EchoServer</span><span class="p">()</span><span class="o">.</span><span class="n">listen_all</span><span class="p">(</span>
+        <span class="p">[</span><span class="n">i</span><span class="p">],</span>
+        <span class="p">[</span><span class="n">server_port</span><span class="p">],</span>
+        <span class="p">[</span><span class="n">TCP</span><span class="p">]</span>
+    <span class="p">)</span>
+    <span class="c1">#</span>
+    <span class="k">await</span> <span class="n">echod</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">async_test</span><span class="p">(</span><span class="n">example</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The listen_all method of the Daemon class is as follows.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">async</span> <span class="k">def</span> <span class="nf">listen_all</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">targets</span><span class="p">,</span> <span class="n">ports</span><span class="p">,</span> <span class="n">protos</span><span class="p">,</span> <span class="n">af</span><span class="o">=</span><span class="n">AF_ANY</span><span class="p">,</span> <span class="n">msg_cb</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="n">error_on_af</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Targets, ports, and protos are a list. The supported objects that can be used
+as targets are Interfaces and Routes. A range may be given as an entry in
+the ports list by using [start, stop] (inclusive.) The total number of
+servers created will be len(targets) * total_ports * len(protos) * total_afs.
+For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">targets</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">r</span><span class="p">]</span>
+<span class="n">ports</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10000</span><span class="p">,</span> <span class="p">[</span><span class="mi">30000</span><span class="p">,</span> <span class="mi">30100</span><span class="p">]]</span>
+<span class="n">protos</span> <span class="o">=</span> <span class="p">[</span><span class="n">TCP</span><span class="p">]</span>
+<span class="n">af</span> <span class="o">=</span> <span class="n">AF_ANY</span> <span class="p">(</span><span class="n">use</span> <span class="nb">all</span> <span class="n">supported</span> <span class="n">address</span> <span class="n">families</span> <span class="n">of</span> <span class="n">the</span> <span class="n">related</span> <span class="n">interface</span><span class="o">.</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Let’s assume that i and r use duel-stack interface. The total servers would be
+2 * 101 * 1 * 2 = 404 so it can add up fast if you’re not careful. It should
+be noted that any Route objects passed as targets will have their bound
+information ignored if they’re already bound. But their NIC IPs and EXT IPs
+will still be used as a template to create routes for the servers
+based on the other parameters used for listen_all.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>IPv6 note</strong>: P2PD has small differences in the way it handles IPv6
+services compared to IPv4 which would be unexpected without learning
+about them. In IPv4 to run a server on a network interface that can be reached
+from the LAN and WAN you simply listen on one of the NICs IPs.
+In IPv6 it has kind of split up LAN IPs and external IPs into
+link-local addresses and global-scope addresses, respectively.</p>
+<p>I wanted the code to work the same with IPv6 so I start with the assumption that users want servers to be reachable internally and externally. Hence I don’t just bind to a global-scope address. I also bind to a link-local address. That means that for IPv6 the final number of servers created
+is multiplied by 2. Maybe this is a bad idea but I think it simplifies
+a lot of things.</p>
+</div>
+</section>
+<section id="listen-specific">
+<h2>listen_specific<a class="headerlink" href="#listen-specific" title="Permalink to this heading"></a></h2>
+<p>The listen_all function is useful for applying the same AFs, protocols, and ports to the entries in the targets list. But sometimes you want to use the targets as-is if they’re already ‘bound.’ Perhaps in the case where they’ve been specifically set to bind to a loopback adapter or even ‘all addresses.’</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">async</span> <span class="k">def</span> <span class="nf">listen_specific</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">targets</span><span class="p">,</span> <span class="n">msg_cb</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The format of targets here is given as <strong>[[target, protocol], …]</strong>.</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span>
+<span class="kn">from</span> <span class="nn">p2pd</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">example</span><span class="p">():</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="mi">10233</span>
+    <span class="n">d</span> <span class="o">=</span> <span class="n">Daemon</span><span class="p">()</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="k">await</span> <span class="n">Interface</span><span class="p">()</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+    <span class="n">b</span> <span class="o">=</span> <span class="k">await</span> <span class="n">i</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="n">i</span><span class="o">.</span><span class="n">supported</span><span class="p">()[</span><span class="mi">0</span><span class="p">])</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="n">ips</span><span class="o">=</span><span class="s2">&quot;127.0.0.1&quot;</span><span class="p">)</span>
+    <span class="k">await</span> <span class="n">d</span><span class="o">.</span><span class="n">listen_specific</span><span class="p">(</span>
+        <span class="n">targets</span><span class="o">=</span><span class="p">[[</span><span class="n">b</span><span class="p">,</span> <span class="n">TCP</span><span class="p">]],</span>
+    <span class="p">)</span>
+    <span class="c1">#</span>
+    <span class="k">await</span> <span class="n">d</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">async_test</span><span class="p">(</span><span class="n">example</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The listen_specific code hasn’t been tested too much so it’s better to use <strong>listen_all</strong>.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="queues.html" class="btn btn-neutral float-left" title="Queues" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="examples.html" class="btn btn-neutral float-right" title="Examples" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

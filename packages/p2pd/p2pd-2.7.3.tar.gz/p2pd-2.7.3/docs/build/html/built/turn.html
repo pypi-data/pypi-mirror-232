@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TURN client for proxying &mdash; P2PD 0.1 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="More portable netifaces" href="netifaces.html" />
+    <link rel="prev" title="STUN client for address lookups" href="stun.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            P2PD
+          </a>
+              <div class="version">
+                0.1.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../problems.html">The problem with P2P networking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../how.html">How P2PD works</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rest_api.html">The P2PD REST API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/index.html">Using P2PD from Python</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Awesome stuff built with P2PD</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="stun.html">STUN client for address lookups</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">TURN client for proxying</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#udp-is-a-little-better">UDP is a little better</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#using-turn-as-a-fall-back-option">Using TURN as a fall-back option</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="netifaces.html">More portable netifaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http_client.html">Hyper-usable HTTP client</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http_framework.html">Lightweight web framework</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toxiproxy.html">Toxiproxy client and server</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../future_work.html">Future work</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">P2PD</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Awesome stuff built with P2PD</a></li>
+      <li class="breadcrumb-item active">TURN client for proxying</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/built/turn.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="turn-client-for-proxying">
+<h1>TURN client for proxying<a class="headerlink" href="#turn-client-for-proxying" title="Permalink to this heading"></a></h1>
+<p>TURN is a protocol used for relaying TCP and UDP end-points between peers.
+In P2PD I’ve implemented an asynchronous, IPv4 / IPv6, TURN client.
+It has the same interface as a pipe and supports awaits + callbacks. But the
+TURN client uses UDP over TCP. It provides reliable delivery but it does not provide ordered delivery (yet?)</p>
+<p>The reason why UDP was implemented and not TCP is due to the way TCP works and
+what TURN is designed to be used for. P2PD already implements <strong>direct connect,
+reverse connect, and TCP hole punching</strong>. If all of these fail it means that
+there is very little chance of establishing a TCP connection with a peer.
+But believe it or not: this is the assumption made in the TURN protocol. The TURN server makes an outgoing connection to a service (which must be reachable.)</p>
+<p>The TURN spec mentions that this could be combined with <strong>TCP hole punching
+for clients</strong>. But this is not feasible because no synchronization mechanism for making connections has been offered in the TURN protocol – at least none that
+I’ve seen. It would have been unlikely to work given that punching needs to
+be synchronized down to the millisecond. All of this could have been avoided
+if TURN were designed around reverse connections. So that both parties
+behind NATs could simply connect to the server and setup channels. But TURN doesn’t seem to offer this possibility.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Fun fact: <strong>TURN is the worst protocol I’ve ever had the displeasure of working
+with</strong>. It manages to make a simple proxy server look like a moon-landing mission.
+I don’t even know how they managed to over-engineer the protocol to such a
+high-level. I don’t think I could manage to fuck something up that badly even
+if I was trolling. True story.</p>
+</div>
+<section id="udp-is-a-little-better">
+<h2>UDP is a little better<a class="headerlink" href="#udp-is-a-little-better" title="Permalink to this heading"></a></h2>
+<p>When you go through the TURN protocol as a client you get allocated a special
+‘relay address’ from the server that another peer can use to route messages to
+you. As far as I know this only works for UDP. But importantly it offers a
+reverse connect design which is capable of bypassing NATs.</p>
+<p>UDP is a better choice as a last resort because it is ‘connectionless.’
+It doesn’t require the receipt of a handshake. The NAT will simply let
+through packets to a UDP socket as long as that socket address has already sent
+data to the destination. So UDP hole punching is easier than TCP.</p>
+<p>The downside is… it’s UDP. It offers no reliable delivery or sequencing. But a few
+hacks add delivery back in. It wouldn’t be possible to add sequencing, too.
+Though I have not done this for now. That was a lot of text so let’s look at some code.</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">p2pd</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="n">TURN_OFFSET</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">example</span><span class="p">():</span>
+    <span class="c1"># Network interface details.</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="k">await</span> <span class="n">Interface</span><span class="p">()</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="k">await</span> <span class="n">i</span><span class="o">.</span><span class="n">route</span><span class="p">()</span><span class="o">.</span><span class="n">bind</span><span class="p">()</span>
+    <span class="c1">#</span>
+    <span class="c1"># Address of a TURN server.</span>
+    <span class="n">dest</span> <span class="o">=</span> <span class="k">await</span> <span class="n">Address</span><span class="p">(</span>
+        <span class="n">TURN_SERVERS</span><span class="p">[</span><span class="n">TURN_OFFSET</span><span class="p">][</span><span class="s2">&quot;host&quot;</span><span class="p">],</span>
+        <span class="n">TURN_SERVERS</span><span class="p">[</span><span class="n">TURN_OFFSET</span><span class="p">][</span><span class="s2">&quot;port&quot;</span><span class="p">],</span>
+        <span class="n">r</span>
+    <span class="p">)</span><span class="o">.</span><span class="n">res</span><span class="p">()</span>
+    <span class="c1">#</span>
+    <span class="c1"># Sync message callback -- do something here if you like.</span>
+    <span class="c1"># Can be async too.</span>
+    <span class="n">msg_cb</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">msg</span><span class="p">,</span> <span class="n">client_tup</span><span class="p">,</span> <span class="n">pipe</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+    <span class="c1">#</span>
+    <span class="c1"># Implement the TURN protocol for UDP send / recv.</span>
+    <span class="n">client</span> <span class="o">=</span> <span class="n">TURNClient</span><span class="p">(</span>
+        <span class="n">turn_addr</span><span class="o">=</span><span class="n">dest</span><span class="p">,</span>
+        <span class="n">turn_user</span><span class="o">=</span><span class="n">TURN_SERVERS</span><span class="p">[</span><span class="n">TURN_OFFSET</span><span class="p">][</span><span class="s2">&quot;user&quot;</span><span class="p">],</span>
+        <span class="n">turn_pw</span><span class="o">=</span><span class="n">TURN_SERVERS</span><span class="p">[</span><span class="n">TURN_OFFSET</span><span class="p">][</span><span class="s2">&quot;pass&quot;</span><span class="p">],</span>
+        <span class="n">turn_realm</span><span class="o">=</span><span class="n">TURN_SERVERS</span><span class="p">[</span><span class="n">TURN_OFFSET</span><span class="p">][</span><span class="s2">&quot;realm&quot;</span><span class="p">],</span>
+        <span class="n">route</span><span class="o">=</span><span class="n">r</span><span class="p">,</span>
+        <span class="n">msg_cb</span><span class="o">=</span><span class="n">msg_cb</span>
+    <span class="p">)</span>
+    <span class="c1">#</span>
+    <span class="c1"># Wait for authentication and relay address allocation.</span>
+    <span class="k">await</span> <span class="n">async_wrap_errors</span><span class="p">(</span>
+        <span class="n">client</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+    <span class="p">)</span>
+    <span class="c1">#</span>
+    <span class="c1"># Give this to a client to send to ourselves.</span>
+    <span class="n">our_relay_tup</span> <span class="o">=</span> <span class="k">await</span> <span class="n">client</span><span class="o">.</span><span class="n">relay_tup_future</span>
+    <span class="n">our_client_tup</span> <span class="o">=</span> <span class="k">await</span> <span class="n">client</span><span class="o">.</span><span class="n">client_tup_future</span>
+    <span class="c1">#</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    To receive messages back from a given client you will have</span>
+<span class="sd">    to call: await client.accept_peer(their_client_tup, their_relay_tup) which implies you have your own way to</span>
+<span class="sd">    exchange these details between clients (I use MQTT.)</span>
+
+<span class="sd">    Example (after exchanging relay tups):</span>
+<span class="sd">        await client_a.send(b&#39;hello b&#39;, client_b_relay_tup)</span>
+<span class="sd">        await client_b.send(b&quot;hello a&quot;, client_a_relay_tup)</span>
+
+<span class="sd">    To receive a message you would do:</span>
+<span class="sd">        await client_a.recv(client_b_relay_tup)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Cleanup.</span>
+    <span class="k">await</span> <span class="n">client</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">async_test</span><span class="p">(</span><span class="n">example</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="using-turn-as-a-fall-back-option">
+<h2>Using TURN as a fall-back option<a class="headerlink" href="#using-turn-as-a-fall-back-option" title="Permalink to this heading"></a></h2>
+<p>In P2P pipes there are three main methods used to establish a connection.
+All of these methods use TCP. By default TURN is disabled as a method for
+establishing a ‘connection.’ The reason for this is it does not provide ordered
+delivery like TCP does which might come as a shock to most developers.
+However, it can be enabled should a developer choose to use it.</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">p2pd</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="c1"># Warning: this is very slow to start.</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">example</span><span class="p">():</span>
+    <span class="c1"># Start our main node server.</span>
+    <span class="c1"># The node implements your protocol.</span>
+    <span class="n">node</span> <span class="o">=</span> <span class="k">await</span> <span class="n">start_p2p_node</span><span class="p">(</span>
+        <span class="c1"># Set to true for port forwarding + pin holes.</span>
+        <span class="n">enable_upnp</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="c1">#</span>
+        <span class="c1"># Make sure node server uses different port</span>
+        <span class="c1"># to other examples.</span>
+        <span class="n">port</span><span class="o">=</span><span class="n">NODE_PORT</span> <span class="o">+</span> <span class="mi">50</span> <span class="o">+</span> <span class="mi">12</span>
+    <span class="p">)</span>
+    <span class="c1">#</span>
+    <span class="c1"># Strategies used to make a P2P connection.</span>
+    <span class="c1"># Note that P2P_RELAY enables TURN.</span>
+    <span class="c1"># (Coturn doesn&#39;t support self relay so removed.)</span>
+    <span class="n">strategies</span> <span class="o">=</span> <span class="p">[</span> <span class="n">P2P_DIRECT</span><span class="p">,</span> <span class="n">P2P_REVERSE</span><span class="p">,</span> <span class="n">P2P_PUNCH</span> <span class="p">]</span>
+    <span class="c1">#</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Spawns a new pipe from a P2P connection.</span>
+<span class="sd">    In this case it&#39;s connecting to our own node server.</span>
+<span class="sd">    There will be no barriers to do this so this will just use</span>
+<span class="sd">    a plain direct TCP connection / P2P_DIRECT.</span>
+<span class="sd">    Feel free to experiment with how it works.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">pipe</span><span class="p">,</span> <span class="n">success_type</span> <span class="o">=</span> <span class="k">await</span> <span class="n">node</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">addr_bytes</span><span class="p">,</span> <span class="n">strategies</span><span class="p">)</span>
+    <span class="c1">#</span>
+    <span class="c1"># Do some stuff on the pipe ...</span>
+    <span class="c1"># Cleanup.</span>
+    <span class="k">await</span> <span class="n">pipe</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="k">await</span> <span class="n">node</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">async_test</span><span class="p">(</span><span class="n">example</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="stun.html" class="btn btn-neutral float-left" title="STUN client for address lookups" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="netifaces.html" class="btn btn-neutral float-right" title="More portable netifaces" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

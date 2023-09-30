@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The problem with P2P networking &mdash; P2PD 0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="How P2PD works" href="how.html" />
+    <link rel="prev" title="P2PD Learning Portal" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            P2PD
+          </a>
+              <div class="version">
+                0.1.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">The problem with P2P networking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="how.html">How P2PD works</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rest_api.html">The P2PD REST API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python/index.html">Using P2PD from Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="built/index.html">Awesome stuff built with P2PD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="future_work.html">Future work</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">P2PD</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">The problem with P2P networking</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/problems.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="the-problem-with-p2p-networking">
+<h1>The problem with P2P networking<a class="headerlink" href="#the-problem-with-p2p-networking" title="Permalink to this heading"></a></h1>
+<p>In peer-to-peer networking one of the most basic problems is trying to get
+two computers to connect to each other. The problem is that regular
+people’s computers aren’t designed to be used as servers. They are
+most often behind a router that employs NAT to control which
+connections can reach devices in the internal network. The router must
+be specifically configured to forward connections to the right machines –
+a process called ‘port forwarding.’</p>
+<p>Sometimes port forwarding can be done automatically. Protocols like UPnP
+and NATPMP allow programs to request a router to setup rules on its behalf.
+But in practice the availability of these features is not guaranteed.
+If you’ve ever tried to host a server in an online game before you will know this
+first hand. The software will have tried to use UPnP or NATPMP to port forward
+your server so that others can reach it. The trouble is that these features
+can be seen as a security risk and disabled by default.</p>
+<p>Peer-to-peer direct connectivity is hard to do because of the number of
+possible network configurations, software platforms, and obstacles that
+must be bypassed to do it reliably. It’s for this reason that the most successful
+P2P systems don’t actually solve this problem. Take Bitcoin, for example.
+In Bitcoin what matters is that you can at least connect to someone to download
+blocks and broadcast transactions. Or what about torrents? A swarm of nodes can
+download chunks of data and spread them between them. In other words:
+these systems don’t require direct connectivity to every potential node
+for them to function. But what about the systems that do?</p>
+<p>What if I’m trying to build a chat client and I’d like for two people to
+be able to share files between them? In this case I need both parties to be
+able to connect directly to each other. I have already spoken about how relying
+on a single method like port forwarding is prone to failure. The approach taken
+by P2PD is to combine multiple techniques for bypassing NATs and firewalls into
+one methodology which greatly improves the chances of success.</p>
+<p>In the next section I will explain <a class="reference internal" href="how.html"><span class="doc">How P2PD works</span></a></p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="P2PD Learning Portal" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="how.html" class="btn btn-neutral float-right" title="How P2PD works" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
