@@ -1,0 +1,4 @@
+[console_scripts]
+flex-docker=lcli.__main__:main
+flex-docker-compose=flex_cli.__main__:main
+
