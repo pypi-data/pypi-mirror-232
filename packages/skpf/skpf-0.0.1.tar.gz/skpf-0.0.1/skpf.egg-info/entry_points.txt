@@ -1,0 +1,2 @@
+[package_tools]
+query = skpf.tools.utils:list_package_tools
