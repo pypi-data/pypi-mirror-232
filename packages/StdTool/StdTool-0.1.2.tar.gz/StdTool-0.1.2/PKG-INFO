@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: StdTool
+Version: 0.1.2
+Summary: Some tools for daily use
+Home-page: 
+Author: MosRat
+Author-email: whl2075928012@gmail.com
+License: Apache License 2.0
+Requires-Dist: tqdm
