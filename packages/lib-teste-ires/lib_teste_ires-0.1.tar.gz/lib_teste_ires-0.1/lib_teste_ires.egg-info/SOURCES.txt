@@ -1,0 +1,7 @@
+LICENSE.txt
+README
+setup.py
+lib_teste_ires.egg-info/PKG-INFO
+lib_teste_ires.egg-info/SOURCES.txt
+lib_teste_ires.egg-info/dependency_links.txt
+lib_teste_ires.egg-info/top_level.txt
