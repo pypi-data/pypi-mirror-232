@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% from "_macros.html" import render_field_with_errors, render_field %}
+
+
+{% block content %}
+
+<div class="card">
+    <h5 class="card-header">Reassign tasks</h5>
+    <div class="card-body">
+        <form action="{{ url_for('web.reassign') }}" method="POST" name="reassign_form">
+            {{ reassign_form.hidden_tag() }}
+            {{ render_field_with_errors(reassign_form.original_user) }}
+            {{ render_field_with_errors(reassign_form.new_user) }}
+            {{ render_field_with_errors(reassign_form.new_user_group) }}
+            {{ render_field(reassign_form.submit) }}
+        </form>
+    </div>
+</div>
+
+{% endblock %}
