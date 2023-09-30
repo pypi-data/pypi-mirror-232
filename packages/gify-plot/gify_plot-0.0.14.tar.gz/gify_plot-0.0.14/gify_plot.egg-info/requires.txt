@@ -1,0 +1,8 @@
+pandas
+tqdm
+Pillow
+matplotlib
+seaborn
+plotly
+datetimerange
+datetime
