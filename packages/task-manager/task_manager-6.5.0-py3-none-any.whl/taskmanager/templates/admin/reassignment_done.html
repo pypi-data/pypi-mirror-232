@@ -1,0 +1,11 @@
+{% extends "admin/master.html" %}
+{% from "_macros.html" import collapse_card_start, collapse_card_end, card_link_by_title, render_field_with_errors, render_field %}
+
+{% block body %}
+<div class="card">
+    <h5 class="card-header">Bulk task reassignment</h5>
+    <div class="card-body">
+        All open tasks from user {{ old_user.name }} were reassigned to {{ new_owner.name }}!
+    </div>
+</div>
+{% endblock %}
