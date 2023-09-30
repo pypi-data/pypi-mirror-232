@@ -1,0 +1,10 @@
+[
+  "test_loaded_paths.py::test_paths",
+  "test_services.py::test_download",
+  "test_services.py::test_get_model_files_info",
+  "test_services.py::test_get_model_identifiers",
+  "test_services.py::test_get_model_info",
+  "test_services.py::test_parameter_search",
+  "test_services.py::test_paths",
+  "test_services.py::test_search"
+]

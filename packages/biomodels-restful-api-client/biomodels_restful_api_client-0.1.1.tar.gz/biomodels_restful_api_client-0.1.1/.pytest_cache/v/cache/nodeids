@@ -1,0 +1,8 @@
+[
+  "test/test_services.py::test_download",
+  "test/test_services.py::test_get_model_files_info",
+  "test/test_services.py::test_get_model_identifiers",
+  "test/test_services.py::test_get_model_info",
+  "test/test_services.py::test_parameter_search",
+  "test/test_services.py::test_search"
+]

@@ -1,0 +1,5 @@
+{
+  "test_services.py": true,
+  "test_services.py::test_get_model_info": true,
+  "test_services.py::test_paths": true
+}
