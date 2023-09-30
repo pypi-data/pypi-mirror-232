@@ -1,0 +1,80 @@
+[tool.poetry]
+name = "mpai-cae-arp"
+version = "0.5.2"
+description = "The MPAI CAE-ARP software API"
+authors = ["Matteo Spanio <dev2@audioinnova.com>"]
+readme = "README.md"
+license = "GPLv3"
+packages = [
+    {include = "mpai_cae_arp"},
+    {include = "mpai_cae_arp/py.typed"}
+]
+keywords = ["mpai", "cae", "arp", "audio", "processing", "artificial intelligence"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+numpy = "~1.24.4"   # because of numba (from librosa) requirement <=1.24
+pydantic = "^2.3.0"
+pyyaml = "^6.0"
+librosa = "^0.10.1"
+grpcio-tools = "^1.53.0"
+
+[tool.poetry.group.dev.dependencies]
+yapf = "^0.40.0"
+pytest = "^7.2.2"
+pytest-cov = "^4.0.0"
+pytest-xdist = "^3.2.1"
+toml = "^0.10.2"
+isort = "^5.12.0"
+pre-commit = "^3.4.0"
+docformatter = "^1.7.5"
+ruff = "^0.0.291"
+
+[tool.poetry.group.docs.dependencies]
+sphinx = "^7.0.0"
+sphinxcontrib-bibtex = "^2.6.1"
+sphinx-copybutton = "^0.5.2"
+furo = "^2023.9.10"
+sphinx-inline-tabs = "^2023.4.21"
+sphinx-autobuild = "^2021.3.14"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+filterwarnings = [
+    "ignore::DeprecationWarning",
+    "error::RuntimeWarning"
+]
+minversion = "6.0"
+addopts = "-ra -q -n auto"
+testpaths = ["tests"]
+
+[tool.coverage.run]
+relative_files = true
+
+[tool.yapf]
+based_on_style = "pep8"
+blank_line_before_nested_class_or_def = true
+column_limit = 88
+
+[tool.isort]
+profile = "hug"
+src_paths = ["mpai_cae_arp", "tests"]
+
+[tool.docformatter]
+resucrsive = true
+wrap-summaries = 82
+blank = true
+
+[tool.ruff]
+extend-exclude = ["mpai_cae_arp/network/arp_pb2.py"]
