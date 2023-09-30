@@ -1,0 +1,9 @@
+rpmdeplint/__init__.py,sha256=LSG8v-x7ZezzwT9YS9pyr4FaNfz9UWRhTRdudlnvfmM,621
+rpmdeplint/analyzer.py,sha256=9-4DapAmsA3tjadEudXVV637RH2VVrtyF82Hpuu7Ce8,20727
+rpmdeplint/cli.py,sha256=CysQ4j4hIJVGX-KQl45NXdqbEy4uUPRzv9JIpkIaYcc,8877
+rpmdeplint/repodata.py,sha256=DPKmMeupkRlizxjOICAKjddYOso2gpKdkOFaaHP1IIQ,15704
+rpmdeplint-2.0rc3.dist-info/METADATA,sha256=-GSXdaLR8ohMYgmlzyo7IJnxcAUXZ28BHmxH158IPLQ,1749
+rpmdeplint-2.0rc3.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+rpmdeplint-2.0rc3.dist-info/entry_points.txt,sha256=2hNjdkYKaraJmbwC4jsS0uYniTFoRKEkF9ZnwzLFWEw,51
+rpmdeplint-2.0rc3.dist-info/licenses/COPYING,sha256=gXf5dRMhNSbfLPYYTY_5hsZ1r7UU1OaKQEAQUhuIBkM,18092
+rpmdeplint-2.0rc3.dist-info/RECORD,,
