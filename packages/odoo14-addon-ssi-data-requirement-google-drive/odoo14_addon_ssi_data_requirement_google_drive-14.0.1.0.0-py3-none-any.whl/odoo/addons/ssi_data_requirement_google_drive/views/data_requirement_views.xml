@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2022 OpenSynergy Indonesia
+     Copyright 2022 PT. Simetri Sinergi Indonesia
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+<record id="data_requirement_view_form" model="ir.ui.view">
+    <field name="name">data_requirement - form</field>
+    <field name="model">data_requirement</field>
+    <field
+            name="inherit_id"
+            ref="ssi_data_requirement_mixin.data_requirement_view_form"
+        />
+    <field name="arch" type="xml">
+        <data>
+            <xpath expr="//page[1]" position="after">
+                <page name="google_drive" string="Google Drive">
+                    <button
+                            name="action_create_google_doc"
+                            string="Create Google Docs"
+                            type="object"
+                            class="oe_highlight"
+                        />
+                    <group name="google_drive_1" colspan="4" col="2">
+                        <field name="google_docs_folder_id" />
+                    </group>
+                </page>
+            </xpath>
+        </data>
+    </field>
+</record>
+</odoo>
