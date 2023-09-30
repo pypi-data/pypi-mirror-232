@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+MT_PY_File_upload.egg-info/PKG-INFO
+MT_PY_File_upload.egg-info/SOURCES.txt
+MT_PY_File_upload.egg-info/dependency_links.txt
+MT_PY_File_upload.egg-info/top_level.txt
+mt_django_file_upload/__init__.py
+mt_django_file_upload/azureBlobStorage.py
+mt_django_file_upload/file_upload.py
+mt_django_file_upload/upload_file_to_s3.py
+mt_django_file_upload/validators.py
