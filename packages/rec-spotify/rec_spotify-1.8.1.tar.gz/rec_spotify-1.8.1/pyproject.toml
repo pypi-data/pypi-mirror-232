@@ -1,0 +1,56 @@
+[tool.poetry]
+name = "rec-spotify"
+version = "1.8.1"
+description = "📻 Record and sync Spotify tracks, albums, and playlists."
+repository = "https://github.com/oSeeLight/rec-spotify"
+authors = ["Jacov Rainz <oSeeLight@proton.me>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "rec_spotify"}]
+include = ["README.md", "etc"]
+keywords = ["spotify", "record"]
+
+[tool.poetry.scripts]
+rec-spotify = 'rec_spotify.cli:app'
+
+[tool.poetry.dependencies]
+python = "^3.11"
+spotipy = "^2.23.0"
+rich = "^13.4.2"
+requests = "^2.31.0"
+pyaudiowpatch = "0.2.12.6"
+pydub = "0.25.1"
+eyed3 = "^0.9.7"
+
+[tool.poetry.group.dev]
+optional = true
+
+[tool.poetry.group.dev.dependencies]
+black = "*"
+mypy = "*"
+flake8 = "^6.0.0"
+pytest = "^7.4.0"
+types-requests = "^2.31.0.2"
+
+[tool.mypy]
+python_version = "3.11"
+show_error_codes = true
+no_implicit_optional = true
+disallow_untyped_defs = true
+check_untyped_defs = true
+disallow_untyped_calls = true
+warn_return_any = true
+disallow_any_unimported = true
+warn_unreachable = true
+warn_redundant_casts = true
+
+[tool.pyright]
+include = ["rec_spotify"]
+reportMissingTypeStubs = false
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[virtualenvs]
+in-project = false
