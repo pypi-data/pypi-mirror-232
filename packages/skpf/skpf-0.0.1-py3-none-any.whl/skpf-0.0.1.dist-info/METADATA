@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: skpf
+Version: 0.0.1
+Summary: This package contains promptflow tools for working with Smenatic Kernel.
+Requires-Dist: semantic-kernel
+
