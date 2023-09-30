@@ -1,0 +1,7 @@
+LICENCE
+principal.c
+setup.py
+mathobju.egg-info/PKG-INFO
+mathobju.egg-info/SOURCES.txt
+mathobju.egg-info/dependency_links.txt
+mathobju.egg-info/top_level.txt
