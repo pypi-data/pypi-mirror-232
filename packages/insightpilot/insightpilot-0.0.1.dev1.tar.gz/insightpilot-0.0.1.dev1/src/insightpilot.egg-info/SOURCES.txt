@@ -1,0 +1,7 @@
+LICENSE
+README.md
+setup.py
+src/insightpilot.egg-info/PKG-INFO
+src/insightpilot.egg-info/SOURCES.txt
+src/insightpilot.egg-info/dependency_links.txt
+src/insightpilot.egg-info/top_level.txt
