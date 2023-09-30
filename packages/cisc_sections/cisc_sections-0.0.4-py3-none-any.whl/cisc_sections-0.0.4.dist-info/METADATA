@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: cisc_sections
+Version: 0.0.4
+Summary: CISC Steel sections
+Author-email: Arun Kishore <rpakishore@gmail.com>
+Requires-Python: >=3.11.0
+Classifier: License :: OSI Approved :: Apache Software License
+Requires-Dist: pandas
+Requires-Dist: forallpeople
+Requires-Dist: ipykernel ; extra == "dev"
+Requires-Dist: pytest ; extra == "test"
+Project-URL: Home, https://github.com/rpakishore/steelsections-cisc
+Provides-Extra: dev
+Provides-Extra: test
