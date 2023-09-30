@@ -1,0 +1,9 @@
+pyconify/__init__.py,sha256=9pJN04Kvri2QqPHW8HueOpnHj0q-RcI3qntGqHRnoH0,756
+pyconify/_cache.py,sha256=Tm-6Hqf_0rxoUP8ZrOO6py7XSxBLpEFIbxkMGoCvpCU,2654
+pyconify/api.py,sha256=e8HAPN678j6zFeBntHzCnQoMsme0zaLmeyghLpLhwAc,16552
+pyconify/iconify_types.py,sha256=oEfJSsmTwIUbGJ3RvD7vtDaJ5Ok9Z4QnumYDhH92kyY,4884
+pyconify/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyconify-0.1.1.dist-info/METADATA,sha256=2EEzrQpxk_JdLC6g6JJqcDbpJmIArprf0duZkNm1JHc,3603
+pyconify-0.1.1.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+pyconify-0.1.1.dist-info/licenses/LICENSE,sha256=pY8jqpmjisIM7lVsbSEw4b-PUVnM8_ZSFlmLVdrXmxk,1501
+pyconify-0.1.1.dist-info/RECORD,,
