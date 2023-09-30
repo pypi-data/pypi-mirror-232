@@ -1,0 +1,8 @@
+GitPython
+browserstack-local>=1.2.5
+packaging
+psutil
+pypac
+pyyaml
+requests
+requests_toolbelt
