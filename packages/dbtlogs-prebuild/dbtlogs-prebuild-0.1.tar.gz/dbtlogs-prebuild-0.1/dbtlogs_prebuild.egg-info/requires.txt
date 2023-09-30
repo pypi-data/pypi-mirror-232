@@ -1,0 +1,7 @@
+click
+databricks-sql-connector
+requests
+pytz
+typing
+datetime
+apache-airflow
