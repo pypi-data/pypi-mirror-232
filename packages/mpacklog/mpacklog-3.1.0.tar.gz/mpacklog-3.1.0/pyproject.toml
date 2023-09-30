@@ -1,0 +1,66 @@
+[build-system]
+requires = ["flit_core >=2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "mpacklog"
+readme = "README.md"
+authors = [
+    {name = "Stéphane Caron", email = "stephane.caron@normalesup.org"},
+]
+maintainers = [
+    {name = "Stéphane Caron", email = "stephane.caron@normalesup.org"},
+]
+dynamic = ['version', 'description']
+requires-python = ">=3.7"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Scientific/Engineering :: Mathematics",
+]
+dependencies = [
+    "aiofiles >=0.7.0",
+    "msgpack >=1.0.2",
+]
+keywords = ["messagepack", "serialization", "logging"]
+
+[project.optional-dependencies]
+doc = ["sphinx"]
+
+[project.scripts]
+mpacklog = "mpacklog.cli:main"
+
+[project.urls]
+Source = "https://github.com/tasts-robots/mpacklog.py"
+Tracker = "https://github.com/tasts-robots/mpacklog.py/issues"
+Changelog = "https://github.com/tasts-robots/mpacklog.py/blob/master/CHANGELOG.md"
+
+[tool.black]
+line-length = 79
+
+[tool.ruff]
+line-length = 79
+select = [
+    # pyflakes
+    "F",
+    # pycodestyle
+    "E",
+    "W",
+    # isort
+    "I001",
+    # pydocstyle
+    "D"
+]
+ignore = [
+    "D401",  # good for methods but not for class docstrings
+    "D405",  # British-style section names are also "proper"!
+]
+
+[tool.ruff.pydocstyle]
+convention = "google"

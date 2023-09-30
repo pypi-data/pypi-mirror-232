@@ -1,0 +1,7 @@
+*.mpack
+.coverage
+.tox
+__pycache__
+build
+coverage
+dist
