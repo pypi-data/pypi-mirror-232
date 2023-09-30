@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: BODY_SCAN
+Version: 0.0.4
+License: pscl
+Description-Content-Type: text/markdown
+Requires-Dist: BOTANIST
+Requires-Dist: click
+Requires-Dist: flask
