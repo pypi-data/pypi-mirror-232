@@ -1,0 +1,26 @@
+[build-system]
+    requires = ["setuptools"]
+    build-backend = "setuptools.build_meta"
+
+[project]
+    name = "fastDepsLoader"
+    version = "0.0.1"
+    requires-python = ">=3.6"   
+    description = "Fast Dependence Loader"
+    dependencies = []
+    readme = "README.md"
+    classifiers = [
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: Apache Software License",
+        "Operating System :: OS Independent",
+    ]
+
+[project.license]
+    text = "Apache License"
+
+[project.urls]
+    Homepage = "https://github.com/lpdink/fdl"
+    Repository = "https://github.com/lpdink/fdl"
+
+[project.scripts]
+    fdl = "fdl._main:main"
