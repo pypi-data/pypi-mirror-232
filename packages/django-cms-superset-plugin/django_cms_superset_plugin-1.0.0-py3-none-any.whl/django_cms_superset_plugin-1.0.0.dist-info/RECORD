@@ -1,0 +1,14 @@
+django_cms_superset_plugin/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_cms_superset_plugin/admin.py,sha256=mXBCD2E-3y5XJ9yl8X4AO86P2Xr6_A2MU98zdUdATqU,859
+django_cms_superset_plugin/apps.py,sha256=gfIgqkmk8vT05L5-XlJLQePkmIwvZO0s7M-1YWe8swk,166
+django_cms_superset_plugin/cms_plugins.py,sha256=0wjX-RCsXQxrJNakmOBju91qPOEGJT-V2QDQkWOzA6c,714
+django_cms_superset_plugin/forms.py,sha256=RgSVJDW_SbORNaQ62IlfikRfFWo65azFm6CKdZxj2kc,277
+django_cms_superset_plugin/models.py,sha256=hTMu2rXia621h2L7KMIYI6KmiJrvACUiJ1Hdi_t3SGc,3270
+django_cms_superset_plugin/tests.py,sha256=mrbGGRNg5jwbTJtWWa7zSKdDyeB4vmgZCRc2nk6VY-g,60
+django_cms_superset_plugin/views.py,sha256=xc1IQHrsij7j33TUbo-_oewy3vs03pw_etpBWaMYJl0,63
+django_cms_superset_plugin/templates/django_cms_superset_plugin/superset_plugin.html,sha256=r15dF2GtyvuP2VZqJFMEzq8vAwU5-1YKCvpvnVhP5Js,1289
+django_cms_superset_plugin-1.0.0.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+django_cms_superset_plugin-1.0.0.dist-info/METADATA,sha256=TdAnHO9t_IEnn5BFiwXcWmc0yrhj_fXf-_Neh7xZIWI,1866
+django_cms_superset_plugin-1.0.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+django_cms_superset_plugin-1.0.0.dist-info/top_level.txt,sha256=gyYdWnnW2k-EG8S9J0HIoco_lPMoWo0noEfnqSTbM7U,27
+django_cms_superset_plugin-1.0.0.dist-info/RECORD,,

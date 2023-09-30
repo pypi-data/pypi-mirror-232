@@ -1,0 +1,1 @@
+django_cms_superset_plugin
