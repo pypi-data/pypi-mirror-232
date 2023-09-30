@@ -1,0 +1,14 @@
+mdacli/__init__.py,sha256=0jPNTbu2KwN0BwETosGvhqFK1taAr8sr7S9wmbGiezY,451
+mdacli/__main__.py,sha256=Mz_DMWmX3cIgca_gOQ5qm8GJ_ZaCv3RMwZtwQLnkoLI,1562
+mdacli/cli.py,sha256=gmfbp7hm7fVagpWN03T08gRDMWGU4jM-xNtgpla3-zY,4891
+mdacli/colors.py,sha256=_nOpq4H4t7O9cryu3GQlXf66TVf_V94o8uvzsA7c_6Q,4292
+mdacli/libcli.py,sha256=p9z0fjzCJna6BfcLlZkUJ4mQ6xpKtcpZbJ4LrabRibU,27222
+mdacli/logger.py,sha256=dlJrvbwKrZ3EjveiQqDTXafNCg6fYL6UIys1Zz8CvO0,2102
+mdacli/save.py,sha256=dJWCEGUwQAxER6CqEPxQ9DHCSen2cvn0Kc6NaB5BzOA,10979
+mdacli/utils.py,sha256=yPTm5tDComJHHwbO8LEZmCiqLkcdKiSafgcZT1YFoH0,8356
+mdacli-0.1.28.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+mdacli-0.1.28.dist-info/METADATA,sha256=IG3etLCWiBbSRyRcEv2F7SNPokUFCDp4UNX5iJU_94k,7184
+mdacli-0.1.28.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+mdacli-0.1.28.dist-info/entry_points.txt,sha256=CLSzuI1k26UTDN8Zro_vBYabhffpnA0AxfAn0mJz_AE,45
+mdacli-0.1.28.dist-info/top_level.txt,sha256=KXjh2w-SsmMJTxBfno0XSesT07WZDUv_qgZ027Gcr8A,7
+mdacli-0.1.28.dist-info/RECORD,,
