@@ -1,0 +1,10 @@
+*.csv
+src/**/__pycache__/
+dist
+.ruff_cache
+
+repos/
+
+.vscode/
+
+.gssignore
