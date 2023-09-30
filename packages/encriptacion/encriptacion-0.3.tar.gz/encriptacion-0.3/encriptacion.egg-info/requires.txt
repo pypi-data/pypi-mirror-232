@@ -1,0 +1,4 @@
+cryptography
+PyQt5
+encriptacion2
+requests
