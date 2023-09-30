@@ -1,0 +1,5 @@
+numpy>=1.22.3
+descriptastorus>=2.6.1
+selfies>=2.1.1
+deepsmiles>=1.0.1
+scikit-learn>=1.3.1
