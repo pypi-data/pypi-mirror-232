@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: intelligenes
+Version: 1.0
+Summary: IntelliGenes: AI/ML pipeline for predictive analyses using multi-genomic profiles.
+Home-page: https://github.com/drzeeshanahmed/intelligenes
+Author: William DeGroat
+Author-email: will.degroat@rutgers.edu
+License: GNU General Public License v3.0
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.6
+License-File: LICENSE
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: scikit-learn
+Requires-Dist: xgboost
+Requires-Dist: shap
+Requires-Dist: matplotlib
+Requires-Dist: scipy
+
+UNKNOWN
+
