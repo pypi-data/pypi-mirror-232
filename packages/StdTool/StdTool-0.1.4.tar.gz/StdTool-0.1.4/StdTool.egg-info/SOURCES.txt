@@ -1,0 +1,8 @@
+StdTool/__init__.py
+StdTool/setup.py
+StdTool/torch.py
+StdTool.egg-info/PKG-INFO
+StdTool.egg-info/SOURCES.txt
+StdTool.egg-info/dependency_links.txt
+StdTool.egg-info/requires.txt
+StdTool.egg-info/top_level.txt
