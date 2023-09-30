@@ -1,0 +1,2 @@
+[console_scripts]
+randominformationgenerator = random_information_generator.Info:main
