@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+db_legends/__init__.py
+db_legends/db_legends.py
+db_legends_api.egg-info/PKG-INFO
+db_legends_api.egg-info/SOURCES.txt
+db_legends_api.egg-info/dependency_links.txt
+db_legends_api.egg-info/top_level.txt
