@@ -1,0 +1,2 @@
+auto_everything==3.28
+pyinstaller==5.13.0
