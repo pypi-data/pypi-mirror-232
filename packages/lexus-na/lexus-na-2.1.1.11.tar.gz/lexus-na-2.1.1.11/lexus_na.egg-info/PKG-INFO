@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: lexus-na
+Version: 2.1.1.11
+Summary: Python client for Lexus North America service API
+Author: Gavin Ni
+Author-email: gisngy@gmail.com
+Requires-Python: >=3.9,<4.0
+License-File: LICENSE
+Requires-Dist: PyJWT>=2.1.0
+Requires-Dist: aiohttp>=3.8.1
+Requires-Dist: cryptography>=35.0.0
+Requires-Dist: pytz>=2022.1
+
+Python client for Lexus North America service API
