@@ -1,0 +1,7 @@
+LICENSE
+README.md
+setup.py
+src/lightpilot.egg-info/PKG-INFO
+src/lightpilot.egg-info/SOURCES.txt
+src/lightpilot.egg-info/dependency_links.txt
+src/lightpilot.egg-info/top_level.txt
