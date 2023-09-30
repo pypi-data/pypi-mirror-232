@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: encriptacion
+Version: 0.1
+Summary: solo as import encriptacion y ya
+Author: aslskks
+Author-email: davikenat@gmail.com
+Requires-Dist: cryptography
+Requires-Dist: PyQt5
+
