@@ -1,0 +1,12 @@
+pytransaln/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pytransaln/align.py,sha256=m6PfvOzFpXHMZK1yieuC8VHKAJs5IiPP7QEgY4m3gGU,6641
+pytransaln/frameshifts.py,sha256=QLnWeBIsOHwEdc-zRXYa9lv-reaQWUtyx-mWV76cEFo,4700
+pytransaln/pytransaln.py,sha256=DvldUc4Iru-Q_FvFflTdHaB4oOqMvM7zmLvk_tlq6A8,4746
+pytransaln/stats.py,sha256=mgF9wfIRkSkXa4lTNrid3Ony3wfSskqfj6EevcQgkEM,6623
+pytransaln/translate.py,sha256=XqqB1M4mfH2L2ULUT7KrEdv_-0nwdQDJWuAPM45qSyY,6492
+pytransaln-0.1.0.dist-info/LICENSE,sha256=DrAkXMJn2Isl6DmqZqc-DSLZt9stvzc6ItxOp1x5gCA,1100
+pytransaln-0.1.0.dist-info/METADATA,sha256=HHGe3qgna-X8PlqtXKERbvD1AfXMshgp1kNHCufi4Vo,1681
+pytransaln-0.1.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+pytransaln-0.1.0.dist-info/entry_points.txt,sha256=DtoSx4vTLnVA9MobZ8YgU1292ORP27umaS8Nc1-zpho,58
+pytransaln-0.1.0.dist-info/top_level.txt,sha256=grKM5v9OtcA5ALp3VFUenpIKB4Wr0QBfevVtPwm6LBM,11
+pytransaln-0.1.0.dist-info/RECORD,,
