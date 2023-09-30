@@ -1,0 +1,7 @@
+docx_charts/__init__.py,sha256=0OlEcglf0eitkH_7ywv-GKD98vbOkO_azTWyPfnAJZU,78
+docx_charts/chart.py,sha256=3KPDLEJDXpatthESGKBtI_BIMT_P73IDHyFqugy3iGA,3867
+docx_charts/document.py,sha256=rUKpdnQfypzeL7QYEx9LdZbvs8PL5HOck361xILTf6g,2922
+docx_charts-0.1.12.dist-info/LICENSE,sha256=AEW3yUAEcalBdaO9hYJN_sHNn2XLveh5V55hxdDUjkg,1075
+docx_charts-0.1.12.dist-info/METADATA,sha256=qO-1x1aVwpIJrsLfScoqDdKA8HHokZeBmaSbcBEQW7k,1031
+docx_charts-0.1.12.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+docx_charts-0.1.12.dist-info/RECORD,,
