@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: jani-text-cleaning
+Version: 1.2
+Summary: This python package does cleaning tasks on textual data and gives tokenized output.
+Home-page: https://github.com/harshjani53/jani_text_cleaning
+Download-URL: https://github.com/harshjani53/jani_text_cleaning/archive/refs/tags/1.2.tar.gz
+Author: HARSH JANI
+Author-email: harshjani53@gmail.com
+License: MIT
+License-File: LICENSE.txt
