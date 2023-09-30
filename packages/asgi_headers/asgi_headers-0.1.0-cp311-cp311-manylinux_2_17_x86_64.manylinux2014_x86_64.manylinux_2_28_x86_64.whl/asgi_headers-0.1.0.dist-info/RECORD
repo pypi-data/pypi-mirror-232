@@ -1,0 +1,12 @@
+.gitignore,sha256=zbyuFRBda3geYggTx5x-hodA1OnMU85vX8u8Ejh630s,2
+ce4236a6ecb1b00aee35__mypyc.cpython-311-x86_64-linux-gnu.so,sha256=ozHwGBtAObdqs60yiGO5iTZGe6SInbZLVFQXOplzAHY,333000
+asgi_headers/core.cpython-311-x86_64-linux-gnu.so,sha256=J0QslWTQLi_BXqHfj-ATaeaFIxUnv4_iUPgykOuwE5w,17048
+asgi_headers/types.py,sha256=aLM2b8rqgsgHdFIJKdA_O91xTK2OsGSuda8CL53tnfU,2277
+asgi_headers/__init__.cpython-311-x86_64-linux-gnu.so,sha256=aqJ5Z9PYbHXmaW8p_aI8zpjQM2tHZkLhUboXwdTogek,17056
+asgi_headers/__init__.py,sha256=W7LkF55ubLzLEYMNAcie5pxukRIBquT841RX5y7J7bE,160
+asgi_headers/types.cpython-311-x86_64-linux-gnu.so,sha256=zQadpP0aMEGIcbIF8mBWd4YMF6VTg1HEKShDTSDVGDc,17048
+asgi_headers/core.py,sha256=JaVAOwzc1ScXnG7Z_iiKxEhx0xIZu9G8hXrlU4baWiE,1659
+asgi_headers-0.1.0.dist-info/WHEEL,sha256=zmw1dFwaAmeoda794XsuvDlzUXttsBlCFDuB5R6uNQk,190
+asgi_headers-0.1.0.dist-info/RECORD,,
+asgi_headers-0.1.0.dist-info/METADATA,sha256=13gqh-e30MiNQn870VVs4ZuNcuM9Yn5JAFSa0ghv9Kw,2001
+asgi_headers-0.1.0.dist-info/licenses/LICENSE,sha256=ASpelLXJW65CwjuEsCKoHUAv8GKp8haqNR2-8Wldvqk,1072
