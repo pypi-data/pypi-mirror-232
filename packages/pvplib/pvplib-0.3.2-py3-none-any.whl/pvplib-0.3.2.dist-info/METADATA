@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: pvplib
+Version: 0.3.2
+Summary: Library to compute PVPs per https://arxiv.org/pdf/1804.05021.pdf
+Author: Julien Gori
+Author-email: juliengori@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: matplotlib (>=3.6.2,<4.0.0)
+Requires-Dist: numpy (>=1.23.5,<2.0.0)
+Requires-Dist: scipy (<=1.9)
+Requires-Dist: statsmodels (>=0.13.5,<0.14.0)
