@@ -1,0 +1,9 @@
+qstring-1.0.1.dist-info/METADATA,sha256=IS_BlIV_iXMHo5nTwy2jw82KDz9hmrswWvDeUvkJ7M4,3026
+qstring-1.0.1.dist-info/WHEEL,sha256=1D4d-_ODszlK6-qFybc5BLF-ZhZvee-uKVh2hLa3IIc,90
+qstring-1.0.1.dist-info/licenses/LICENSE,sha256=LBH71aF4c18qQ9W-Zx1UX1zrJSpzorv_qt7yh8hcv7w,1082
+qstring/__init__.py,sha256=mW0e-0YfGQug5GwTfx6JLtS7RoGqqIhgoYhJtaYaft8,175
+qstring/exc.py,sha256=zhwb2nOmeoeKKGFK1UlP4YVmt7xoIXzrawn7Zk2F_qw,186
+qstring/nest.py,sha256=tCAwKFz1RY057-3_pH-u9lhYVk6vhXA0i28DQQxA_Ng,3908
+qstring/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+qstring/unnest.py,sha256=gb6-_1j70TxaUXf9WqOdInGECOIbL_2ieXBOxowTEeM,873
+qstring-1.0.1.dist-info/RECORD,,
