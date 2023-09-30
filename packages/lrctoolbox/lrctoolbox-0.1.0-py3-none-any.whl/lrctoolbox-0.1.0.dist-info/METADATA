@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: lrctoolbox
+Version: 0.1.0
+Summary: toolkit for working with lrc files
+Author: Dr-Blank
+Author-email: 64108942+Dr-Blank@users.noreply.github.com
+Requires-Python: >=3.11,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Description-Content-Type: text/markdown
+
+# Toolkit to work with [LRC Files](https://en.wikipedia.org/wiki/LRC_(file_format)) in Python
+
+## Installation
+
+```bash
+pip install lrctoolbox
+```
+
+## Usage
+
+```python
+from lrctoolbox import SyncedLyrics
+
+# Load LRC file
+lyrics = SyncedLyrics.load_from_file("example.lrc")
+
+# check if lyrics are synced
+assert lyrics.is_synced
+
+# get lyrics as string
+print(lyrics.lyrics)
+
+# shift lyrics by 1 second
+for line in lyrics.lines:
+    line.timestamp += 1000
+
+```
+
+## Development
+
+poetry is used for dependency management. Install it with `pip install poetry` and then run `poetry install` to install all dependencies.
+
+
+
