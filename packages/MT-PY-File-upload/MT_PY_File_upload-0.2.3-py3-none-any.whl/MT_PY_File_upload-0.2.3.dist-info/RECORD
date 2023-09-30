@@ -1,0 +1,10 @@
+mt_django_file_upload/__init__.py,sha256=zc_TI1jBhQ3VWpLRu2r6dFTmr3ukpeRqpUHMzdJiD_0,148
+mt_django_file_upload/azureBlobStorage.py,sha256=EpeQIASVFwVP1uLno04mUkIBDjITLBtE6EW894N6XMw,1328
+mt_django_file_upload/file_upload.py,sha256=mL_p4naUiOI5JIRyYY46NMp6hW91j8oIpEOI0bpcUqU,1435
+mt_django_file_upload/upload_file_to_s3.py,sha256=knKSfz1TiP5Lm9F7HRPvzH475fEXcQsT07zVgPfN5Bg,649
+mt_django_file_upload/validators.py,sha256=OCKrDoFUrDA_2j4UcXqR2thD8dnrU9MYyXoHtsYjj3w,492
+MT_PY_File_upload-0.2.3.dist-info/LICENSE,sha256=LcL3qyteFMHtKqaqW_HXfizS4dDgD0AekLEEZfFRV6w,1092
+MT_PY_File_upload-0.2.3.dist-info/METADATA,sha256=wfN30wkhXrJGlkAATs9Mabl0cLhTsD3w-4sxlMF2jl0,10022
+MT_PY_File_upload-0.2.3.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+MT_PY_File_upload-0.2.3.dist-info/top_level.txt,sha256=SSVVvH2rIfGOFTDXMXKLbe3KEfEeBGDBL45jslgDQJU,22
+MT_PY_File_upload-0.2.3.dist-info/RECORD,,
