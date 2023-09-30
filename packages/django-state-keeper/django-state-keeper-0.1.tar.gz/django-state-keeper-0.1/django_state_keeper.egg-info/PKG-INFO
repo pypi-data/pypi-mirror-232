@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: django-state-keeper
+Version: 0.1
+Summary: A Django app that allows you to create backup of project and restore it later.
+Home-page: https://github.com/MMDBadCoder/Django-State-Keeper
+Author: Mohammad Heydari
+Author-email: heidary13794@gmail.com
+License: MIT
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 3.2
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+License-File: LICENSE
+
+# Django State Keeper
+
+Django State Keeper is a Django app that allows you to create backups of your project's database, media files, and
+selected directories. It provides the ability to restore your project's state from a backup and offers automatic backups
+sent to a Telegram chat.
+
+## Features
+
+- Create backups as ZIP files containing selected project files and directories.
+- Restore project state by uploading a backup ZIP file.
+- Configure automatic backups sent to a Telegram chat.
