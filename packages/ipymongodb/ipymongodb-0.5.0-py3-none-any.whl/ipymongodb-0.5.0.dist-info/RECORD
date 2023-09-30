@@ -1,0 +1,11 @@
+ipymongodb/__init__.py,sha256=4DzOTiZvbmqTEF4Fy8FYpWagCIvA-jBw6b2Oe0gIj10,135
+ipymongodb/collection.py,sha256=EzP5BdJmVRkupO21nb1xt1deFZal-VbZtT7ukoyzUgk,14883
+ipymongodb/database.py,sha256=mLBQnrs3c4SrpH9uoyfvly2pliPeTRumg-G1xbJlYPY,1698
+ipymongodb_test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ipymongodb_test/_testenv.py,sha256=TLsNbeFLVnvQN_wE8T6y_Sws7eD-FJaYe6FehBOeDEQ,729
+ipymongodb_test/utest.py,sha256=0ia_1uEQetBwjEdWMPWxAw3jSpgL-bC-TV2TJb6fQNE,3876
+ipymongodb-0.5.0.dist-info/LICENSE,sha256=_4HD2GEqqXgR_m0wn_i-Qum2tRo9Q5fOmEYb3s3UHdU,1086
+ipymongodb-0.5.0.dist-info/METADATA,sha256=f6TMiAoOiT25KoZ8BKqKXYyaKwf9g1Dkvrw24pxN-uw,1361
+ipymongodb-0.5.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+ipymongodb-0.5.0.dist-info/top_level.txt,sha256=W5H3plhAF7zHN2n3tK3bdMsxb7KN2LGNIWG6ByAPgTE,27
+ipymongodb-0.5.0.dist-info/RECORD,,
