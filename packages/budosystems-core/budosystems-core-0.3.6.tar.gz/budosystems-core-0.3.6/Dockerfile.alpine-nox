@@ -1,0 +1,141 @@
+# Base image
+FROM alpine as alpine-nox-user
+RUN apk add  \
+    cmd:bash  \
+    bzip2  \
+    git  \
+    libffi  \
+    openssl  \
+    sqlite-libs \
+    xz \
+    zip \
+    zlib
+#RUN adduser --system --shell /bin/bash noxuser
+
+
+# Intermediate image for building pyenv and installing the various python versions
+FROM alpine-nox-user as alpine-nox-build
+SHELL [ "/bin/bash", "-c" ]
+
+RUN apk add  \
+    build-base  \
+    bzip2-dev \
+    curl  \
+    libffi-dev  \
+    linux-headers  \
+    make  \
+    openssl-dev  \
+    patch  \
+    readline-dev  \
+    sqlite-dev  \
+    xz-dev \
+    zip  \
+    zlib-dev
+
+#USER noxuser
+#WORKDIR $HOME
+ENV HOME=/root
+WORKDIR $HOME
+RUN curl https://pyenv.run | bash
+ENV PATH=$HOME/.pyenv/bin:$PATH
+
+RUN pyenv install 3.6 && \
+    pyenv install 3.7 && \
+    pyenv install 3.8 && \
+    pyenv install 3.9 && \
+    pyenv install 3.10 && \
+    pyenv install 3.11 && \
+    pyenv install 3.12-dev
+
+# Setup the bash profile to work with pyenv
+COPY <<-"EOT" .profile
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+EOT
+
+SHELL [ "/bin/bash", "-l", "-c" ]
+#RUN source $HOME/.profile
+RUN pyenv global 3.11 3.10 3.9 3.8 3.7 3.6 3.12-dev
+ENV UPGRADE="-m pip install -U pip setuptools"
+
+RUN python3.6 $UPGRADE && \
+    python3.7 $UPGRADE && \
+    python3.8 $UPGRADE && \
+    python3.9 $UPGRADE && \
+    python3.10 $UPGRADE && \
+    python3.11 $UPGRADE nox && \
+    python3.12 $UPGRADE
+
+# test directories are over 100MB each, safe to delete them to save some space on the final image.
+RUN <<EOT
+  cd .pyenv/versions
+  pwd
+  for v in *; do
+    echo $v
+    echo $v/lib/python3.*/test
+    rm -rf $v/lib/python3.*/test
+  done
+EOT
+
+# Trim some extra fat from the image by deleting the static files.
+# (Seems to be safe to do, remove this layer if not.)
+RUN <<EOT
+  cd .pyenv/versions
+  pwd
+  for v in *; do
+    echo $v
+    echo $v/lib/python3.*/config-*/
+    rm -rf $v/lib/python3.*/config-*/
+  done
+EOT
+
+# Final image that includes only the necessary parts of the build image.
+FROM alpine-nox-user as alpine-nox
+LABEL maintainer.name="Joël Larose"
+LABEL maintainer.email="joel.larose@budo.systems"
+LABEL python.version.3.6=""
+LABEL python.version.3.7=""
+LABEL python.version.3.8=""
+LABEL python.version.3.9=""
+LABEL python.version.3.10=""
+LABEL python.version.3.11=""
+LABEL python.version.3.12="dev"
+
+#USER noxuser
+#WORKDIR /home/noxuser
+ENV HOME=/root
+ENV PYENV_ROOT="$HOME/.pyenv"
+ENV SHELL=/bin/bash
+SHELL [ "/bin/bash", "-l", "-c" ]
+
+# Copy each directory separately
+# Docker only copies the contents of directories, not the directories themselves >:(
+#COPY --from=alpine-nox-build --chown=noxuser\
+COPY --from=alpine-nox-build \
+    $HOME/.profile \
+    $HOME/.profile
+COPY --from=alpine-nox-build \
+    $PYENV_ROOT/bin/ \
+    $PYENV_ROOT/bin/
+COPY --from=alpine-nox-build \
+    $PYENV_ROOT/libexec/ \
+    $PYENV_ROOT/libexec/
+COPY --from=alpine-nox-build \
+    $PYENV_ROOT/pyenv.d/ \
+    $PYENV_ROOT/pyenv.d/
+COPY --from=alpine-nox-build \
+    $PYENV_ROOT/shims/ \
+    $PYENV_ROOT/shims/
+COPY --from=alpine-nox-build \
+    $PYENV_ROOT/versions/ \
+    $PYENV_ROOT/versions/
+ENV PATH=$PYENV_ROOT/bin:$PATH
+
+# Sanity check
+#RUN du | sort -n
+RUN pyenv global 3.11 3.10 3.9 3.8 3.7 3.6 3.12-dev
+#RUN python -V
+#RUN nox --version
+
+CMD [ "/bin/bash", "--login" ]

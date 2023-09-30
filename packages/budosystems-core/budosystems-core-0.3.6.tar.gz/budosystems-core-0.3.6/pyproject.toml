@@ -1,0 +1,125 @@
+[build-system]
+    requires = [
+        "setuptools>=65",
+        "setuptools-scm[toml]>=6.2",
+        "wheel",
+    ]
+    build-backend = "setuptools.build_meta"
+
+[project]
+    name = "budosystems-core"
+    dynamic = ["version"]
+    description = """
+        Budo Systems is a martial arts school management system. \
+        This module is the core model and supporting utilities."""
+    readme = "README.rst"
+    requires-python = ">=3.9"
+    license = {file = "LICENSE.txt"}
+    authors = [
+        {name = "Joël Larose", email = "joel.larose@budo.systems"}
+    ]
+    keywords = ["Budo Systems", "martial arts", "dojo", "dojang", "business", "studio"]
+    classifiers = [
+        "Development Status :: 2 - Pre-Alpha",
+        # "Development Status :: 3 - Alpha",
+        # "Development Status :: 4 - Beta",
+        # "Development Status :: 5 - Production/Stable",
+        "License :: OSI Approved :: Apache Software License",
+        "Operating System :: OS Independent",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
+        "Topic :: Office/Business",
+        "Topic :: Office/Business :: Groupware",
+        "Topic :: Other/Nonlisted Topic",
+        "Topic :: Software Development :: Libraries",
+        "Topic :: Software Development :: Libraries :: Application Frameworks",
+        "Typing :: Typed",
+    ]
+    dependencies = [
+        "email-validator",
+        "attrs>=22,<23",
+        "attrs-strict",
+        "icalendar~=4.0",
+        "python-dateutil~=2.8",
+        "types-python-dateutil",
+        "typing-extensions",
+    ]
+
+[project.urls]
+    "Repository" = "https://gitlab.com/budosystems/budosystems-core"
+    "Documentation" = "https://budosystems.readthedocs.io/"
+    "Issue Tracker" = "https://gitlab.com/budosystems/budosystems-core/-/issues"
+
+[project.optional-dependencies]
+    test = [
+        "pytest",
+        "coverage",
+        "pytest-budosystems",
+    ]
+    docs = [
+        "Sphinx",
+        "sphinx-git",
+        "sphinxcontrib-plantuml",
+    ]
+    typecheck = [
+        "mypy",
+        "mypy-budosystems",
+    ]
+    lintcheck = [
+        "pylint",
+        "pylint-venv",
+        "pylint-pytest",
+    ]
+    all = [
+        "budosystems-core[test,docs,typecheck,lintcheck]"
+    ]
+
+[tool.setuptools]
+    zip-safe = false
+    packages = {find = {where = ["src"]}}
+
+[tool.setuptools_scm]
+    write_to = "src/budosystems/utils/_version.py"
+
+[tool.pytest.ini_options]
+    testpaths = ["tests"]
+
+[tool.coverage.run]
+    branch = true
+    relative_files = true
+
+    source = ["src", "tests"]
+    omit = ["**/_version.py"]
+
+[tool.coverage.paths]
+    source = [
+        "src/",
+        "venv/lib/**/site-packages/budosystems-core/",
+    ]
+
+[tool.coverage.report]
+    include_namespace_packages = true
+
+    exclude_lines = [
+        "pragma: no cover",
+        "def __repr__",
+        "if MYPY",
+        "if TYPE_CHECKING",
+        "if self.debug:",
+        "if settings.DEBUG",
+        "if 0:",
+        "if __name__ == .__main__.:",
+        "raise AssertionError",
+        "raise NotImplementedError",
+        "class .*\bProtocol\\):",
+        "@(abc\\.)?abstractmethod",
+    ]
+
+    partial_branches = [
+        "pragma: no branch",
+        "if MYPY",
+        "if TYPE_CHECKING",
+        "if self.debug:",
+        "if settings.DEBUG",
+    ]

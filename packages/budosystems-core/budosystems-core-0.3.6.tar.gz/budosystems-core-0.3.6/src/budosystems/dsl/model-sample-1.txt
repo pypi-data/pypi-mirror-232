@@ -1,0 +1,9 @@
+# Modeling examples
+
+sys shorinkan:
+    name: "Shorin-Ryu Shorinkan"
+    ranks:
+        white: "White Belt"
+        white-black: "White-Black Belt"
+
+

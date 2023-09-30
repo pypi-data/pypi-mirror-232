@@ -1,0 +1,10 @@
+model model-sample-1
+
+jpl = Student('JPL')
+jpl trains in shorinkan  # Add 'shorinkan' to jpl's systems
+jpl has rank shodan  # assume's 'shorinkan' because it's the only one
+
+asm = Student('ASM')
+asm has rank green in shorinkan  # more precise
+promote asm
+asm trains in kobudo  # Not defined in model
