@@ -1,0 +1,10 @@
+LICENSE.txt
+README.md
+setup.py
+Srini_CRMA/__init__.py
+Srini_CRMA/dataset_metadata.py
+Srini_CRMA/upload_to_crma.py
+Srini_CRMA.egg-info/PKG-INFO
+Srini_CRMA.egg-info/SOURCES.txt
+Srini_CRMA.egg-info/dependency_links.txt
+Srini_CRMA.egg-info/top_level.txt
