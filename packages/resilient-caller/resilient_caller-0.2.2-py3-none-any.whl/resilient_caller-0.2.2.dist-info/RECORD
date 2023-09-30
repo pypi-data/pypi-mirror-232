@@ -1,0 +1,10 @@
+resilient_caller/__init__.py,sha256=n8jCXjhHsMEbePSRvt01YldTTPqEITYPtBx2JURGjl4,220
+resilient_caller/exceptions.py,sha256=YWm_x-Scw7O44xki0ZjKuPg4dfRC3Z1F8Kl3KiS21VA,156
+resilient_caller/send_requests.py,sha256=OeECNsKdHDqDLZl1SH2LRZPGFJgVYaDxqXXk7Lw8AZ4,731
+resilient_caller/utils.py,sha256=MJJFIZ7ABkdclR5gf1pi4s_VtfJzylymbo7fhFWipAI,2406
+resilient_caller/wrapper.py,sha256=WYVbUO6ISH_VYjnwqzf_xr-dE06tZi2Zg-rAkUzKFBM,4781
+resilient_caller-0.2.2.dist-info/LICENSE,sha256=BCvYd4Rq8TlFC1UPjgnnHFZ6t6tNYdZqMZlKfOC-pf4,1072
+resilient_caller-0.2.2.dist-info/METADATA,sha256=fXw76LA3StPxavjSKKQJmRRoRfsdCX0srN-y5yt9b8I,11781
+resilient_caller-0.2.2.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+resilient_caller-0.2.2.dist-info/top_level.txt,sha256=hcRV3I6kuUcHtxs5IgocONBSKfunM4qnlSmO6uDQsHs,17
+resilient_caller-0.2.2.dist-info/RECORD,,
