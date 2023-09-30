@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: samsam
+Version: 1.0.5
+Summary: Scaled Adaptive Metropolis.
+Home-page: https://gitlab.unige.ch/delisle/samsam
+Author: Jean-Baptiste Delisle
+Author-email: jean-baptiste.delisle@unige.ch
+License: GPLv3
+Requires-Python: >=3.6
+License-File: COPYING
+Requires-Dist: numpy>=1.16
+Requires-Dist: scipy>=1.2
+
+samsam: Scaled Adaptive Metropolis SAMpler
+==========================================
+
+Read the documentation at `<https://obswww.unige.ch/~delisle/samsam/doc/>`_.
