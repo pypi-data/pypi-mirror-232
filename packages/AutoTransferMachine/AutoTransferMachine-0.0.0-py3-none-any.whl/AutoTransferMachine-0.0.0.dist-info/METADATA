@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: AutoTransferMachine
+Version: 0.0.0
+Summary: PT自动转载工具
+Home-page: https://github.com/Ethan930717/AutoTransferMachine
+Author: hudan717
+Author-email: dahupt@gmail.com
+License: MIT
+Requires-Dist: ffmpeg
+Requires-Dist: mediainfo
+Requires-Dist: maketorrent
+Requires-Dist: loguru
+Requires-Dist: pyyaml
+Requires-Dist: doubaninfo
+Requires-Dist: requests
+Requires-Dist: beautifulsoup4
+Requires-Dist: lxml
+Requires-Dist: cloudscraper
+Requires-Dist: qbittorrent-api
+Requires-Dist: openpyxl
+Requires-Dist: torf
+Requires-Dist: typing
+Requires-Dist: pathlib
+Requires-Dist: progress
+
