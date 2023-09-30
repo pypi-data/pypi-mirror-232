@@ -1,0 +1,16 @@
+molzip/__init__.py,sha256=MAhss_l38imKALwcWO7NYIH4beFL3aygEh7cY0O2luM,127
+molzip/classifier.py,sha256=xagPRteakyR4NygH9gAdCSTHF_CBFRJYbreW-AbFnug,2389
+molzip/knn_graph.py,sha256=E7Ih5dKv2tVKQ4Z8VpHYECLD-SWiQ2oF8noEUsvawmo,1397
+molzip/regressor.py,sha256=Z79CTTjz-WoEKkWVkLcSutWCgXv3kudeBx3bGet0kP8,1699
+molzip/featurizers/__init__.py,sha256=BZzhoGKbSeb7ui2owZLPNHKaswATB4EKuK26f094edM,60
+molzip/featurizers/zip_featurizer.py,sha256=I9iHMCUlEqlYUmkkjk3O00ykXovj7NDou6m3MZfB8Mo,3987
+molzip/transforms/__init__.py,sha256=inhURbqH0NQv4sX0Eb5Qcnf4SePdfmmdKa0q-JeooU8,201
+molzip/transforms/augment_transform.py,sha256=RTPLzEqGyBJVdFi5s6UdI4JjlwgrG3KOXqSeEvVLYu0,1048
+molzip/transforms/base_transform.py,sha256=qMorXxXzGMQQzhy9lKXj3t9Rem6TQJnylYkMMkclqRE,636
+molzip/transforms/deepsmiles_transform.py,sha256=Ug-M59S2c_xqr9y6Qx2XsB2Ww6gfgn-6ru4f94ZEmWk,690
+molzip/transforms/selfies_transform.py,sha256=7Jvk5H76xLVxfB2UBcZUG1WQ_CV1BlF8m9Rmybhj8qA,552
+molzip-0.9.2.dist-info/LICENSE,sha256=gsysa1PdTqC21ni7AbCnyMgcFO0-k8nG38w5GIfQuec,1079
+molzip-0.9.2.dist-info/METADATA,sha256=GSZ-WKVcevDjVq9sbzHQ0RuTjiCC7KI7BfiFjXuewqc,8592
+molzip-0.9.2.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+molzip-0.9.2.dist-info/top_level.txt,sha256=wT7-jiAS-B1t_tEITr7HRdDEVLD_t5wrhPAWXelpjMU,7
+molzip-0.9.2.dist-info/RECORD,,
