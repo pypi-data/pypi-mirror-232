@@ -1,0 +1,12 @@
+LICENSE
+setup.py
+EtsyScraper/__init__.py
+EtsyScraper/product.py
+EtsyScraper/store.py
+EtsyScraper/test.py
+EtsyScraper/text_format.py
+EtsyScraperLib.egg-info/PKG-INFO
+EtsyScraperLib.egg-info/SOURCES.txt
+EtsyScraperLib.egg-info/dependency_links.txt
+EtsyScraperLib.egg-info/requires.txt
+EtsyScraperLib.egg-info/top_level.txt
