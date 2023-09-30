@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+src/MT_PY_File_upload/__init__.py
+src/MT_PY_File_upload/azureBlobStorage.py
+src/MT_PY_File_upload/file_upload.py
+src/MT_PY_File_upload/upload_file_to_s3.py
+src/MT_PY_File_upload/validators.py
+src/MT_PY_File_upload.egg-info/PKG-INFO
+src/MT_PY_File_upload.egg-info/SOURCES.txt
+src/MT_PY_File_upload.egg-info/dependency_links.txt
+src/MT_PY_File_upload.egg-info/top_level.txt
