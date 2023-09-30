@@ -1,0 +1,354 @@
+{
+    "A": {
+      "title": "Cross-sectional area",
+      "type": "float32"
+    },
+    "Avl": {
+      "title": "Availability",
+      "description": "'*' indicates a section not produced in Canada.'+' indicates availability should be checked with supplier.",
+      "type": "category"
+    },
+    "B": {
+      "title": "Width of flange or horizontal leg",
+      "type": "float32"
+    },
+    "B1": {
+      "title": "Width of top flange",
+      "type": "float32",
+      "alternate":"B_1"
+    },
+    "B2": {
+      "title": "Width of bottom flange",
+      "type": "float32",
+      "alternate":"B_2"
+    },
+    "BetX": {
+      "title": "Monosymmetry constant",
+      "description": "positive when the larger flange is in flexuralcompression, and negative otherwise, mm. Used for calculating the lateral-torsional buckling moment of monosymmetric beams.(See \"Buckling properties of monosymmetric I-beams\", Kitipornchai andTrahair, Journal of the Structural Division, ASCE, May 1980)",
+      "type": "float32"
+    },
+    "BT": {
+      "title": "Width-to-thickness ratio of flange",
+      "description": "wall or horizontal leg.S16-01 Clause 11.3.",
+      "type": "float32",
+      "alternate":"BT"
+    },
+    "BT1": {
+      "title": "Width-to-thickness ratio of top flange",
+      "description": "S16-01 Clause 11.3.",
+      "type": "float32",
+      "alternate":"BT_1"
+    },
+    "BT2": {
+      "title": "Width-to-thickness ratio of bottom flange",
+      "description": "S16-01 Clause 11.3.",
+      "type": "float32",
+      "alternate":"BT_2"
+    },
+    "C": {
+      "title": "Torsion modulus",
+      "description": "ratio of applied torque to maximum shear stress atouter face",
+      "type": "float32"
+    },
+    "Crt": {
+      "title": "Shear constant",
+      "description": "ratio of vertical shear force to maximum shear stressfor the strong bending axis",
+      "type": "float32",
+      "alternate":"C_{rt}"
+    },
+    "Cw": {
+      "title": "Warping constant",
+      "type": "float32",
+      "alternate":"C_w"
+    },
+    "D": {
+      "title": "Depth of section or height of vertical leg",
+      "type": "float32"
+    },
+    "Dn_i": {
+      "title": "Nominal depth of section (Imperial units)",
+      "type": "float32"
+    },
+    "Dnom": {
+      "title": "Nominal depth of section",
+      "type": "float32",
+      "alternate":"D_{nom}"
+    },
+    "Dsg": {
+      "title": "Section designation",
+      "type": "str"
+    },
+    "Ds_i": {
+      "title": "Section designation (Imperial units)",
+      "type": "str"
+    },
+    "DT": {
+      "title": "Depth-to-thickness ratio of wall or vertical leg",
+      "description": "S16-01 Clause 11.3.",
+      "type": "float32"
+    },
+    "Grp": {
+      "title": "G40"
+    },
+    "HW": {
+      "title": "Clear depth-to-thickness ratio of web",
+      "description": "See S16-01 Clause 11.3.",
+      "type": "float32",
+      "alternate":"H_W"
+    },
+    "Ix": {
+      "title": "Moment of inertia about axis XX",
+      "type": "float32",
+      "alternate":"I_x"
+    },
+    "Ixy": {
+      "title": "Product of inertia",
+      "type": "float32",
+      "alternate":"I_{xy}"
+    },
+    "Iy": {
+      "title": "Moment of inertia about axis YY",
+      "type": "float32",
+      "alternate":"I_y"
+    },
+    "J": {
+      "title": "St-Venant torsional constant",
+      "type": "float32"
+    },
+    "K": {
+      "title": "Distance between outer face of flange and web-toe of fillet",
+      "type": "float32"
+    },
+    "K1": {
+      "title": "Distance between middle line of web and flange-toe of fillet",
+      "type": "float32",
+      "alternate":"K_1"
+    },
+    "Mass": {
+      "title": "Mass per length",
+      "type": "float32"
+    },
+    "Omeg": {
+      "title": "Buckling constant of asymmetric sections",
+      "description": "See S16-01 Clause 13.3.2.",
+      "type": "float32",
+      "alternate":"\\omega"
+    },
+    "Prp": {
+      "title": "Property group",
+      "description": "'*' indicates the first section in a group with similarproperties.",
+      "type": "bool"
+    },
+    "Qf": {
+      "title": "Statical moment at point in flange in line with web face",
+      "type": "float32",
+      "alternate":"Q_f"
+    },
+    "Qw": {
+      "title": "Statical moment at mid-depth in web",
+      "type": "float32",
+      "alternate":"Q_w"
+    },
+    "RI": {
+      "title": "Inner corner radius",
+      "type": "float32",
+      "alternate":"R_I"
+    },
+    "Rmax": {
+      "title": "Maximum flange-to-web fillet radius (detailing value)",
+      "type": "float32",
+      "alternate":"R_{max}"
+    },
+    "Rmin": {
+      "title": "Minimum flange-to-web fillet radius (design value)",
+      "type": "float32",
+      "alternate":"R_{min}"
+    },
+    "RO": {
+      "title": "Outer corner radius",
+      "type": "float32",
+      "alternate":"R_O"
+    },
+    "Rop": {
+      "title": "Polar radius of gyration about shear centre",
+      "description": "See S16-01 Clause 13.3.2.",
+      "type": "float32",
+      "alternate":"R_{op}"
+    },
+    "Rx": {
+      "title": "Radius of gyration about axis XX",
+      "type": "float32",
+      "alternate":"R_x"
+    },
+    "Rxp": {
+      "title": "Maximum radius of gyration about major principal axis(single angle)",
+      "type": "float32",
+      "alternate":"R_{xp}"
+    },
+    "Ry": {
+      "title": "Radius of gyration about axis YY",
+      "type": "float32",
+      "alternate":"R_y"
+    },
+    "Ryp": {
+      "title": "Minimum radius of gyration about minor principal axis(single angle)",
+      "type": "float32",
+      "alternate":"R_{yp}"
+    },
+    "Ry0": {
+      "title": "Radius of gyration about axis YY (0 mm back-to-back)",
+      "type": "float32",
+      "alternate":"R_{y0}"
+    },
+    "Ry8": {
+      "title": "Radius of gyration about axis YY (8 mm back-to-back)",
+      "type": "float32",
+      "alternate":"R_{y8}"
+    },
+    "Ry10": {
+      "title": "Radius of gyration about axis YY (10 mm back-to-back)",
+      "type": "float32",
+      "alternate":"R_{y10}"
+    },
+    "Ry12": {
+      "title": "Radius of gyration about axis YY (12 mm back-to-back)",
+      "type": "float32",
+      "alternate":"R_{y12}"
+    },
+    "Ry16": {
+      "title": "Radius of gyration about axis YY (16 mm back-to-back)",
+      "type": "float32",
+      "alternate":"R_{y16}"
+    },
+    "Ry20": {
+      "title": "Radius of gyration about axis YY (20 mm back-to-back)",
+      "type": "float32",
+      "alternate":"R_{y20}"
+    },
+    "SA": {
+      "title": "Surface area per metre",
+      "type": "float32"
+    },
+    "Shp": {
+      "title": "Shape identification code",
+      "type": "category"
+    },
+    "Slp": {
+      "title": "Slope of tapered flange (tangent of angle)",
+      "type": "float32",
+      "alternate":"Slope"
+    },
+    "Sx": {
+      "title": "Elastic section modulus about axis XX",
+      "type": "float32",
+      "alternate":"Sx"
+    },
+    "Sx1": {
+      "title": "Elastic section modulus about axis XX",
+      "description": "top flange",
+      "type": "float32",
+      "alternate":"Sx_1"
+    },
+    "Sx2": {
+      "title": "Elastic section modulus about axis XX",
+      "description": "bottom flange",
+      "type": "float32",
+      "alternate":"Sx_2"
+    },
+    "Sy": {
+      "title": "Elastic section modulus about axis YY",
+      "type": "float32"
+    },
+    "Sw": {
+      "title": "Warping statical moment",
+      "type": "float32"
+    },
+    "T": {
+      "title": "Thickness of flange",
+      "description": "leg or wall",
+      "type": "float32"
+    },
+    "TanA": {
+      "title": "Tangent of rotation angle between geometric and principal member axes(single angle)",
+      "type": "float32",
+      "alternate":"\\tan A"
+    },
+    "Tdes": {
+      "title": "Design thickness of wall for hollow structural sections",
+      "description": "or HSS produced to ASTM A500, Tdes = 0.90 T",
+      "type": "float32",
+      "alternate":"T_{des}"
+    },
+    "T1": {
+      "title": "Thickness of tapered flange at tip",
+      "type": "float32",
+      "alternate":"T_1"
+    },
+    "T2": {
+      "title": "Thickness of tapered flange at flange-web junction",
+      "type": "float32",
+      "alternate":"T_2"
+    },
+    "Use": {
+      "title": "Normal use",
+      "description": "1-column, 2-column or beam, 3-beam, 0-other.",
+      "type": "category"
+    },
+    "W": {
+      "title": "Thickness of web",
+      "type": "float32"
+    },
+    "Wn": {
+      "title": "Normalized unit warping function",
+      "type": "float32",
+      "alternate":"W_n"
+    },
+    "Wt_i": {
+      "title": "Weight per length (Imperial units)",
+      "type": "float32"
+    },
+    "X": {
+      "title": "Horizontal distance between centroid and outside face of web orvertical leg",
+      "type": "float32"
+    },
+    "Xo": {
+      "title": "Distance between centroid and shear centre along geometric axis XX",
+      "type": "float32",
+      "alternate":"X_o"
+    },
+    "Xop": {
+      "title": "Distance between centroid and shear centre along major principalaxis",
+      "type": "float32",
+      "alternate":"X_{op}"
+    },
+    "Y": {
+      "title": "Vertical distance between centroid and outside face of flange orhorizontal leg",
+      "type": "float32"
+    },
+    "Yo": {
+      "title": "Distance between centroid and shear centre along geometric axis YY",
+      "description": "For WRF sections, the shear centre is located between the centroid andthe larger flange.",
+      "type": "float32",
+      "alternate":"Y_o"
+    },
+    "Yop": {
+      "title": "Distance between centroid and shear centre along minor principalaxis",
+      "type": "float32",
+      "alternate":"Y_{op}"
+    },
+    "Yt": {
+      "title": "Vertical distance between outside face of top flange and centroid",
+      "type": "float32",
+      "alternate":"Y_t"
+    },
+    "Zx": {
+      "title": "Plastic modulus about axis XX",
+      "type": "float32",
+      "alternate":"Z_x"
+    },
+    "Zy": {
+      "title": "Plastic modulus about axis YY",
+      "type": "float32",
+      "alternate":"Z_y"
+    }
+  }
