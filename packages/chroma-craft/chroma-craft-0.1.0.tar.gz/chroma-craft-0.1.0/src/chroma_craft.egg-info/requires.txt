@@ -1,0 +1,11 @@
+matplotlib
+numpy
+tqdm
+seaborn
+
+[dev]
+black
+pip-tools
+pytest
+build
+twine
