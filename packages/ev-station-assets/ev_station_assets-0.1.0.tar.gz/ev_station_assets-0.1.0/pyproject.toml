@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "ev-station-assets"
+version = "0.1.0"
+description = ""
+authors = ["shara <sharabh2019@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.13"
+pydantic = "^2.4.2"
+pandas = "^2.1.1"
+plotly = "^5.17.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
