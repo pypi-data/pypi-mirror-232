@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: deepaix
+Version: 0.0.dev2
+Summary: 
+Author: Kei Shimizu
+Author-email: suns.manage.k@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: certifi (>=2023.7.22,<2024.0.0)
+Requires-Dist: datetime (>=5.2,<6.0)
+Requires-Dist: pytz (>=2023.3.post1,<2024.0)
+Requires-Dist: requests (>=2.31.0,<3.0.0)
+Requires-Dist: selenium (>=4.13.0,<5.0.0)
+Requires-Dist: webdriver-manager (>=4.0.1,<5.0.0)
+Description-Content-Type: text/markdown
+
+# deepaix
+
+## Build and release library
+
+```
+poetry build
+poetry publish
+```
+
