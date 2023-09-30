@@ -1,0 +1,8 @@
+LICENSE
+setup.py
+rclone_by_ahmad/__init__.py
+rclone_by_ahmad/rclone_by_ahmad.py
+rclone_by_ahmad.egg-info/PKG-INFO
+rclone_by_ahmad.egg-info/SOURCES.txt
+rclone_by_ahmad.egg-info/dependency_links.txt
+rclone_by_ahmad.egg-info/top_level.txt
