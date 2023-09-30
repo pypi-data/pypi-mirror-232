@@ -1,0 +1,9 @@
+from grpc import Server
+
+from .arp_pb2 import InfoRequest, InfoResponse, JobRequest, JobResponse
+
+class AIMServicer:
+    def getInfo(self, request: InfoRequest, context) -> InfoResponse: ...
+    def work(self, request: JobRequest, context) -> JobResponse: ...
+
+def add_AIMServicer_to_server(servicer: AIMServicer, server: Server) -> None: ...
