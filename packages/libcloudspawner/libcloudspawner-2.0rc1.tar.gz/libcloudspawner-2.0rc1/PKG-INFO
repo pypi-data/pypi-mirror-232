@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: libcloudspawner
+Version: 2.0rc1
+Summary: libcloudspawner: A Spawner for Jupyterhub which create user notebook inside cloud
+Project-URL: Homepage, https://github.com/tristanlt/jupyter-libcloudspawner
+Project-URL: Documentation, https://jupyter-libcloudspawner.readthedocs.io/en/latest/about.html
+Project-URL: Bug Tracker, https://github.com/tristanlt/jupyter-libcloudspawner/issues
+Author-email: Tristan Le Toullec <tristan.letoullec@cnrs.fr>
+License-File: AUTHORS
+License-File: LICENSE
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# About LibCloudSpawner
+
+
+[![Chat on Gitter](https://img.shields.io/badge/Chat%20on-Gitter-green.svg)](https://gitter.im/jupyter-libcloudspawner/community)
+
+LibcloudSpawner is a JupyterHub Spawner that allows JupyterHub to launch users notebooks inside cloud instance. One instance, one user.
+
+LibcloudSpawner is based on Apache Libcloud which provides an abstraction API for a lot of cloud providers. By the way, LibcloudSpawner will support OpenStack, Google Cloud Engine, Amazon AWS or CloudStack...
+
+Full Documentation : http://jupyter-libcloudspawner.readthedocs.io/en/latest/about.html
+
+Current status is technology preview, feel free to submit issues or questions.
+
+==For now, OpenStack is the only supported cloud provider. More cloud providers will be coming soon...==
+
+
+![LibcloudSpawner usage ](doc/source/_static/general-usage.png)]

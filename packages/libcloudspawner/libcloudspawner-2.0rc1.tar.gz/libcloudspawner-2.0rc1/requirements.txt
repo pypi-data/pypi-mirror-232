@@ -1,0 +1,5 @@
+apache-libcloud
+Jinja2
+jupyterhub
+jupyter
+configurable-http-proxy
