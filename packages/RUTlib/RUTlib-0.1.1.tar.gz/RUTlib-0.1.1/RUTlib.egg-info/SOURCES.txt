@@ -1,0 +1,12 @@
+CHANGELOG.md
+LICENCE.md
+MANIFEST.in
+README.md
+setup.py
+RUTlib.egg-info/PKG-INFO
+RUTlib.egg-info/SOURCES.txt
+RUTlib.egg-info/dependency_links.txt
+RUTlib.egg-info/top_level.txt
+lib/__init__.py
+test/__init__.py
+test/test_lib.py
