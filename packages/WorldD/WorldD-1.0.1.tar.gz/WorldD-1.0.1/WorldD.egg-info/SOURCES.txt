@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+WorldD.egg-info/PKG-INFO
+WorldD.egg-info/SOURCES.txt
+WorldD.egg-info/dependency_links.txt
+WorldD.egg-info/top_level.txt
+src/WorldD/__init__.py
+src/WorldD/__main__.py
+src/WorldD/main.py
+src/WorldD/options.toml
+src/WorldD/profilling.py
+src/WorldD/assets/icon-sheet.png
