@@ -1,0 +1,19 @@
+[package]
+name = "polars-error"
+version = "0.33.2"
+authors = ["Ritchie Vink <ritchie46@gmail.com>"]
+edition = "2021"
+homepage = "https://www.pola.rs/"
+license = "MIT"
+repository = "https://github.com/pola-rs/polars"
+description = "Error definitions for the Polars DataFrame library"
+resolver = "2"
+
+[dependencies]
+arrow = { path = "../arrow" }
+object_store = { version = "0.7", default-features = false, optional = true }
+regex = { version = "1.9", optional = true }
+thiserror = "1"
+
+[features]
+python = []
