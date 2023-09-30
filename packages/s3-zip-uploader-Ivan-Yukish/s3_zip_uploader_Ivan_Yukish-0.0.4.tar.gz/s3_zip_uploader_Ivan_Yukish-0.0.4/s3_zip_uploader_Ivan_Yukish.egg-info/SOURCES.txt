@@ -1,0 +1,11 @@
+LICENCE
+README.md
+setup.cfg
+setup.py
+s3_zip_uploader_Ivan_Yukish.egg-info/PKG-INFO
+s3_zip_uploader_Ivan_Yukish.egg-info/SOURCES.txt
+s3_zip_uploader_Ivan_Yukish.egg-info/dependency_links.txt
+s3_zip_uploader_Ivan_Yukish.egg-info/requires.txt
+s3_zip_uploader_Ivan_Yukish.egg-info/top_level.txt
+tests/__init__.py
+tests/tests.py

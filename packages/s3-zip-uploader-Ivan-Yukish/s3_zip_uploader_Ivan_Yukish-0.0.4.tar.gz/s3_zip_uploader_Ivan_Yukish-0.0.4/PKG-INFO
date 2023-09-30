@@ -1,0 +1,61 @@
+Metadata-Version: 2.1
+Name: s3_zip_uploader_Ivan_Yukish
+Version: 0.0.4
+Summary: Upload zip files to s3
+Home-page: https://github.com/IvanYukish/s3_zip_uploader
+Author: Yukish Ivan
+Author-email: <iwan.jukisch@gmail.com>
+Keywords: python,zip,upload file,s3
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+License-File: LICENCE
+
+
+# Zip to S3 file uploader with concurrency support
+## How to start the application
+
+**The commands:**
+
+First you have to install package:
+```
+$ pip install s3-zip-uploader-Ivan-Yukish
+```
+
+Then run the uploader:
+```
+$ python3 -m s3_zip_uploader_Ivan_Yukish https://example.com/path-to-zip-archive bucket_example_name s3_key_prefix --concurrency 8 --verbose
+
+```
+
+## Application description
+
+Before running app you should set up your AWS CLI account credentials: [docs](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html).
+
+## Running tests:
+```
+pytest
+```
+
+## File structure
+
+Our file structure is:
+```
+├── s3_zip_uploader_Ivan_Yukish
+│      ├── __init__.py
+│      ├── main.py
+│      ├── uploader.py
+├── tests
+│      ├── fixtures.py
+│      ├── tests.py
+├── .gitignore
+├── LICENCE
+├── pytest.ini
+├── README.md
+├── requirements.txt
+└── setup.py
+```
