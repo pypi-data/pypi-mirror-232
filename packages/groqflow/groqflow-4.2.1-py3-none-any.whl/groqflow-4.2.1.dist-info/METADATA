@@ -1,0 +1,80 @@
+Metadata-Version: 2.1
+Name: groqflow
+Version: 4.2.1
+Summary: GroqFlow toolchain library
+Home-page: https://github.com/groq/groqflow
+Author: Groq
+Author-email: sales@groq.com
+License: MIT
+Requires-Python: >=3.8, <3.11
+Description-Content-Type: text/markdown
+Requires-Dist: onnx >=1.11.0
+Requires-Dist: onnxmltools ==1.10.0
+Requires-Dist: hummingbird-ml ==0.4.4
+Requires-Dist: scikit-learn ==1.1.1
+Requires-Dist: xgboost ==1.6.1
+Requires-Dist: onnxruntime >=1.11.0
+Requires-Dist: paramiko ==2.11.0
+Requires-Dist: torch >=1.12.1
+Requires-Dist: protobuf >=3.17.3
+Requires-Dist: pyyaml >=5.4
+Requires-Dist: typeguard ==4.0.0
+Requires-Dist: typing-extensions ==4.5.0
+Requires-Dist: protobuf ==3.20.3
+Requires-Dist: packaging >=21.3
+Requires-Dist: mlagility ==3.2.0
+Provides-Extra: tensorflow
+Requires-Dist: tensorflow-cpu >=2.8.1 ; extra == 'tensorflow'
+Requires-Dist: tf2onnx >=1.12.0 ; extra == 'tensorflow'
+
+# GroqFlow 🚀
+
+GroqFlow™ is the easiest way to get started with Groq's technology. GroqFlow provides an automated tool flow for compiling machine learning and linear algebra workloads into Groq programs and executing those programs on GroqChip™ processors.
+
+We recommend that your system meets the following hardware requirements:
+
+- To build models: 32GB or more of RAM.
+- To run models: 8 GroqChip processors is recommended, especially for larger models.
+
+---
+
+## Installation Guide
+
+Sign-up on [support.groq.com](https://support.groq.com) to download and install GroqWare™ Suite version >=0.9.2.1.
+
+For installation instructions, please have a look at our [Install Guide](docs/install.md).
+
+
+## Getting Started
+
+To Groq a PyTorch model, simply provide your model and inputs to the `groqit()` function. Once `groqit()` has built your model, you can execute your Groq model the same way you execute a PyTorch model.
+
+<img src="https://github.com/groq/groqflow/raw/main/docs/img/groqflow.gif"  width="800"/>
+
+
+`groqit()` also works with ONNX files and provides many customization options. You can find more information about how to use groqit() in our [User Guide](docs/user_guide.md).
+
+---
+
+## Navigating GroqFlow
+
+* [demo_helpers](demo_helpers/): Scripts used for GroqFlow demos and proof points.
+
+* [docs](docs/): All information you'd need to be successful with GroqFlow.
+
+* [examples](examples/): Includes various GroqFlow examples.
+
+* [groqflow](groqflow/): The source code for the `groqflow` package.
+
+* [proof_points](proof_points/): Machine learning proof points using GroqFlow.
+
+* [readme.md](readme.md): This readme.
+
+* [setup.py](setup.py): GroqFlow setup script for installation.
+
+## Contributors
+
+GroqFlow development is primarily conducted within Groq's internal repo and is periodically synced to GitHub. This approach means that developer contributions are not immediately obvious in the commit log.
+
+This project follows the [all-contributors](https://allcontributors.org) specification.
+Contributions of any kind are welcome!
