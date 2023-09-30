@@ -1,0 +1,8 @@
+
+[auto_update]
+requests
+semver
+requests_html
+
+[dev]
+black
