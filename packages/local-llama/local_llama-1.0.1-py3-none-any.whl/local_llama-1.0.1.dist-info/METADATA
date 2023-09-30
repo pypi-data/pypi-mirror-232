@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: local-llama
+Version: 1.0.1
+Summary: A flask server for a chrome extension that querys llm models
+Author: Rowan Wood
+Author-email: mrdiamonddirt@gmail.com
+Requires-Dist: Flask
+Requires-Dist: flask-cors
+Requires-Dist: rich
+Requires-Dist: llama-cpp-python
+Requires-Dist: typing-extensions
+
