@@ -1,0 +1,14 @@
+LICENSE,sha256=Lh-qBbuRV0-jiCIBhfV7NgdwFxQFOXH3BKOzK865hRs,10480
+alexapy/__init__.py,sha256=ArCLlSXY1Dq2grjtt2fTQeJ9flcI1ZYbjU2xZiy-T8I,1724
+alexapy/alexaapi.py,sha256=jx0-YTehyDc2V77Hwv3vQYvNN_0idr96ZCfmDl7JKus,64552
+alexapy/alexahttp2.py,sha256=5pnbrUjyfzwEJkVyjmrlvon6f9FNszilcm49r22MUIw,6039
+alexapy/alexalogin.py,sha256=Qo6WB7xM6-xIuZALQkyC8eY_HCc3XTw7v073aq-Ic-c,71185
+alexapy/alexaproxy.py,sha256=ivayC26A-KwQe8P7mhzGdgZYYNgjj2dSQN3kKf2jGU8,5039
+alexapy/alexawebsocket.py,sha256=gRMSKiUoXozoiilHgBR3htnYqEkWLRWV0_P6d4ujN7I,22029
+alexapy/const.py,sha256=3LwFeLx-niTLTzDQY58QTut1fztwJt5lJc7MjPMyWFk,732
+alexapy/errors.py,sha256=LuRPvsDTSzjmzlOFPkXQS3mk3Zmj0ZWfZON91fkUF5o,863
+alexapy/helpers.py,sha256=BxHGzEVs1NQQ1s5b_neNaLv7m3byCv5Hm02gdH4seX4,7193
+alexapy-1.27.1.dist-info/LICENSE,sha256=Lh-qBbuRV0-jiCIBhfV7NgdwFxQFOXH3BKOzK865hRs,10480
+alexapy-1.27.1.dist-info/METADATA,sha256=8i-vT95yfFXFipuM1nE0w6XqlBfcztYC6hMDF5SbAOM,3271
+alexapy-1.27.1.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+alexapy-1.27.1.dist-info/RECORD,,
