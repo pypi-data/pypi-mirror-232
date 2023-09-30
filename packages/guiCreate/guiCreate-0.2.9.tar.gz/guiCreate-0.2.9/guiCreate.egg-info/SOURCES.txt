@@ -1,0 +1,8 @@
+setup.py
+guiCreate/__init__.py
+guiCreate/main.py
+guiCreate.egg-info/PKG-INFO
+guiCreate.egg-info/SOURCES.txt
+guiCreate.egg-info/dependency_links.txt
+guiCreate.egg-info/requires.txt
+guiCreate.egg-info/top_level.txt
