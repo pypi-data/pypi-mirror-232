@@ -1,0 +1,16 @@
+COPYING
+LICENSE
+README.md
+pyproject.toml
+jupyterscad/__init__.py
+jupyterscad/_render.py
+jupyterscad/_visualize.py
+jupyterscad/exceptions.py
+jupyterscad.egg-info/PKG-INFO
+jupyterscad.egg-info/SOURCES.txt
+jupyterscad.egg-info/dependency_links.txt
+jupyterscad.egg-info/requires.txt
+jupyterscad.egg-info/top_level.txt
+tests/conftest.py
+tests/test_render.py
+tests/test_visualize.py
