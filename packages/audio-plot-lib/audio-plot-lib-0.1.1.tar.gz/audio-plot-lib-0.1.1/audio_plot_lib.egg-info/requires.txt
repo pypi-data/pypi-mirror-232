@@ -1,0 +1,5 @@
+pydub==0.24.1
+numpy
+gTTS==2.2.1
+bokeh==2.4.3
+ipython
