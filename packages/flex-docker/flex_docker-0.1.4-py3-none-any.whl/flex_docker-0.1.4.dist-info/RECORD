@@ -1,0 +1,9 @@
+flex_docker/__init__.py,sha256=_hs1PBFoaNpE7ZBa9NrZRrhO3Hbx05tHiiRRKz8XeEY,27
+flex_docker/__main__.py,sha256=8_dN5XumBDAbnuUDrtCmo7LWaDWRFCdNncOhke1bvpQ,135
+flex_docker_compose/__init__.py,sha256=kUR5RAFc7HCeiqdlX36dZOHkUI5wI6V_43RpEcD8b-0,22
+flex_docker_compose/__main__.py,sha256=8_dN5XumBDAbnuUDrtCmo7LWaDWRFCdNncOhke1bvpQ,135
+flex_docker-0.1.4.dist-info/LICENSE,sha256=4ZoeADbM1PKnEUaCzaYEkQ43GCypXRbHZGgwOyqGcro,1062
+flex_docker-0.1.4.dist-info/METADATA,sha256=xAHrDFylzGC68jmml0Qr-dCl-yvzAOt6bH1PALaEDUQ,5401
+flex_docker-0.1.4.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+flex_docker-0.1.4.dist-info/entry_points.txt,sha256=3g6ZNuWYHIcLLNw9fRUBVliISXhBw5AM3uUOanlvUUQ,89
+flex_docker-0.1.4.dist-info/RECORD,,
