@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: Prompter9000
+Version: 1.0.0
+Summary: C.L.I <-> G.U.I Dictionary Editor
+Author-email: Randall Nagy <r.a.nagy@gmail.com>
+Project-URL: Homepage, https://github.com/soft9000/Blog9000
+Project-URL: Bug Tracker, https://github.com/soft9000/Blog9000/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+## Prompter9000
+Quick &amp; easy way to edit dictionaries. Console & programmatic usages are supported.
+
+### Programatic
+
+```
+from Prompter9000.PyEdit import *
+params = {"NAME":'My', "PHONE":'123-456', "EMAIL":'a.Geekbo@zbobo.com'}
+EditDict.edit(params)
+```
+*GUI*: Dictionary results will be returned ONLY IF the data was changed. Otherwise an empty dictionary will be returned.
+
+May also be used from the C.L.I:
+
+### Console
+
+```
+python PyEdit.py "{'NAME': 'My', 'PHONE': '123-456', 'EMAIL': 'a.Geekbo@zbobo.com'}"
+{'NAME': 'My', 'PHONE': '123-456', 'EMAIL': 'a.Geekbo@zbobo.com', '__btn_ok': True}
+```
+
+*CLI*: The **__btn_ok** will be either **True** when user-selected, else **False**.
+
+### PyPi
+
+Now available on [PyPi](https://pypi.org/project/Prompter9000/)
