@@ -1,0 +1,68 @@
+Metadata-Version: 2.1
+Name: ib3
+Version: 0.3.0
+Summary: IRC bot framework using mixins to provide common functionality
+Project-URL: Homepage, https://python-ib3.readthedocs.io/en/latest/
+Project-URL: Bug Tracker, https://github.com/bd808/python-ib3/issues
+Project-URL: Source, https://github.com/bd808/python-ib3
+Author-email: Bryan Davis <bd808@bd808.com>
+License-Expression: GPL-3.0-or-later
+License-File: COPYING
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Communications :: Chat :: Internet Relay Chat
+Requires-Python: >=3.7
+Requires-Dist: irc>=20.0.0
+Description-Content-Type: text/x-rst
+
+=============================
+IRC Bot Behavior Bundle (IB3)
+=============================
+
+IRC bot framework using mixins to provide commonly desired functionality.
+
+Overview
+========
+The `irc`_ python library's ``irc.bot.SingleServerIRCBot`` provides a nice
+base for making a new bot, but there are many common tasks needed by a robust
+bot that it does not handle out of the box. IB3 collects some commonly desired
+behaviors for a bot as `mixin`_ classes that can be used via `multiple
+inheritance`_::
+
+    from ib3 import Bot
+    from ib3.auth import SASL
+    from ib3.connection import SSL
+    from ib3.mixins import DisconnectOnError
+
+    class TestBot(SASL, SSL, DisconnectOnError, Bot):
+        pass
+
+Installation
+============
+* ``python3 -m pip install --upgrade ib3`` (recommended)
+* ``python3 -m pip install .`` (from source distribution)
+
+License
+=======
+IB3 is licensed under the `GPL-3.0-or-later`_ license.
+
+Credits
+=======
+Some code and much inspiration taken from Wikimedia irc bots `Adminbot`_,
+`Jouncebot`_, and `Stashbot`_.
+
+.. _irc: https://pypi.org/project/irc/
+.. _mixin: https://en.wikipedia.org/wiki/Mixin
+.. _multiple inheritance: https://docs.python.org/3/tutorial/classes.html#multiple-inheritance
+.. _GPL-3.0-or-later: https://www.gnu.org/copyleft/gpl.html
+.. _Adminbot: https://phabricator.wikimedia.org/diffusion/ODAC/
+.. _Jouncebot: https://phabricator.wikimedia.org/diffusion/GJOU/
+.. _Stashbot: https://phabricator.wikimedia.org/diffusion/LTST/
