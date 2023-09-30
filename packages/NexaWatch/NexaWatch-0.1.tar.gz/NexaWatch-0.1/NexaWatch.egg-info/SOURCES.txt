@@ -1,0 +1,11 @@
+README.md
+setup.py
+NexaWatch.egg-info/PKG-INFO
+NexaWatch.egg-info/SOURCES.txt
+NexaWatch.egg-info/dependency_links.txt
+NexaWatch.egg-info/entry_points.txt
+NexaWatch.egg-info/requires.txt
+NexaWatch.egg-info/top_level.txt
+pywatcher/__init__.py
+pywatcher/config.py
+pywatcher/core.py
