@@ -1,0 +1,121 @@
+# Cloud IP Lookup v1.0.0
+Cloud IP Lookup is a Pure Python application and library for Python 3 to verify which cloud platform a given IP address belongs to. Its supports IPv4 and IPv6, and have its own database that can be updated whenever you want with a simple command: ```cloudiplookup --update [--verbose]```
+
+Data is collected from the websites of the most popular cloud service providers. Sometimes these databases are updated several times a day. We recommend that you put the update command in your crontab, at least once a day.
+
+This version has data from AWS, Azure, Google Cloud, Oracle Cloud and Digital Ocean providers. Some of them provide the names of services and regions, others don´t, like Google Cloud that only provides the network ranges.
+
+We will be adding other cloud service providers as they are requested. The requirement for addition is that the cloud provider must have a static page where its network ranges are published. For example, AWS: https://ip-ranges.amazonaws.com/ip-ranges.json. 
+
+## Installation
+
+```bash
+pip install cloudiplookup
+```
+Or cloning from Github
+```bash
+git clone https://github.com/rabuchaim/cloudiplookup.git
+```
+
+## How to use it as a Python library
+
+```bash
+# python3
+Python 3.10.12 (main, Jun 11 2023, 05:26:28) [GCC 11.4.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> from cloudiplookup import CloudIPLookup
+>>> myLookup = CloudIPLookup(verbose=True)
+Cloud IP Lookup v1.0.0 is ready! loaded with 47408 networks in 0.00892 seconds and using 4.35 MiB of RAM.
+>>> print(myLookup.lookup('52.94.7.24').pp_json())
+{
+   "ip": "52.94.7.24",
+   "cidr": "52.94.7.0/24",
+   "region": "sa-east-1",
+   "cloud_provider": "AWS",
+   "service": "DYNAMODB",
+   "elapsed_time": "0.000128607 sec"
+}
+>>>
+>>> result = myLookup.lookup('52.94.7.24')
+>>> print(result.cloud_provider)
+AWS
+>>> print(result.region)
+sa-east-1
+>>>
+>>> result.to_dict()['cloud_provider']
+'AWS'
+>>> result.to_dict()['region']
+'sa-east-1'
+>>>
+>>> myLookup.get_database_info()
+{
+   "AWS": {
+      "create_date": "2023-09-28-18-43-07",
+      "total_networks": 6862
+   },
+   "Azure": {
+      "create_date": "ServiceTags_Public_20230925.json",
+      "total_networks": 38135
+   },
+   "Google Cloud": {
+      "create_date": "2023-09-28T07:06:22.442801",
+      "total_networks": 85
+   },
+   "Oracle Cloud": {
+      "create_date": "2023-09-27T06:35:56.522849",
+      "total_networks": 644
+   },
+   "Digital Ocean": {
+      "create_date": "n/a",
+      "total_networks": 1682
+   }
+}
+>>>
+>>> from cloudiplookup import update_ip_ranges
+>>> update_ip_ranges()
+Updating AWS - Downloading IP ranges file [0.185009729 sec]
+Updating AWS - Parsing IPv4 and IPv6 ranges [0.010179118 sec]
+Updating AZURE - Downloading IP ranges file [15.636473520 sec]
+Updating AZURE - Parsing IPv4 and IPv6 ranges [0.087565456 sec]
+Updating GCP - Downloading IP ranges file [0.167038122 sec]
+Updating GCP - Parsing IPv4 and IPv6 ranges [0.000315775 sec]
+Updating ORACLE - Downloading IP ranges file [3.246604505 sec]
+Updating ORACLE - Parsing IPv4 and IPv6 ranges [0.000688278 sec]
+Updating DIGITAL OCEAN - Downloading IP ranges file [0.263751290 sec]
+Updating DIGITAL OCEAN - Parsing IPv4 and IPv6 ranges [0.005341749 sec]
+Sorting IPv4 and IPv6 data [0.017409653 sec]
+Updating all lists... Done! [0.047161884 sec]
+Saved file /var/lib/cloudiplookup/cloudiplookup.dat.gz [0.194174899 sec]
+Cloud IP Lookup updated with success! [19.606065781 sec]
+>>>
+```
+
+## The database file
+
+Cloud IP Lookup uses a pickle database that is a bunch of lists of integers. Everything is located at ```/var/lib/cloudiplookup/```.
+
+![](https://raw.githubusercontent.com/rabuchaim/cloudiplookup/main/images/varlibcloudiplookup.jpg)
+
+There is a file ```/var/lib/cloudiplookup/cloudiplookup.json``` with all cloud providers information and an another file ```/var/lib/cloudiplookup/cloudiplookup.dat.gz``` that is the database created by function ```update_ip_ranges()```.
+
+![](https://raw.githubusercontent.com/rabuchaim/cloudiplookup/main/images/cloudiplookupjson.jpg)
+
+
+## Use as a command line application
+
+![](https://raw.githubusercontent.com/rabuchaim/cloudiplookup/main/images/cloudiplookup.jpg)
+
+![](https://raw.githubusercontent.com/rabuchaim/cloudiplookup/main/images/cloudiplookup_test.jpg)
+
+## Debug mode
+
+If you update the data using the ```--debug``` option, all files downloaded from cloud service providers will be available in the ```/var/lib/cloudiplookup``` directory.
+
+![](https://raw.githubusercontent.com/rabuchaim/cloudiplookup/main/images/varlibdir.jpg)
+
+## TO DO list
+- do a recursive search on all IP addresses from a given endpoint/hostname **<<< On the way**
+
+## Sugestions, feedbacks, bugs, new cloud service provider requests...
+E-mail me: ricardoabuchaim at gmail.com
+
