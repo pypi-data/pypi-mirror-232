@@ -1,0 +1,9 @@
+.idea/workspace.xml
+.idea/usage.statistics.xml
+.idea/tasks.xml
+ipban_stats/__pycache__
+dist
+build
+iptables_stats.egg-info
+iptables_stats/__pycache__
+iptables_stats/reading_modules/__pycache__
