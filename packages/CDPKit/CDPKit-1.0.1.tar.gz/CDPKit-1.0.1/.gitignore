@@ -1,0 +1,7 @@
+*~
+*.pyc
+.DS_Store
+_skbuild
+dist
+CDPKit.egg-info
+MANIFEST.in
