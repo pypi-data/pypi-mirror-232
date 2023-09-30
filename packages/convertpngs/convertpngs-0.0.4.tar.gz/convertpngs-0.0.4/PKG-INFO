@@ -1,0 +1,90 @@
+Metadata-Version: 2.1
+Name: convertpngs
+Version: 0.0.4
+Summary: a module about converting pngs to gif or video in simplified ways.
+Home-page: 
+Author: CYC
+Author-email: vichouro@gmail.com
+License: MIT
+Keywords: convertpngs,png,gif,video,mp4,opencv,pillow,animation,convert,pngs,png2gif,png2video,png2mp4,png2avi,png2mp4,png2video
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+
+### INTRODUCTION
+
+convertpngs is a module to help you to do some image processing work. It is based on the opencv-python module and Pillow module, convert the multiple png files to form of gif or mp4. It is a module that CYC wrote for his own use, but I think it is useful for others, so I published it.
+
+### IMPORTANT
+
+If you encounter the ModuleNotFoundError when using this module, you need to manually install the module in the lastest version:
+`pip install opencv-python`
+`pip install Pillow`
+
+Also, some modules do not support the previous version of python, make sure you are using the version 3.7 or above.
+
+There still exist some bugs in this module, if you find any, please contact me by email: vichouro@gmail.com . Thank you. Some function reported bugs have added the caution hint when called.
+
+### INSTALLATION
+- Install guide: (run on your powershell or cmd)
+
+    `pip install convertpngs`
+
+- Update guide: (run on your powershell or cmd)
+
+    `pip install --upgrade convertpngs`
+    
+    or directly run the python script below:
+    ```python
+    from convertpngs import upgrade
+    ```
+
+---
+
+
+
+### USAGE
+
+#### Convert pngs to gif
+If you want to convert the png files to gif, you can use the function `to_gif` in the module `convert_pngs`. The function has three parameters, the first one is the input folder path, the second one is the output file name, and the third one is the duration of each frame. The default value of the third parameter is 100, which means 100 milliseconds. The function will return the path of the output file.
+
+```python
+# 導入套件
+from convertpngs import convert_pngs as cp
+
+# 指定輸入資料夾和輸出GIF文件的名稱
+input_folder = 'hotspot_TPP'  # 替換PNG檔案所在的資料夾路徑
+output_file = 'output.gif'  # 替換為輸出的GIF檔案名稱
+cp.to_gif(input_folder, output_file, duration=100, loop=0) # 每一張的顯示時間，100就是100毫秒
+```
+
+#### Convert pngs to mp4
+If you want to convert the png files to mp4, you can use the function `to_mp4` in the module `convert_pngs`. The function has three parameters, the first one is the input folder path, the second one is the output file name, and the third one is the fps of the video. The default value of the third parameter is 10, which means 10 frames per second. The function will return the path of the output file.
+
+```python
+# 導入套件
+from convertpngs import convert_pngs as cp
+
+# 指定輸入資料夾和輸出MP4文件的名稱
+input_folder = 'hotspot'  # 替換為PNG檔案所在的資料夾路徑
+output_file = 'output.mp4'  # 替換為輸出的MP4文件名稱
+cp.to_mp4(input_folder, output_file, fps=30)  # 這裡的fps是幀率，可以根據需要調整
+```
+
+Let's all, enjoy the beauty of simplification of this module.
+
+---
+
+### CHANGE LOG
+
+#### 0.0.1 (29/09/2023)
+- First Release
+
+#### 0.0.3 (29/09/2023)
+- Minor bug fixes
+
+#### 0.04 (30/09/2023)
+- Fixing the bugs for displacement of the first frame of the gif

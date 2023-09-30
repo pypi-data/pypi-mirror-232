@@ -1,0 +1,14 @@
+CHANGELOG.md
+LISCENCE.txt
+MANIFEST.in
+README.md
+USAGE.md
+setup.py
+convertpngs/__init__.py
+convertpngs/convert_pngs.py
+convertpngs/upgrade.py
+convertpngs.egg-info/PKG-INFO
+convertpngs.egg-info/SOURCES.txt
+convertpngs.egg-info/dependency_links.txt
+convertpngs.egg-info/requires.txt
+convertpngs.egg-info/top_level.txt
