@@ -1,0 +1,2 @@
+.. autoclass:: svvamp.ExperimentAnalyzer
+   :members:

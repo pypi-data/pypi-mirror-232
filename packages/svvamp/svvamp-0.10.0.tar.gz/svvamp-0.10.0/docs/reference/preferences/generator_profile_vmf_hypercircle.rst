@@ -1,0 +1,2 @@
+.. autoclass:: svvamp.GeneratorProfileVMFHypercircle
+   :members:

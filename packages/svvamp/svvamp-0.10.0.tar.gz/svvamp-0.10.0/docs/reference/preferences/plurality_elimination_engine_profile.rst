@@ -1,0 +1,2 @@
+.. autoclass:: svvamp.PluralityEliminationEngineProfile
+   :members:
