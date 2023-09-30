@@ -1,0 +1,9 @@
+godata-0.3.0.dist-info/METADATA,sha256=ZzyWeJhnLiDvF32WmYZj9fcwSKCeOUUo-b9YLGIuwVQ,631
+godata-0.3.0.dist-info/WHEEL,sha256=V5sWd_lSU9LGVrarVpn3OrgKqDnXZrPlHhth-Q0Htxg,104
+godata/io/jsonio.py,sha256=spYtqcVYREI9KzqkQPi8ZNublXvM2T2F5VPIMcbk43g,232
+godata/io/__init__.py,sha256=bJyM9lkEbtoj7m0Du127A5xNDilC60vaRJnsJZCS6RU,4457
+godata/io/numpyio.py,sha256=1WB1c5DTcWFd8wJElZMWdYFABJjOH4ITi7qBPNzG0HE,222
+godata/__init__.py,sha256=MRHeb2yGgheo8iMS8h2p3iQOmw9swNo3uLq94Bc9JJw,326
+godata/project.py,sha256=yGP5e8527a7ow-mjP6zFWC-KEkz8HTa1oHCDj3KAx-k,7940
+godata/godata.cpython-311-darwin.so,sha256=LsZSWu4W06kTngjVa2LrZ-w-3MzDh6H8t61YlGl-owU,2921993
+godata-0.3.0.dist-info/RECORD,,
