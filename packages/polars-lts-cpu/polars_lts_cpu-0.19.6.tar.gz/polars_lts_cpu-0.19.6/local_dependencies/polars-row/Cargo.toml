@@ -1,0 +1,16 @@
+[package]
+name = "polars-row"
+version = "0.33.2"
+authors = ["Ritchie Vink <ritchie46@gmail.com>"]
+edition = "2021"
+homepage = "https://www.pola.rs/"
+license = "MIT"
+repository = "https://github.com/pola-rs/polars"
+description = "Row encodings for the Polars DataFrame library"
+resolver = "2"
+
+[dependencies]
+polars-error = { path = "../polars-error" }
+polars-utils = { path = "../polars-utils" }
+
+arrow = { path = "../arrow" }

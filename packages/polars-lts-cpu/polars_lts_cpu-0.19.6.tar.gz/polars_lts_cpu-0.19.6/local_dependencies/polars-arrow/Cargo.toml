@@ -1,0 +1,39 @@
+[package]
+name = "polars-arrow"
+version = "0.33.2"
+authors = ["Ritchie Vink <ritchie46@gmail.com>"]
+edition = "2021"
+homepage = "https://www.pola.rs/"
+license = "MIT"
+repository = "https://github.com/pola-rs/polars"
+description = "Arrow interfaces for Polars DataFrame library"
+resolver = "2"
+
+[dependencies]
+polars-error = { path = "../polars-error" }
+
+arrow = { path = "../arrow" }
+atoi = { version = "2", optional = true }
+chrono = { version = "0.4.31", default-features = false, features = ["std"] , optional = true }
+chrono-tz = { version = "0.8.1", optional = true }
+ethnum = { version = "1.3.2", optional = true }
+hashbrown = { version = "0.14", features = ["rayon", "ahash"] }
+multiversion = "0.7"
+num-traits = "0.2"
+serde = { version = "1.0.188", optional = true , features = ["derive"] }
+thiserror = "1"
+
+[build-dependencies]
+version_check = "0.9.4"
+
+[features]
+dtype-decimal = ["atoi", "ethnum"]
+dtype-array = []
+nightly = ["hashbrown/nightly"]
+strings = []
+compute = ["arrow/compute_cast"]
+temporal = ["arrow/compute_temporal"]
+bigidx = []
+performant = []
+timezones = ["chrono-tz", "chrono"]
+simd = []

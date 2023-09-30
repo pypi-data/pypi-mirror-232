@@ -1,0 +1,26 @@
+[package]
+name = "polars-json"
+version = "0.33.2"
+authors = ["Ritchie Vink <ritchie46@gmail.com>"]
+edition = "2021"
+homepage = "https://www.pola.rs/"
+license = "MIT"
+repository = "https://github.com/pola-rs/polars"
+description = "JSON related logic for the Polars DataFrame library"
+resolver = "2"
+
+[dependencies]
+polars-arrow = { path = "../polars-arrow" }
+polars-error = { path = "../polars-error" }
+polars-utils = { path = "../polars-utils" }
+arrow = { path = "../arrow" }
+fallible-streaming-iterator = { version = "0.1" }
+ahash = "0.8"
+chrono = { version = "0.4.31", default-features = false, features = ["std"] }
+hashbrown = { version = "0.14", features = ["rayon", "ahash"] }
+indexmap = { version = "2", features = ["std"] }
+itoa = "1.0.6"
+num-traits = "0.2"
+ryu = "1.0.13"
+simd-json = { version = "0.10", features = ["allow-non-simd", "known-key"] }
+streaming-iterator = "0.1.9"
