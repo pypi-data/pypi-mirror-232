@@ -1,0 +1,328 @@
+metadata:
+  title: |
+    LAWV Media Release
+  short title: |
+    LAWV Media Release
+  description: |
+    This interview allows advocates to generate and email
+    a media release of information to a client and receive a signed
+    copy back.
+  authors:
+    - name: Dane W. Henry, Esq.
+      organization: Legal Aid of West Virginia, Inc.
+  revision_date: 2023-09-29
+---
+features:
+  javascript: docassemble.LAWVCommon:data/static/force_lightmode.js
+  css: docassemble.LAWVCommon:data/static/lawv.css
+---
+objects:
+  - a: Individual
+  - c: Individual
+  - endpoint: DADict
+---
+mandatory: True
+code: |
+  multi_user = True
+  advocate_setup
+  if not agrees_to_sign:
+    #recipients = [a, 'acrawford@lawv.net']
+    recipients = [a]
+    send_email(to=recipients, template=client_reject)
+    reject_exit
+  consent
+  c_method
+  if c_method == 'type':
+    c.signature = '/s/' + c.name.full()
+  date = current_datetime()
+  c.signature
+  final_screen  
+---
+ga id: advocateInfo
+question: |
+  First, enter your information
+subquestion: |
+  Your information is needed to identify where the
+  request to sign the release is coming from.
+fields:
+  - First Name: a.name.first
+  - Last Name: a.name.last
+  - Email Address: a.email
+    datatype: email
+  - Title: a.title
+---
+ga id: advocateSignature
+question: |
+  How would you like the name signed?
+subquestion: |
+  **Typed** will insert '/s/ ${ a.name.full()}'
+
+  **Digitally Sign** will allow you to use the mouse, trackpad,
+  or finger (device depending) to sign your name
+field: a_method
+choices:
+  - Type: type
+  - Digitally Sign: sign
+under: |
+  After you sign, an email will be generated
+  to the client for them to sign, then a copy
+  will be provided to both of you.
+---
+ga id: advocateDigitalSignature
+question: |
+  Sign your name
+signature: a.signature
+under: |
+  ${ a.name.full() }
+---
+ga id: clientInfo
+question: |
+  Now, enter some information about the client
+subquestion: |
+  Information about the client is used to make sure
+  the person who receives the release is the client.
+fields:
+  - First Name: c.name.first
+  - Last Name: c.name.last
+  - Email Address: c.email
+    datatype: email
+  - Phone: c.phone_number
+  - Address: c.address.address
+    address autocomplete: True
+  - Unit/Apt.: c.address.unit
+    required: False
+  - City: c.address.city
+  - State: c.address.state
+    code: states_list()
+    default: WV
+  - Zip: c.address.zip
+validation code: |
+  if not phone_number_is_valid(c.phone_number):
+      validation_error('Please enter a valid phone number.', field='c.phone_number')
+---
+ga id: clientReview
+question: |
+  Review
+subquestion: |
+  ${ a.name.full() } has submitted a Media Release and a Client Story Release 
+  for your signature. 
+  
+  Legal Aid of West Virginia (LAWV) provides free legal services through grants 
+  and the support of the public. LAWV funders, the media and the public often 
+  want to know the impact this has in our communities. One of the best ways to 
+  demonstrate this impact is through personal stories!
+
+  While occasionally sharing personal stories helps further LAWV's mission, LAWV 
+  cannot share your story without your permission. The choice is yours, and you're 
+  free to keep information about your case confidential. If you decide to share your 
+  story, LAWV's communications team will work with you to hear and tell the important 
+  parts of that story.
+
+  You can also view a blank, unsigned copy of the releases [here](${ url_of('LAWV_Media_Release_flat.pdf')}) and [here](${url_of('LAWV_Client_Story_Release_flat.pdf')})
+field: agrees_to_sign
+buttons:
+  - I agree to sign: True
+  - I do not agree: False
+---
+ga id: clientOptions
+question: |
+  Select all that apply
+subquestion: |
+  By signing this release you give LAWV permission to publish/provide 
+  information about your case to social media, the news media (television, radio, newspapers) 
+  or for other public purposes including fundraising in the following ways.
+fields:
+  - no label: consent
+    datatype: checkboxes
+    choices:
+      - Include FIRST name and case information in publicly distributed materials: first
+      - Take photos of you and use them in publicly distributed materials: photos
+      - Arrange for you to speak in person or by telephone with people from the media: telephone      
+      - Arrange for you to be filmed or photographed by news media: media_photos
+      - Use the facts of your case but change your name and the name of others: names
+      - Other: other
+    none of the above: False
+  - Describe: other_detail
+    show if: consent['other']
+  - Do you wish to exclude any specific information?: exclude
+    datatype: yesnoradio
+  - Please describe what should be exlcuded: exclude_detail
+    input type: area
+    show if: exclude
+---
+ga id: clientSignature
+question: |
+  How would you like your name signed?
+subquestion: |
+  **Typed** will insert '/s/ ${ c.name.full()}'
+
+  **Digitally Sign** will allow you to use the mouse, trackpad,
+  or finger (device depending) to sign your name
+field: c_method
+choices:
+  - Type: type
+  - Digitally Sign: sign
+under: |
+  After you sign the release a copy will be provided to both you and Legal Aid of West Virginia.
+---
+ga id: clientDigitalSignature
+question: |
+  Sign your name
+signature: c.signature
+under: |
+  ${ c.name.full() }
+---
+event: attorney_final
+question: |
+  Email Sent - Done for now
+subquestion: |
+  An email has been sent to ${ c.email } for them to 
+  review the terms and sign.  Once signed, a copy will
+  be sent to your email: ${ a.email }
+action buttons:
+  - label: Leave
+    action: https://legalaidwv.org/
+    color: warning
+    icon: sign-out-alt
+need:
+  - advocate_setup
+---
+ga id: releaseComplete
+event: final_screen
+question: |
+  Thank You
+subquestion: |
+  % if client_emailed and advocate_emailed:
+  Thank you for completing the signature. 
+  
+  A copy will be sent to your email: ${ c.email }.
+  % else:
+  There was a problem sending the e-mail.
+  % endif
+action buttons:
+  - label: Exit
+    action: https://legalaidwv.org/
+    color: danger
+    icon: sign-out-alt
+---
+code: |
+  client_emailed = send_email(to=c,attachments=[media_release, client_story_release],template=see_attached)
+---
+code: |
+  #advocate_emailed = send_email(to=[a,'acrawford@lawv.net'],attachments=[media_release, client_story_release],template=see_attached)
+  advocate_emailed = send_email(to=[a],attachments=[media_release, client_story_release],template=see_attached)
+---
+ga id: rejectExit
+event: reject_exit
+question: |
+  Thank you for your consideration!
+subquestion: |
+  We understand that sharing your story is not for everyone.  Once you click exit below, 
+  the information will be purged from our system.  Not signing the agreement will have no
+  impact on the level of services in any current case or future case(s) with LAWV.
+buttons:
+  - Exit Completely: exit
+back button: True
+back button label: |
+  Wait, go back
+---
+template: notification
+subject: |
+  A document is awaiting your signature.
+content: |
+  Dear ${ c.name.full() },
+  
+  ${ a.name.full() } has created a document that requires your signature.
+  After you sign it, a copy will be emailed to you for your records.
+
+  Please click the following URL:
+
+  [${ interview_url() }](${ interview_url() })
+
+  Legal Aid of West Virginia
+
+  *NOTE: This email address is not monitored.  Please do not reply to this message.  
+  Contact your attorney or paralegal through your normal method of communication.*
+---
+template: client_reject
+subject: |
+  ${ c.name.full() } has rejected the document.
+content: |
+  Dear ${ a.name.full() },
+  
+  ${ c.name.full() } has declined to sign the LAWV Media Release.
+
+  Legal Aid of West Virginia
+---
+template: see_attached
+subject: |
+  A document has been created.
+content: |
+  Here is a copy of the documents you signed.
+
+  *NOTE: This email address is not monitored.  Please do not reply to this message.  
+  Contact your attorney or paralegal through your normal method of communication.*
+---
+attachment:
+  - name: LAWV Media Release
+    filename: ${ c.name.full() } Media Release
+    pdf template file: 'LAWV_Media_Release.pdf'
+    editable: False
+    variable name: media_release
+    fields:
+      - "name": ${'' if not consent['first'] else c.initials}
+      - "photos": ${'' if not consent['photos'] else c.initials}
+      - "speak_media": ${'' if not consent['telephone'] else c.initials}
+      - "film_media": ${'' if not consent['media_photos'] else c.initials}
+      - "facts": ${'' if not consent['names'] else c.initials}
+      - "other": ${'' if not consent['other'] else c.initials}
+      - "other_specify": ${other_detail if consent['other'] else ''}
+      - "client_signature": ${ c.signature.show(width='3in') if c_method == 'sign' else '' }
+      - "client_signature_text": |
+          ${ '/s/ ' + c.name.full() if c_method == 'type' else ''}
+      - "client_name" : ${ c.name.full() }
+      - "client_date": ${ date.format('MM/dd/yyyy') }
+      - "client_address": ${c.address.on_one_line() }
+      - "client_phone": ${c.phone_number}
+      - "lawv_signature": ${ a.signature.show(width='2.75in') if a_method == 'sign' else '' }
+      - "lawv_signature_text": |
+          ${ '/s/ ' + a.name.full() if a_method == 'type' else ''}
+      - "lawv_name": ${a.name.full()}
+      - "lawv_title": ${a.title}
+      - "lawv_date": ${advocate_date.format('MM/dd/yyyy')}
+---
+attachment:
+  - name: LAWV Client Story Release
+    filename: ${ c.name.full() } Client Story Release
+    pdf template file: 'LAWV_Client_Story_Release.pdf'
+    editable: False
+    variable name: client_story_release
+    fields:
+      - "private": ${exclude_detail if exclude else '' }
+      - "client_signature": ${ c.signature.show(width='3in') if c_method == 'sign' else '' }
+      - "client_signature_text": |
+          ${ '/s/ ' + c.name.full() if c_method == 'type' else ''}
+      - "client_name" : ${ c.name.full() }
+      - "client_date": ${ date.format('MM/dd/yyyy') }
+      - "client_address": ${c.address.on_one_line() }
+      - "client_phone": ${c.phone_number}
+      - "lawv_signature": ${ a.signature.show(width='2.75in') if a_method == 'sign' else '' }
+      - "lawv_signature_text": |
+          ${ '/s/ ' + a.name.full() if a_method == 'type' else ''}
+      - "lawv_name": ${a.name.full()}
+      - "lawv_title": ${a.title}
+      - "lawv_date": ${advocate_date.format('MM/dd/yyyy') }
+---
+code: |
+  a.name.first
+  c.name.first
+  c.initials = c.name.first[:1] + c.name.last[:1]
+  advocate_date = current_datetime()
+  a_method
+  if a_method == 'type':
+    a.signature = '/s/' + a.name.full()
+  a.signature  
+  send_email(to=c,template=notification)
+  advocate_setup = True
+  prevent_going_back()
+  force_ask('attorney_final')
