@@ -1,0 +1,9 @@
+setup.cfg
+setup.py
+swgoh_api/__init__.py
+swgoh_api/swgoh_api.py
+swgoh_api.egg-info/PKG-INFO
+swgoh_api.egg-info/SOURCES.txt
+swgoh_api.egg-info/dependency_links.txt
+swgoh_api.egg-info/not-zip-safe
+swgoh_api.egg-info/top_level.txt
