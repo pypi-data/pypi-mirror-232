@@ -1,0 +1,26 @@
+{
+  "message": {
+    "query_graph": {
+      "nodes": {
+        "ConditionID": {
+          "ids": []
+        },
+        "DrugID": {
+          "categories": [
+            "biolink:ChemicalEntity"
+          ]
+        }
+      },
+      "edges": {
+        "e01": {
+          "object": "ConditionID",
+          "subject": "DrugID",
+          "predicates": [
+            "biolink:treats"
+          ],
+          "knowledge_type": "inferred"
+        }
+      }
+    }
+  }
+}
