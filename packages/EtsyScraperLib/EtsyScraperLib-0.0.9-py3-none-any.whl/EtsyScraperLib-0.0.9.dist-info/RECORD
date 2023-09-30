@@ -1,0 +1,15 @@
+EtsyScraperLib/__init__.py,sha256=plQrbRX1l0Ep0dwaHGylEsIag6ErgeyzQY8vUan9OEA,196
+EtsyScraperLib/product.py,sha256=SAMIoXu1c63G1dkK8ZN1hcr13z60dMcgnBDynpgoraM,6509
+EtsyScraperLib/store.py,sha256=Fz-uCvXln0oXv-JsU92EfASZXJrIEv2J8ZVbDpnnVSA,16665
+EtsyScraperLib/test.py,sha256=BNysVeRT0gIOij1lE1aAG-g-YIXcSaCSzlcS54Nd3v0,342
+EtsyScraperLib/text_format.py,sha256=WBPo8DaZzAz308xojJCI2Nr0kJTw9qVILURmBGJFkrw,945
+etsyscraper/__init__.py,sha256=uHmsgqeZsbF-u-ks5tSmn2HbzW9k9W11Dv8g-lYc9hc,52
+etsyscraper/product.py,sha256=riVLGfbK7djLvSC_nTPcLjuxeAuVvrohMlrmPMEvxVI,5878
+etsyscraper/store.py,sha256=J5LY9OPh8YoJ5YbGQoBVFdmvfutLiDki-9GgEnlAqd0,14595
+etsyscraper/test.py,sha256=4AfALr-QMapxq4nbABBdARokiEMMhkkB4ye61yA-vL8,56
+etsyscraper/text_format.py,sha256=WBPo8DaZzAz308xojJCI2Nr0kJTw9qVILURmBGJFkrw,945
+EtsyScraperLib-0.0.9.dist-info/LICENSE,sha256=0eBIkQTPyFqXCAtdF_aV51eGZrYOE3Z_ZtbwYrv0q9c,1069
+EtsyScraperLib-0.0.9.dist-info/METADATA,sha256=yMK1MsceXiixi_sMBVnmD4t0xz0sM_Y-8Dvbez6uaLg,729
+EtsyScraperLib-0.0.9.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+EtsyScraperLib-0.0.9.dist-info/top_level.txt,sha256=JsDerpzAC906AsSSxDa1ZA0_568-hTH3_mXWh1EfrPY,15
+EtsyScraperLib-0.0.9.dist-info/RECORD,,
