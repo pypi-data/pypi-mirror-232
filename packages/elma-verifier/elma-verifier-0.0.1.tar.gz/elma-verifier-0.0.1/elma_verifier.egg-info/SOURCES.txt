@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+elma_verifier.egg-info/PKG-INFO
+elma_verifier.egg-info/SOURCES.txt
+elma_verifier.egg-info/dependency_links.txt
+elma_verifier.egg-info/requires.txt
+elma_verifier.egg-info/top_level.txt
