@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: cvzoomwindow
+Version: 0.0.1
+Summary: CvNameWindow class that adds zoom and move functions to OpenCV's namedWindow
+Home-page: https://imagingsolution.net/
+Author: ImaginSolution
+Author-email: 
+License: MIT
+Keywords: OpenCV namedWindow zoom pan
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: Japanese
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: Operating System :: Microsoft :: Windows :: Windows 11
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
+
+CvNameWindow class that adds zoom and move functions to OpenCV's namedWindow
+
+
