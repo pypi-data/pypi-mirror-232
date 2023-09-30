@@ -1,0 +1,3 @@
+ovos-plugin-manager
+torch>=2.0
+torch.package
