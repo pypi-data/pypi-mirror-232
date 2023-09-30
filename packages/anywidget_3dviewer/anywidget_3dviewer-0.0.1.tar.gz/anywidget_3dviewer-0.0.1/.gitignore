@@ -1,0 +1,10 @@
+node_modules
+.venv
+dist
+
+# Python
+__pycache__
+.ipynb_checkpoints
+_MY_MODEL_DATA.gltf
+
+src/anywidget_3dviewer/static
