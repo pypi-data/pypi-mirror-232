@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "py-request-nacos"
+version = "0.0.11"
+authors = [
+  { name="lidaning", email="453882101@qq.com" }
+]
+description = "Request service in Nacos"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/relidaning/py-request-nacos"
+"Bug Tracker" = "https://github.com/relidaning/py-request-nacos/issues"

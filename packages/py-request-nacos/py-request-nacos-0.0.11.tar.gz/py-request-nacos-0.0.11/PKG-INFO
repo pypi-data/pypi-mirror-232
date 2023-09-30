@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: py-request-nacos
+Version: 0.0.11
+Summary: Request service in Nacos
+Author-email: lidaning <453882101@qq.com>
+Project-URL: Homepage, https://github.com/relidaning/py-request-nacos
+Project-URL: Bug Tracker, https://github.com/relidaning/py-request-nacos/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Py-request-nacos
+
+Request service from nacos.
