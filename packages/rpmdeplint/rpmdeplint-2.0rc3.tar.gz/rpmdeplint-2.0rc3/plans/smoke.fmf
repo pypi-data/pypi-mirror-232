@@ -1,0 +1,18 @@
+summary:
+  Basic tests
+
+discover:
+  how: shell
+  tests:
+
+    - name: /sanity/import
+      test: python3 -c "import rpmdeplint"
+
+    - name: /sanity/help
+      test: rpmdeplint --help
+
+    - name: /sanity/version
+      test: rpmdeplint --version | grep -P "^rpmdeplint \d+\.\d+"
+
+execute:
+  how: tmt
