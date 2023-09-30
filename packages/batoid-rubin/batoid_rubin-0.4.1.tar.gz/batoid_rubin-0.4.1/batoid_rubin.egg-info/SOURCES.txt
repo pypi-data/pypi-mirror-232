@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.rst
+pyproject.toml
+batoid_rubin/__init__.py
+batoid_rubin/align_game.py
+batoid_rubin/builder.py
+batoid_rubin/utils.py
+batoid_rubin/visualize.py
+batoid_rubin.egg-info/PKG-INFO
+batoid_rubin.egg-info/SOURCES.txt
+batoid_rubin.egg-info/dependency_links.txt
+batoid_rubin.egg-info/requires.txt
+batoid_rubin.egg-info/top_level.txt
+batoid_rubin/data/.gitignore
+batoid_rubin/data/download_rubin_data.py
+tests/test_builder.py

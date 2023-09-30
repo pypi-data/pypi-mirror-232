@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: batoid_rubin
+Version: 0.4.1
+Author-email: Josh Meyers <jmeyers314@gmail.com>
+License-File: LICENSE
+Requires-Dist: batoid
+Requires-Dist: danish
+Requires-Dist: ipywidgets
+Requires-Dist: zenodo_get
