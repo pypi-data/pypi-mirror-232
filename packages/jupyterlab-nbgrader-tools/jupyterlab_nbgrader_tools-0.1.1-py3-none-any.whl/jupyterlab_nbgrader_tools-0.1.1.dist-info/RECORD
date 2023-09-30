@@ -1,0 +1,17 @@
+setup.py,sha256=wemxTobZ39ajO7IlospqgSkebOTG2oZG4pPzQxr3YcI,33
+jupyterlab-nbgrader-tools/_version.py,sha256=lFB9nR4WN0iXcp5UpfmTfw1Z2jWBDmClLEWF046NHmc,171
+ui-tests/jupyter_server_test_config.py,sha256=HqRRo5KRh3MLhS9ltuc7KQgLnzRASr25HpA8wCG2hrU,609
+jupyterlab_nbgrader_tools-0.1.1.data/data/share/jupyter/labextensions/jupyterlab-nbgrader-tools/build_log.json,sha256=uh3maOuoF7Um7jV0fIPTdJmDLa8Q5H4cXBMixSHgWu0,20704
+jupyterlab_nbgrader_tools-0.1.1.data/data/share/jupyter/labextensions/jupyterlab-nbgrader-tools/package.json,sha256=o2FYgNs01cRAXFG5mQAYQbzx75QP8fmRE0FwjTwxbpY,3490
+jupyterlab_nbgrader_tools-0.1.1.data/data/share/jupyter/labextensions/jupyterlab-nbgrader-tools/static/lib_index_js.0dd8f1a820a5983c7a9c.js,sha256=FmG-nJr1gJxtbSn5cB8Ld7r1a9OvnjyhzCU5y00x9r8,3838
+jupyterlab_nbgrader_tools-0.1.1.data/data/share/jupyter/labextensions/jupyterlab-nbgrader-tools/static/lib_index_js.0dd8f1a820a5983c7a9c.js.map,sha256=dmZOLORfmSiNU8dXNx-yYD7bYlVceUqfBJRio7NK6_A,4477
+jupyterlab_nbgrader_tools-0.1.1.data/data/share/jupyter/labextensions/jupyterlab-nbgrader-tools/static/remoteEntry.5eb0934018b94ba89ab2.js,sha256=WaIeCmDu0EBWDJ9Zh5Q_IdEoP2NLXyvRUffGfWdPA8c,27497
+jupyterlab_nbgrader_tools-0.1.1.data/data/share/jupyter/labextensions/jupyterlab-nbgrader-tools/static/remoteEntry.5eb0934018b94ba89ab2.js.map,sha256=1HL7ZRbGQ_IbFz5HGHckoqhXZP8c4nO4dnc1HFJ6HI8,26374
+jupyterlab_nbgrader_tools-0.1.1.data/data/share/jupyter/labextensions/jupyterlab-nbgrader-tools/static/style.js,sha256=nuRBHHKlxRAgH4RTQ8twmJX3JXxFvDqP7t1R6y0ZRwY,168
+jupyterlab_nbgrader_tools-0.1.1.data/data/share/jupyter/labextensions/jupyterlab-nbgrader-tools/static/style_index_js.7a99a917e82dc40a70e5.js,sha256=mDKKvcneDXSryPiJIC2DXK1HRP0fNjSVpop1JZacxeY,20716
+jupyterlab_nbgrader_tools-0.1.1.data/data/share/jupyter/labextensions/jupyterlab-nbgrader-tools/static/style_index_js.7a99a917e82dc40a70e5.js.map,sha256=rmqx-B1rMobTyJDXtWTfqKTjmhnsa9zn2caWKWLtJmU,16723
+jupyterlab_nbgrader_tools-0.1.1.data/data/share/jupyter/labextensions/jupyterlab-nbgrader-tools/install.json,sha256=hFbWl85N39QQNe_Za50XN43KOHqAciOoI2R-c_ldBjg,211
+jupyterlab_nbgrader_tools-0.1.1.dist-info/METADATA,sha256=3GwnprSnLVmGAwYt8zqTpyilzGSRWeuNwRpFQXYvjhw,5755
+jupyterlab_nbgrader_tools-0.1.1.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+jupyterlab_nbgrader_tools-0.1.1.dist-info/licenses/LICENSE,sha256=dkd4TtzmgrApfAyWMJGPYGUVWGjK7laJJZiGYidu_F8,1519
+jupyterlab_nbgrader_tools-0.1.1.dist-info/RECORD,,
