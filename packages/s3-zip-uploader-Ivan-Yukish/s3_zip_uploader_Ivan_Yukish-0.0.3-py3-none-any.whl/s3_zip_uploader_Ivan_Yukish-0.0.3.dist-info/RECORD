@@ -1,0 +1,10 @@
+s3_zip_uploader_Ivan_Yukish/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+s3_zip_uploader_Ivan_Yukish/uploader.py,sha256=93XdMAynWjvnfPqorTqzo9JdhJq9GFYybOYmd1EN2Q4,1681
+s3_zip_uploader_Ivan_Yukish/zip_to_s3.py,sha256=69_BGcQ3FeLnq1UeNEBJlN6l-F6PqfPHjjYBg0a_R1Y,806
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/tests.py,sha256=cYmHbQDBfmy1J1354_MjPtu8tvfKPghYpUCfBp4dWeQ,670
+s3_zip_uploader_Ivan_Yukish-0.0.3.dist-info/LICENCE,sha256=4mT_lp7iCFlMUtNrV3g-_f4HZNeYjhDSH7HBDmBmxxs,1073
+s3_zip_uploader_Ivan_Yukish-0.0.3.dist-info/METADATA,sha256=_EqWbIGgEDD5e4MwjNHhaGEgucAco2ZiOc5LZ4OYo_Q,1662
+s3_zip_uploader_Ivan_Yukish-0.0.3.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+s3_zip_uploader_Ivan_Yukish-0.0.3.dist-info/top_level.txt,sha256=oIcEjJo9k8wzWpz6RLpctwHUyn8Pcvdsc840O1AYtf0,34
+s3_zip_uploader_Ivan_Yukish-0.0.3.dist-info/RECORD,,
