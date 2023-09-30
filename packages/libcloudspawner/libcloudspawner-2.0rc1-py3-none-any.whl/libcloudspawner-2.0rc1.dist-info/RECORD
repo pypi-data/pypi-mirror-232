@@ -1,0 +1,14 @@
+libcloudspawner/__init__.py,sha256=EXsbsNk-PEd8-qnrOynfLsd30WC4-hxtlFGANzUpycM,52
+libcloudspawner/spawner.py,sha256=BSB4FLAJv0XeJfmgbn8pfd_6H479rOSGr5-4Tl-K37g,9560
+libcloudspawner/data/example_userdata_from_scratch.yaml.j2,sha256=3ovvIpPn4s-0oe73Ke208Y1O0rkDKfAxmNIER2cqvsw,1142
+libcloudspawner/data/example_userdata_from_vanilla_cloudimage.yaml.j2,sha256=y6TcMaINj3BEK_Bq5Px9h6Qc4S21b3eUcyrF2mmRnhQ,1444
+libcloudspawner/data/options_form.html.j2,sha256=_rTGbMJB1WhN1y47SGJt1ReiutBZiSPKtztz8s2VemI,389
+libcloudspawner/data/userdata.sh.j2,sha256=vcFNBv6RszvLD0dAkUHHufpWm1wlkaJ4bCZq4u6luM4,1194
+libcloudspawner/manager/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+libcloudspawner/manager/errors.py,sha256=LcoTv0_laRA0EMWZvzrcKyw86Ssj4RrzwM0zRVS9YKc,1571
+libcloudspawner/manager/nodemanager.py,sha256=3j6_YdSLEJLQqzlgcvWRijKzzidW8tqETI3aOXOSyRY,10147
+libcloudspawner-2.0rc1.dist-info/METADATA,sha256=Ec6AltjpfKEXQVvoFWoX_t500w7MXrguqrk436S-m8s,1619
+libcloudspawner-2.0rc1.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+libcloudspawner-2.0rc1.dist-info/licenses/AUTHORS,sha256=R8ERoIeE-sbg7VqIejapVVLuDGg6Q57mnmf7BYsQGLM,217
+libcloudspawner-2.0rc1.dist-info/licenses/LICENSE,sha256=WQuEvaYaFWLCYFAarGh2nddRygd9Yd1jR5fqhYmB7uw,21394
+libcloudspawner-2.0rc1.dist-info/RECORD,,
