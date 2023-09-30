@@ -1,0 +1,9 @@
+ipsetpy==0.0.1a3
+paho-mqtt==1.*
+python-iptables==1.*
+pyptables==1.*
+schedule==1.*
+pyyaml==6.*
+
+[:python_version < "3.8"]
+importlib-metadata
