@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+app/src/quantum_automated_system_for_advanced_recycling.egg-info/PKG-INFO
+app/src/quantum_automated_system_for_advanced_recycling.egg-info/SOURCES.txt
+app/src/quantum_automated_system_for_advanced_recycling.egg-info/dependency_links.txt
+app/src/quantum_automated_system_for_advanced_recycling.egg-info/requires.txt
+app/src/quantum_automated_system_for_advanced_recycling.egg-info/top_level.txt
