@@ -1,0 +1,9 @@
+click
+dataclasses_json
+httpx
+lorem-text
+platformdirs
+simple_parsing
+textual>=0.18.0
+tiktoken
+websockets
