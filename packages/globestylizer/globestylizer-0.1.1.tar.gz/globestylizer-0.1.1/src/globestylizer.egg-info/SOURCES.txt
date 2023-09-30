@@ -1,0 +1,7 @@
+README.md
+setup.py
+src/globestylizer.egg-info/PKG-INFO
+src/globestylizer.egg-info/SOURCES.txt
+src/globestylizer.egg-info/dependency_links.txt
+src/globestylizer.egg-info/requires.txt
+src/globestylizer.egg-info/top_level.txt
