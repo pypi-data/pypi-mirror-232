@@ -1,0 +1,631 @@
+{
+  "bspecs" : {
+    "basis_function_specs" : {
+      "dof_specs" : {
+        "occ" : {
+          "site_basis_functions" : "OCCUPATION"
+        }
+      },
+      "dofs" : [ "occ" ],
+      "global_max_poly_order" : -1,
+      "param_pack_type" : "DEFAULT"
+    },
+    "cluster_specs" : {
+      "method" : "local_max_length",
+      "params" : {
+        "generating_group" : [ 0, 3, 4, 9, 10, 11, 12, 13, 14, 15, 21, 22 ],
+        "orbit_branch_specs" : {
+          "0" : {
+            "cutoff_radius" : 0.000000000000,
+            "max_length" : 0.000000000000
+          },
+          "1" : {
+            "cutoff_radius" : 6.010000000000,
+            "max_length" : 0.000000000000
+          },
+          "2" : {
+            "cutoff_radius" : 6.010000000000,
+            "max_length" : 6.010000000000
+          }
+        },
+        "phenomenal" : {
+          "max_length" : 2.584339170000,
+          "min_length" : 2.584339170000,
+          "sites" : [
+            [ 2, 0, 0, 0 ],
+            [ 3, 0, 0, 0 ]
+          ]
+        }
+      }
+    }
+  },
+  "orbits" : [
+    {
+      "linear_orbit_index" : 0,
+      "mult" : 1,
+      "prototype" : {
+        "invariant_group" : [ 0, 3, 4, 9, 10, 11, 12, 13, 14, 15, 21, 22 ],
+        "invariant_group_descriptions" : [
+          "1",
+          "3⁺ 0.3333333, 0.6666667, z",
+          "3⁻ 0.3333333, 0.6666667, z",
+          "2 0.5+x, 0.5-x, 0.5",
+          "2 x, 2*x, 0.5",
+          "2 2*x, 0.5+x, 0.5",
+          "m 2*x, 0.5+x, z",
+          "m x, 2*x, z",
+          "m 0.5+x, 0.5-x, z",
+          "m x, y, 0.5",
+          "-6⁺ 0.3333333, 0.6666667, z; 0.3333333 0.6666667 0.5000000",
+          "-6⁻ 0.3333333, 0.6666667, z; 0.3333333 0.6666667 0.5000000"
+        ],
+        "max_length" : 0.000000000000,
+        "min_length" : 0.000000000000,
+        "sites" : [ ]
+      }
+    },
+    {
+      "linear_orbit_index" : 1,
+      "mult" : 2,
+      "prototype" : {
+        "invariant_group" : [ 0, 3, 4, 12, 13, 14 ],
+        "invariant_group_descriptions" : [
+          "1",
+          "3⁺ 0.3333333, 0.6666667, z",
+          "3⁻ 0.3333333, 0.6666667, z",
+          "m 2*x, 0.5+x, z",
+          "m x, 2*x, z",
+          "m 0.5+x, 0.5-x, z"
+        ],
+        "max_length" : 0.000000000000,
+        "min_length" : 0.000000000000,
+        "sites" : [
+          [ 3, 0, 0, -1 ]
+        ]
+      }
+    },
+    {
+      "linear_orbit_index" : 2,
+      "mult" : 2,
+      "prototype" : {
+        "invariant_group" : [ 0, 3, 4, 12, 13, 14 ],
+        "invariant_group_descriptions" : [
+          "1",
+          "3⁺ 0.3333333, 0.6666667, z",
+          "3⁻ 0.3333333, 0.6666667, z",
+          "m 2*x, 0.5+x, z",
+          "m x, 2*x, z",
+          "m 0.5+x, 0.5-x, z"
+        ],
+        "max_length" : 0.000000000000,
+        "min_length" : 0.000000000000,
+        "sites" : [
+          [ 2, 0, 0, -1 ]
+        ]
+      }
+    },
+    {
+      "linear_orbit_index" : 3,
+      "mult" : 12,
+      "prototype" : {
+        "invariant_group" : [ 0 ],
+        "invariant_group_descriptions" : [
+          "1"
+        ],
+        "max_length" : 0.000000000000,
+        "min_length" : 0.000000000000,
+        "sites" : [
+          [ 2, -1, -1, 0 ]
+        ]
+      }
+    },
+    {
+      "linear_orbit_index" : 4,
+      "mult" : 12,
+      "prototype" : {
+        "invariant_group" : [ 0 ],
+        "invariant_group_descriptions" : [
+          "1"
+        ],
+        "max_length" : 0.000000000000,
+        "min_length" : 0.000000000000,
+        "sites" : [
+          [ 3, -1, -1, -1 ]
+        ]
+      }
+    },
+    {
+      "linear_orbit_index" : 5,
+      "mult" : 6,
+      "prototype" : {
+        "invariant_group" : [ 0, 12 ],
+        "invariant_group_descriptions" : [
+          "1",
+          "m 2*x, 0.5+x, z"
+        ],
+        "max_length" : 0.000000000000,
+        "min_length" : 0.000000000000,
+        "sites" : [
+          [ 2, -2, -1, 0 ]
+        ]
+      }
+    },
+    {
+      "linear_orbit_index" : 6,
+      "mult" : 6,
+      "prototype" : {
+        "invariant_group" : [ 0, 12 ],
+        "invariant_group_descriptions" : [
+          "1",
+          "m 2*x, 0.5+x, z"
+        ],
+        "max_length" : 0.000000000000,
+        "min_length" : 0.000000000000,
+        "sites" : [
+          [ 2, 2, 1, 0 ]
+        ]
+      }
+    },
+    {
+      "linear_orbit_index" : 7,
+      "mult" : 2,
+      "prototype" : {
+        "invariant_group" : [ 0, 3, 4, 12, 13, 14 ],
+        "invariant_group_descriptions" : [
+          "1",
+          "3⁺ 0.3333333, 0.6666667, z",
+          "3⁻ 0.3333333, 0.6666667, z",
+          "m 2*x, 0.5+x, z",
+          "m x, 2*x, z",
+          "m 0.5+x, 0.5-x, z"
+        ],
+        "max_length" : 2.584339170000,
+        "min_length" : 2.584339170000,
+        "sites" : [
+          [ 2, 0, 0, -1 ],
+          [ 3, 0, 0, -1 ]
+        ]
+      }
+    },
+    {
+      "linear_orbit_index" : 8,
+      "mult" : 6,
+      "prototype" : {
+        "invariant_group" : [ 0, 15 ],
+        "invariant_group_descriptions" : [
+          "1",
+          "m x, y, 0.5"
+        ],
+        "max_length" : 2.584339170000,
+        "min_length" : 2.584339170000,
+        "sites" : [
+          [ 2, -1, -1, 0 ],
+          [ 3, -1, -1, 0 ]
+        ]
+      }
+    },
+    {
+      "linear_orbit_index" : 9,
+      "mult" : 12,
+      "prototype" : {
+        "invariant_group" : [ 0 ],
+        "invariant_group_descriptions" : [
+          "1"
+        ],
+        "max_length" : 2.584339170000,
+        "min_length" : 2.584339170000,
+        "sites" : [
+          [ 3, -1, -1, -1 ],
+          [ 2, -1, -1, 0 ]
+        ]
+      }
+    },
+    {
+      "linear_orbit_index" : 10,
+      "mult" : 3,
+      "prototype" : {
+        "invariant_group" : [ 0, 9, 14, 15 ],
+        "invariant_group_descriptions" : [
+          "1",
+          "2 0.5+x, 0.5-x, 0.5",
+          "m 0.5+x, 0.5-x, z",
+          "m x, y, 0.5"
+        ],
+        "max_length" : 2.584339170000,
+        "min_length" : 2.584339170000,
+        "sites" : [
+          [ 2, 1, -1, 0 ],
+          [ 3, 1, -1, 0 ]
+        ]
+      }
+    },
+    {
+      "linear_orbit_index" : 11,
+      "mult" : 3,
+      "prototype" : {
+        "invariant_group" : [ 0, 9, 14, 15 ],
+        "invariant_group_descriptions" : [
+          "1",
+          "2 0.5+x, 0.5-x, 0.5",
+          "m 0.5+x, 0.5-x, z",
+          "m x, y, 0.5"
+        ],
+        "max_length" : 2.584339170000,
+        "min_length" : 2.584339170000,
+        "sites" : [
+          [ 2, -1, 1, 0 ],
+          [ 3, -1, 1, 0 ]
+        ]
+      }
+    },
+    {
+      "linear_orbit_index" : 12,
+      "mult" : 12,
+      "prototype" : {
+        "invariant_group" : [ 0 ],
+        "invariant_group_descriptions" : [
+          "1"
+        ],
+        "max_length" : 3.233986854574,
+        "min_length" : 3.233986854574,
+        "sites" : [
+          [ 3, -1, -1, -1 ],
+          [ 3, 0, 0, -1 ]
+        ]
+      }
+    },
+    {
+      "linear_orbit_index" : 13,
+      "mult" : 6,
+      "prototype" : {
+        "invariant_group" : [ 0, 12 ],
+        "invariant_group_descriptions" : [
+          "1",
+          "m 2*x, 0.5+x, z"
+        ],
+        "max_length" : 3.233986854574,
+        "min_length" : 3.233986854574,
+        "sites" : [
+          [ 2, -1, -1, 0 ],
+          [ 2, -1, 0, 0 ]
+        ]
+      }
+    },
+    {
+      "linear_orbit_index" : 14,
+      "mult" : 6,
+      "prototype" : {
+        "invariant_group" : [ 0, 12 ],
+        "invariant_group_descriptions" : [
+          "1",
+          "m 2*x, 0.5+x, z"
+        ],
+        "max_length" : 3.233986854574,
+        "min_length" : 3.233986854574,
+        "sites" : [
+          [ 3, -1, -1, -1 ],
+          [ 3, -1, 0, -1 ]
+        ]
+      }
+    },
+    {
+      "linear_orbit_index" : 15,
+      "mult" : 6,
+      "prototype" : {
+        "invariant_group" : [ 0, 12 ],
+        "invariant_group_descriptions" : [
+          "1",
+          "m 2*x, 0.5+x, z"
+        ],
+        "max_length" : 3.233986854574,
+        "min_length" : 3.233986854574,
+        "sites" : [
+          [ 2, 1, 0, 0 ],
+          [ 2, 1, 1, 0 ]
+        ]
+      }
+    },
+    {
+      "linear_orbit_index" : 16,
+      "mult" : 6,
+      "prototype" : {
+        "invariant_group" : [ 0, 12 ],
+        "invariant_group_descriptions" : [
+          "1",
+          "m 2*x, 0.5+x, z"
+        ],
+        "max_length" : 3.233986854574,
+        "min_length" : 3.233986854574,
+        "sites" : [
+          [ 3, 1, 0, -1 ],
+          [ 3, 1, 1, -1 ]
+        ]
+      }
+    },
+    {
+      "linear_orbit_index" : 17,
+      "mult" : 12,
+      "prototype" : {
+        "invariant_group" : [ 0 ],
+        "invariant_group_descriptions" : [
+          "1"
+        ],
+        "max_length" : 3.233986860000,
+        "min_length" : 3.233986860000,
+        "sites" : [
+          [ 2, -2, -1, 0 ],
+          [ 2, -1, -1, 0 ]
+        ]
+      }
+    },
+    {
+      "linear_orbit_index" : 18,
+      "mult" : 12,
+      "prototype" : {
+        "invariant_group" : [ 0 ],
+        "invariant_group_descriptions" : [
+          "1"
+        ],
+        "max_length" : 3.233986854574,
+        "min_length" : 3.233986854574,
+        "sites" : [
+          [ 2, -1, -2, 0 ],
+          [ 2, -1, -1, 0 ]
+        ]
+      }
+    },
+    {
+      "linear_orbit_index" : 19,
+      "mult" : 12,
+      "prototype" : {
+        "invariant_group" : [ 0 ],
+        "invariant_group_descriptions" : [
+          "1"
+        ],
+        "max_length" : 4.139743943912,
+        "min_length" : 4.139743943912,
+        "sites" : [
+          [ 2, -1, -1, 0 ],
+          [ 3, 0, 0, -1 ]
+        ]
+      }
+    },
+    {
+      "linear_orbit_index" : 20,
+      "mult" : 12,
+      "prototype" : {
+        "invariant_group" : [ 0 ],
+        "invariant_group_descriptions" : [
+          "1"
+        ],
+        "max_length" : 4.139743943912,
+        "min_length" : 4.139743943912,
+        "sites" : [
+          [ 3, -1, -1, -1 ],
+          [ 2, 0, 0, -1 ]
+        ]
+      }
+    },
+    {
+      "linear_orbit_index" : 21,
+      "mult" : 6,
+      "prototype" : {
+        "invariant_group" : [ 0, 9 ],
+        "invariant_group_descriptions" : [
+          "1",
+          "2 0.5+x, 0.5-x, 0.5"
+        ],
+        "max_length" : 4.139743943912,
+        "min_length" : 4.139743943912,
+        "sites" : [
+          [ 2, 0, -1, 0 ],
+          [ 3, 1, 0, 0 ]
+        ]
+      }
+    },
+    {
+      "linear_orbit_index" : 22,
+      "mult" : 12,
+      "prototype" : {
+        "invariant_group" : [ 0 ],
+        "invariant_group_descriptions" : [
+          "1"
+        ],
+        "max_length" : 4.139743943912,
+        "min_length" : 4.139743943912,
+        "sites" : [
+          [ 3, -1, -1, -1 ],
+          [ 2, -1, 0, 0 ]
+        ]
+      }
+    },
+    {
+      "linear_orbit_index" : 23,
+      "mult" : 6,
+      "prototype" : {
+        "invariant_group" : [ 0, 9 ],
+        "invariant_group_descriptions" : [
+          "1",
+          "2 0.5+x, 0.5-x, 0.5"
+        ],
+        "max_length" : 4.139743943912,
+        "min_length" : 4.139743943912,
+        "sites" : [
+          [ 2, -1, 0, 0 ],
+          [ 3, 0, 1, 0 ]
+        ]
+      }
+    },
+    {
+      "linear_orbit_index" : 24,
+      "mult" : 12,
+      "prototype" : {
+        "invariant_group" : [ 0 ],
+        "invariant_group_descriptions" : [
+          "1"
+        ],
+        "max_length" : 4.139743948151,
+        "min_length" : 4.139743948151,
+        "sites" : [
+          [ 3, -1, -1, -1 ],
+          [ 2, 0, -1, 0 ]
+        ]
+      }
+    },
+    {
+      "linear_orbit_index" : 25,
+      "mult" : 12,
+      "prototype" : {
+        "invariant_group" : [ 0 ],
+        "invariant_group_descriptions" : [
+          "1"
+        ],
+        "max_length" : 4.139743948151,
+        "min_length" : 4.139743948151,
+        "sites" : [
+          [ 2, -2, -1, 0 ],
+          [ 3, -1, -1, 0 ]
+        ]
+      }
+    },
+    {
+      "linear_orbit_index" : 26,
+      "mult" : 12,
+      "prototype" : {
+        "invariant_group" : [ 0 ],
+        "invariant_group_descriptions" : [
+          "1"
+        ],
+        "max_length" : 4.139743943912,
+        "min_length" : 4.139743943912,
+        "sites" : [
+          [ 2, -1, -2, 0 ],
+          [ 3, -1, -1, 0 ]
+        ]
+      }
+    },
+    {
+      "linear_orbit_index" : 27,
+      "mult" : 12,
+      "prototype" : {
+        "invariant_group" : [ 0 ],
+        "invariant_group_descriptions" : [
+          "1"
+        ],
+        "max_length" : 4.139743948151,
+        "min_length" : 4.139743948151,
+        "sites" : [
+          [ 2, -2, -1, 0 ],
+          [ 3, -1, -1, -1 ]
+        ]
+      }
+    },
+    {
+      "linear_orbit_index" : 28,
+      "mult" : 12,
+      "prototype" : {
+        "invariant_group" : [ 0 ],
+        "invariant_group_descriptions" : [
+          "1"
+        ],
+        "max_length" : 4.139743943912,
+        "min_length" : 4.139743943912,
+        "sites" : [
+          [ 2, -1, -2, 0 ],
+          [ 3, -1, -1, -1 ]
+        ]
+      }
+    },
+    {
+      "linear_orbit_index" : 29,
+      "mult" : 12,
+      "prototype" : {
+        "invariant_group" : [ 0 ],
+        "invariant_group_descriptions" : [
+          "1"
+        ],
+        "max_length" : 5.168678340000,
+        "min_length" : 5.168678340000,
+        "sites" : [
+          [ 3, -1, -1, -1 ],
+          [ 3, -1, -1, 0 ]
+        ]
+      }
+    },
+    {
+      "linear_orbit_index" : 30,
+      "mult" : 12,
+      "prototype" : {
+        "invariant_group" : [ 0 ],
+        "invariant_group_descriptions" : [
+          "1"
+        ],
+        "max_length" : 5.601429540000,
+        "min_length" : 5.601429540000,
+        "sites" : [
+          [ 2, -1, -1, 0 ],
+          [ 2, 0, 1, 0 ]
+        ]
+      }
+    },
+    {
+      "linear_orbit_index" : 31,
+      "mult" : 12,
+      "prototype" : {
+        "invariant_group" : [ 0 ],
+        "invariant_group_descriptions" : [
+          "1"
+        ],
+        "max_length" : 5.601429540000,
+        "min_length" : 5.601429540000,
+        "sites" : [
+          [ 3, -1, -1, -1 ],
+          [ 3, 0, 1, -1 ]
+        ]
+      }
+    },
+    {
+      "linear_orbit_index" : 32,
+      "mult" : 12,
+      "prototype" : {
+        "invariant_group" : [ 0 ],
+        "invariant_group_descriptions" : [
+          "1"
+        ],
+        "max_length" : 5.601429549398,
+        "min_length" : 5.601429549398,
+        "sites" : [
+          [ 2, -2, -1, 0 ],
+          [ 2, -1, -2, 0 ]
+        ]
+      }
+    }
+  ],
+  "prim" : {
+    "basis" : [
+      {
+        "coordinate" : [ 0.000000000000, 0.000000000000, 0.000000000000 ],
+        "occupants" : [ "Zr" ]
+      },
+      {
+        "coordinate" : [ 0.666666666667, 0.333333333333, 0.500000000000 ],
+        "occupants" : [ "Zr" ]
+      },
+      {
+        "coordinate" : [ 0.333333333333, 0.666666666667, 0.250000000000 ],
+        "occupants" : [ "Va", "O" ]
+      },
+      {
+        "coordinate" : [ 0.333333333333, 0.666666666667, 0.750000000000 ],
+        "occupants" : [ "Va", "O" ]
+      }
+    ],
+    "coordinate_mode" : "Fractional",
+    "lattice_vectors" : [
+      [ 3.233986860000, 0.000000000000, 0.000000000000 ],
+      [ -1.616993430000, 2.800714770000, 0.000000000000 ],
+      [ 0.000000000000, 0.000000000000, 5.168678340000 ]
+    ],
+    "title" : "ZrO"
+  }
+}
