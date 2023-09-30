@@ -1,0 +1,15 @@
+duckduckgo_search/__init__.py,sha256=rMnhYI83o4yaMkqp_C6Hp7EBvlYiV9STZ2oUu8N7JXw,654
+duckduckgo_search/__main__.py,sha256=jnYNGy2hedfrBdtKfchlvdIqf_jMF2LU8yZwxpkX340,138
+duckduckgo_search/cli.py,sha256=MzSMJt-szDbn-1s6bHN1rNaRYcFbcD2hFJCymrAtruY,18422
+duckduckgo_search/compat.py,sha256=ksqgM3MTD6R7q3Nq7NYF-LySzgJlvZhOLpzY1_AiVLM,6535
+duckduckgo_search/duckduckgo_search.py,sha256=l10haCOMltzJVPhCL0bOEwXohJA_8ehXTD2DgxcGbcs,31764
+duckduckgo_search/duckduckgo_search_async.py,sha256=f2JXSKDEubuFyIyNAroaTLJ9euMNwqvezcFglNL535U,32228
+duckduckgo_search/models.py,sha256=c19i44vWqAPNHYZrQA1xTxOqnwiDUGUS3jEQe3BeDqs,508
+duckduckgo_search/utils.py,sha256=Ly9GEbBOJ1rT-d_fHqRfK9gulsN7_4VO0aXr9Qm4WCw,1103
+duckduckgo_search/version.py,sha256=ya3Avm9qHzetIgZApSM6eHjyO1KYOqbRf5xjSmbIqdg,22
+duckduckgo_search-3.9.0.dist-info/LICENSE.md,sha256=dnp2N2nTw9zSuJR-S9xX8EFR9-pK28C_E-BSx35gBCc,1063
+duckduckgo_search-3.9.0.dist-info/METADATA,sha256=yE2kbJKJSTb2XUTJ4neRbhqTrdiFX4ZWhxGFWndb4hg,19334
+duckduckgo_search-3.9.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+duckduckgo_search-3.9.0.dist-info/entry_points.txt,sha256=G7PEAUGEQ-5N2jKiKgXmf_gjOZzUl9Mi6qfI735x23E,51
+duckduckgo_search-3.9.0.dist-info/top_level.txt,sha256=0V9JPu-wl-Tqe56_CXBEi1gyBymc8hdYkFfZNIxV4oU,18
+duckduckgo_search-3.9.0.dist-info/RECORD,,
