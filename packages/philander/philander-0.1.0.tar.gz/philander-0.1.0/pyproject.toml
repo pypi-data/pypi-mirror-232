@@ -1,0 +1,38 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "philander"
+version = "0.1.0"
+authors = [
+  { name="Oliver Maye", email="maye@ihp-microelectronics.com" },
+]
+description = "Sensor and other parts driver collection"
+readme = "readme.md"
+requires-python = ">=3.4"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: European Union Public Licence 1.2 (EUPL 1.2)",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+	"pymitter",
+	"smbus2",
+	"python-periphery",
+]
+
+[project.urls]
+"Homepage" = "https://www.ihp-microelectronics.com/"
+"Bug Tracker" = "https://github.com/pypa/sampleproject/issues"
+
+[project.optional-dependencies]
+optSerial = [
+  "smbus2",
+]
+optGPIO = [
+  "RPi.GPIO",
+]
+optBLE = [
+  "bleak",
+]
