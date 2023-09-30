@@ -1,0 +1,93 @@
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[project]
+name = "qstring"
+description = "Parse querystring parameters to nested objects"
+readme = "README.rst"
+requires-python = ">=3.8"
+authors = [
+    { name = "Janne Vanhala", email = "janne@fastmonkeys.com" },
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = []
+dynamic = []
+version = "1.0.1"
+
+[project.license]
+file = "LICENSE"
+
+[project.urls]
+Documentation = "http://qstring.readthedocs.org"
+"Bug Tracker" = "http://github.com/fastmonkeys/qstring/issues"
+Code = "http://github.com/fastmonkeys/qstring"
+
+[tool.mypy]
+files = [
+    "src",
+    "tests",
+]
+pretty = true
+python_version = "3.8"
+show_error_codes = true
+strict = true
+
+[tool.pdm.build]
+source-includes = [
+    "CHANGES.rst",
+    "tests",
+]
+
+[tool.pdm.version]
+source = "scm"
+
+[tool.pdm.dev-dependencies]
+lint = [
+    "black",
+    "ruff",
+]
+mypy = [
+    "mypy",
+    "pytest",
+]
+test = [
+    "pytest",
+]
+
+[tool.pytest.ini_options]
+pythonpath = [
+    "src",
+]
+
+[tool.ruff]
+extend-exclude = [
+    "docs",
+]
+select = [
+    "E",
+    "F",
+    "I",
+    "UP",
+]
+src = [
+    "src",
+    "tests",
+]
