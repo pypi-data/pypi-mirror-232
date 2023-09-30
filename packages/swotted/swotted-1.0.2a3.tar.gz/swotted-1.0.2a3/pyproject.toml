@@ -1,0 +1,51 @@
+[tool.poetry]
+name = "SWoTTeD"
+version = "1.0.2a3"
+description = "A tensor decomposition model extracting temporal phenotypes"
+authors = [
+  "Hana Sebia <hana.sebia@inria.fr>",
+  "Thomas Guyet <thomas.guyet@inria.fr>",
+  "Mike Rye <jan-michael.rye@inria.fr>",
+]
+maintainers = [
+  "Hana Sebia <hana.sebia@inria.fr>",
+  "Thomas Guyet <thomas.guyet@inria.fr>",
+  "Mike Rye <jan-michael.rye@inria.fr>",
+]
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+homepage = "https://gitlab.inria.fr/hsebia/swotted"
+repository = "https://gitlab.inria.fr/hsebia/swotted"
+documentation = "https://hsebia.gitlabpages.inria.fr/swotted/"
+
+
+[tool.poetry.dependencies]
+python = "^3.8"
+torch = "^1.13.0"
+numpy = "^1.23.5"
+pytorch-lightning = "^2.0.1.post0"
+lightning = "^2.0.1.post0"
+fastapi = "^0.80"
+munkres = "^1.1.4"
+omegaconf = "^2.3.0"
+
+[tool.poetry.dev-dependencies]
+munkres = "^1.1.4"
+DateTime = "^4.7"
+seaborn = "^0.12.1"
+matplotlib = "^3.6.2"
+pandas = "^1.5.2"
+psycopg = "^3.1.4"
+jupyter = "^1.0.0"
+ipykernel = "^6.18.3"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+
