@@ -1,0 +1,6 @@
+itk_viewer_remote_image/__about__.py,sha256=v9IrGCzw8Ib6yCgxBQJoRPsKuNzkxC4yq4QPklEb__s,110
+itk_viewer_remote_image/__init__.py,sha256=-KWcKEU6fuHYaFe96jD1e4TV9Dcc7MZiOnEDsRp4XJo,125
+itk_viewer_remote_image/remote_zarr.py,sha256=HJKxziEHrff9dAh43WpOJoH0_ibYoaC3ExoDsiaCGUg,2907
+itk_viewer_remote_image-0.0.1.dist-info/METADATA,sha256=OUu1KTHdnIdvhiH3UK8zfmQrnBBgc0JP-ym9vM-rHKY,1755
+itk_viewer_remote_image-0.0.1.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+itk_viewer_remote_image-0.0.1.dist-info/RECORD,,
