@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+src/pytransaln/__init__.py
+src/pytransaln/align.py
+src/pytransaln/frameshifts.py
+src/pytransaln/pytransaln.py
+src/pytransaln/stats.py
+src/pytransaln/translate.py
+src/pytransaln.egg-info/PKG-INFO
+src/pytransaln.egg-info/SOURCES.txt
+src/pytransaln.egg-info/dependency_links.txt
+src/pytransaln.egg-info/entry_points.txt
+src/pytransaln.egg-info/requires.txt
+src/pytransaln.egg-info/top_level.txt
