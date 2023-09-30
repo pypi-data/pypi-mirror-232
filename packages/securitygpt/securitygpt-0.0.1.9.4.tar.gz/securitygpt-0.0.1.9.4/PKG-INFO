@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: securitygpt
+Version: 0.0.1.9.4
+Summary: SecurityGPT, GPT for security practioners
+Author: rkreddyp
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+ 
+# What is securitygpt ? 
+securitygpt is a package that makes makes common tasks that a
+security engineer does easy using generative LLMs.  
+
+As a security engineer, you dont want to worry about writing correct prompts, we have taken care of that for you.
+# Install
+```
+pip install securitygpt
+export OPENAI_API_KEY="sk-xxx"
+```
+# Usage and Examples
+Current usecases support
+ - anonymization and deanonymization of text
+ - CVE summaries
+ - drawing threat knowledge graphs
+
+[Usage and Examples] (https://github.com/rkreddyp/securitygpt)
+
+
+send feedback and comments to rkreddy@gmail.com or open issues in GitHub (https://github.com/rkreddyp/securitygpt)
+
