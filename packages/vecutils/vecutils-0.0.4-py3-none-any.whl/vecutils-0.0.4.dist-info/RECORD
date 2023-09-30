@@ -1,0 +1,5 @@
+vecutils/__init__.py,sha256=aw_GEcJhsSWgeL9QB930ymggcpmandXsgdoNXNUwIw8,668
+vecutils/qdrant.py,sha256=VSTlCuFHMn6C_xv1eB1g2aCy9xU63caMBhp6zpGQHlw,4830
+vecutils-0.0.4.dist-info/METADATA,sha256=C1N58NYqOKG6KiaeSlXj_lhpK1AMd2LxkFxKaQbkalM,317
+vecutils-0.0.4.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+vecutils-0.0.4.dist-info/RECORD,,
