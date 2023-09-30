@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: binaryen.py
+Version: 0.0.0
+Summary: A Python wrapper for Binaryen
+Author-email: Jonathan Hargreaves <jhargreaves189@gmail.com>
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: cffi >=1.15.1
+Provides-Extra: dev
+Requires-Dist: black ; extra == 'dev'
+Requires-Dist: isort ; extra == 'dev'
+Requires-Dist: mkdocs ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+
+# Binaryen.py
+
+Binaryen.py is a python wrapper for [Binaryen](https://github.com/WebAssembly/binaryen). Use this to create, optimise and interpret WebAssembly binaries in python.
+
+## Installation
+
+First make sure [Binaryen](https://github.com/WebAssembly/binaryen) is installed and accessible from your path. For Linux/MacOS it's recommended to install it from your package manager or [homebrew](https://formulae.brew.sh/formula/binaryen) (on MacOS). Alternatively, download [precompiled binaries](https://github.com/WebAssembly/binaryen/releases) of Binaryen.
+
+Install through PyPI.
+
+```bash
+pip install binaryen.py
+```
+
+## Quickstart

@@ -1,0 +1,12 @@
+binaryen/__init__.py,sha256=vUKg57piMHX5_Q0YwCWJPHhpbMxbhOouN3BiAXlai0A,83
+binaryen/_binaryen_cffi.py,sha256=gUtLlG5t0yyArJ5tw9PvzDgqO0g2s56GoY0dGG4OzA0,81607
+binaryen/binaryen_build.py,sha256=ZCBuwlGqMbXrUlqJHMty7Ls2ZNs3R1780R4Cafy9UMY,116931
+binaryen/expression.py,sha256=OJQL5fUTcFtDE3a_DBPWtCpequETtpu8b3gzgjVaeNI,1799
+binaryen/lib.py,sha256=lh0XC9u8KRY1DlJfiDtD_xs9AZ5RVRVSj1PBiNJESaI,1449
+binaryen/module.py,sha256=WO_ogG5XDNqFzC_4Jdxmw4j5YBHieghGQEHIkOwlHLk,9947
+binaryen/types.py,sha256=xO9AyURQ9V7aDe_I9p-vzthi5jaKLgkuoNw-P_aCsCM,5342
+binaryen.py-0.0.0.dist-info/LICENSE,sha256=xazLvYVG6Uw0rtJK_miaYXYn0Y7tWmxIJ35I21fCOFE,11356
+binaryen.py-0.0.0.dist-info/METADATA,sha256=AeYcVsPRI5a2JZFqjBxFpaT423HZHtEfDZpHapx1nn0,1081
+binaryen.py-0.0.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+binaryen.py-0.0.0.dist-info/top_level.txt,sha256=F7wqo6rRDaznp-v_i8dbSAk74PxfLYWx7Rd8UdxdNjw,9
+binaryen.py-0.0.0.dist-info/RECORD,,
