@@ -1,0 +1,13 @@
+dolomite_base
+dolomite_matrix
+summarizedexperiment>=0.3.7
+
+[:python_version < "3.8"]
+importlib-metadata
+
+[testing]
+setuptools
+pytest
+pytest-cov
+numpy
+filebackedarray
