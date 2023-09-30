@@ -1,0 +1,49 @@
+# LanceViewer
+View your lance datasets as interactive dataframes. 
+<img width="1440" alt="Screenshot 2023-09-11 at 5 39 36 PM" src="https://github.com/lancedb/lance-viewer/assets/15766192/80e9bc71-c2f9-4a77-8ef4-28cf2c5ffeed">
+
+### Installation
+```
+pip install lanceviewer
+```
+
+### Usage
+Once installed, simply launch the app using `lanceviewer` command
+```bash
+lanceviewer
+```
+There are additional settings you can pass that are applied golabally.
+
+## Multi-Modal data support [WIP]
+You can visualize multimodal data stored as bytes in the lance dataset. Currently Image bytes are handled with support for more types coming soon
+
+### Transforms for MultiModal data
+You need to write configuration maps to handle the columns that contain multi-modal bytes they won't be rendered in the browser
+There are 2 configs written to handle img columns:
+- MJ: This configuration assumes that the "img" column contains the image bytes as ["extension", "bytes"]
+- Default: This configuration assumes that the "img" column contains image bytes as the top level, i.e, ["bytes"]
+
+NOTE: Currently, MJ is the default golbal setting
+
+## Changing configuration settings
+- To view the global settings
+```
+lanceviewer settings
+```
+### Changing Default Transformation
+- To set the a different column configuration, you can just pass `--transforms {NAME}`. The settings are persisted in a global settings file so next time you don't to pass it again
+
+## Working with Local Lance Datasets
+- Simply pass the path of the of the lance dataset as the URI.
+- And then pass the SQL query.
+Loading dataset and running queries locally are almost real-time.
+
+## Working with remote buckets
+### GCS
+When working with remote gcs bucket data, you need to make sure the dataset uri you're passing is accessible to you.
+If not already set up, please follow ADC as described in [https://cloud.google.com/docs/authentication/external/set-up-adc]
+
+Note: Loading the querying speed depends directly on bandwidth.
+
+
+
