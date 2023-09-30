@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+pdf_table2json/__init__.py
+pdf_table2json/converter.py
+pdf_table2json/test.py
+pdf_table2json/test_local.py
+pdf_table2json/util.py
+pdf_table2json.egg-info/PKG-INFO
+pdf_table2json.egg-info/SOURCES.txt
+pdf_table2json.egg-info/dependency_links.txt
+pdf_table2json.egg-info/requires.txt
+pdf_table2json.egg-info/top_level.txt
+pdf_table2json.egg-info/zip-safe
