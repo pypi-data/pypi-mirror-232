@@ -1,0 +1,2 @@
+[console_scripts]
+citation_sorter = citation_sorter.citation_sorter:main
