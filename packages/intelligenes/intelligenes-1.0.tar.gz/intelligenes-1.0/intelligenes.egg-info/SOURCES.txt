@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+intelligenes/__init__.py
+intelligenes/classification.py
+intelligenes/intelligenes.py
+intelligenes/selection.py
+intelligenes.egg-info/PKG-INFO
+intelligenes.egg-info/SOURCES.txt
+intelligenes.egg-info/dependency_links.txt
+intelligenes.egg-info/entry_points.txt
+intelligenes.egg-info/requires.txt
+intelligenes.egg-info/top_level.txt
