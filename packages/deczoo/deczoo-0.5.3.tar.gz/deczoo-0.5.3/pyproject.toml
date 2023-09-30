@@ -1,0 +1,90 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "deczoo"
+version = "0.5.3"
+description = "Zoo for Python decorators"
+
+license = {file = "LICENSE"}
+readme = "README.md"
+requires-python = ">=3.8"
+authors = [{name = "Francesco Bruzzesi"}]
+
+dependencies = [
+    "typing-extensions",
+]
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "License :: OSI Approved :: MIT License"
+]
+
+[project.urls]
+documentation = "https://fbruzzesi.github.io/deczoo/"
+repository = "https://github.com/fbruzzesi/deczoo"
+issue-tracker = "https://github.com/fbruzzesi/deczoo/issues"
+
+
+[project.optional-dependencies]
+chime = ["chime"]
+rich = ["rich>=12.0.0"]
+
+dev = [
+    "black>=23.3.0",
+    "interrogate>=1.5.0",
+    "isort>=5.12.0",
+    "pre-commit>=2.21.0",
+    "pytest==7.2.0",
+    "pytest-xdist==3.2.1",
+    "coverage==7.2.1",
+    "coverage-badge==1.1.0",
+    "numpy", # required for testing
+    "ruff>=0.0.291"
+]
+
+docs = [
+    "mkdocs>=1.4.2",
+    "mkdocs-material>=9.1.2",
+    "mkdocstrings[python]>=0.20.0",
+]
+
+all = ["deczoo[chime,rich]"]
+all-dev = ["deczoo[chime,rich,dev,docs]"]
+
+[tool.hatch.build]
+include = ["deczoo*"]
+exclude = [
+    "data",
+    "docs",
+    "docker",
+    "kubernetes",
+    "notebooks",
+    "results",
+    "tests",
+]
+
+[tool.hatch.package-data]
+deczoo = ["py.typed"]
+
+[tool.black]
+line-length = 90
+target_version = ["py310"]
+workers = 4
+
+[tool.isort]
+py_version = 310
+profile = "black"
+line_length = 90
+
+[tool.ruff]
+line-length = 90
+
+[tool.mypy]
+ignore_missing_imports = true
+
