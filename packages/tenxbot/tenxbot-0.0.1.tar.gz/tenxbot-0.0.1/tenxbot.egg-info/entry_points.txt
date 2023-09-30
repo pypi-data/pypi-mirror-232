@@ -1,0 +1,2 @@
+[console_scripts]
+tenxbot = server.cli:cli
