@@ -1,0 +1,33 @@
+/*
+    Nbgrader graded cells highlight
+*/
+.gradedquestion{
+  border-color: #4169e1;
+  border: 1px solid #4169e1;
+  margin-bottom: 2px;
+  border-radius: 5px;
+}
+
+.gradedquestion .jp-cell-toolbar {
+  display: none !important;
+}
+
+.gradedquestioncode:before {
+  content: "Graded Code";
+  font-family: "Noto Sans", Helvetica, Arial, serif;
+  background-color: #4169e1;
+  padding: 2px 5px;
+  color: white;
+  border-radius: 10px;
+  font-size: 9px;
+}
+
+.gradedquestionmd:before {
+  content: "Graded Text";
+  font-family: "Noto Sans", Helvetica, Arial, serif;
+  background-color: #4169e1;
+  padding: 2px 5px;
+  color: white;
+  border-radius: 10px;
+  font-size: 9px;
+}
