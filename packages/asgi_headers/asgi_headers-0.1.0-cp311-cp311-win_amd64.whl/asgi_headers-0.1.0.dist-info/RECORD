@@ -1,0 +1,12 @@
+.gitignore,sha256=RVSan_2ZY_hV1ygp6XijHAW4KJSxSx2PvdQwg7IMLYY,3
+a8a35f026323279d8349__mypyc.cp311-win_amd64.pyd,sha256=vef-J-QHLdlyw680AObSwSq_Pu1TE4_lcZ6uwcmnkUQ,86528
+asgi_headers-0.1.0.dist-info/METADATA,sha256=13gqh-e30MiNQn870VVs4ZuNcuM9Yn5JAFSa0ghv9Kw,2001
+asgi_headers-0.1.0.dist-info/WHEEL,sha256=jA1Ivb55NCEOhOENoetQ8CoH7HLjsBDjY07anBv4WTk,100
+asgi_headers-0.1.0.dist-info/licenses/LICENSE,sha256=dmxrQvx7wv-_cKEyW17Nxe4rbOSgtAaschxKfAI4rQ0,1093
+asgi_headers/__init__.cp311-win_amd64.pyd,sha256=M3T_KhWo31jZmCeiWjWlvyL4liFLCi2ckq2f__22p6Q,10752
+asgi_headers/__init__.py,sha256=CLaEEfsyw4fp8LeUNWB-EI3ZqQKqahq2oDEH3ueZ27Q,164
+asgi_headers/core.cp311-win_amd64.pyd,sha256=SzbRB360r5cJVx85vSZ4cIkE_pTnvH-kaQzvhP7Bf2Q,10752
+asgi_headers/core.py,sha256=jIx6DLzPeVYufpeGZ_eQXAm1HqWubC-nMK0f9G2If44,1714
+asgi_headers/types.cp311-win_amd64.pyd,sha256=OdazGctwyFIvFpOZEXQQtjV1zmYebGFl3zwzeFjj8pw,10752
+asgi_headers/types.py,sha256=BNZU9UFkG7r9NCa3CxSDYaoyx5nFhbKK1ACDQFlz0_I,2340
+asgi_headers-0.1.0.dist-info/RECORD,,
