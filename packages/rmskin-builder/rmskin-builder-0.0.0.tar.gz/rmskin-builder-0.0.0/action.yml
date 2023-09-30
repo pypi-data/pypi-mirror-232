@@ -1,0 +1,57 @@
+name: rmskin-build
+description: packaging tool for Rainmeter User Content
+
+# for the badge
+branding:
+  icon: 'droplet'
+  color: 'blue'
+
+inputs:
+  version:
+    description: "Version of the Rainmeter rmskin package. Defaults to last 8 digits of SHA from commit or reference tags."
+    required: false
+    default: 'auto'
+  title:
+    description: "Name of the Rainmeter rmskin package. Defaults name of repository."
+    required: false
+    default: ${{ github.event.repository.name }}
+  author:
+    description: "Account Username maintaining the rmskin package. Defaults to Username that triggered the commit."
+    required: false
+    default:  ${{ github.repository_owner }}
+  path:
+    description: "Base directory of repo being packaged. Defaults to workflow's workspace path"
+    required: false
+    default: "."
+  dir_out:
+    description: "Path to save generated rmskin package. Defaults to workflow's workspace path"
+    required: false
+    default: "."
+
+outputs:
+  arc_name: # path to & name of archive file that was generated
+    description: "name of rmskin file"
+    value: ${{ steps.rmskin-builder.outputs.arc_name }}
+
+runs:
+    using: 'composite'
+    steps:
+      - name: setup-python
+        id: setup-python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.x
+          update-environment: false
+      - name: Install rmskin-builder
+        shell: pwsh
+        run: ${{ steps.setup-python.outputs.python-path }} -m pip install rmskin-builder
+      - name: Run rmskin-builder
+        id: rmskin-builder
+        shell: pwsh
+        run: >-
+          ${{ steps.setup-python.outputs.python-path }} -m rmskin_builder
+          --path "${{ inputs.path }}"
+          --version "${{ inputs.version }}"
+          --author "${{ inputs.author }}"
+          --title "${{ inputs.title }}"
+          --dir_out "${{ inputs.dir_out }}"
