@@ -1,0 +1,3 @@
+[console_scripts]
+volttron-economizer-rcx=economizer.economizer_agent:main
+
