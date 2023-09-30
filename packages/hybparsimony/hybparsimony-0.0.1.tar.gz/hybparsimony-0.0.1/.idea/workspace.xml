@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="81b530bd-40aa-464f-a43a-a7fc720ad5c4" name="Changes" comment="included dependencies" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="4be70c245f66e569e8459417a7d752330d1d32c2" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="ProjectId" id="2OH4Ck428FmJo5jN82w65LbShiR" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\jodivaso\OneDrive - Universidad de La Rioja\PyCharm\HYBparsimony\examples" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main_Examples" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="HYBparsimony" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\jodivaso\Anaconda3\envs\HYBparsimony\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="C:\Users\jodivaso\OneDrive - Universidad de La Rioja\PyCharm\HYBparsimony\examples\Main_Examples.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.Main_Examples" />
+        <item itemvalue="Python.Main_Examples" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="81b530bd-40aa-464f-a43a-a7fc720ad5c4" name="Changes" comment="" />
+      <created>1681204047955</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1681204047955</updated>
+    </task>
+    <task id="LOCAL-00006" summary="minor">
+      <created>1681380174544</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1681380174544</updated>
+    </task>
+    <task id="LOCAL-00007" summary="minor">
+      <created>1681380991131</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1681380991131</updated>
+    </task>
+    <task id="LOCAL-00008" summary="added gamma_crossover, work on selected features">
+      <created>1681400377433</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1681400377433</updated>
+    </task>
+    <task id="LOCAL-00009" summary="added predict">
+      <created>1681401320068</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1681401320068</updated>
+    </task>
+    <task id="LOCAL-00010" summary="improved examples">
+      <created>1681402298361</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1681402298361</updated>
+    </task>
+    <task id="LOCAL-00011" summary="deleted dict and params, using algorithm">
+      <created>1681405718008</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1681405718008</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Test -&gt; Examples">
+      <created>1681405997949</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1681405997949</updated>
+    </task>
+    <task id="LOCAL-00013" summary="minor fixes">
+      <created>1681464613725</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1681464613725</updated>
+    </task>
+    <task id="LOCAL-00014" summary="minor fixes">
+      <created>1681472311043</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1681472311043</updated>
+    </task>
+    <task id="LOCAL-00015" summary="deleted fitnesstst, used neg_mean_squared_error by default">
+      <created>1681485989525</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1681485989525</updated>
+    </task>
+    <task id="LOCAL-00016" summary="continued">
+      <created>1681489054299</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1681489054299</updated>
+    </task>
+    <task id="LOCAL-00017" summary="added support for classification, added predict_proba method">
+      <created>1681554173462</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1681554173462</updated>
+    </task>
+    <task id="LOCAL-00018" summary="New example for classification with other scoring parameter">
+      <created>1681554546089</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1681554546089</updated>
+    </task>
+    <task id="LOCAL-00019" summary="dropped comment">
+      <created>1681554694447</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1681554694447</updated>
+    </task>
+    <task id="LOCAL-00020" summary="support for cv as parameter">
+      <created>1681555543601</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1681555543601</updated>
+    </task>
+    <task id="LOCAL-00021" summary="support for scoring as parameter; new examples">
+      <created>1681556783958</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1681556783958</updated>
+    </task>
+    <task id="LOCAL-00022" summary="sanity checks on algorithm parameter">
+      <created>1681578563983</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1681578563983</updated>
+    </task>
+    <task id="LOCAL-00023" summary="added note on parallelism and custom_eval_fun">
+      <created>1681579522351</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1681579522351</updated>
+    </task>
+    <task id="LOCAL-00024" summary="updated rerank, pool closed">
+      <created>1681723890711</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1681723890711</updated>
+    </task>
+    <task id="LOCAL-00025" summary="astype(int) -&gt; dtype='int' to avoid a warning">
+      <created>1681725272825</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1681725272825</updated>
+    </task>
+    <task id="LOCAL-00026" summary="solved problem with number of features in predict (population and models were not the same due to models with zero features)">
+      <created>1681813477196</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1681813477196</updated>
+    </task>
+    <task id="LOCAL-00027" summary="dropped sanity checks, reformed Examples.py">
+      <created>1681814138410</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1681814138410</updated>
+    </task>
+    <task id="LOCAL-00028" summary="return to default parameters gamma_crossover=0.5 and pmutation=0.1">
+      <created>1681814350454</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1681814350454</updated>
+    </task>
+    <task id="LOCAL-00029" summary="solved warning about a substraction involving nan or infinite values">
+      <created>1681814785641</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1681814785641</updated>
+    </task>
+    <task id="LOCAL-00030" summary="preparing for PyPI">
+      <created>1690219686933</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1690219686933</updated>
+    </task>
+    <task id="LOCAL-00031" summary="more preparation">
+      <created>1690220002730</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1690220002730</updated>
+    </task>
+    <task id="LOCAL-00032" summary="added pandas version">
+      <created>1690220953860</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1690220953860</updated>
+    </task>
+    <task id="LOCAL-00033" summary="more">
+      <created>1690221120613</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1690221120613</updated>
+    </task>
+    <task id="LOCAL-00034" summary="more">
+      <created>1690221203223</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1690221203223</updated>
+    </task>
+    <task id="LOCAL-00035" summary="added pyproject.toml">
+      <created>1690222131860</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1690222131860</updated>
+    </task>
+    <task id="LOCAL-00036" summary="typo">
+      <created>1690222762501</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1690222762501</updated>
+    </task>
+    <task id="LOCAL-00037" summary="dependencies in pyproject.toml">
+      <created>1690224016686</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1690224016686</updated>
+    </task>
+    <task id="LOCAL-00038" summary="dependencies in pyproject.toml">
+      <created>1690224363124</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1690224363124</updated>
+    </task>
+    <task id="LOCAL-00039" summary="dependencies in pyproject.toml">
+      <created>1690224579505</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1690224579505</updated>
+    </task>
+    <task id="LOCAL-00040" summary="dropped dependencies">
+      <created>1690224832112</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1690224832112</updated>
+    </task>
+    <task id="LOCAL-00041" summary="fixed import">
+      <created>1690225145871</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1690225145871</updated>
+    </task>
+    <task id="LOCAL-00042" summary="package HYBparsimony -&gt; hybparsimony">
+      <created>1690275832068</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1690275832068</updated>
+    </task>
+    <task id="LOCAL-00043" summary="added requirements.txt">
+      <created>1690275947659</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1690275947659</updated>
+    </task>
+    <task id="LOCAL-00044" summary="updated pyproject.toml">
+      <created>1690276154174</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1690276154174</updated>
+    </task>
+    <task id="LOCAL-00045" summary="updated pyproject.toml">
+      <created>1690276668771</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1690276668771</updated>
+    </task>
+    <task id="LOCAL-00046" summary="updated pyproject.toml">
+      <created>1690276986681</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1690276986681</updated>
+    </task>
+    <task id="LOCAL-00047" summary="updated pyproject.toml">
+      <created>1690277082128</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1690277082128</updated>
+    </task>
+    <task id="LOCAL-00048" summary="dropped files, updated readme">
+      <created>1690278666346</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1690278666346</updated>
+    </task>
+    <task id="LOCAL-00049" summary="big refactor Examples">
+      <created>1690281327712</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1690281327712</updated>
+    </task>
+    <task id="LOCAL-00050" summary="added docs">
+      <created>1690299346059</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1690299346075</updated>
+    </task>
+    <task id="LOCAL-00051" summary="added readthedocs.yaml">
+      <created>1690299648824</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1690299648824</updated>
+    </task>
+    <task id="LOCAL-00052" summary="updated readthedocs.yaml">
+      <created>1690299781995</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1690299781995</updated>
+    </task>
+    <task id="LOCAL-00053" summary="updated readthedocs.yaml">
+      <created>1690299927988</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1690299927988</updated>
+    </task>
+    <task id="LOCAL-00054" summary="included dependencies">
+      <created>1696010396920</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1696010396920</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="updated rerank, pool closed" />
+    <MESSAGE value="astype(int) -&gt; dtype='int' to avoid a warning" />
+    <MESSAGE value="solved problem with number of features in predict (population and models were not the same due to models with zero features)" />
+    <MESSAGE value="dropped sanity checks, reformed Examples.py" />
+    <MESSAGE value="return to default parameters gamma_crossover=0.5 and pmutation=0.1" />
+    <MESSAGE value="solved warning about a substraction involving nan or infinite values" />
+    <MESSAGE value="preparing for PyPI" />
+    <MESSAGE value="more preparation" />
+    <MESSAGE value="added pandas version" />
+    <MESSAGE value="more" />
+    <MESSAGE value="added pyproject.toml" />
+    <MESSAGE value="typo" />
+    <MESSAGE value="dependencies in pyproject.toml" />
+    <MESSAGE value="dropped dependencies" />
+    <MESSAGE value="fixed import" />
+    <MESSAGE value="package HYBparsimony -&gt; hybparsimony" />
+    <MESSAGE value="added requirements.txt" />
+    <MESSAGE value="updated pyproject.toml" />
+    <MESSAGE value="dropped files, updated readme" />
+    <MESSAGE value="big refactor Examples" />
+    <MESSAGE value="added docs" />
+    <MESSAGE value="added readthedocs.yaml" />
+    <MESSAGE value="updated readthedocs.yaml" />
+    <MESSAGE value="fixed version for pip" />
+    <MESSAGE value="included dependencies" />
+    <option name="LAST_COMMIT_MESSAGE" value="included dependencies" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="self.best_model_conf" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>hybparsimony.util.population &mdash; HYBparsimony Documentation  documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            HYBparsimony Documentation
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../hybparsimony.html">hybparsimony package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../hybparsimony.util.html">hybparsimony.util package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../hybparsimony.lhs.html">hybparsimony.lhs package</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">HYBparsimony Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">hybparsimony.util.population</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for hybparsimony.util.population</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<div class="viewcode-block" id="Population"><a class="viewcode-back" href="../../../hybparsimony.util.html#hybparsimony.util.population.Population">[docs]</a><span class="k">class</span> <span class="nc">Population</span><span class="p">:</span>
+
+    <span class="n">INTEGER</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">FLOAT</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">CATEGORICAL</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="n">CONSTANT</span> <span class="o">=</span> <span class="mi">3</span>
+    <span class="n">POWER</span> <span class="o">=</span> <span class="mi">4</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">params</span><span class="p">,</span> <span class="n">columns</span><span class="p">,</span> <span class="n">population</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This class is used to create the HYB populations. </span>
+<span class="sd">        Allow chromosomes to have int, float, and constant values. </span>
+
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        params : dict</span>
+<span class="sd">            It is a dictionary with the model&#39;s hyperparameters to be adjusted and the search space of them.</span>
+<span class="sd">            </span>
+<span class="sd">            .. code-block::</span>
+
+<span class="sd">                {</span>
+<span class="sd">                    &quot;&lt;&lt; hyperparameter name &gt;&gt;&quot;: {</span>
+<span class="sd">                        &quot;range&quot;: [&lt;&lt; minimum value &gt;&gt;, &lt;&lt; maximum value &gt;&gt;],</span>
+<span class="sd">                        &quot;type&quot;: Population.FLOAT/Population.INTEGER/Population.POWER</span>
+<span class="sd">                    },</span>
+<span class="sd">                    &quot;&lt;&lt; hyperparameter name &gt;&gt;&quot;: {</span>
+<span class="sd">                        &quot;value&quot;: &lt;&lt; constant value &gt;&gt;,</span>
+<span class="sd">                        &quot;type&quot;: Population.CONSTANT</span>
+<span class="sd">                    }</span>
+<span class="sd">                }</span>
+
+<span class="sd">        columns : int or list of str</span>
+<span class="sd">            The number of features/columns in the dataset or a list with their names.</span>
+<span class="sd">        population : numpy.array, optional</span>
+<span class="sd">            It is a float matrix that represents the population. Default `None`.</span>
+
+<span class="sd">        Attributes</span>
+<span class="sd">        ----------</span>
+<span class="sd">        population : Population</span>
+<span class="sd">            The population.</span>
+<span class="sd">        _min : numpy.array</span>
+<span class="sd">            A vector of length `params+columns` with the smallest values that can take.</span>
+<span class="sd">        _max : numpy.array</span>
+<span class="sd">            A vector of length `params+columns` with the highest values that can take.</span>
+<span class="sd">        _params : dict</span>
+<span class="sd">            Dict with the parameter values.</span>
+<span class="sd">        const : dict</span>
+<span class="sd">            Dict with the constants values.</span>
+<span class="sd">        colsnames : list of str</span>
+<span class="sd">            List with the columns names.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        
+        <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">params</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="nb">dict</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;params must be of type dict !!!&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_min</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([(</span><span class="mi">0</span> <span class="k">if</span> <span class="n">params</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="s2">&quot;type&quot;</span><span class="p">]</span> <span class="ow">is</span> <span class="n">Population</span><span class="o">.</span><span class="n">CATEGORICAL</span> <span class="k">else</span> <span class="n">params</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="s2">&quot;range&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">params</span> <span class="k">if</span> <span class="n">params</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="s2">&quot;type&quot;</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">Population</span><span class="o">.</span><span class="n">CONSTANT</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_max</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([(</span><span class="nb">len</span><span class="p">(</span><span class="n">params</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="s2">&quot;range&quot;</span><span class="p">])</span> <span class="k">if</span> <span class="n">params</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="s2">&quot;type&quot;</span><span class="p">]</span> <span class="ow">is</span> <span class="n">Population</span><span class="o">.</span><span class="n">CATEGORICAL</span> <span class="k">else</span> <span class="n">params</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="s2">&quot;range&quot;</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">params</span> <span class="k">if</span> <span class="n">params</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="s2">&quot;type&quot;</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">Population</span><span class="o">.</span><span class="n">CONSTANT</span><span class="p">])</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_params</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">((</span><span class="n">x</span><span class="p">,</span> <span class="n">params</span><span class="p">[</span><span class="n">x</span><span class="p">])</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">params</span> <span class="k">if</span> <span class="n">params</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="s2">&quot;type&quot;</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">Population</span><span class="o">.</span><span class="n">CONSTANT</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">const</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">((</span><span class="n">x</span><span class="p">,</span> <span class="n">params</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="s2">&quot;value&quot;</span><span class="p">])</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">params</span> <span class="k">if</span> <span class="n">params</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="s2">&quot;type&quot;</span><span class="p">]</span> <span class="ow">is</span> <span class="n">Population</span><span class="o">.</span><span class="n">CONSTANT</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">colsnames</span> <span class="o">=</span> <span class="p">(</span><span class="n">columns</span> <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">columns</span><span class="p">)</span> <span class="ow">is</span> <span class="nb">list</span> <span class="k">else</span> <span class="n">columns</span><span class="o">.</span><span class="n">tolist</span><span class="p">())</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">columns</span><span class="p">,</span> <span class="s1">&#39;__iter__&#39;</span><span class="p">)</span> <span class="k">else</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;col_</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">columns</span><span class="p">)]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_min</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">_min</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">colsnames</span><span class="p">))),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_max</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">_max</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">colsnames</span><span class="p">))),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_pos_n</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_pos_c</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(),</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_params</span><span class="p">):</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_params</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="s2">&quot;type&quot;</span><span class="p">]</span> <span class="ow">is</span> <span class="n">Population</span><span class="o">.</span><span class="n">CATEGORICAL</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_pos_c</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_pos_n</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+
+        <span class="k">def</span> <span class="nf">_trans_mut</span><span class="p">():</span>
+
+            <span class="k">def</span> <span class="nf">compute_feature_probability</span><span class="p">(</span><span class="n">threshold</span><span class="p">):</span>
+                <span class="n">p</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="n">low</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">high</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># Número aleatorio que decidirá si tenemos que ponerlo a True o no.</span>
+                <span class="k">if</span> <span class="n">p</span> <span class="o">&lt;=</span> <span class="n">threshold</span><span class="p">:</span> <span class="c1">#Si tenemos que tener un True</span>
+                    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="n">low</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">high</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span> <span class="c1">#Tenemos que tener un false</span>
+                    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="n">low</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">high</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+
+            <span class="n">t</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+            <span class="n">gen</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+            <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">paramsnames</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">params</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="s2">&quot;type&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">Population</span><span class="o">.</span><span class="n">INTEGER</span><span class="p">:</span>
+                    <span class="n">t</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">vectorize</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">otypes</span><span class="o">=</span><span class="p">[</span><span class="nb">int</span><span class="p">]))</span>
+                    <span class="n">gen</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="k">lambda</span> <span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">low</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_min</span><span class="p">[</span><span class="n">y</span><span class="p">],</span> <span class="n">high</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_max</span><span class="p">[</span><span class="n">y</span><span class="p">]))</span>
+                <span class="k">elif</span> <span class="n">params</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="s2">&quot;type&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">Population</span><span class="o">.</span><span class="n">FLOAT</span><span class="p">:</span>
+                    <span class="n">t</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">vectorize</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">float</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">otypes</span><span class="o">=</span><span class="p">[</span><span class="nb">float</span><span class="p">]))</span>
+                    <span class="n">gen</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="k">lambda</span> <span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="n">low</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_min</span><span class="p">[</span><span class="n">y</span><span class="p">],</span> <span class="n">high</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_max</span><span class="p">[</span><span class="n">y</span><span class="p">]))</span>
+                <span class="k">elif</span> <span class="n">params</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="s2">&quot;type&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">Population</span><span class="o">.</span><span class="n">POWER</span><span class="p">:</span>
+                    <span class="n">t</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">vectorize</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">pow</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="n">x</span><span class="p">),</span> <span class="n">otypes</span><span class="o">=</span><span class="p">[</span><span class="nb">float</span><span class="p">]))</span> <span class="c1"># TODO: No tengo claro que esté bien.</span>
+                    <span class="n">gen</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="k">lambda</span> <span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="nb">pow</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">low</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_min</span><span class="p">[</span><span class="n">y</span><span class="p">],</span> <span class="n">high</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_max</span><span class="p">[</span><span class="n">y</span><span class="p">])))</span>
+                <span class="k">elif</span> <span class="n">params</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="s2">&quot;type&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">Population</span><span class="o">.</span><span class="n">CATEGORICAL</span><span class="p">:</span>
+                    <span class="n">t</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">vectorize</span><span class="p">(</span><span class="k">lambda</span> <span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="p">:</span> <span class="n">y</span> <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">y</span><span class="p">)</span> <span class="ow">is</span> <span class="nb">str</span> <span class="k">else</span> <span class="n">params</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="s2">&quot;range&quot;</span><span class="p">][</span><span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">trunc</span><span class="p">(</span><span class="n">y</span><span class="p">))],</span> <span class="n">otypes</span><span class="o">=</span><span class="p">[</span><span class="nb">str</span><span class="p">]))</span>
+                    <span class="n">gen</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="k">lambda</span> <span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">low</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_min</span><span class="p">[</span><span class="n">y</span><span class="p">],</span> <span class="n">high</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_max</span><span class="p">[</span><span class="n">y</span><span class="p">]))</span>
+            <span class="n">t</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">&gt;</span><span class="mf">0.5</span><span class="p">]</span><span class="o">*</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">colsnames</span><span class="p">))</span>
+            <span class="c1">#gen.extend([lambda y, x=x, **kwargs: np.random.uniform(low=self._min[y], high=self._max[y]) &lt;= kwargs[&quot;feat_mut_thres&quot;]]*len(self.colsnames))</span>
+            <span class="n">gen</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="k">lambda</span> <span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">compute_feature_probability</span><span class="p">(</span><span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;feat_mut_thres&quot;</span><span class="p">])]</span><span class="o">*</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">colsnames</span><span class="p">))</span>
+
+            <span class="c1"># We have to avoid 0-dimensional numpy arrays. Otherwise, some algorithms that perform type</span>
+            <span class="c1"># checks will fail since, for instance, they receive an integer as a 0-dimensional array, but expect an</span>
+            <span class="c1"># integer.</span>
+
+            <span class="k">def</span> <span class="nf">aux</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+                <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+                    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">f</span><span class="p">,</span> <span class="n">c</span><span class="p">:</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">[:,</span> <span class="n">c</span><span class="p">]),</span> <span class="n">t</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">x</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]))),</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">object</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="k">return</span> <span class="nb">list</span><span class="p">(</span>
+                        <span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">i</span><span class="p">:</span> <span class="n">i</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">](</span><span class="n">i</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span><span class="o">.</span><span class="n">item</span><span class="p">()</span> <span class="k">if</span> <span class="n">i</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">paramsnames</span><span class="p">)</span> <span class="k">else</span> <span class="n">i</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">](</span><span class="n">i</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]),</span>
+                            <span class="nb">enumerate</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">x</span><span class="p">))))</span>
+            <span class="k">return</span> <span class="n">aux</span><span class="p">,</span> <span class="n">gen</span>
+
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_transformers</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">random_gen</span> <span class="o">=</span> <span class="n">_trans_mut</span><span class="p">()</span>
+        
+
+        <span class="k">if</span> <span class="n">population</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">population</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">population</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;Popularion is not a numpy matrix&quot;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">population</span> <span class="o">=</span> <span class="n">population</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">population</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_transformers</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_pop</span><span class="p">)</span>
+
+    <span class="nd">@population</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">population</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">population</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_pop</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">apply_along_axis</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">object</span><span class="p">),</span> <span class="mi">1</span><span class="p">,</span> <span class="n">population</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">object</span><span class="p">))</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">paramsnames</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_params</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+
+    <span class="k">def</span> <span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_pop</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="fm">__setitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">newvalue</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_pop</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">newvalue</span>
+
+<div class="viewcode-block" id="Population.getChromosome"><a class="viewcode-back" href="../../../hybparsimony.util.html#hybparsimony.util.population.Population.getChromosome">[docs]</a>    <span class="k">def</span> <span class="nf">getChromosome</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
+<span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This method returns a chromosome from the population. </span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        key : int</span>
+<span class="sd">            Chromosome row index .</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        Chromosome</span>
+<span class="sd">            A `Chromosome` object.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_transformers</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_pop</span><span class="p">[</span><span class="n">key</span><span class="p">,</span> <span class="p">:])</span>
+        <span class="k">return</span> <span class="n">Chromosome</span><span class="p">(</span><span class="n">data</span><span class="p">[:</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">paramsnames</span><span class="p">)],</span> <span class="bp">self</span><span class="o">.</span><span class="n">paramsnames</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">const</span><span class="p">,</span> <span class="n">data</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">paramsnames</span><span class="p">):],</span> <span class="bp">self</span><span class="o">.</span><span class="n">colsnames</span><span class="p">)</span></div>
+
+    <span class="c1"># Method that updates the population to satisfy the feat_thres</span>
+<div class="viewcode-block" id="Population.update_to_feat_thres"><a class="viewcode-back" href="../../../hybparsimony.util.html#hybparsimony.util.population.Population.update_to_feat_thres">[docs]</a>    <span class="k">def</span> <span class="nf">update_to_feat_thres</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">popSize</span><span class="p">,</span> <span class="n">feat_thres</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">popSize</span><span class="p">):</span> <span class="c1">#For each chromosome</span>
+            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_params</span><span class="p">),</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">colsnames</span><span class="p">)</span> <span class="o">+</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_params</span><span class="p">)):</span> <span class="c1"># Each feature</span>
+                <span class="n">p</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="n">low</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">high</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="c1">#Random number in interval [0,1]</span>
+                <span class="k">if</span> <span class="n">p</span> <span class="o">&lt;=</span> <span class="n">feat_thres</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">_pop</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mf">0.5</span><span class="p">:</span> <span class="c1"># if p &lt;= self.feat_thres, the feature must be true</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">_pop</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="o">+=</span> <span class="mf">0.5</span>
+                <span class="k">elif</span> <span class="n">p</span> <span class="o">&gt;</span> <span class="n">feat_thres</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">_pop</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mf">0.5</span><span class="p">:</span> <span class="c1"># if p &gt; self.feat_thres, the feature must be false</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">_pop</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_pop</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="o">-</span> <span class="mf">0.5</span></div></div>
+    
+<div class="viewcode-block" id="Chromosome"><a class="viewcode-back" href="../../../hybparsimony.util.html#hybparsimony.util.population.Chromosome">[docs]</a><span class="k">class</span> <span class="nc">Chromosome</span><span class="p">:</span>
+
+    <span class="c1"># @autoassign</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">params</span><span class="p">,</span> <span class="n">name_params</span><span class="p">,</span> <span class="n">const</span><span class="p">,</span> <span class="n">cols</span><span class="p">,</span> <span class="n">name_cols</span><span class="p">):</span>
+<span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This class defines a chromosome which includes the hyperparameters, the constant values, and the feature selection.</span>
+
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        params : numpy.array</span>
+<span class="sd">            The algorithm hyperparameter values.</span>
+<span class="sd">        name_params : list of str</span>
+<span class="sd">            The names of the hyperparameters.</span>
+<span class="sd">        const : numpy.array</span>
+<span class="sd">            A dictionary with the constants to include in the chomosome.</span>
+<span class="sd">        cols : numpy.array</span>
+<span class="sd">            The probabilities for selecting the input features (selected if prob&gt;0.5).</span>
+<span class="sd">        name_cols : list of str</span>
+<span class="sd">            The names of the input features.</span>
+
+<span class="sd">        Attributes</span>
+<span class="sd">        ----------</span>
+<span class="sd">        params : dict</span>
+<span class="sd">            A dictionary with the parameter values (hyperparameters and constants).</span>
+<span class="sd">        columns : numpy.array of bool</span>
+<span class="sd">            A boolean vector with the selected features.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_params</span> <span class="o">=</span> <span class="n">params</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name_params</span> <span class="o">=</span> <span class="n">name_params</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">const</span> <span class="o">=</span> <span class="n">const</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_cols</span> <span class="o">=</span> <span class="n">cols</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name_cols</span> <span class="o">=</span> <span class="n">name_cols</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">params</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">{</span><span class="o">**</span><span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name_params</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_params</span><span class="p">)),</span> <span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="n">const</span><span class="p">}</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">columns</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cols</span></div>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Jose Divasón.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

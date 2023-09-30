@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>hybparsimony.util package &mdash; HYBparsimony Documentation  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="hybparsimony.lhs.util package" href="hybparsimony.lhs.util.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            HYBparsimony Documentation
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="hybparsimony.html">hybparsimony package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="hybparsimony.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="hybparsimony.lhs.html">hybparsimony.lhs package</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">hybparsimony.util package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-hybparsimony.util.complexity">hybparsimony.util.complexity module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-hybparsimony.util.fitness">hybparsimony.util.fitness module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-hybparsimony.util.hyb_aux">hybparsimony.util.hyb_aux module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-hybparsimony.util.models">hybparsimony.util.models module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-hybparsimony.util.order">hybparsimony.util.order module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-hybparsimony.util.parsimony_monitor">hybparsimony.util.parsimony_monitor module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-hybparsimony.util.population">hybparsimony.util.population module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-hybparsimony.util">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="hybparsimony.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hybparsimony.html#hybparsimony-examples-module">hybparsimony.Examples module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hybparsimony.html#module-hybparsimony.hybparsimony">hybparsimony.hybparsimony module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hybparsimony.html#module-hybparsimony">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">hybparsimony.util package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-hybparsimony.util.complexity">hybparsimony.util.complexity module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#hybparsimony.util.complexity.decision_tree_complexity"><code class="docutils literal notranslate"><span class="pre">decision_tree_complexity()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hybparsimony.util.complexity.generic_complexity"><code class="docutils literal notranslate"><span class="pre">generic_complexity()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hybparsimony.util.complexity.kernel_ridge_complexity"><code class="docutils literal notranslate"><span class="pre">kernel_ridge_complexity()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hybparsimony.util.complexity.knn_complexity"><code class="docutils literal notranslate"><span class="pre">knn_complexity()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hybparsimony.util.complexity.linearModels_complexity"><code class="docutils literal notranslate"><span class="pre">linearModels_complexity()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hybparsimony.util.complexity.mlp_complexity"><code class="docutils literal notranslate"><span class="pre">mlp_complexity()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hybparsimony.util.complexity.randomForest_complexity"><code class="docutils literal notranslate"><span class="pre">randomForest_complexity()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hybparsimony.util.complexity.svm_complexity"><code class="docutils literal notranslate"><span class="pre">svm_complexity()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hybparsimony.util.complexity.xgboost_complexity"><code class="docutils literal notranslate"><span class="pre">xgboost_complexity()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-hybparsimony.util.fitness">hybparsimony.util.fitness module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#hybparsimony.util.fitness.fitness_for_parallel"><code class="docutils literal notranslate"><span class="pre">fitness_for_parallel()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hybparsimony.util.fitness.getFitness"><code class="docutils literal notranslate"><span class="pre">getFitness()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-hybparsimony.util.hyb_aux">hybparsimony.util.hyb_aux module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-hybparsimony.util.models">hybparsimony.util.models module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#hybparsimony.util.models.check_algorithm"><code class="docutils literal notranslate"><span class="pre">check_algorithm()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-hybparsimony.util.order">hybparsimony.util.order module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#hybparsimony.util.order.order"><code class="docutils literal notranslate"><span class="pre">order()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-hybparsimony.util.parsimony_monitor">hybparsimony.util.parsimony_monitor module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#hybparsimony.util.parsimony_monitor.parsimony_monitor"><code class="docutils literal notranslate"><span class="pre">parsimony_monitor()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hybparsimony.util.parsimony_monitor.parsimony_summary"><code class="docutils literal notranslate"><span class="pre">parsimony_summary()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-hybparsimony.util.population">hybparsimony.util.population module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#hybparsimony.util.population.Chromosome"><code class="docutils literal notranslate"><span class="pre">Chromosome</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#hybparsimony.util.population.Chromosome.columns"><code class="docutils literal notranslate"><span class="pre">Chromosome.columns</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hybparsimony.util.population.Chromosome.params"><code class="docutils literal notranslate"><span class="pre">Chromosome.params</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#hybparsimony.util.population.Population"><code class="docutils literal notranslate"><span class="pre">Population</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#hybparsimony.util.population.Population.CATEGORICAL"><code class="docutils literal notranslate"><span class="pre">Population.CATEGORICAL</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hybparsimony.util.population.Population.CONSTANT"><code class="docutils literal notranslate"><span class="pre">Population.CONSTANT</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hybparsimony.util.population.Population.FLOAT"><code class="docutils literal notranslate"><span class="pre">Population.FLOAT</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hybparsimony.util.population.Population.INTEGER"><code class="docutils literal notranslate"><span class="pre">Population.INTEGER</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hybparsimony.util.population.Population.POWER"><code class="docutils literal notranslate"><span class="pre">Population.POWER</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hybparsimony.util.population.Population.getChromosome"><code class="docutils literal notranslate"><span class="pre">Population.getChromosome()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hybparsimony.util.population.Population.paramsnames"><code class="docutils literal notranslate"><span class="pre">Population.paramsnames</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hybparsimony.util.population.Population.population"><code class="docutils literal notranslate"><span class="pre">Population.population</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hybparsimony.util.population.Population.update_to_feat_thres"><code class="docutils literal notranslate"><span class="pre">Population.update_to_feat_thres()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-hybparsimony.util">Module contents</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#hybparsimony.util.order"><code class="docutils literal notranslate"><span class="pre">order()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hybparsimony.util.parsimony_monitor"><code class="docutils literal notranslate"><span class="pre">parsimony_monitor()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="hybparsimony.lhs.html">hybparsimony.lhs package</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">HYBparsimony Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="hybparsimony.html">hybparsimony package</a></li>
+      <li class="breadcrumb-item active">hybparsimony.util package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/hybparsimony.util.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="hybparsimony-util-package">
+<h1>hybparsimony.util package<a class="headerlink" href="#hybparsimony-util-package" title="Permalink to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading"></a></h2>
+</section>
+<section id="module-hybparsimony.util.complexity">
+<span id="hybparsimony-util-complexity-module"></span><h2>hybparsimony.util.complexity module<a class="headerlink" href="#module-hybparsimony.util.complexity" title="Permalink to this heading"></a></h2>
+<p>Complexity module.</p>
+<p>This module contains predefined complexity functions for some of the most popular algorithms in the scikit-learn library:</p>
+<ul class="simple">
+<li><p><strong>linearModels_complexity</strong>: Any algorithm from <a href="#id1"><span class="problematic" id="id2">`</span></a>sklearn.linear_model’. Returns: 10^9·nFeatures + (sum of the squared coefs).</p></li>
+<li><p><strong>svm_complexity</strong>: Any algorithm from <a href="#id3"><span class="problematic" id="id4">`</span></a>sklearn.svm’. Returns: 10^9·nFeatures + (number of support vectors).</p></li>
+<li><p><strong>knn_complexity</strong>: Any algorithm from <a href="#id5"><span class="problematic" id="id6">`</span></a>sklearn.neighbors’. Returns: 10^9·nFeatures + 1/(number of neighbors)</p></li>
+<li><p><strong>mlp_complexity</strong>: Any algorithm from <a href="#id7"><span class="problematic" id="id8">`</span></a>sklearn.neural_network’. Returns: 10^9·nFeatures + (sum of the ANN squared weights).</p></li>
+<li><p><strong>randomForest_complexity</strong>: Any algorithm from <a href="#id9"><span class="problematic" id="id10">`</span></a>sklearn.ensemble.RandomForestRegressor’ or ‘sklearn.ensemble.RandomForestClassifier’. Returns: 10^9·nFeatures + (the average of tree leaves).</p></li>
+<li><p><strong>xgboost_complexity</strong>: XGboost sklearn model. Returns: 10^9·nFeatures + (the average of tree leaves * number of trees) (Experimental)</p></li>
+<li><p><strong>decision_tree_complexity</strong>: Any algorithm from ‘sklearn.tree’. Return: 10^9·nFeatures + (number of leaves) (Experimental)</p></li>
+</ul>
+<p>Otherwise:</p>
+<ul class="simple">
+<li><p><strong>generic_complexity</strong>: Any algorithm. Returns: the number of input features (nFeatures).</p></li>
+</ul>
+<p>Other complexity functions can be defined with the following interface.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">complexity</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">nFeatures</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="k">pass</span>
+
+<span class="k">return</span> <span class="n">complexity</span>
+</pre></div>
+</div>
+<dl class="py function">
+<dt class="sig sig-object py" id="hybparsimony.util.complexity.decision_tree_complexity">
+<span class="sig-prename descclassname"><span class="pre">hybparsimony.util.complexity.</span></span><span class="sig-name descname"><span class="pre">decision_tree_complexity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nFeatures</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/hybparsimony/util/complexity.html#decision_tree_complexity"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hybparsimony.util.complexity.decision_tree_complexity" title="Permalink to this definition"></a></dt>
+<dd><p>Complexity function for Decision Tree models.</p>
+<section id="parameters">
+<h3>Parameters<a class="headerlink" href="#parameters" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>model<span class="classifier">model</span></dt><dd><p>The model from which the internal complexity is calculated.</p>
+</dd>
+<dt>nFeatures<span class="classifier">int</span></dt><dd><p>The number of the selected features.</p>
+</dd>
+<dt><a href="#id11"><span class="problematic" id="id12">**</span></a>kwargs<span class="classifier"></span></dt><dd><p>Other arguments.</p>
+</dd>
+</dl>
+</section>
+<section id="returns">
+<h3>Returns<a class="headerlink" href="#returns" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>int</dt><dd><p>10^9·nFeatures + (number of leaves)</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="hybparsimony.util.complexity.generic_complexity">
+<span class="sig-prename descclassname"><span class="pre">hybparsimony.util.complexity.</span></span><span class="sig-name descname"><span class="pre">generic_complexity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nFeatures</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/hybparsimony/util/complexity.html#generic_complexity"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hybparsimony.util.complexity.generic_complexity" title="Permalink to this definition"></a></dt>
+<dd><p>Generic complexity function.</p>
+<section id="id13">
+<h3>Parameters<a class="headerlink" href="#id13" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>model<span class="classifier">model</span></dt><dd><p>The model from which the internal complexity is calculated.</p>
+</dd>
+<dt>nFeatures<span class="classifier">int</span></dt><dd><p>The number of the selected features.</p>
+</dd>
+<dt><a href="#id14"><span class="problematic" id="id15">**</span></a>kwargs<span class="classifier"></span></dt><dd><p>Other arguments.</p>
+</dd>
+</dl>
+</section>
+<section id="id16">
+<h3>Returns<a class="headerlink" href="#id16" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>int</dt><dd><p>nFeatures.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="hybparsimony.util.complexity.kernel_ridge_complexity">
+<span class="sig-prename descclassname"><span class="pre">hybparsimony.util.complexity.</span></span><span class="sig-name descname"><span class="pre">kernel_ridge_complexity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nFeatures</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/hybparsimony/util/complexity.html#kernel_ridge_complexity"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hybparsimony.util.complexity.kernel_ridge_complexity" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="hybparsimony.util.complexity.knn_complexity">
+<span class="sig-prename descclassname"><span class="pre">hybparsimony.util.complexity.</span></span><span class="sig-name descname"><span class="pre">knn_complexity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nFeatures</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/hybparsimony/util/complexity.html#knn_complexity"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hybparsimony.util.complexity.knn_complexity" title="Permalink to this definition"></a></dt>
+<dd><p>Complexity function for KNN models.</p>
+<section id="id17">
+<h3>Parameters<a class="headerlink" href="#id17" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>model<span class="classifier">model</span></dt><dd><p>The model from which the internal complexity is calculated.</p>
+</dd>
+<dt>nFeatures<span class="classifier">int</span></dt><dd><p>The number of the selected features.</p>
+</dd>
+<dt><a href="#id18"><span class="problematic" id="id19">**</span></a>kwargs<span class="classifier"></span></dt><dd><p>Other arguments.</p>
+</dd>
+</dl>
+</section>
+<section id="id20">
+<h3>Returns<a class="headerlink" href="#id20" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>int</dt><dd><p>10^9·nFeatures + 1/(number of neighbors)</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="hybparsimony.util.complexity.linearModels_complexity">
+<span class="sig-prename descclassname"><span class="pre">hybparsimony.util.complexity.</span></span><span class="sig-name descname"><span class="pre">linearModels_complexity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nFeatures</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/hybparsimony/util/complexity.html#linearModels_complexity"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hybparsimony.util.complexity.linearModels_complexity" title="Permalink to this definition"></a></dt>
+<dd><p>Complexity function for linear models.</p>
+<section id="id21">
+<h3>Parameters<a class="headerlink" href="#id21" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>model<span class="classifier">model</span></dt><dd><p>The model from which the internal complexity is calculated.</p>
+</dd>
+<dt>nFeatures<span class="classifier">int</span></dt><dd><p>The number of the selected features.</p>
+</dd>
+<dt><a href="#id22"><span class="problematic" id="id23">**</span></a>kwargs<span class="classifier"></span></dt><dd><p>Other arguments.</p>
+</dd>
+</dl>
+</section>
+<section id="id24">
+<h3>Returns<a class="headerlink" href="#id24" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>int</dt><dd><p>10^9·nFeatures + (sum of the model squared coefs).</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="hybparsimony.util.complexity.mlp_complexity">
+<span class="sig-prename descclassname"><span class="pre">hybparsimony.util.complexity.</span></span><span class="sig-name descname"><span class="pre">mlp_complexity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nFeatures</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/hybparsimony/util/complexity.html#mlp_complexity"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hybparsimony.util.complexity.mlp_complexity" title="Permalink to this definition"></a></dt>
+<dd><p>Complexity function for MLP models.</p>
+<section id="id25">
+<h3>Parameters<a class="headerlink" href="#id25" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>model<span class="classifier">model</span></dt><dd><p>The model from which the internal complexity is calculated.</p>
+</dd>
+<dt>nFeatures<span class="classifier">int</span></dt><dd><p>The number of the selected features.</p>
+</dd>
+<dt><a href="#id26"><span class="problematic" id="id27">**</span></a>kwargs<span class="classifier"></span></dt><dd><p>Other arguments.</p>
+</dd>
+</dl>
+</section>
+<section id="id28">
+<h3>Returns<a class="headerlink" href="#id28" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>int</dt><dd><p>10^9·nFeatures + (sum of the ANN squared weights)</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="hybparsimony.util.complexity.randomForest_complexity">
+<span class="sig-prename descclassname"><span class="pre">hybparsimony.util.complexity.</span></span><span class="sig-name descname"><span class="pre">randomForest_complexity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nFeatures</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/hybparsimony/util/complexity.html#randomForest_complexity"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hybparsimony.util.complexity.randomForest_complexity" title="Permalink to this definition"></a></dt>
+<dd><p>Complexity function for RandomForest models.</p>
+<section id="id29">
+<h3>Parameters<a class="headerlink" href="#id29" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>model<span class="classifier">model</span></dt><dd><p>The model from which the internal complexity is calculated.</p>
+</dd>
+<dt>nFeatures<span class="classifier">int</span></dt><dd><p>The number of the selected features.</p>
+</dd>
+<dt><a href="#id30"><span class="problematic" id="id31">**</span></a>kwargs<span class="classifier"></span></dt><dd><p>Other arguments.</p>
+</dd>
+</dl>
+</section>
+<section id="id32">
+<h3>Returns<a class="headerlink" href="#id32" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>int</dt><dd><p>10^9·nFeatures + (the average of tree leaves)</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="hybparsimony.util.complexity.svm_complexity">
+<span class="sig-prename descclassname"><span class="pre">hybparsimony.util.complexity.</span></span><span class="sig-name descname"><span class="pre">svm_complexity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nFeatures</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/hybparsimony/util/complexity.html#svm_complexity"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hybparsimony.util.complexity.svm_complexity" title="Permalink to this definition"></a></dt>
+<dd><p>Complexity function for SVM models.</p>
+<section id="id33">
+<h3>Parameters<a class="headerlink" href="#id33" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>model<span class="classifier">model</span></dt><dd><p>The model from which the internal complexity is calculated.</p>
+</dd>
+<dt>nFeatures<span class="classifier">int</span></dt><dd><p>The number of the selected features.</p>
+</dd>
+<dt><a href="#id34"><span class="problematic" id="id35">**</span></a>kwargs<span class="classifier"></span></dt><dd><p>Other arguments.</p>
+</dd>
+</dl>
+</section>
+<section id="id36">
+<h3>Returns<a class="headerlink" href="#id36" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>int</dt><dd><p>10^9·nFeatures + (number of support vectors)</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="hybparsimony.util.complexity.xgboost_complexity">
+<span class="sig-prename descclassname"><span class="pre">hybparsimony.util.complexity.</span></span><span class="sig-name descname"><span class="pre">xgboost_complexity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nFeatures</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/hybparsimony/util/complexity.html#xgboost_complexity"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hybparsimony.util.complexity.xgboost_complexity" title="Permalink to this definition"></a></dt>
+<dd><p>Complexity function for XGBoost model.</p>
+<section id="id37">
+<h3>Parameters<a class="headerlink" href="#id37" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>model<span class="classifier">model</span></dt><dd><p>The model from which the internal complexity is calculated.</p>
+</dd>
+<dt>nFeatures<span class="classifier">int</span></dt><dd><p>The number of the selected features.</p>
+</dd>
+<dt><a href="#id38"><span class="problematic" id="id39">**</span></a>kwargs<span class="classifier"></span></dt><dd><p>Other arguments.</p>
+</dd>
+</dl>
+</section>
+<section id="id40">
+<h3>Returns<a class="headerlink" href="#id40" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>int</dt><dd><p>10^9·nFeatures + (the average of tree leaves * number of trees) (Experimental)</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+</section>
+<section id="module-hybparsimony.util.fitness">
+<span id="hybparsimony-util-fitness-module"></span><h2>hybparsimony.util.fitness module<a class="headerlink" href="#module-hybparsimony.util.fitness" title="Permalink to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="hybparsimony.util.fitness.fitness_for_parallel">
+<span class="sig-prename descclassname"><span class="pre">hybparsimony.util.fitness.</span></span><span class="sig-name descname"><span class="pre">fitness_for_parallel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">algorithm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">complexity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">custom_eval_fun=&lt;function</span> <span class="pre">cross_val_score&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cromosoma=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ignore_warnings=True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/hybparsimony/util/fitness.html#fitness_for_parallel"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hybparsimony.util.fitness.fitness_for_parallel" title="Permalink to this definition"></a></dt>
+<dd><blockquote>
+<div><p>Fitness function for hybparsimony similar to ‘getFitness()’ without being nested, to allow the pickle and therefore the parallelism.</p>
+</div></blockquote>
+<section id="id41">
+<h3>Parameters<a class="headerlink" href="#id41" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>algorithm<span class="classifier">object</span></dt><dd><p>The machine learning algorithm to optimize.</p>
+</dd>
+<dt>complexity<span class="classifier">function</span></dt><dd><p>A function that calculates the complexity of the model. There are some functions available in <cite>hybparsimony.util.complexity</cite>.</p>
+</dd>
+<dt>custom_eval_fun<span class="classifier">function</span></dt><dd><p>An evaluation function similar to scikit-learns’s ‘cross_val_score()’.</p>
+</dd>
+<dt>cromosoma: population.Chromosome class</dt><dd><p>Solution’s chromosome.</p>
+</dd>
+<dt>X<span class="classifier">{array-like, dataframe} of shape (n_samples, n_features)</span></dt><dd><p>Input matrix.</p>
+</dd>
+<dt>y<span class="classifier">{array-like, dataframe} of shape (n_samples,)</span></dt><dd><p>Target values (class labels in classification, real numbers in regression).</p>
+</dd>
+<dt>ignore_warnings: True</dt><dd><p>If ignore warnings.</p>
+</dd>
+</dl>
+</section>
+<section id="id42">
+<h3>Returns<a class="headerlink" href="#id42" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>float</dt><dd><p>np.array([model’s fitness value (J), model’s complexity]), model</p>
+</dd>
+</dl>
+</section>
+<section id="examples">
+<h3>Examples<a class="headerlink" href="#examples" title="Permalink to this heading"></a></h3>
+<p>import pandas as pd
+import numpy as np
+from sklearn.datasets import load_breast_cancer
+from sklearn.svm import SVC
+from sklearn.model_selection import cross_val_score
+from hybparsimony import hybparsimony
+from hybparsimony.util import svm_complexity, population
+from hybparsimony.util.fitness import fitness_for_parallel
+# load ‘breast_cancer’ dataset
+breast_cancer = load_breast_cancer()
+X, y = breast_cancer.data, breast_cancer.target
+chromosome = population.Chromosome(params = [1.0, 0.2],</p>
+<blockquote>
+<div><p>name_params = [‘C’,’gamma’],
+const = {‘kernel’:’rbf’},
+cols= np.random.uniform(size=X.shape[1])&gt;0.50,
+name_cols = breast_cancer.feature_names)</p>
+</div></blockquote>
+<dl class="simple">
+<dt>print(fitness_for_parallel(SVC, svm_complexity, </dt><dd><p>custom_eval_fun=cross_val_score,
+cromosoma=chromosome, X=X, y=y))</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="hybparsimony.util.fitness.getFitness">
+<span class="sig-prename descclassname"><span class="pre">hybparsimony.util.fitness.</span></span><span class="sig-name descname"><span class="pre">getFitness</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">algorithm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">complexity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">custom_eval_fun=&lt;function</span> <span class="pre">cross_val_score&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ignore_warnings=True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/hybparsimony/util/fitness.html#getFitness"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hybparsimony.util.fitness.getFitness" title="Permalink to this definition"></a></dt>
+<dd><blockquote>
+<div><p>Fitness function for hybparsimony.</p>
+</div></blockquote>
+<section id="id43">
+<h3>Parameters<a class="headerlink" href="#id43" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>algorithm<span class="classifier">object</span></dt><dd><p>The machine learning algorithm to optimize.</p>
+</dd>
+<dt>complexity<span class="classifier">function</span></dt><dd><p>A function that calculates the complexity of the model. There are some functions available in <cite>hybparsimony.util.complexity</cite>.</p>
+</dd>
+<dt>custom_eval_fun<span class="classifier">function</span></dt><dd><p>An evaluation function similar to scikit-learns’s ‘cross_val_score()’</p>
+</dd>
+</dl>
+</section>
+<section id="id44">
+<h3>Returns<a class="headerlink" href="#id44" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>float</dt><dd><p>np.array([model’s fitness value (J), model’s complexity]), model</p>
+</dd>
+</dl>
+</section>
+<section id="id45">
+<h3>Examples<a class="headerlink" href="#id45" title="Permalink to this heading"></a></h3>
+<p>Usage example for a binary classification model</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">load_breast_cancer</span>
+<span class="kn">from</span> <span class="nn">sklearn.svm</span> <span class="kn">import</span> <span class="n">SVC</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">cross_val_score</span>
+<span class="kn">from</span> <span class="nn">hybparsimony</span> <span class="kn">import</span> <span class="n">hybparsimony</span>
+<span class="kn">from</span> <span class="nn">hybparsimony.util</span> <span class="kn">import</span> <span class="n">getFitness</span><span class="p">,</span> <span class="n">svm_complexity</span><span class="p">,</span> <span class="n">population</span>
+<span class="c1"># load &#39;breast_cancer&#39; dataset</span>
+<span class="n">breast_cancer</span> <span class="o">=</span> <span class="n">load_breast_cancer</span><span class="p">()</span>
+<span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">breast_cancer</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">breast_cancer</span><span class="o">.</span><span class="n">target</span>
+<span class="n">chromosome</span> <span class="o">=</span> <span class="n">population</span><span class="o">.</span><span class="n">Chromosome</span><span class="p">(</span><span class="n">params</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">],</span>
+                                <span class="n">name_params</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;C&#39;</span><span class="p">,</span><span class="s1">&#39;gamma&#39;</span><span class="p">],</span>
+                                <span class="n">const</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;kernel&#39;</span><span class="p">:</span><span class="s1">&#39;rbf&#39;</span><span class="p">},</span>
+                                <span class="n">cols</span><span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="o">&gt;</span><span class="mf">0.50</span><span class="p">,</span>
+                                <span class="n">name_cols</span> <span class="o">=</span> <span class="n">breast_cancer</span><span class="o">.</span><span class="n">feature_names</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">getFitness</span><span class="p">(</span><span class="n">SVC</span><span class="p">,</span><span class="n">svm_complexity</span><span class="p">)(</span><span class="n">chromosome</span><span class="p">,</span> <span class="n">X</span><span class="o">=</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="p">))</span>
+</pre></div>
+</div>
+</section>
+</dd></dl>
+
+</section>
+<section id="module-hybparsimony.util.hyb_aux">
+<span id="hybparsimony-util-hyb-aux-module"></span><h2>hybparsimony.util.hyb_aux module<a class="headerlink" href="#module-hybparsimony.util.hyb_aux" title="Permalink to this heading"></a></h2>
+</section>
+<section id="module-hybparsimony.util.models">
+<span id="hybparsimony-util-models-module"></span><h2>hybparsimony.util.models module<a class="headerlink" href="#module-hybparsimony.util.models" title="Permalink to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="hybparsimony.util.models.check_algorithm">
+<span class="sig-prename descclassname"><span class="pre">hybparsimony.util.models.</span></span><span class="sig-name descname"><span class="pre">check_algorithm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">algorithm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_classification</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/hybparsimony/util/models.html#check_algorithm"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hybparsimony.util.models.check_algorithm" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-hybparsimony.util.order">
+<span id="hybparsimony-util-order-module"></span><h2>hybparsimony.util.order module<a class="headerlink" href="#module-hybparsimony.util.order" title="Permalink to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="hybparsimony.util.order.order">
+<span class="sig-prename descclassname"><span class="pre">hybparsimony.util.order.</span></span><span class="sig-name descname"><span class="pre">order</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kind</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'heapsort'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">decreasing</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">na_last</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/hybparsimony/util/order.html#order"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hybparsimony.util.order.order" title="Permalink to this definition"></a></dt>
+<dd><p>Function to order vectors</p>
+<p>This function is an overload of <cite>numpy.argsort</cite> sorting method allowing increasing 
+and decreasing ordering and allowing nan values to be placed at the end and at the beginning.</p>
+<section id="id46">
+<h3>Parameters<a class="headerlink" href="#id46" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>obj<span class="classifier">numpy.array</span></dt><dd><p>Array to order.</p>
+</dd>
+<dt>kind<span class="classifier">{‘quicksort’, ‘mergesort’, ‘heapsort’, ‘stable’}, optional</span></dt><dd><p>Sorting algorithm. The default is <cite>heapsort</cite>. Note that both ‘stable’ and ‘mergesort’ use timsort 
+under the covers and, in general, the actual implementation will vary with data type.</p>
+</dd>
+<dt>decreasing<span class="classifier">bool, optional</span></dt><dd><p>If we want decreasing order.</p>
+</dd>
+<dt>na_last<span class="classifier">bool, optional</span></dt><dd><p>For controlling the treatment of <cite>NA’s</cite>. If <cite>True</cite>, missing values in the data are put last, if <cite>False</cite>, they are put first.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+</section>
+<section id="module-hybparsimony.util.parsimony_monitor">
+<span id="hybparsimony-util-parsimony-monitor-module"></span><h2>hybparsimony.util.parsimony_monitor module<a class="headerlink" href="#module-hybparsimony.util.parsimony_monitor" title="Permalink to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="hybparsimony.util.parsimony_monitor.parsimony_monitor">
+<span class="sig-prename descclassname"><span class="pre">hybparsimony.util.parsimony_monitor.</span></span><span class="sig-name descname"><span class="pre">parsimony_monitor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">iter</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">current_best_score</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">current_best_complexity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fitnessval</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bestfitnessVal</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bestcomplexity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">minutes_gen</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">digits</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">6</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/hybparsimony/util/parsimony_monitor.html#parsimony_monitor"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hybparsimony.util.parsimony_monitor.parsimony_monitor" title="Permalink to this definition"></a></dt>
+<dd><p>Functions for monitoring HYB-PARSIMONY algorithm evolution</p>
+<p>Functions to print summary statistics of fitness values at each iteration of a GA search.</p>
+<section id="id47">
+<h3>Parameters<a class="headerlink" href="#id47" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>iter: int</dt><dd><p>Iteration.</p>
+</dd>
+<dt>current_best_score: float</dt><dd><p>The best score in the whole process (score of the best model).</p>
+</dd>
+<dt>current_best_complexity: float</dt><dd><p>The complexity of the best model in the whole process.</p>
+</dd>
+<dt>fitnessval: list</dt><dd><p>Fitness values of the population in that iteration.</p>
+</dd>
+<dt>bestfitnessVal: float</dt><dd><p>Best fitness value in this iteration (score of the best model in that iteration)</p>
+</dd>
+<dt>bestcomplexity: float</dt><dd><p>The complexity of the best model in that iteration.</p>
+</dd>
+<dt>minutes_gen: float</dt><dd><p>Time in minutes of that iteration.</p>
+</dd>
+<dt>digits<span class="classifier">int</span></dt><dd><p>Minimal number of significant digits.</p>
+</dd>
+<dt><a href="#id48"><span class="problematic" id="id49">*</span></a>args :</dt><dd><p>Further arguments passed to or from other methods.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="hybparsimony.util.parsimony_monitor.parsimony_summary">
+<span class="sig-prename descclassname"><span class="pre">hybparsimony.util.parsimony_monitor.</span></span><span class="sig-name descname"><span class="pre">parsimony_summary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fitnessval</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">complexity</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/hybparsimony/util/parsimony_monitor.html#parsimony_summary"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hybparsimony.util.parsimony_monitor.parsimony_summary" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-hybparsimony.util.population">
+<span id="hybparsimony-util-population-module"></span><h2>hybparsimony.util.population module<a class="headerlink" href="#module-hybparsimony.util.population" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="hybparsimony.util.population.Chromosome">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">hybparsimony.util.population.</span></span><span class="sig-name descname"><span class="pre">Chromosome</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name_params</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">const</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cols</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name_cols</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/hybparsimony/util/population.html#Chromosome"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hybparsimony.util.population.Chromosome" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py property">
+<dt class="sig sig-object py" id="hybparsimony.util.population.Chromosome.columns">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">columns</span></span><a class="headerlink" href="#hybparsimony.util.population.Chromosome.columns" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="hybparsimony.util.population.Chromosome.params">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">params</span></span><a class="headerlink" href="#hybparsimony.util.population.Chromosome.params" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="hybparsimony.util.population.Population">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">hybparsimony.util.population.</span></span><span class="sig-name descname"><span class="pre">Population</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">columns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">population</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/hybparsimony/util/population.html#Population"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hybparsimony.util.population.Population" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hybparsimony.util.population.Population.CATEGORICAL">
+<span class="sig-name descname"><span class="pre">CATEGORICAL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#hybparsimony.util.population.Population.CATEGORICAL" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hybparsimony.util.population.Population.CONSTANT">
+<span class="sig-name descname"><span class="pre">CONSTANT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em><a class="headerlink" href="#hybparsimony.util.population.Population.CONSTANT" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hybparsimony.util.population.Population.FLOAT">
+<span class="sig-name descname"><span class="pre">FLOAT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#hybparsimony.util.population.Population.FLOAT" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hybparsimony.util.population.Population.INTEGER">
+<span class="sig-name descname"><span class="pre">INTEGER</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#hybparsimony.util.population.Population.INTEGER" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hybparsimony.util.population.Population.POWER">
+<span class="sig-name descname"><span class="pre">POWER</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4</span></em><a class="headerlink" href="#hybparsimony.util.population.Population.POWER" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hybparsimony.util.population.Population.getChromosome">
+<span class="sig-name descname"><span class="pre">getChromosome</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/hybparsimony/util/population.html#Population.getChromosome"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hybparsimony.util.population.Population.getChromosome" title="Permalink to this definition"></a></dt>
+<dd><p>This method returns a chromosome from the population.</p>
+<section id="id50">
+<h3>Parameters<a class="headerlink" href="#id50" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>key<span class="classifier">int</span></dt><dd><p>Chromosome row index .</p>
+</dd>
+</dl>
+</section>
+<section id="id51">
+<h3>Returns<a class="headerlink" href="#id51" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>Chromosome</dt><dd><p>A <cite>Chromosome</cite> object.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="hybparsimony.util.population.Population.paramsnames">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">paramsnames</span></span><a class="headerlink" href="#hybparsimony.util.population.Population.paramsnames" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="hybparsimony.util.population.Population.population">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">population</span></span><a class="headerlink" href="#hybparsimony.util.population.Population.population" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hybparsimony.util.population.Population.update_to_feat_thres">
+<span class="sig-name descname"><span class="pre">update_to_feat_thres</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">popSize</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">feat_thres</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/hybparsimony/util/population.html#Population.update_to_feat_thres"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hybparsimony.util.population.Population.update_to_feat_thres" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-hybparsimony.util">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-hybparsimony.util" title="Permalink to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="hybparsimony.util.order">
+<span class="sig-prename descclassname"><span class="pre">hybparsimony.util.</span></span><span class="sig-name descname"><span class="pre">order</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kind</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'heapsort'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">decreasing</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">na_last</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/hybparsimony/util/order.html#order"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hybparsimony.util.order" title="Permalink to this definition"></a></dt>
+<dd><p>Function to order vectors</p>
+<p>This function is an overload of <cite>numpy.argsort</cite> sorting method allowing increasing 
+and decreasing ordering and allowing nan values to be placed at the end and at the beginning.</p>
+<section id="id52">
+<h3>Parameters<a class="headerlink" href="#id52" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>obj<span class="classifier">numpy.array</span></dt><dd><p>Array to order.</p>
+</dd>
+<dt>kind<span class="classifier">{‘quicksort’, ‘mergesort’, ‘heapsort’, ‘stable’}, optional</span></dt><dd><p>Sorting algorithm. The default is <cite>heapsort</cite>. Note that both ‘stable’ and ‘mergesort’ use timsort 
+under the covers and, in general, the actual implementation will vary with data type.</p>
+</dd>
+<dt>decreasing<span class="classifier">bool, optional</span></dt><dd><p>If we want decreasing order.</p>
+</dd>
+<dt>na_last<span class="classifier">bool, optional</span></dt><dd><p>For controlling the treatment of <cite>NA’s</cite>. If <cite>True</cite>, missing values in the data are put last, if <cite>False</cite>, they are put first.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="hybparsimony.util.parsimony_monitor">
+<span class="sig-prename descclassname"><span class="pre">hybparsimony.util.</span></span><span class="sig-name descname"><span class="pre">parsimony_monitor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">iter</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">current_best_score</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">current_best_complexity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fitnessval</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bestfitnessVal</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bestcomplexity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">minutes_gen</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">digits</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">6</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/hybparsimony/util/parsimony_monitor.html#parsimony_monitor"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hybparsimony.util.parsimony_monitor" title="Permalink to this definition"></a></dt>
+<dd><p>Functions for monitoring HYB-PARSIMONY algorithm evolution</p>
+<p>Functions to print summary statistics of fitness values at each iteration of a GA search.</p>
+<section id="id53">
+<h3>Parameters<a class="headerlink" href="#id53" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>iter: int</dt><dd><p>Iteration.</p>
+</dd>
+<dt>current_best_score: float</dt><dd><p>The best score in the whole process (score of the best model).</p>
+</dd>
+<dt>current_best_complexity: float</dt><dd><p>The complexity of the best model in the whole process.</p>
+</dd>
+<dt>fitnessval: list</dt><dd><p>Fitness values of the population in that iteration.</p>
+</dd>
+<dt>bestfitnessVal: float</dt><dd><p>Best fitness value in this iteration (score of the best model in that iteration)</p>
+</dd>
+<dt>bestcomplexity: float</dt><dd><p>The complexity of the best model in that iteration.</p>
+</dd>
+<dt>minutes_gen: float</dt><dd><p>Time in minutes of that iteration.</p>
+</dd>
+<dt>digits<span class="classifier">int</span></dt><dd><p>Minimal number of significant digits.</p>
+</dd>
+<dt><a href="#id54"><span class="problematic" id="id55">*</span></a>args :</dt><dd><p>Further arguments passed to or from other methods.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="hybparsimony.lhs.util.html" class="btn btn-neutral float-left" title="hybparsimony.lhs.util package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Jose Divasón.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

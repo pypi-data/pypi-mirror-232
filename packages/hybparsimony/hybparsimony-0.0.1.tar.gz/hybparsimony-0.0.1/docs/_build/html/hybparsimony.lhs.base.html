@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>hybparsimony.lhs.base package &mdash; HYBparsimony Documentation  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="hybparsimony.lhs.util package" href="hybparsimony.lhs.util.html" />
+    <link rel="prev" title="hybparsimony.lhs package" href="hybparsimony.lhs.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            HYBparsimony Documentation
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="hybparsimony.html">hybparsimony package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="hybparsimony.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="hybparsimony.lhs.html">hybparsimony.lhs package</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="hybparsimony.lhs.html#subpackages">Subpackages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hybparsimony.lhs.html#module-hybparsimony.lhs">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="hybparsimony.util.html">hybparsimony.util package</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="hybparsimony.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hybparsimony.html#hybparsimony-examples-module">hybparsimony.Examples module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hybparsimony.html#module-hybparsimony.hybparsimony">hybparsimony.hybparsimony module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hybparsimony.html#module-hybparsimony">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="hybparsimony.util.html">hybparsimony.util package</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="hybparsimony.lhs.html">hybparsimony.lhs package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="hybparsimony.lhs.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">hybparsimony.lhs.base package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-hybparsimony.lhs.base.geneticLHS">hybparsimony.lhs.base.geneticLHS module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-hybparsimony.lhs.base.improvedLHS">hybparsimony.lhs.base.improvedLHS module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-hybparsimony.lhs.base.maximinLHS">hybparsimony.lhs.base.maximinLHS module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-hybparsimony.lhs.base.optimumLHS">hybparsimony.lhs.base.optimumLHS module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-hybparsimony.lhs.base.randomLHS">hybparsimony.lhs.base.randomLHS module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-hybparsimony.lhs.base">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="hybparsimony.lhs.util.html">hybparsimony.lhs.util package</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="hybparsimony.lhs.html#module-hybparsimony.lhs">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">HYBparsimony Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="hybparsimony.html">hybparsimony package</a></li>
+          <li class="breadcrumb-item"><a href="hybparsimony.lhs.html">hybparsimony.lhs package</a></li>
+      <li class="breadcrumb-item active">hybparsimony.lhs.base package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/hybparsimony.lhs.base.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="hybparsimony-lhs-base-package">
+<h1>hybparsimony.lhs.base package<a class="headerlink" href="#hybparsimony-lhs-base-package" title="Permalink to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading"></a></h2>
+</section>
+<section id="module-hybparsimony.lhs.base.geneticLHS">
+<span id="hybparsimony-lhs-base-geneticlhs-module"></span><h2>hybparsimony.lhs.base.geneticLHS module<a class="headerlink" href="#module-hybparsimony.lhs.base.geneticLHS" title="Permalink to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="hybparsimony.lhs.base.geneticLHS.geneticLHS">
+<span class="sig-prename descclassname"><span class="pre">hybparsimony.lhs.base.geneticLHS.</span></span><span class="sig-name descname"><span class="pre">geneticLHS</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pop</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gen</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pMut</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">criterium</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'S'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/hybparsimony/lhs/base/geneticLHS.html#geneticLHS"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hybparsimony.lhs.base.geneticLHS.geneticLHS" title="Permalink to this definition"></a></dt>
+<dd><p>Latin Hypercube Sampling with a Genetic Algorithm</p>
+<p>Draws a Latin Hypercube Sample from a set of uniform distributions for use in creating 
+a LatinHypercube Design.  This function attempts to optimize the sample with respect 
+to the S optimalitycriterion through a genetic type algorithm.</p>
+<section id="parameters">
+<h3>Parameters<a class="headerlink" href="#parameters" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>n<span class="classifier">int</span></dt><dd><p>The number of rows or samples.</p>
+</dd>
+<dt>k<span class="classifier">int</span></dt><dd><p>The number of columns or parameters/variables.</p>
+</dd>
+<dt>pop<span class="classifier">int, optional</span></dt><dd><p>The number of designs in the initial population. Default <cite>100</cite>.</p>
+</dd>
+<dt>gen<span class="classifier">int, optional</span></dt><dd><p>The number of generations over which the algorithm is applied. Default <cite>4</cite>.</p>
+</dd>
+<dt>pMut<span class="classifier">float, optional</span></dt><dd><p>The probability with which a mutation occurs in a column of the progeny. Default <cite>0.1</cite>.</p>
+</dd>
+<dt>criterium<span class="classifier">str, {‘S’, ‘Maximin’}, optional</span></dt><dd><p>The optimality criterium of the algorithm. Default is <cite>‘S’</cite>. Maximin is also supported.</p>
+</dd>
+<dt>seed<span class="classifier">int, optional</span></dt><dd><p>Random seed. Default <cite>None</cite>.</p>
+</dd>
+</dl>
+</section>
+<section id="returns">
+<h3>Returns<a class="headerlink" href="#returns" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>numpy.array</dt><dd><p>A <cite>numpy.array</cite> of <cite>float</cite> with shape <cite>(n, k)</cite>.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+</section>
+<section id="module-hybparsimony.lhs.base.improvedLHS">
+<span id="hybparsimony-lhs-base-improvedlhs-module"></span><h2>hybparsimony.lhs.base.improvedLHS module<a class="headerlink" href="#module-hybparsimony.lhs.base.improvedLHS" title="Permalink to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="hybparsimony.lhs.base.improvedLHS.improvedLHS">
+<span class="sig-prename descclassname"><span class="pre">hybparsimony.lhs.base.improvedLHS.</span></span><span class="sig-name descname"><span class="pre">improvedLHS</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dup</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/hybparsimony/lhs/base/improvedLHS.html#improvedLHS"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hybparsimony.lhs.base.improvedLHS.improvedLHS" title="Permalink to this definition"></a></dt>
+<dd><p>Improved Latin Hypercube Sample</p>
+<p>Draws a Latin Hypercube Sample from a set of uniform distributions for use in creating a Latin
+Hypercube Design. This function attempts to optimize the sample with respect to 
+an optimum euclidean distance between design points.</p>
+<section id="id1">
+<h3>Parameters<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>n<span class="classifier">int</span></dt><dd><p>The number of rows or samples.</p>
+</dd>
+<dt>k<span class="classifier">int</span></dt><dd><p>The number of columns or parameters/variables.</p>
+</dd>
+<dt>dup<span class="classifier">int, optional</span></dt><dd><p>A factor that determines the number of candidate points used in the search. 
+A multiple of the number of remaining points than can be added. Default <cite>1</cite>.</p>
+</dd>
+<dt>seed<span class="classifier">int, optional</span></dt><dd><p>Random seed. Default <cite>None</cite>.</p>
+</dd>
+</dl>
+</section>
+<section id="id2">
+<h3>Returns<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>numpy.array</dt><dd><p>A <cite>numpy.array</cite> of <cite>float</cite> with shape <cite>(n, k)</cite>.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+</section>
+<section id="module-hybparsimony.lhs.base.maximinLHS">
+<span id="hybparsimony-lhs-base-maximinlhs-module"></span><h2>hybparsimony.lhs.base.maximinLHS module<a class="headerlink" href="#module-hybparsimony.lhs.base.maximinLHS" title="Permalink to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="hybparsimony.lhs.base.maximinLHS.maximinLHS">
+<span class="sig-prename descclassname"><span class="pre">hybparsimony.lhs.base.maximinLHS.</span></span><span class="sig-name descname"><span class="pre">maximinLHS</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dup</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/hybparsimony/lhs/base/maximinLHS.html#maximinLHS"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hybparsimony.lhs.base.maximinLHS.maximinLHS" title="Permalink to this definition"></a></dt>
+<dd><p>Maximin Latin Hypercube Sample</p>
+<p>Draws a Latin Hypercube Sample from a set of uniform distributions for use in creating 
+a Latin Hypercube Design. This function attempts to optimize the sample by 
+maximizing the minium distance between design points (maximin criteria).</p>
+<section id="id3">
+<h3>Parameters<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>n<span class="classifier">int</span></dt><dd><p>The number of rows or samples.</p>
+</dd>
+<dt>k<span class="classifier">int</span></dt><dd><p>The number of columns or parameters/variables.</p>
+</dd>
+<dt>dup<span class="classifier">int, optional</span></dt><dd><p>A factor that determines the number of candidate points used in the search. 
+A multiple of the number of remaining points than can be added. Default <cite>1</cite>.</p>
+</dd>
+<dt>seed<span class="classifier">int, optional</span></dt><dd><p>Random seed. Default <cite>None</cite>.</p>
+</dd>
+</dl>
+</section>
+<section id="id4">
+<h3>Returns<a class="headerlink" href="#id4" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>numpy.array</dt><dd><p>An <cite>n</cite> by <cite>n</cite> Latin Hypercube Sample matrix with values uniformly distributed on <cite>[0,1]</cite>.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+</section>
+<section id="module-hybparsimony.lhs.base.optimumLHS">
+<span id="hybparsimony-lhs-base-optimumlhs-module"></span><h2>hybparsimony.lhs.base.optimumLHS module<a class="headerlink" href="#module-hybparsimony.lhs.base.optimumLHS" title="Permalink to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="hybparsimony.lhs.base.optimumLHS.optimumLHS">
+<span class="sig-prename descclassname"><span class="pre">hybparsimony.lhs.base.optimumLHS.</span></span><span class="sig-name descname"><span class="pre">optimumLHS</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxsweeps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/hybparsimony/lhs/base/optimumLHS.html#optimumLHS"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hybparsimony.lhs.base.optimumLHS.optimumLHS" title="Permalink to this definition"></a></dt>
+<dd><p>Optimum Latin Hypercube Sample</p>
+<p>Draws a Latin Hypercube Sample from a set of uniform distributions for use in creating a LatinHypercube Design. 
+This function uses the Columnwise Pairwise (CP) algorithm to generate an optimal design with respect to the S optimality criterion.</p>
+<section id="id5">
+<h3>Parameters<a class="headerlink" href="#id5" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>n<span class="classifier">int</span></dt><dd><p>The number of partitions (simulations or design points or rows).</p>
+</dd>
+<dt>k<span class="classifier">int</span></dt><dd><p>The number of replications (variables or columns).</p>
+</dd>
+<dt>maxsweeps<span class="classifier">int, optional</span></dt><dd><p>The maximum number of times the CP algorithm is applied to all the columns. Default <cite>2</cite></p>
+</dd>
+<dt>eps<span class="classifier">float, optional</span></dt><dd><p>The optimal stopping criterion. Algorithm stops when the change in optimality
+measure is less than <cite>eps*100%</cite> of the previous value. Default <cite>0.01</cite></p>
+</dd>
+<dt>seed<span class="classifier">int, optional</span></dt><dd><p>Random seed. Default <cite>None</cite>.</p>
+</dd>
+</dl>
+</section>
+<section id="id6">
+<h3>Returns<a class="headerlink" href="#id6" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>numpy.array</dt><dd><p>An <cite>n</cite> by <cite>n</cite> Latin Hypercube Sample matrix with values uniformly distributed on <cite>[0,1]</cite>.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+</section>
+<section id="module-hybparsimony.lhs.base.randomLHS">
+<span id="hybparsimony-lhs-base-randomlhs-module"></span><h2>hybparsimony.lhs.base.randomLHS module<a class="headerlink" href="#module-hybparsimony.lhs.base.randomLHS" title="Permalink to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="hybparsimony.lhs.base.randomLHS.randomLHS">
+<span class="sig-prename descclassname"><span class="pre">hybparsimony.lhs.base.randomLHS.</span></span><span class="sig-name descname"><span class="pre">randomLHS</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bPreserveDraw</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/hybparsimony/lhs/base/randomLHS.html#randomLHS"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hybparsimony.lhs.base.randomLHS.randomLHS" title="Permalink to this definition"></a></dt>
+<dd><p>Construct a random Latin hypercube design</p>
+<p><cite>randomLHS(4,3)</cite> returns a 4x3 matrix with each column constructed as follows: A random per-mutation of (1,2,3,4) 
+is generated, say (3,1,2,4) for each of K columns. Then a uniform randomnumber is picked from each indicated 
+quartile. In this example a random number between <cite>0.5</cite> and <cite>0.75</cite> is chosen, then one between <cite>0 `and `0.25</cite>, then one 
+between <cite>0.25</cite> and <cite>0.5</cite>, finally one between <cite>0.75</cite> and <cite>1</cite>.</p>
+<section id="id7">
+<h3>Parameters<a class="headerlink" href="#id7" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>n<span class="classifier">int</span></dt><dd><p>The number of rows or samples.</p>
+</dd>
+<dt>k<span class="classifier">int</span></dt><dd><p>The number of columns or parameters/variables.</p>
+</dd>
+<dt>bPreserveDraw<span class="classifier">bool, optional</span></dt><dd><p>Should the draw be constructed so that it is the same for variable numbers of columns?. Default <cite>False</cite></p>
+</dd>
+<dt>seed<span class="classifier">int, optional</span></dt><dd><p>Random seed. Default <cite>None</cite>.</p>
+</dd>
+</dl>
+</section>
+<section id="id8">
+<h3>Returns<a class="headerlink" href="#id8" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>numpy.array</dt><dd><p>A <cite>numpy.array</cite> of <cite>float</cite> with shape <cite>(n, k)</cite>.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="hybparsimony.lhs.base.randomLHS.randomLHS_int">
+<span class="sig-prename descclassname"><span class="pre">hybparsimony.lhs.base.randomLHS.</span></span><span class="sig-name descname"><span class="pre">randomLHS_int</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/hybparsimony/lhs/base/randomLHS.html#randomLHS_int"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hybparsimony.lhs.base.randomLHS.randomLHS_int" title="Permalink to this definition"></a></dt>
+<dd><p>Construct a random Latin hypercube design</p>
+<p><cite>randomLHS(4,3)</cite> returns a 4x3 matrix with each column constructed as follows: A random per-mutation of (1,2,3,4) 
+is generated, say (3,1,2,4) for each of K columns. Then a uniform randomnumber is picked from each indicated 
+quartile. In this example a random number between <cite>0.5</cite> and <cite>0.75</cite> is chosen, then one between <cite>0 `and `0.25</cite>, then one 
+between <cite>0.25</cite> and <cite>0.5</cite>, finally one between <cite>0.75</cite> and <cite>1</cite>.</p>
+<section id="id9">
+<h3>Parameters<a class="headerlink" href="#id9" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>n<span class="classifier">int</span></dt><dd><p>The number of rows or samples.</p>
+</dd>
+<dt>k<span class="classifier">int</span></dt><dd><p>The number of columns or parameters/variables.</p>
+</dd>
+<dt>seed<span class="classifier">int, optional</span></dt><dd><p>Random seed. Default <cite>None</cite>.</p>
+</dd>
+</dl>
+</section>
+<section id="id10">
+<h3>Returns<a class="headerlink" href="#id10" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>numpy.array</dt><dd><p>A <cite>numpy.array</cite> of <cite>int</cite> with shape <cite>(n, k)</cite>.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+</section>
+<section id="module-hybparsimony.lhs.base">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-hybparsimony.lhs.base" title="Permalink to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="hybparsimony.lhs.html" class="btn btn-neutral float-left" title="hybparsimony.lhs package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="hybparsimony.lhs.util.html" class="btn btn-neutral float-right" title="hybparsimony.lhs.util package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Jose Divasón.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

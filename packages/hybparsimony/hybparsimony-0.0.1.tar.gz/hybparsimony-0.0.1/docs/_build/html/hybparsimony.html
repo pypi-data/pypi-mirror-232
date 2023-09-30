@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>hybparsimony package &mdash; HYBparsimony Documentation  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="hybparsimony.lhs package" href="hybparsimony.lhs.html" />
+    <link rel="prev" title="Welcome to HYBparsimony Documentation’s documentation!" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            HYBparsimony Documentation
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">hybparsimony package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="hybparsimony.lhs.html">hybparsimony.lhs package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hybparsimony.util.html">hybparsimony.util package</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hybparsimony-examples-module">hybparsimony.Examples module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-hybparsimony.hybparsimony">hybparsimony.hybparsimony module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#references">References</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hybparsimony.hybparsimony.HYBparsimony"><code class="docutils literal notranslate"><span class="pre">HYBparsimony</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#hybparsimony.hybparsimony.HYBparsimony.__init__"><code class="docutils literal notranslate"><span class="pre">HYBparsimony.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hybparsimony.hybparsimony.HYBparsimony.fit"><code class="docutils literal notranslate"><span class="pre">HYBparsimony.fit()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hybparsimony.hybparsimony.HYBparsimony.predict"><code class="docutils literal notranslate"><span class="pre">HYBparsimony.predict()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hybparsimony.hybparsimony.HYBparsimony.predict_proba"><code class="docutils literal notranslate"><span class="pre">HYBparsimony.predict_proba()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#hybparsimony.hybparsimony.multinomial"><code class="docutils literal notranslate"><span class="pre">multinomial()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-hybparsimony">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="hybparsimony.util.html">hybparsimony.util package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hybparsimony.lhs.html">hybparsimony.lhs package</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">HYBparsimony Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">hybparsimony package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/hybparsimony.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="hybparsimony-package">
+<h1>hybparsimony package<a class="headerlink" href="#hybparsimony-package" title="Permalink to this heading"></a></h1>
+<section id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="hybparsimony.lhs.html">hybparsimony.lhs package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="hybparsimony.lhs.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="hybparsimony.lhs.base.html">hybparsimony.lhs.base package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="hybparsimony.lhs.base.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hybparsimony.lhs.base.html#module-hybparsimony.lhs.base.geneticLHS">hybparsimony.lhs.base.geneticLHS module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hybparsimony.lhs.base.html#module-hybparsimony.lhs.base.improvedLHS">hybparsimony.lhs.base.improvedLHS module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hybparsimony.lhs.base.html#module-hybparsimony.lhs.base.maximinLHS">hybparsimony.lhs.base.maximinLHS module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hybparsimony.lhs.base.html#module-hybparsimony.lhs.base.optimumLHS">hybparsimony.lhs.base.optimumLHS module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hybparsimony.lhs.base.html#module-hybparsimony.lhs.base.randomLHS">hybparsimony.lhs.base.randomLHS module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hybparsimony.lhs.base.html#module-hybparsimony.lhs.base">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="hybparsimony.lhs.util.html">hybparsimony.lhs.util package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="hybparsimony.lhs.util.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hybparsimony.lhs.util.html#module-hybparsimony.lhs.util.bclib">hybparsimony.lhs.util.bclib module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hybparsimony.lhs.util.html#module-hybparsimony.lhs.util.utilityLHS">hybparsimony.lhs.util.utilityLHS module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hybparsimony.lhs.util.html#module-hybparsimony.lhs.util">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="hybparsimony.lhs.html#module-hybparsimony.lhs">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="hybparsimony.util.html">hybparsimony.util package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="hybparsimony.util.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hybparsimony.util.html#module-hybparsimony.util.complexity">hybparsimony.util.complexity module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="hybparsimony.util.html#hybparsimony.util.complexity.decision_tree_complexity"><code class="docutils literal notranslate"><span class="pre">decision_tree_complexity()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="hybparsimony.util.html#hybparsimony.util.complexity.generic_complexity"><code class="docutils literal notranslate"><span class="pre">generic_complexity()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="hybparsimony.util.html#hybparsimony.util.complexity.kernel_ridge_complexity"><code class="docutils literal notranslate"><span class="pre">kernel_ridge_complexity()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="hybparsimony.util.html#hybparsimony.util.complexity.knn_complexity"><code class="docutils literal notranslate"><span class="pre">knn_complexity()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="hybparsimony.util.html#hybparsimony.util.complexity.linearModels_complexity"><code class="docutils literal notranslate"><span class="pre">linearModels_complexity()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="hybparsimony.util.html#hybparsimony.util.complexity.mlp_complexity"><code class="docutils literal notranslate"><span class="pre">mlp_complexity()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="hybparsimony.util.html#hybparsimony.util.complexity.randomForest_complexity"><code class="docutils literal notranslate"><span class="pre">randomForest_complexity()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="hybparsimony.util.html#hybparsimony.util.complexity.svm_complexity"><code class="docutils literal notranslate"><span class="pre">svm_complexity()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="hybparsimony.util.html#hybparsimony.util.complexity.xgboost_complexity"><code class="docutils literal notranslate"><span class="pre">xgboost_complexity()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="hybparsimony.util.html#module-hybparsimony.util.fitness">hybparsimony.util.fitness module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="hybparsimony.util.html#hybparsimony.util.fitness.fitness_for_parallel"><code class="docutils literal notranslate"><span class="pre">fitness_for_parallel()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="hybparsimony.util.html#hybparsimony.util.fitness.getFitness"><code class="docutils literal notranslate"><span class="pre">getFitness()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="hybparsimony.util.html#module-hybparsimony.util.hyb_aux">hybparsimony.util.hyb_aux module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hybparsimony.util.html#module-hybparsimony.util.models">hybparsimony.util.models module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="hybparsimony.util.html#hybparsimony.util.models.check_algorithm"><code class="docutils literal notranslate"><span class="pre">check_algorithm()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="hybparsimony.util.html#module-hybparsimony.util.order">hybparsimony.util.order module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="hybparsimony.util.html#hybparsimony.util.order.order"><code class="docutils literal notranslate"><span class="pre">order()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="hybparsimony.util.html#module-hybparsimony.util.parsimony_monitor">hybparsimony.util.parsimony_monitor module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="hybparsimony.util.html#hybparsimony.util.parsimony_monitor.parsimony_monitor"><code class="docutils literal notranslate"><span class="pre">parsimony_monitor()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="hybparsimony.util.html#hybparsimony.util.parsimony_monitor.parsimony_summary"><code class="docutils literal notranslate"><span class="pre">parsimony_summary()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="hybparsimony.util.html#module-hybparsimony.util.population">hybparsimony.util.population module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="hybparsimony.util.html#hybparsimony.util.population.Chromosome"><code class="docutils literal notranslate"><span class="pre">Chromosome</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="hybparsimony.util.html#hybparsimony.util.population.Chromosome.columns"><code class="docutils literal notranslate"><span class="pre">Chromosome.columns</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="hybparsimony.util.html#hybparsimony.util.population.Chromosome.params"><code class="docutils literal notranslate"><span class="pre">Chromosome.params</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="hybparsimony.util.html#hybparsimony.util.population.Population"><code class="docutils literal notranslate"><span class="pre">Population</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="hybparsimony.util.html#hybparsimony.util.population.Population.CATEGORICAL"><code class="docutils literal notranslate"><span class="pre">Population.CATEGORICAL</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="hybparsimony.util.html#hybparsimony.util.population.Population.CONSTANT"><code class="docutils literal notranslate"><span class="pre">Population.CONSTANT</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="hybparsimony.util.html#hybparsimony.util.population.Population.FLOAT"><code class="docutils literal notranslate"><span class="pre">Population.FLOAT</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="hybparsimony.util.html#hybparsimony.util.population.Population.INTEGER"><code class="docutils literal notranslate"><span class="pre">Population.INTEGER</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="hybparsimony.util.html#hybparsimony.util.population.Population.POWER"><code class="docutils literal notranslate"><span class="pre">Population.POWER</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="hybparsimony.util.html#hybparsimony.util.population.Population.getChromosome"><code class="docutils literal notranslate"><span class="pre">Population.getChromosome()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="hybparsimony.util.html#hybparsimony.util.population.Population.paramsnames"><code class="docutils literal notranslate"><span class="pre">Population.paramsnames</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="hybparsimony.util.html#hybparsimony.util.population.Population.population"><code class="docutils literal notranslate"><span class="pre">Population.population</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="hybparsimony.util.html#hybparsimony.util.population.Population.update_to_feat_thres"><code class="docutils literal notranslate"><span class="pre">Population.update_to_feat_thres()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="hybparsimony.util.html#module-hybparsimony.util">Module contents</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="hybparsimony.util.html#hybparsimony.util.order"><code class="docutils literal notranslate"><span class="pre">order()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="hybparsimony.util.html#hybparsimony.util.parsimony_monitor"><code class="docutils literal notranslate"><span class="pre">parsimony_monitor()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading"></a></h2>
+</section>
+<section id="hybparsimony-examples-module">
+<h2>hybparsimony.Examples module<a class="headerlink" href="#hybparsimony-examples-module" title="Permalink to this heading"></a></h2>
+</section>
+<section id="module-hybparsimony.hybparsimony">
+<span id="hybparsimony-hybparsimony-module"></span><h2>hybparsimony.hybparsimony module<a class="headerlink" href="#module-hybparsimony.hybparsimony" title="Permalink to this heading"></a></h2>
+<p>hybparsimony for Python is a package for searching accurate parsimonious models by combining feature selection (FS), model
+hyperparameter optimization (HO), and parsimonious model selection (PMS) based on a separate cost and complexity evaluation.</p>
+<p>To improve the search for parsimony, the hybrid method combines GA mechanisms such as selection, crossover and mutation within a PSO-based optimization algorithm that includes a strategy in which the best position of each particle (thus also the best position of each neighborhood) is calculated taking into account not only the goodness-of-fit, but also the parsimony principle.</p>
+<dl class="simple">
+<dt>In hybparsimony, the percentage of variables to be replaced with GA at each iteration $t$ is selected by a decreasing exponential function:</dt><dd><p>$pcrossover=max(0.80 cdot e^{(-Gamma cdot t)}, 0.10)$, that is adjusted by a $Gamma$ parameter (by default $Gamma$ is set to $0.50$). Thus, in the first iterations parsimony is promoted by GA mechanisms, i.e., replacing by crossover a high percentage of particles at the beginning. Subsequently, optimization with PSO becomes more relevant for the improvement of model accuracy. This differs from other hybrid methods in which the crossover is applied between the best individual position of each particle or other approaches in which the worst particles are also replaced by new particles, but at extreme positions.</p>
+</dd>
+</dl>
+<p>Experiments show that, in general, and with a suitable $Gamma$, hybparsimony allows to obtain better, more parsimonious and more robust models compared to other methods. It also reduces the number of iterations and, consequently, the computational effort.</p>
+<section id="references">
+<h3>References<a class="headerlink" href="#references" title="Permalink to this heading"></a></h3>
+<p>Divasón, J., Pernia-Espinoza, A., Martinez-de-Pison, F.J. (2022).
+New Hybrid Methodology Based on Particle Swarm Optimization with Genetic Algorithms to Improve 
+the Search of Parsimonious Models in High-Dimensional Databases.
+In: García Bringas, P., et al. 
+Hybrid Artificial Intelligent Systems. HAIS 2022. 
+Lecture Notes in Computer Science, vol 13469. Springer, Cham.
+[<a class="reference external" href="https://doi.org/10.1007/978-3-031-15471-3_29](https://doi.org/10.1007/978-3-031-15471-3_29">https://doi.org/10.1007/978-3-031-15471-3_29](https://doi.org/10.1007/978-3-031-15471-3_29</a>)</p>
+</section>
+<dl class="py class">
+<dt class="sig sig-object py" id="hybparsimony.hybparsimony.HYBparsimony">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">hybparsimony.hybparsimony.</span></span><span class="sig-name descname"><span class="pre">HYBparsimony</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fitness</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">features</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">algorithm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">custom_eval_fun</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cv</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scoring</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type_ini_pop</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'improvedLHS'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">npart</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">15</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxiter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">250</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">early_stop</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Lambda</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.1931471805599454</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.1931471805599454</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">IW_max</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.9</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">IW_min</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">K</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pmutation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gamma_crossover</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0001</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rerank_error</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-09</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keep_history</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">feat_thres</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.9</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">best_global_thres</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">particles_to_delete</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seed_ini</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1234</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">not_muted</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">feat_mut_thres</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_jobs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/hybparsimony/hybparsimony.html#HYBparsimony"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hybparsimony.hybparsimony.HYBparsimony" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="hybparsimony.hybparsimony.HYBparsimony.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fitness</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">features</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">algorithm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">custom_eval_fun</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cv</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scoring</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type_ini_pop</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'improvedLHS'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">npart</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">15</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxiter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">250</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">early_stop</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Lambda</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.1931471805599454</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.1931471805599454</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">IW_max</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.9</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">IW_min</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">K</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pmutation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gamma_crossover</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0001</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rerank_error</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-09</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keep_history</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">feat_thres</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.9</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">best_global_thres</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">particles_to_delete</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seed_ini</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1234</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">not_muted</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">feat_mut_thres</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_jobs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/hybparsimony/hybparsimony.html#HYBparsimony.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hybparsimony.hybparsimony.HYBparsimony.__init__" title="Permalink to this definition"></a></dt>
+<dd><blockquote>
+<div><p>A class for searching parsimonious models by feature selection and parameter tuning with
+an hybrid method based on genetic algorithms and particle swarm optimization.</p>
+<dl class="simple">
+<dt>fitness<span class="classifier">function, optional</span></dt><dd><p>The fitness function, any function which takes as input a chromosome which combines the model parameters 
+to tune and the features to be selected. Fitness function returns a numerical vector with three values: validation_cost, 
+testing_cost and model_complexity, and the trained model.</p>
+</dd>
+<dt>features<span class="classifier">list of str, default=None</span></dt><dd><p>The name of features/columns in the dataset. If None, it extracts the names if X is a dataframe, otherwise it generates a list of the positions according to the value of X.shape[1].</p>
+</dd>
+<dt>algorithm: string or dict, default=None</dt><dd><p>Id string, the name of the algorithm to optimize (defined in ‘hybparsimony.util.models.py’) or a dictionary defined
+with the following properties: {‘estimator’: any machine learning algorithm compatible with scikit-learn,
+‘complexity’: the function that measures the complexity of the model, ‘the hyperparameters of the algorithm’:
+in this case, they can be fixed values (defined by Population.CONSTANT) or a search range $[min, max]$ 
+defined by {“range”:(min, max), “type”: Population.X} and which type can be of three values: 
+integer (Population.INTEGER), float (Population.FLOAT) or in powers of 10 (Population.POWER), 
+i.e. $10^{[min, max]}$}. If algorithm==None, hybparsimony uses ‘LogisticRegression()’ for
+classification problems, and ‘Ridge’ for regression problems.</p>
+</dd>
+<dt>custom_eval_fun<span class="classifier">function, default=None</span></dt><dd><p>An evaluation function similar to scikit-learns’s ‘cross_val_score()’. If None, hybparsimony uses
+‘cross_val_score(cv=5)’.</p>
+</dd>
+<dt>cv: int, cross-validation generator or an iterable, default=None</dt><dd><p>Determines the cross-validation splitting strategy (see scikit-learn’s ‘cross_val_score()’ function)</p>
+</dd>
+<dt>scoring: str, callable, list, tuple, or dict, default=None.</dt><dd><p>Strategy to evaluate the performance of the cross-validated model on the test set. If None cv=5 and ‘scoring’ is defined as MSE for regression problems, 
+‘log_loss’ for binary classification problems, and ‘f1_macro’ for multiclass problems. (see scikit-learn’s 
+‘cross_val_score()’ function)</p>
+</dd>
+<dt>type_ini_pop<span class="classifier">str, {‘randomLHS’, ‘geneticLHS’, ‘improvedLHS’, ‘maximinLHS’, ‘optimumLHS’, ‘random’}, optional</span></dt><dd><p>Method to create the first population with <cite>GAparsimony._population</cite> function. Possible values: <cite>randomLHS</cite>, <cite>geneticLHS</cite>, 
+<cite>improvedLHS</cite>, <cite>maximinLHS</cite>, <cite>optimumLHS</cite>, <cite>random</cite>. First 5 methods correspond with several latine hypercube for initial sampling. By default is set to <cite>improvedLHS</cite>.</p>
+</dd>
+<dt>npart = int, default=15</dt><dd><p>Number of particles in the swarm (population size)</p>
+</dd>
+<dt>maxiter = int, default=250</dt><dd><p>The maximum number of iterations to run before the HYB process is halted.</p>
+</dd>
+<dt>early_stop<span class="classifier">int, optional</span></dt><dd><p>The number of consecutive generations without any improvement lower than a difference of ‘tol’
+in the ‘best_fitness’ value before the search process is stopped.</p>
+</dd>
+<dt>tol<span class="classifier">float, default=1e-4,</span></dt><dd><p>Value defining a significant difference between the ‘best_fitness’ values between iterations for ‘early stopping’.</p>
+</dd>
+<dt>rerank_error<span class="classifier">float, default=1e-09</span></dt><dd><p>When a value is provided, a second reranking process according to the model complexities is called by <cite>parsimony_rerank</cite> function. 
+Its primary objective isto select individuals with high validation cost while maintaining the robustnessof a parsimonious model. 
+This function switches the position of two models if the first one is more complex than the latter and no significant difference 
+is found between their fitness values in terms of cost. Thus, if the absolute difference between the validation costs are 
+lower than <cite>rerank_error</cite> they are considered similar.</p>
+</dd>
+<dt>gamma_crossover<span class="classifier">float, default=0.50</span></dt><dd><p>In hybparsimony, the percentage of variables to be replaced with GA at each iteration $t$ is selected by a decreasing exponential function
+that is adjusted by a ‘gamma_crossover’ parameter (see references for more info).</p>
+</dd>
+<dt>Lambda<span class="classifier">float, default=1.0</span></dt><dd><p>PSO parameter (see References)</p>
+</dd>
+<dt>c1<span class="classifier">float, default=1/2 + math.log(2)</span></dt><dd><p>PSO parameter (see References)</p>
+</dd>
+<dt>c2<span class="classifier">float, default=1/2 + math.log(2)</span></dt><dd><p>PSO parameter (see References)</p>
+</dd>
+<dt>IW_max<span class="classifier">float, default=0.9</span></dt><dd><p>PSO parameter (see References)</p>
+</dd>
+<dt>IW_min<span class="classifier">float, default=0.4</span></dt><dd><p>PSO parameter (see References)</p>
+</dd>
+<dt>K<span class="classifier">int, default=4</span></dt><dd><p>PSO parameter (see References)</p>
+</dd>
+<dt>best_global_thres<span class="classifier">float, default=1.0</span></dt><dd><p>Percentage of particles that will be influenced by the best global of their neighbourhoods
+(otherwise, they will be influenced by the best of the iteration in each neighbourhood)
+particles_to_delete is not None and len(particles_to_delete) &lt; maxiter:</p>
+</dd>
+<dt>particles_to_delete<span class="classifier">float, default=None</span></dt><dd><p>The length of the particles to delete is lower than the iterations, 
+the array is completed with zeros up to the number of iterations.</p>
+</dd>
+<dt>mutation<span class="classifier">float, default=0.1</span></dt><dd><p>The probability of mutation in a parent chromosome. Usually mutation occurs with a small probability. By default is set to <cite>0.10</cite>.</p>
+</dd>
+<dt>feat_mut_thres<span class="classifier">float, default=0.1</span></dt><dd><p>Probability of the muted <cite>features-chromosome</cite> to be one. Default value is set to <cite>0.10</cite>.</p>
+</dd>
+<dt>feat_thres<span class="classifier">float, default=0.90</span></dt><dd><p>Proportion of selected features in the initial population. It is recommended a high percentage of the selected features for 
+the first generations.</p>
+</dd>
+<dt>keep_history<span class="classifier">bool default=False,</span></dt><dd><p>If True keep results of all particles in each iteration into ‘history’ attribute.</p>
+</dd>
+<dt>seed_ini<span class="classifier">int, optional</span></dt><dd><p>An integer value containing the random number generator state.</p>
+</dd>
+<dt>n_jobs<span class="classifier">int, default=1,</span></dt><dd><p>Number of cores to parallelize the evaluation of the swarm. It should be used with caution because the 
+algorithms used or the ‘cross_validate()’ function used by default to evaluate individuals may also parallelize 
+their internal processes.</p>
+</dd>
+<dt>verbose<span class="classifier">int, default=0</span></dt><dd><p>The level of messages that we want it to show us. Possible values: 0=silent mode, 1=monitor level,  2=debug level.</p>
+</dd>
+</dl>
+</div></blockquote>
+<section id="attributes">
+<h3>Attributes<a class="headerlink" href="#attributes" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>minutes_total<span class="classifier">float</span></dt><dd><p>Total elapsed time (in minutes).</p>
+</dd>
+<dt>history<span class="classifier">float</span></dt><dd><p>A list with the results of the population of all iterations.’history[iter]’ returns a DataFrame 
+with the results of iteration ‘iter’.</p>
+</dd>
+<dt>best_model</dt><dd><p>The best model in the whole optimization process.</p>
+</dd>
+<dt>best_score<span class="classifier">float</span></dt><dd><p>The validation score of the best model.</p>
+</dd>
+<dt>best_complexity<span class="classifier">float</span></dt><dd><p>The complexity of the best model.</p>
+</dd>
+<dt>selected_features<span class="classifier">list,</span></dt><dd><p>The name of the selected features for the best model.</p>
+</dd>
+<dt>selected_features_bool<span class="classifier">list,</span></dt><dd><p>The selected features for the best model in Boolean form.</p>
+</dd>
+<dt>best_model_conf<span class="classifier">Chromosome</span></dt><dd><p>The parameters and features of the best model in the whole optimization process.</p>
+</dd>
+</dl>
+</section>
+<section id="examples">
+<h3>Examples<a class="headerlink" href="#examples" title="Permalink to this heading"></a></h3>
+<p>Usage example for a regression model using the sklearn ‘diabetes’ dataset</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">mean_squared_error</span>
+<span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">load_diabetes</span>
+<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">StandardScaler</span>
+<span class="kn">from</span> <span class="nn">hybparsimony</span> <span class="kn">import</span> <span class="n">hybparsimony</span>
+
+<span class="c1"># Load &#39;diabetes&#39; dataset</span>
+<span class="n">diabetes</span> <span class="o">=</span> <span class="n">load_diabetes</span><span class="p">()</span>
+
+<span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">diabetes</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">diabetes</span><span class="o">.</span><span class="n">target</span>
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span> <span class="o">=</span> <span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">1234</span><span class="p">)</span>
+
+<span class="c1"># Standarize X and y</span>
+<span class="n">scaler_X</span> <span class="o">=</span> <span class="n">StandardScaler</span><span class="p">()</span>
+<span class="n">X_train</span> <span class="o">=</span> <span class="n">scaler_X</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
+<span class="n">X_test</span> <span class="o">=</span> <span class="n">scaler_X</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<span class="n">scaler_y</span> <span class="o">=</span> <span class="n">StandardScaler</span><span class="p">()</span>
+<span class="n">y_train</span> <span class="o">=</span> <span class="n">scaler_y</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">y_train</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
+<span class="n">y_test</span> <span class="o">=</span> <span class="n">scaler_y</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">y_test</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
+
+<span class="n">algo</span> <span class="o">=</span> <span class="s1">&#39;KernelRidge&#39;</span>
+<span class="n">HYBparsimony_model</span> <span class="o">=</span> <span class="n">hybparsimony</span><span class="p">(</span><span class="n">algorithm</span><span class="o">=</span><span class="n">algo</span><span class="p">,</span>
+                                <span class="n">features</span><span class="o">=</span><span class="n">diabetes</span><span class="o">.</span><span class="n">feature_names</span><span class="p">,</span>
+                                <span class="n">rerank_error</span><span class="o">=</span><span class="mf">0.001</span><span class="p">,</span>
+                                <span class="n">verbose</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Search the best hyperparameters and features </span>
+<span class="c1"># (increasing &#39;time_limit&#39; to improve RMSE with high consuming algorithms)</span>
+<span class="n">HYBparsimony_model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">time_limit</span><span class="o">=</span><span class="mf">0.20</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Running iteration 0
+Best model -&gt; Score = -0.510786 Complexity = 9,017,405,352.5 
+Iter = 0 -&gt; MeanVal = -0.88274  ValBest = -0.510786   ComplexBest = 9,017,405,352.5 Time(min) = 0.005858
+
+Running iteration 1
+Best model -&gt; Score = -0.499005 Complexity = 8,000,032,783.88 
+Iter = 1 -&gt; MeanVal = -0.659969  ValBest = -0.499005   ComplexBest = 8,000,032,783.88 Time(min) = 0.004452
+
+...
+...
+...
+
+Running iteration 34
+Best model -&gt; Score = -0.489468 Complexity = 8,000,002,255.68 
+Iter = 34 -&gt; MeanVal = -0.527314  ValBest = -0.489468   ComplexBest = 8,000,002,255.68 Time(min) = 0.007533
+
+Running iteration 35
+Best model -&gt; Score = -0.489457 Complexity = 8,000,002,199.12 
+Iter = 35 -&gt; MeanVal = -0.526294  ValBest = -0.489457   ComplexBest = 8,000,002,199.12 Time(min) = 0.006522
+
+Time limit reached. Stopped.
+</pre></div>
+</div>
+<p>Usage example for a classification model using the ‘breast_cancer’ dataset</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">StandardScaler</span>
+<span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">load_breast_cancer</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">log_loss</span>
+<span class="kn">from</span> <span class="nn">hybparsimony</span> <span class="kn">import</span> <span class="n">hybparsimony</span>
+
+<span class="c1"># load &#39;breast_cancer&#39; dataset</span>
+<span class="n">breast_cancer</span> <span class="o">=</span> <span class="n">load_breast_cancer</span><span class="p">()</span>
+<span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">breast_cancer</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">breast_cancer</span><span class="o">.</span><span class="n">target</span> 
+<span class="nb">print</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span> <span class="o">=</span> <span class="mf">0.20</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Standarize X and y (some algorithms require that)</span>
+<span class="n">scaler_X</span> <span class="o">=</span> <span class="n">StandardScaler</span><span class="p">()</span>
+<span class="n">X_train</span> <span class="o">=</span> <span class="n">scaler_X</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
+<span class="n">X_test</span> <span class="o">=</span> <span class="n">scaler_X</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+
+<span class="n">HYBparsimony_model</span> <span class="o">=</span> <span class="n">hybparsimony</span><span class="p">(</span><span class="n">features</span><span class="o">=</span><span class="n">breast_cancer</span><span class="o">.</span><span class="n">feature_names</span><span class="p">,</span>
+                                <span class="n">rerank_error</span><span class="o">=</span><span class="mf">0.005</span><span class="p">,</span>
+                                <span class="n">verbose</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">HYBparsimony_model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">time_limit</span><span class="o">=</span><span class="mf">0.50</span><span class="p">)</span>
+<span class="c1"># Extract probs of class==1</span>
+<span class="n">preds</span> <span class="o">=</span> <span class="n">HYBparsimony_model</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">X_test</span><span class="p">)[:,</span><span class="mi">1</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">Best Model = </span><span class="si">{</span><span class="n">HYBparsimony_model</span><span class="o">.</span><span class="n">best_model</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Selected features:</span><span class="si">{</span><span class="n">HYBparsimony_model</span><span class="o">.</span><span class="n">selected_features</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Complexity = </span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="n">HYBparsimony_model</span><span class="o">.</span><span class="n">best_complexity</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="si">:</span><span class="s1">,</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;5-CV logloss = </span><span class="si">{</span><span class="o">-</span><span class="nb">round</span><span class="p">(</span><span class="n">HYBparsimony_model</span><span class="o">.</span><span class="n">best_score</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;logloss test = </span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="n">log_loss</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="w"> </span><span class="n">preds</span><span class="p">),</span><span class="mi">6</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>(569, 30)
+Detected a binary-class problem. Using &#39;neg_log_loss&#39; as default scoring function.
+Running iteration 0
+Best model -&gt; Score = -0.091519 Complexity = 29,000,000,005.11 
+Iter = 0 -&gt; MeanVal = -0.297448  ValBest = -0.091519   ComplexBest = 29,000,000,005.11 Time(min) = 0.006501
+
+Running iteration 1
+Best model -&gt; Score = -0.085673 Complexity = 27,000,000,009.97 
+Iter = 1 -&gt; MeanVal = -0.117216  ValBest = -0.085673   ComplexBest = 27,000,000,009.97 Time(min) = 0.004273
+
+...
+...
+
+Running iteration 102
+Best model -&gt; Score = -0.064557 Complexity = 11,000,000,039.47 
+Iter = 102 -&gt; MeanVal = -0.076314  ValBest = -0.066261   ComplexBest = 9,000,000,047.25 Time(min) = 0.004769
+
+Running iteration 103
+Best model -&gt; Score = -0.064557 Complexity = 11,000,000,039.47 
+Iter = 103 -&gt; MeanVal = -0.086243  ValBest = -0.064995   ComplexBest = 11,000,000,031.2 Time(min) = 0.004591
+
+Time limit reached. Stopped.
+
+Best Model = LogisticRegression(C=5.92705799354935)
+Selected features:[&#39;mean texture&#39; &#39;mean concave points&#39; &#39;radius error&#39; &#39;area error&#39;
+&#39;compactness error&#39; &#39;worst radius&#39; &#39;worst perimeter&#39; &#39;worst area&#39;
+&#39;worst smoothness&#39; &#39;worst concavity&#39; &#39;worst symmetry&#39;]
+Complexity = 11,000,000,039.47
+5-CV logloss = 0.064557
+logloss test = 0.076254
+</pre></div>
+</div>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hybparsimony.hybparsimony.HYBparsimony.fit">
+<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/hybparsimony/hybparsimony.html#HYBparsimony.fit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hybparsimony.hybparsimony.HYBparsimony.fit" title="Permalink to this definition"></a></dt>
+<dd><dl class="simple">
+<dt>Performs the search of accurate parsimonious models by combining feature selection, hyperparameter optimizacion,</dt><dd><p>and parsimonious model selection (PMS) with data matrix (X) and targets (y).</p>
+</dd>
+</dl>
+<section id="parameters">
+<h3>Parameters<a class="headerlink" href="#parameters" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>X<span class="classifier">pandas.DataFrame or numpy.array</span></dt><dd><p>Training vector.</p>
+</dd>
+<dt>y<span class="classifier">pandas.DataFrame or numpy.array</span></dt><dd><p>Target vector relative to X.</p>
+</dd>
+<dt>time_limit<span class="classifier">float, default=None</span></dt><dd><p>Maximum time to perform the optimization process in minutes.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hybparsimony.hybparsimony.HYBparsimony.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/hybparsimony/hybparsimony.html#HYBparsimony.predict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hybparsimony.hybparsimony.HYBparsimony.predict" title="Permalink to this definition"></a></dt>
+<dd><p>Predict result for samples in X.</p>
+<section id="id1">
+<h3>Parameters<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>X<span class="classifier">numpy.array or pandas.DataFrame</span></dt><dd><p>Samples.</p>
+</dd>
+</dl>
+</section>
+<section id="returns">
+<h3>Returns<a class="headerlink" href="#returns" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>numpy.array</dt><dd><p>A <cite>numpy.array</cite> with predictions.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hybparsimony.hybparsimony.HYBparsimony.predict_proba">
+<span class="sig-name descname"><span class="pre">predict_proba</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/hybparsimony/hybparsimony.html#HYBparsimony.predict_proba"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hybparsimony.hybparsimony.HYBparsimony.predict_proba" title="Permalink to this definition"></a></dt>
+<dd><p>Predict probabilities for each class and sample in X (only for classification models).</p>
+<section id="id2">
+<h3>Parameters<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>X<span class="classifier">numpy.array or pandas.DataFrame</span></dt><dd><p>Samples.</p>
+</dd>
+</dl>
+</section>
+<section id="id3">
+<h3>Returns<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>numpy.array</dt><dd><p>A <cite>numpy.array</cite> with predictions. Returns the probability of the sample for each class in the model.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="hybparsimony.hybparsimony.multinomial">
+<span class="sig-prename descclassname"><span class="pre">hybparsimony.hybparsimony.</span></span><span class="sig-name descname"><span class="pre">multinomial</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pvals</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hybparsimony.hybparsimony.multinomial" title="Permalink to this definition"></a></dt>
+<dd><p>Draw samples from a multinomial distribution.</p>
+<p>The multinomial distribution is a multivariate generalization of the
+binomial distribution.  Take an experiment with one of <code class="docutils literal notranslate"><span class="pre">p</span></code>
+possible outcomes.  An example of such an experiment is throwing a dice,
+where the outcome can be 1 through 6.  Each sample drawn from the
+distribution represents <cite>n</cite> such experiments.  Its values,
+<code class="docutils literal notranslate"><span class="pre">X_i</span> <span class="pre">=</span> <span class="pre">[X_0,</span> <span class="pre">X_1,</span> <span class="pre">...,</span> <span class="pre">X_p]</span></code>, represent the number of times the
+outcome was <code class="docutils literal notranslate"><span class="pre">i</span></code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>New code should use the <cite>~numpy.random.Generator.multinomial</cite>
+method of a <cite>~numpy.random.Generator</cite> instance instead;
+please see the <span class="xref std std-ref">random-quick-start</span>.</p>
+</div>
+<section id="id4">
+<h3>Parameters<a class="headerlink" href="#id4" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>n<span class="classifier">int</span></dt><dd><p>Number of experiments.</p>
+</dd>
+<dt>pvals<span class="classifier">sequence of floats, length p</span></dt><dd><p>Probabilities of each of the <code class="docutils literal notranslate"><span class="pre">p</span></code> different outcomes.  These
+must sum to 1 (however, the last element is always assumed to
+account for the remaining probability, as long as
+<code class="docutils literal notranslate"><span class="pre">sum(pvals[:-1])</span> <span class="pre">&lt;=</span> <span class="pre">1)</span></code>.</p>
+</dd>
+<dt>size<span class="classifier">int or tuple of ints, optional</span></dt><dd><p>Output shape.  If the given shape is, e.g., <code class="docutils literal notranslate"><span class="pre">(m,</span> <span class="pre">n,</span> <span class="pre">k)</span></code>, then
+<code class="docutils literal notranslate"><span class="pre">m</span> <span class="pre">*</span> <span class="pre">n</span> <span class="pre">*</span> <span class="pre">k</span></code> samples are drawn.  Default is None, in which case a
+single value is returned.</p>
+</dd>
+</dl>
+</section>
+<section id="id5">
+<h3>Returns<a class="headerlink" href="#id5" title="Permalink to this heading"></a></h3>
+<dl>
+<dt>out<span class="classifier">ndarray</span></dt><dd><p>The drawn samples, of shape <em>size</em>, if that was provided.  If not,
+the shape is <code class="docutils literal notranslate"><span class="pre">(N,)</span></code>.</p>
+<p>In other words, each entry <code class="docutils literal notranslate"><span class="pre">out[i,j,...,:]</span></code> is an N-dimensional
+value drawn from the distribution.</p>
+</dd>
+</dl>
+</section>
+<section id="see-also">
+<h3>See Also<a class="headerlink" href="#see-also" title="Permalink to this heading"></a></h3>
+<p>random.Generator.multinomial: which should be used for new code.</p>
+</section>
+<section id="id6">
+<h3>Examples<a class="headerlink" href="#id6" title="Permalink to this heading"></a></h3>
+<p>Throw a dice 20 times:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">multinomial</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="o">/</span><span class="mf">6.</span><span class="p">]</span><span class="o">*</span><span class="mi">6</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="go">array([[4, 1, 7, 5, 2, 1]]) # random</span>
+</pre></div>
+</div>
+<p>It landed 4 times on 1, once on 2, etc.</p>
+<p>Now, throw the dice 20 times, and 20 times again:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">multinomial</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="o">/</span><span class="mf">6.</span><span class="p">]</span><span class="o">*</span><span class="mi">6</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="go">array([[3, 4, 3, 3, 4, 3], # random</span>
+<span class="go">       [2, 4, 3, 4, 0, 7]])</span>
+</pre></div>
+</div>
+<p>For the first run, we threw 3 times 1, 4 times 2, etc.  For the second,
+we threw 2 times 1, 4 times 2, etc.</p>
+<p>A loaded die is more likely to land on number 6:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">multinomial</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="o">/</span><span class="mf">7.</span><span class="p">]</span><span class="o">*</span><span class="mi">5</span> <span class="o">+</span> <span class="p">[</span><span class="mi">2</span><span class="o">/</span><span class="mf">7.</span><span class="p">])</span>
+<span class="go">array([11, 16, 14, 17, 16, 26]) # random</span>
+</pre></div>
+</div>
+<p>The probability inputs should be normalized. As an implementation
+detail, the value of the last entry is ignored and assumed to take
+up any leftover probability mass, but this should not be relied on.
+A biased coin which has twice as much weight on one side as on the
+other should be sampled like so:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">multinomial</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="p">[</span><span class="mf">1.0</span> <span class="o">/</span> <span class="mi">3</span><span class="p">,</span> <span class="mf">2.0</span> <span class="o">/</span> <span class="mi">3</span><span class="p">])</span>  <span class="c1"># RIGHT</span>
+<span class="go">array([38, 62]) # random</span>
+</pre></div>
+</div>
+<p>not like:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">multinomial</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="p">[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">])</span>  <span class="c1"># WRONG</span>
+<span class="gt">Traceback (most recent call last):</span>
+<span class="gr">ValueError</span>: <span class="n">pvals &lt; 0, pvals &gt; 1 or pvals contains NaNs</span>
+</pre></div>
+</div>
+</section>
+</dd></dl>
+
+</section>
+<section id="module-hybparsimony">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-hybparsimony" title="Permalink to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to HYBparsimony Documentation’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="hybparsimony.lhs.html" class="btn btn-neutral float-right" title="hybparsimony.lhs package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Jose Divasón.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

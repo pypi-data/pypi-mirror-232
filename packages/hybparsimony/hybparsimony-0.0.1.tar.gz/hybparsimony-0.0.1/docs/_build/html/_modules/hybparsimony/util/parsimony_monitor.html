@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>hybparsimony.util.parsimony_monitor &mdash; HYBparsimony Documentation  documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            HYBparsimony Documentation
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../hybparsimony.html">hybparsimony package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../hybparsimony.util.html">hybparsimony.util package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../hybparsimony.lhs.html">hybparsimony.lhs package</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">HYBparsimony Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">hybparsimony.util.parsimony_monitor</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for hybparsimony.util.parsimony_monitor</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span>  <span class="k">as</span> <span class="nn">np</span>
+
+
+<span class="c1"># new function for monitoring</span>
+<div class="viewcode-block" id="parsimony_monitor"><a class="viewcode-back" href="../../../hybparsimony.util.html#hybparsimony.util.parsimony_monitor.parsimony_monitor">[docs]</a><span class="k">def</span> <span class="nf">parsimony_monitor</span><span class="p">(</span><span class="nb">iter</span><span class="p">,</span> <span class="n">current_best_score</span><span class="p">,</span> <span class="n">current_best_complexity</span><span class="p">,</span> <span class="n">fitnessval</span><span class="p">,</span> <span class="n">bestfitnessVal</span><span class="p">,</span> 
+                      <span class="n">bestcomplexity</span><span class="p">,</span> <span class="n">minutes_gen</span><span class="p">,</span> <span class="n">digits</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Functions for monitoring HYB-PARSIMONY algorithm evolution</span>
+
+<span class="sd">    Functions to print summary statistics of fitness values at each iteration of a GA search.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    iter: int</span>
+<span class="sd">        Iteration.</span>
+<span class="sd">    current_best_score: float</span>
+<span class="sd">        The best score in the whole process (score of the best model).</span>
+<span class="sd">    current_best_complexity: float</span>
+<span class="sd">        The complexity of the best model in the whole process.</span>
+<span class="sd">    fitnessval: list</span>
+<span class="sd">        Fitness values of the population in that iteration.</span>
+<span class="sd">    bestfitnessVal: float</span>
+<span class="sd">        Best fitness value in this iteration (score of the best model in that iteration)</span>
+<span class="sd">    bestcomplexity: float</span>
+<span class="sd">        The complexity of the best model in that iteration.</span>
+<span class="sd">    minutes_gen: float</span>
+<span class="sd">        Time in minutes of that iteration.</span>
+<span class="sd">    digits : int</span>
+<span class="sd">        Minimal number of significant digits.</span>
+<span class="sd">    *args :</span>
+<span class="sd">        Further arguments passed to or from other methods.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">fitnessval</span> <span class="o">=</span> <span class="n">fitnessval</span><span class="p">[</span><span class="o">~</span><span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">fitnessval</span><span class="p">)]</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="sa">f</span><span class="s2">&quot;Best model -&gt; Score = </span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="n">current_best_score</span><span class="p">,</span><span class="w"> </span><span class="n">digits</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">center</span><span class="p">(</span><span class="mi">16</span> <span class="o">+</span> <span class="n">digits</span><span class="p">),</span>
+                     <span class="sa">f</span><span class="s2">&quot;Complexity = </span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="n">current_best_complexity</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">center</span><span class="p">(</span><span class="mi">12</span><span class="p">),</span>
+                    <span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Iter = </span><span class="si">{</span><span class="nb">iter</span><span class="si">}</span><span class="s2"> -&gt; MeanVal = </span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">fitnessval</span><span class="p">),</span><span class="w"> </span><span class="n">digits</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">center</span><span class="p">(</span><span class="mi">16</span> <span class="o">+</span> <span class="n">digits</span><span class="p">),</span>
+                    <span class="sa">f</span><span class="s2">&quot;ValBest = </span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="n">bestfitnessVal</span><span class="p">,</span><span class="w"> </span><span class="n">digits</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">center</span><span class="p">(</span><span class="mi">16</span> <span class="o">+</span> <span class="n">digits</span><span class="p">),</span>
+                    <span class="c1"># f&quot;TstBest = {round(bestfitnessTst, digits)}&quot;.center(16 + digits),</span>
+                    <span class="sa">f</span><span class="s2">&quot;ComplexBest = </span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="n">bestcomplexity</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">center</span><span class="p">(</span><span class="mi">12</span><span class="p">),</span>
+                    <span class="sa">f</span><span class="s2">&quot;Time(min) = </span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="n">minutes_gen</span><span class="p">,</span><span class="w"> </span><span class="n">digits</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">center</span><span class="p">(</span><span class="mi">7</span><span class="p">)])</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span></div>
+ 
+
+
+<span class="c1"># Duda si es todo el rato con x1</span>
+<span class="c1"># Equivalencia a fivenum es np.percentile(aux, [0, 25, 50, 75, 100])</span>
+
+<div class="viewcode-block" id="parsimony_summary"><a class="viewcode-back" href="../../../hybparsimony.util.html#hybparsimony.util.parsimony_monitor.parsimony_summary">[docs]</a><span class="k">def</span> <span class="nf">parsimony_summary</span><span class="p">(</span><span class="n">fitnessval</span><span class="p">,</span> <span class="n">complexity</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+    <span class="n">x1</span> <span class="o">=</span> <span class="n">fitnessval</span><span class="p">[</span><span class="o">~</span><span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">fitnessval</span><span class="p">)]</span>
+    <span class="n">q1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">75</span><span class="p">,</span> <span class="mi">100</span><span class="p">])</span>
+    <span class="c1"># x2 = fitnesstst[~np.isnan(fitnesstst)]</span>
+    <span class="c1"># q2 = np.percentile(x1, [0, 25, 50, 75, 100])</span>
+    <span class="n">x3</span> <span class="o">=</span> <span class="n">complexity</span><span class="p">[</span><span class="o">~</span><span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">complexity</span><span class="p">)]</span>
+    <span class="n">q3</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">75</span><span class="p">,</span> <span class="mi">100</span><span class="p">])</span>
+
+    <span class="k">return</span> <span class="n">q1</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">x1</span><span class="p">),</span> <span class="n">q1</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">q1</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">q1</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">q1</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">q3</span><span class="p">[</span>
+        <span class="mi">4</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">x3</span><span class="p">),</span> <span class="n">q3</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">q3</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">q3</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">q3</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span></div>
+
+
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Jose Divasón.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

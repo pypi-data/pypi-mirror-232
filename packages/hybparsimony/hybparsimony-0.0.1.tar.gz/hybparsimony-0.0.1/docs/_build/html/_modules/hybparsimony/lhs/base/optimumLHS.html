@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>hybparsimony.lhs.base.optimumLHS &mdash; HYBparsimony Documentation  documentation</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+        <script src="../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            HYBparsimony Documentation
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../hybparsimony.html">hybparsimony package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../hybparsimony.util.html">hybparsimony.util package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../hybparsimony.lhs.html">hybparsimony.lhs package</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">HYBparsimony Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">hybparsimony.lhs.base.optimumLHS</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for hybparsimony.lhs.base.optimumLHS</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">hybparsimony.lhs.util</span> <span class="kn">import</span> <span class="n">findorder</span><span class="p">,</span> <span class="n">sumInvDistance</span><span class="p">,</span> <span class="n">convertIntegerToNumericLhs</span>
+
+
+<span class="k">def</span> <span class="nf">_optimumLHS</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">optimalityRecordLength</span><span class="p">,</span> <span class="n">maxSweeps</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">eps</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">seed</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+
+    <span class="k">if</span> <span class="n">seed</span><span class="p">:</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="n">seed</span><span class="p">)</span>
+
+    <span class="n">nOptimalityRecordLength</span> <span class="o">=</span> <span class="n">optimalityRecordLength</span>
+    <span class="n">nsamples</span> <span class="o">=</span> <span class="n">n</span>
+    <span class="n">nparameters</span> <span class="o">=</span> <span class="n">k</span>
+    <span class="n">nMaxSweeps</span> <span class="o">=</span> <span class="n">maxSweeps</span>
+    <span class="n">eps_change</span> <span class="o">=</span> <span class="n">eps</span>
+    <span class="n">optimalityChangeOld</span> <span class="o">=</span> <span class="mf">0.0</span>
+    <span class="n">outlhs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">((</span><span class="n">nsamples</span><span class="p">,</span> <span class="n">nparameters</span><span class="p">))</span>
+    <span class="n">optimalityRecord</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="n">nOptimalityRecordLength</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">double</span><span class="p">)</span>
+    <span class="n">interchangeRow1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">nOptimalityRecordLength</span><span class="p">)</span>
+    <span class="n">interchangeRow2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">nOptimalityRecordLength</span><span class="p">)</span>
+
+    <span class="c1">#  fill the oldHypercube with a random lhs sample</span>
+    <span class="n">randomUnif</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="n">nsamples</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">double</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">jcol</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nparameters</span><span class="p">):</span>
+        <span class="c1">#  fill a vector with a random sample to order</span>
+        <span class="k">for</span> <span class="n">irow</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nsamples</span><span class="p">):</span>
+            <span class="n">randomUnif</span><span class="p">[</span><span class="n">irow</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="n">low</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">high</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        
+        <span class="n">orderedUnif</span> <span class="o">=</span> <span class="n">findorder</span><span class="p">(</span><span class="n">randomUnif</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">irow</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nsamples</span><span class="p">):</span>
+            <span class="n">outlhs</span><span class="p">[</span><span class="n">irow</span><span class="p">,</span><span class="n">jcol</span><span class="p">]</span> <span class="o">=</span> <span class="n">orderedUnif</span><span class="p">[</span><span class="n">irow</span><span class="p">]</span>
+    
+    <span class="c1"># find the initial optimality measure </span>
+    <span class="n">gOptimalityOld</span> <span class="o">=</span> <span class="n">sumInvDistance</span><span class="p">(</span><span class="n">outlhs</span><span class="p">)</span>
+    <span class="n">test</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">iterator</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="n">test</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    
+        <span class="k">if</span> <span class="n">iterator</span> <span class="o">==</span> <span class="n">nMaxSweeps</span><span class="p">:</span>
+            <span class="k">break</span>
+        <span class="n">iterator</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="c1"># iterate over the columns </span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nparameters</span><span class="p">):</span>
+        
+            <span class="n">optimalityRecordIndex</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="c1"># iterate over the rows for the first point from 0 to N-2 </span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nsamples</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+            
+                <span class="c1"># iterate over the rows for the second point from i+1 to N-1 </span>
+                <span class="k">for</span> <span class="n">kindex</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">((</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span> <span class="n">nsamples</span><span class="p">):</span>
+                
+                    <span class="c1"># put the values from oldHypercube into newHypercube </span>
+                    <span class="n">newHypercube</span> <span class="o">=</span> <span class="n">outlhs</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+                    <span class="c1"># exchange two values (from the ith and kth rows) in the jth column</span>
+                    <span class="c1"># * and place them in the new matrix </span>
+                    <span class="n">newHypercube</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">outlhs</span><span class="p">[</span><span class="n">kindex</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span>
+                    <span class="n">newHypercube</span><span class="p">[</span><span class="n">kindex</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">outlhs</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span>
+                    <span class="c1"># store the optimality of the newly created matrix and the rows that</span>
+                    <span class="c1"># * were interchanged </span>
+                    <span class="n">optimalityRecord</span><span class="p">[</span><span class="n">optimalityRecordIndex</span><span class="p">]</span> <span class="o">=</span> <span class="n">sumInvDistance</span><span class="p">(</span><span class="n">newHypercube</span><span class="p">)</span>
+                    <span class="n">interchangeRow1</span><span class="p">[</span><span class="n">optimalityRecordIndex</span><span class="p">]</span> <span class="o">=</span> <span class="n">i</span>
+                    <span class="n">interchangeRow2</span><span class="p">[</span><span class="n">optimalityRecordIndex</span><span class="p">]</span> <span class="o">=</span> <span class="n">kindex</span>
+                    <span class="n">optimalityRecordIndex</span> <span class="o">+=</span> <span class="mi">1</span>
+
+            <span class="c1"># once all combinations of the row interchanges have been completed for</span>
+            <span class="c1"># * the current column j, store the old optimality measure (the one we are</span>
+            <span class="c1"># * trying to beat) </span>
+            <span class="n">optimalityRecord</span><span class="p">[</span><span class="n">optimalityRecordIndex</span><span class="p">]</span> <span class="o">=</span> <span class="n">gOptimalityOld</span>
+            <span class="n">interchangeRow1</span><span class="p">[</span><span class="n">optimalityRecordIndex</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="n">interchangeRow2</span><span class="p">[</span><span class="n">optimalityRecordIndex</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="c1"># Find which optimality measure is the lowest for the current column.</span>
+            <span class="c1"># * In other words, which two row interchanges made the hypercube better in</span>
+            <span class="c1"># * this column </span>
+            <span class="n">posit</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="k">for</span> <span class="n">kindex</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nOptimalityRecordLength</span><span class="p">):</span>
+            
+                <span class="k">if</span> <span class="n">optimalityRecord</span><span class="p">[</span><span class="n">kindex</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">optimalityRecord</span><span class="p">[</span><span class="n">posit</span><span class="p">]:</span>
+                    <span class="n">posit</span> <span class="o">=</span> <span class="n">kindex</span>
+            <span class="c1"># If the new minimum optimality measure is better than the old measure </span>
+            <span class="k">if</span> <span class="n">optimalityRecord</span><span class="p">[</span><span class="n">posit</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">gOptimalityOld</span><span class="p">:</span>
+            
+                <span class="c1"># put oldHypercube in newHypercube </span>
+                <span class="n">newHypercube</span> <span class="o">=</span> <span class="n">outlhs</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+                <span class="c1"># Interchange the rows that were the best for this column </span>
+                <span class="n">newHypercube</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">interchangeRow1</span><span class="p">[</span><span class="n">posit</span><span class="p">]),</span> <span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">outlhs</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">interchangeRow2</span><span class="p">[</span><span class="n">posit</span><span class="p">]),</span> <span class="n">j</span><span class="p">]</span>
+                <span class="n">newHypercube</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">interchangeRow2</span><span class="p">[</span><span class="n">posit</span><span class="p">]),</span> <span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">outlhs</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">interchangeRow1</span><span class="p">[</span><span class="n">posit</span><span class="p">]),</span> <span class="n">j</span><span class="p">]</span>
+                <span class="c1"># put newHypercube back in oldHypercube for the next iteration </span>
+                <span class="n">outlhs</span> <span class="o">=</span> <span class="n">newHypercube</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+                <span class="c1"># if this is not the first column we have used for this sweep </span>
+                <span class="k">if</span> <span class="n">j</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                
+                    <span class="c1"># check to see how much benefit we gained from this sweep </span>
+                    <span class="n">optimalityChange</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">optimalityRecord</span><span class="p">[</span><span class="n">posit</span><span class="p">]</span> <span class="o">-</span> <span class="n">gOptimalityOld</span><span class="p">)</span>
+                    <span class="k">if</span> <span class="n">optimalityChange</span> <span class="o">&lt;</span> <span class="n">eps_change</span> <span class="o">*</span> <span class="n">optimalityChangeOld</span><span class="p">:</span>
+                        <span class="n">test</span> <span class="o">=</span> <span class="mi">1</span>
+                <span class="c1"># if this is first column of the sweep, then store the benefit gained </span>
+                <span class="k">else</span><span class="p">:</span>
+                
+                    <span class="n">optimalityChangeOld</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">optimalityRecord</span><span class="p">[</span><span class="n">posit</span><span class="p">]</span> <span class="o">-</span> <span class="n">gOptimalityOld</span><span class="p">)</span>
+                
+                <span class="c1"># replace the old optimality measure with the current one </span>
+                <span class="n">gOptimalityOld</span> <span class="o">=</span> <span class="n">optimalityRecord</span><span class="p">[</span><span class="n">posit</span><span class="p">]</span>
+            
+            <span class="c1"># if the new and old optimality measures are equal </span>
+            <span class="k">elif</span> <span class="n">optimalityRecord</span><span class="p">[</span><span class="n">posit</span><span class="p">]</span> <span class="o">==</span> <span class="n">gOptimalityOld</span><span class="p">:</span>
+                <span class="n">test</span> <span class="o">=</span> <span class="mi">1</span>
+            
+            <span class="c1"># if the new optimality measure is worse </span>
+            <span class="k">elif</span> <span class="n">optimalityRecord</span><span class="p">[</span><span class="n">posit</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">gOptimalityOld</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;Unexpected Result: Algorithm produced a less optimal design&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">test</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="k">break</span>
+    <span class="k">return</span> <span class="n">outlhs</span>
+
+
+
+
+<div class="viewcode-block" id="optimumLHS"><a class="viewcode-back" href="../../../../hybparsimony.lhs.base.html#hybparsimony.lhs.base.optimumLHS.optimumLHS">[docs]</a><span class="k">def</span> <span class="nf">optimumLHS</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">maxsweeps</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">eps</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">seed</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Optimum Latin Hypercube Sample</span>
+
+<span class="sd">    Draws a Latin Hypercube Sample from a set of uniform distributions for use in creating a LatinHypercube Design. </span>
+<span class="sd">    This function uses the Columnwise Pairwise (CP) algorithm to generate an optimal design with respect to the S optimality criterion.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    n : int</span>
+<span class="sd">        The number of partitions (simulations or design points or rows). </span>
+<span class="sd">    k : int</span>
+<span class="sd">        The number of replications (variables or columns).</span>
+<span class="sd">    maxsweeps : int, optional</span>
+<span class="sd">        The maximum number of times the CP algorithm is applied to all the columns. Default `2`</span>
+<span class="sd">    eps : float, optional</span>
+<span class="sd">        The optimal stopping criterion. Algorithm stops when the change in optimality</span>
+<span class="sd">        measure is less than `eps*100%` of the previous value. Default `0.01`</span>
+<span class="sd">    seed : int, optional</span>
+<span class="sd">        Random seed. Default `None`.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    numpy.array</span>
+<span class="sd">        An `n` by `n` Latin Hypercube Sample matrix with values uniformly distributed on `[0,1]`.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="n">seed</span><span class="p">:</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="n">seed</span><span class="p">)</span>
+    <span class="n">jLen</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">math</span><span class="o">.</span><span class="n">factorial</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">math</span><span class="o">.</span><span class="n">factorial</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">math</span><span class="o">.</span><span class="n">factorial</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">))</span> <span class="o">+</span> <span class="mf">1.0</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="n">k</span><span class="p">)[</span><span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">,</span> <span class="p">:]</span> <span class="k">if</span> <span class="n">n</span><span class="o">==</span><span class="mi">0</span> <span class="k">else</span> <span class="n">convertIntegerToNumericLhs</span><span class="p">(</span><span class="n">_optimumLHS</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">jLen</span><span class="p">,</span> <span class="n">maxsweeps</span><span class="p">,</span> <span class="n">eps</span><span class="p">,</span> <span class="n">seed</span><span class="p">))</span></div>
+
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Jose Divasón.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

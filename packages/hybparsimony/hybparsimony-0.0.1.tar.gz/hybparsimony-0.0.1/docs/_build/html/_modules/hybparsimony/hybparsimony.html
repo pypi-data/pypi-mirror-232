@@ -1,0 +1,1135 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>hybparsimony.hybparsimony &mdash; HYBparsimony Documentation  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            HYBparsimony Documentation
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../hybparsimony.html">hybparsimony package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../hybparsimony.util.html">hybparsimony.util package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../hybparsimony.lhs.html">hybparsimony.lhs package</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">HYBparsimony Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">hybparsimony.hybparsimony</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for hybparsimony.hybparsimony</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;hybparsimony for Python is a package for searching accurate parsimonious models by combining feature selection (FS), model</span>
+<span class="sd">hyperparameter optimization (HO), and parsimonious model selection (PMS) based on a separate cost and complexity evaluation.</span>
+
+<span class="sd">To improve the search for parsimony, the hybrid method combines GA mechanisms such as selection, crossover and mutation within a PSO-based optimization algorithm that includes a strategy in which the best position of each particle (thus also the best position of each neighborhood) is calculated taking into account not only the goodness-of-fit, but also the parsimony principle. </span>
+
+<span class="sd">In hybparsimony, the percentage of variables to be replaced with GA at each iteration $t$ is selected by a decreasing exponential function:</span>
+<span class="sd"> $pcrossover=max(0.80 \cdot e^{(-\Gamma \cdot t)}, 0.10)$, that is adjusted by a $\Gamma$ parameter (by default $\Gamma$ is set to $0.50$). Thus, in the first iterations parsimony is promoted by GA mechanisms, i.e., replacing by crossover a high percentage of particles at the beginning. Subsequently, optimization with PSO becomes more relevant for the improvement of model accuracy. This differs from other hybrid methods in which the crossover is applied between the best individual position of each particle or other approaches in which the worst particles are also replaced by new particles, but at extreme positions.</span>
+
+<span class="sd">Experiments show that, in general, and with a suitable $\Gamma$, hybparsimony allows to obtain better, more parsimonious and more robust models compared to other methods. It also reduces the number of iterations and, consequently, the computational effort.</span>
+
+<span class="sd">References</span>
+<span class="sd">----------</span>
+<span class="sd">Divasón, J., Pernia-Espinoza, A., Martinez-de-Pison, F.J. (2022).</span>
+<span class="sd">New Hybrid Methodology Based on Particle Swarm Optimization with Genetic Algorithms to Improve </span>
+<span class="sd">the Search of Parsimonious Models in High-Dimensional Databases.</span>
+<span class="sd">In: García Bringas, P., et al. </span>
+<span class="sd">Hybrid Artificial Intelligent Systems. HAIS 2022. </span>
+<span class="sd">Lecture Notes in Computer Science, vol 13469. Springer, Cham.</span>
+<span class="sd">[https://doi.org/10.1007/978-3-031-15471-3_29](https://doi.org/10.1007/978-3-031-15471-3_29)</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">copy</span>
+<span class="kn">import</span> <span class="nn">multiprocessing</span>
+<span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">from</span> <span class="nn">multiprocessing</span> <span class="kn">import</span> <span class="n">Pool</span>
+<span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">partial</span>
+<span class="kn">from</span> <span class="nn">hybparsimony.util</span> <span class="kn">import</span> <span class="n">Population</span><span class="p">,</span> <span class="n">order</span><span class="p">,</span> <span class="n">getFitness</span><span class="p">,</span> <span class="n">parsimony_monitor</span><span class="p">,</span> <span class="n">parsimony_summary</span><span class="p">,</span> <span class="n">models</span>
+<span class="kn">from</span> <span class="nn">hybparsimony.util.fitness</span> <span class="kn">import</span> <span class="n">fitness_for_parallel</span>
+<span class="kn">from</span> <span class="nn">hybparsimony.util.hyb_aux</span> <span class="kn">import</span> <span class="n">_rerank</span><span class="p">,</span> <span class="n">_crossover</span><span class="p">,</span> <span class="n">_population</span>
+<span class="kn">from</span> <span class="nn">hybparsimony.lhs</span> <span class="kn">import</span> <span class="n">randomLHS</span>
+<span class="kn">import</span> <span class="nn">math</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">from</span> <span class="nn">numpy.random</span> <span class="kn">import</span> <span class="n">multinomial</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">mean_squared_error</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">cross_val_score</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">make_scorer</span>
+<span class="kn">from</span> <span class="nn">hybparsimony.util.models</span> <span class="kn">import</span> <span class="n">check_algorithm</span>
+
+<div class="viewcode-block" id="HYBparsimony"><a class="viewcode-back" href="../../hybparsimony.html#hybparsimony.hybparsimony.HYBparsimony">[docs]</a><span class="k">class</span> <span class="nc">HYBparsimony</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+<div class="viewcode-block" id="HYBparsimony.__init__"><a class="viewcode-back" href="../../hybparsimony.html#hybparsimony.hybparsimony.HYBparsimony.__init__">[docs]</a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                 <span class="n">fitness</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+                 <span class="n">features</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+                 <span class="n">algorithm</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+                 <span class="n">custom_eval_fun</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">cv</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">scoring</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">type_ini_pop</span><span class="o">=</span><span class="s2">&quot;improvedLHS&quot;</span><span class="p">,</span>
+                 <span class="n">npart</span> <span class="o">=</span> <span class="mi">15</span><span class="p">,</span>
+                 <span class="n">maxiter</span><span class="o">=</span><span class="mi">250</span><span class="p">,</span>
+                 <span class="n">early_stop</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">Lambda</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span>
+                 <span class="n">c1</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="mi">2</span> <span class="o">+</span> <span class="n">math</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span>
+                 <span class="n">c2</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="mi">2</span> <span class="o">+</span> <span class="n">math</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span>
+                 <span class="n">IW_max</span><span class="o">=</span><span class="mf">0.9</span><span class="p">,</span>
+                 <span class="n">IW_min</span><span class="o">=</span><span class="mf">0.4</span><span class="p">,</span>
+                 <span class="n">K</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+                 <span class="n">pmutation</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span>
+                 <span class="c1">#pcrossover_elitists = None,  # an array or a float (number between 0 and 1).</span>
+                 <span class="c1">#pcrossover = None,  # an array or a float (number between 0 and 1), % of worst individuals to substitute from crossover.</span>
+                 <span class="n">gamma_crossover</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span>
+                 <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-4</span><span class="p">,</span>
+                 <span class="n">rerank_error</span><span class="o">=</span><span class="mf">1e-09</span><span class="p">,</span>
+                 <span class="n">keep_history</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+                 <span class="n">feat_thres</span> <span class="o">=</span> <span class="mf">0.90</span><span class="p">,</span>
+                 <span class="n">best_global_thres</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+                 <span class="n">particles_to_delete</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">seed_ini</span> <span class="o">=</span> <span class="mi">1234</span><span class="p">,</span>
+                 <span class="n">not_muted</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span>
+                 <span class="n">feat_mut_thres</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span>
+                 <span class="n">n_jobs</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+                 <span class="n">verbose</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+<span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">            A class for searching parsimonious models by feature selection and parameter tuning with</span>
+<span class="sd">            an hybrid method based on genetic algorithms and particle swarm optimization.</span>
+
+<span class="sd">            Parameters</span>
+<span class="sd">            ----------</span>
+<span class="sd">            fitness : function, optional</span>
+<span class="sd">                The fitness function, any function which takes as input a chromosome which combines the model parameters </span>
+<span class="sd">                to tune and the features to be selected. Fitness function returns a numerical vector with three values: validation_cost, </span>
+<span class="sd">                testing_cost and model_complexity, and the trained model.</span>
+<span class="sd">            features : list of str, default=None</span>
+<span class="sd">                The name of features/columns in the dataset. If None, it extracts the names if X is a dataframe, otherwise it generates a list of the positions according to the value of X.shape[1].</span>
+<span class="sd">            algorithm: string or dict, default=None</span>
+<span class="sd">                Id string, the name of the algorithm to optimize (defined in &#39;hybparsimony.util.models.py&#39;) or a dictionary defined</span>
+<span class="sd">                with the following properties: {&#39;estimator&#39;: any machine learning algorithm compatible with scikit-learn,</span>
+<span class="sd">                &#39;complexity&#39;: the function that measures the complexity of the model, &#39;the hyperparameters of the algorithm&#39;:</span>
+<span class="sd">                in this case, they can be fixed values (defined by Population.CONSTANT) or a search range $[min, max]$ </span>
+<span class="sd">                defined by {&quot;range&quot;:(min, max), &quot;type&quot;: Population.X} and which type can be of three values: </span>
+<span class="sd">                integer (Population.INTEGER), float (Population.FLOAT) or in powers of 10 (Population.POWER), </span>
+<span class="sd">                i.e. $10^{[min, max]}$}. If algorithm==None, hybparsimony uses &#39;LogisticRegression()&#39; for</span>
+<span class="sd">                classification problems, and &#39;Ridge&#39; for regression problems.</span>
+<span class="sd">            custom_eval_fun : function, default=None</span>
+<span class="sd">                An evaluation function similar to scikit-learns&#39;s &#39;cross_val_score()&#39;. If None, hybparsimony uses</span>
+<span class="sd">                &#39;cross_val_score(cv=5)&#39;.</span>
+<span class="sd">            cv: int, cross-validation generator or an iterable, default=None</span>
+<span class="sd">                Determines the cross-validation splitting strategy (see scikit-learn&#39;s &#39;cross_val_score()&#39; function)</span>
+<span class="sd">            scoring: str, callable, list, tuple, or dict, default=None.</span>
+<span class="sd">                Strategy to evaluate the performance of the cross-validated model on the test set. If None cv=5 and &#39;scoring&#39; is defined as MSE for regression problems, </span>
+<span class="sd">                &#39;log_loss&#39; for binary classification problems, and &#39;f1_macro&#39; for multiclass problems. (see scikit-learn&#39;s </span>
+<span class="sd">                &#39;cross_val_score()&#39; function)</span>
+<span class="sd">            type_ini_pop : str, {&#39;randomLHS&#39;, &#39;geneticLHS&#39;, &#39;improvedLHS&#39;, &#39;maximinLHS&#39;, &#39;optimumLHS&#39;, &#39;random&#39;}, optional</span>
+<span class="sd">                Method to create the first population with `GAparsimony._population` function. Possible values: `randomLHS`, `geneticLHS`, </span>
+<span class="sd">                `improvedLHS`, `maximinLHS`, `optimumLHS`, `random`. First 5 methods correspond with several latine hypercube for initial sampling. By default is set to `improvedLHS`.</span>
+<span class="sd">            npart = int, default=15</span>
+<span class="sd">                Number of particles in the swarm (population size)</span>
+<span class="sd">            maxiter = int, default=250</span>
+<span class="sd">                The maximum number of iterations to run before the HYB process is halted.</span>
+<span class="sd">            early_stop : int, optional</span>
+<span class="sd">                The number of consecutive generations without any improvement lower than a difference of &#39;tol&#39;</span>
+<span class="sd">                in the &#39;best_fitness&#39; value before the search process is stopped.</span>
+<span class="sd">            tol : float, default=1e-4,</span>
+<span class="sd">                Value defining a significant difference between the &#39;best_fitness&#39; values between iterations for &#39;early stopping&#39;.</span>
+<span class="sd">            rerank_error : float, default=1e-09</span>
+<span class="sd">                When a value is provided, a second reranking process according to the model complexities is called by `parsimony_rerank` function. </span>
+<span class="sd">                Its primary objective isto select individuals with high validation cost while maintaining the robustnessof a parsimonious model. </span>
+<span class="sd">                This function switches the position of two models if the first one is more complex than the latter and no significant difference </span>
+<span class="sd">                is found between their fitness values in terms of cost. Thus, if the absolute difference between the validation costs are </span>
+<span class="sd">                lower than `rerank_error` they are considered similar.</span>
+<span class="sd">            gamma_crossover : float, default=0.50</span>
+<span class="sd">                In hybparsimony, the percentage of variables to be replaced with GA at each iteration $t$ is selected by a decreasing exponential function</span>
+<span class="sd">                that is adjusted by a &#39;gamma_crossover&#39; parameter (see references for more info).</span>
+<span class="sd">            Lambda : float, default=1.0</span>
+<span class="sd">                PSO parameter (see References)</span>
+<span class="sd">            c1 : float, default=1/2 + math.log(2)</span>
+<span class="sd">                PSO parameter (see References)</span>
+<span class="sd">            c2 : float, default=1/2 + math.log(2)</span>
+<span class="sd">                PSO parameter (see References)</span>
+<span class="sd">            IW_max : float, default=0.9</span>
+<span class="sd">                PSO parameter (see References)</span>
+<span class="sd">            IW_min : float, default=0.4</span>
+<span class="sd">                PSO parameter (see References)</span>
+<span class="sd">            K : int, default=4</span>
+<span class="sd">                PSO parameter (see References)</span>
+<span class="sd">            best_global_thres : float, default=1.0</span>
+<span class="sd">                Percentage of particles that will be influenced by the best global of their neighbourhoods</span>
+<span class="sd">                (otherwise, they will be influenced by the best of the iteration in each neighbourhood)</span>
+<span class="sd">                particles_to_delete is not None and len(particles_to_delete) &lt; maxiter:</span>
+<span class="sd">            particles_to_delete : float, default=None</span>
+<span class="sd">                The length of the particles to delete is lower than the iterations, </span>
+<span class="sd">                the array is completed with zeros up to the number of iterations.</span>
+<span class="sd">            mutation : float, default=0.1</span>
+<span class="sd">                The probability of mutation in a parent chromosome. Usually mutation occurs with a small probability. By default is set to `0.10`.</span>
+<span class="sd">            feat_mut_thres : float, default=0.1</span>
+<span class="sd">                Probability of the muted `features-chromosome` to be one. Default value is set to `0.10`.</span>
+<span class="sd">            feat_thres : float, default=0.90</span>
+<span class="sd">                Proportion of selected features in the initial population. It is recommended a high percentage of the selected features for </span>
+<span class="sd">                the first generations.</span>
+<span class="sd">            keep_history : bool default=False,</span>
+<span class="sd">                If True keep results of all particles in each iteration into &#39;history&#39; attribute.</span>
+<span class="sd">            seed_ini : int, optional</span>
+<span class="sd">                An integer value containing the random number generator state.</span>
+<span class="sd">            n_jobs : int, default=1,</span>
+<span class="sd">                Number of cores to parallelize the evaluation of the swarm. It should be used with caution because the </span>
+<span class="sd">                algorithms used or the &#39;cross_validate()&#39; function used by default to evaluate individuals may also parallelize </span>
+<span class="sd">                their internal processes.</span>
+<span class="sd">            verbose : int, default=0</span>
+<span class="sd">                The level of messages that we want it to show us. Possible values: 0=silent mode, 1=monitor level,  2=debug level.</span>
+<span class="sd">        </span>
+<span class="sd">        Attributes</span>
+<span class="sd">        ----------</span>
+<span class="sd">        minutes_total : float</span>
+<span class="sd">            Total elapsed time (in minutes).</span>
+<span class="sd">        history : float</span>
+<span class="sd">            A list with the results of the population of all iterations.&#39;history[iter]&#39; returns a DataFrame </span>
+<span class="sd">            with the results of iteration &#39;iter&#39;.</span>
+<span class="sd">        best_model</span>
+<span class="sd">            The best model in the whole optimization process.</span>
+<span class="sd">        best_score : float</span>
+<span class="sd">            The validation score of the best model.</span>
+<span class="sd">        best_complexity : float</span>
+<span class="sd">            The complexity of the best model.</span>
+<span class="sd">        selected_features : list,</span>
+<span class="sd">            The name of the selected features for the best model.</span>
+<span class="sd">        selected_features_bool : list,</span>
+<span class="sd">           The selected features for the best model in Boolean form.</span>
+<span class="sd">        best_model_conf : Chromosome</span>
+<span class="sd">            The parameters and features of the best model in the whole optimization process.</span>
+<span class="sd">        </span>
+<span class="sd">        Examples</span>
+<span class="sd">        --------</span>
+<span class="sd">        Usage example for a regression model using the sklearn &#39;diabetes&#39; dataset </span>
+
+<span class="sd">        .. highlight:: python</span>
+<span class="sd">        .. code-block:: python</span>
+
+<span class="sd">            </span>
+<span class="sd">            import pandas as pd</span>
+<span class="sd">            from sklearn.model_selection import train_test_split</span>
+<span class="sd">            from sklearn.metrics import mean_squared_error</span>
+<span class="sd">            from sklearn.datasets import load_diabetes</span>
+<span class="sd">            from sklearn.preprocessing import StandardScaler</span>
+<span class="sd">            from hybparsimony import hybparsimony</span>
+
+<span class="sd">            # Load &#39;diabetes&#39; dataset</span>
+<span class="sd">            diabetes = load_diabetes()</span>
+
+<span class="sd">            X, y = diabetes.data, diabetes.target</span>
+<span class="sd">            X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state=1234)</span>
+
+<span class="sd">            # Standarize X and y</span>
+<span class="sd">            scaler_X = StandardScaler()</span>
+<span class="sd">            X_train = scaler_X.fit_transform(X_train)</span>
+<span class="sd">            X_test = scaler_X.transform(X_test)</span>
+<span class="sd">            scaler_y = StandardScaler()</span>
+<span class="sd">            y_train = scaler_y.fit_transform(y_train.reshape(-1,1)).flatten()</span>
+<span class="sd">            y_test = scaler_y.transform(y_test.reshape(-1,1)).flatten()</span>
+
+<span class="sd">            algo = &#39;KernelRidge&#39;</span>
+<span class="sd">            HYBparsimony_model = hybparsimony(algorithm=algo,</span>
+<span class="sd">                                            features=diabetes.feature_names,</span>
+<span class="sd">                                            rerank_error=0.001,</span>
+<span class="sd">                                            verbose=1)</span>
+
+<span class="sd">            # Search the best hyperparameters and features </span>
+<span class="sd">            # (increasing &#39;time_limit&#39; to improve RMSE with high consuming algorithms)</span>
+<span class="sd">            HYBparsimony_model.fit(X_train, y_train, time_limit=0.20)</span>
+
+<span class="sd">        .. code-block:: text</span>
+
+<span class="sd">            Running iteration 0</span>
+<span class="sd">            Best model -&gt; Score = -0.510786 Complexity = 9,017,405,352.5 </span>
+<span class="sd">            Iter = 0 -&gt; MeanVal = -0.88274  ValBest = -0.510786   ComplexBest = 9,017,405,352.5 Time(min) = 0.005858</span>
+
+<span class="sd">            Running iteration 1</span>
+<span class="sd">            Best model -&gt; Score = -0.499005 Complexity = 8,000,032,783.88 </span>
+<span class="sd">            Iter = 1 -&gt; MeanVal = -0.659969  ValBest = -0.499005   ComplexBest = 8,000,032,783.88 Time(min) = 0.004452</span>
+
+<span class="sd">            ...</span>
+<span class="sd">            ...</span>
+<span class="sd">            ...</span>
+
+<span class="sd">            Running iteration 34</span>
+<span class="sd">            Best model -&gt; Score = -0.489468 Complexity = 8,000,002,255.68 </span>
+<span class="sd">            Iter = 34 -&gt; MeanVal = -0.527314  ValBest = -0.489468   ComplexBest = 8,000,002,255.68 Time(min) = 0.007533</span>
+
+<span class="sd">            Running iteration 35</span>
+<span class="sd">            Best model -&gt; Score = -0.489457 Complexity = 8,000,002,199.12 </span>
+<span class="sd">            Iter = 35 -&gt; MeanVal = -0.526294  ValBest = -0.489457   ComplexBest = 8,000,002,199.12 Time(min) = 0.006522</span>
+
+<span class="sd">            Time limit reached. Stopped.</span>
+
+<span class="sd">        Usage example for a classification model using the &#39;breast_cancer&#39; dataset </span>
+
+<span class="sd">        .. highlight:: python</span>
+<span class="sd">        .. code-block:: python</span>
+
+<span class="sd">            import pandas as pd</span>
+<span class="sd">            from sklearn.model_selection import train_test_split</span>
+<span class="sd">            from sklearn.preprocessing import StandardScaler</span>
+<span class="sd">            from sklearn.datasets import load_breast_cancer</span>
+<span class="sd">            from sklearn.metrics import log_loss</span>
+<span class="sd">            from hybparsimony import hybparsimony</span>
+<span class="sd">            </span>
+<span class="sd">            # load &#39;breast_cancer&#39; dataset</span>
+<span class="sd">            breast_cancer = load_breast_cancer()</span>
+<span class="sd">            X, y = breast_cancer.data, breast_cancer.target </span>
+<span class="sd">            print(X.shape)</span>
+
+<span class="sd">            X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.20, random_state=1)</span>
+<span class="sd">            </span>
+<span class="sd">            # Standarize X and y (some algorithms require that)</span>
+<span class="sd">            scaler_X = StandardScaler()</span>
+<span class="sd">            X_train = scaler_X.fit_transform(X_train)</span>
+<span class="sd">            X_test = scaler_X.transform(X_test)</span>
+
+<span class="sd">            HYBparsimony_model = hybparsimony(features=breast_cancer.feature_names,</span>
+<span class="sd">                                            rerank_error=0.005,</span>
+<span class="sd">                                            verbose=1)</span>
+<span class="sd">            HYBparsimony_model.fit(X_train, y_train, time_limit=0.50)</span>
+<span class="sd">            # Extract probs of class==1</span>
+<span class="sd">            preds = HYBparsimony_model.predict_proba(X_test)[:,1]</span>
+<span class="sd">            print(f&#39;\n\nBest Model = {HYBparsimony_model.best_model}&#39;)</span>
+<span class="sd">            print(f&#39;Selected features:{HYBparsimony_model.selected_features}&#39;)</span>
+<span class="sd">            print(f&#39;Complexity = {round(HYBparsimony_model.best_complexity, 2):,}&#39;)</span>
+<span class="sd">            print(f&#39;5-CV logloss = {-round(HYBparsimony_model.best_score,6)}&#39;)</span>
+<span class="sd">            print(f&#39;logloss test = {round(log_loss(y_test, preds),6)}&#39;)</span>
+<span class="sd">        </span>
+<span class="sd">        .. code-block:: text</span>
+
+<span class="sd">            (569, 30)</span>
+<span class="sd">            Detected a binary-class problem. Using &#39;neg_log_loss&#39; as default scoring function.</span>
+<span class="sd">            Running iteration 0</span>
+<span class="sd">            Best model -&gt; Score = -0.091519 Complexity = 29,000,000,005.11 </span>
+<span class="sd">            Iter = 0 -&gt; MeanVal = -0.297448  ValBest = -0.091519   ComplexBest = 29,000,000,005.11 Time(min) = 0.006501</span>
+
+<span class="sd">            Running iteration 1</span>
+<span class="sd">            Best model -&gt; Score = -0.085673 Complexity = 27,000,000,009.97 </span>
+<span class="sd">            Iter = 1 -&gt; MeanVal = -0.117216  ValBest = -0.085673   ComplexBest = 27,000,000,009.97 Time(min) = 0.004273</span>
+
+<span class="sd">            ...</span>
+<span class="sd">            ...</span>
+
+<span class="sd">            Running iteration 102</span>
+<span class="sd">            Best model -&gt; Score = -0.064557 Complexity = 11,000,000,039.47 </span>
+<span class="sd">            Iter = 102 -&gt; MeanVal = -0.076314  ValBest = -0.066261   ComplexBest = 9,000,000,047.25 Time(min) = 0.004769</span>
+
+<span class="sd">            Running iteration 103</span>
+<span class="sd">            Best model -&gt; Score = -0.064557 Complexity = 11,000,000,039.47 </span>
+<span class="sd">            Iter = 103 -&gt; MeanVal = -0.086243  ValBest = -0.064995   ComplexBest = 11,000,000,031.2 Time(min) = 0.004591</span>
+
+<span class="sd">            Time limit reached. Stopped.</span>
+
+<span class="sd">            Best Model = LogisticRegression(C=5.92705799354935)</span>
+<span class="sd">            Selected features:[&#39;mean texture&#39; &#39;mean concave points&#39; &#39;radius error&#39; &#39;area error&#39;</span>
+<span class="sd">            &#39;compactness error&#39; &#39;worst radius&#39; &#39;worst perimeter&#39; &#39;worst area&#39;</span>
+<span class="sd">            &#39;worst smoothness&#39; &#39;worst concavity&#39; &#39;worst symmetry&#39;]</span>
+<span class="sd">            Complexity = 11,000,000,039.47</span>
+<span class="sd">            5-CV logloss = 0.064557</span>
+<span class="sd">            logloss test = 0.076254</span>
+<span class="sd">                </span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">type_ini_pop</span> <span class="o">=</span> <span class="n">type_ini_pop</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fitness</span> <span class="o">=</span> <span class="n">fitness</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">features</span> <span class="o">=</span> <span class="n">features</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">npart</span> <span class="o">=</span> <span class="n">npart</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">maxiter</span> <span class="o">=</span> <span class="n">maxiter</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">early_stop</span> <span class="o">=</span> <span class="n">maxiter</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">early_stop</span> <span class="k">else</span> <span class="n">early_stop</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">Lambda</span> <span class="o">=</span> <span class="n">Lambda</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">c1</span> <span class="o">=</span> <span class="n">c1</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">c2</span> <span class="o">=</span> <span class="n">c2</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">IW_max</span> <span class="o">=</span> <span class="n">IW_max</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">IW_min</span> <span class="o">=</span> <span class="n">IW_min</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">K</span> <span class="o">=</span> <span class="n">K</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tol</span> <span class="o">=</span> <span class="n">tol</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">rerank_error</span> <span class="o">=</span> <span class="n">rerank_error</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">verbose</span> <span class="o">=</span> <span class="n">verbose</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">seed_ini</span> <span class="o">=</span> <span class="n">seed_ini</span>
+
+        <span class="k">if</span> <span class="n">pmutation</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">pmutation</span> <span class="o">=</span> <span class="mf">0.0</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">pmutation</span> <span class="o">=</span> <span class="n">pmutation</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">not_muted</span> <span class="o">=</span> <span class="n">not_muted</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">feat_mut_thres</span> <span class="o">=</span> <span class="n">feat_mut_thres</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">feat_thres</span> <span class="o">=</span> <span class="n">feat_thres</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">minutes_total</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">history</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">keep_history</span> <span class="o">=</span> <span class="n">keep_history</span>
+
+        <span class="c1"># Percentage of particles that will be influenced by the best global of their neighbourhoods</span>
+        <span class="c1"># (otherwise, they will be influenced by the best of the iteration in each neighbourhood)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">best_global_thres</span> <span class="o">=</span> <span class="n">best_global_thres</span>
+
+        <span class="c1"># if pcrossover is not None:</span>
+        <span class="c1">#     if isinstance(pcrossover,(list,np.ndarray)): #If it is a list or an np array</span>
+        <span class="c1">#         if len(pcrossover) &lt; maxiter:</span>
+        <span class="c1">#             # If the length of the pcrossover array is lower than the iterations, the array is completed with zeros</span>
+        <span class="c1">#             # up to the number of iterations.</span>
+        <span class="c1">#             self.pcrossover = np.zeros(maxiter).astype(float)</span>
+        <span class="c1">#             self.pcrossover[:len(pcrossover)] = pcrossover[:]</span>
+        <span class="c1">#         else:</span>
+        <span class="c1">#             self.pcrossover = pcrossover</span>
+        <span class="c1">#     else:</span>
+        <span class="c1">#         # If the parameter was a float, then an array is built in which each position contains that float.</span>
+        <span class="c1">#         self.pcrossover = np.full(maxiter, pcrossover, dtype=float)</span>
+        <span class="c1">#     # Ensure all numbers are in the range [0,1]</span>
+        <span class="c1">#     self.pcrossover[self.pcrossover &lt; 0] = 0</span>
+        <span class="c1">#     self.pcrossover[self.pcrossover &gt; 1] = 1</span>
+        <span class="c1"># else:</span>
+        <span class="c1">#     self.pcrossover = None</span>
+
+        <span class="c1"># El gamma del crossover (ahora construyo el self.pcrossover a partir del gamma).</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pcrossover</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">if</span> <span class="n">gamma_crossover</span> <span class="o">!=</span> <span class="mf">0.0</span><span class="p">:</span>
+            <span class="n">perc_malos</span> <span class="o">=</span> <span class="mf">0.80</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">gamma_crossover</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">maxiter</span><span class="p">))</span>
+            <span class="n">perc_malos</span><span class="p">[</span><span class="n">perc_malos</span> <span class="o">&lt;</span> <span class="mf">0.10</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.10</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">pcrossover</span> <span class="o">=</span> <span class="n">perc_malos</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">n_jobs</span><span class="o">=</span><span class="n">n_jobs</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">n_jobs</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">n_jobs</span> <span class="o">=</span> <span class="n">multiprocessing</span><span class="o">.</span><span class="n">cpu_count</span><span class="p">()</span>  <span class="c1"># Si ponemos un -1, entonces todos los cores (aunque la validación cruzada ya hará más aún!).</span>
+
+        <span class="k">if</span> <span class="n">particles_to_delete</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">particles_to_delete</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">maxiter</span><span class="p">:</span>
+            <span class="c1"># If the length of the particles to delete is lower than the iterations, the array is completed with zeros</span>
+            <span class="c1"># up to the number of iterations.</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">particles_to_delete</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">maxiter</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">particles_to_delete</span><span class="p">[:</span><span class="nb">len</span><span class="p">(</span><span class="n">particles_to_delete</span><span class="p">)]</span> <span class="o">=</span> <span class="n">particles_to_delete</span><span class="p">[:]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">particles_to_delete</span> <span class="o">=</span> <span class="n">particles_to_delete</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">seed_ini</span><span class="p">:</span>
+            <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">seed_ini</span><span class="p">)</span>
+
+        <span class="c1"># Custom cross val score</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">custom_eval_fun</span> <span class="o">=</span> <span class="n">custom_eval_fun</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_cv</span><span class="o">=</span><span class="n">cv</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_scoring</span><span class="o">=</span><span class="n">scoring</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">algorithm</span> <span class="o">=</span> <span class="n">algorithm</span></div>
+
+
+<div class="viewcode-block" id="HYBparsimony.fit"><a class="viewcode-back" href="../../hybparsimony.html#hybparsimony.hybparsimony.HYBparsimony.fit">[docs]</a>    <span class="k">def</span> <span class="nf">fit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">time_limit</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Performs the search of accurate parsimonious models by combining feature selection, hyperparameter optimizacion,</span>
+<span class="sd">            and parsimonious model selection (PMS) with data matrix (X) and targets (y).</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        X : pandas.DataFrame or numpy.array</span>
+<span class="sd">            Training vector.</span>
+<span class="sd">        y : pandas.DataFrame or numpy.array</span>
+<span class="sd">            Target vector relative to X.</span>
+<span class="sd">        time_limit : float, default=None</span>
+<span class="sd">            Maximum time to perform the optimization process in minutes.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="c1">#############################################</span>
+        <span class="c1">#  SOME LOGIC ON PARAMETERS&#39; INITIALIZATION</span>
+        <span class="c1">#############################################</span>
+
+        <span class="c1"># Detect type of problem and define default scoring function.</span>
+        <span class="k">def</span> <span class="nf">check_classification</span><span class="p">(</span><span class="n">y</span><span class="p">):</span>
+           <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">issubdtype</span><span class="p">(</span><span class="n">y</span><span class="o">.</span><span class="n">dtype</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">integer</span><span class="p">)</span>
+        
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_scoring</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">default_scoring</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_scoring</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">verbose</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Using &#39;</span><span class="si">{</span><span class="n">default_scoring</span><span class="si">}</span><span class="s2">&#39; as scoring function.&quot;</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">check_classification</span><span class="p">(</span><span class="n">y</span><span class="p">):</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">y</span><span class="p">))</span><span class="o">==</span><span class="mi">2</span><span class="p">:</span>
+                <span class="n">default_scoring</span> <span class="o">=</span> <span class="s1">&#39;neg_log_loss&#39;</span>
+                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">verbose</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Detected a binary-class problem. Using &#39;neg_log_loss&#39; as default scoring function.&quot;</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">default_scoring</span> <span class="o">=</span> <span class="s1">&#39;f1_macro&#39;</span>
+                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">verbose</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Detected a multi-class problem. Using &#39;f1_macro&#39; as default scoring function.&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">default_scoring</span> <span class="o">=</span> <span class="s1">&#39;neg_mean_squared_error&#39;</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">verbose</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Detected a regression problem. Using &#39;neg_mean_squared_error&#39; as default scoring function.&quot;</span><span class="p">)</span>
+
+        <span class="k">def</span> <span class="nf">default_cv_score</span><span class="p">(</span><span class="n">estimator</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">cross_val_score</span><span class="p">(</span><span class="n">estimator</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">scoring</span><span class="o">=</span><span class="n">default_scoring</span><span class="p">)</span>
+
+        <span class="c1"># Create custom_eval_fun </span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cv</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">custom_eval_fun</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_scoring</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">custom_eval_fun</span> <span class="o">=</span> <span class="n">partial</span><span class="p">(</span><span class="n">cross_val_score</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_cv</span><span class="p">,</span> <span class="n">scoring</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_scoring</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span> <span class="c1"># Por defecto:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">custom_eval_fun</span> <span class="o">=</span> <span class="n">partial</span><span class="p">(</span><span class="n">cross_val_score</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_cv</span><span class="p">,</span> <span class="n">scoring</span><span class="o">=</span><span class="n">default_scoring</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">custom_eval_fun</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span> 
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_scoring</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span> 
+                <span class="bp">self</span><span class="o">.</span><span class="n">custom_eval_fun</span> <span class="o">=</span> <span class="n">partial</span><span class="p">(</span><span class="n">cross_val_score</span><span class="p">,</span> <span class="n">scoring</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_scoring</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">custom_eval_fun</span> <span class="o">=</span> <span class="n">default_cv_score</span>
+
+        <span class="c1"># Select and check algorithm from dictionary</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">algorithm</span> <span class="o">=</span> <span class="n">check_algorithm</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">algorithm</span><span class="p">,</span> <span class="n">check_classification</span><span class="p">(</span><span class="n">y</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">algorithm</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">algorithm</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span> <span class="k">if</span> <span class="n">k</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;estimator&quot;</span><span class="p">,</span> <span class="s2">&quot;complexity&quot;</span><span class="p">]}</span>
+
+        <span class="c1"># Fitness function</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">n_jobs</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">fitness</span> <span class="o">=</span> <span class="n">getFitness</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">algorithm</span><span class="p">[</span><span class="s1">&#39;estimator&#39;</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">algorithm</span><span class="p">[</span><span class="s1">&#39;complexity&#39;</span><span class="p">],</span>
+                                      <span class="bp">self</span><span class="o">.</span><span class="n">custom_eval_fun</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span> <span class="c1"># Parallelization</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">fitness</span> <span class="o">=</span> <span class="n">partial</span><span class="p">(</span><span class="n">fitness_for_parallel</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">algorithm</span><span class="p">[</span><span class="s1">&#39;estimator&#39;</span><span class="p">],</span>
+                                   <span class="bp">self</span><span class="o">.</span><span class="n">algorithm</span><span class="p">[</span><span class="s1">&#39;complexity&#39;</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">custom_eval_fun</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">n_jobs</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">pool</span> <span class="o">=</span> <span class="n">Pool</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">n_jobs</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">features</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span> <span class="c1"># Si no hay features (nombre de las columnas a optimizar), entonces cojo todas</span>
+            <span class="k">if</span> <span class="s2">&quot;pandas&quot;</span> <span class="ow">in</span> <span class="nb">str</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">X</span><span class="p">)):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">features</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">columns</span> <span class="c1"># Si es un DataFrame, saco los nombres de las columnas.</span>
+            <span class="k">else</span><span class="p">:</span> <span class="c1"># SI no, entonces es un numpy array y pongo números del 0 al número de columnas</span>
+                <span class="n">num_rows</span><span class="p">,</span> <span class="n">num_cols</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">shape</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">features</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">num_cols</span><span class="p">))</span>
+
+        <span class="c1">#############################################</span>
+        <span class="c1">#               THE HYBRID METHOD</span>
+        <span class="c1">#############################################</span>
+
+        <span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">seed_ini</span><span class="p">:</span>
+            <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">seed_ini</span><span class="p">)</span>
+
+        <span class="n">population</span> <span class="o">=</span> <span class="n">Population</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">features</span><span class="p">)</span>
+        <span class="n">population</span><span class="o">.</span><span class="n">population</span> <span class="o">=</span> <span class="n">_population</span><span class="p">(</span><span class="n">population</span><span class="p">,</span> <span class="n">seed_ini</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">seed_ini</span><span class="p">,</span> <span class="n">popSize</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">npart</span><span class="p">,</span>
+                                            <span class="n">type_ini_pop</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">type_ini_pop</span><span class="p">)</span>  <span class="c1"># To create the initial population</span>
+
+
+        <span class="c1"># Update population to satisfy the feat_thres</span>
+        <span class="n">population</span><span class="o">.</span><span class="n">update_to_feat_thres</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">npart</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">feat_thres</span><span class="p">)</span>
+
+        <span class="n">nfs</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">population</span><span class="o">.</span><span class="n">colsnames</span><span class="p">)</span>
+        <span class="n">nparams</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">population</span><span class="o">.</span><span class="n">_params</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_summary</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">maxiter</span><span class="p">,</span> <span class="mi">6</span> <span class="o">*</span> <span class="mi">2</span><span class="p">,))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_summary</span><span class="p">[:]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">best_score</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">NINF</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">best_complexity</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">Inf</span>
+
+        <span class="n">maxFitness</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">Inf</span>
+        <span class="n">best_fit_particle</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">npart</span><span class="p">)</span>
+        <span class="n">best_fit_particle</span><span class="p">[:]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">NINF</span>
+
+        <span class="n">best_pos_particle</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">npart</span><span class="p">,</span> <span class="n">nparams</span> <span class="o">+</span> <span class="n">nfs</span><span class="p">))</span>
+        <span class="n">best_complexity_particle</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">npart</span><span class="p">)</span>  <span class="c1"># Complexities</span>
+        <span class="n">best_complexity_particle</span><span class="p">[:]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">Inf</span>
+
+        <span class="n">range_numbers</span> <span class="o">=</span> <span class="n">population</span><span class="o">.</span><span class="n">_max</span> <span class="o">-</span> <span class="n">population</span><span class="o">.</span><span class="n">_min</span>
+        <span class="n">vmax</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">Lambda</span> <span class="o">*</span> <span class="n">range_numbers</span>
+        <span class="n">range_as_pd</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">range_numbers</span><span class="p">)</span>
+        <span class="n">lower_as_pd</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">population</span><span class="o">.</span><span class="n">_min</span><span class="p">)</span>
+        <span class="n">v_norm</span> <span class="o">=</span> <span class="n">randomLHS</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">npart</span><span class="p">,</span> <span class="n">nparams</span> <span class="o">+</span> <span class="n">nfs</span><span class="p">)</span>
+        <span class="n">v_norm</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">v_norm</span><span class="p">)</span>
+        <span class="n">v_norm</span> <span class="o">=</span> <span class="n">v_norm</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">row</span><span class="p">:</span> <span class="n">row</span> <span class="o">*</span> <span class="n">range_as_pd</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">v_norm</span> <span class="o">=</span> <span class="n">v_norm</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">row</span><span class="p">:</span> <span class="n">row</span> <span class="o">+</span> <span class="n">lower_as_pd</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+        <span class="n">velocity</span> <span class="o">=</span> <span class="p">(</span><span class="n">v_norm</span> <span class="o">-</span> <span class="n">population</span><span class="o">.</span><span class="n">_pop</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+        <span class="n">velocity</span> <span class="o">=</span> <span class="n">velocity</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">bestSolList</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">best_models_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">best_models_conf_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+
+        <span class="c1"># Variables to store the best global positions, fitnessval and complexity of each particle</span>
+        <span class="n">bestGlobalPopulation</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">deepcopy</span><span class="p">(</span><span class="n">population</span><span class="o">.</span><span class="n">_pop</span><span class="p">)</span>
+        <span class="n">bestGlobalFitnessVal</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">npart</span><span class="p">)</span>
+        <span class="n">bestGlobalFitnessVal</span><span class="p">[:]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">NINF</span>
+        <span class="n">bestGlobalComplexity</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">npart</span><span class="p">)</span>
+        <span class="n">bestGlobalComplexity</span><span class="p">[:]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">inf</span>
+
+        <span class="c1">#Variable that tracks the deleted particles (their number in the table)</span>
+        <span class="n">deleted_particles</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">valid_particles</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">npart</span><span class="p">)</span> <span class="k">if</span>
+                           <span class="n">x</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">deleted_particles</span><span class="p">]</span>  <span class="c1"># valid particles (numbers in the table)</span>
+
+        <span class="n">fitnessval</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">npart</span><span class="p">)</span>
+        <span class="n">fitnessval</span><span class="p">[:]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+        <span class="n">fitnesstst</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">npart</span><span class="p">)</span>
+        <span class="n">fitnesstst</span><span class="p">[:]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+        <span class="n">complexity</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">npart</span><span class="p">)</span>
+        <span class="n">complexity</span><span class="p">[:]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+        <span class="n">_models</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">npart</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">object</span><span class="p">)</span>
+        <span class="n">_models</span><span class="p">[:]</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="n">update_neighbourhoods</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="n">crossover_applied</span> <span class="o">=</span> <span class="kc">False</span>
+
+        <span class="k">for</span> <span class="nb">iter</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">maxiter</span><span class="p">):</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">verbose</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Running iteration&quot;</span><span class="p">,</span> <span class="nb">iter</span><span class="p">)</span>
+            
+            <span class="n">tic</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+            <span class="c1">#####################################################</span>
+            <span class="c1"># Compute solutions</span>
+            <span class="c1">#####################################################</span>
+
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">n_jobs</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span> <span class="c1"># Si NO hay paralelismo (comportamiento por defecto)</span>
+                <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">valid_particles</span><span class="p">:</span>
+                    <span class="n">c</span> <span class="o">=</span> <span class="n">population</span><span class="o">.</span><span class="n">getChromosome</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+
+                    <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                        <span class="n">fit</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fitness</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">X</span><span class="o">=</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="p">)</span>
+                        <span class="n">fitnessval</span><span class="p">[</span><span class="n">t</span><span class="p">]</span> <span class="o">=</span> <span class="n">fit</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+                       <span class="c1"># fitnesstst[t] = fit[0][1]</span>
+                        <span class="n">complexity</span><span class="p">[</span><span class="n">t</span><span class="p">]</span> <span class="o">=</span> <span class="n">fit</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+                        <span class="n">_models</span><span class="p">[</span><span class="n">t</span><span class="p">]</span> <span class="o">=</span> <span class="n">fit</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">list_params</span> <span class="o">=</span> <span class="p">[]</span>
+                <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">valid_particles</span><span class="p">:</span>  <span class="c1"># Se entrenan todas siempre (salvo las que eliminemos del proceso)</span>
+                    <span class="n">c</span> <span class="o">=</span> <span class="n">population</span><span class="o">.</span><span class="n">getChromosome</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+                    <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                        <span class="n">list_params</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">c</span><span class="p">,</span><span class="n">X</span><span class="p">,</span><span class="n">y</span><span class="p">])</span>
+
+                <span class="n">results</span> <span class="o">=</span> <span class="n">pool</span><span class="o">.</span><span class="n">starmap</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">fitness</span><span class="p">,</span> <span class="n">list_params</span><span class="p">)</span>  <span class="c1">## Aquí se hace el paralelismo.</span>
+                <span class="c1"># Recorremos los resultados</span>
+                <span class="k">for</span> <span class="n">fit</span><span class="p">,</span> <span class="n">t</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">results</span><span class="p">,</span> <span class="n">valid_particles</span><span class="p">):</span>
+                    <span class="n">fitnessval</span><span class="p">[</span><span class="n">t</span><span class="p">]</span> <span class="o">=</span> <span class="n">fit</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+                    <span class="c1">#fitnesstst[t] = fit[0][1]</span>
+                    <span class="n">complexity</span><span class="p">[</span><span class="n">t</span><span class="p">]</span> <span class="o">=</span> <span class="n">fit</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+                    <span class="n">_models</span><span class="p">[</span><span class="n">t</span><span class="p">]</span> <span class="o">=</span> <span class="n">fit</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">seed_ini</span><span class="p">:</span>
+                <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">seed_ini</span> <span class="o">*</span> <span class="nb">iter</span><span class="p">)</span>
+
+            <span class="c1"># Sort by the Fitness Value</span>
+            <span class="c1"># ----------------------------</span>
+            <span class="n">sort</span> <span class="o">=</span> <span class="n">order</span><span class="p">(</span><span class="n">fitnessval</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s1">&#39;heapsort&#39;</span><span class="p">,</span> <span class="n">decreasing</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">na_last</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+            <span class="n">PopSorted</span> <span class="o">=</span> <span class="n">population</span><span class="p">[</span><span class="n">sort</span><span class="p">,</span> <span class="p">:]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+            <span class="n">FitnessValSorted</span> <span class="o">=</span> <span class="n">fitnessval</span><span class="p">[</span><span class="n">sort</span><span class="p">]</span>
+            <span class="c1">#FitnessTstSorted = fitnesstst[sort]</span>
+            <span class="n">ComplexitySorted</span> <span class="o">=</span> <span class="n">complexity</span><span class="p">[</span><span class="n">sort</span><span class="p">]</span>
+            <span class="n">_modelsSorted</span> <span class="o">=</span> <span class="n">_models</span><span class="p">[</span><span class="n">sort</span><span class="p">]</span>
+
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">verbose</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Step 1. Fitness sorted&quot;</span><span class="p">)</span>
+                <span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">c_</span><span class="p">[</span><span class="n">FitnessValSorted</span><span class="p">,</span> <span class="n">ComplexitySorted</span><span class="p">,</span> <span class="n">population</span><span class="o">.</span><span class="n">population</span><span class="p">][:</span><span class="mi">10</span><span class="p">,</span> <span class="p">:])</span>
+                <span class="c1"># input(&quot;Press [enter] to continue&quot;)</span>
+
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">rerank_error</span> <span class="o">!=</span> <span class="mf">0.0</span><span class="p">:</span>
+                <span class="n">ord_rerank</span> <span class="o">=</span> <span class="n">_rerank</span><span class="p">(</span><span class="n">FitnessValSorted</span><span class="p">,</span> <span class="n">ComplexitySorted</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">npart</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">rerank_error</span><span class="p">)</span>
+                <span class="n">PopSorted</span> <span class="o">=</span> <span class="n">PopSorted</span><span class="p">[</span><span class="n">ord_rerank</span><span class="p">]</span>
+                <span class="n">FitnessValSorted</span> <span class="o">=</span> <span class="n">FitnessValSorted</span><span class="p">[</span><span class="n">ord_rerank</span><span class="p">]</span>
+               <span class="c1"># FitnessTstSorted = FitnessTstSorted[ord_rerank]</span>
+                <span class="n">ComplexitySorted</span> <span class="o">=</span> <span class="n">ComplexitySorted</span><span class="p">[</span><span class="n">ord_rerank</span><span class="p">]</span>
+                <span class="n">_modelsSorted</span> <span class="o">=</span> <span class="n">_modelsSorted</span><span class="p">[</span><span class="n">ord_rerank</span><span class="p">]</span>
+
+                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">verbose</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Step 2. Fitness reranked&quot;</span><span class="p">)</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">c_</span><span class="p">[</span><span class="n">FitnessValSorted</span><span class="p">,</span> <span class="n">ComplexitySorted</span><span class="p">,</span> <span class="n">population</span><span class="o">.</span><span class="n">population</span><span class="p">][:</span><span class="mi">10</span><span class="p">,</span> <span class="p">:])</span>
+                    <span class="c1"># input(&quot;Press [enter] to continue&quot;)</span>
+
+
+            <span class="c1"># Keep results</span>
+            <span class="c1"># ---------------</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_summary</span><span class="p">[</span><span class="nb">iter</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">parsimony_summary</span><span class="p">(</span><span class="n">FitnessValSorted</span><span class="p">,</span> <span class="n">ComplexitySorted</span><span class="p">)</span>
+
+            <span class="c1"># Keep Best Solution of this iteration</span>
+            <span class="c1"># ------------------</span>
+            <span class="n">bestfitnessVal</span> <span class="o">=</span> <span class="n">FitnessValSorted</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="c1">#bestfitnessTst = FitnessTstSorted[0]</span>
+            <span class="n">bestcomplexity</span> <span class="o">=</span> <span class="n">ComplexitySorted</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">bestIterSolution</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">([[</span><span class="n">bestfitnessVal</span><span class="p">,</span> <span class="n">bestcomplexity</span><span class="p">],</span> <span class="n">PopSorted</span><span class="p">[</span><span class="mi">0</span><span class="p">]])</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">bestSolList</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">bestIterSolution</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">best_models_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">_modelsSorted</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">best_models_conf_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">PopSorted</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+
+            <span class="c1"># Keep Global Best Model</span>
+            <span class="c1"># ------------------</span>
+            <span class="c1"># The best_score of the whole process. It is update if we find a better score, or equal but with lower complexity.</span>
+            <span class="k">if</span> <span class="n">bestfitnessVal</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">best_score</span> <span class="ow">or</span> <span class="p">(</span><span class="n">bestfitnessVal</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">best_score</span> <span class="ow">and</span> <span class="n">bestcomplexity</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">best_complexity</span><span class="p">):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">best_score</span> <span class="o">=</span> <span class="n">bestfitnessVal</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">best_complexity</span> <span class="o">=</span> <span class="n">bestcomplexity</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">bestsolution</span> <span class="o">=</span> <span class="n">bestIterSolution</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">solution_best_score</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">r_</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">best_score</span><span class="p">,</span> <span class="n">bestfitnessVal</span><span class="p">,</span> <span class="n">bestcomplexity</span><span class="p">]</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">best_model</span> <span class="o">=</span> <span class="n">_modelsSorted</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">best_model_conf</span> <span class="o">=</span> <span class="n">PopSorted</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+                <span class="c1"># print(&quot;ACTUALIZO&quot;, self.best_model.C, self.best_model_conf)</span>
+                <span class="c1"># if self.best_model_conf[0] != self.best_model.C:</span>
+                <span class="c1">#     print(&quot;problemas&quot;)</span>
+                <span class="c1">#     print(&quot;MODELS&quot;, _modelsSorted)</span>
+                <span class="c1">#     print(&quot;POPSORTED&quot;, PopSorted)</span>
+                <span class="c1">#     print(&quot;fitnessvalsorted&quot;, FitnessValSorted)</span>
+            <span class="c1"># if self.verbose &gt; 0:</span>
+            <span class="c1">#     print(&quot;Current best score:&quot;, self.best_score)</span>
+                
+
+            <span class="c1"># Update global best positions, fitness and complexity of each particle (with NO rerank)</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">npart</span><span class="p">):</span>
+                <span class="k">if</span> <span class="n">fitnessval</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">bestGlobalFitnessVal</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="ow">or</span> <span class="p">(</span><span class="n">fitnessval</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">bestGlobalFitnessVal</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="ow">and</span> <span class="n">complexity</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">bestGlobalComplexity</span><span class="p">[</span><span class="n">i</span><span class="p">]):</span>
+                    <span class="n">bestGlobalPopulation</span><span class="p">[</span><span class="n">i</span><span class="p">,:]</span> <span class="o">=</span> <span class="n">population</span><span class="o">.</span><span class="n">_pop</span><span class="p">[</span><span class="n">i</span><span class="p">,:]</span>
+                    <span class="n">bestGlobalFitnessVal</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">fitnessval</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+                    <span class="n">bestGlobalComplexity</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">complexity</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+
+
+            <span class="c1"># Keep elapsed time in minutes</span>
+            <span class="c1"># ----------------------------</span>
+            <span class="n">tac</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+            <span class="n">elapsed_gen</span> <span class="o">=</span> <span class="p">(</span><span class="n">tac</span> <span class="o">-</span> <span class="n">tic</span><span class="p">)</span> <span class="o">/</span> <span class="mf">60.0</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">minutes_total</span> <span class="o">+=</span> <span class="o">+</span> <span class="n">elapsed_gen</span>
+
+            <span class="c1"># Keep this generation into the History list (with no order)</span>
+            <span class="c1"># ------------------------------------------</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">keep_history</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">history</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+                    <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">c_</span><span class="p">[</span><span class="n">population</span><span class="o">.</span><span class="n">population</span><span class="p">,</span> <span class="n">fitnessval</span><span class="p">,</span> <span class="n">fitnesstst</span><span class="p">,</span> <span class="n">complexity</span><span class="p">],</span>
+                                 <span class="n">columns</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">population</span><span class="o">.</span><span class="n">_params</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span> <span class="o">+</span> <span class="n">population</span><span class="o">.</span><span class="n">colsnames</span> <span class="o">+</span> <span class="p">[</span><span class="s2">&quot;fitnessval&quot;</span><span class="p">,</span> <span class="s2">&quot;fitnesstst&quot;</span><span class="p">,</span>
+                                                                                                   <span class="s2">&quot;complexity&quot;</span><span class="p">]))</span>
+
+
+            <span class="c1"># Call to &#39;monitor&#39; function</span>
+            <span class="c1"># --------------------------</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">verbose</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">parsimony_monitor</span><span class="p">(</span><span class="nb">iter</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">best_score</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">best_complexity</span><span class="p">,</span> 
+                                  <span class="n">fitnessval</span><span class="p">,</span> <span class="n">bestfitnessVal</span><span class="p">,</span> <span class="n">bestcomplexity</span><span class="p">,</span> <span class="n">elapsed_gen</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">verbose</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Step 3. Fitness results&quot;</span><span class="p">)</span>
+                <span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">c_</span><span class="p">[</span><span class="n">FitnessValSorted</span><span class="p">,</span> <span class="n">ComplexitySorted</span><span class="p">,</span> <span class="n">population</span><span class="o">.</span><span class="n">population</span><span class="p">][:</span><span class="mi">10</span><span class="p">,</span> <span class="p">:])</span>
+                <span class="c1"># input(&quot;Press [enter] to continue&quot;)</span>
+
+            <span class="c1">#print((population._pop))</span>
+            <span class="c1">#print((population._pop[sort])[ord_rerank])</span>
+            <span class="c1">#print((fitnessval[sort])[ord_rerank])</span>
+
+            <span class="c1"># Exit?</span>
+            <span class="c1"># -----</span>
+            <span class="n">best_val_cost</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_summary</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">][</span><span class="o">~</span><span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_summary</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">])]</span>
+            <span class="k">if</span> <span class="n">bestfitnessVal</span> <span class="o">&gt;=</span> <span class="n">maxFitness</span><span class="p">:</span>
+                <span class="k">break</span>
+            <span class="k">if</span> <span class="nb">iter</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">maxiter</span><span class="p">:</span>
+                <span class="k">break</span>
+            <span class="k">if</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">best_val_cost</span><span class="p">)</span> <span class="o">-</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">best_val_cost</span><span class="p">))[</span><span class="n">best_val_cost</span> <span class="o">&gt;=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">best_val_cost</span><span class="p">)</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">tol</span><span class="p">)])))</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">early_stop</span><span class="p">:</span>
+                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">verbose</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Early stopping reached. Stopped.&quot;</span><span class="p">)</span>
+                <span class="k">break</span>
+            <span class="k">if</span> <span class="n">time_limit</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">time_limit</span> <span class="o">&lt;</span> <span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">start_time</span><span class="p">)</span><span class="o">/</span><span class="mi">60</span><span class="p">:</span>
+                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">verbose</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Time limit reached. Stopped.&quot;</span><span class="p">)</span>
+                <span class="k">break</span>
+
+            <span class="c1">####################################################</span>
+            <span class="c1"># Deletion step (disabled by default)</span>
+            <span class="c1">####################################################</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">particles_to_delete</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">particles_to_delete</span><span class="p">[</span><span class="nb">iter</span><span class="p">]</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">:</span>
+                <span class="c1"># particles_to_delete[iter] contains the number of particles to be deleted in that iteration</span>
+                <span class="c1"># We delete the worse particles at that point (in global, not in that iteration).</span>
+                <span class="n">sort1</span> <span class="o">=</span> <span class="n">order</span><span class="p">(</span><span class="n">bestGlobalFitnessVal</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s1">&#39;heapsort&#39;</span><span class="p">,</span> <span class="n">decreasing</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">na_last</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+                <span class="n">sort_not_deleted</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">sort1</span> <span class="k">if</span> <span class="n">x</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">deleted_particles</span><span class="p">]</span>
+                <span class="n">deleted_particles</span> <span class="o">=</span> <span class="n">deleted_particles</span> <span class="o">+</span> <span class="n">sort_not_deleted</span><span class="p">[</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">particles_to_delete</span><span class="p">[</span><span class="nb">iter</span><span class="p">]:]</span>
+                <span class="n">valid_particles</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">npart</span><span class="p">)</span> <span class="k">if</span> <span class="n">x</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">deleted_particles</span><span class="p">]</span>
+                <span class="n">update_neighbourhoods</span> <span class="o">=</span> <span class="kc">True</span>
+
+
+
+
+            <span class="c1">#####################################################</span>
+            <span class="c1"># Generation of the Neighbourhoods</span>
+            <span class="c1">#####################################################</span>
+            <span class="c1"># If there is no improvement in the current iteration, the neighbourhood is changed. It also changes if particles have been deleted.</span>
+            <span class="k">if</span> <span class="n">FitnessValSorted</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">best_score</span> <span class="ow">or</span> <span class="n">update_neighbourhoods</span><span class="p">:</span>
+                <span class="n">update_neighbourhoods</span> <span class="o">=</span> <span class="kc">False</span>
+                <span class="n">nb</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+                <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">npart</span><span class="p">):</span>
+                    <span class="c1"># Each particle informs at random K particles (the same particle may be chosen several times), and informs itself.</span>
+                    <span class="c1"># The parameter K is usually set to 3. It means that each particle informs at less one particle (itself), and at most K+1 particles (including itself)</span>
+
+                    <span class="c1"># Thus, a random integer vector of K elements between 0 and npart-1 is created and we append the particle.</span>
+                    <span class="c1"># Duplicates are removed and this represents the neighbourhood.</span>
+                    <span class="k">if</span> <span class="n">i</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">deleted_particles</span><span class="p">:</span>
+                        <span class="c1">#nb.append(np.unique(np.append(np.random.randint(low=0, high=self.npart - 1, size=self.K), i)))</span>
+
+                        <span class="n">indices</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">low</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">high</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">valid_particles</span><span class="p">),</span> <span class="n">size</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">K</span><span class="p">)</span> <span class="c1"># High is not included</span>
+                        <span class="n">random_particles</span> <span class="o">=</span> <span class="p">[</span><span class="n">valid_particles</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="n">indices</span><span class="p">]</span>
+                        <span class="n">nb</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">random_particles</span><span class="p">,</span> <span class="n">i</span><span class="p">)))</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="n">nb</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+
+                <span class="c1"># Create an array to decide if a particle must be influenced by the best global of the neighbourhoods or the best of the iteration</span>
+                <span class="n">nb_global</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">],</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">npart</span><span class="p">,),</span> <span class="n">p</span><span class="o">=</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">best_global_thres</span><span class="p">,</span> <span class="mi">1</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">best_global_thres</span><span class="p">])</span>
+
+
+
+            <span class="c1">###########################################</span>
+            <span class="c1"># Update particular global bests (best position of the particle in the whole process, wrt to rerank)</span>
+            <span class="c1">###########################################</span>
+
+            <span class="c1"># We have to take care to avoid problems with rerank:</span>
+            <span class="c1"># EXAMPLE (rerank = 0.08):</span>
+            <span class="c1"># SCORE 0.80 0.85 0.90</span>
+            <span class="c1"># COST    10  100  200</span>
+            <span class="c1"># The best score wrt to rerank should be 0.85. But if we get 0.80 with cost 10 in the next</span>
+            <span class="c1"># iteration, that would be chosen. This is wrong, since we would be moving to worse scores. The</span>
+            <span class="c1"># rerank must be applied wrt the best global score of each particle.</span>
+            <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="p">[</span><span class="n">p</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">npart</span><span class="p">)</span> <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">isfinite</span><span class="p">(</span><span class="n">fitnessval</span><span class="p">[</span><span class="n">p</span><span class="p">])]:</span><span class="c1"># Solo cogemos las partículas que tienen fitnessval finito (que no sea Nan ni inf)</span>
+                <span class="c1"># Three cases:</span>
+                <span class="c1"># (1) If the best improves much, then update.</span>
+                <span class="c1"># (2) If the best does not improve much, but the complexity is lower, then update.</span>
+                <span class="c1"># (3) Otherwise, rerank criterion, but &quot;consuming the rerank&quot; wrt to the global best.</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">fitnessval</span><span class="p">[</span><span class="n">t</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">best_fit_particle</span><span class="p">[</span><span class="n">t</span><span class="p">]</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">rerank_error</span><span class="p">)</span> \
+                    <span class="ow">or</span> <span class="p">(</span><span class="n">fitnessval</span><span class="p">[</span><span class="n">t</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">best_fit_particle</span><span class="p">[</span><span class="n">t</span><span class="p">]</span> <span class="ow">and</span> <span class="n">complexity</span><span class="p">[</span><span class="n">t</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">best_complexity_particle</span><span class="p">[</span><span class="n">t</span><span class="p">])</span> \
+                    <span class="ow">or</span> <span class="p">(</span><span class="n">best_fit_particle</span><span class="p">[</span><span class="n">t</span><span class="p">]</span> <span class="o">-</span> <span class="n">fitnessval</span><span class="p">[</span><span class="n">t</span><span class="p">])</span> <span class="o">&lt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">rerank_error</span> <span class="o">-</span> <span class="p">(</span><span class="n">bestGlobalFitnessVal</span><span class="p">[</span><span class="n">t</span><span class="p">]</span> <span class="o">-</span> <span class="n">best_fit_particle</span><span class="p">[</span><span class="n">t</span><span class="p">])</span> <span class="ow">and</span> <span class="n">complexity</span><span class="p">[</span><span class="n">t</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">best_complexity_particle</span><span class="p">[</span><span class="n">t</span><span class="p">]:</span>
+                    <span class="n">best_fit_particle</span><span class="p">[</span><span class="n">t</span><span class="p">]</span> <span class="o">=</span> <span class="n">fitnessval</span><span class="p">[</span><span class="n">t</span><span class="p">]</span>  <span class="c1"># Update the particular best fit of that particle.</span>
+                    <span class="n">best_pos_particle</span><span class="p">[</span><span class="n">t</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">population</span><span class="o">.</span><span class="n">_pop</span><span class="p">[</span><span class="n">t</span><span class="p">,</span> <span class="p">:]</span>  <span class="c1"># Update the particular best pos of that particle.</span>
+                    <span class="n">best_complexity_particle</span><span class="p">[</span><span class="n">t</span><span class="p">]</span> <span class="o">=</span> <span class="n">complexity</span><span class="p">[</span><span class="n">t</span><span class="p">]</span> <span class="c1"># Update the complexity (could be more complex if the fitnessval[t] is better)</span>
+
+            <span class="c1">###########################################</span>
+            <span class="c1"># Compute Local bests in the Neighbourhoods</span>
+            <span class="c1">###########################################</span>
+            <span class="n">best_pos_neighbourhood</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">npart</span><span class="p">,</span> <span class="n">nparams</span> <span class="o">+</span> <span class="n">nfs</span><span class="p">))</span>  <span class="c1"># Matrix in which i-th row contains the best particle of the i-th neighbourhood.</span>
+            <span class="n">best_fit_neighbourhood</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">npart</span><span class="p">)</span>  <span class="c1"># Array that contains in position i the score of the best particle of the i-th neighbourhood.</span>
+            <span class="n">best_fit_neighbourhood</span><span class="p">[:]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">Inf</span>
+
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">valid_particles</span><span class="p">:</span>
+
+                <span class="k">if</span> <span class="n">nb_global</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span> <span class="c1"># If the global best of the neighbourhood must be selected</span>
+                    <span class="n">particles_positions</span> <span class="o">=</span> <span class="n">nb</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>  <span class="c1"># Positions of the neighbourhood particles (number within population)</span>
+                    <span class="n">local_fits</span> <span class="o">=</span> <span class="n">best_fit_particle</span><span class="p">[</span><span class="n">particles_positions</span><span class="p">]</span>
+                    <span class="n">local_complexity</span> <span class="o">=</span> <span class="n">best_complexity_particle</span><span class="p">[</span><span class="n">particles_positions</span><span class="p">]</span>
+                    <span class="n">local_sort</span> <span class="o">=</span> <span class="n">order</span><span class="p">(</span><span class="n">local_fits</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s1">&#39;heapsort&#39;</span><span class="p">,</span> <span class="n">decreasing</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">na_last</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+                    <span class="n">local_fits_sorted</span> <span class="o">=</span> <span class="n">local_fits</span><span class="p">[</span><span class="n">local_sort</span><span class="p">]</span>
+                    <span class="n">local_complexity_sorted</span> <span class="o">=</span> <span class="n">local_complexity</span><span class="p">[</span><span class="n">local_sort</span><span class="p">]</span>
+                    <span class="n">local_sort_rerank</span> <span class="o">=</span> <span class="n">_rerank</span><span class="p">(</span><span class="n">local_fits_sorted</span><span class="p">,</span> <span class="n">local_complexity_sorted</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">local_fits</span><span class="p">),</span>
+                                                <span class="bp">self</span><span class="o">.</span><span class="n">rerank_error</span><span class="p">,</span> <span class="n">preserve_best</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+                    <span class="n">max_local_fit_pos</span> <span class="o">=</span> <span class="n">particles_positions</span><span class="p">[</span><span class="n">local_sort</span><span class="p">[</span><span class="n">local_sort_rerank</span><span class="p">[</span><span class="mi">0</span><span class="p">]]]</span>
+                    <span class="n">best_pos_neighbourhood</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">best_pos_particle</span><span class="p">[</span><span class="n">max_local_fit_pos</span><span class="p">,</span> <span class="p">:]</span>
+                    <span class="c1">#best_fit_neighbourhood[i] = best_fit_particle[max_local_fit_pos]</span>
+
+                <span class="k">else</span><span class="p">:</span> <span class="c1"># The best of the neighbourhood in the current iteration</span>
+                    <span class="n">particles_positions</span> <span class="o">=</span> <span class="n">nb</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>  <span class="c1"># Positions of the neighbourhood particles (number within population)</span>
+                    <span class="n">local_fits</span> <span class="o">=</span> <span class="n">fitnessval</span><span class="p">[</span><span class="n">particles_positions</span><span class="p">]</span>
+
+                    <span class="n">local_complexity</span> <span class="o">=</span> <span class="n">complexity</span><span class="p">[</span><span class="n">particles_positions</span><span class="p">]</span>
+                    <span class="n">local_sort</span> <span class="o">=</span> <span class="n">order</span><span class="p">(</span><span class="n">local_fits</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s1">&#39;heapsort&#39;</span><span class="p">,</span> <span class="n">decreasing</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">na_last</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+                    <span class="n">local_fits_sorted</span> <span class="o">=</span> <span class="n">local_fits</span><span class="p">[</span><span class="n">local_sort</span><span class="p">]</span>
+                    <span class="n">local_complexity_sorted</span> <span class="o">=</span> <span class="n">local_complexity</span><span class="p">[</span><span class="n">local_sort</span><span class="p">]</span>
+                    <span class="n">local_sort_rerank</span> <span class="o">=</span> <span class="n">_rerank</span><span class="p">(</span><span class="n">local_fits_sorted</span><span class="p">,</span><span class="n">local_complexity_sorted</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">local_fits</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">rerank_error</span><span class="p">,</span> <span class="n">preserve_best</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+                    <span class="n">max_local_fit_pos</span> <span class="o">=</span> <span class="n">particles_positions</span><span class="p">[</span><span class="n">local_sort</span><span class="p">[</span><span class="n">local_sort_rerank</span><span class="p">[</span><span class="mi">0</span><span class="p">]]]</span>
+
+                    <span class="n">best_pos_neighbourhood</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">population</span><span class="o">.</span><span class="n">_pop</span><span class="p">[</span><span class="n">max_local_fit_pos</span><span class="p">,</span> <span class="p">:]</span>
+                    <span class="c1">#best_fit_neighbourhood[i] = fitnessval[max_local_fit_pos]</span>
+
+
+            <span class="c1">######################</span>
+            <span class="c1"># Crossover step</span>
+            <span class="c1">######################</span>
+
+            <span class="n">indexes_worst_particles</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">pcrossover</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">pcrossover</span><span class="p">[</span><span class="nb">iter</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="c1">######################</span>
+                <span class="c1"># Selection substep</span>
+                <span class="c1">######################</span>
+                <span class="c1"># Nonlinear-rank selection</span>
+                <span class="c1"># Michalewicz (1996) Genetic Algorithms + Data Structures = Evolution Programs. p. 60</span>
+                <span class="n">q</span> <span class="o">=</span> <span class="mf">0.25</span>
+                <span class="n">rank</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">npart</span><span class="p">))</span>
+                <span class="n">prob</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">q</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">q</span><span class="p">)</span> <span class="o">**</span> <span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">rank</span><span class="p">)))</span>
+                <span class="n">prob</span> <span class="o">=</span> <span class="n">prob</span> <span class="o">/</span> <span class="n">prob</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="c1"># En prob, metemos las probabilidades. El primer elemento tiene más probabilidad, y así sucesivamente.</span>
+                <span class="c1"># Ahora en sel, aplicamos esas probabilidades para seleccionar, teniendo en cuenta que los índices de las mejores están en sort[ord_rerank]</span>
+                <span class="c1"># (porque la población no está ordenada, así que no podemos usar rank como en GA).</span>
+                <span class="n">sel</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">sort</span><span class="p">[</span><span class="n">ord_rerank</span><span class="p">],</span> <span class="n">size</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">npart</span><span class="p">,</span> <span class="n">replace</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span>
+                    <span class="n">np</span><span class="o">.</span><span class="n">ma</span><span class="o">.</span><span class="n">masked_array</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">x</span><span class="p">),</span> <span class="mi">1</span><span class="p">]),</span> <span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">x</span><span class="p">),</span> <span class="mi">1</span><span class="p">])))),</span> <span class="n">prob</span><span class="p">)))</span>
+                <span class="c1"># Cambia la población para seleccionar los que se van a reproducir. Puede haber filas repetidas en population.</span>
+                <span class="c1"># Así, luego se pueden cruzar más veces.</span>
+                <span class="n">population_selection</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">deepcopy</span><span class="p">(</span><span class="n">population</span><span class="p">)</span> <span class="c1"># Hago deepcopy porque es array de arrays.</span>
+                <span class="n">population_selection</span><span class="o">.</span><span class="n">_pop</span> <span class="o">=</span> <span class="n">population_selection</span><span class="o">.</span><span class="n">_pop</span><span class="p">[</span><span class="n">sel</span><span class="p">]</span>
+                <span class="n">fitnessval_selection</span> <span class="o">=</span> <span class="n">fitnessval</span><span class="p">[</span><span class="n">sel</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+                <span class="c1">#fitnesstst_selection = fitnesstst[sel].copy()</span>
+                <span class="n">complexity_selection</span> <span class="o">=</span> <span class="n">complexity</span><span class="p">[</span><span class="n">sel</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+                <span class="n">velocity_selection</span> <span class="o">=</span> <span class="n">velocity</span><span class="p">[</span><span class="n">sel</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+                <span class="c1">######################</span>
+                <span class="c1"># Crossover substep</span>
+                <span class="c1">######################</span>
+
+                <span class="n">nmating</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">npart</span> <span class="o">/</span> <span class="mi">2</span><span class="p">))</span>
+                <span class="n">mating</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">nmating</span><span class="p">)),</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">nmating</span><span class="p">),</span> <span class="n">replace</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="n">nmating</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+
+                <span class="c1"># Hacemos crossover de la población seleccionada</span>
+                <span class="n">population_crossover</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">deepcopy</span><span class="p">(</span><span class="n">population_selection</span><span class="p">)</span>
+                <span class="n">fitnessval_crossover</span> <span class="o">=</span> <span class="n">fitnessval_selection</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+                <span class="c1">#fitnesstst_crossover = fitnesstst_selection.copy()</span>
+                <span class="n">complexity_crossover</span> <span class="o">=</span> <span class="n">complexity_selection</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+                <span class="n">velocity_crossover</span> <span class="o">=</span> <span class="n">velocity_selection</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+                <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nmating</span><span class="p">):</span>
+                    <span class="n">parents_indexes</span> <span class="o">=</span> <span class="n">mating</span><span class="p">[</span><span class="n">i</span><span class="p">,]</span>
+                    <span class="c1"># Voy haciendo el crossover en la nueva población</span>
+                    <span class="n">_crossover</span><span class="p">(</span><span class="n">population_crossover</span><span class="p">,</span> <span class="n">velocity_crossover</span><span class="p">,</span> <span class="n">fitnessval_crossover</span><span class="p">,</span> <span class="n">complexity_crossover</span><span class="p">,</span>
+                               <span class="n">parents_indexes</span><span class="p">,</span> <span class="n">children_indexes</span><span class="o">=</span><span class="n">parents_indexes</span><span class="p">)</span>
+
+                <span class="c1"># Ahora cojo la población original, y sustituyo el % de malos a sustituir por individuos aleatorios de la población del crossover.</span>
+                <span class="n">npart_worst</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">npart</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">pcrossover</span><span class="p">[</span><span class="nb">iter</span><span class="p">])))</span>
+                <span class="n">indexes_worst_particles</span> <span class="o">=</span> <span class="n">sort</span><span class="p">[</span><span class="n">ord_rerank</span><span class="p">[</span><span class="o">-</span><span class="n">npart_worst</span><span class="p">:]]</span>
+                <span class="c1"># Array aleatorio de tamaño npart y números entre 0 y npart - 1. También podría hacer un suffle.</span>
+                <span class="c1"># No repito aquí (pero podrá haber padres repetidos porque en population_crossover podría haber filas repetidas):</span>
+                <span class="n">random_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">npart</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">npart</span><span class="p">,</span> <span class="n">replace</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+                <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">indexes_worst_particles</span><span class="p">:</span> <span class="c1">#Esto ya me asegura que no toco los elitistas, solo sustituyo las partículas malas.</span>
+                    <span class="n">population</span><span class="o">.</span><span class="n">_pop</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">population_crossover</span><span class="o">.</span><span class="n">_pop</span><span class="p">[</span><span class="n">random_array</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span>
+                    <span class="n">fitnessval</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">fitnessval_crossover</span><span class="p">[</span><span class="n">random_array</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span>
+                    <span class="c1">#fitnesstst[i] = fitnesstst_crossover[random_array[i]]</span>
+                    <span class="n">complexity</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">complexity_crossover</span><span class="p">[</span><span class="n">random_array</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span>
+                    <span class="n">velocity</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">velocity</span><span class="p">[</span><span class="n">random_array</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span>
+
+            <span class="c1">#####################################################</span>
+            <span class="c1"># Update positions and velocities following SPSO 2007</span>
+            <span class="c1">#####################################################</span>
+
+            <span class="c1"># Solo tengo que actualizar los que no haya sustituido.</span>
+            <span class="n">indexes_except_substituted_particles</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">npart</span><span class="p">)</span> <span class="k">if</span> <span class="n">i</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">indexes_worst_particles</span><span class="p">]</span>
+
+            <span class="n">U1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="n">low</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">high</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+                                   <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">npart</span><span class="p">,</span> <span class="n">nparams</span> <span class="o">+</span> <span class="n">nfs</span><span class="p">))</span>  <span class="c1"># En el artículo se llaman r1 y r2</span>
+            <span class="n">U2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="n">low</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">high</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+                                   <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">npart</span><span class="p">,</span> <span class="n">nparams</span> <span class="o">+</span> <span class="n">nfs</span><span class="p">))</span>  <span class="c1"># En el artículo se llaman r1 y r2</span>
+
+            <span class="n">IW</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">IW_max</span> <span class="o">-</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">IW_max</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">IW_min</span><span class="p">)</span> <span class="o">*</span> <span class="nb">iter</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">maxiter</span>
+
+            <span class="c1"># Two first terms of the velocity</span>
+
+            <span class="n">velocity</span><span class="p">[</span><span class="n">indexes_except_substituted_particles</span><span class="p">,:]</span> <span class="o">=</span> <span class="n">IW</span> <span class="o">*</span> <span class="n">velocity</span><span class="p">[</span><span class="n">indexes_except_substituted_particles</span><span class="p">,:]</span> \
+                                                         <span class="o">+</span> <span class="n">U1</span><span class="p">[</span><span class="n">indexes_except_substituted_particles</span><span class="p">,:]</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">c1</span> <span class="o">*</span> <span class="p">(</span><span class="n">best_pos_particle</span><span class="p">[</span><span class="n">indexes_except_substituted_particles</span><span class="p">,:]</span> <span class="o">-</span> <span class="n">population</span><span class="o">.</span><span class="n">_pop</span><span class="p">[</span><span class="n">indexes_except_substituted_particles</span><span class="p">,:])</span>
+
+            <span class="n">velocity</span><span class="p">[</span><span class="n">indexes_except_substituted_particles</span><span class="p">,:]</span> <span class="o">=</span> <span class="n">velocity</span><span class="p">[</span><span class="n">indexes_except_substituted_particles</span><span class="p">,:]</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">c2</span> <span class="o">*</span> <span class="n">U2</span><span class="p">[</span><span class="n">indexes_except_substituted_particles</span><span class="p">,:]</span> <span class="o">*</span> <span class="p">(</span>
+                        <span class="n">best_pos_neighbourhood</span><span class="p">[</span><span class="n">indexes_except_substituted_particles</span><span class="p">,:]</span> <span class="o">-</span> <span class="n">population</span><span class="o">.</span><span class="n">_pop</span><span class="p">[</span><span class="n">indexes_except_substituted_particles</span><span class="p">,:])</span>
+
+            <span class="c1"># Limit velocity to vmax to avoid explosion</span>
+
+            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nparams</span> <span class="o">+</span> <span class="n">nfs</span><span class="p">):</span>
+                <span class="n">vmax_pos</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">velocity</span><span class="p">[:,</span><span class="n">j</span><span class="p">])</span> <span class="o">&gt;</span> <span class="n">vmax</span><span class="p">[</span><span class="n">j</span><span class="p">])[</span><span class="mi">0</span><span class="p">]</span>
+                <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">vmax_pos</span><span class="p">:</span>
+                    <span class="n">velocity</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">copysign</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">velocity</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">])</span> <span class="o">*</span> <span class="nb">abs</span><span class="p">(</span><span class="n">vmax</span><span class="p">[</span><span class="n">j</span><span class="p">])</span>
+
+            <span class="c1">##############################</span>
+            <span class="c1"># Update positions of FEATURES</span>
+            <span class="c1">##############################</span>
+
+            <span class="k">for</span> <span class="n">nf</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nparams</span><span class="p">,</span><span class="n">nparams</span> <span class="o">+</span> <span class="n">nfs</span><span class="p">):</span> <span class="c1"># We must move to the features (the particles contain first hyper-parameters and then features)</span>
+                <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">indexes_except_substituted_particles</span><span class="p">:</span>
+                    <span class="n">population</span><span class="o">.</span><span class="n">_pop</span><span class="p">[</span><span class="n">p</span><span class="p">,</span><span class="n">nf</span><span class="p">]</span> <span class="o">=</span> <span class="n">population</span><span class="o">.</span><span class="n">_pop</span><span class="p">[</span><span class="n">p</span><span class="p">,</span><span class="n">nf</span><span class="p">]</span> <span class="o">+</span> <span class="n">velocity</span><span class="p">[</span><span class="n">p</span><span class="p">,</span><span class="n">nf</span><span class="p">]</span> <span class="c1"># Update positions for the model positions (x = x + v)</span>
+                    <span class="c1"># To ensure that the interval [0,1] is preserved</span>
+                    <span class="k">if</span> <span class="n">population</span><span class="o">.</span><span class="n">_pop</span><span class="p">[</span><span class="n">p</span><span class="p">,</span> <span class="n">nf</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mf">1.0</span><span class="p">:</span>
+                        <span class="n">population</span><span class="o">.</span><span class="n">_pop</span><span class="p">[</span><span class="n">p</span><span class="p">,</span> <span class="n">nf</span><span class="p">]</span> <span class="o">=</span> <span class="mf">1.0</span>
+                    <span class="k">if</span> <span class="n">population</span><span class="o">.</span><span class="n">_pop</span><span class="p">[</span><span class="n">p</span><span class="p">,</span><span class="n">nf</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mf">0.0</span><span class="p">:</span>
+                        <span class="n">population</span><span class="o">.</span><span class="n">_pop</span><span class="p">[</span><span class="n">p</span><span class="p">,</span> <span class="n">nf</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.0</span>
+
+
+            <span class="c1">######################</span>
+            <span class="c1"># Mutation of FEATURES</span>
+            <span class="c1"># ####################</span>
+
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">pmutation</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="c1"># Uniform random mutation (except first individual)</span>
+                <span class="n">nfts_to_mute</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">pmutation</span> <span class="o">*</span> <span class="n">nfs</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">npart</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">nfts_to_mute</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
+                    <span class="n">nfts_to_mute</span> <span class="o">=</span> <span class="mi">1</span>
+                <span class="n">indexes_to_mute</span> <span class="o">=</span> <span class="n">sort</span><span class="p">[</span><span class="n">ord_rerank</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">not_muted</span><span class="p">:]]</span>
+                <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nfts_to_mute</span><span class="p">):</span>
+                    <span class="n">i</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">indexes_to_mute</span><span class="p">)</span>
+                    <span class="n">j</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">nfs</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+                    <span class="n">population</span><span class="o">.</span><span class="n">_pop</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">nparams</span> <span class="o">+</span> <span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">population</span><span class="o">.</span><span class="n">random_gen</span><span class="p">[</span><span class="n">j</span><span class="p">](</span><span class="n">j</span><span class="p">,</span> <span class="n">feat_mut_thres</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">feat_mut_thres</span><span class="p">)</span>
+                    <span class="n">fitnessval</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+                    <span class="n">fitnesstst</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+                    <span class="n">complexity</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+
+
+            <span class="c1"># if self.pmutation &gt; 0:</span>
+            <span class="c1">#     rnd_mut = np.random.uniform(size = (self.npart, nfs))</span>
+            <span class="c1">#     for p in range(self.npart):</span>
+            <span class="c1">#         for nf in range(nparams,nparams + nfs):</span>
+            <span class="c1">#             if rnd_mut[p, nf - nparams] &lt; self.pmutation:</span>
+            <span class="c1">#                 if population._pop[p, nf] &lt; 0.5:</span>
+            <span class="c1">#                     population._pop[p, nf] = np.random.uniform(low=0.5, high=1.0)</span>
+            <span class="c1">#                 else:</span>
+            <span class="c1">#                     population._pop[p, nf] = np.random.uniform(low=0.0, high=0.5)</span>
+
+
+            <span class="c1">#######################################################</span>
+            <span class="c1"># Update positions of model HYPERPARAMETERS (x = x + v)</span>
+            <span class="c1">#######################################################</span>
+
+            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nparams</span><span class="p">):</span>
+                <span class="n">population</span><span class="o">.</span><span class="n">_pop</span><span class="p">[</span><span class="n">indexes_except_substituted_particles</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="o">=</span> \
+                    <span class="n">population</span><span class="o">.</span><span class="n">_pop</span><span class="p">[</span><span class="n">indexes_except_substituted_particles</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="o">+</span> <span class="n">velocity</span><span class="p">[</span><span class="n">indexes_except_substituted_particles</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span>
+
+            <span class="c1">################################################################################################</span>
+            <span class="c1"># Confinement Method for SPSO 2007 - absorbing2007 (hydroPSO) - Deterministic Back (Clerc, 2007)</span>
+            <span class="c1">################################################################################################</span>
+            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nparams</span><span class="p">):</span>
+                <span class="n">out_max</span> <span class="o">=</span> <span class="p">(</span><span class="n">population</span><span class="o">.</span><span class="n">_pop</span><span class="p">[:,</span> <span class="n">j</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">population</span><span class="o">.</span><span class="n">_max</span><span class="p">[</span><span class="n">j</span><span class="p">])</span>
+                <span class="n">out_min</span> <span class="o">=</span> <span class="p">(</span><span class="n">population</span><span class="o">.</span><span class="n">_pop</span><span class="p">[:,</span> <span class="n">j</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">population</span><span class="o">.</span><span class="n">_min</span><span class="p">[</span><span class="n">j</span><span class="p">])</span>
+                <span class="n">population</span><span class="o">.</span><span class="n">_pop</span><span class="p">[</span><span class="n">out_max</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">population</span><span class="o">.</span><span class="n">_max</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
+                <span class="n">population</span><span class="o">.</span><span class="n">_pop</span><span class="p">[</span><span class="n">out_min</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">population</span><span class="o">.</span><span class="n">_min</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
+                <span class="n">velocity</span><span class="p">[</span><span class="n">out_max</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+                <span class="n">velocity</span><span class="p">[</span><span class="n">out_min</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+
+            <span class="c1"># ASEGURARNOS QUE AL MENOS UNA FEATURE SE SELECCIONA EN CADA PARTICULA</span>
+            <span class="c1"># TODO: Esto debería hacerse en otro lado!</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">npart</span><span class="p">):</span>  <span class="c1"># the particles contain first hyper-parameters and then feature</span>
+                <span class="n">aux</span> <span class="o">=</span> <span class="n">population</span><span class="o">.</span><span class="n">_pop</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">nparams</span><span class="p">:]</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">aux</span><span class="o">&lt;</span><span class="mf">0.5</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">():</span>
+                    <span class="n">feature_to_change</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">nparams</span><span class="p">,</span> <span class="n">nparams</span> <span class="o">+</span> <span class="n">nfs</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+                    <span class="n">new_value</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+                    <span class="n">population</span><span class="o">.</span><span class="n">_pop</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">feature_to_change</span><span class="p">]</span> <span class="o">=</span> <span class="n">new_value</span>
+
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">n_jobs</span><span class="o">&gt;</span><span class="mi">1</span><span class="p">:</span>
+            <span class="n">pool</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+        <span class="c1"># Guardo las features seleccionadas</span>
+        <span class="n">aux</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">best_model_conf</span><span class="p">[</span><span class="n">nparams</span><span class="p">:</span><span class="n">nparams</span> <span class="o">+</span> <span class="n">nfs</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">selected_features_boolean</span> <span class="o">=</span> <span class="p">(</span><span class="n">aux</span> <span class="o">&gt;=</span> <span class="mf">0.5</span><span class="p">)</span> <span class="c1"># Me guardo como una lista de booleanos si las features están o no</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">selected_features</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">features</span><span class="p">)[</span><span class="bp">self</span><span class="o">.</span><span class="n">selected_features_boolean</span><span class="p">]</span> <span class="c1"># Me guardo los nombres</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">verbose</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Selected features:&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">selected_features</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">best_model</span></div>
+
+<div class="viewcode-block" id="HYBparsimony.predict"><a class="viewcode-back" href="../../hybparsimony.html#hybparsimony.hybparsimony.HYBparsimony.predict">[docs]</a>    <span class="k">def</span> <span class="nf">predict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">):</span>
+<span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Predict result for samples in X.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        X : numpy.array or pandas.DataFrame</span>
+<span class="sd">            Samples.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        numpy.array</span>
+<span class="sd">            A `numpy.array` with predictions.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">num_rows</span><span class="p">,</span> <span class="n">num_cols</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">shape</span>
+        <span class="k">if</span> <span class="n">num_cols</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">selected_features</span><span class="p">):</span> <span class="c1">#Si nos han pasado un X donde ya he cogido las columnas que debía coger</span>
+            <span class="n">preds</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">best_model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span> <span class="c1"># En otro caso, nos han pasado un X entero y nos tenemos que quedar solo con las columnas seleccionadas.</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">):</span> <span class="c1"># Si es un dataframe, puedo acceder a las columnas por nombre/booleano</span>
+                <span class="n">X_selected_features</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">selected_features</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+            <span class="k">else</span><span class="p">:</span> <span class="c1">#Si es un Numpy, entonces tengo que quedarme con las columnas apropiadas</span>
+                <span class="n">X_selected_features</span> <span class="o">=</span> <span class="n">X</span><span class="p">[:,</span><span class="bp">self</span><span class="o">.</span><span class="n">selected_features_boolean</span><span class="p">]</span> <span class="c1"># Cojo todas las filas pero solo las columnas apropiadas.</span>
+            <span class="n">preds</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">best_model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_selected_features</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">preds</span></div>
+
+
+<div class="viewcode-block" id="HYBparsimony.predict_proba"><a class="viewcode-back" href="../../hybparsimony.html#hybparsimony.hybparsimony.HYBparsimony.predict_proba">[docs]</a>    <span class="k">def</span> <span class="nf">predict_proba</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">):</span>
+<span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Predict probabilities for each class and sample in X (only for classification models).</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        X : numpy.array or pandas.DataFrame</span>
+<span class="sd">            Samples.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        numpy.array</span>
+<span class="sd">            A `numpy.array` with predictions. Returns the probability of the sample for each class in the model.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">num_rows</span><span class="p">,</span> <span class="n">num_cols</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">shape</span>
+        <span class="k">if</span> <span class="n">num_cols</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">selected_features</span><span class="p">):</span> <span class="c1">#Si nos han pasado un X donde ya he cogido las columnas que debía coger</span>
+            <span class="n">preds</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">best_model</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span> <span class="c1"># En otro caso, nos han pasado un X entero y nos tenemos que quedar solo con las columnas seleccionadas.</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">):</span> <span class="c1"># Si es un dataframe, puedo acceder a las columnas por nombre/booleano</span>
+                <span class="n">X_selected_features</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">selected_features</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+            <span class="k">else</span><span class="p">:</span> <span class="c1">#Si es un Numpy, entonces tengo que quedarme con las columnas apropiadas</span>
+                <span class="n">X_selected_features</span> <span class="o">=</span> <span class="n">X</span><span class="p">[:,</span><span class="bp">self</span><span class="o">.</span><span class="n">selected_features_boolean</span><span class="p">]</span> <span class="c1"># Cojo todas las filas pero solo las columnas apropiadas.</span>
+            <span class="n">preds</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">best_model</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">X_selected_features</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">preds</span></div></div>
+
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Jose Divasón.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

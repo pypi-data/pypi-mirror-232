@@ -1,0 +1,19 @@
+Index: pyproject.toml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>[build-system]\r\nrequires = [\"hatchling\"]\r\nbuild-backend = \"hatchling.build\"\r\n\r\n[project]\r\nname = \"hybparsimony\"\r\nversion = \"0.0.16\"\r\nauthors = [\r\n  { name=\"Jose Divasón\", email=\"jose.divason@unirioja.es\" },\r\n  { name=\"Francisco Javier Martínez de Pisón\", email=\"fjmartin@unirioja.es\" },\r\n]\r\n#dependencies = [\"pandas\", \"scikit-learn>=1.3\"] # De momento no instalo dependencias porque no están en TestPYPI\r\nreadme = \"README.md\"\r\nrequires-python = \">=3.9\"\r\nclassifiers = [\r\n    \"Programming Language :: Python :: 3\",\r\n    \"License :: OSI Approved :: MIT License\",\r\n    \"Operating System :: OS Independent\",\r\n]\r\n\r\n[project.urls]\r\n\"Homepage\" = \"https://github.com/jodivaso/hybparsimony\"
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/pyproject.toml b/pyproject.toml
+--- a/pyproject.toml	(revision 4be70c245f66e569e8459417a7d752330d1d32c2)
++++ b/pyproject.toml	(date 1690301311877)
+@@ -4,7 +4,7 @@
+ 
+ [project]
+ name = "hybparsimony"
+-version = "0.0.16"
++version = "0.0.1"
+ authors = [
+   { name="Jose Divasón", email="jose.divason@unirioja.es" },
+   { name="Francisco Javier Martínez de Pisón", email="fjmartin@unirioja.es" },

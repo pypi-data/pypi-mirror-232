@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>hybparsimony.util.fitness &mdash; HYBparsimony Documentation  documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            HYBparsimony Documentation
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../hybparsimony.html">hybparsimony package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../hybparsimony.util.html">hybparsimony.util package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../hybparsimony.lhs.html">hybparsimony.lhs package</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">HYBparsimony Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">hybparsimony.util.fitness</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for hybparsimony.util.fitness</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span><span class="p">,</span> <span class="n">cross_val_score</span><span class="p">,</span> <span class="n">RepeatedKFold</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">make_scorer</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<div class="viewcode-block" id="getFitness"><a class="viewcode-back" href="../../../hybparsimony.util.html#hybparsimony.util.fitness.getFitness">[docs]</a><span class="k">def</span> <span class="nf">getFitness</span><span class="p">(</span><span class="n">algorithm</span><span class="p">,</span> <span class="n">complexity</span><span class="p">,</span> <span class="n">custom_eval_fun</span><span class="o">=</span><span class="n">cross_val_score</span><span class="p">,</span> <span class="n">ignore_warnings</span> <span class="o">=</span> <span class="kc">True</span><span class="p">):</span>
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">     Fitness function for hybparsimony.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    algorithm : object</span>
+<span class="sd">        The machine learning algorithm to optimize. </span>
+<span class="sd">    complexity : function</span>
+<span class="sd">        A function that calculates the complexity of the model. There are some functions available in `hybparsimony.util.complexity`.</span>
+<span class="sd">    custom_eval_fun : function</span>
+<span class="sd">        An evaluation function similar to scikit-learns&#39;s &#39;cross_val_score()&#39;  </span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    float</span>
+<span class="sd">        np.array([model&#39;s fitness value (J), model&#39;s complexity]), model</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    Usage example for a binary classification model </span>
+<span class="sd">    </span>
+<span class="sd">    .. highlight:: python</span>
+<span class="sd">    .. code-block:: python</span>
+
+<span class="sd">        import pandas as pd</span>
+<span class="sd">        import numpy as np</span>
+<span class="sd">        from sklearn.datasets import load_breast_cancer</span>
+<span class="sd">        from sklearn.svm import SVC</span>
+<span class="sd">        from sklearn.model_selection import cross_val_score</span>
+<span class="sd">        from hybparsimony import hybparsimony</span>
+<span class="sd">        from hybparsimony.util import getFitness, svm_complexity, population</span>
+<span class="sd">        # load &#39;breast_cancer&#39; dataset</span>
+<span class="sd">        breast_cancer = load_breast_cancer()</span>
+<span class="sd">        X, y = breast_cancer.data, breast_cancer.target</span>
+<span class="sd">        chromosome = population.Chromosome(params = [1.0, 0.2],</span>
+<span class="sd">                                        name_params = [&#39;C&#39;,&#39;gamma&#39;],</span>
+<span class="sd">                                        const = {&#39;kernel&#39;:&#39;rbf&#39;},</span>
+<span class="sd">                                        cols= np.random.uniform(size=X.shape[1])&gt;0.50,</span>
+<span class="sd">                                        name_cols = breast_cancer.feature_names)</span>
+<span class="sd">        print(getFitness(SVC,svm_complexity)(chromosome, X=X, y=y))</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="n">algorithm</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;An algorithm function must be provided!!!&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">complexity</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="ow">not</span> <span class="nb">callable</span><span class="p">(</span><span class="n">complexity</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;A complexity function must be provided!!!&quot;</span><span class="p">)</span>
+
+
+    <span class="k">def</span> <span class="nf">fitness</span><span class="p">(</span><span class="n">cromosoma</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="k">if</span> <span class="s2">&quot;pandas&quot;</span> <span class="ow">in</span> <span class="nb">str</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;X&quot;</span><span class="p">])):</span>
+            <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;X&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;X&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+        <span class="k">if</span> <span class="s2">&quot;pandas&quot;</span> <span class="ow">in</span> <span class="nb">str</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;y&quot;</span><span class="p">])):</span>
+            <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;y&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;y&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+
+        <span class="n">X_train</span> <span class="o">=</span> <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;X&quot;</span><span class="p">]</span>
+        <span class="n">y_train</span> <span class="o">=</span> <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;y&quot;</span><span class="p">]</span>
+            
+        <span class="k">try</span><span class="p">:</span>
+            <span class="c1"># Extract features from the original DB plus response (last column)</span>
+            <span class="n">data_train_model</span> <span class="o">=</span> <span class="n">X_train</span><span class="p">[:</span> <span class="p">,</span> <span class="n">cromosoma</span><span class="o">.</span><span class="n">columns</span><span class="p">]</span>
+
+            <span class="k">if</span> <span class="n">ignore_warnings</span><span class="p">:</span>
+                <span class="n">warnings</span><span class="o">.</span><span class="n">simplefilter</span><span class="p">(</span><span class="s2">&quot;ignore&quot;</span><span class="p">)</span>
+                <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;PYTHONWARNINGS&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ignore&quot;</span>
+
+            <span class="c1"># train the model</span>
+            <span class="n">aux</span> <span class="o">=</span> <span class="n">algorithm</span><span class="p">(</span><span class="o">**</span><span class="n">cromosoma</span><span class="o">.</span><span class="n">params</span><span class="p">)</span>
+            <span class="n">fitness_val</span> <span class="o">=</span> <span class="n">custom_eval_fun</span><span class="p">(</span><span class="n">aux</span><span class="p">,</span> <span class="n">data_train_model</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+            <span class="n">modelo</span> <span class="o">=</span> <span class="n">algorithm</span><span class="p">(</span><span class="o">**</span><span class="n">cromosoma</span><span class="o">.</span><span class="n">params</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">data_train_model</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+
+            <span class="c1"># Reset warnings to default values</span>
+            <span class="n">warnings</span><span class="o">.</span><span class="n">simplefilter</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">)</span>
+            <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;PYTHONWARNINGS&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;default&quot;</span>
+
+            <span class="c1"># El híbrido funciona de forma que cuanto más alto es mejor. Por tanto, con RMSE deberíamos trabajar con su negación.</span>
+            <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">fitness_val</span><span class="p">,</span> <span class="n">complexity</span><span class="p">(</span><span class="n">modelo</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">cromosoma</span><span class="o">.</span><span class="n">columns</span><span class="p">))]),</span> <span class="n">modelo</span>
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>    
+            <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="n">NINF</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">Inf</span><span class="p">]),</span> <span class="kc">None</span>
+
+    <span class="k">return</span> <span class="n">fitness</span></div>
+
+
+
+<div class="viewcode-block" id="fitness_for_parallel"><a class="viewcode-back" href="../../../hybparsimony.util.html#hybparsimony.util.fitness.fitness_for_parallel">[docs]</a><span class="k">def</span> <span class="nf">fitness_for_parallel</span><span class="p">(</span><span class="n">algorithm</span><span class="p">,</span> <span class="n">complexity</span><span class="p">,</span> <span class="n">custom_eval_fun</span><span class="o">=</span><span class="n">cross_val_score</span><span class="p">,</span> <span class="n">cromosoma</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> 
+                         <span class="n">X</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">ignore_warnings</span> <span class="o">=</span> <span class="kc">True</span><span class="p">):</span>
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">     Fitness function for hybparsimony similar to &#39;getFitness()&#39; without being nested, to allow the pickle and therefore the parallelism.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    algorithm : object</span>
+<span class="sd">        The machine learning algorithm to optimize. </span>
+<span class="sd">    complexity : function</span>
+<span class="sd">        A function that calculates the complexity of the model. There are some functions available in `hybparsimony.util.complexity`.</span>
+<span class="sd">    custom_eval_fun : function</span>
+<span class="sd">        An evaluation function similar to scikit-learns&#39;s &#39;cross_val_score()&#39;.</span>
+<span class="sd">    cromosoma: population.Chromosome class</span>
+<span class="sd">        Solution&#39;s chromosome.</span>
+<span class="sd">    X : {array-like, dataframe} of shape (n_samples, n_features)</span>
+<span class="sd">        Input matrix.</span>
+<span class="sd">    y : {array-like, dataframe} of shape (n_samples,)</span>
+<span class="sd">        Target values (class labels in classification, real numbers in regression).</span>
+<span class="sd">    ignore_warnings: True</span>
+<span class="sd">        If ignore warnings.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    float</span>
+<span class="sd">        np.array([model&#39;s fitness value (J), model&#39;s complexity]), model</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+
+<span class="sd">    import pandas as pd</span>
+<span class="sd">    import numpy as np</span>
+<span class="sd">    from sklearn.datasets import load_breast_cancer</span>
+<span class="sd">    from sklearn.svm import SVC</span>
+<span class="sd">    from sklearn.model_selection import cross_val_score</span>
+<span class="sd">    from hybparsimony import hybparsimony</span>
+<span class="sd">    from hybparsimony.util import svm_complexity, population</span>
+<span class="sd">    from hybparsimony.util.fitness import fitness_for_parallel</span>
+<span class="sd">    # load &#39;breast_cancer&#39; dataset</span>
+<span class="sd">    breast_cancer = load_breast_cancer()</span>
+<span class="sd">    X, y = breast_cancer.data, breast_cancer.target</span>
+<span class="sd">    chromosome = population.Chromosome(params = [1.0, 0.2],</span>
+<span class="sd">                                       name_params = [&#39;C&#39;,&#39;gamma&#39;],</span>
+<span class="sd">                                       const = {&#39;kernel&#39;:&#39;rbf&#39;},</span>
+<span class="sd">                                       cols= np.random.uniform(size=X.shape[1])&gt;0.50,</span>
+<span class="sd">                                       name_cols = breast_cancer.feature_names)</span>
+<span class="sd">    print(fitness_for_parallel(SVC, svm_complexity, </span>
+<span class="sd">                               custom_eval_fun=cross_val_score,</span>
+<span class="sd">                               cromosoma=chromosome, X=X, y=y))</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="s2">&quot;pandas&quot;</span> <span class="ow">in</span> <span class="nb">str</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">X</span><span class="p">)):</span>
+        <span class="n">X</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">values</span>
+    <span class="k">if</span> <span class="s2">&quot;pandas&quot;</span> <span class="ow">in</span> <span class="nb">str</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">y</span><span class="p">)):</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="n">y</span><span class="o">.</span><span class="n">values</span>
+
+    <span class="n">X_train</span> <span class="o">=</span> <span class="n">X</span>
+    <span class="n">y_train</span> <span class="o">=</span> <span class="n">y</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="c1"># Extract features from the original DB plus response (last column)</span>
+        <span class="n">data_train_model</span> <span class="o">=</span> <span class="n">X_train</span><span class="p">[:,</span> <span class="n">cromosoma</span><span class="o">.</span><span class="n">columns</span><span class="p">]</span>
+
+        <span class="k">if</span> <span class="n">ignore_warnings</span><span class="p">:</span>
+            <span class="n">warnings</span><span class="o">.</span><span class="n">simplefilter</span><span class="p">(</span><span class="s2">&quot;ignore&quot;</span><span class="p">)</span>
+            <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;PYTHONWARNINGS&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ignore&quot;</span>
+
+        <span class="c1"># train the model</span>
+        <span class="n">aux</span> <span class="o">=</span> <span class="n">algorithm</span><span class="p">(</span><span class="o">**</span><span class="n">cromosoma</span><span class="o">.</span><span class="n">params</span><span class="p">)</span>
+        <span class="n">fitness_val</span> <span class="o">=</span> <span class="n">custom_eval_fun</span><span class="p">(</span><span class="n">aux</span><span class="p">,</span> <span class="n">data_train_model</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+        <span class="n">modelo</span> <span class="o">=</span> <span class="n">algorithm</span><span class="p">(</span><span class="o">**</span><span class="n">cromosoma</span><span class="o">.</span><span class="n">params</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">data_train_model</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+
+        <span class="c1"># Reset warnings to default values</span>
+        <span class="n">warnings</span><span class="o">.</span><span class="n">simplefilter</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">)</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;PYTHONWARNINGS&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;default&quot;</span>
+
+        <span class="c1"># El híbrido funciona de forma que cuanto más alto es mejor. Por tanto, con RMSE deberíamos trabajar con negativos.</span>
+
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">fitness_val</span><span class="p">,</span> <span class="n">complexity</span><span class="p">(</span><span class="n">modelo</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">cromosoma</span><span class="o">.</span><span class="n">columns</span><span class="p">))]),</span> <span class="n">modelo</span>
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="n">NINF</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">Inf</span><span class="p">]),</span> <span class="kc">None</span></div>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Jose Divasón.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
