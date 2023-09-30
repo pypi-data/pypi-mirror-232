@@ -1,0 +1,10 @@
+SocketSwap/__init__.py,sha256=iiL_XXmviXfIiK8_GLuxCpPGYSECkWD0jZFhaTpgcsI,386
+SocketSwap/context_manager.py,sha256=dJ9wO_3dVt2qlVxevZJP2hUEq4wTlHl7GF-yUY1eAGY,1233
+SocketSwap/proxy.py,sha256=wN7TQAjBgI5lMdh_f3KUdydqIL386kfiVzHdrSJdlrw,13119
+SocketSwap/test_multiprocessing.py,sha256=x6nUSGlCzCO5HZ4hW5Rb5CatMyZ9Vx3JORGf5lrIyQE,1127
+SocketSwap/test_thread_timeout.py,sha256=RVSGG-Ruv65QofiNiuzKCCEHLbPODWq1J8fEWyYODe0,1363
+SocketSwap-0.1.11.dist-info/LICENSE,sha256=23tRc0wLCYQHwSFTDYEAJnQxRfETM7yum1i0Qhl_lpU,1056
+SocketSwap-0.1.11.dist-info/METADATA,sha256=YOTgGKvxv6wu6qaG0n11_TjRqOHeHTJxHe01t8ufYb8,2308
+SocketSwap-0.1.11.dist-info/WHEEL,sha256=a-zpFRIJzOq5QfuhBzbhiA1eHTzNCJn8OdRvhdNX0Rk,110
+SocketSwap-0.1.11.dist-info/top_level.txt,sha256=sGI9LWTAw3Bu2u37_lcKmZtgzwly_gHlFHYKhZTWVDM,11
+SocketSwap-0.1.11.dist-info/RECORD,,
