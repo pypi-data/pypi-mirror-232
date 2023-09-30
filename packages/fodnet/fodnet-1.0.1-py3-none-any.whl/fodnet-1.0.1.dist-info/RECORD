@@ -1,0 +1,13 @@
+fodnet/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fodnet/bin/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fodnet/core/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fodnet/core/dataset.py,sha256=UN1_UbNgFwUDqBl66vzNNdpllyLO3ketnomFPfkwla0,4662
+fodnet/core/model.py,sha256=RH08EB5NW1GeLLpH76nE4C3TnlM2RFME1AajwWO6kUM,5992
+fodnet/core/prediction.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fodnet/core/processing.py,sha256=t8AgJDBh_W9M_kq1IZSppF9xItlnNMONSPSJ2WdmyIg,3786
+fodnet/core/training.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fodnet-1.0.1.dist-info/LICENSE,sha256=W3EXsu0n0pLTZFSdAEgljWZKYDcMfMVM5hZEbXbJ_hY,1069
+fodnet-1.0.1.dist-info/METADATA,sha256=q62fEOx-ew0hOq8VSHalaDy1KvGXE-WOZIpcezVuciw,4615
+fodnet-1.0.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+fodnet-1.0.1.dist-info/top_level.txt,sha256=RcgZa-8yrIDn9D1UkYIGaEh-KHE9N75zw3bNqTYnxxA,7
+fodnet-1.0.1.dist-info/RECORD,,
