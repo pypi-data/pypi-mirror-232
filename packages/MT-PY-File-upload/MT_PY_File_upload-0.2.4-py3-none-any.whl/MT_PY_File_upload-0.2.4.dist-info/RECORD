@@ -1,0 +1,10 @@
+MT_PY_File_upload/__init__.py,sha256=zc_TI1jBhQ3VWpLRu2r6dFTmr3ukpeRqpUHMzdJiD_0,148
+MT_PY_File_upload/azureBlobStorage.py,sha256=EpeQIASVFwVP1uLno04mUkIBDjITLBtE6EW894N6XMw,1328
+MT_PY_File_upload/file_upload.py,sha256=mL_p4naUiOI5JIRyYY46NMp6hW91j8oIpEOI0bpcUqU,1435
+MT_PY_File_upload/upload_file_to_s3.py,sha256=knKSfz1TiP5Lm9F7HRPvzH475fEXcQsT07zVgPfN5Bg,649
+MT_PY_File_upload/validators.py,sha256=OCKrDoFUrDA_2j4UcXqR2thD8dnrU9MYyXoHtsYjj3w,492
+MT_PY_File_upload-0.2.4.dist-info/LICENSE,sha256=LcL3qyteFMHtKqaqW_HXfizS4dDgD0AekLEEZfFRV6w,1092
+MT_PY_File_upload-0.2.4.dist-info/METADATA,sha256=5HRgn7p6o4dIK0aBDIKfN8XSWsDodIaJ2qvjR2DD4uI,9999
+MT_PY_File_upload-0.2.4.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+MT_PY_File_upload-0.2.4.dist-info/top_level.txt,sha256=z4DZrp3LTdkU50TwwTpgXySHEKAmBCKdt00rLAkM1v0,18
+MT_PY_File_upload-0.2.4.dist-info/RECORD,,
