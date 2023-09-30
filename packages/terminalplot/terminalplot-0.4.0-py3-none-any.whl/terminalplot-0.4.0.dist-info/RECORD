@@ -1,0 +1,11 @@
+terminalplot/__init__.py,sha256=dR1PEQsWYqavkt7-I4EvY_6v59WIogWNz5939tS7HRY,91
+terminalplot/_version.py,sha256=fjdGUhOiyWabTmzCzrtlhlOe5Vvb9669zuUyjwpz5cw,274
+terminalplot/command.py,sha256=3iBnAnKZSuBT15549pSxkvRjT3AZbWL_7tJkvWObPss,2631
+terminalplot/terminalplot.py,sha256=-veNleBJ7_Rbk1AR-DO5yLz8BeuHXWdFLbUzeY2wwVA,1474
+terminalplot/test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+terminalplot/test/test_terminalplot.py,sha256=PZt076-h-0UvGxnM2iJAKG-ZcJL2hc9B0keUekaxcTk,1296
+terminalplot-0.4.0.dist-info/METADATA,sha256=aLgrlmz-cpY8w9MMNe8oIEtrS8taGgvnyft5eBMrVks,42676
+terminalplot-0.4.0.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+terminalplot-0.4.0.dist-info/entry_points.txt,sha256=DCpj_XYeSA9ozXnNLu0G6ww69No4s-vI8dAikrsTzPg,51
+terminalplot-0.4.0.dist-info/licenses/LICENCE.txt,sha256=jOtLnuWt7d5Hsx6XXB2QxzrSe2sWWh3NgMfFRetluQM,35147
+terminalplot-0.4.0.dist-info/RECORD,,
