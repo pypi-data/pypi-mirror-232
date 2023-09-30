@@ -1,0 +1,3 @@
+[console_scripts]
+techdocs=techdocs.cli:maintechdocs run tests = techdocs.tests
+
