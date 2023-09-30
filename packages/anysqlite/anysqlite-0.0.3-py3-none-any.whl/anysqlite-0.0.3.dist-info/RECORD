@@ -1,0 +1,7 @@
+anysqlite/__init__.py,sha256=YNYrT3F3mzEveRMjZjYLpkYBwyY9LeqZqUVz0ZllExA,58
+anysqlite/_core.py,sha256=1vwoAvv548i8WLBhx1SGGub9Izmjb5qPCO_Zo2nEBN4,5823
+anysqlite/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+anysqlite-0.0.3.dist-info/METADATA,sha256=hRBJjMnsnMGCapS0Fyra7yb11fXP6hkoKy2x_UCmAaE,1162
+anysqlite-0.0.3.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+anysqlite-0.0.3.dist-info/licenses/LICENSE.txt,sha256=6AnlKqeaC2tbtWcPNPgcLt8Jam-tyz8sphIAXT_N5sY,1492
+anysqlite-0.0.3.dist-info/RECORD,,
