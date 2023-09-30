@@ -1,0 +1,8 @@
+LICENSE.txt
+README.txt
+setup.py
+mkwhatkit.egg-info/PKG-INFO
+mkwhatkit.egg-info/SOURCES.txt
+mkwhatkit.egg-info/dependency_links.txt
+mkwhatkit.egg-info/requires.txt
+mkwhatkit.egg-info/top_level.txt
