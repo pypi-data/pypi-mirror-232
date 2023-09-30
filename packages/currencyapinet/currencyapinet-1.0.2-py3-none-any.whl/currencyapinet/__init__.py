@@ -1,0 +1,1 @@
+from currencyapinet.currency import Currency
