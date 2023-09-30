@@ -1,0 +1,3 @@
+google-cloud-jupyter-config
+jupyter_server>=2.7.3
+traitlets
