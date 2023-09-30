@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: traffic_light_simulator_demo
+Version: 0.13
+Summary: traffic light simulator
+Home-page: https://github.com/ydotzh/Traffic_Light_Simulator
+Download-URL: https://github.com/ydotzh/Traffic_Light_Simulator/archive/refs/tags/v_013.tar.gz
+Author: Yan
+Author-email: yzhao1990@gmail.com
+License: MIT
+Keywords: Data Challenge
+License-File: LICENSE.txt
