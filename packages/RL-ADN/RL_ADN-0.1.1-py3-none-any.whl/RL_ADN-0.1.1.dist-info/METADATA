@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: RL-ADN
+Version: 0.1.1
+Summary: RL-ADN: A Benchmark Framework for DRL-based Battery Energy Arbitrage in Distribution Networks
+Home-page: https://github.com/yourusername/power_network_rl
+Author: Hou Shengren, Gao Shuyi, Pedro Vargara
+Author-email: houshengren97@gmail.com
+License: MIT
+Keywords: DRL energy arbitrage
+Description-Content-Type: text/markdown
+License-File: License
+
