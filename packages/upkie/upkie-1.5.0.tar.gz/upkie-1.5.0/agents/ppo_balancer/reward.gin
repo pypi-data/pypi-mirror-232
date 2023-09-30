@@ -1,0 +1,5 @@
+# -*- python -*-
+
+import reward
+
+Reward.acceleration_penalty_weight = 1.0

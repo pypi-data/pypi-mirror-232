@@ -1,0 +1,45 @@
+# -*- python -*-
+#
+# Copyright 2023 Inria
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+import settings
+
+EnvSettings.agent_frequency = 200
+EnvSettings.discounted_horizon_duration = 1.0
+EnvSettings.env_id = "UpkieGroundVelocity-v1"
+EnvSettings.init_pitch_rand = 0.1
+EnvSettings.max_episode_duration = 10.0
+EnvSettings.max_ground_accel = 10.0
+EnvSettings.max_ground_velocity = 1.0
+EnvSettings.seed = None
+EnvSettings.spine_frequency = 1000
+EnvSettings.total_timesteps = 1e6
+EnvSettings.velocity_filter = None
+EnvSettings.velocity_filter_rand = (0.05, 0.15)
+
+PPOSettings.batch_size = 64
+PPOSettings.clip_range = 0.2
+PPOSettings.clip_range_vf = None
+PPOSettings.ent_coef = 0.0
+PPOSettings.gae_lambda = 0.95
+PPOSettings.learning_rate = 3e-4
+PPOSettings.max_grad_norm = 0.5
+PPOSettings.n_epochs = 10
+PPOSettings.n_steps = 2048
+PPOSettings.normalize_advantage = True
+PPOSettings.sde_sample_freq = -1
+PPOSettings.target_kl = None
+PPOSettings.use_sde = False
+PPOSettings.vf_coef  = 0.5
