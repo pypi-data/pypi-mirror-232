@@ -1,0 +1,119 @@
+{
+    "name": "ChemistrySizeDistributionSpatial",
+    "version": "0.1",
+    "namespace": "http://www.sintef.no/calm",
+    "description": "Like ChemistrySizeDistribution, but allow to associate the domains to different phases and spatial distributed cells.  The cells positions are described with one coordinate using either a linear, cylindrical or spherical coordinate system. To reduce the number of domains, the particle size distribution in each domain is assumed to be log-normal distributed.",
+    "dimensions": [
+        {
+            "name": "ndomains",
+            "description": "Number of particle size domains.  The matrix is not counted as a domain."
+        },
+        {
+            "name": "nelements",
+            "description": "Number of different chemical elements."
+        },
+        {
+            "name": "nphases",
+            "description": "Number of phases."
+        },
+        {
+            "name": "ncells",
+            "description": "Number of spatial cells."
+        },
+        {
+            "name": "ncoords",
+            "description": "Number of coordinates or spatial dimensions.  For a 1D diffusion model like gbseg, this will be 1."
+        }
+    ],
+    "properties": [
+        {
+            "name": "elements",
+            "type": "string",
+            "dims": ["nelements"],
+            "description": "Chemical symbol of each chemical element.  By convension the dependent element (e.g. Al) is listed first."
+        },
+        {
+            "name": "phases",
+            "type": "string",
+            "dims": ["nphases"],
+            "description": "Name of each phase."
+        },
+        {
+            "name": "coordinate_system",
+            "type": "string",
+            "description": "Spatial coordinate system.  Should be either 'linear', 'cylindrical' or 'spherical'."
+        },
+        {
+            "name": "cell_width",
+            "type": "double",
+            "unit": "m",
+            "description": "Width of the cells.  Only used for linear systems."
+        },
+        {
+            "name": "cell_height",
+            "type": "double",
+            "unit": "m",
+            "description": "Height of the cells.  Only used for linear and cylindrical systems."
+        },
+        {
+            "name": "cellborders",
+            "type": "double",
+            "unit": "m",
+            "dims": ["ncells", "ncoords"],
+            "description": "The position of the upper edge of each cell.  The lower edge of the first cell is in origo."
+        },
+        {
+            "name": "X0",
+            "type": "double",
+            "unit": "atom-fraction",
+            "dims": ["nelements"],
+            "description": "Overall nominal composition of the full system.  Should sum to one."
+        },
+        {
+            "name": "Xd",
+            "type": "double",
+            "unit": "atom-fraction",
+            "dims": ["ndomains", "nelements"],
+            "description": "Average composition.  Each row should sum to one."
+        },
+        {
+            "name": "rd",
+            "type": "double",
+            "unit": "m",
+            "dims": ["ndomains"],
+            "description": "Equivalent spherical radius (radius of a sphere with the same volume as the particle) for each domain."
+        },
+        {
+            "name": "shape",
+            "type": "double",
+            "dims": ["ndomains"],
+            "description": "Shape parameter for each domain.  It is defined as ``6*sqrt(pi)*V/S^(3/2)``, where V and S are the particle volume and surface area, respectively.  The shape parameter will always be equal to or less than one, where one corresponds to spherical particles."
+        },
+        {
+            "name": "Nd",
+            "type": "double",
+	    "unit": "1/m^3",
+            "dims": ["ndomains"],
+            "description": "Particle number density."
+        },
+        {
+            "name": "phasename",
+            "type": "string",
+            "dims": ["ndomains"],
+            "description": "The phase associated with each domain."
+        },
+        {
+            "name": "cell",
+            "type": "int",
+            "dims": ["ndomains"],
+            "description": "The index of the cell that each domain belongs to.  The first cell has index 1."
+        },
+        {
+            "name": "atvol",
+            "type": "double",
+            "unit": "m^3",
+            "dims": ["ndomains"],
+            "description": "Average volume per atom for each phase."
+        }
+    ]
+}

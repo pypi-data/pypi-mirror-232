@@ -1,0 +1,27 @@
+{
+    "name": "ExternalParameters",
+    "version": "0.1",
+    "namespace": "http://www.sintef.no/calm",
+    "description": "An generic entity describing an instant value of external variables for the system.",
+    "dimensions": [],
+    "properties": [
+        {
+            "name": "t",
+            "type": "double",
+            "unit": "s",
+            "description": "Current time of the system."
+        },
+        {
+            "name": "T",
+            "type": "double",
+            "unit": "K",
+            "description": "Current temperature of the system."
+        },
+        {
+            "name": "P",
+            "type": "double",
+            "unit": "Pa",
+            "description": "Current pressure of the system."
+        }
+    ]
+}
