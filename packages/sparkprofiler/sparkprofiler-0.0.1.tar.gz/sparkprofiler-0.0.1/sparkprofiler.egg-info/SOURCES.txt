@@ -1,0 +1,6 @@
+README.md
+setup.py
+sparkprofiler.egg-info/PKG-INFO
+sparkprofiler.egg-info/SOURCES.txt
+sparkprofiler.egg-info/dependency_links.txt
+sparkprofiler.egg-info/top_level.txt
