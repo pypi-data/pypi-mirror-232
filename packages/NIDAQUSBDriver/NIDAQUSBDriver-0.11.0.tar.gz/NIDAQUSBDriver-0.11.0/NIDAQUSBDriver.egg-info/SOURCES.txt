@@ -1,0 +1,9 @@
+README.md
+setup.py
+NIDAQUSBDriver/NIDAQClient.py
+NIDAQUSBDriver/__init__.py
+NIDAQUSBDriver.egg-info/PKG-INFO
+NIDAQUSBDriver.egg-info/SOURCES.txt
+NIDAQUSBDriver.egg-info/dependency_links.txt
+NIDAQUSBDriver.egg-info/requires.txt
+NIDAQUSBDriver.egg-info/top_level.txt
