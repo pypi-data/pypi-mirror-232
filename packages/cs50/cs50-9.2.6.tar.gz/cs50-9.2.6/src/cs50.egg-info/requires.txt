@@ -1,0 +1,5 @@
+Flask>=1.0
+SQLAlchemy==1.4.46
+sqlparse
+termcolor
+wheel
