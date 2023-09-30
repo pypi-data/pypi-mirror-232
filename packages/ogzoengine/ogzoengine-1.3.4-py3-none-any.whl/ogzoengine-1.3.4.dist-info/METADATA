@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: ogzoengine
+Version: 1.3.4
+Summary: basic pygame engine
+Author: Coguz
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: pygame >=2.0.1
+Requires-Dist: keyboard >=0.13.3
+Provides-Extra: dev
+Requires-Dist: pytest >=7.0 ; extra == 'dev'
+Requires-Dist: twine >=4.0.2 ; extra == 'dev'
+Requires-Dist: some-other-dependency >=1.0 ; extra == 'dev'
+
+# **Ogzoengine**
+
+### **NasÄ±l indirilir**
+
+**Ã–ncelikle python versiyonunu kontrol etmelisiniz.**
+``` 
+python --version
+```
+
+
+``` 
+pip install ogzoengine
+```
+
+### **Ã–zellikler**
+
+- **Basittir**
+- ****
+
+### **Ä°mport ve aktarma iÅŸlemleri**
+
+`
+import ogzoengine
+
+screen = ogzoengine.GameEngine()
+input = ogzoengine.Input()
+```
+- bu iÅŸlemlerde bir deÄŸiÅŸken yoktur
