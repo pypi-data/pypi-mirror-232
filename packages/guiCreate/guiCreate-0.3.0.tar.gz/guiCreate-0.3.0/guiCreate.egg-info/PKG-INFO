@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: guiCreate
+Version: 0.3.0
+Summary: Making gui apps/games
+Author: Folumo (Ominox_)
+Author-email: <ominox_@folumo.com>
+Keywords: python,gui,app,game
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+
+Easy way to create gui. (first import ScreenManager and use .Mainloop function)
