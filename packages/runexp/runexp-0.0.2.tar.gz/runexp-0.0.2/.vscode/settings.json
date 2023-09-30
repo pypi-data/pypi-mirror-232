@@ -1,0 +1,12 @@
+{
+    "cSpell.words": [
+        "argparse",
+        "getpid",
+        "psutil",
+        "pydantic",
+        "runexp",
+        "sbatch",
+        "slurm",
+        "srun"
+    ]
+}
