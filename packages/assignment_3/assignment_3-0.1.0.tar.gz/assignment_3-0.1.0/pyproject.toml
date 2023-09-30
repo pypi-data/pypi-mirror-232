@@ -1,0 +1,13 @@
+[tool.poetry]
+name = "assignment_3"
+version = "0.1.0"
+description = ""
+authors = ["TamirlanFox", "t.nurbulatuly@gmail.com"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
