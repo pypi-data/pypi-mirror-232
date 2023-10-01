@@ -1,0 +1,8 @@
+assets/quick_key.ico,sha256=tXqLRTk7L9MawqKVIMXIhFSy4VIa_BfHJXeF9Tayufs,1254
+quickkey/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+quickkey/quick_key.py,sha256=GIVP_yH3oHsQcmKAfwM9ChiTKgL9k_VV08p1ncw0kaY,8083
+quickkey-0.1.2.dist-info/entry_points.txt,sha256=zj1E6xnJVFFGVQ4g86Z-m1OZ21PBaUvSr24KieZjV3A,53
+quickkey-0.1.2.dist-info/LICENSE,sha256=9it_5uZP-awdAk7EjKQnGFR2Ew55OPYRwBZMyK0nCpU,911
+quickkey-0.1.2.dist-info/METADATA,sha256=RypsMuH7ZWnJo6j_fCUF1QHCkVRhkZrBlrTr2hfQ428,811
+quickkey-0.1.2.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+quickkey-0.1.2.dist-info/RECORD,,
