@@ -1,0 +1,9 @@
+kring/README.md,sha256=u0ORuLmzZYOiykNtAqDaPT6Onv9d6QBWum9HKGF_22s,299
+kring/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+kring/bak__main__.py,sha256=pOhjahR0dHtNcOlp5fI6Z6F1Yp-soZh6SjkcDsWAqFw,1863
+kring/kring.so,sha256=AlCjmMECu2dJOeu7u2vHGdbrufQKyW5VAe1KWArwWco,1276104
+kring/libkring.so,sha256=kPlu60AiuL8DwICZX936jLEsx0Bh6yVtjova3CXMgnc,1269704
+kring/test.py,sha256=SlDP3YIQrSOwtrk0QVM_qq0dflCZxs85IdHYKndiXho,1837
+kring-0.0.1.dist-info/METADATA,sha256=2xBgR3wzXe6LvB9onPWpA3l7S_ar17APNiostckZ2LY,767
+kring-0.0.1.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+kring-0.0.1.dist-info/RECORD,,
