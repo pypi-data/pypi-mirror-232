@@ -1,0 +1,13 @@
+locloc/__init__.py,sha256=ltrcCkYQjoUiRp5PnOOIEM9yNfv1vpTRYZC5TEK9vY4,79
+locloc/loc.py,sha256=4rQOb3fpkYU53fC7Q9Cs4CUK7477JibMqqVzCk6luJU,1851
+locloc/main.py,sha256=ClmLLhyGSSz2UK3dAv5VgO-ogRqL5PVAv0ZDfrdb_SE,3847
+locloc/static_files/favicon.ico,sha256=u3VZ9p2gBDqSDpURy0K6__DHNGJuzo8SObA0xWGEcIA,32038
+locloc/static_files/favicon.png,sha256=fPcW8BYT3gA-59wHiOsiNrej16gYUf6MaMqoiaGFp04,7653
+locloc/static_files/index.css,sha256=Phkg7OIJIqAwAbmjO63i9CbnSw8-F5Q5_sck5X3N8no,295
+locloc/static_files/index.js,sha256=fdpFNmBq9_kxE6g67ggjDHARtAgAHRbxEeGvOj6-i_I,4351
+locloc/templates/index.j2,sha256=Pq6gK4Q_K3QMsCQAz4nKQk0IPohhuuoxf3ws-mEESVE,2763
+locloc-0.0.2.dist-info/LICENSE.txt,sha256=5X0k_iug92drQy7f-h9ES5w_sBTkPhNseTU73bfuDvY,1046
+locloc-0.0.2.dist-info/METADATA,sha256=iE4eZriPL2Id1iQyp7BwqeQjI0sO6ZA6b1njG38MxQc,2338
+locloc-0.0.2.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+locloc-0.0.2.dist-info/entry_points.txt,sha256=rxCo52Ni4b-JdakT18V5OVRjHpkqdQRwv6v-fUX-zl8,50
+locloc-0.0.2.dist-info/RECORD,,
