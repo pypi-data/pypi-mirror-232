@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "misspy-packager"
+version = "0.1.0"
+description = ""
+authors = ["sonyakun <90973770+sonyakun@users.noreply.github.com>"]
+readme = "README.md"
+packages = [{include = "misspy_packager"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+cleo = "^2.0.1"
+requests = "^2.31.0"
+
+[tool.poetry.scripts]
+mspy = "misspy_packager.main:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
