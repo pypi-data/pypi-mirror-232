@@ -1,0 +1,16 @@
+planck_2020_lollipop/__init__.py,sha256=Q18CAqHI1Vd-YPaHebB2JVI5qDm7GS3FKBhyuZaqY2w,136
+planck_2020_lollipop/_version.py,sha256=lVdUhfKmodsRhS_utGIYgW_K6r5lqGWauNRvZ3mnmZU,497
+planck_2020_lollipop/bins.py,sha256=gf9kPh1SY82OUuAMfgYmZ5YCEEnqee7huJWoEuGhr-M,2779
+planck_2020_lollipop/lollipop.py,sha256=pDbHYOhdz4acP3Ku_jJSAWooYNgf1OPqgYxDWh5Yjsc,8435
+planck_2020_lollipop/lowlB.bibtex,sha256=70PNJi9qrspIQRWCN6X-EXJCskS6S_h4nSy6tRAjF8A,565
+planck_2020_lollipop/lowlB.yaml,sha256=rzhz_BmEG8FAJVrMOUZqRNbNRXsdWF5dNGQ7rpaRDkg,456
+planck_2020_lollipop/lowlE.bibtex,sha256=70PNJi9qrspIQRWCN6X-EXJCskS6S_h4nSy6tRAjF8A,565
+planck_2020_lollipop/lowlE.yaml,sha256=rzhz_BmEG8FAJVrMOUZqRNbNRXsdWF5dNGQ7rpaRDkg,456
+planck_2020_lollipop/lowlEB.bibtex,sha256=70PNJi9qrspIQRWCN6X-EXJCskS6S_h4nSy6tRAjF8A,565
+planck_2020_lollipop/lowlEB.yaml,sha256=rzhz_BmEG8FAJVrMOUZqRNbNRXsdWF5dNGQ7rpaRDkg,456
+planck_2020_lollipop/tools.py,sha256=Efj7ANhWfcdBOEihgzJMhf6686Vb7PR-pQ-FMID44h0,3121
+planck_2020_lollipop-4.1.0.dist-info/LICENSE,sha256=3Uq2ZRpN-egaRRuXw5uucyzv0glElBhJpix9u1GjXIM,35081
+planck_2020_lollipop-4.1.0.dist-info/METADATA,sha256=Q3UkdZCqdkAa_B8G7NQEhRkcEkpm4PxWMDy8baIo9I0,3558
+planck_2020_lollipop-4.1.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+planck_2020_lollipop-4.1.0.dist-info/top_level.txt,sha256=jHJbOiYqpwZCw-ba0XH6h_vgKxN2zhUTSw83iukEzo8,21
+planck_2020_lollipop-4.1.0.dist-info/RECORD,,
