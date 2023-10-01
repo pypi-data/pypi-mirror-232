@@ -1,0 +1,15 @@
+jaxwell/__init__.py,sha256=zzOG_NZWK4HVD6m-RgVA8QqW8PdhHlo5yYLWKnK9Bf0,70
+jaxwell/cocg.py,sha256=-t1WP9P7CxXWFyHJ-OIdWmOQSe99dsR0YOcRj7O298I,815
+jaxwell/fdfd.py,sha256=xE9pKCBypkQyV_Ccf5dam46-h0X_VAtzipT5tA7K25A,3731
+jaxwell/operators.py,sha256=vrqSqEMrmPG6QcdQo14H1Yd1dqAbTGe6d7Oos818D9o,3736
+jaxwell/utils.py,sha256=DegBba1KsU97NMwNXQdoGGwgKG2MfeiWEK6izVMmMBQ,173
+jaxwell/vecfield.py,sha256=0iPAfvWh_xP5_6oHgkzIUGiL57Y3hGXI-5lhDeIFS-o,1990
+jaxwell/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jaxwell/tests/test_cocg.py,sha256=IpKarIQ6oW6Wgvt5WXQD6pbLRJS6ccqh4RzPSZ789Hw,1052
+jaxwell/tests/test_fdfd.py,sha256=9SWZvOkFQuW_-FgcwnoqcwiKowiRzui_P-nUi-mQGLU,2000
+jaxwell/tests/test_operators.py,sha256=j4pc0CJLZH0LiCiQSuFVGfVySrNE0TXU72OfuAyjno4,4966
+jaxwell/tests/test_vecfield.py,sha256=6HJvlb9Y5yTz2gqNt8-XS6UykjaEF3LAegGx9XIarYY,2131
+jaxwell-0.2.0.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+jaxwell-0.2.0.dist-info/WHEEL,sha256=EZbGkh7Ie4PoZfRQ8I0ZuP9VklN_TvcZ6DSE5Uar4z4,81
+jaxwell-0.2.0.dist-info/METADATA,sha256=8Q8fttQXVU8doFetfAV1n5xfENIySfc9pCDnQP6RznU,3486
+jaxwell-0.2.0.dist-info/RECORD,,
