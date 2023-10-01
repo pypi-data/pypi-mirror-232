@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: Refir
+Version: 1.0
+Summary: Add referral to your app with ease. With refir you can grow your user-base by aloowing your users to refer friends
+Requires-Dist: requests
+
