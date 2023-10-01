@@ -1,0 +1,5 @@
+wonnx-0.5.1.dist-info/METADATA,sha256=qHn1ZPRHYeyNfkIKUMqxv5tzqG2QqV4xmPmFo7R4t8Y,1606
+wonnx-0.5.1.dist-info/WHEEL,sha256=ZnSmVnashXVUiLCKmp20reANrPJdUjOt4GHgJoJkZ3E,96
+wonnx/__init__.py,sha256=DrRuDLrkNEnxcJEy6e_fAqcf9nXKhYL9qdIAZsTlRD4,103
+wonnx/wonnx.pyd,sha256=HFRbCyShccMpcUqvuEFwiA7ViOWN21P9tzSwLf6W5as,10065920
+wonnx-0.5.1.dist-info/RECORD,,
