@@ -1,0 +1,15 @@
+README.rst
+pyproject.toml
+verbes_irreg.py
+.github/workflows/python-publish.yml
+src/liste_1.txt
+src/liste_2.txt
+src/liste_3.txt
+src/liste_4.txt
+src/liste_5.txt
+src/liste_6.txt
+src/verbe_irregulier.egg-info/PKG-INFO
+src/verbe_irregulier.egg-info/SOURCES.txt
+src/verbe_irregulier.egg-info/dependency_links.txt
+src/verbe_irregulier.egg-info/entry_points.txt
+src/verbe_irregulier.egg-info/top_level.txt
