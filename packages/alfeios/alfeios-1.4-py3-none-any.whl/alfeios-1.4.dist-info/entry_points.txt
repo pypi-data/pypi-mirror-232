@@ -1,0 +1,2 @@
+[console_scripts]
+alfeios = alfeios.cli:main
