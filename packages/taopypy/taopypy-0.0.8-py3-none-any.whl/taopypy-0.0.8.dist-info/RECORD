@@ -1,0 +1,9 @@
+taopypy/__init__.py,sha256=nJAo3-Ts1bjS4cYhb5my_DaDpiDeA5UnMrn3HLHH25U,175
+taopypy/notification.py,sha256=sFv28hG5MBHlstQdyddq24I3qxyyQzQOt_WNXMwl2CE,306
+taopypy/handler/handler.py,sha256=QIO3s-roIeqWUKSZaUXGEkJIK8SFcJ23YPaMIbRzqME,383
+taopypy-0.0.8.dist-info/LICENSE,sha256=tFwaRZyzJ1KZEWc1ElZa_CNtKUULNIQYYrh2O4BTrp4,1073
+taopypy-0.0.8.dist-info/METADATA,sha256=pXVBU69vHHIvtaaZvyk5XvamYY3743UOauemZ8ecTYI,837
+taopypy-0.0.8.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+taopypy-0.0.8.dist-info/entry_points.txt,sha256=1rVJIXOiZLbDZxYTm3Qh_ZV98zyQLIYZzgIgWTkWsi0,41
+taopypy-0.0.8.dist-info/top_level.txt,sha256=B1pCfuO1QdfYvixGN96D_Kgb8L1IBvln7FUWFIynujY,8
+taopypy-0.0.8.dist-info/RECORD,,
