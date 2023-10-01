@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: cloudguard-modules
+Version: 1.0.3
+Summary: Cloudguard provider modules written in python to be used in cloudguard CLI
+Home-page: https://github.com/limebrew-org/cloudguard-modules
+License: MIT
+Keywords: python,aws,azure,gcp,cspm
+Author: deepraj1729
+Author-email: deeprajbaidyaofficial@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: google-api-python-client (>=2.95.0,<3.0.0)
+Requires-Dist: google-auth (>=2.17.1,<3.0.0)
+Requires-Dist: google-auth-httplib2 (>=0.1.0,<0.2.0)
+Requires-Dist: google-auth-oauthlib (>=1.0.0,<2.0.0)
+Requires-Dist: google-cloud-compute (==1.13.0)
+Requires-Dist: google-cloud-dns (==0.34.1)
+Requires-Dist: google-cloud-storage (==2.10.0)
+Project-URL: Repository, https://github.com/limebrew-org/cloudguard-modules
+Description-Content-Type: text/markdown
+
+# Cloudguard Modules
+Cloudguard provider modules written in python to be used in cloudguard CLI
+
+## Installation:
+To install using pip:
+
+        pip install cloudguard-modules
