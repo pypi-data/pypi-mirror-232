@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+src/thisthat/__init__.py
+src/thisthat/file.py
+src/thisthat/line.py
+src/thisthat/module.py
+src/thisthat/package.py
+src/thisthat/source.py
+src/thisthat.egg-info/PKG-INFO
+src/thisthat.egg-info/SOURCES.txt
+src/thisthat.egg-info/dependency_links.txt
+src/thisthat.egg-info/top_level.txt
