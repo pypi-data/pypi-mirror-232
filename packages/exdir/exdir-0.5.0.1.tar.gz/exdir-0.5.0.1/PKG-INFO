@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: exdir
+Version: 0.5.0.1
+License-File: LICENSE
+Requires-Dist: numpy>=1.20
+Requires-Dist: ruamel.yaml==0.17.21
+Requires-Dist: six>=1.15
