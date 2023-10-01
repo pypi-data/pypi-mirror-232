@@ -1,0 +1,7 @@
+misspy_packager/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+misspy_packager/main.py,sha256=fZbEw7MkU3dP-T0QNlRaxCAGKRFKbNbamZXDHGMJcl8,191
+misspy_packager/packager.py,sha256=qr9gdo8nfLBUXoqKY1G0HQkW3i7Uc8v8RpQSCgEf0Qo,1181
+misspy_packager-0.2.1.dist-info/entry_points.txt,sha256=FdsKahSC42zE7-bMlifFqNBZ5SlEZYqre7HlCyWUZ9g,54
+misspy_packager-0.2.1.dist-info/METADATA,sha256=OsyliRAZO9ksFuUC_kcIkbSgfu47-8GHX043U3L_8JA,674
+misspy_packager-0.2.1.dist-info/WHEEL,sha256=Zb28QaM1gQi8f4VCBhsUklF61CTlNYfs9YAZn-TOGFk,88
+misspy_packager-0.2.1.dist-info/RECORD,,
