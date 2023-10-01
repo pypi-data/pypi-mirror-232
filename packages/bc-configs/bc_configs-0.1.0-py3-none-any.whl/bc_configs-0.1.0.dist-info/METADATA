@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: bc-configs
+Version: 0.1.0
+Summary: Configuration module, that provides a way to manage configs structure, validation and casting to type inside your code. Based on pedantic models. Additionally it can automatically getting config from environment variables, .env, HashiCorp Vault, etc.
+Home-page: https://github.com/etagi-esoft/py-bc-configs
+License: MIT
+Keywords: config,environment,dotenv,pydantic
+Author: Artem Shirokikh
+Author-email: job@artemetr.ru
+Requires-Python: >=3.11,<4.0
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Environment :: MacOS X
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Internet
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: pydantic (>=2.3.0,<3.0.0)
+Project-URL: Repository, https://github.com/etagi-esoft/py-bc-configs
+Description-Content-Type: text/markdown
+
+# bc_config
+
+![](./docs/assets/coverage-badge.svg)
+
+poetry config virtualenvs.in-project true
+
+poetry install
+
