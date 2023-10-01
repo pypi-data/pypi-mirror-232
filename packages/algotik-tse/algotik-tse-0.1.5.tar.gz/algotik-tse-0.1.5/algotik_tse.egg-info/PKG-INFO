@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: algotik-tse
+Version: 0.1.5
+Summary: Get all data from TSETMC.com (Tehran Bourse).
+Author: Mohsen Alipour
+Author-email: alipour@algotik.ir
+Keywords: python,tsetmc,algotik,bourse,بورس
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+
+# AlgoTik
+
+Under construction! Not ready for use yet! Currently experimenting and planning!
+
+Developed by Mohsen Aipour from AlgoTik (c) 2023
+
+## Examples of How To Use (Buggy Alpha Version)
+
+### Installation
+
+```
+pip install algotik-tse
+```
+
+Creating A Client
+```python
+from algotik_tse.hello import say_hello
+```
+
+Check out: https://www.algotik.ir
