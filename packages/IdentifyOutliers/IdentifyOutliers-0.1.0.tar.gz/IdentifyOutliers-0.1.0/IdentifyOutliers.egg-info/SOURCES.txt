@@ -1,0 +1,12 @@
+LICENSE.TXT
+README.md
+setup.py
+IdentifyOutliers/CustomIQRScaler.py
+IdentifyOutliers/CustomMinMaxScaler.py
+IdentifyOutliers/CustomRobustScaler.py
+IdentifyOutliers/CustomZscoreScaler.py
+IdentifyOutliers.egg-info/PKG-INFO
+IdentifyOutliers.egg-info/SOURCES.txt
+IdentifyOutliers.egg-info/dependency_links.txt
+IdentifyOutliers.egg-info/requires.txt
+IdentifyOutliers.egg-info/top_level.txt
