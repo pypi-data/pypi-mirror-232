@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: misspy-packager
+Version: 0.2.0
+Summary: 
+Author: sonyakun
+Author-email: 90973770+sonyakun@users.noreply.github.com
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: cleo (>=2.0.1,<3.0.0)
+Requires-Dist: requests (>=2.31.0,<3.0.0)
+Description-Content-Type: text/markdown
+
+# Automatic version bump tool based on tags of the latest release  used in misspy's GitHub Actions.
+Available under the MIT License.
