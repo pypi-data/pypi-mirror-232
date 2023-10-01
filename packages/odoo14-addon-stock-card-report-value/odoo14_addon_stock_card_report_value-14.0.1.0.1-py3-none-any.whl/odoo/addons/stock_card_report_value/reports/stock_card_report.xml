@@ -1,0 +1,31 @@
+<odoo>
+    <template
+        id="report_stock_card_report_base"
+        inherit_id="stock_card_report.report_stock_card_report_base"
+    >
+        <xpath expr="//div[@class='act_as_row lines']/div[3]" position="after">
+            <div class="act_as_cell" />
+        </xpath>
+    </template>
+
+    <template
+        id="report_stock_card_lines_header"
+        inherit_id="stock_card_report.report_stock_card_lines_header"
+    >
+        <xpath expr="//div[1]/div[1]/div[2]" position="after">
+            <div class="act_as_cell">Value</div>
+        </xpath>
+    </template>
+
+    <template
+        id="report_stock_card_lines"
+        inherit_id="stock_card_report.report_stock_card_lines"
+    >
+        <xpath expr="//div[1]/div[2]" position="after">
+            <div class="act_as_cell right">
+                <t t-esc="'{0:,.3f}'.format(product_line.value)" />
+            </div>
+        </xpath>
+    </template>
+
+</odoo>

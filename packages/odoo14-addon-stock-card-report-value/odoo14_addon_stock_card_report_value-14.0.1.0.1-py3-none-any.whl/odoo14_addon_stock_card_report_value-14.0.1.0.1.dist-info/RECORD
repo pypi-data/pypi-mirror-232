@@ -1,0 +1,12 @@
+odoo/addons/stock_card_report_value/README.rst,sha256=CHrELdv8NKQA8zF3EcbqbAnnyRv2CmDwOFW6h1CT7Jw,1299
+odoo/addons/stock_card_report_value/__init__.py,sha256=mjw2GTEt9wAKqJ35oSr2kE2qK9wb4rur11XLoXMyjnQ,183
+odoo/addons/stock_card_report_value/__manifest__.py,sha256=jr75e8mGiuQ__tESCRKK_ytbidvGJxr1i42ypE50vjY,642
+odoo/addons/stock_card_report_value/reports/__init__.py,sha256=F9_iOwlyx8gm-q8_Z2xTuTlzY4blsCDrMrfsmRYjpGw,221
+odoo/addons/stock_card_report_value/reports/stock_card_report.py,sha256=nJ8jRCn8HVgtji3NDNb1UhtsD029m92pWyQIqF9E-ao,2150
+odoo/addons/stock_card_report_value/reports/stock_card_report.xml,sha256=hMUsU9I2WWeH4qFQAvb-p0JOSLKuLSQc5JaX44m6BLo,922
+odoo/addons/stock_card_report_value/reports/stock_card_report_xlsx.py,sha256=KI3A2b2rogxvR2yZ9cy3AgNy1QUOaOGA1ZA7mzBMcoo,6311
+odoo/addons/stock_card_report_value/static/description/icon.png,sha256=lNGJOSg4cMRfwPTfFKVT6d5B2N1N83iVpEEN1blqu1I,48333
+odoo14_addon_stock_card_report_value-14.0.1.0.1.dist-info/METADATA,sha256=tkQ_BxCwVM2xKdlEuTzNFNqGQnH_s-r1Tg1UMy-S9VU,1848
+odoo14_addon_stock_card_report_value-14.0.1.0.1.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
+odoo14_addon_stock_card_report_value-14.0.1.0.1.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
+odoo14_addon_stock_card_report_value-14.0.1.0.1.dist-info/RECORD,,
