@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: customized-decision-tree-library
+Version: 0.1
+Summary: A customized decision tree library
+Home-page: https://github.com/PinkiKumari22/customised_decision_tree-0.1.git
+Author: Kumari Pinki
+Author-email: kumaripinki@iitgn.ac.in
+Classifier: Programming Language :: Python :: 3.10
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: matplotlib
+
