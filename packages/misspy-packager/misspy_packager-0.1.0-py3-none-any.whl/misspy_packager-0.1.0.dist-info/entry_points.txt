@@ -1,0 +1,3 @@
+[console_scripts]
+mspy=misspy_packager.main:main
+
