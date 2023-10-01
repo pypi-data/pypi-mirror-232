@@ -1,0 +1,2 @@
+[console_scripts]
+convertcsv = converter.cli:main

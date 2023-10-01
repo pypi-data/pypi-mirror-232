@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name="zone3k-csv-converter"
+requires-python = ">=3.11"
+version = "0.9.2"
+authors = [
+    { name = "Andrey Butenko", email = "whitespysoftware@gmail.com" },
+]
+classifiers = [
+    "Environment :: Console",
+    "Intended Audience :: End Users/Desktop",
+    "Operating System :: POSIX",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.11",
+    "Typing :: Typed",
+]
+
+[project.optional-dependencies]
+dev = [
+    "black",
+    "build",
+    "flake8",
+    "isort",
+    "mypy",
+    "pytest",
+    "twine",
+]
+
+[project.scripts]
+convertcsv = "converter.cli:main"
+
+[project.urls]
+GitHub = "https://github.com/whitespy/zone3k-csv-converter"
+
+[tool.isort]
+profile = "black"
+
+[tool.pytest.ini_options]
+python_files = 'tests.py test_*.py *_test'
