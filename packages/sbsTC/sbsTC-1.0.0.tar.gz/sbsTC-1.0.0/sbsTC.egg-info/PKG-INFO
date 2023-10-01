@@ -1,0 +1,86 @@
+Metadata-Version: 2.1
+Name: sbsTC
+Version: 1.0.0
+Summary: Get the official exchange rate of the SBS
+Home-page: https://github.com/cdeazambuja/sbsTC
+Author: Cesar De Azambuja
+Author-email: cdeazambuja@gmail.com
+License: GNU General Public License v3.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# sbsTC
+[![PyPI version]()]()
+
+## DescripciÃ³n
+Obten el tipo de cambio oficial de la SBS (PerÃº). sbsTC es una libreria escrita en Python 3.11 que permite obtener de manera rÃ¡pida y sencilla el tipo de cambio por dÃ­a o rango de dÃ­as.
+
+## InstalaciÃ³n
+```
+pip install sbsTC
+```
+
+## Uso bÃ¡sico
+```python
+from sbsTC import SbsTC
+
+tc = SbsTC()
+data = tc.get_exchange('USD','25/09/2023','30/09/2023')
+print(data)
+```
+
+### Obtendremos el siguiente resultado:
+```python
+{
+    '25/09/2023': {'buy': '3.765', 'sell': '3.773'},
+    '26/09/2023': {'buy': '3.779', 'sell': '3.787'},
+    '27/09/2023': {'buy': '3.793', 'sell': '3.799'},
+    '28/09/2023': {'buy': '3.801', 'sell': '3.806'},
+    '29/09/2023': {'buy': '3.790', 'sell': '3.797'}
+}
+```
+
+## ConfiguraciÃ³n
+| OpciÃ³n        | DescripciÃ³n      | Predeterminado | Valores permitidos                         |
+|:-------------:|:----------------:|:--------------:|:------------------------------------------:|
+| `date_format` | Formato de fecha | `%d/%m/%Y`     | [http://strftime.org](http://strftime.org) |
+
+## Ejemplo
+```python
+from sbsTC import SbsTC
+tc = SbsTC(date_format='%Y-%m-%d')
+data = tc.get_exchange('USD','25/09/2023')
+print(data)
+```
+### Se obtiene el siguiente resultado:
+```python
+{'2023-09-25': {'buy': '3.765', 'sell': '3.773'}}
+```
+
+### En caso no encontrar informaciÃ³n disponible:
+```python
+DataNotFound: No hay informaciÃ³n disponible para el rango seleccionado
+```
+
+
+## Divisas
+Listado de divisas permitidas
+
+| Divisa           | CÃ³digo |
+|:----------------:|:------:|
+| Dolar americano  | `USD`  |
+| Euro             | `EUR`  |
+| Yen Japones      | `JPY`  |
+| Dolar canadiense | `CAD`  |
+| Corona Sueca     | `SEK`  |
+| Franco Suizo     | `CHF`  |
+| Libra esterlina  | `GBP`  |
+
+## MÃ©todos
+
+### get_exchange(`currency`,`from_date`,`to_date=None`)
+Obtiene el tipo de cambio de la moneda enviada en base al rango de fecha ingresado. El resultado serÃ¡ un diccionario de tipos de cambio. ([https://docs.python.org/es/3/tutorial/datastructures.html#dictionaries](https://docs.python.org/es/3/tutorial/datastructures.html#dictionaries)).
+
+## Consideraciones
+* La informaciÃ³n estÃ¡ disponible a partir del aÃ±o 2000 en adelante.
+* El tipo de cambio obtenido estÃ¡ con corte al dÃ­a anterior.
