@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+epic_games_free/__init__.py
+epic_games_free/epic_games.py
+epic_games_free/utils.py
+epic_games_free.egg-info/PKG-INFO
+epic_games_free.egg-info/SOURCES.txt
+epic_games_free.egg-info/dependency_links.txt
+epic_games_free.egg-info/requires.txt
+epic_games_free.egg-info/top_level.txt
