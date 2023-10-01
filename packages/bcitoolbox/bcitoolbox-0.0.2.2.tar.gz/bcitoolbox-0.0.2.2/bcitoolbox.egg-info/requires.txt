@@ -1,0 +1,8 @@
+numpy
+matplotlib
+scipy
+pandas
+scikit-learn
+pyvbmc
+requests
+pillow
