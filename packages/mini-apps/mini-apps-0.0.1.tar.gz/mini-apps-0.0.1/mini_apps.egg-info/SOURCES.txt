@@ -1,0 +1,8 @@
+COPYING
+README.md
+mini_apps.egg-info/PKG-INFO
+mini_apps.egg-info/SOURCES.txt
+mini_apps.egg-info/dependency_links.txt
+mini_apps.egg-info/requires.txt
+mini_apps.egg-info/top_level.txt
+mini_apps.egg-info/zip-safe
