@@ -1,0 +1,9 @@
+colorama
+dsargparse
+pytest
+tqdm
+flake8
+pillow
+pdfkit
+pypdf
+mock
