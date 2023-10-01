@@ -1,0 +1,10 @@
+_kaldi_decoder.cp38-win_amd64.pyd,sha256=e0Uv9Jc8SaRZV_U1ZBaO9xk5czmt--l23TBRLKcx1TI,284672
+kaldi-decoder-core.lib,sha256=hvbjk1cYLnKK-msEIftklz5ZUVxpQlpH9iqObepG2d0,543194
+kaldi_decoder/__init__.py,sha256=zGU39ZwaRkNKxWLnAB7Zte9ZtfyfMEsBJp-bHUfQTyA,23
+kaldi_decoder/lib/kaldi-decoder-fst.lib,sha256=WCs2dDwUe3pQ7aYqr0f8sLwQT5Sb6kMCAW-ESVlBgf0,11189400
+kaldi_decoder/lib/kaldi-decoder-kaldi-fst-core.lib,sha256=SN56-mPgFXjR94JMYvZbHNLLyjl8KGu1NQm8eEwnFXg,3599984
+kaldi_decoder-0.1.1.dist-info/LICENSE,sha256=Pd-b5cKP4n2tFDpdx27qJSIq0d1ok0oEcGTlbtL6QMU,11560
+kaldi_decoder-0.1.1.dist-info/METADATA,sha256=hlZI2lWEwGZbz1ANqGMenDKDM_Gq3lVFMG0JEEwHV4I,725
+kaldi_decoder-0.1.1.dist-info/WHEEL,sha256=ubKCG5XSDI8ZG5iAwgsAU4yUktRq9BG9Pse4izScbq0,100
+kaldi_decoder-0.1.1.dist-info/top_level.txt,sha256=_zZmTx-EYjIPrjkMZkT_9Vb0fFV12mKWRps7FBONiR4,29
+kaldi_decoder-0.1.1.dist-info/RECORD,,
