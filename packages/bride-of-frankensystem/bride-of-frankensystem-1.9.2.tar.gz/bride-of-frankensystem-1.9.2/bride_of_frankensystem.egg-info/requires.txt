@@ -1,0 +1,6 @@
+flask
+eventlet
+sqlalchemy
+flask-sqlalchemy
+flask-compress
+toml
